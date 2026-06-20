@@ -1,3 +1,17 @@
+"""Multi-provider LLM client.
+
+Provider routing by model name prefix:
+  openrouter/<model>  → OpenRouter API  (OPENROUTER_API_KEY required)
+  qwen/<model>        → DashScope/Qwen  (DASHSCOPE_API_KEY required)
+  <anything else>     → Primary provider (DEEPSEEK_API_KEY / OPENAI_API_KEY)
+
+Examples:
+  deepseek-chat                         → DeepSeek (default)
+  deepseek-reasoner                     → DeepSeek reasoner
+  openrouter/anthropic/claude-3-haiku   → Claude via OpenRouter
+  openrouter/qwen/qwen-plus             → Qwen via OpenRouter
+  qwen/qwen-plus                        → Qwen direct (DashScope)
+"""
 import json
 from typing import Any, Callable
 
@@ -5,6 +19,22 @@ from .config import ValidationConfig
 
 
 FallbackFactory = Callable[[], dict[str, Any]]
+
+_OPENROUTER_PREFIX = "openrouter/"
+_QWEN_PREFIX = "qwen/"
+
+
+def _resolve_provider(
+    model: str, config: ValidationConfig
+) -> tuple[str | None, str, str]:
+    """Return (api_key, base_url, resolved_model_name)."""
+    if model.startswith(_OPENROUTER_PREFIX):
+        resolved = model[len(_OPENROUTER_PREFIX):]
+        return config.openrouter_api_key, config.openrouter_base_url, resolved
+    if model.startswith(_QWEN_PREFIX):
+        resolved = model[len(_QWEN_PREFIX):]
+        return config.qwen_api_key, config.qwen_base_url, resolved
+    return config.api_key, config.base_url, model
 
 
 class LLMClient:
@@ -15,7 +45,6 @@ class LLMClient:
         if config.use_llm:
             try:
                 import openai
-
                 self._client = openai.OpenAI(
                     api_key=config.api_key,
                     base_url=config.base_url,
@@ -28,6 +57,14 @@ class LLMClient:
     def enabled(self) -> bool:
         return self._client is not None
 
+    def _get_openai_client(self, model: str):
+        """Return an openai.OpenAI client for the given model's provider."""
+        import openai
+        api_key, base_url, _ = _resolve_provider(model, self.config)
+        if not api_key:
+            return None
+        return openai.OpenAI(api_key=api_key, base_url=base_url)
+
     def json_completion(
         self,
         *,
@@ -37,7 +74,15 @@ class LLMClient:
         temperature: float,
         fallback: FallbackFactory,
     ) -> dict[str, Any]:
-        if not self._client:
+        _, _, resolved_model = _resolve_provider(model, self.config)
+
+        # Use provider-specific client if model has a prefix, else use primary
+        if model.startswith((_OPENROUTER_PREFIX, _QWEN_PREFIX)):
+            active_client = self._get_openai_client(model)
+        else:
+            active_client = self._client
+
+        if not active_client:
             result = fallback()
             result.setdefault("source", "deterministic_fallback")
             if self.init_error:
@@ -45,8 +90,8 @@ class LLMClient:
             return result
 
         try:
-            response = self._client.chat.completions.create(
-                model=model,
+            response = active_client.chat.completions.create(
+                model=resolved_model,
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt},

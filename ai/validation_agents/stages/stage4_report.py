@@ -3,6 +3,8 @@ from pathlib import Path
 from typing import Any
 
 
+# ── Rendering helpers ────────────────────────────────────────────────────────
+
 def _table(rows: Any) -> str:
     lines = ["| Criterion | Score | Note |", "|---|---:|---|"]
     if isinstance(rows, dict):
@@ -14,13 +16,14 @@ def _table(rows: Any) -> str:
     elif isinstance(rows, list):
         for row in rows:
             if isinstance(row, dict):
-                criterion = str(row.get("criterion", row.get("name", row.get("dimension", "")))).replace("|", "/")
+                criterion = str(
+                    row.get("criterion", row.get("name", row.get("dimension", "")))
+                ).replace("|", "/")
                 score = row.get("score", row.get("points", ""))
                 note = str(row.get("note", "")).replace("|", "/")
             else:
                 criterion = str(row).replace("|", "/")
-                score = ""
-                note = ""
+                score = note = ""
             lines.append(f"| {criterion} | {score} | {note} |")
     return "\n".join(lines)
 
@@ -60,10 +63,7 @@ def _dict_lines(data: Any) -> str:
     lines = []
     for key, value in data.items():
         label = str(key).replace("_", " ").title()
-        if isinstance(value, list):
-            rendered = "; ".join(str(item) for item in value)
-        else:
-            rendered = str(value)
+        rendered = "; ".join(str(i) for i in value) if isinstance(value, list) else str(value)
         lines.append(f"- {label}: {rendered}")
     return "\n".join(lines)
 
@@ -78,31 +78,96 @@ def _list_lines(items: Any) -> str:
     lines = []
     for item in items:
         if isinstance(item, dict):
-            rendered_parts = []
-            for key, value in item.items():
-                label = str(key).replace("_", " ").title()
-                rendered_parts.append(f"{label}: {value}")
-            lines.append(f"- {'; '.join(rendered_parts)}")
+            parts = [f"{str(k).replace('_',' ').title()}: {v}" for k, v in item.items()]
+            lines.append(f"- {'; '.join(parts)}")
         else:
             lines.append(f"- {item}")
     return "\n".join(lines)
 
 
+# ── Section builders ─────────────────────────────────────────────────────────
+
+def _render_classification(classification: dict[str, Any]) -> str:
+    problem_type = classification.get("problem_type", "UNKNOWN")
+    proceed = classification.get("proceed_recommendation", "?")
+    badge = {"PROCEED": "✓ PROCEED", "WARN": "⚠ WARN", "ABORT": "✗ ABORT"}.get(proceed, proceed)
+    pit_sigs = classification.get("pit_signals_detected", [])
+    pain_sigs = classification.get("painkiller_signals_detected", [])
+    pit_lines = "\n".join(f"  - {s}" for s in pit_sigs) or "  (none)"
+    pain_lines = "\n".join(f"  - {s}" for s in pain_sigs) or "  (none)"
+    return f"""\
+**Type:** {problem_type} | **Vertical:** {classification.get('vertical')} | **Customer:** {classification.get('customer_type')} | **Severity:** {classification.get('problem_severity')}
+
+**Verdict:** {badge}
+
+{classification.get('classification_rationale', '')}
+
+**Red flags (pit signals):**
+{pit_lines}
+
+**Green flags (painkiller signals):**
+{pain_lines}
+
+**Suggested pivot:** {classification.get('suggested_pivot', 'N/A')}"""
+
+
+def _render_iterations(iterations_result: dict[str, Any], winning_id: str) -> str:
+    lines = [
+        "| ID | Angle | One-Liner | Acuity | Market | Feasibility | Total |",
+        "|---|---|---|---:|---:|---:|---:|",
+    ]
+    for it in iterations_result.get("iterations", []):
+        sc = it.get("quick_score", {})
+        winner_mark = " ★" if it.get("id") == winning_id else ""
+        one_liner = str(it.get("one_liner", "")).replace("|", "/")[:70]
+        lines.append(
+            f"| {it.get('id')}{winner_mark} | {it.get('angle')} | {one_liner} "
+            f"| {sc.get('problem_acuity','?')} | {sc.get('market_size','?')} "
+            f"| {sc.get('founder_feasibility','?')} | {sc.get('total','?')} |"
+        )
+    detail_lines: list[str] = []
+    for it in iterations_result.get("iterations", []):
+        winner_mark = " ★ WINNER" if it.get("id") == winning_id else ""
+        detail_lines.append(f"\n### {it.get('id')} — {it.get('angle')}{winner_mark}")
+        detail_lines.append(f"**Target:** {it.get('target_customer', '')}")
+        detail_lines.append(f"**Problem:** {it.get('core_problem', '')}")
+        detail_lines.append(f"**Hook:** {it.get('solution_hook', '')}")
+        detail_lines.append(f"**Why this angle:** {it.get('why_this_angle', '')}")
+    return "\n".join(lines) + "\n" + "\n".join(detail_lines)
+
+
+def _render_validations_comparison(validations: list[dict[str, Any]]) -> str:
+    lines = ["| Iteration | Angle | Decision |", "|---|---|---|"]
+    for v in validations:
+        lines.append(
+            f"| {v.get('_iteration_id','?')} | {v.get('_iteration_angle','?')} "
+            f"| {v.get('go_no_go','?')} |"
+        )
+    return "\n".join(lines)
+
+
+# ── Main report builder ──────────────────────────────────────────────────────
+
 def build_markdown_report(
     *,
     idea: str,
+    classification: dict[str, Any],
     research: dict[str, Any],
     gaps: dict[str, Any],
+    iterations_result: dict[str, Any],
+    winning_iteration: dict[str, Any],
+    validations: list[dict[str, Any]],
     validation: dict[str, Any],
     simulation: dict[str, Any],
     dossier: dict[str, Any],
 ) -> str:
+    winning_id = winning_iteration.get("id", "I1")
     selected_gap = validation.get("selected_gap", {})
     solutions = research.get("solutions", [])
     gap_rows = gaps.get("gaps", [])
 
     solution_lines = [
-        f"- {item.get('id')}: {item.get('name')} ({item.get('category')}) - {item.get('observed_positioning')}"
+        f"- {item.get('id')}: {item.get('name')} ({item.get('category')}) — {item.get('observed_positioning')}"
         for item in solutions
     ]
     gap_lines = [
@@ -111,27 +176,26 @@ def build_markdown_report(
     ]
     experiment_lines = [f"- {item}" for item in validation.get("next_experiments", [])]
     kill_lines = [f"- {item}" for item in validation.get("kill_criteria", [])]
+
     persona_lines = [
-        f"- {item.get('id')}: {item.get('role')} | Lens: {item.get('lens')} | Success: {item.get('success_metric')}"
-        for item in simulation.get("personas", [])
+        f"- {p.get('id')}: {p.get('role')} | Lens: {p.get('lens')} | Success: {p.get('success_metric')}"
+        for p in simulation.get("personas", [])
     ]
     persona_result_lines: list[str] = []
     for r in simulation.get("persona_results", []):
-        score = r.get("score", "?")
         persona_result_lines.append(
-            f"- **{r.get('persona_id')} {r.get('role')}** score={score} | "
+            f"- **{r.get('persona_id')} {r.get('role')}** score={r.get('score','?')} | "
             f"{r.get('reaction', '')} | "
             f"Concern: {r.get('concern', '')} | "
             f"Need: {r.get('evidence_request', '')}"
         )
     round_lines: list[str] = []
     for round_item in simulation.get("rounds", []):
-        round_lines.append(f"### Round {round_item.get('round')} - {round_item.get('focus')}")
-        for statement in round_item.get("statements", []):
+        round_lines.append(f"### Round {round_item.get('round')} — {round_item.get('focus')}")
+        for stmt in round_item.get("statements", []):
             round_lines.append(
-                f"- {statement.get('persona_id')}: {statement.get('claim')} "
-                f"Concern: {statement.get('concern')} "
-                f"Evidence: {statement.get('evidence_request')}"
+                f"- {stmt.get('persona_id')}: {stmt.get('claim')} "
+                f"Concern: {stmt.get('concern')} Evidence: {stmt.get('evidence_request')}"
             )
     consensus = simulation.get("consensus", {})
     consensus_lines = [
@@ -142,41 +206,83 @@ def build_markdown_report(
         f"- Decision pressure: {consensus.get('decision_pressure')}",
     ]
     intervention_lines = [f"- {item}" for item in simulation.get("recommended_interventions", [])]
+
     raw_scorecard = dossier.get("scorecard", [])
     if isinstance(raw_scorecard, dict):
         scorecard_rows = [
             {"dimension": k.replace("_", " ").title(), "points": v, "max_points": "-", "note": ""}
             for k, v in raw_scorecard.items()
-            if k != "total_subscore_weighted"
+            if k not in ("total_score", "total_subscore_weighted")
         ]
     else:
         scorecard_rows = raw_scorecard
 
-    market_regions = dossier.get("market", {}).get("regions", [])
-    market_region_lines = [
-        (
-            f"- {region.get('region')}: {region.get('validity')} "
-            f"TAM: {region.get('tam')} SAM: {region.get('sam')} "
-            f"SOM 12 months: {region.get('som_12_months')} "
-            f"Sources: {', '.join(region.get('recommended_sources', []))}"
-        )
-        for region in market_regions
+    market_regions = dossier.get("market", {}).get("regions", []) if isinstance(dossier.get("market"), dict) else []
+    market_region_lines = []
+    for region in market_regions:
+        if isinstance(region, dict):
+            market_region_lines.append(
+                f"- **{region.get('region')}**: {region.get('validity')} "
+                f"TAM: {region.get('tam')} | SAM: {region.get('sam')} "
+                f"| SOM 12m: {region.get('som_12_months')} "
+                f"| Sources: {', '.join(region.get('recommended_sources', []))}"
+            )
+    source_strategy_lines = [
+        f"- {item}" for item in
+        (dossier.get("market", {}).get("source_strategy", []) if isinstance(dossier.get("market"), dict) else [])
     ]
-    source_strategy_lines = [f"- {item}" for item in dossier.get("market", {}).get("source_strategy", [])]
     score = dossier.get("total_score", "")
     max_score = dossier.get("max_score", "")
 
     return f"""# Startup Idea Validation Report
 
-Generated at: {datetime.now(timezone.utc).isoformat()}
+Generated: {datetime.now(timezone.utc).isoformat()}
 
-## Idea
+## Original Idea
 {idea}
 
-## Overall Score
-**{score}/{max_score} - {dossier.get("rating", "")}**
+---
+
+## Stage 0 — Idea Classification (Pit Check)
+
+{_render_classification(classification)}
+
+---
+
+## Stage 2B — Idea Iterations (3 angles)
+
+Recommended: **{iterations_result.get('recommended_iteration_id', winning_id)}** — {iterations_result.get('recommended_one_liner', '')}
+
+{_render_iterations(iterations_result, winning_id)}
+
+---
+
+## Stage 3 — YC Validation (parallel, all iterations)
+
+{_render_validations_comparison(validations)}
+
+**Winner: {winning_id} — {winning_iteration.get('angle')}**
+
+> {winning_iteration.get('idea_refined', '')}
+
+Decision: **{validation.get('go_no_go')}**
+
+{validation.get('decision', '')}
+
+### Friedman Questions
+{_table(validation.get("friedman_scores", []))}
+
+### YC Rules
+{_table(validation.get("yc_rule_scores", []))}
+
+---
+
+## Overall Score (Stage 3C)
+**{score}/{max_score} — {dossier.get("rating", "")}**
 
 {_score_table(scorecard_rows)}
+
+---
 
 ## YC Dossier
 
@@ -192,8 +298,8 @@ Generated at: {datetime.now(timezone.utc).isoformat()}
 ### Why Now
 {_list_lines(dossier.get("why_now", []))}
 
-### Market - Peru vs LATAM vs USA
-Recommended focus: {dossier.get("market", {}).get("recommended_focus", "")}
+### Market — {" / ".join(r.get("region","") for r in market_regions) if market_regions else "Peru / LATAM / USA"}
+Recommended focus: {dossier.get("market", {}).get("recommended_focus", "") if isinstance(dossier.get("market"), dict) else ""}
 
 {chr(10).join(market_region_lines)}
 
@@ -221,43 +327,36 @@ Source strategy:
 ### The Ask
 {_dict_lines(dossier.get("the_ask", {}))}
 
-### Product – Demo & Architecture
+### Product — Demo & Architecture
 {_dict_lines(dossier.get("product_demo_architecture", {}))}
 
 ### External Research Hooks
 {_list_lines(dossier.get("external_research_hooks", []))}
 
-## Stage 1 - Current Alternatives
+---
+
+## Stage 1 — Current Alternatives
 {research.get("research_summary", "")}
 
 {chr(10).join(solution_lines)}
 
-## Stage 2 - Market Gaps
+## Stage 2 — Market Gaps
 Recommended gap: {gaps.get("recommended_gap_id")}
 
 {chr(10).join(gap_lines)}
 
 ## Selected Gap
-**{selected_gap.get("id")}: {selected_gap.get("title")}**
+**{selected_gap.get("id") if isinstance(selected_gap, dict) else ""}: {selected_gap.get("title") if isinstance(selected_gap, dict) else ""}**
 
-Pain: {selected_gap.get("pain")}
+Pain: {selected_gap.get("pain") if isinstance(selected_gap, dict) else ""}
 
-Why now: {selected_gap.get("why_now")}
+Why now: {selected_gap.get("why_now") if isinstance(selected_gap, dict) else ""}
 
-Risk: {selected_gap.get("risk")}
+Risk: {selected_gap.get("risk") if isinstance(selected_gap, dict) else ""}
 
-## Stage 3 - YC Validation
-Decision: **{validation.get("go_no_go")}**
+---
 
-{validation.get("decision")}
-
-### Friedman Questions
-{_table(validation.get("friedman_scores", []))}
-
-### YC Rules
-{_table(validation.get("yc_rule_scores", []))}
-
-## Stage 3B - Stakeholder Simulation
+## Stage 3B — Stakeholder Simulation
 {simulation.get("inspiration", "")}
 
 ### Personas
@@ -275,6 +374,8 @@ Aggregate: {simulation.get("aggregate_score", "n/a")} / gate={simulation.get("ga
 
 ### Recommended Interventions
 {chr(10).join(intervention_lines)}
+
+---
 
 ## Next Experiments
 {chr(10).join(experiment_lines)}
