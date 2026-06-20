@@ -131,10 +131,19 @@ def _extract_summary(idea_text: str, returncode: int, artifacts: dict[str, Any])
 
 
 def _run_full_pipeline(idea_text: str, args: argparse.Namespace) -> dict[str, Any]:
+    from .config import DEFAULT_OUTPUT_DIR
+    from .run_pipeline import idea_key
+
+    # Compute exact output path so subprocess and batch runner agree
+    run_key = idea_key(idea_text.strip())
+    run_output_dir = DEFAULT_OUTPUT_DIR / run_key
+    state_path = run_output_dir / "state.json"
+
     cmd = [
         sys.executable, "-m", "ai.validation_agents.run_pipeline",
-        "--idea", idea_text,
+        "--idea", idea_text.strip(),
         "--auto",
+        "--output-dir", str(DEFAULT_OUTPUT_DIR),
         "--regions", args.regions,
     ]
     if args.force:
@@ -148,12 +157,23 @@ def _run_full_pipeline(idea_text: str, args: argparse.Namespace) -> dict[str, An
 
     try:
         result = subprocess.run(
-            cmd, capture_output=True, text=True,
+            cmd,
+            capture_output=not getattr(args, "verbose", False),
+            text=True,
             cwd=str(Path(__file__).resolve().parents[2]),
             timeout=600,
         )
-        # Read artifacts from state.json (written by pipeline regardless of flags)
-        artifacts = _read_state_artifacts(idea_text)
+        # Read from known exact path
+        artifacts: dict[str, Any] = {}
+        if state_path.exists():
+            try:
+                artifacts = json.loads(state_path.read_text(encoding="utf-8")).get("artifacts", {})
+            except Exception:
+                pass
+        if not artifacts:
+            artifacts = _read_state_artifacts(idea_text)  # fallback scan
+        if not artifacts and result.stderr:
+            print(f"  [WARN] No artifacts found. stderr tail: {result.stderr[-200:]}")
         return _extract_summary(idea_text, result.returncode, artifacts)
     except subprocess.TimeoutExpired:
         return {"idea": idea_text, "status": "timeout", "returncode": -1}
