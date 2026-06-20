@@ -49,21 +49,41 @@ def run_stage1_research(client: LLMClient, config: ValidationConfig, idea: str, 
         model=config.research_model,
         temperature=0.3,
         system_prompt=(
-            "You are a market researcher for a YC-style founder. Return only valid JSON. "
-            "Be concrete, skeptical, and focused on existing alternatives."
+            "You are a market researcher and competitive intelligence analyst for a YC-style founder. "
+            "Return only valid JSON. Be concrete, skeptical, and evidence-based."
         ),
-        user_prompt=f"""
-Research the top 15 current alternatives for this startup idea. Do not assume any specific industry
-unless it is explicitly present in the idea.
+        user_prompt=f"""Research the top 15 current alternatives for this startup idea AND score each
+competitor using the 6-signal deal-sourcing taxonomy from venture-capital-intelligence.
 
-Idea:
-{idea}
+IDEA: {idea}
 
-Project context:
-{context[:5000]}
+PROJECT CONTEXT: {context[:4000]}
 
-Return JSON with keys: idea, market, solutions, research_summary.
-Each solution must include id, name, category, observed_positioning.
+━━━ PART 1: Competitive alternatives ━━━
+List 15 alternatives (incumbents, workarounds, direct competitors, indirect substitutes, do-nothing).
+
+━━━ PART 2: Signal scoring for top 5 competitors ━━━
+For the 5 most dangerous competitors, score each of these 6 signals (1-10):
+- HIRING: headcount growth, GTM/eng roles being filled
+- FUNDING: recent raises, investor quality, runway signals
+- PRODUCT: feature launches, integrations, review momentum
+- TEAM: exec hires/departures, advisor additions
+- MARKET: category growth, acquisitions, regulatory tailwinds
+- TECH: stack sophistication, GitHub activity, API/dev adoption
+
+Signal strength: 9-10=very strong, 7-8=strong, 5-6=moderate, 3-4=weak, 1-2=noise
+Sentiment: POSITIVE / NEGATIVE / NEUTRAL
+Overall deal score 0-100 → classification: MONITOR / ENGAGE / MOVE_FAST
+
+Return JSON with keys:
+idea, market, solutions, research_summary, competitor_signals.
+
+solutions: list of {{id, name, category, observed_positioning}}
+competitor_signals: list of {{
+  competitor, hiring_score, funding_score, product_score,
+  team_score, market_score, tech_score, overall_score,
+  classification, sentiment, sourcing_brief
+}}
 """,
         fallback=lambda: _fallback_research(idea),
     )

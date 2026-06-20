@@ -274,20 +274,23 @@ YC CONTEXT: {context[:4000]}
 
 ═══ STRICT FORMAT REQUIREMENTS ═══
 
-market MUST use this exact structure:
+market MUST use this exact structure (dual-method TAM per region):
 {{
   "recommended_focus": "<which region and why>",
   "regions": [
     {{
       "region": "Peru",
       "validity": "<why Peru is or isn't the right starting market>",
-      "tam": "<total addressable market with source>",
-      "sam": "<serviceable market — reachable segment>",
-      "som_12_months": "<bottom-up: leads × conversion × ACV>",
+      "tam_topdown": "<industry report estimate × addressable fraction, with source>",
+      "tam_bottomup": "<potential customers × ARPU — validate against top-down>",
+      "tam_consensus": "<agreed TAM range, flag if < $50M as sub-venture-scale>",
+      "sam": "<TAM × 10-30% — reachable segment with rationale>",
+      "som_12_months": "<SAM × 1-10% — bottom-up: leads × conversion × ACV>",
+      "venture_threshold": "ABOVE_$1B / BELOW_$1B / BORDERLINE",
       "recommended_sources": ["MINEDU", "SUNEDU", "MTPE", "INEI", "MEF", ...]
     }},
-    {{"region": "LATAM", ...}},
-    {{"region": "USA", ...}}
+    {{"region": "LATAM", "tam_topdown": "...", "tam_bottomup": "...", "tam_consensus": "...", "sam": "...", "som_12_months": "...", "venture_threshold": "...", "recommended_sources": [...]}},
+    {{"region": "USA", "tam_topdown": "...", "tam_bottomup": "...", "tam_consensus": "...", "sam": "...", "som_12_months": "...", "venture_threshold": "...", "recommended_sources": [...]}}
   ],
   "source_strategy": ["<how to find each number>", ...]
 }}

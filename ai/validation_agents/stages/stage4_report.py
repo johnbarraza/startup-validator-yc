@@ -5,6 +5,41 @@ from typing import Any
 
 # ── Rendering helpers ────────────────────────────────────────────────────────
 
+def _vc_rubric_table(rows: Any) -> str:
+    lines = ["| Dimension | Weight | Score | Weighted | Rationale |", "|---|---:|---:|---:|---|"]
+    if not isinstance(rows, list):
+        return "_No VC rubric data._"
+    for r in rows:
+        if not isinstance(r, dict):
+            continue
+        lines.append(
+            f"| {r.get('dimension','')} | {int(float(r.get('weight',0))*100)}% "
+            f"| {r.get('score','?')} | {r.get('weighted','?')} "
+            f"| {str(r.get('rationale','')).replace('|','/')} |"
+        )
+    return "\n".join(lines)
+
+
+def _competitor_signals_table(signals: Any) -> str:
+    if not isinstance(signals, list) or not signals:
+        return "_No competitor signal data._"
+    lines = [
+        "| Competitor | Hiring | Funding | Product | Team | Market | Tech | Score | Class |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---|",
+    ]
+    for s in signals:
+        if not isinstance(s, dict):
+            continue
+        lines.append(
+            f"| {s.get('competitor','?')} "
+            f"| {s.get('hiring_score','?')} | {s.get('funding_score','?')} "
+            f"| {s.get('product_score','?')} | {s.get('team_score','?')} "
+            f"| {s.get('market_score','?')} | {s.get('tech_score','?')} "
+            f"| {s.get('overall_score','?')} | {s.get('classification','?')} |"
+        )
+    return "\n".join(lines)
+
+
 def _table(rows: Any) -> str:
     lines = ["| Criterion | Score | Note |", "|---|---:|---|"]
     if isinstance(rows, dict):
@@ -322,6 +357,11 @@ Decision: **{validation.get('go_no_go')}**
 ### YC Rules
 {_table(validation.get("yc_rule_scores", []))}
 
+### VC Hard-Screening Rubric (venture-capital-intelligence)
+{_vc_rubric_table(validation.get("vc_rubric_scores", []))}
+
+**VC Verdict:** {validation.get("vc_verdict", {}).get("verdict", "?")} — composite={validation.get("vc_verdict", {}).get("composite_score", "?")} / 10
+
 ---
 
 ## Overall Score (Stage 3C)
@@ -386,6 +426,9 @@ Source strategy:
 {research.get("research_summary", "")}
 
 {chr(10).join(solution_lines)}
+
+### Competitor Signal Scores (deal-sourcing-signals taxonomy)
+{_competitor_signals_table(research.get("competitor_signals", []))}
 
 ## Stage 2 — Market Gaps
 Recommended gap: {gaps.get("recommended_gap_id")}
