@@ -131,54 +131,48 @@ def _extract_summary(idea_text: str, returncode: int, artifacts: dict[str, Any])
 
 
 def _run_full_pipeline(idea_text: str, args: argparse.Namespace) -> dict[str, Any]:
+    """Run pipeline in-process — avoids subprocess encoding/path issues on Windows."""
     from .config import DEFAULT_OUTPUT_DIR
-    from .run_pipeline import idea_key
+    from .run_pipeline import build_parser, run, idea_key
 
-    # Compute exact output path so subprocess and batch runner agree
-    run_key = idea_key(idea_text.strip())
-    run_output_dir = DEFAULT_OUTPUT_DIR / run_key
-    state_path = run_output_dir / "state.json"
-
-    cmd = [
-        sys.executable, "-m", "ai.validation_agents.run_pipeline",
-        "--idea", idea_text.strip(),
+    idea_clean = idea_text.strip()
+    cli_args = [
+        "--idea", idea_clean,
         "--auto",
         "--output-dir", str(DEFAULT_OUTPUT_DIR),
         "--regions", args.regions,
     ]
     if args.force:
-        cmd.append("--force")
+        cli_args.append("--force")
     if args.no_llm:
-        cmd.append("--no-llm")
-    if args.force_pit:
-        cmd.append("--force-pit")
+        cli_args.append("--no-llm")
+    if getattr(args, "force_pit", False):
+        cli_args.append("--force-pit")
     if getattr(args, "verbose", False):
-        cmd.append("--verbose")
+        cli_args.append("--verbose")
 
     try:
-        result = subprocess.run(
-            cmd,
-            capture_output=not getattr(args, "verbose", False),
-            text=True,
-            cwd=str(Path(__file__).resolve().parents[2]),
-            timeout=600,
-        )
-        # Read from known exact path
-        artifacts: dict[str, Any] = {}
-        if state_path.exists():
-            try:
-                artifacts = json.loads(state_path.read_text(encoding="utf-8")).get("artifacts", {})
-            except Exception:
-                pass
-        if not artifacts:
-            artifacts = _read_state_artifacts(idea_text)  # fallback scan
-        if not artifacts and result.stderr:
-            print(f"  [WARN] No artifacts found. stderr tail: {result.stderr[-200:]}")
-        return _extract_summary(idea_text, result.returncode, artifacts)
-    except subprocess.TimeoutExpired:
-        return {"idea": idea_text, "status": "timeout", "returncode": -1}
+        returncode = run(build_parser().parse_args(cli_args))
+    except SystemExit as exc:
+        returncode = int(exc.code) if exc.code is not None else 1
     except Exception as exc:
-        return {"idea": idea_text, "status": "error", "error": str(exc), "returncode": -1}
+        print(f"  [ERROR] Pipeline exception: {exc}")
+        returncode = -1
+
+    # Read artifacts from state.json — path is deterministic now
+    run_key = idea_key(idea_clean)
+    state_path = DEFAULT_OUTPUT_DIR / run_key / "state.json"
+    artifacts: dict[str, Any] = {}
+    if state_path.exists():
+        try:
+            artifacts = json.loads(state_path.read_text(encoding="utf-8")).get("artifacts", {})
+        except Exception as exc:
+            print(f"  [WARN] state.json parse error: {exc}")
+    else:
+        print(f"  [WARN] state.json not found at {state_path}")
+        artifacts = _read_state_artifacts(idea_clean)
+
+    return _extract_summary(idea_text, returncode, artifacts)
 
 
 # ── Stage 0 direct (no subprocess) ───────────────────────────────────────────
