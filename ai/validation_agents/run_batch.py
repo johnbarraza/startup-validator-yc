@@ -453,13 +453,13 @@ def run_tournament(args: argparse.Namespace) -> int:
         finalists=finalists_ranked,
     )
     TOURNAMENT_PATH.write_text(report, encoding="utf-8")
-    leaderboard = build_leaderboard(r2_results + [
-        {**r, "total_score": None, "sim_score": None} for r in eliminated_r1
-    ])
+    # Leaderboard only includes ideas that completed the full pipeline (R2 survivors).
+    # Eliminated R1 ideas are documented in tournament.md with their elimination reason.
+    leaderboard = build_leaderboard(r2_results)
     LEADERBOARD_PATH.write_text(leaderboard, encoding="utf-8")
 
-    print(f"\nTournament report → {TOURNAMENT_PATH}")
-    print(f"Leaderboard      → {LEADERBOARD_PATH}")
+    print(f"\nTournament report → {TOURNAMENT_PATH}  (all ideas + elimination reasons)")
+    print(f"Leaderboard       → {LEADERBOARD_PATH}  (only ideas that ran full pipeline)")
     if finalists_ranked:
         winner = finalists_ranked[0]
         print(f"\n🏆 Winner: {winner.get('_name','?')} | score={winner.get('total_score','?')} | sim={winner.get('sim_score','?')}")
