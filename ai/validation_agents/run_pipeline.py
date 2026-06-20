@@ -55,6 +55,7 @@ from .stages.stage3_validation import run_stage3_validation
 from .stages.stage3b_simulation import run_stage3b_simulation
 from .stages.stage3c_dossier import run_stage3c_dossier
 from .stages.stage4_report import build_markdown_report, write_report
+from .vc_calcs import apply_vc_verdict, apply_signal_scores, apply_market_calcs
 
 
 DEFAULT_IDEA = (
@@ -289,6 +290,7 @@ def run(args: argparse.Namespace) -> int:
     if args.force or "stage1_research" not in state.artifacts:
         log_step(args, "Stage 1: researching alternatives...")
         research = run_stage1_research(client, config, state.idea, context)
+        research = apply_signal_scores(research)
         state.put_artifact("stage1_research", research)
         write_stage_artifact(run_dir, "stage1_research.json", research)
         log_artifact(args, "Stage 1", research)
@@ -373,6 +375,7 @@ def run(args: argparse.Namespace) -> int:
         f"Stage 3 winner: {winning_iteration.get('id')} {winning_iteration.get('angle')} "
         f"→ {winning_validation.get('go_no_go')}",
     )
+    winning_validation = apply_vc_verdict(winning_validation)
     state.put_artifact("stage3_winner_iteration", winning_iteration)
     state.put_artifact("stage3_validation", winning_validation)
     write_stage_artifact(run_dir, "stage3_yc_validation.json", winning_validation)
@@ -415,6 +418,7 @@ def run(args: argparse.Namespace) -> int:
             client, config, winning_idea, selected_gap,
             winning_validation, simulation, regions, context,
         )
+        dossier = apply_market_calcs(dossier)
         state.put_artifact("stage3c_dossier", dossier)
         write_stage_artifact(run_dir, "stage3c_dossier.json", dossier)
         log_artifact(args, "Stage 3C", dossier)
