@@ -70,18 +70,30 @@ def extract_ideas_from_md(md_path: Path) -> list[dict[str, str]]:
 # ── Subprocess runner (full pipeline) ────────────────────────────────────────
 
 def _read_state_artifacts(idea_text: str) -> dict[str, Any]:
-    """Read pipeline artifacts from state.json on disk (more reliable than stdout parsing)."""
+    """Find state.json by matching idea text content — robust to hash mismatches."""
     from .config import DEFAULT_OUTPUT_DIR
     from .run_pipeline import idea_key
-    run_key = idea_key(idea_text)
+
+    # Try exact hash first (fast path)
+    run_key = idea_key(idea_text.strip())
     state_path = DEFAULT_OUTPUT_DIR / run_key / "state.json"
-    if not state_path.exists():
-        return {}
-    try:
-        state_data = json.loads(state_path.read_text(encoding="utf-8"))
-        return state_data.get("artifacts", {})
-    except Exception:
-        return {}
+    if state_path.exists():
+        try:
+            return json.loads(state_path.read_text(encoding="utf-8")).get("artifacts", {})
+        except Exception:
+            pass
+
+    # Fallback: scan all state.json files for matching idea text
+    needle = idea_text.strip().lower()[:120]
+    for sp in sorted(DEFAULT_OUTPUT_DIR.glob("*/state.json"), key=lambda p: p.stat().st_mtime, reverse=True):
+        try:
+            data = json.loads(sp.read_text(encoding="utf-8"))
+            stored = (data.get("idea") or "").strip().lower()[:120]
+            if stored and (stored == needle or stored in needle or needle in stored):
+                return data.get("artifacts", {})
+        except Exception:
+            continue
+    return {}
 
 
 def _extract_summary(idea_text: str, returncode: int, artifacts: dict[str, Any]) -> dict[str, Any]:
