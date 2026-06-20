@@ -238,66 +238,102 @@ def run_stage3c_dossier(
     regions: list[str],
     context: str,
 ) -> dict[str, Any]:
+    persona_concerns = "\n".join(
+        f"  - {r.get('role', '?')} (score={r.get('score','?')}): {r.get('concern', '')}"
+        for r in simulation.get("persona_results", [])
+    ) or "  (no simulation data)"
+
+    sim_gate = simulation.get("aggregate_score", "?")
+    primary_region = regions[0] if regions else "Peru"
+
     return client.json_completion(
         model=config.reasoner_model,
         temperature=0.1,
         system_prompt=(
-            "You are a YC-style startup evaluator building a general startup dossier. "
-            "Return only valid JSON. Do not include implementation stack or architecture. "
-            "Make the framework general across industries, but compare Peru, LATAM, and USA when requested."
+            f"You are a brutally honest YC partner building a startup dossier. "
+            f"Primary market: {primary_region}. Use local data sources (MINEDU, SUNEDU, MTPE, INEI, MEF, BCRP) "
+            f"for Peru estimates. Return ONLY valid JSON with all required fields at root level."
         ),
-        user_prompt=f"""
-Build an enriched startup validation dossier from this idea and previous agent outputs.
+        user_prompt=f"""Build a rigorous YC-style startup dossier. Be specific to the idea — no generic placeholders.
 
-Idea:
+IDEA:
 {idea}
 
-Selected gap:
+SELECTED GAP:
 {gap}
 
-YC validation:
-{validation}
+YC VALIDATION RESULT:
+{validation.get('go_no_go')} — {validation.get('decision', '')}
 
-Stakeholder simulation:
-{simulation}
+STAKEHOLDER SIMULATION (MiroFish parallel agents, aggregate={sim_gate}):
+Persona concerns to address in the dossier:
+{persona_concerns}
 
-Regions to compare:
-{regions}
+REGIONS: {regions}
+YC CONTEXT: {context[:4000]}
 
-Use the project-final pitch doctrine:
-- one-liner: "We do X for Y using Z"
-- problem: who suffers, pain level, current workaround, evidence
-- solution & insight
-- why now
-- market: TAM, SAM, SOM for first 12 months, with source strategy
-- compare market validity in Peru vs LATAM vs USA
-- competition and moat
-- business model and pricing, including contribution margin
-- go-to-market for first 10, 100, and 1,000 users
-- traction or early signals
-- roadmap at 3, 6, and 12 months
-- risks and mitigation, including substitution by AI tools such as Claude, OpenAI, or generic agents
-- the ask
-- a 100-point scorecard
-- product_demo_architecture: proposed demo URL placeholder, 3-6 main flow screenshots to capture,
-  architecture diagram as a one-line text description (frontend → backend → AI → DB → output),
-  suggested repo folder structure, and list of AI models/APIs used with rationale (why this model
-  vs alternatives). Keep it concrete for the specific idea; do not use generic placeholders.
+═══ STRICT FORMAT REQUIREMENTS ═══
 
-Use these source hooks when relevant:
-- INEI/MEF/BCRP for Peru
-- World Bank/CEPAL/IDB for LATAM
-- papers and industry reports for technical evidence
-- Statista or other industry reports if available
+market MUST use this exact structure:
+{{
+  "recommended_focus": "<which region and why>",
+  "regions": [
+    {{
+      "region": "Peru",
+      "validity": "<why Peru is or isn't the right starting market>",
+      "tam": "<total addressable market with source>",
+      "sam": "<serviceable market — reachable segment>",
+      "som_12_months": "<bottom-up: leads × conversion × ACV>",
+      "recommended_sources": ["MINEDU", "SUNEDU", "MTPE", "INEI", "MEF", ...]
+    }},
+    {{"region": "LATAM", ...}},
+    {{"region": "USA", ...}}
+  ],
+  "source_strategy": ["<how to find each number>", ...]
+}}
 
-YC context:
-{context[:6000]}
+roadmap MUST be monthly with milestones and metrics:
+{{
+  "month_1": "<specific actions and metric target>",
+  "month_2": "...",
+  "month_3": "...",
+  "month_6": "<state of product, users, revenue>",
+  "month_9": "...",
+  "month_12": "<ARR target, users, key partnerships>",
+  "key_metrics_at_12m": {{
+    "mrr_usd": <number>,
+    "paying_customers": <number>,
+    "churn_target": "<monthly %>",
+    "cac_target_usd": <number>
+  }}
+}}
 
-Return JSON with keys:
+the_ask MUST justify every dollar with critical reasoning:
+{{
+  "amount_usd": <number>,
+  "type": "pre-seed grant / angel / accelerator",
+  "runway_months": <number>,
+  "budget_breakdown": [
+    {{"line": "<item>", "amount_usd": <number>, "rationale": "<why this amount, not more/less>"}},
+    ...
+  ],
+  "milestone_unlocked": "<specific measurable outcome this funding achieves>",
+  "critical_assumption_being_tested": "<the one thing this money proves or kills>",
+  "why_not_less": "<why bootstrapping or a smaller amount would fail>",
+  "why_not_more": "<why raising more before this milestone is premature>"
+}}
+
+scorecard: dict of {{dimension: score}} where all scores sum to total_score.
+total_score and max_score MUST appear as separate integer fields at root level.
+
+Return JSON with exactly these root keys:
 source, one_liner, problem, solution_insight, why_now, market, competition_moat,
 business_model_pricing, go_to_market, traction_signals, roadmap, risks_mitigations,
 the_ask, product_demo_architecture, scorecard, total_score, max_score, rating,
 external_research_hooks.
+
+product_demo_architecture: concrete for this specific idea (no generic placeholders).
+external_research_hooks: list of strings citing specific Peru data sources.
 """,
         fallback=lambda: _fallback_dossier(idea, gap, validation, simulation, regions),
     )

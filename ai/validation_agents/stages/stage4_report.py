@@ -215,24 +215,56 @@ def build_markdown_report(
             if k not in ("total_score", "total_subscore_weighted")
         ]
     else:
-        scorecard_rows = raw_scorecard
+        scorecard_rows = raw_scorecard if isinstance(raw_scorecard, list) else []
 
-    market_regions = dossier.get("market", {}).get("regions", []) if isinstance(dossier.get("market"), dict) else []
+    # Normalize total_score / max_score — compute from scorecard if LLM omits them
+    score = dossier.get("total_score")
+    max_score = dossier.get("max_score")
+    if score is None:
+        if isinstance(raw_scorecard, dict):
+            score = sum(v for v in raw_scorecard.values() if isinstance(v, (int, float)))
+        elif isinstance(raw_scorecard, list):
+            score = sum(r.get("points", 0) for r in raw_scorecard if isinstance(r, dict))
+    if max_score is None:
+        if scorecard_rows:
+            computed_max = sum(
+                r.get("max_points", 0) for r in scorecard_rows
+                if isinstance(r, dict) and isinstance(r.get("max_points"), (int, float))
+            )
+            max_score = computed_max if computed_max > 0 else 100
+
+    # Market — handle both nested {regions:[...]} and flat {tam, sam, som_*} formats
+    market_raw = dossier.get("market", {})
+    if isinstance(market_raw, dict):
+        market_regions = market_raw.get("regions", [])
+        market_focus = market_raw.get("recommended_focus", "")
+        source_strategy = market_raw.get("source_strategy", [])
+        # Flat format fallback: render as simple key-value
+        if not market_regions:
+            flat_keys = {"tam", "sam", "som_first12_months", "som_12_months", "tam_global"}
+            flat_market_lines = [
+                f"- **{k.upper().replace('_',' ')}**: {v}"
+                for k, v in market_raw.items()
+                if k.lower() in flat_keys and v
+            ]
+        else:
+            flat_market_lines = []
+    else:
+        market_regions = []
+        market_focus = ""
+        source_strategy = []
+        flat_market_lines = [f"- {market_raw}"] if market_raw else []
+
     market_region_lines = []
     for region in market_regions:
         if isinstance(region, dict):
             market_region_lines.append(
-                f"- **{region.get('region')}**: {region.get('validity')} "
-                f"TAM: {region.get('tam')} | SAM: {region.get('sam')} "
-                f"| SOM 12m: {region.get('som_12_months')} "
+                f"- **{region.get('region')}**: {region.get('validity', '')} | "
+                f"TAM: {region.get('tam','')} | SAM: {region.get('sam','')} "
+                f"| SOM 12m: {region.get('som_12_months','')} "
                 f"| Sources: {', '.join(region.get('recommended_sources', []))}"
             )
-    source_strategy_lines = [
-        f"- {item}" for item in
-        (dossier.get("market", {}).get("source_strategy", []) if isinstance(dossier.get("market"), dict) else [])
-    ]
-    score = dossier.get("total_score", "")
-    max_score = dossier.get("max_score", "")
+    source_strategy_lines = [f"- {item}" for item in source_strategy if isinstance(item, str)]
 
     return f"""# Startup Idea Validation Report
 
@@ -299,9 +331,9 @@ Decision: **{validation.get('go_no_go')}**
 {_list_lines(dossier.get("why_now", []))}
 
 ### Market — {" / ".join(r.get("region","") for r in market_regions) if market_regions else "Peru / LATAM / USA"}
-Recommended focus: {dossier.get("market", {}).get("recommended_focus", "") if isinstance(dossier.get("market"), dict) else ""}
+Recommended focus: {market_focus}
 
-{chr(10).join(market_region_lines)}
+{chr(10).join(market_region_lines) if market_region_lines else chr(10).join(flat_market_lines)}
 
 Source strategy:
 {chr(10).join(source_strategy_lines)}
