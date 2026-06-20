@@ -63,7 +63,7 @@ def _fallback_gaps(research: dict[str, Any]) -> dict[str, Any]:
 
 def run_stage2_gaps(client: LLMClient, config: ValidationConfig, research: dict[str, Any]) -> dict[str, Any]:
     return client.json_completion(
-        model=config.chat_model,
+        model=config.research_model,
         temperature=0.2,
         system_prompt=(
             "You are a skeptical market-gap analyst. Return only valid JSON. "

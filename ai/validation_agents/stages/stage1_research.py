@@ -46,7 +46,7 @@ def _fallback_research(idea: str) -> dict[str, Any]:
 
 def run_stage1_research(client: LLMClient, config: ValidationConfig, idea: str, context: str) -> dict[str, Any]:
     return client.json_completion(
-        model=config.chat_model,
+        model=config.research_model,
         temperature=0.3,
         system_prompt=(
             "You are a market researcher for a YC-style founder. Return only valid JSON. "

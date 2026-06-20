@@ -17,6 +17,7 @@ class ValidationConfig:
     # Stage-specific model overrides
     classifier_model: str   # Stage 0: fast + cheap (pit detection)
     iteration_model: str    # Stage 2B: creative divergent framings
+    research_model: str     # Stage 1+2: research + gap analysis
     # OpenRouter (optional — gives access to Claude, Qwen, Mistral, etc.)
     openrouter_api_key: str | None
     openrouter_base_url: str
@@ -60,7 +61,8 @@ def load_config(output_dir: str | Path | None = None, use_llm: bool = True) -> V
     #   CLASSIFIER_MODEL=qwen-plus                   (if DASHSCOPE_API_KEY set)
     #   ITERATION_MODEL=anthropic/claude-3-haiku      (if OPENROUTER_API_KEY set)
     classifier_model = os.getenv("CLASSIFIER_MODEL", chat_model)
-    iteration_model = os.getenv("ITERATION_MODEL", chat_model)
+    iteration_model = os.getenv("ITERATION_MODEL", reasoner_model)
+    research_model = os.getenv("RESEARCH_MODEL", reasoner_model)
 
     any_key = bool(api_key or openrouter_key or qwen_key)
 
@@ -71,6 +73,7 @@ def load_config(output_dir: str | Path | None = None, use_llm: bool = True) -> V
         reasoner_model=reasoner_model,
         classifier_model=classifier_model,
         iteration_model=iteration_model,
+        research_model=research_model,
         openrouter_api_key=openrouter_key,
         openrouter_base_url=os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1"),
         qwen_api_key=qwen_key,
