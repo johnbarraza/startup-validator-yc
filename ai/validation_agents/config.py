@@ -48,8 +48,8 @@ def load_config(output_dir: str | Path | None = None, use_llm: bool = True) -> V
 
     api_key = os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
     base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
-    chat_model = os.getenv("DEEPSEEK_CHAT_MODEL", "deepseek-chat")
-    reasoner_model = os.getenv("DEEPSEEK_REASONER_MODEL", "deepseek-reasoner")
+    chat_model = os.getenv("DEEPSEEK_CHAT_MODEL", "deepseek-v4-flash")
+    reasoner_model = os.getenv("DEEPSEEK_REASONER_MODEL", "deepseek-v4-flash")
 
     openrouter_key = os.getenv("OPENROUTER_API_KEY")
     qwen_key = os.getenv("DASHSCOPE_API_KEY") or os.getenv("QWEN_API_KEY")
