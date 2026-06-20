@@ -82,6 +82,8 @@ def _run_full_pipeline(idea_text: str, args: argparse.Namespace) -> dict[str, An
         cmd.append("--no-llm")
     if args.force_pit:
         cmd.append("--force-pit")
+    if getattr(args, "verbose", False):
+        cmd.append("--verbose")
 
     try:
         result = subprocess.run(
@@ -341,10 +343,7 @@ Filter: bottom ideas by Stage 3 composite score → eliminated
 # ── Batch mode ────────────────────────────────────────────────────────────────
 
 def run_batch(args: argparse.Namespace) -> int:
-    ideas_file = Path(args.ideas_file)
-    if not ideas_file.exists():
-        print(f"Ideas file not found: {ideas_file}")
-        return 1
+    ideas_file = _require_ideas_file(args)
     ideas = extract_ideas_from_md(ideas_file)
     if not ideas:
         print(f"No validator_idea blocks found in {ideas_file}")
@@ -372,10 +371,7 @@ def run_batch(args: argparse.Namespace) -> int:
 # ── Tournament mode ───────────────────────────────────────────────────────────
 
 def run_tournament(args: argparse.Namespace) -> int:
-    ideas_file = Path(args.ideas_file)
-    if not ideas_file.exists():
-        print(f"Ideas file not found: {ideas_file}")
-        return 1
+    ideas_file = _require_ideas_file(args)
     ideas = extract_ideas_from_md(ideas_file)
     if not ideas:
         print(f"No validator_idea blocks found in {ideas_file}")
@@ -478,7 +474,22 @@ def build_parser() -> argparse.ArgumentParser:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
-    parser.add_argument("--ideas-file", default=str(DEFAULT_IDEAS_FILE))
+    parser.add_argument(
+        "--ideas-file",
+        default=None,
+        metavar="PATH",
+        help=(
+            "Path to a markdown file with validator_idea blocks (required). "
+            "Expected structure per idea:\n"
+            "  ## N. Idea Name\n"
+            "  ...\n"
+            "  validator_idea:\n"
+            "  ```text\n"
+            "  One-paragraph idea description.\n"
+            "  ```\n"
+            "See docs/ideas_consolidadas_para_validacion.md for a full example."
+        ),
+    )
     parser.add_argument("--tournament", action="store_true",
                         help="Run 3-round elimination tournament instead of independent batch.")
     parser.add_argument("--finalists", type=int, default=3,
@@ -488,7 +499,32 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--force-pit", action="store_true")
     parser.add_argument("--no-llm", action="store_true")
+    parser.add_argument("--verbose", action="store_true",
+                        help="Pass --verbose to each pipeline run.")
     return parser
+
+
+def _require_ideas_file(args: argparse.Namespace) -> Path:
+    if not args.ideas_file:
+        print(
+            "Error: --ideas-file is required.\n\n"
+            "Usage:\n"
+            "  python -m ai.validation_agents.run_batch "
+            "--ideas-file docs/ideas_consolidadas_para_validacion.md --tournament\n\n"
+            "Expected file structure (one block per idea):\n"
+            "  ## 1. Idea Name\n"
+            "  ...\n"
+            "  validator_idea:\n"
+            "  ```text\n"
+            "  Your idea description here.\n"
+            "  ```\n"
+        )
+        raise SystemExit(1)
+    p = Path(args.ideas_file)
+    if not p.exists():
+        print(f"Error: file not found: {p}")
+        raise SystemExit(1)
+    return p
 
 
 def main() -> int:
