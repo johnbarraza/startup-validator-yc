@@ -259,21 +259,31 @@ def run(args: argparse.Namespace) -> int:
 
     problem_type = classification.get("problem_type", "UNKNOWN")
     proceed = classification.get("proceed_recommendation", "PROCEED")
-    log_step(args, f"Stage 0 verdict: {problem_type} → {proceed} | vertical={classification.get('vertical')} | severity={classification.get('problem_severity')}")
+    devil = classification.get("devil_verdict", "?")
+    freemium = classification.get("freemium_recommendation", "?")
+    log_step(
+        args,
+        f"Stage 0 verdict: {problem_type} → {proceed} | devil={devil} | freemium={freemium} "
+        f"| vertical={classification.get('vertical')} | severity={classification.get('problem_severity')}",
+    )
 
     if proceed == "ABORT" and not args.force_pit:
-        print(f"\n[ABORT] Idea classified as {problem_type}.")
+        print(f"\n[ABORT] Idea classified as {problem_type} (devil={devil}).")
         print(f"Rationale: {classification.get('classification_rationale')}")
+        print(f"Payment blocker: {classification.get('payment_blocker')}")
+        print(f"Hardest assumption: {classification.get('hardest_assumption')}")
         print(f"Pivot suggestion: {classification.get('suggested_pivot')}")
         print("\nFix the idea and re-run. Use --force-pit to override.\n")
         return 1
 
     if proceed == "WARN":
-        print(f"\n[WARN] Idea classified as {problem_type} — low urgency signals detected.")
+        print(f"\n[WARN] Idea classified as {problem_type} (devil={devil}).")
         for sig in classification.get("pit_signals_detected", []):
             print(f"  ⚠ {sig}")
-        print(f"Suggested pivot: {classification.get('suggested_pivot')}")
-        print("Continuing anyway...\n")
+        print(f"Payment blocker: {classification.get('payment_blocker')}")
+        print(f"Free substitute risk: {classification.get('free_substitute_risk')}")
+        print(f"Freemium: {freemium} — {classification.get('freemium_rationale')}")
+        print("Continuing...\n")
 
     # ── Stage 1: Research ────────────────────────────────────────────────────
     if args.force or "stage1_research" not in state.artifacts:

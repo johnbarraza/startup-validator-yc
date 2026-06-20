@@ -91,22 +91,37 @@ def _render_classification(classification: dict[str, Any]) -> str:
     problem_type = classification.get("problem_type", "UNKNOWN")
     proceed = classification.get("proceed_recommendation", "?")
     badge = {"PROCEED": "✓ PROCEED", "WARN": "⚠ WARN", "ABORT": "✗ ABORT"}.get(proceed, proceed)
+    devil_badge = {"STRONG": "💪 STRONG", "WEAK": "⚠ WEAK", "FATAL": "💀 FATAL"}.get(
+        classification.get("devil_verdict", ""), classification.get("devil_verdict", "?")
+    )
     pit_sigs = classification.get("pit_signals_detected", [])
     pain_sigs = classification.get("painkiller_signals_detected", [])
-    pit_lines = "\n".join(f"  - {s}" for s in pit_sigs) or "  (none)"
+    pit_lines = "\n".join(f"  - {s}" for s in pit_sigs) or "  (none — verify manually)"
     pain_lines = "\n".join(f"  - {s}" for s in pain_sigs) or "  (none)"
+    freemium = classification.get("freemium_recommendation", "?")
+    freemium_badge = {"YES": "✓ YES", "NO": "✗ NO", "MAYBE": "~ MAYBE"}.get(freemium, freemium)
     return f"""\
 **Type:** {problem_type} | **Vertical:** {classification.get('vertical')} | **Customer:** {classification.get('customer_type')} | **Severity:** {classification.get('problem_severity')}
 
-**Verdict:** {badge}
+**Verdict:** {badge} | **Devil's advocate:** {devil_badge} | **Freemium:** {freemium_badge}
 
 {classification.get('classification_rationale', '')}
 
-**Red flags (pit signals):**
-{pit_lines}
-
 **Green flags (painkiller signals):**
 {pain_lines}
+
+**Red flags (devil's advocate):**
+{pit_lines}
+
+**Payment blocker:** {classification.get('payment_blocker', 'N/A')}
+
+**Free substitute risk:** {classification.get('free_substitute_risk', 'N/A')}
+
+**Market size reality check:** {classification.get('market_size_reality_check', 'N/A')}
+
+**Hardest unvalidated assumption:** {classification.get('hardest_assumption', 'N/A')}
+
+**Freemium rationale:** {classification.get('freemium_rationale', 'N/A')}
 
 **Suggested pivot:** {classification.get('suggested_pivot', 'N/A')}"""
 
