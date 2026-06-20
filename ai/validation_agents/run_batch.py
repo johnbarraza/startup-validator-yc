@@ -69,11 +69,60 @@ def extract_ideas_from_md(md_path: Path) -> list[dict[str, str]]:
 
 # ── Subprocess runner (full pipeline) ────────────────────────────────────────
 
+def _read_state_artifacts(idea_text: str) -> dict[str, Any]:
+    """Read pipeline artifacts from state.json on disk (more reliable than stdout parsing)."""
+    from .config import DEFAULT_OUTPUT_DIR
+    from .run_pipeline import idea_key
+    run_key = idea_key(idea_text)
+    state_path = DEFAULT_OUTPUT_DIR / run_key / "state.json"
+    if not state_path.exists():
+        return {}
+    try:
+        state_data = json.loads(state_path.read_text(encoding="utf-8"))
+        return state_data.get("artifacts", {})
+    except Exception:
+        return {}
+
+
+def _extract_summary(idea_text: str, returncode: int, artifacts: dict[str, Any]) -> dict[str, Any]:
+    classify = artifacts.get("stage0_classify", {})
+    dossier = artifacts.get("stage3c_dossier", {})
+    simulation = artifacts.get("stage3b_simulation", {})
+    winner = artifacts.get("stage3_winner_iteration", {})
+    validation = artifacts.get("stage3_validation", {})
+
+    total_score = dossier.get("total_score")
+    if total_score is None:
+        sc = dossier.get("scorecard", {})
+        if isinstance(sc, dict):
+            total_score = sum(v for v in sc.values() if isinstance(v, (int, float)))
+
+    return {
+        "idea": idea_text,
+        "status": "ok" if returncode in (0, 1) else "error",
+        "returncode": returncode,
+        "problem_type": classify.get("problem_type", "?"),
+        "proceed": classify.get("proceed_recommendation", "?"),
+        "devil": classify.get("devil_verdict", "?"),
+        "freemium": classify.get("freemium_recommendation", "?"),
+        "vertical": classify.get("vertical", "?"),
+        "hardest_assumption": classify.get("hardest_assumption", ""),
+        "payment_blocker": classify.get("payment_blocker", ""),
+        "free_sub_risk": classify.get("free_substitute_risk", ""),
+        "winner_angle": winner.get("angle", "?"),
+        "go_no_go": validation.get("go_no_go", "?"),
+        "sim_score": simulation.get("aggregate_score"),
+        "total_score": total_score,
+        "max_score": dossier.get("max_score", 100),
+        "rating": dossier.get("rating", ""),
+    }
+
+
 def _run_full_pipeline(idea_text: str, args: argparse.Namespace) -> dict[str, Any]:
     cmd = [
         sys.executable, "-m", "ai.validation_agents.run_pipeline",
         "--idea", idea_text,
-        "--auto", "--json",
+        "--auto",
         "--regions", args.regions,
     ]
     if args.force:
@@ -91,56 +140,9 @@ def _run_full_pipeline(idea_text: str, args: argparse.Namespace) -> dict[str, An
             cwd=str(Path(__file__).resolve().parents[2]),
             timeout=600,
         )
-        stdout = result.stdout.strip()
-
-        artifacts: dict[str, Any] = {}
-        for line in reversed(stdout.splitlines()):
-            line = line.strip()
-            if line.startswith("{"):
-                try:
-                    artifacts = json.loads(line)
-                    break
-                except json.JSONDecodeError:
-                    pass
-        if not artifacts:
-            m = re.search(r"\{.*\}", stdout, re.DOTALL)
-            if m:
-                try:
-                    artifacts = json.loads(m.group())
-                except json.JSONDecodeError:
-                    pass
-
-        classify = artifacts.get("stage0_classify", {})
-        dossier = artifacts.get("stage3c_dossier", {})
-        simulation = artifacts.get("stage3b_simulation", {})
-        winner = artifacts.get("stage3_winner_iteration", {})
-        validation = artifacts.get("stage3_validation", {})
-
-        total_score = dossier.get("total_score")
-        if total_score is None:
-            sc = dossier.get("scorecard", {})
-            if isinstance(sc, dict):
-                total_score = sum(v for v in sc.values() if isinstance(v, (int, float)))
-
-        return {
-            "idea": idea_text,
-            "status": "ok" if result.returncode in (0, 1) else "error",
-            "returncode": result.returncode,
-            "problem_type": classify.get("problem_type", "?"),
-            "proceed": classify.get("proceed_recommendation", "?"),
-            "devil": classify.get("devil_verdict", "?"),
-            "freemium": classify.get("freemium_recommendation", "?"),
-            "vertical": classify.get("vertical", "?"),
-            "hardest_assumption": classify.get("hardest_assumption", ""),
-            "payment_blocker": classify.get("payment_blocker", ""),
-            "free_sub_risk": classify.get("free_substitute_risk", ""),
-            "winner_angle": winner.get("angle", "?"),
-            "go_no_go": validation.get("go_no_go", "?"),
-            "sim_score": simulation.get("aggregate_score"),
-            "total_score": total_score,
-            "max_score": dossier.get("max_score", 100),
-            "rating": dossier.get("rating", ""),
-        }
+        # Read artifacts from state.json (written by pipeline regardless of flags)
+        artifacts = _read_state_artifacts(idea_text)
+        return _extract_summary(idea_text, result.returncode, artifacts)
     except subprocess.TimeoutExpired:
         return {"idea": idea_text, "status": "timeout", "returncode": -1}
     except Exception as exc:
