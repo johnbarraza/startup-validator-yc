@@ -32,29 +32,59 @@ VERTICALS = [
 
 COUNTRY_STRUCTURAL_FACTS = {
     "Peru": (
-        "70% informal economy — most economic activity happens outside registered firms. "
-        "Public schools (80% of secondary schools) have zero discretionary budget; procurement flows through UGEL "
-        "(regional education offices) with 6-18 month cycles. Private schools have budget but are small and fragmented. "
-        "B2B payment is wire transfer or cash; no SaaS credit card billing by default. "
-        "Primary B2B distribution channel is WhatsApp and face-to-face, not email. "
-        "Regulatory mandates (MINEDU) exist but schools routinely ignore them for years without consequence. "
-        "WTP for software is low — S/50-200/month is a stretch for most private schools. "
-        "Trust in digital tools is built through referrals and demos, not marketing."
+        # Economy & informality (sources: ILO, World Bank, INEI 2024)
+        "70-75% of workforce is informal. GDP per capita $8,400 (2024), high inequality (Gini 0.43). "
+        "36% of population below $8.30/day PPP — large segment cannot pay for software subscriptions. "
+        "Lima represents ~90% of the addressable SaaS market; outside Lima, smartphone penetration and WTP drop sharply. "
+
+        # VC & funding (sources: PECAP 2023, Cuantico data)
+        "VC ecosystem is early: Peru receives <3% of LATAM VC (Brazil ~50%, Mexico ~25%, Colombia ~10%). "
+        "Only ~7 notable VC-backed deals in 2023. Typical seed checks: Wayra $50-75K, angel $50-300K. "
+        "Series A ($500K-$5M) virtually requires an international co-investor — local capital dries up at growth stage. "
+        "Opportunity: VC gap means less competition and better terms at seed, but must build for regional scale from day 1. "
+        "Active funds: Wayra Peru, UTEC Ventures, Magma Partners (regional), Endeavor Peru, COFIDE (emerging co-investor). "
+        "Non-dilutive options: StartupPeru grants S/100K-500K (~$27K-135K), CONCYTEC R&D grants. "
+
+        # AI adoption (sources: McKinsey 2025, ENAI, sector reports)
+        "AI adoption is very early — estimated 5-15% of businesses use AI in any capacity (3-5 years behind Brazil/Mexico). "
+        "Early adopters: banking (BCP/Credicorp chatbots, fraud detection), mining (predictive maintenance), large retail. "
+        "Barriers: severe ML/AI talent shortage, low digitalization baseline (many SMEs still on Excel/paper), "
+        "no dedicated government AI fund, ENAI strategy published 2021 but implementation stalled. "
+        "Opportunity: first-mover advantage in vertical AI is real — low local competition, international tools not localized. "
+
+        # Payments & distribution
+        "B2C payment rails: Yape (BCP, 10M+ users) and Plin (BBVA+Interbank, 8M+ users) — consumer SaaS must integrate these. "
+        "B2B payment: CCI bank transfer standard; no widespread B2B credit card billing; no Stripe equivalent locally. "
+        "Local payment processors: Culqi, PayU, Mercado Pago — all add friction vs international. "
+        "Primary B2B sales channel: WhatsApp and face-to-face demo, not email campaigns or PLG. "
+
+        # Procurement & regulatory
+        "Government/public procurement: flows through OSCE/UGEL with 6-18 month cycles; public budgets are rigid. "
+        "Regulatory mandates (MINEDU, OSINERGMIN, SUNAT) exist but enforcement lag is 6-18 months — mandate alone is not a forcing function. "
+        "WTP for SaaS: S/50-200/month for SME, S/500-2000/month for mid-market — significantly below US/EU equivalents. "
+
+        # Talent & internet
+        "Internet penetration 74.7% (25.78M users, DataReportal 2024); mobile connections 109.8% of population. "
+        "Senior ML/AI talent scarce and expensive relative to market; junior developers increasingly available from UTEC, UPC, PUCP, UP. "
+        "TikTok reach 91.7% of adults — organic B2C distribution through short video is unusually accessible."
     ),
     "LATAM": (
-        "High income inequality across all countries. Brazil, Colombia, Mexico have larger formal sectors. "
-        "Each country requires separate compliance, localization, and sales motion. "
-        "EdTech B2B sales cycles are long (3-12 months) and involve multiple stakeholders. "
-        "Payment infrastructure varies — PIX in Brazil, PSE in Colombia, SPEI in Mexico. "
-        "WhatsApp is the primary business communication tool across all LATAM markets."
+        "Brazil (~50%), Mexico (~25%), Colombia (~10%) dominate LATAM VC — Peru, Chile, Argentina share the rest. "
+        "Each country requires separate compliance, localization, and sales motion — do not assume one product fits all. "
+        "B2B sales cycles 3-12 months; enterprise and government add complexity. "
+        "Payment rails vary: PIX (Brazil, instant, near-universal), PSE (Colombia), SPEI (Mexico), Yape/Plin (Peru). "
+        "WhatsApp is the primary B2B communication tool across all LATAM markets — email open rates are low. "
+        "AI adoption is ahead of Peru in Brazil and Mexico but still early vs North America/Europe. "
+        "Regional expansion requires local legal entity, local payment integration, and local GTM — budget accordingly."
     ),
     "USA": (
-        "Higher WTP — SaaS B2B $100-500/month is normal for SMB. "
-        "EdTech is regulated at state level; no single federal compliance mandate. "
-        "Strong competition from Naviance, Handshake, Clever, and Google Classroom integrations. "
-        "Distribution through school districts and state education agencies, not individual schools. "
-        "Public schools funded through local property taxes — wide variance in budget by district. "
-        "Credit card billing and PLG (product-led growth) work well for small schools."
+        "Higher WTP — SaaS B2B $100-500/month is standard for SMB; enterprise $1K-10K/month. "
+        "Credit card billing and PLG (product-led growth) work well; Stripe is standard. "
+        "AI adoption far ahead — most verticals already have well-funded AI incumbents; competition is fierce. "
+        "Distribution through marketplaces (App Store, Shopify, Salesforce AppExchange), communities, and content. "
+        "Regulatory varies by state; federal AI regulation still emerging (2024-2025). "
+        "Talent is expensive ($150K-300K/year for senior ML engineers); offshore team required to control COGS. "
+        "Venture scale requires TAM > $1B and a clear path to $100M ARR — Peru-only ideas rarely qualify."
     ),
 }
 
