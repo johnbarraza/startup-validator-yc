@@ -1,0 +1,98 @@
+{
+  "idea": "VocacionData AI: orientacion vocacional basada en datos laborales reales para postulantes y estudiantes peruanos, usando un agente conversacional que cruza intereses, salarios, empleabilidad, oferta universitaria y ubicacion para reducir malas decisiones de carrera.",
+  "market": "Peru",
+  "solutions": [
+    {
+      "id": 1,
+      "name": "Ponte en Carrera",
+      "category": "Plataforma gubernamental de información laboral",
+      "observed_positioning": "Portal oficial del Ministerio de Trabajo peruano que ofrece datos de empleabilidad, salarios y demanda laboral por carrera y región. Es gratuito, pero no personalizado ni interactivo."
+    },
+    {
+      "id": 2,
+      "name": "Test vocacionales tradicionales (Kuder, Holland, etc.)",
+      "category": "Test psicométricos en papel o web",
+      "observed_positioning": "Evaluaciones de intereses y personalidad ampliamente usadas en colegios y universidades. No integran datos laborales reales ni son conversacionales."
+    },
+    {
+      "id": 3,
+      "name": "Orientación vocacional presencial (psicólogos educativos)",
+      "category": "Servicio profesional humano",
+      "observed_positioning": "Sesiones individuales o grupales con psicólogos especializados. Costosas, escalabilidad limitada, dependen de la experiencia del orientador."
+    },
+    {
+      "id": 4,
+      "name": "Plataformas de búsqueda de carreras (CareerExplorer, MyNextMove)",
+      "category": "Plataformas web internacionales",
+      "observed_positioning": "Sitios como CareerExplorer o MyNextMove ofrecen tests y perfiles de carreras, pero con datos genéricos de EE.UU., no adaptados a Perú."
+    },
+    {
+      "id": 5,
+      "name": "LinkedIn Learning / Coursera Career Guides",
+      "category": "Plataformas de cursos con orientación",
+      "observed_positioning": "Ofrecen rutas de aprendizaje y guías de carrera, pero enfocadas en habilidades digitales y con datos globales, no locales."
+    },
+    {
+      "id": 6,
+      "name": "Universidad del Pacífico - Observatorio Laboral",
+      "category": "Investigación académica",
+      "observed_positioning": "Reportes y análisis del mercado laboral peruano, pero no interactivos ni personalizados."
+    },
+    {
+      "id": 7,
+      "name": "Chatbots educativos genéricos (ej. ChatGPT, Bard)",
+      "category": "IA conversacional general",
+      "observed_positioning": "Pueden responder preguntas vocacionales, pero sin datos estructurados ni actualizados del mercado peruano, riesgo de alucinaciones."
+    },
+    {
+      "id": 8,
+      "name": "Aplicaciones móviles de test vocacional (ej. Test Vocacional Perú)",
+      "category": "Apps móviles básicas",
+      "observed_positioning": "Apps simples que ofrecen tests de intereses, pero sin integración de datos laborales ni actualización constante."
+    },
+    {
+      "id": 9,
+      "name": "Ferias vocacionales universitarias",
+      "category": "Eventos presenciales",
+      "observed_positioning": "Eventos anuales donde universidades presentan sus carreras. Información sesgada hacia la oferta educativa, no hacia la demanda laboral."
+    },
+    {
+      "id": 10,
+      "name": "Redes de mentores (ej. Alumni de universidades)",
+      "category": "Redes de contacto humano",
+      "observed_positioning": "Programas de mentoría donde profesionales guían a estudiantes. Dependen de disponibilidad y no tienen datos agregados."
+    },
+    {
+      "id": 11,
+      "name": "Plataformas de empleo (Computrabajo, Bumeran, Indeed)",
+      "category": "Portales de empleo",
+      "observed_positioning": "Muestran ofertas laborales actuales, pero no ofrecen orientación vocacional ni cruce con intereses del usuario."
+    },
+    {
+      "id": 12,
+      "name": "Ministerio de Educación - Sistema de Información de Educación Superior",
+      "category": "Base de datos gubernamental",
+      "observed_positioning": "Datos sobre universidades, carreras y egresados, pero sin interfaz amigable ni recomendaciones personalizadas."
+    },
+    {
+      "id": 13,
+      "name": "Consultorías privadas de orientación vocacional (ej. Vocacional.pe)",
+      "category": "Servicio privado online",
+      "observed_positioning": "Empresas que ofrecen tests y asesoría online, pero con costos y sin integración de datos laborales en tiempo real."
+    },
+    {
+      "id": 14,
+      "name": "Redes sociales y foros (Reddit, grupos de Facebook)",
+      "category": "Comunidades informales",
+      "observed_positioning": "Estudiantes comparten experiencias y consejos, pero la información no es estructurada ni verificada."
+    },
+    {
+      "id": 15,
+      "name": "Libros y guías impresas de carreras",
+      "category": "Material educativo tradicional",
+      "observed_positioning": "Publicaciones con descripciones de carreras, pero desactualizadas y sin personalización."
+    }
+  ],
+  "research_summary": "El mercado peruano de orientación vocacional está fragmentado entre soluciones gubernamentales estáticas (Ponte en Carrera), tests psicométricos tradicionales, servicios profesionales costosos y plataformas internacionales no adaptadas localmente. Ninguna alternativa combina datos laborales reales (salarios, empleabilidad, oferta educativa, ubicación) con un agente conversacional personalizado. Las soluciones existentes carecen de actualización dinámica, integración de múltiples fuentes y accesibilidad gratuita. VocacionData AI tiene oportunidad de diferenciarse por su enfoque data-driven, localizado y conversacional, dirigido a un segmento masivo de postulantes y estudiantes peruanos que actualmente toman decisiones con información incompleta o desactualizada.",
+  "source": "llm"
+}

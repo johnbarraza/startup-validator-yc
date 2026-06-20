@@ -1,0 +1,80 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": 1,
+      "title": "Vertical-specific workflow automation for regulated industries (e.g., healthcare, finance)",
+      "pain": "General automation tools lack compliance features (HIPAA, SOX) and domain-specific logic, forcing manual workarounds.",
+      "why_now": "Increasing regulatory pressure and remote work demand compliant automation.",
+      "evidence_needed": "Interviews with compliance officers in healthcare/finance; quantify time spent on manual compliance steps.",
+      "priority": "high",
+      "risk": "Long sales cycles due to compliance requirements."
+    },
+    {
+      "id": 2,
+      "title": "AI-powered document processing for small businesses (invoices, contracts, receipts)",
+      "pain": "Small businesses manually enter data from documents into accounting/ERP systems; existing OCR tools are inaccurate or expensive.",
+      "why_now": "Advances in LLMs and vision AI make accurate extraction feasible at low cost.",
+      "evidence_needed": "Survey of 50 small business owners on time spent on data entry; test accuracy of current AI models on sample documents.",
+      "priority": "high",
+      "risk": "Competition from generic AI document parsers (e.g., Rossum, Hyperscience)."
+    },
+    {
+      "id": 3,
+      "title": "Workflow automation for non-technical teams in mid-market companies (e.g., HR, marketing)",
+      "pain": "Zapier/Make require technical know-how; mid-market teams lack dedicated automation engineers.",
+      "why_now": "Mid-market companies are expanding but cannot afford enterprise RPA; low-code tools are still too complex.",
+      "evidence_needed": "Identify 20 mid-market companies; ask about failed automation attempts and current manual processes.",
+      "priority": "medium",
+      "risk": "Hard to differentiate from simplified versions of existing tools."
+    },
+    {
+      "id": 4,
+      "title": "Automated data reconciliation and reporting for e-commerce sellers",
+      "pain": "E-commerce sellers manually reconcile orders, payments, and inventory across multiple platforms (Amazon, Shopify, eBay).",
+      "why_now": "E-commerce growth and multi-channel selling increase complexity; existing tools are fragmented.",
+      "evidence_needed": "Analyze e-commerce forums for pain points; prototype a simple reconciliation script and test with 10 sellers.",
+      "priority": "high",
+      "risk": "Niche market; scalability limited."
+    },
+    {
+      "id": 5,
+      "title": "Internal tool builder for operational workflows in logistics and supply chain",
+      "pain": "Logistics companies use spreadsheets and email for tracking shipments, inventory, and exceptions; no easy way to build custom tools.",
+      "why_now": "Supply chain disruptions highlight need for real-time visibility; Retool is too generic.",
+      "evidence_needed": "Case studies of logistics companies using manual processes; build a prototype for a specific workflow (e.g., exception handling).",
+      "priority": "medium",
+      "risk": "Requires deep domain knowledge; long sales cycle."
+    },
+    {
+      "id": 6,
+      "title": "AI-assisted workflow automation for legal document review and contract management",
+      "pain": "Lawyers and paralegals spend hours reviewing contracts for key clauses, deadlines, and risks; existing tools are expensive and complex.",
+      "why_now": "LLMs can now understand legal language; demand for efficiency in legal departments is high.",
+      "evidence_needed": "Interview 10 legal professionals; measure time spent on contract review; test AI accuracy on sample contracts.",
+      "priority": "medium",
+      "risk": "High accuracy requirements; liability concerns."
+    },
+    {
+      "id": 7,
+      "title": "Workflow automation for property management (maintenance requests, lease renewals, inspections)",
+      "pain": "Property managers juggle multiple properties with manual processes; existing software is either too basic or too enterprise.",
+      "why_now": "Remote property management trend post-COVID; small property managers lack affordable automation.",
+      "evidence_needed": "Survey property management groups; identify most painful workflow (e.g., maintenance ticketing).",
+      "priority": "low",
+      "risk": "Fragmented market; low willingness to pay."
+    },
+    {
+      "id": 8,
+      "title": "No-code automation for recurring data entry from emails and attachments",
+      "pain": "Employees manually copy data from email attachments (PDFs, Excel) into databases or CRMs; existing email parsers are limited.",
+      "why_now": "Email remains a primary communication channel; AI can now parse unstructured email content accurately.",
+      "evidence_needed": "Quantify volume of email-based data entry in target companies; test parsing accuracy on real emails.",
+      "priority": "medium",
+      "risk": "Email parsing is a feature, not a product; could be integrated by larger platforms."
+    }
+  ],
+  "recommended_gap_id": 2,
+  "checkpoint_instruction": "Validate gap 2 by conducting 20 customer interviews with small business owners to confirm pain and willingness to pay. Build a prototype that extracts data from 3 common document types (invoices, receipts, contracts) and integrates with QuickBooks or Xero. Measure accuracy and time saved.",
+  "source": "llm"
+}

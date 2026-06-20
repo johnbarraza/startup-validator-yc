@@ -1,0 +1,80 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": 1,
+      "title": "Real-time labor data integration for career matching",
+      "pain": "Students choose careers without knowing actual salaries, employability, or demand in Peru, leading to high mismatch and unemployment.",
+      "why_now": "No existing tool combines psychometric tests with live labor market data; government portals are static and hard to use.",
+      "evidence_needed": "Survey showing >70% of students lack labor market info; pilot with 100 students measuring decision confidence.",
+      "priority": 1,
+      "risk": "Data acquisition and maintenance costs; need partnerships with government and universities."
+    },
+    {
+      "id": 2,
+      "title": "Conversational AI agent for personalized guidance",
+      "pain": "Students rely on generic tests or expensive counselors; no interactive, always-available tool that adapts to individual profiles.",
+      "why_now": "ChatGPT lacks Peru-specific data; existing chatbots are not specialized for career guidance.",
+      "evidence_needed": "User testing showing higher engagement with conversational agent vs. static tests; retention metrics.",
+      "priority": 2,
+      "risk": "NLP accuracy for Spanish and local slang; user trust in AI recommendations."
+    },
+    {
+      "id": 3,
+      "title": "University and location-based recommendations",
+      "pain": "Students often choose universities far from home or with poor job placement; no tool factors in location and university quality.",
+      "why_now": "Current tools ignore geographic constraints and university-specific outcomes; students waste time and money.",
+      "evidence_needed": "Data on drop-out rates due to location mismatch; case studies of students who benefited from location-aware advice.",
+      "priority": 3,
+      "risk": "Requires comprehensive university database; privacy concerns with location data."
+    },
+    {
+      "id": 4,
+      "title": "Affordable, scalable alternative to private counselors",
+      "pain": "Private career coaching costs $50-200/session, inaccessible to most Peruvian families; school counselors are overworked.",
+      "why_now": "Digital solution can serve thousands at low cost; no competitor offers data-driven guidance at this price point.",
+      "evidence_needed": "Price sensitivity analysis; willingness-to-pay survey among target users.",
+      "priority": 4,
+      "risk": "Low willingness to pay if free alternatives exist; need to demonstrate value clearly."
+    },
+    {
+      "id": 5,
+      "title": "Integration with school curriculum and government programs",
+      "pain": "Career guidance is not systematically integrated into schools; students lack structured exposure to career planning.",
+      "why_now": "Government initiatives like 'Ponte en Carrera' exist but are underutilized; schools need easy-to-use digital tools.",
+      "evidence_needed": "Pilot with 5 schools showing improved career readiness; feedback from school counselors.",
+      "priority": 5,
+      "risk": "Bureaucratic hurdles; slow adoption in public schools."
+    },
+    {
+      "id": 6,
+      "title": "Post-graduation tracking and alumni network",
+      "pain": "Students have no way to see where graduates of specific careers end up; lack of role models and success stories.",
+      "why_now": "LinkedIn penetration is low in Peru; no localized platform tracks career outcomes for Peruvian graduates.",
+      "evidence_needed": "Feasibility study on data collection from universities; user demand for alumni insights.",
+      "priority": 6,
+      "risk": "Data privacy issues; difficulty in getting universities to share data."
+    },
+    {
+      "id": 7,
+      "title": "Gamified career exploration for younger students",
+      "pain": "High school students find career planning boring; early exposure can prevent later mismatches.",
+      "why_now": "No engaging, game-like tool exists for Peruvian teens; existing tests are text-heavy and unappealing.",
+      "evidence_needed": "A/B test of gamified vs. standard interface; engagement metrics from prototype.",
+      "priority": 7,
+      "risk": "Development cost; may not appeal to all age groups."
+    },
+    {
+      "id": 8,
+      "title": "Parent and family involvement in career decisions",
+      "pain": "Family advice is the most common source, but often outdated or biased; parents lack reliable data to guide children.",
+      "why_now": "No tool targets parents as a secondary audience; they influence decisions but have no access to labor market insights.",
+      "evidence_needed": "Survey of parents' information sources; prototype testing with parent-student pairs.",
+      "priority": 8,
+      "risk": "Privacy concerns; need to balance student autonomy with parental input."
+    }
+  ],
+  "recommended_gap_id": 1,
+  "checkpoint_instruction": "Validate gap 1 by conducting a survey of 200+ Peruvian high school students to confirm that lack of labor market data is a top pain point. Also, prototype a minimal conversational agent that shows salary and employability for 5 careers and test with 20 users to measure engagement and perceived value.",
+  "source": "llm"
+}

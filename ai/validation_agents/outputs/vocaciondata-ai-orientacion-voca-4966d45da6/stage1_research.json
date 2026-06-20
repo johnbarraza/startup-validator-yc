@@ -1,0 +1,98 @@
+{
+  "idea": "VocacionData AI: orientacion vocacional basada en datos laborales reales para postulantes y estudiantes peruanos, usando un agente conversacional que cruza intereses, salarios, empleabilidad, oferta universitaria y ubicacion para reducir malas decisiones de carrera.",
+  "market": "Peru: ~1 million students in last year of high school and ~500,000 university applicants annually. TAM: $50M (career guidance market, including test prep and counseling). SAM: $10M (digital career guidance tools). SOM: $1M (first 12 months, targeting 10,000 paid users at $100/year).",
+  "solutions": [
+    {
+      "id": 1,
+      "name": "PruébaT",
+      "category": "Online career test platform",
+      "observed_positioning": "Free online career test for Mexican students; uses psychometric questions but no labor market data."
+    },
+    {
+      "id": 2,
+      "name": "CareerExplorer (Sokanu)",
+      "category": "Career assessment and matching",
+      "observed_positioning": "Comprehensive career test with detailed reports; subscription-based; US-focused, no Peru data."
+    },
+    {
+      "id": 3,
+      "name": "MyNextMove (O*NET)",
+      "category": "Government career exploration tool",
+      "observed_positioning": "Free tool based on O*NET database; US-centric, not tailored to Peru."
+    },
+    {
+      "id": 4,
+      "name": "16Personalities",
+      "category": "Personality test for career guidance",
+      "observed_positioning": "Popular personality test loosely linked to careers; generic, no local labor data."
+    },
+    {
+      "id": 5,
+      "name": "Coursera Career Academy",
+      "category": "Online learning with career paths",
+      "observed_positioning": "Skill-based career guidance; global, not Peru-specific, requires course enrollment."
+    },
+    {
+      "id": 6,
+      "name": "LinkedIn Career Explorer",
+      "category": "Professional network career insights",
+      "observed_positioning": "Uses LinkedIn data for career paths; limited in Peru due to low penetration, no university integration."
+    },
+    {
+      "id": 7,
+      "name": "Khan Academy Career Content",
+      "category": "Educational content with career info",
+      "observed_positioning": "Free videos on careers; no interactive assessment or local data."
+    },
+    {
+      "id": 8,
+      "name": "University career counseling offices",
+      "category": "In-person counseling",
+      "observed_positioning": "Manual, one-on-one; limited capacity, not scalable, no real-time labor data."
+    },
+    {
+      "id": 9,
+      "name": "Private career counselors (coaches)",
+      "category": "Paid individual coaching",
+      "observed_positioning": "Expensive ($50-200/session), not accessible to most students, no data-driven insights."
+    },
+    {
+      "id": 10,
+      "name": "Government portals (e.g., Ponte en Carrera)",
+      "category": "Public career information website",
+      "observed_positioning": "Static data on salaries and employability; no interactive agent, poor user experience."
+    },
+    {
+      "id": 11,
+      "name": "Test vocacionales online (e.g., Educaweb)",
+      "category": "Online career tests",
+      "observed_positioning": "Basic psychometric tests; often outdated, no integration with real labor market."
+    },
+    {
+      "id": 12,
+      "name": "ChatGPT / generic AI chatbots",
+      "category": "General-purpose AI assistant",
+      "observed_positioning": "Can answer career questions but lacks structured data on Peru, no personalized matching."
+    },
+    {
+      "id": 13,
+      "name": "YouTube career advice channels",
+      "category": "Informal video content",
+      "observed_positioning": "Free but unstructured, no personalization, no data validation."
+    },
+    {
+      "id": 14,
+      "name": "School guidance counselors",
+      "category": "In-person counseling in schools",
+      "observed_positioning": "Overworked, understaffed, often lack up-to-date labor market information."
+    },
+    {
+      "id": 15,
+      "name": "Do nothing / family advice",
+      "category": "No tool, rely on family/friends",
+      "observed_positioning": "Most common alternative; leads to uninformed decisions, perpetuates mismatch."
+    }
+  ],
+  "research_summary": "The Peruvian career guidance market is fragmented, with no dominant digital solution that combines psychometric assessment with real-time labor data (salaries, employability, university offerings, location). Existing alternatives are either generic (global tools like 16Personalities, CareerExplorer), static (government portals), expensive (private coaches), or informal (family advice). A conversational AI agent that integrates local labor data could address the pain of poor career decisions, which affect ~70% of Peruvian students who choose careers without market information. The main competition is the 'do nothing' option and manual counseling. Key moat: proprietary dataset of Peruvian labor market + university data, and a personalized agent that improves with usage.",
+  "source": "llm"
+}

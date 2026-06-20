@@ -1,0 +1,303 @@
+from typing import Any
+
+from ..config import ValidationConfig
+from ..llm_client import LLMClient
+
+
+PITCH_SECTIONS = [
+    "one_liner",
+    "problem",
+    "solution_insight",
+    "why_now",
+    "market",
+    "competition_moat",
+    "business_model_pricing",
+    "go_to_market",
+    "traction_signals",
+    "roadmap",
+    "risks_mitigations",
+    "the_ask",
+    "product_demo_architecture",
+]
+
+
+SCORING_DIMENSIONS = [
+    ("problem_validation", 15),
+    ("solution_insight", 10),
+    ("market_quality", 15),
+    ("competition_moat", 10),
+    ("business_model_pricing", 10),
+    ("go_to_market", 10),
+    ("traction_or_evidence", 10),
+    ("execution_roadmap", 10),
+    ("risk_control", 10),
+]
+
+
+def _score(name: str, max_points: int, points: int, note: str) -> dict[str, Any]:
+    return {
+        "dimension": name,
+        "points": points,
+        "max_points": max_points,
+        "note": note,
+    }
+
+
+def _fallback_region(region: str) -> dict[str, Any]:
+    if region.lower() == "peru":
+        return {
+            "region": "Peru",
+            "validity": "Potentially strong for problems with local regulation, Spanish workflows, public data, or underserved SMEs.",
+            "tam": "Estimate from national population, firms, households, sector output, or public expenditure.",
+            "sam": "Start with reachable cities, industries, institutions, or customer segments where the founder can sell.",
+            "som_12_months": "Use a bottom-up estimate: reachable leads x conversion rate x annual contract value.",
+            "recommended_sources": [
+                "INEI microdata and surveys",
+                "MEF budget data",
+                "BCRP statistics",
+                "sector associations",
+                "local interviews",
+            ],
+        }
+    if region.lower() == "latam":
+        return {
+            "region": "LATAM",
+            "validity": "Attractive if the problem repeats across Spanish-speaking markets and does not require heavy country-by-country integration.",
+            "tam": "Estimate from regional sector size, number of firms, workers, students, patients, transactions, or institutions.",
+            "sam": "Prioritize countries with similar language, regulation, distribution, and payment behavior.",
+            "som_12_months": "Estimate expansion only after proving one repeatable channel in the first country.",
+            "recommended_sources": [
+                "World Bank",
+                "IDB",
+                "ECLAC/CEPAL",
+                "national statistics offices",
+                "industry reports",
+            ],
+        }
+    return {
+        "region": "USA",
+        "validity": "Useful benchmark for market size and competitor density; attractive if willingness to pay is higher and distribution is reachable.",
+        "tam": "Estimate from US sector spend, number of businesses, paid seats, transactions, or workflow volume.",
+        "sam": "Narrow to a buyer segment the founder can actually reach through outbound, communities, or integrations.",
+        "som_12_months": "Use a conservative founder-led sales or self-serve acquisition model.",
+        "recommended_sources": [
+            "US Census",
+            "BLS",
+            "World Bank",
+            "Statista or industry reports",
+            "academic papers",
+        ],
+    }
+
+
+def _fallback_dossier(
+    idea: str,
+    gap: dict[str, Any],
+    validation: dict[str, Any],
+    simulation: dict[str, Any],
+    regions: list[str],
+) -> dict[str, Any]:
+    scorecard = [
+        _score("problem_validation", 15, 8, "Promising only after 5 concrete user interviews prove recent painful behavior."),
+        _score("solution_insight", 10, 6, "Insight needs sharper wording around what existing alternatives miss."),
+        _score("market_quality", 15, 7, "Market sizing is not yet evidenced; compare Peru, LATAM, and USA before choosing focus."),
+        _score("competition_moat", 10, 5, "Moat is weak until workflow data, distribution, or community compounds."),
+        _score("business_model_pricing", 10, 6, "Pricing needs a concrete buyer metric and contribution margin assumptions."),
+        _score("go_to_market", 10, 6, "First 10 users can be founder-led; first 100 and 1,000 need a repeatable channel."),
+        _score("traction_or_evidence", 10, 3, "No traction provided in the input; require interviews, waitlist, pilots, or usage."),
+        _score("execution_roadmap", 10, 7, "A 3/6/12 month roadmap is feasible if the first wedge is narrow."),
+        _score("risk_control", 10, 6, "AI-platform substitution and weak demand are the main risks to control."),
+    ]
+    total = sum(item["points"] for item in scorecard)
+    max_total = sum(item["max_points"] for item in scorecard)
+    region_list = [_fallback_region(region.strip()) for region in regions if region.strip()]
+
+    return {
+        "source": "deterministic_fallback",
+        "one_liner": f"We help a specific customer segment solve '{gap.get('title', 'a painful workflow')}' through a focused software/AI workflow.",
+        "problem": {
+            "who_suffers": "Define one specific user and one economic buyer. Avoid broad labels like 'everyone' or 'companies'.",
+            "pain_level": "Quantify hours lost, money lost, risk, errors, or missed revenue per month.",
+            "current_workaround": "Identify the real competitor: spreadsheet, WhatsApp, email, manual labor, incumbent, or doing nothing.",
+            "evidence_needed": "At least 5 interviews, screenshots, public data, or workflow artifacts.",
+        },
+        "solution_insight": {
+            "solution": "A narrow workflow that produces an outcome the buyer already values.",
+            "insight": "The likely insight is not 'AI can do it'; it is that a repeated expert workflow can be compressed and standardized.",
+            "non_stack_note": "This dossier intentionally avoids frontend/backend stack because the correct stack changes by idea.",
+        },
+        "why_now": [
+            "LLMs and agents can now execute and explain multi-step workflows cheaply.",
+            "Distribution through communities, outbound, and self-serve demos is faster for solo founders.",
+            "Users are more willing to try AI-native tools when the workflow is narrow and auditable.",
+        ],
+        "market": {
+            "recommended_focus": "Start where the founder has fastest access to users and evidence; compare Peru, LATAM, and USA before committing.",
+            "regions": region_list,
+            "source_strategy": [
+                "Use INEI microdata for Peru when the market depends on households, employment, education, health, agriculture, firms, or municipalities.",
+                "Use MEF/BCRP for public budgets, macro indicators, credit, sector output, and Peru-specific economic framing.",
+                "Use World Bank/CEPAL/IDB for LATAM comparables.",
+                "Use papers and industry reports when the market is technical, clinical, educational, or scientific.",
+                "Use bottom-up SOM for the first 12 months; do not rely only on top-down TAM.",
+            ],
+        },
+        "competition_moat": {
+            "alternatives_to_compare": ["doing nothing", "spreadsheet/manual workflow", "horizontal SaaS", "incumbent platform", "AI assistant"],
+            "moat_candidates": ["proprietary workflow data", "distribution/community", "integrations", "trust/brand", "regulatory or local-domain expertise"],
+            "weak_moat_warning": "If Claude/OpenAI can solve the job with a prompt, the startup needs a workflow, data, distribution, or compliance layer.",
+        },
+        "business_model_pricing": {
+            "model_options": ["monthly SaaS", "usage-based", "transaction fee", "marketplace take rate", "paid pilot", "enterprise license"],
+            "pricing_rule": "Use no more than 3 plans and tie price to a buyer-visible outcome.",
+            "contribution_margin": "Estimate tokens/API calls, storage, human review, support, and acquisition cost per customer.",
+        },
+        "go_to_market": {
+            "first_10": "Founder-led outreach to people with the exact painful workflow.",
+            "first_100": "Repeat the channel that produced the first paid or high-intent users.",
+            "first_1000": "Add scalable distribution: partnerships, integrations, content, community, marketplace, or PLG.",
+        },
+        "traction_signals": [
+            "5+ interviews with recent pain stories",
+            "waitlist with qualified users",
+            "letters of intent or paid pilots",
+            "prototype usage by real users",
+            "before/after workflow evidence",
+        ],
+        "roadmap": {
+            "3_months": "Validate the wedge, ship concierge/prototype workflow, close first paying or high-intent users.",
+            "6_months": "Productize repeated steps, measure retention, build first repeatable acquisition channel.",
+            "12_months": "Expand to adjacent workflow or geography after proving retention and willingness to pay.",
+        },
+        "risks_mitigations": [
+            {
+                "risk": "Market risk: users like the idea but do not have urgent pain.",
+                "mitigation": "Interview around recent behavior and require evidence of money/time/risk.",
+            },
+            {
+                "risk": "AI substitution risk: Claude, OpenAI, or another foundation-model tool absorbs the feature.",
+                "mitigation": "Own workflow data, distribution, integrations, evaluation harnesses, and domain trust beyond the prompt.",
+            },
+            {
+                "risk": "Execution risk: solo founder overbuilds before validation.",
+                "mitigation": "Run concierge tests and kill criteria before building broad product surface area.",
+            },
+        ],
+        "the_ask": {
+            "amount": "Define a specific amount or resource ask only after the first validation sprint.",
+            "use_of_funds": ["customer discovery", "prototype", "data acquisition", "distribution experiments"],
+            "milestone": "Unlock proof that one segment has repeated pain and will pay for the outcome.",
+        },
+        "product_demo_architecture": {
+            "demo_url": "TODO: deploy a public demo (Streamlit, Vercel, Railway, or Hugging Face Spaces)",
+            "demo_credentials": "TODO: add test user credentials once demo is live",
+            "main_flow_screenshots": [
+                "1. Landing / onboarding screen",
+                "2. Core input form or conversation entry",
+                "3. AI processing / loading state",
+                "4. Result / output screen",
+                "5. Export or share action",
+                "6. Settings or profile (optional)",
+            ],
+            "architecture_diagram": (
+                "Frontend (web/mobile) → API layer (FastAPI / Flask) → "
+                "Orchestration (agent loop) → LLM API + domain data sources → "
+                "Database (Postgres / SQLite) → Output / report"
+            ),
+            "repo_structure": [
+                "frontend/  — UI (React / Streamlit / Vue)",
+                "backend/   — API + agent logic",
+                "ai/        — prompts, agents, pipelines",
+                "data/      — seed data, validation sets",
+                "notebooks/ — exploration and analysis",
+                "docs/      — architecture diagram, pitch assets",
+            ],
+            "ai_models_used": [
+                "deepseek-chat — fast, cheap inference for classification and structured extraction",
+                "deepseek-reasoner — multi-step reasoning for validation and scoring",
+            ],
+        },
+        "scorecard": scorecard,
+        "total_score": total,
+        "max_score": max_total,
+        "rating": "Promising but unvalidated" if total >= 55 else "Needs sharper validation",
+        "external_research_hooks": {
+            "inei_microdatos": "Useful for Peru-specific TAM/SAM evidence from INEI surveys and variable search.",
+            "paperdl": "Useful for finding academic papers when the idea needs scientific, health, education, or technical evidence.",
+        },
+    }
+
+
+def run_stage3c_dossier(
+    client: LLMClient,
+    config: ValidationConfig,
+    idea: str,
+    gap: dict[str, Any],
+    validation: dict[str, Any],
+    simulation: dict[str, Any],
+    regions: list[str],
+    context: str,
+) -> dict[str, Any]:
+    return client.json_completion(
+        model=config.reasoner_model,
+        temperature=0.1,
+        system_prompt=(
+            "You are a YC-style startup evaluator building a general startup dossier. "
+            "Return only valid JSON. Do not include implementation stack or architecture. "
+            "Make the framework general across industries, but compare Peru, LATAM, and USA when requested."
+        ),
+        user_prompt=f"""
+Build an enriched startup validation dossier from this idea and previous agent outputs.
+
+Idea:
+{idea}
+
+Selected gap:
+{gap}
+
+YC validation:
+{validation}
+
+Stakeholder simulation:
+{simulation}
+
+Regions to compare:
+{regions}
+
+Use the project-final pitch doctrine:
+- one-liner: "We do X for Y using Z"
+- problem: who suffers, pain level, current workaround, evidence
+- solution & insight
+- why now
+- market: TAM, SAM, SOM for first 12 months, with source strategy
+- compare market validity in Peru vs LATAM vs USA
+- competition and moat
+- business model and pricing, including contribution margin
+- go-to-market for first 10, 100, and 1,000 users
+- traction or early signals
+- roadmap at 3, 6, and 12 months
+- risks and mitigation, including substitution by AI tools such as Claude, OpenAI, or generic agents
+- the ask
+- a 100-point scorecard
+- product_demo_architecture: proposed demo URL placeholder, 3-6 main flow screenshots to capture,
+  architecture diagram as a one-line text description (frontend → backend → AI → DB → output),
+  suggested repo folder structure, and list of AI models/APIs used with rationale (why this model
+  vs alternatives). Keep it concrete for the specific idea; do not use generic placeholders.
+
+Use these source hooks when relevant:
+- INEI/MEF/BCRP for Peru
+- World Bank/CEPAL/IDB for LATAM
+- papers and industry reports for technical evidence
+- Statista or other industry reports if available
+
+YC context:
+{context[:6000]}
+
+Return JSON with keys:
+source, one_liner, problem, solution_insight, why_now, market, competition_moat,
+business_model_pricing, go_to_market, traction_signals, roadmap, risks_mitigations,
+the_ask, product_demo_architecture, scorecard, total_score, max_score, rating,
+external_research_hooks.
+""",
+        fallback=lambda: _fallback_dossier(idea, gap, validation, simulation, regions),
+    )

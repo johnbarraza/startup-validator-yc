@@ -1,0 +1,7 @@
+machine_id,name,latitude,longitude,rms,kurtosis,crest_factor,temperature,speed,status,last_inspection
+M001,Molino de Bolas 01,-14.0985,-72.3220,0.082,2.84,3.21,38.2,1797,Normal,2026-06-15
+M002,Faja Transportadora CV-02,-14.0991,-72.3235,0.185,4.72,4.89,42.1,1772,Aviso (Falla Rodamiento),2026-06-16
+M003,Bomba de Relaves P-03,-14.0975,-72.3210,0.320,7.12,6.45,48.4,1750,Critico (Falla Rodamiento),2026-06-18
+M004,Chancadora de Quijada CH-01,-14.1002,-72.3250,0.083,2.87,3.20,38.4,1796,Normal,2026-06-14
+M005,Compresor de Aire AC-04,-14.0965,-72.3195,0.245,5.85,5.62,45.3,1761,Alerta (Falla Rodamiento),2026-06-17
+M006,Zaranda Vibratoria SV-02,-14.0980,-72.3240,0.084,2.91,3.18,38.5,1796,Normal,2026-06-12

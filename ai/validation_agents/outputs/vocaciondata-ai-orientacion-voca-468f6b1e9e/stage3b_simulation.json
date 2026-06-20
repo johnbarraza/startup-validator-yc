@@ -1,0 +1,149 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 6 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "A startup idea that helps a specific customer segment solve a painful repeated workflow with software or AI. Pass --idea to validate a concrete idea.",
+  "selected_gap": {
+    "id": 2,
+    "title": "AI-powered document processing for small businesses (invoices, contracts, receipts)",
+    "pain": "Small businesses manually enter data from documents into accounting/ERP systems; existing OCR tools are inaccurate or expensive.",
+    "why_now": "Advances in LLMs and vision AI make accurate extraction feasible at low cost.",
+    "evidence_needed": "Survey of 50 small business owners on time spent on data entry; test accuracy of current AI models on sample documents.",
+    "priority": "high",
+    "risk": "Competition from generic AI document parsers (e.g., Rossum, Hyperscience)."
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user",
+      "lens": "Daily workflow pain, speed, usability, trust.",
+      "success_metric": "The product saves time or reduces stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer",
+      "lens": "Budget, ROI, risk, urgency, procurement friction.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric.",
+      "default_objection": "Who owns the budget, and why would we buy now?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations owner",
+      "lens": "Implementation, process change, support load, reliability.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This may add another tool my team has to maintain."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor",
+      "lens": "How the status quo or large vendors defend the account.",
+      "success_metric": "The startup finds a wedge incumbents do not prioritize.",
+      "default_objection": "We can add this feature or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC partner",
+      "lens": "Market size, founder insight, speed of learning, venture scale.",
+      "success_metric": "The idea has a sharp initial wedge and a path to a large market.",
+      "default_objection": "This may be a feature, not a company."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder",
+      "lens": "Data access, model quality, defensibility, COGS, failure modes.",
+      "success_metric": "The system can be built cheaply, reliably, and with a learning loop.",
+      "default_objection": "The demo may work, but edge cases and data access can break the product."
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user",
+      "reaction": "As a small business owner, I spend hours manually entering invoice data into QuickBooks. If this AI tool actually works accurately and cheaply, it could save me 5+ hours per week. But I'm skeptical because I've tried OCR tools before that made too many errors, requiring me to double-check everything.",
+      "concern": "Accuracy: If the AI makes even a few mistakes on critical fields like amounts or dates, I'll have to manually verify every document, which defeats the purpose and adds stress.",
+      "evidence_request": "Show me a demo processing 50 real invoices from my industry with 99%+ accuracy on key fields (vendor, date, total) without any manual correction.",
+      "score": 0.3,
+      "score_rationale": "The idea addresses a real pain, but I need proof that it's reliable enough to trust with my financial data before I'd adopt it.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer",
+      "reaction": "The idea targets a real pain point, but small businesses are notoriously price-sensitive and slow to adopt new tools. The ROI must be immediate and obvious to justify even a small subscription fee.",
+      "concern": "High competition from established players like Rossum and Hyperscience means you'll need to offer significantly better accuracy or lower price, but that likely squeezes margins and makes it hard to prove ROI quickly.",
+      "evidence_request": "A case study showing a small business saving at least 10 hours per week (or $500/month) using your tool, with a clear payback period of under 3 months.",
+      "score": 0.3,
+      "score_rationale": "The risk of competition and procurement friction is high, and without concrete evidence of immediate cost savings, I cannot justify allocating budget this quarter.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations owner",
+      "reaction": "This idea adds another tool to the stack, requiring integration with existing accounting systems and training staff. The support load for handling edge cases in document extraction could be high, and any inaccuracies will create manual rework that offsets the promised efficiency.",
+      "concern": "The risk of inaccurate extraction creating more work than it saves, especially for complex or non-standard documents, leading to increased support tickets and process exceptions.",
+      "evidence_request": "A pilot with 10 small businesses showing that the AI reduces data entry time by at least 50% with less than 5% error rate, and that integration with their existing accounting software requires no custom development.",
+      "score": 0.3,
+      "score_rationale": "High operational risk from integration complexity and potential accuracy issues, with unclear support burden and process change costs.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor",
+      "reaction": "This is a crowded space where incumbents like Rossum and Hyperscience already serve mid-market with high accuracy. Small businesses are price-sensitive and often use free or low-cost tools like Google Drive OCR or QuickBooks' built-in receipt capture, making it hard to justify a new subscription.",
+      "concern": "Lack of differentiation from existing generic AI document parsers that are already lowering costs and improving accuracy, making it difficult to win against incumbents with established integrations and brand trust.",
+      "evidence_request": "Show a clear, defensible moat—such as proprietary training data from a specific vertical (e.g., construction subcontractors) or a unique workflow integration that incumbents cannot easily replicate.",
+      "score": 0.2,
+      "score_rationale": "The wedge is too small and the competitive moat is weak; incumbents can easily copy features and undercut on price.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC partner",
+      "reaction": "This is a crowded space with incumbents like Rossum and Hyperscience, and generic LLM-based solutions are commoditizing fast. Small businesses may not have the willingness to pay for a niche solution when they can use cheaper alternatives or manual workarounds.",
+      "concern": "Lack of a defensible moat against generic AI document parsers that can easily add small business features.",
+      "evidence_request": "Show me a survey of 50 small business owners where >70% report spending >5 hours/week on manual data entry and are willing to pay >$50/month for a solution.",
+      "score": 0.3,
+      "score_rationale": "The market is large but the competitive advantage is unclear, and the founder insight seems generic without a unique distribution or data advantage.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder",
+      "reaction": "The idea is technically feasible with current LLMs and vision models, but the COGS per document could be high due to API costs, and building a reliable extraction pipeline for diverse small business documents is non-trivial. The learning loop is weak because model improvements require labeled data that is expensive to acquire at scale.",
+      "concern": "High COGS from LLM API calls per document, making unit economics unattractive for low-value invoices.",
+      "evidence_request": "A cost analysis showing that total processing cost per document (including API calls, human-in-the-loop correction, and infrastructure) is less than $0.10, with a path to <$0.05.",
+      "score": 0.3,
+      "score_rationale": "While technically possible, the high variable cost per document and lack of a clear data moat make it hard to defend against generic competitors with deeper pockets.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.283,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.283,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "Accuracy: If the AI makes even a few mistakes on critical fields like amounts or dates, I'll have to manually verify every document, which defeats the purpose and adds stress.",
+      "High competition from established players like Rossum and Hyperscience means you'll need to offer significantly better accuracy or lower price, but that likely squeezes margins and makes it hard to prove ROI quickly.",
+      "The risk of inaccurate extraction creating more work than it saves, especially for complex or non-standard documents, leading to increased support tickets and process exceptions."
+    ],
+    "top_evidence_requests": [
+      "Show me a demo processing 50 real invoices from my industry with 99%+ accuracy on key fields (vendor, date, total) without any manual correction.",
+      "A case study showing a small business saving at least 10 hours per week (or $500/month) using your tool, with a clear payback period of under 3 months.",
+      "A pilot with 10 small businesses showing that the AI reduces data entry time by at least 50% with less than 5% error rate, and that integration with their existing accounting software requires no custom development."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": false
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

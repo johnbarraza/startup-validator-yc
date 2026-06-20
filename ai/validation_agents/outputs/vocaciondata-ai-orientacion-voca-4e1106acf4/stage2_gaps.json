@@ -1,0 +1,80 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": 1,
+      "title": "Falta de integración de datos laborales reales en orientación vocacional",
+      "pain": "Estudiantes peruanos toman decisiones de carrera basadas en información incompleta o desactualizada, sin acceso a datos concretos de salarios, empleabilidad y demanda laboral por región.",
+      "why_now": "El gobierno peruano publica datos laborales (Ponte en Carrera, MINEDU) pero no los integra en herramientas interactivas. La IA conversacional permite cruzar estos datos en tiempo real.",
+      "evidence_needed": "Validar que los estudiantes no encuentran fácilmente datos laborales actualizados al elegir carrera.",
+      "priority": 1,
+      "risk": "Bajo: datos públicos disponibles, solo falta integrarlos."
+    },
+    {
+      "id": 2,
+      "title": "Ausencia de personalización conversacional en orientación vocacional",
+      "pain": "Las soluciones existentes (tests, portales) son estáticas y no se adaptan al perfil individual del estudiante, generando recomendaciones genéricas.",
+      "why_now": "Los chatbots con IA (ChatGPT) son populares pero no especializados. Un agente conversacional entrenado con datos locales puede ofrecer interacción natural y personalizada.",
+      "evidence_needed": "Encuestas que muestren insatisfacción con tests genéricos y deseo de interacción personalizada.",
+      "priority": 2,
+      "risk": "Medio: requiere desarrollo de NLP y datos locales."
+    },
+    {
+      "id": 3,
+      "title": "Cobertura limitada de orientación vocacional en zonas fuera de Lima",
+      "pain": "Estudiantes en regiones del Perú tienen acceso reducido a orientación vocacional presencial y a información sobre oferta educativa local.",
+      "why_now": "La digitalización post-pandemia y la penetración de smartphones permiten llegar a zonas rurales con una solución móvil.",
+      "evidence_needed": "Datos de acceso a internet y demanda de orientación en regiones.",
+      "priority": 3,
+      "risk": "Medio: depende de conectividad y adopción digital."
+    },
+    {
+      "id": 4,
+      "title": "Falta de actualización dinámica de información vocacional",
+      "pain": "Las guías impresas y portales estáticos se desactualizan rápidamente, mientras el mercado laboral cambia constantemente.",
+      "why_now": "Las APIs de empleo (Computrabajo, Bumeran) y datos gubernamentales permiten actualización automática. La IA puede procesar estos flujos en tiempo real.",
+      "evidence_needed": "Comparar fechas de actualización de fuentes existentes vs. necesidad de datos frescos.",
+      "priority": 4,
+      "risk": "Bajo: datos disponibles, solo automatizar."
+    },
+    {
+      "id": 5,
+      "title": "Inexistencia de cruce entre intereses, empleabilidad y ubicación geográfica",
+      "pain": "Los tests vocacionales solo miden intereses, sin considerar dónde hay trabajo y con qué salario, llevando a carreras sin demanda local.",
+      "why_now": "Los datos de empleo por región (Ponte en Carrera) y oferta universitaria (MINEDU) están disponibles pero no se cruzan automáticamente.",
+      "evidence_needed": "Casos de estudiantes que eligieron carreras sin demanda en su región.",
+      "priority": 5,
+      "risk": "Bajo: integración de datos existentes."
+    },
+    {
+      "id": 6,
+      "title": "Orientación vocacional costosa y no escalable",
+      "pain": "Los servicios de psicólogos educativos y consultorías privadas son caros, limitando el acceso a estudiantes de bajos recursos.",
+      "why_now": "La IA conversacional puede ofrecer orientación gratuita o de bajo costo, escalando a millones de usuarios sin incrementar costos marginales.",
+      "evidence_needed": "Precios actuales de servicios privados y disposición a pagar de estudiantes.",
+      "priority": 6,
+      "risk": "Medio: modelo de negocio debe ser sostenible."
+    },
+    {
+      "id": 7,
+      "title": "Falta de confianza en información vocacional de fuentes no oficiales",
+      "pain": "Los estudiantes recurren a foros y redes sociales donde la información no es verificada, generando desinformación.",
+      "why_now": "La desconfianza en fuentes oficiales y la necesidad de datos confiables crean oportunidad para una plataforma que use datos gubernamentales verificados.",
+      "evidence_needed": "Encuestas sobre fuentes de información y nivel de confianza.",
+      "priority": 7,
+      "risk": "Bajo: usar datos oficiales genera credibilidad."
+    },
+    {
+      "id": 8,
+      "title": "Desconexión entre oferta educativa y demanda laboral en tiempo real",
+      "pain": "Las universidades promocionan carreras sin mostrar datos reales de empleabilidad, y los estudiantes no tienen cómo comparar.",
+      "why_now": "Los portales de empleo muestran demanda actual, pero no están vinculados a la oferta educativa. Un agente conversacional puede conectar ambos mundos.",
+      "evidence_needed": "Análisis de brechas entre egresados y ofertas laborales.",
+      "priority": 8,
+      "risk": "Medio: requiere colaboración con universidades."
+    }
+  ],
+  "recommended_gap_id": 1,
+  "checkpoint_instruction": "Validate gap 1 by conducting 20 interviews with Peruvian high school seniors and college freshmen, asking: 'When choosing a career, how do you currently find information about salaries, job demand, and employment rates? What is the biggest frustration?' If >70% mention lack of concrete data or outdated info, proceed with MVP focusing on integrating Ponte en Carrera and MINEDU datasets into a conversational agent.",
+  "source": "llm"
+}

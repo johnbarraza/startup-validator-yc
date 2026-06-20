@@ -1,0 +1,725 @@
+{
+  "idea": "VocacionData AI:\n  orientacion vocacional basada en datos laborales reales para postulantes y estudiantes\n  peruanos, usando un agente conversacional que cruza intereses, salarios, empleabilidad,\n  oferta universitaria y ubicacion para reducir malas decisiones de carrera.",
+  "current_stage": "complete",
+  "selected_gap_id": "G1",
+  "strategy_approved": true,
+  "artifacts": {
+    "stage1_research": {
+      "idea": "VocacionData AI:\n  orientacion vocacional basada en datos laborales reales para postulantes y estudiantes\n  peruanos, usando un agente conversacional que cruza intereses, salarios, empleabilidad,\n  oferta universitaria y ubicacion para reducir malas decisiones de carrera.",
+      "market": "Unknown market inferred from founder-provided idea",
+      "solutions": [
+        {
+          "id": "S01",
+          "name": "Manual workaround",
+          "category": "Spreadsheet, notes, or ad hoc process",
+          "observed_positioning": "Cheap and flexible, but slow and inconsistent."
+        },
+        {
+          "id": "S02",
+          "name": "Generic horizontal SaaS",
+          "category": "Broad workflow software",
+          "observed_positioning": "Easy to adopt, but weak on domain-specific outcomes."
+        },
+        {
+          "id": "S03",
+          "name": "Incumbent enterprise platform",
+          "category": "Large vendor suite",
+          "observed_positioning": "Trusted by buyers, but expensive and slow to implement."
+        },
+        {
+          "id": "S04",
+          "name": "Internal build",
+          "category": "Company-owned custom tooling",
+          "observed_positioning": "Fits local process, but competes with engineering priorities."
+        },
+        {
+          "id": "S05",
+          "name": "Consulting or agency service",
+          "category": "Human-led service provider",
+          "observed_positioning": "High-touch expertise, but margins and scale are limited."
+        },
+        {
+          "id": "S06",
+          "name": "Open-source project",
+          "category": "Community-maintained tool",
+          "observed_positioning": "Low software cost, but support and reliability vary."
+        },
+        {
+          "id": "S07",
+          "name": "AI wrapper",
+          "category": "Thin LLM interface",
+          "observed_positioning": "Fast to build, but easy to copy if workflow depth is missing."
+        },
+        {
+          "id": "S08",
+          "name": "Marketplace or network",
+          "category": "Connects supply and demand",
+          "observed_positioning": "Useful when liquidity exists, hard to start from zero."
+        },
+        {
+          "id": "S09",
+          "name": "Mobile-first app",
+          "category": "Lightweight point solution",
+          "observed_positioning": "Good distribution surface, often too shallow for serious workflows."
+        },
+        {
+          "id": "S10",
+          "name": "No-code automation",
+          "category": "Zapier/Airtable/Notion-style stack",
+          "observed_positioning": "Good for prototypes, brittle for core operations."
+        },
+        {
+          "id": "S11",
+          "name": "Legacy desktop software",
+          "category": "Installed tool or old vertical app",
+          "observed_positioning": "Embedded in workflows, poor UX and integrations."
+        },
+        {
+          "id": "S12",
+          "name": "Data dashboard",
+          "category": "BI/reporting layer",
+          "observed_positioning": "Makes status visible, but may not drive action."
+        },
+        {
+          "id": "S13",
+          "name": "Community and content",
+          "category": "Newsletter, course, forum, or templates",
+          "observed_positioning": "Can validate demand, but may not be software defensible."
+        },
+        {
+          "id": "S14",
+          "name": "API infrastructure",
+          "category": "Developer-facing primitives",
+          "observed_positioning": "Scales well if developers are the buyer, indirect otherwise."
+        },
+        {
+          "id": "S15",
+          "name": "Status quo",
+          "category": "Doing nothing",
+          "observed_positioning": "Always a competitor when pain is tolerable or budget is unclear."
+        }
+      ],
+      "research_summary": "Fallback mode cannot perform live market research, so it maps the idea against the common alternative categories every startup must beat: manual work, internal builds, incumbents, consultants, generic SaaS, open-source, and doing nothing. Use live LLM mode or add external research artifacts for named competitors.",
+      "source": "deterministic_fallback"
+    },
+    "stage2_gaps": {
+      "research_source": "deterministic_fallback",
+      "gaps": [
+        {
+          "id": "G1",
+          "title": "Narrow painful workflow",
+          "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+          "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+          "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+          "priority": 1,
+          "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+        },
+        {
+          "id": "G2",
+          "title": "Buyer-visible outcome",
+          "pain": "Users may like the product, but the buyer needs a measurable business result.",
+          "why_now": "Founders can now instrument usage, cost, and time saved from the first prototype.",
+          "evidence_needed": "Ask who owns the budget and what metric would justify payment this month.",
+          "priority": 2,
+          "risk": "Without a buyer metric, adoption can stall at free-user enthusiasm."
+        },
+        {
+          "id": "G3",
+          "title": "Distribution wedge",
+          "pain": "A useful product still fails if reaching users is too slow or expensive.",
+          "why_now": "Communities, outbound, integrations, and content can reveal a repeatable first channel.",
+          "evidence_needed": "Run 3 small acquisition tests and measure replies, demos, or waitlist conversion.",
+          "priority": 3,
+          "risk": "A channel that works once may not repeat without founder-led effort."
+        },
+        {
+          "id": "G4",
+          "title": "Trust and switching friction",
+          "pain": "Users keep existing tools unless the new workflow is clearly safer, faster, or cheaper.",
+          "why_now": "Agentic workflows can generate strong first drafts, but users need proof and control.",
+          "evidence_needed": "Ask users what would make them trust the product with a real task.",
+          "priority": 4,
+          "risk": "Trust gaps can turn an impressive demo into a non-critical side tool."
+        },
+        {
+          "id": "G5",
+          "title": "Defensible workflow data",
+          "pain": "A generic AI interface is easy to copy unless usage creates proprietary process insight.",
+          "why_now": "Every interaction can teach the system where users hesitate, correct, or approve.",
+          "evidence_needed": "Define what unique data the product captures after 30 days of usage.",
+          "priority": 5,
+          "risk": "If no proprietary learning loop exists, incumbents can clone the surface area."
+        }
+      ],
+      "recommended_gap_id": "G1",
+      "checkpoint_instruction": "Choose one gap with --gap-id G1, or run --auto to select the recommended gap.",
+      "source": "deterministic_fallback"
+    },
+    "stage3_validation": {
+      "idea": "VocacionData AI:\n  orientacion vocacional basada en datos laborales reales para postulantes y estudiantes\n  peruanos, usando un agente conversacional que cruza intereses, salarios, empleabilidad,\n  oferta universitaria y ubicacion para reducir malas decisiones de carrera.",
+      "selected_gap": {
+        "id": "G1",
+        "title": "Narrow painful workflow",
+        "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+        "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+        "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+        "priority": 1,
+        "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+      },
+      "friedman_scores": [
+        {
+          "criterion": "Founder-market fit",
+          "score": 5,
+          "note": "Unknown until the founder proves unusual access or insight into the users."
+        },
+        {
+          "criterion": "Market size",
+          "score": 5,
+          "note": "Unknown in fallback mode; estimate TAM/SAM/SOM with external evidence."
+        },
+        {
+          "criterion": "Problem acuity",
+          "score": 6,
+          "note": "Potentially strong if the selected gap maps to urgent time, money, or risk."
+        },
+        {
+          "criterion": "Competition",
+          "score": 6,
+          "note": "Alternatives probably exist; competition is validation if the wedge is sharper."
+        },
+        {
+          "criterion": "Personal pull",
+          "score": 5,
+          "note": "Unknown until the founder states why they would work on this for years."
+        },
+        {
+          "criterion": "Recently possible or necessary",
+          "score": 6,
+          "note": "Likely if AI, regulation, platform shifts, or cost changes enable it now."
+        },
+        {
+          "criterion": "Successful proxies",
+          "score": 5,
+          "note": "Find adjacent companies, workflows, or budgets that prove willingness to pay."
+        },
+        {
+          "criterion": "Years-long commitment",
+          "score": 5,
+          "note": "Unknown; validate whether the domain is deep enough for compounding insight."
+        },
+        {
+          "criterion": "Scalability",
+          "score": 6,
+          "note": "Software can scale, but sales, service, and data access may constrain the model."
+        },
+        {
+          "criterion": "Good idea space",
+          "score": 6,
+          "note": "Promising only if the first customer segment has repeated painful workflows."
+        }
+      ],
+      "yc_rule_scores": [
+        {
+          "criterion": "Do not wait for the perfect idea",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Burn the boats",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Go deep into customer workflow",
+          "score": 7,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Build at the edge of AI",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Sell outcomes, not tools",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Choose ambitious scope",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Treat failure as structured data",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Pick low-trust, high-expertise markets",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "The process is the product",
+          "score": 7,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Avoid early-demand trap",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Price per unit or result",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Obsess over COGS",
+          "score": 7,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Do not bolt AI onto legacy",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        },
+        {
+          "criterion": "Cover domain, model, and operations fluency",
+          "score": 6,
+          "note": "Provisional pass; replace assumptions with customer evidence."
+        }
+      ],
+      "go_no_go": "GO_WITH_CONSTRAINTS",
+      "decision": "Proceed only as a validation sprint. Do not build more product surface area until at least 5 target users confirm the selected gap is painful, frequent, and tied to a budget or urgent workflow.",
+      "next_experiments": [
+        "Interview 5 target users about the last time they experienced this problem.",
+        "Ask what they use today, how much it costs, and what happens if they do nothing.",
+        "Run a concierge or fake-door test for the smallest paid outcome.",
+        "Compare the idea against the strongest incumbent and the status quo."
+      ],
+      "kill_criteria": [
+        "Users cannot recall a recent painful instance of the problem.",
+        "No one can identify a budget owner or urgent operational metric.",
+        "The proposed workflow is only mildly better than the current workaround."
+      ],
+      "source": "deterministic_fallback"
+    },
+    "stage3b_simulation": {
+      "inspiration": "MiroFish-style lightweight persona simulation: seed idea -> personas -> interaction rounds -> report signals.",
+      "idea": "VocacionData AI:\n  orientacion vocacional basada en datos laborales reales para postulantes y estudiantes\n  peruanos, usando un agente conversacional que cruza intereses, salarios, empleabilidad,\n  oferta universitaria y ubicacion para reducir malas decisiones de carrera.",
+      "selected_gap": {
+        "id": "G1",
+        "title": "Narrow painful workflow",
+        "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+        "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+        "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+        "priority": 1,
+        "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+      },
+      "personas": [
+        {
+          "id": "P1",
+          "role": "End user",
+          "lens": "Daily workflow pain, speed, usability, trust.",
+          "success_metric": "The product saves time or reduces stress in a repeated task.",
+          "default_objection": "This sounds useful, but I already have a workaround."
+        },
+        {
+          "id": "P2",
+          "role": "Economic buyer",
+          "lens": "Budget, ROI, risk, urgency, procurement friction.",
+          "success_metric": "The product clearly pays for itself this quarter or protects a critical metric.",
+          "default_objection": "Who owns the budget, and why would we buy now?"
+        },
+        {
+          "id": "P3",
+          "role": "Operations owner",
+          "lens": "Implementation, process change, support load, reliability.",
+          "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+          "default_objection": "This may add another tool my team has to maintain."
+        },
+        {
+          "id": "P4",
+          "role": "Incumbent competitor",
+          "lens": "How the status quo or large vendors defend the account.",
+          "success_metric": "The startup finds a wedge incumbents do not prioritize.",
+          "default_objection": "We can add this feature or bundle it with our existing platform."
+        },
+        {
+          "id": "P5",
+          "role": "YC partner",
+          "lens": "Market size, founder insight, speed of learning, venture scale.",
+          "success_metric": "The idea has a sharp initial wedge and a path to a large market.",
+          "default_objection": "This may be a feature, not a company."
+        },
+        {
+          "id": "P6",
+          "role": "Technical builder",
+          "lens": "Data access, model quality, defensibility, COGS, failure modes.",
+          "success_metric": "The system can be built cheaply, reliably, and with a learning loop.",
+          "default_objection": "The demo may work, but edge cases and data access can break the product."
+        }
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "focus": "Initial reaction",
+          "statements": [
+            {
+              "persona_id": "P1",
+              "claim": "From the End user view, the idea is interesting only if it proves the product saves time or reduces stress in a repeated task.",
+              "concern": "This sounds useful, but I already have a workaround.",
+              "evidence_request": "Show a real recent example from the target customer segment."
+            },
+            {
+              "persona_id": "P2",
+              "claim": "From the Economic buyer view, the idea is interesting only if it proves the product clearly pays for itself this quarter or protects a critical metric.",
+              "concern": "Who owns the budget, and why would we buy now?",
+              "evidence_request": "Show a real recent example from the target customer segment."
+            },
+            {
+              "persona_id": "P3",
+              "claim": "From the Operations owner view, the idea is interesting only if it proves the workflow fits existing operations without creating extra coordination cost.",
+              "concern": "This may add another tool my team has to maintain.",
+              "evidence_request": "Show a real recent example from the target customer segment."
+            },
+            {
+              "persona_id": "P4",
+              "claim": "From the Incumbent competitor view, the idea is interesting only if it proves the startup finds a wedge incumbents do not prioritize.",
+              "concern": "We can add this feature or bundle it with our existing platform.",
+              "evidence_request": "Show a real recent example from the target customer segment."
+            },
+            {
+              "persona_id": "P5",
+              "claim": "From the YC partner view, the idea is interesting only if it proves the idea has a sharp initial wedge and a path to a large market.",
+              "concern": "This may be a feature, not a company.",
+              "evidence_request": "Show a real recent example from the target customer segment."
+            },
+            {
+              "persona_id": "P6",
+              "claim": "From the Technical builder view, the idea is interesting only if it proves the system can be built cheaply, reliably, and with a learning loop.",
+              "concern": "The demo may work, but edge cases and data access can break the product.",
+              "evidence_request": "Show a real recent example from the target customer segment."
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "focus": "YC stress test",
+          "statements": [
+            {
+              "persona_id": "P1",
+              "claim": "The selected gap must map to a task users already try to complete.",
+              "concern": "If users describe the problem abstractly, urgency is probably weak.",
+              "evidence_request": "Ask for the last 3 times this happened and what they did next."
+            },
+            {
+              "persona_id": "P2",
+              "claim": "Payment depends on a visible business metric, not enthusiasm.",
+              "concern": "A user can love the tool while the buyer refuses to pay.",
+              "evidence_request": "Identify the budget owner and a price anchor."
+            },
+            {
+              "persona_id": "P5",
+              "claim": "The wedge is acceptable if it compounds into a much larger workflow.",
+              "concern": "The current scope may be a narrow feature.",
+              "evidence_request": "Describe the expansion path after the first repeated use case."
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "focus": "Decision-grade experiments",
+          "statements": [
+            {
+              "persona_id": "P3",
+              "claim": "The next test should simulate delivery before building infrastructure.",
+              "concern": "Engineering too early hides weak demand signals.",
+              "evidence_request": "Run a concierge version with 3 users."
+            },
+            {
+              "persona_id": "P4",
+              "claim": "The startup needs a wedge incumbents ignore because it looks too small or too custom.",
+              "concern": "A generic AI layer is easy to copy.",
+              "evidence_request": "List what proprietary workflow data accumulates after 30 days."
+            },
+            {
+              "persona_id": "P6",
+              "claim": "The technical plan should optimize for low COGS and controlled output variance.",
+              "concern": "LLM quality variance can destroy trust in repeated workflows.",
+              "evidence_request": "Define fallback behavior, logging, and pass/fail checks."
+            }
+          ]
+        }
+      ],
+      "consensus": {
+        "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+        "weakest_assumption": "The fallback simulation does not know the real market; live research or interviews must replace generic assumptions.",
+        "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+        "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+        "decision_pressure": "GO_WITH_CONSTRAINTS"
+      },
+      "recommended_interventions": [
+        "Narrow the customer segment until the end user and buyer are obvious.",
+        "Run interviews around recent behavior, not opinions about the idea.",
+        "Prototype the outcome manually before building a scalable product.",
+        "Track what data or workflow insight compounds with each use."
+      ],
+      "source": "deterministic_fallback"
+    },
+    "stage3c_dossier": {
+      "source": "deterministic_fallback",
+      "one_liner": "We help a specific customer segment solve 'Narrow painful workflow' through a focused software/AI workflow.",
+      "problem": {
+        "who_suffers": "Define one specific user and one economic buyer. Avoid broad labels like 'everyone' or 'companies'.",
+        "pain_level": "Quantify hours lost, money lost, risk, errors, or missed revenue per month.",
+        "current_workaround": "Identify the real competitor: spreadsheet, WhatsApp, email, manual labor, incumbent, or doing nothing.",
+        "evidence_needed": "At least 5 interviews, screenshots, public data, or workflow artifacts."
+      },
+      "solution_insight": {
+        "solution": "A narrow workflow that produces an outcome the buyer already values.",
+        "insight": "The likely insight is not 'AI can do it'; it is that a repeated expert workflow can be compressed and standardized.",
+        "non_stack_note": "This dossier intentionally avoids frontend/backend stack because the correct stack changes by idea."
+      },
+      "why_now": [
+        "LLMs and agents can now execute and explain multi-step workflows cheaply.",
+        "Distribution through communities, outbound, and self-serve demos is faster for solo founders.",
+        "Users are more willing to try AI-native tools when the workflow is narrow and auditable."
+      ],
+      "market": {
+        "recommended_focus": "Start where the founder has fastest access to users and evidence; compare Peru, LATAM, and USA before committing.",
+        "regions": [
+          {
+            "region": "Peru",
+            "validity": "Potentially strong for problems with local regulation, Spanish workflows, public data, or underserved SMEs.",
+            "tam": "Estimate from national population, firms, households, sector output, or public expenditure.",
+            "sam": "Start with reachable cities, industries, institutions, or customer segments where the founder can sell.",
+            "som_12_months": "Use a bottom-up estimate: reachable leads x conversion rate x annual contract value.",
+            "recommended_sources": [
+              "INEI microdata and surveys",
+              "MEF budget data",
+              "BCRP statistics",
+              "sector associations",
+              "local interviews"
+            ]
+          },
+          {
+            "region": "LATAM",
+            "validity": "Attractive if the problem repeats across Spanish-speaking markets and does not require heavy country-by-country integration.",
+            "tam": "Estimate from regional sector size, number of firms, workers, students, patients, transactions, or institutions.",
+            "sam": "Prioritize countries with similar language, regulation, distribution, and payment behavior.",
+            "som_12_months": "Estimate expansion only after proving one repeatable channel in the first country.",
+            "recommended_sources": [
+              "World Bank",
+              "IDB",
+              "ECLAC/CEPAL",
+              "national statistics offices",
+              "industry reports"
+            ]
+          },
+          {
+            "region": "USA",
+            "validity": "Useful benchmark for market size and competitor density; attractive if willingness to pay is higher and distribution is reachable.",
+            "tam": "Estimate from US sector spend, number of businesses, paid seats, transactions, or workflow volume.",
+            "sam": "Narrow to a buyer segment the founder can actually reach through outbound, communities, or integrations.",
+            "som_12_months": "Use a conservative founder-led sales or self-serve acquisition model.",
+            "recommended_sources": [
+              "US Census",
+              "BLS",
+              "World Bank",
+              "Statista or industry reports",
+              "academic papers"
+            ]
+          }
+        ],
+        "source_strategy": [
+          "Use INEI microdata for Peru when the market depends on households, employment, education, health, agriculture, firms, or municipalities.",
+          "Use MEF/BCRP for public budgets, macro indicators, credit, sector output, and Peru-specific economic framing.",
+          "Use World Bank/CEPAL/IDB for LATAM comparables.",
+          "Use papers and industry reports when the market is technical, clinical, educational, or scientific.",
+          "Use bottom-up SOM for the first 12 months; do not rely only on top-down TAM."
+        ]
+      },
+      "competition_moat": {
+        "alternatives_to_compare": [
+          "doing nothing",
+          "spreadsheet/manual workflow",
+          "horizontal SaaS",
+          "incumbent platform",
+          "AI assistant"
+        ],
+        "moat_candidates": [
+          "proprietary workflow data",
+          "distribution/community",
+          "integrations",
+          "trust/brand",
+          "regulatory or local-domain expertise"
+        ],
+        "weak_moat_warning": "If Claude/OpenAI can solve the job with a prompt, the startup needs a workflow, data, distribution, or compliance layer."
+      },
+      "business_model_pricing": {
+        "model_options": [
+          "monthly SaaS",
+          "usage-based",
+          "transaction fee",
+          "marketplace take rate",
+          "paid pilot",
+          "enterprise license"
+        ],
+        "pricing_rule": "Use no more than 3 plans and tie price to a buyer-visible outcome.",
+        "contribution_margin": "Estimate tokens/API calls, storage, human review, support, and acquisition cost per customer."
+      },
+      "go_to_market": {
+        "first_10": "Founder-led outreach to people with the exact painful workflow.",
+        "first_100": "Repeat the channel that produced the first paid or high-intent users.",
+        "first_1000": "Add scalable distribution: partnerships, integrations, content, community, marketplace, or PLG."
+      },
+      "traction_signals": [
+        "5+ interviews with recent pain stories",
+        "waitlist with qualified users",
+        "letters of intent or paid pilots",
+        "prototype usage by real users",
+        "before/after workflow evidence"
+      ],
+      "roadmap": {
+        "3_months": "Validate the wedge, ship concierge/prototype workflow, close first paying or high-intent users.",
+        "6_months": "Productize repeated steps, measure retention, build first repeatable acquisition channel.",
+        "12_months": "Expand to adjacent workflow or geography after proving retention and willingness to pay."
+      },
+      "risks_mitigations": [
+        {
+          "risk": "Market risk: users like the idea but do not have urgent pain.",
+          "mitigation": "Interview around recent behavior and require evidence of money/time/risk."
+        },
+        {
+          "risk": "AI substitution risk: Claude, OpenAI, or another foundation-model tool absorbs the feature.",
+          "mitigation": "Own workflow data, distribution, integrations, evaluation harnesses, and domain trust beyond the prompt."
+        },
+        {
+          "risk": "Execution risk: solo founder overbuilds before validation.",
+          "mitigation": "Run concierge tests and kill criteria before building broad product surface area."
+        }
+      ],
+      "the_ask": {
+        "amount": "Define a specific amount or resource ask only after the first validation sprint.",
+        "use_of_funds": [
+          "customer discovery",
+          "prototype",
+          "data acquisition",
+          "distribution experiments"
+        ],
+        "milestone": "Unlock proof that one segment has repeated pain and will pay for the outcome."
+      },
+      "scorecard": [
+        {
+          "dimension": "problem_validation",
+          "points": 8,
+          "max_points": 15,
+          "note": "Promising only after 5 concrete user interviews prove recent painful behavior."
+        },
+        {
+          "dimension": "solution_insight",
+          "points": 6,
+          "max_points": 10,
+          "note": "Insight needs sharper wording around what existing alternatives miss."
+        },
+        {
+          "dimension": "market_quality",
+          "points": 7,
+          "max_points": 15,
+          "note": "Market sizing is not yet evidenced; compare Peru, LATAM, and USA before choosing focus."
+        },
+        {
+          "dimension": "competition_moat",
+          "points": 5,
+          "max_points": 10,
+          "note": "Moat is weak until workflow data, distribution, or community compounds."
+        },
+        {
+          "dimension": "business_model_pricing",
+          "points": 6,
+          "max_points": 10,
+          "note": "Pricing needs a concrete buyer metric and contribution margin assumptions."
+        },
+        {
+          "dimension": "go_to_market",
+          "points": 6,
+          "max_points": 10,
+          "note": "First 10 users can be founder-led; first 100 and 1,000 need a repeatable channel."
+        },
+        {
+          "dimension": "traction_or_evidence",
+          "points": 3,
+          "max_points": 10,
+          "note": "No traction provided in the input; require interviews, waitlist, pilots, or usage."
+        },
+        {
+          "dimension": "execution_roadmap",
+          "points": 7,
+          "max_points": 10,
+          "note": "A 3/6/12 month roadmap is feasible if the first wedge is narrow."
+        },
+        {
+          "dimension": "risk_control",
+          "points": 6,
+          "max_points": 10,
+          "note": "AI-platform substitution and weak demand are the main risks to control."
+        }
+      ],
+      "total_score": 54,
+      "max_score": 100,
+      "rating": "Needs sharper validation",
+      "external_research_hooks": {
+        "inei_microdatos": "Useful for Peru-specific TAM/SAM evidence from INEI surveys and variable search.",
+        "paperdl": "Useful for finding academic papers when the idea needs scientific, health, education, or technical evidence."
+      }
+    },
+    "stage4_report": {
+      "path": "E:\\github\\hw7_ds\\ai\\validation_agents\\outputs\\vocaciondata-ai-orientacion-voca-ed77322067\\report.md",
+      "markdown": "# Startup Idea Validation Report\n\nGenerated at: 2026-06-20T04:27:45.695682+00:00\n\n## Idea\nVocacionData AI:\n  orientacion vocacional basada en datos laborales reales para postulantes y estudiantes\n  peruanos, usando un agente conversacional que cruza intereses, salarios, empleabilidad,\n  oferta universitaria y ubicacion para reducir malas decisiones de carrera.\n\n## Overall Score\n**54/100 - Needs sharper validation**\n\n| Dimension | Points | Max | Note |\n|---|---:|---:|---|\n| problem_validation | 8 | 15 | Promising only after 5 concrete user interviews prove recent painful behavior. |\n| solution_insight | 6 | 10 | Insight needs sharper wording around what existing alternatives miss. |\n| market_quality | 7 | 15 | Market sizing is not yet evidenced; compare Peru, LATAM, and USA before choosing focus. |\n| competition_moat | 5 | 10 | Moat is weak until workflow data, distribution, or community compounds. |\n| business_model_pricing | 6 | 10 | Pricing needs a concrete buyer metric and contribution margin assumptions. |\n| go_to_market | 6 | 10 | First 10 users can be founder-led; first 100 and 1,000 need a repeatable channel. |\n| traction_or_evidence | 3 | 10 | No traction provided in the input; require interviews, waitlist, pilots, or usage. |\n| execution_roadmap | 7 | 10 | A 3/6/12 month roadmap is feasible if the first wedge is narrow. |\n| risk_control | 6 | 10 | AI-platform substitution and weak demand are the main risks to control. |\n\n## YC Dossier\n\n### One-Liner\nWe help a specific customer segment solve 'Narrow painful workflow' through a focused software/AI workflow.\n\n### Problem\n- Who Suffers: Define one specific user and one economic buyer. Avoid broad labels like 'everyone' or 'companies'.\n- Pain Level: Quantify hours lost, money lost, risk, errors, or missed revenue per month.\n- Current Workaround: Identify the real competitor: spreadsheet, WhatsApp, email, manual labor, incumbent, or doing nothing.\n- Evidence Needed: At least 5 interviews, screenshots, public data, or workflow artifacts.\n\n### Solution & Insight\n- Solution: A narrow workflow that produces an outcome the buyer already values.\n- Insight: The likely insight is not 'AI can do it'; it is that a repeated expert workflow can be compressed and standardized.\n- Non Stack Note: This dossier intentionally avoids frontend/backend stack because the correct stack changes by idea.\n\n### Why Now\n- LLMs and agents can now execute and explain multi-step workflows cheaply.\n- Distribution through communities, outbound, and self-serve demos is faster for solo founders.\n- Users are more willing to try AI-native tools when the workflow is narrow and auditable.\n\n### Market - Peru vs LATAM vs USA\nRecommended focus: Start where the founder has fastest access to users and evidence; compare Peru, LATAM, and USA before committing.\n\n- Peru: Potentially strong for problems with local regulation, Spanish workflows, public data, or underserved SMEs. TAM: Estimate from national population, firms, households, sector output, or public expenditure. SAM: Start with reachable cities, industries, institutions, or customer segments where the founder can sell. SOM 12 months: Use a bottom-up estimate: reachable leads x conversion rate x annual contract value. Sources: INEI microdata and surveys, MEF budget data, BCRP statistics, sector associations, local interviews\n- LATAM: Attractive if the problem repeats across Spanish-speaking markets and does not require heavy country-by-country integration. TAM: Estimate from regional sector size, number of firms, workers, students, patients, transactions, or institutions. SAM: Prioritize countries with similar language, regulation, distribution, and payment behavior. SOM 12 months: Estimate expansion only after proving one repeatable channel in the first country. Sources: World Bank, IDB, ECLAC/CEPAL, national statistics offices, industry reports\n- USA: Useful benchmark for market size and competitor density; attractive if willingness to pay is higher and distribution is reachable. TAM: Estimate from US sector spend, number of businesses, paid seats, transactions, or workflow volume. SAM: Narrow to a buyer segment the founder can actually reach through outbound, communities, or integrations. SOM 12 months: Use a conservative founder-led sales or self-serve acquisition model. Sources: US Census, BLS, World Bank, Statista or industry reports, academic papers\n\nSource strategy:\n- Use INEI microdata for Peru when the market depends on households, employment, education, health, agriculture, firms, or municipalities.\n- Use MEF/BCRP for public budgets, macro indicators, credit, sector output, and Peru-specific economic framing.\n- Use World Bank/CEPAL/IDB for LATAM comparables.\n- Use papers and industry reports when the market is technical, clinical, educational, or scientific.\n- Use bottom-up SOM for the first 12 months; do not rely only on top-down TAM.\n\n### Competition & Moat\n- Alternatives To Compare: doing nothing; spreadsheet/manual workflow; horizontal SaaS; incumbent platform; AI assistant\n- Moat Candidates: proprietary workflow data; distribution/community; integrations; trust/brand; regulatory or local-domain expertise\n- Weak Moat Warning: If Claude/OpenAI can solve the job with a prompt, the startup needs a workflow, data, distribution, or compliance layer.\n\n### Business Model & Pricing\n- Model Options: monthly SaaS; usage-based; transaction fee; marketplace take rate; paid pilot; enterprise license\n- Pricing Rule: Use no more than 3 plans and tie price to a buyer-visible outcome.\n- Contribution Margin: Estimate tokens/API calls, storage, human review, support, and acquisition cost per customer.\n\n### Go-To-Market\n- First 10: Founder-led outreach to people with the exact painful workflow.\n- First 100: Repeat the channel that produced the first paid or high-intent users.\n- First 1000: Add scalable distribution: partnerships, integrations, content, community, marketplace, or PLG.\n\n### Traction / Early Signals\n- 5+ interviews with recent pain stories\n- waitlist with qualified users\n- letters of intent or paid pilots\n- prototype usage by real users\n- before/after workflow evidence\n\n### Roadmap\n- 3 Months: Validate the wedge, ship concierge/prototype workflow, close first paying or high-intent users.\n- 6 Months: Productize repeated steps, measure retention, build first repeatable acquisition channel.\n- 12 Months: Expand to adjacent workflow or geography after proving retention and willingness to pay.\n\n### Risks & Mitigation\n- Risk: Market risk: users like the idea but do not have urgent pain.; Mitigation: Interview around recent behavior and require evidence of money/time/risk.\n- Risk: AI substitution risk: Claude, OpenAI, or another foundation-model tool absorbs the feature.; Mitigation: Own workflow data, distribution, integrations, evaluation harnesses, and domain trust beyond the prompt.\n- Risk: Execution risk: solo founder overbuilds before validation.; Mitigation: Run concierge tests and kill criteria before building broad product surface area.\n\n### The Ask\n- Amount: Define a specific amount or resource ask only after the first validation sprint.\n- Use Of Funds: customer discovery; prototype; data acquisition; distribution experiments\n- Milestone: Unlock proof that one segment has repeated pain and will pay for the outcome.\n\n### External Research Hooks\n- Inei Microdatos: Useful for Peru-specific TAM/SAM evidence from INEI surveys and variable search.\n- Paperdl: Useful for finding academic papers when the idea needs scientific, health, education, or technical evidence.\n\n## Stage 1 - Current Alternatives\nFallback mode cannot perform live market research, so it maps the idea against the common alternative categories every startup must beat: manual work, internal builds, incumbents, consultants, generic SaaS, open-source, and doing nothing. Use live LLM mode or add external research artifacts for named competitors.\n\n- S01: Manual workaround (Spreadsheet, notes, or ad hoc process) - Cheap and flexible, but slow and inconsistent.\n- S02: Generic horizontal SaaS (Broad workflow software) - Easy to adopt, but weak on domain-specific outcomes.\n- S03: Incumbent enterprise platform (Large vendor suite) - Trusted by buyers, but expensive and slow to implement.\n- S04: Internal build (Company-owned custom tooling) - Fits local process, but competes with engineering priorities.\n- S05: Consulting or agency service (Human-led service provider) - High-touch expertise, but margins and scale are limited.\n- S06: Open-source project (Community-maintained tool) - Low software cost, but support and reliability vary.\n- S07: AI wrapper (Thin LLM interface) - Fast to build, but easy to copy if workflow depth is missing.\n- S08: Marketplace or network (Connects supply and demand) - Useful when liquidity exists, hard to start from zero.\n- S09: Mobile-first app (Lightweight point solution) - Good distribution surface, often too shallow for serious workflows.\n- S10: No-code automation (Zapier/Airtable/Notion-style stack) - Good for prototypes, brittle for core operations.\n- S11: Legacy desktop software (Installed tool or old vertical app) - Embedded in workflows, poor UX and integrations.\n- S12: Data dashboard (BI/reporting layer) - Makes status visible, but may not drive action.\n- S13: Community and content (Newsletter, course, forum, or templates) - Can validate demand, but may not be software defensible.\n- S14: API infrastructure (Developer-facing primitives) - Scales well if developers are the buyer, indirect otherwise.\n- S15: Status quo (Doing nothing) - Always a competitor when pain is tolerable or budget is unclear.\n\n## Stage 2 - Market Gaps\nRecommended gap: G1\n\n- G1: Narrow painful workflow | Pain: The idea needs one urgent job-to-be-done, not a broad feature set. | Evidence: Interview 5 target users and capture the exact task they already spend time or money on.\n- G2: Buyer-visible outcome | Pain: Users may like the product, but the buyer needs a measurable business result. | Evidence: Ask who owns the budget and what metric would justify payment this month.\n- G3: Distribution wedge | Pain: A useful product still fails if reaching users is too slow or expensive. | Evidence: Run 3 small acquisition tests and measure replies, demos, or waitlist conversion.\n- G4: Trust and switching friction | Pain: Users keep existing tools unless the new workflow is clearly safer, faster, or cheaper. | Evidence: Ask users what would make them trust the product with a real task.\n- G5: Defensible workflow data | Pain: A generic AI interface is easy to copy unless usage creates proprietary process insight. | Evidence: Define what unique data the product captures after 30 days of usage.\n\n## Selected Gap\n**G1: Narrow painful workflow**\n\nPain: The idea needs one urgent job-to-be-done, not a broad feature set.\n\nWhy now: AI and modern software can compress expert work, but only if the workflow is specific.\n\nRisk: If the workflow is vague, the product becomes a solution looking for a problem.\n\n## Stage 3 - YC Validation\nDecision: **GO_WITH_CONSTRAINTS**\n\nProceed only as a validation sprint. Do not build more product surface area until at least 5 target users confirm the selected gap is painful, frequent, and tied to a budget or urgent workflow.\n\n### Friedman Questions\n| Criterion | Score | Note |\n|---|---:|---|\n| Founder-market fit | 5 | Unknown until the founder proves unusual access or insight into the users. |\n| Market size | 5 | Unknown in fallback mode; estimate TAM/SAM/SOM with external evidence. |\n| Problem acuity | 6 | Potentially strong if the selected gap maps to urgent time, money, or risk. |\n| Competition | 6 | Alternatives probably exist; competition is validation if the wedge is sharper. |\n| Personal pull | 5 | Unknown until the founder states why they would work on this for years. |\n| Recently possible or necessary | 6 | Likely if AI, regulation, platform shifts, or cost changes enable it now. |\n| Successful proxies | 5 | Find adjacent companies, workflows, or budgets that prove willingness to pay. |\n| Years-long commitment | 5 | Unknown; validate whether the domain is deep enough for compounding insight. |\n| Scalability | 6 | Software can scale, but sales, service, and data access may constrain the model. |\n| Good idea space | 6 | Promising only if the first customer segment has repeated painful workflows. |\n\n### YC Rules\n| Criterion | Score | Note |\n|---|---:|---|\n| Do not wait for the perfect idea | 6 | Provisional pass; replace assumptions with customer evidence. |\n| Burn the boats | 6 | Provisional pass; replace assumptions with customer evidence. |\n| Go deep into customer workflow | 7 | Provisional pass; replace assumptions with customer evidence. |\n| Build at the edge of AI | 6 | Provisional pass; replace assumptions with customer evidence. |\n| Sell outcomes, not tools | 6 | Provisional pass; replace assumptions with customer evidence. |\n| Choose ambitious scope | 6 | Provisional pass; replace assumptions with customer evidence. |\n| Treat failure as structured data | 6 | Provisional pass; replace assumptions with customer evidence. |\n| Pick low-trust, high-expertise markets | 6 | Provisional pass; replace assumptions with customer evidence. |\n| The process is the product | 7 | Provisional pass; replace assumptions with customer evidence. |\n| Avoid early-demand trap | 6 | Provisional pass; replace assumptions with customer evidence. |\n| Price per unit or result | 6 | Provisional pass; replace assumptions with customer evidence. |\n| Obsess over COGS | 7 | Provisional pass; replace assumptions with customer evidence. |\n| Do not bolt AI onto legacy | 6 | Provisional pass; replace assumptions with customer evidence. |\n| Cover domain, model, and operations fluency | 6 | Provisional pass; replace assumptions with customer evidence. |\n\n## Stage 3B - Stakeholder Simulation\nMiroFish-style lightweight persona simulation: seed idea -> personas -> interaction rounds -> report signals.\n\n### Personas\n- P1: End user | Lens: Daily workflow pain, speed, usability, trust. | Success: The product saves time or reduces stress in a repeated task.\n- P2: Economic buyer | Lens: Budget, ROI, risk, urgency, procurement friction. | Success: The product clearly pays for itself this quarter or protects a critical metric.\n- P3: Operations owner | Lens: Implementation, process change, support load, reliability. | Success: The workflow fits existing operations without creating extra coordination cost.\n- P4: Incumbent competitor | Lens: How the status quo or large vendors defend the account. | Success: The startup finds a wedge incumbents do not prioritize.\n- P5: YC partner | Lens: Market size, founder insight, speed of learning, venture scale. | Success: The idea has a sharp initial wedge and a path to a large market.\n- P6: Technical builder | Lens: Data access, model quality, defensibility, COGS, failure modes. | Success: The system can be built cheaply, reliably, and with a learning loop.\n\n### Round 1 - Initial reaction\n- P1: From the End user view, the idea is interesting only if it proves the product saves time or reduces stress in a repeated task. Concern: This sounds useful, but I already have a workaround. Evidence: Show a real recent example from the target customer segment.\n- P2: From the Economic buyer view, the idea is interesting only if it proves the product clearly pays for itself this quarter or protects a critical metric. Concern: Who owns the budget, and why would we buy now? Evidence: Show a real recent example from the target customer segment.\n- P3: From the Operations owner view, the idea is interesting only if it proves the workflow fits existing operations without creating extra coordination cost. Concern: This may add another tool my team has to maintain. Evidence: Show a real recent example from the target customer segment.\n- P4: From the Incumbent competitor view, the idea is interesting only if it proves the startup finds a wedge incumbents do not prioritize. Concern: We can add this feature or bundle it with our existing platform. Evidence: Show a real recent example from the target customer segment.\n- P5: From the YC partner view, the idea is interesting only if it proves the idea has a sharp initial wedge and a path to a large market. Concern: This may be a feature, not a company. Evidence: Show a real recent example from the target customer segment.\n- P6: From the Technical builder view, the idea is interesting only if it proves the system can be built cheaply, reliably, and with a learning loop. Concern: The demo may work, but edge cases and data access can break the product. Evidence: Show a real recent example from the target customer segment.\n### Round 2 - YC stress test\n- P1: The selected gap must map to a task users already try to complete. Concern: If users describe the problem abstractly, urgency is probably weak. Evidence: Ask for the last 3 times this happened and what they did next.\n- P2: Payment depends on a visible business metric, not enthusiasm. Concern: A user can love the tool while the buyer refuses to pay. Evidence: Identify the budget owner and a price anchor.\n- P5: The wedge is acceptable if it compounds into a much larger workflow. Concern: The current scope may be a narrow feature. Evidence: Describe the expansion path after the first repeated use case.\n### Round 3 - Decision-grade experiments\n- P3: The next test should simulate delivery before building infrastructure. Concern: Engineering too early hides weak demand signals. Evidence: Run a concierge version with 3 users.\n- P4: The startup needs a wedge incumbents ignore because it looks too small or too custom. Concern: A generic AI layer is easy to copy. Evidence: List what proprietary workflow data accumulates after 30 days.\n- P6: The technical plan should optimize for low COGS and controlled output variance. Concern: LLM quality variance can destroy trust in repeated workflows. Evidence: Define fallback behavior, logging, and pass/fail checks.\n\n### Simulation Consensus\n- Strongest signal: Proceed only if target users describe a recent, repeated, expensive problem in their own words.\n- Weakest assumption: The fallback simulation does not know the real market; live research or interviews must replace generic assumptions.\n- Adoption path: Start with a narrow concierge workflow, then productize the repeated steps.\n- Pricing test: Ask for a small paid pilot tied to the buyer's success metric.\n- Decision pressure: GO_WITH_CONSTRAINTS\n\n### Recommended Interventions\n- Narrow the customer segment until the end user and buyer are obvious.\n- Run interviews around recent behavior, not opinions about the idea.\n- Prototype the outcome manually before building a scalable product.\n- Track what data or workflow insight compounds with each use.\n\n## Next Experiments\n- Interview 5 target users about the last time they experienced this problem.\n- Ask what they use today, how much it costs, and what happens if they do nothing.\n- Run a concierge or fake-door test for the smallest paid outcome.\n- Compare the idea against the strongest incumbent and the status quo.\n\n## Kill Criteria\n- Users cannot recall a recent painful instance of the problem.\n- No one can identify a budget owner or urgent operational metric.\n- The proposed workflow is only mildly better than the current workaround.\n"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-06-20T04:27:45.682850+00:00",
+      "stage": "created",
+      "message": "Pipeline state initialized."
+    },
+    {
+      "at": "2026-06-20T04:27:45.683882+00:00",
+      "stage": "stage1_research",
+      "message": "Artifact 'stage1_research' updated."
+    },
+    {
+      "at": "2026-06-20T04:27:45.685403+00:00",
+      "stage": "stage2_gaps",
+      "message": "Artifact 'stage2_gaps' updated."
+    },
+    {
+      "at": "2026-06-20T04:27:45.689073+00:00",
+      "stage": "stage3_validation",
+      "message": "Artifact 'stage3_validation' updated."
+    },
+    {
+      "at": "2026-06-20T04:27:45.691628+00:00",
+      "stage": "stage3b_simulation",
+      "message": "Artifact 'stage3b_simulation' updated."
+    },
+    {
+      "at": "2026-06-20T04:27:45.694168+00:00",
+      "stage": "stage3c_dossier",
+      "message": "Artifact 'stage3c_dossier' updated."
+    },
+    {
+      "at": "2026-06-20T04:27:45.697198+00:00",
+      "stage": "stage4_report",
+      "message": "Artifact 'stage4_report' updated."
+    },
+    {
+      "at": "2026-06-20T04:27:45.714894+00:00",
+      "stage": "complete",
+      "message": "Validation report written to E:\\github\\hw7_ds\\ai\\validation_agents\\outputs\\vocaciondata-ai-orientacion-voca-ed77322067\\report.md"
+    }
+  ]
+}

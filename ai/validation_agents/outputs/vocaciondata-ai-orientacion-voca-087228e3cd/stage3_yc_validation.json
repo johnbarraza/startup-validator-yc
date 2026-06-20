@@ -1,0 +1,150 @@
+{
+  "idea": "VocacionData AI: orientacion vocacional basada en datos laborales reales para postulantes peruanos",
+  "selected_gap": {
+    "id": "G1",
+    "title": "Narrow painful workflow",
+    "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+    "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+    "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+    "priority": 1,
+    "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+  },
+  "friedman_scores": [
+    {
+      "criterion": "Founder-market fit",
+      "score": 5,
+      "note": "Unknown until the founder proves unusual access or insight into the users."
+    },
+    {
+      "criterion": "Market size",
+      "score": 5,
+      "note": "Unknown in fallback mode; estimate TAM/SAM/SOM with external evidence."
+    },
+    {
+      "criterion": "Problem acuity",
+      "score": 6,
+      "note": "Potentially strong if the selected gap maps to urgent time, money, or risk."
+    },
+    {
+      "criterion": "Competition",
+      "score": 6,
+      "note": "Alternatives probably exist; competition is validation if the wedge is sharper."
+    },
+    {
+      "criterion": "Personal pull",
+      "score": 5,
+      "note": "Unknown until the founder states why they would work on this for years."
+    },
+    {
+      "criterion": "Recently possible or necessary",
+      "score": 6,
+      "note": "Likely if AI, regulation, platform shifts, or cost changes enable it now."
+    },
+    {
+      "criterion": "Successful proxies",
+      "score": 5,
+      "note": "Find adjacent companies, workflows, or budgets that prove willingness to pay."
+    },
+    {
+      "criterion": "Years-long commitment",
+      "score": 5,
+      "note": "Unknown; validate whether the domain is deep enough for compounding insight."
+    },
+    {
+      "criterion": "Scalability",
+      "score": 6,
+      "note": "Software can scale, but sales, service, and data access may constrain the model."
+    },
+    {
+      "criterion": "Good idea space",
+      "score": 6,
+      "note": "Promising only if the first customer segment has repeated painful workflows."
+    }
+  ],
+  "yc_rule_scores": [
+    {
+      "criterion": "Do not wait for the perfect idea",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Burn the boats",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Go deep into customer workflow",
+      "score": 7,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Build at the edge of AI",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Sell outcomes, not tools",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Choose ambitious scope",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Treat failure as structured data",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Pick low-trust, high-expertise markets",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "The process is the product",
+      "score": 7,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Avoid early-demand trap",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Price per unit or result",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Obsess over COGS",
+      "score": 7,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Do not bolt AI onto legacy",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    },
+    {
+      "criterion": "Cover domain, model, and operations fluency",
+      "score": 6,
+      "note": "Provisional pass; replace assumptions with customer evidence."
+    }
+  ],
+  "go_no_go": "GO_WITH_CONSTRAINTS",
+  "decision": "Proceed only as a validation sprint. Do not build more product surface area until at least 5 target users confirm the selected gap is painful, frequent, and tied to a budget or urgent workflow.",
+  "next_experiments": [
+    "Interview 5 target users about the last time they experienced this problem.",
+    "Ask what they use today, how much it costs, and what happens if they do nothing.",
+    "Run a concierge or fake-door test for the smallest paid outcome.",
+    "Compare the idea against the strongest incumbent and the status quo."
+  ],
+  "kill_criteria": [
+    "Users cannot recall a recent painful instance of the problem.",
+    "No one can identify a budget owner or urgent operational metric.",
+    "The proposed workflow is only mildly better than the current workaround."
+  ],
+  "source": "deterministic_fallback"
+}

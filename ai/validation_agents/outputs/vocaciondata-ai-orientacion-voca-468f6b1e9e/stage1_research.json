@@ -1,0 +1,98 @@
+{
+  "idea": "A startup that helps a specific customer segment solve a painful repeated workflow with software or AI. Pass --idea to validate a concrete idea.",
+  "market": "General B2B software for automating repetitive workflows across industries.",
+  "solutions": [
+    {
+      "id": 1,
+      "name": "Zapier",
+      "category": "Workflow Automation",
+      "observed_positioning": "No-code integration and automation platform connecting apps."
+    },
+    {
+      "id": 2,
+      "name": "Make (formerly Integromat)",
+      "category": "Workflow Automation",
+      "observed_positioning": "Visual automation platform for complex workflows."
+    },
+    {
+      "id": 3,
+      "name": "UiPath",
+      "category": "Robotic Process Automation (RPA)",
+      "observed_positioning": "Enterprise RPA for automating repetitive tasks."
+    },
+    {
+      "id": 4,
+      "name": "Automation Anywhere",
+      "category": "Robotic Process Automation (RPA)",
+      "observed_positioning": "AI-powered RPA for business process automation."
+    },
+    {
+      "id": 5,
+      "name": "Blue Prism",
+      "category": "Robotic Process Automation (RPA)",
+      "observed_positioning": "Enterprise-grade RPA for large organizations."
+    },
+    {
+      "id": 6,
+      "name": "Microsoft Power Automate",
+      "category": "Workflow Automation",
+      "observed_positioning": "Low-code automation integrated with Microsoft ecosystem."
+    },
+    {
+      "id": 7,
+      "name": "Tray.io",
+      "category": "Workflow Automation",
+      "observed_positioning": "API-first automation for engineering teams."
+    },
+    {
+      "id": 8,
+      "name": "Workato",
+      "category": "Workflow Automation",
+      "observed_positioning": "Enterprise integration and automation platform."
+    },
+    {
+      "id": 9,
+      "name": "n8n",
+      "category": "Workflow Automation",
+      "observed_positioning": "Open-source workflow automation with fair-code license."
+    },
+    {
+      "id": 10,
+      "name": "Retool",
+      "category": "Internal Tools",
+      "observed_positioning": "Low-code platform for building internal tools quickly."
+    },
+    {
+      "id": 11,
+      "name": "Airtable",
+      "category": "Database & Workflow",
+      "observed_positioning": "Flexible spreadsheet-database hybrid for workflow management."
+    },
+    {
+      "id": 12,
+      "name": "Notion",
+      "category": "Productivity & Collaboration",
+      "observed_positioning": "All-in-one workspace for docs, wikis, and project management."
+    },
+    {
+      "id": 13,
+      "name": "Monday.com",
+      "category": "Project Management",
+      "observed_positioning": "Visual project management and workflow platform."
+    },
+    {
+      "id": 14,
+      "name": "Asana",
+      "category": "Project Management",
+      "observed_positioning": "Work management platform for teams."
+    },
+    {
+      "id": 15,
+      "name": "Jira",
+      "category": "Project Management",
+      "observed_positioning": "Issue tracking and agile project management for software teams."
+    }
+  ],
+  "research_summary": "The market for workflow automation is crowded with horizontal platforms like Zapier, Make, and RPA tools (UiPath, Automation Anywhere). These solutions are general-purpose and require significant setup. The startup should focus on a specific vertical or customer segment with a painful repeated workflow that these tools do not address well. Domain expertise and workflow-specific data can create a moat.",
+  "source": "llm"
+}
