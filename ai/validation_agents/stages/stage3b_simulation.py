@@ -25,47 +25,82 @@ def _persona(
 
 def default_personas() -> list[dict[str, str]]:
     return [
+        # ── Generic VC/startup personas ──────────────────────────────────────
         _persona(
             "P1",
-            "End user",
-            "Daily workflow pain, speed, usability, trust.",
-            "The product saves time or reduces stress in a repeated task.",
-            "This sounds useful, but I already have a workaround.",
+            "End user (target customer)",
+            "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+            "The product saves meaningful time or reduces a real stress in a repeated task.",
+            "This sounds useful, but I already have a workaround that's good enough.",
         ),
         _persona(
             "P2",
-            "Economic buyer",
-            "Budget, ROI, risk, urgency, procurement friction.",
-            "The product clearly pays for itself this quarter or protects a critical metric.",
-            "Who owns the budget, and why would we buy now?",
+            "Economic buyer with budget",
+            "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+            "The product clearly pays for itself this quarter or protects a critical metric I own.",
+            "Who approves this purchase and why would they prioritize it over other line items?",
         ),
         _persona(
             "P3",
-            "Operations owner",
-            "Implementation, process change, support load, reliability.",
+            "Operations / implementation owner",
+            "Integration complexity, change management, support load, reliability, rollout risk.",
             "The workflow fits existing operations without creating extra coordination cost.",
-            "This may add another tool my team has to maintain.",
+            "This adds another tool my team has to learn, maintain, and debug.",
         ),
         _persona(
             "P4",
-            "Incumbent competitor",
-            "How the status quo or large vendors defend the account.",
-            "The startup finds a wedge incumbents do not prioritize.",
-            "We can add this feature or bundle it with our existing platform.",
+            "Incumbent competitor or free substitute",
+            "How does the status quo, a free tool, or a large vendor defend the account?",
+            "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+            "We can add this feature in one sprint, or bundle it with our existing platform.",
         ),
         _persona(
             "P5",
-            "YC partner",
-            "Market size, founder insight, speed of learning, venture scale.",
-            "The idea has a sharp initial wedge and a path to a large market.",
-            "This may be a feature, not a company.",
+            "YC / LATAM VC partner",
+            "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+            "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+            "This is a feature, not a company. Or the market is too small for VC returns.",
         ),
         _persona(
             "P6",
-            "Technical builder",
-            "Data access, model quality, defensibility, COGS, failure modes.",
-            "The system can be built cheaply, reliably, and with a learning loop.",
-            "The demo may work, but edge cases and data access can break the product.",
+            "Technical builder / CTO",
+            "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+            "The system can be built cheaply, reliably, and improves with usage data.",
+            "The demo works, but production edge cases and data access will break it.",
+        ),
+        # ── Peru/LATAM-specific personas ──────────────────────────────────────
+        _persona(
+            "P7",
+            "Peruvian SME buyer (informal sector)",
+            "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. "
+            "Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+            "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+            "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?",
+        ),
+        _persona(
+            "P8",
+            "Peru institutional / public buyer (government or university)",
+            "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, "
+            "MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+            "The product fits within an existing budget code and avoids a new procurement process.",
+            "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado.",
+        ),
+        _persona(
+            "P9",
+            "Peruvian Series A investor (local VC or family office)",
+            "Peru VC is thin (<3% of LATAM). Checks max $300K locally. "
+            "Must see path to international co-investor for Series A ($500K+). "
+            "Prefers ideas with LATAM expansion built into the model from day 1.",
+            "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+            "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?",
+        ),
+        _persona(
+            "P10",
+            "AI adoption skeptic (conservative professional in Peru)",
+            "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. "
+            "Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+            "The AI outputs are accurate, explainable, and I can verify them before acting.",
+            "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?",
         ),
     ]
 
