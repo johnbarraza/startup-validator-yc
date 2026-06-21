@@ -419,6 +419,12 @@ def run(args: argparse.Namespace) -> int:
             client, config, winning_idea, selected_gap,
             winning_validation, simulation, regions, context,
         )
+        # If LLM returned empty fields, retry with fallback
+        if not dossier.get("one_liner") and not dossier.get("problem"):
+            log_step(args, "Stage 3C: LLM returned empty fields, using fallback...")
+            from .stages.stage3c_dossier import _fallback_dossier
+            dossier = _fallback_dossier(winning_idea, selected_gap, winning_validation, simulation, regions)
+            dossier["llm_note"] = "LLM returned empty response; deterministic fallback used."
         dossier = apply_market_calcs(dossier)
         state.put_artifact("stage3c_dossier", dossier)
         write_stage_artifact(run_dir, "stage3c_dossier.json", dossier)
