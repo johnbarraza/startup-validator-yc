@@ -223,16 +223,24 @@ def run_stage3b_simulation(
     gap: dict[str, Any],
     validation: dict[str, Any],
     context: str,
+    n_personas: int = 0,
 ) -> dict[str, Any]:
-    personas = default_personas()
+    """Run MiroFish parallel persona simulation.
+
+    Args:
+        n_personas: number of personas to use (0 = all available, default 10).
+                    Pass 6 for fast/cheap, 10 for rigorous, or any N ≤ 10.
+    """
+    all_personas = default_personas()
+    personas = all_personas[:n_personas] if n_personas and n_personas < len(all_personas) else all_personas
     persona_results = _run_parallel_simulation(client, config, personas, idea, gap, validation)
     aggregate_score = _aggregate(persona_results)
     gate_passed = aggregate_score >= SIMULATION_GATE
 
     return {
         "inspiration": (
-            "MiroFish-style parallel simulation: 6 independent persona agents scored in parallel, "
-            f"aggregate gate={SIMULATION_GATE}."
+            f"MiroFish-style parallel simulation: {len(personas)} independent persona agents "
+            f"scored in parallel, aggregate gate={SIMULATION_GATE}."
         ),
         "idea": idea,
         "selected_gap": gap,

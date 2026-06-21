@@ -150,6 +150,9 @@ def _run_full_pipeline(idea_text: str, args: argparse.Namespace) -> dict[str, An
         cli_args.append("--force-pit")
     if getattr(args, "verbose", False):
         cli_args.append("--verbose")
+    personas = getattr(args, "personas", 0)
+    if personas:
+        cli_args += ["--personas", str(personas)]
 
     try:
         returncode = run(build_parser().parse_args(cli_args))
@@ -529,6 +532,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--no-llm", action="store_true")
     parser.add_argument("--verbose", action="store_true",
                         help="Pass --verbose to each pipeline run.")
+    parser.add_argument("--personas", type=int, default=0,
+                        help="MiroFish agents per idea (default 0=all 10, 6=fast, 10=rigorous).")
     return parser
 
 

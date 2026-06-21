@@ -387,7 +387,8 @@ def run(args: argparse.Namespace) -> int:
     if args.force or "stage3b_simulation" not in state.artifacts:
         log_step(args, "Stage 3B: simulating stakeholders on winning iteration...")
         simulation = run_stage3b_simulation(
-            client, config, winning_idea, selected_gap, winning_validation, context
+            client, config, winning_idea, selected_gap, winning_validation, context,
+            n_personas=args.personas,
         )
         state.put_artifact("stage3b_simulation", simulation)
         write_stage_artifact(run_dir, "stage3b_simulation.json", simulation)
@@ -479,6 +480,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--regions", default="Peru,LATAM,USA", help="Comma-separated regions.")
     parser.add_argument("--gap-id", help="Gap id from checkpoint 1 (e.g. G2).")
     parser.add_argument("--iterations", type=int, default=3, help="Number of idea iterations (default 3).")
+    parser.add_argument("--personas", type=int, default=0,
+                        help="MiroFish agents in Stage 3B (default 0 = all 10). Use 6 for fast, 10 for rigorous.")
     parser.add_argument("--approve", action="store_true", help="Approve checkpoint 2.")
     parser.add_argument("--auto", action="store_true", help="Auto-select gap and approve.")
     parser.add_argument("--force", action="store_true", help="Recompute all stages.")
