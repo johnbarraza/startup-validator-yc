@@ -20,6 +20,39 @@ from .config import ValidationConfig
 
 FallbackFactory = Callable[[], dict[str, Any]]
 
+
+def _extract_json(content: str) -> dict[str, Any]:
+    """Robustly extract JSON from LLM output that may contain <think> tags,
+    markdown code fences, or surrounding prose (common with reasoning models)."""
+    # 1. Strip <think>...</think> blocks (DeepSeek reasoner, o1-style)
+    import re
+    content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
+
+    # 2. Try direct parse first
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError:
+        pass
+
+    # 3. Extract from ```json ... ``` or ``` ... ``` code fence
+    fence = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", content, re.DOTALL)
+    if fence:
+        try:
+            return json.loads(fence.group(1))
+        except json.JSONDecodeError:
+            pass
+
+    # 4. Find the last { ... } block (handles prose before/after JSON)
+    brace_start = content.rfind("{")
+    if brace_start >= 0:
+        for end in range(len(content), brace_start, -1):
+            try:
+                return json.loads(content[brace_start:end])
+            except json.JSONDecodeError:
+                continue
+
+    raise ValueError(f"No valid JSON found in LLM response (len={len(content)})")
+
 _OPENROUTER_PREFIX = "openrouter/"
 _QWEN_PREFIX = "qwen/"
 
@@ -100,7 +133,7 @@ class LLMClient:
                 temperature=temperature,
             )
             content = response.choices[0].message.content or "{}"
-            result = json.loads(content)
+            result = _extract_json(content)
             result.setdefault("source", "llm")
             return result
         except Exception as exc:
