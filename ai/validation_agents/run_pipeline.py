@@ -264,7 +264,7 @@ def run(args: argparse.Namespace) -> int:
     freemium = classification.get("freemium_recommendation", "?")
     log_step(
         args,
-        f"Stage 0 verdict: {problem_type} → {proceed} | devil={devil} | freemium={freemium} "
+        f"Stage 0 verdict: {problem_type} -> {proceed} | devil={devil} | freemium={freemium} "
         f"| vertical={classification.get('vertical')} | severity={classification.get('problem_severity')}",
     )
 
@@ -373,7 +373,7 @@ def run(args: argparse.Namespace) -> int:
     log_step(
         args,
         f"Stage 3 winner: {winning_iteration.get('id')} {winning_iteration.get('angle')} "
-        f"→ {winning_validation.get('go_no_go')}",
+        f"-> {winning_validation.get('go_no_go')}",
     )
     winning_validation = apply_vc_verdict(winning_validation)
     state.put_artifact("stage3_winner_iteration", winning_iteration)

@@ -429,6 +429,246 @@ LiftCoach AI: app de gimnasio que permite registrar entrenamientos por voz, visu
 
 ---
 
+## 11. FarmaData
+
+**Nombre corto:** FarmaData
+
+**One-liner:** Construimos la base de datos de precios reales de medicamentos en Peru mediante OCR de boletas de farmacia subidas por usuarios, vendiendo acceso a DIGEMID, EPS y cadenas de farmacias.
+
+**Segmento inicial:** Usuarios que compran medicamentos frecuentes en Lima y ciudades principales.
+
+**Problema:** No existe fuente confiable de precios reales de medicamentos por zona en Peru. DIGEMID tiene precios declarados, no precios reales de mercado. Pacientes pagan de mas sin saberlo.
+
+**Solucion:** El usuario fotografa su boleta de compra de farmacia. OCR extrae medicamento, precio, farmacia y ubicacion. Se construye base de datos crowdsourced de precios reales por zona.
+
+**Insight:** La boleta ya existe — el usuario solo necesita fotografiarla. El valor real es la base de datos acumulada, no la app en si.
+
+**Why now:** OCR barato y preciso, smartphones penetracion alta en Peru, DIGEMID quiere transparencia de precios, EPS necesitan auditar costos.
+
+**Fuentes/data hooks:** DIGEMID, boletas de farmacia, geolocalizacion, MINSA datos de medicamentos esenciales.
+
+**Mercado:** Peru primero; LATAM si hay problema similar de opacidad de precios farmaceuticos.
+
+**Competencia:** DIGEMID observatorio (incompleto), Buscafarma Chile (diferente mercado), ninguna app peruana crowdsourced.
+
+**Moat posible:** Base de datos historica de precios reales unica, cobertura geografica, integracion con compradores B2B.
+
+**Modelo de negocio:** Usuario gratis. B2B: DIGEMID/MINSA licencia data, EPS auditan gastos de afiliados, Inkafarma/Mifarma pagan por benchmarking competitivo.
+
+**GTM:** Lanzar en grupos de WhatsApp de salud, farmacias populares, pacientes cronicos (diabetes, hipertension).
+
+**Riesgos:** Friccion de subir boleta, privacidad de datos de salud, Ley 29733, resistencia de farmacias a transparencia.
+
+**Validacion inmediata:** 10 usuarios suben boleta y validan si el precio extraido es correcto y si usarian el comparador.
+
+**validator_idea:**
+
+```text
+FarmaData: app donde usuarios peruanos fotografian su boleta de compra de farmacia y el sistema OCR extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios reales de medicamentos por zona, vendiendo acceso B2B a DIGEMID, EPS e Inkafarma.
+```
+
+---
+
+## 12. RutaLeche Peru
+
+**Nombre corto:** RutaLeche Peru
+
+**One-liner:** Optimizamos rutas de acopio lechero en Peru usando machine learning para reducir merma, combustible y viajes innecesarios en cooperativas y plantas procesadoras.
+
+**Segmento inicial:** Cooperativas lecheras y plantas de acopio en Cajamarca, Arequipa y Lima.
+
+**Problema:** Las rutas de recoleccion de leche se planifican manualmente o por costumbre. Merma por demora, combustible malgastado y viajes sin carga completa son costos directos y cuantificables.
+
+**Solucion:** App de optimizacion de rutas con ML que considera volumen por productor, tiempo de acopio, temperatura y capacidad de cisterna. Similar a Agil en Chile que redujo merma 30%.
+
+**Insight:** El problema es identico al de logistica de ultima milla pero con restriccion de cadena de frio. La solucion chilena ya esta probada — se puede replicar en Peru.
+
+**Why now:** Agil Chile valido el modelo en LATAM. Gloria y cooperativas peruanas tienen presupuesto operativo. Combustible caro hace ROI visible.
+
+**Fuentes/data hooks:** Gloria, Laive, AGALEP, cooperativas de Cajamarca, datos de rutas y merma existentes.
+
+**Mercado:** Peru lechero (~$800M industria). LATAM replicable en Colombia, Ecuador, Argentina.
+
+**Competencia:** Excel, planificacion manual, GPS basico, sin solucion especializada en Peru.
+
+**Moat posible:** Datos historicos de rutas y merma, integracion con plantas, confianza operativa.
+
+**Modelo de negocio:** SaaS mensual por cisterna o por planta. Piloto pagado con cooperativa ancla.
+
+**GTM:** Alianza con AGALEP o cooperativa de Cajamarca como cliente ancla. Demo con datos reales de merma.
+
+**Riesgos:** Acceso a datos de rutas existentes, resistencia de choferes, ciclo de ventas largo con cooperativas.
+
+**Validacion inmediata:** Entrevistar jefe de logistica de cooperativa sobre costo actual de merma y si conocen Agil Chile.
+
+**validator_idea:**
+
+```text
+RutaLeche Peru: optimizacion de rutas de acopio lechero con machine learning para cooperativas y plantas procesadoras peruanas, reduciendo merma de producto, combustible y viajes innecesarios, modelo probado en Chile por la app Agil.
+```
+
+---
+
+## 13. SeguridadMesh
+
+**Nombre corto:** SeguridadMesh
+
+**One-liner:** Proveemos analitica de video con IA para camaras de serenazgo municipal, detectando incidentes en tiempo real y reduciendo tiempo de respuesta ante emergencias ciudadanas.
+
+**Segmento inicial:** Municipalidades distritales de Lima con presupuesto PIM para seguridad ciudadana.
+
+**Problema:** Las municipalidades tienen camaras pero sin analitica. Un operador no puede monitorear 50 pantallas simultaneamente. Incidentes se detectan tarde o nunca.
+
+**Solucion:** Capa de IA sobre camaras existentes que detecta anomalias (peleas, caidas, aglomeraciones, objetos abandonados) y alerta al operador en tiempo real.
+
+**Insight:** El hardware ya existe — el problema es la atencion humana. IA no reemplaza al operador, le dice donde mirar.
+
+**Why now:** Modelos de vision baratos (YOLOv8, etc.), camaras IP estandar compatibles, FONIPREL financia tecnologia para seguridad municipal.
+
+**Fuentes/data hooks:** INEI estadisticas de criminalidad, PNP reportes, FONIPREL presupuestos, entrevistas con jefes de serenazgo.
+
+**Mercado:** 43 distritos de Lima con presupuesto propio. LATAM replicable en ciudades medianas.
+
+**Competencia:** Hikvision/Dahua (hardware sin analitica local), Sievert (costoso), ninguna solucion peruana de analitica municipal asequible.
+
+**Moat posible:** Datos de incidentes municipales, integracion con sistemas PNP, confianza institucional, adaptacion normativa local.
+
+**Modelo de negocio:** Licencia B2G anual por municipalidad. Pago via PIM (presupuesto institucional modificado).
+
+**GTM:** Un municipio piloto como referencia. Alcaldes con agenda de seguridad son compradores naturales.
+
+**Riesgos:** Ciclo de compra publica largo (6-18 meses), licitacion OSCE, privacidad y vigilancia, calidad de camaras existentes.
+
+**Validacion inmediata:** Entrevistar jefe de serenazgo de un distrito sobre cuantos incidentes se pierden y si tienen presupuesto asignado.
+
+**validator_idea:**
+
+```text
+SeguridadMesh: sistema de analitica de video con IA para camaras de serenazgo municipal peruano que detecta incidentes en tiempo real y alerta operadores, vendido como licencia B2G anual pagada con presupuesto PIM de seguridad ciudadana.
+```
+
+---
+
+## 14. PlagaNet
+
+**Nombre corto:** PlagaNet
+
+**One-liner:** Detectamos plagas en cultivos de papa y maiz peruanos mediante fotografia y vision por computadora, con modelo freemium para agricultores y B2G para Agrorural y cooperativas.
+
+**Segmento inicial:** Agricultores de papa en Puno, Cusco y Junin; tecnicos de Agrorural.
+
+**Problema:** La papa es el cultivo #1 de Peru (800K hectareas). El tizón tardío (Phytophthora) puede destruir hasta 100% de cosecha si no se detecta a tiempo. Diagnostico actual = visual por tecnico que visita cada 2 semanas.
+
+**Solucion:** Agricultor fotografia hoja enferma. Modelo de vision clasifica plaga y da recomendacion de tratamiento. Tecnico recibe alerta geografica agregada de brotes.
+
+**Insight:** Similar a Citridata en Venezuela para citricos — el modelo de deteccion es replicable. La diferencia es que papa en Peru tiene escala masiva y perdida economica cuantificable.
+
+**Why now:** Modelos de clasificacion de enfermedades de plantas son open source (PlantVillage). Smartphones con camara ya llegaron a zonas rurales peruanas. Agrorural tiene tecnicos que necesitan escalar cobertura.
+
+**Fuentes/data hooks:** MINAGRI, Agrorural, SENASA, PlantVillage dataset, entrevistas con tecnicos agricolas.
+
+**Mercado:** Peru 800K ha papa + 350K ha maiz. LATAM replicable. B2G: Agrorural/Midagri tienen presupuesto de extension agricola.
+
+**Competencia:** Inspeccion visual manual, tecnicos Agrorural (escasos), Plantix (app global sin foco peruano), ninguna solucion local especializada.
+
+**Moat posible:** Dataset de plagas peruanas especificas, integracion con Agrorural, datos geograficos de brotes, confianza tecnica agricola.
+
+**Modelo de negocio:** Agricultor gratis (adquisicion). B2G: Agrorural/Midagri pagan por dashboard de vigilancia fitosanitaria nacional. Cooperativas pagan por monitoreo de su base de productores.
+
+**GTM:** Alianza con un tecnico de Agrorural como early adopter. Piloto en zona de alta incidencia de tizon.
+
+**Riesgos:** Conectividad rural limitada, confianza del agricultor en IA, calidad de foto en campo, variabilidad de plagas por altitud.
+
+**Validacion inmediata:** Mostrar prototipo a 3 tecnicos de Agrorural y preguntar si cambiaria su flujo de trabajo de deteccion.
+
+**validator_idea:**
+
+```text
+PlagaNet: app movil para agricultores peruanos que detecta plagas en cultivos de papa y maiz via fotografia usando vision por computadora, con modelo freemium para el agricultor y B2G vendido a Agrorural y Midagri para vigilancia fitosanitaria a escala nacional.
+```
+
+---
+
+## 15. OCR-Receta Peru
+
+**Nombre corto:** OCR-Receta Peru
+
+**One-liner:** El paciente fotografa su receta medica, extraemos los medicamentos y mostramos el generico equivalente mas barato disponible en farmacia cercana por GPS, cobrando comision B2B a farmacias por cada cliente derivado.
+
+**Segmento inicial:** Pacientes con enfermedades cronicas (diabetes, hipertension) que compran medicamentos mensualmente en Lima.
+
+**Problema:** El medico receta la marca original. El paciente no sabe que existe un generico equivalente 70-80% mas barato a 200 metros. Las farmacias no tienen incentivo para mostrar alternativas baratas.
+
+**Solucion:** OCR extrae lista de medicamentos de la receta. Sistema mapea a DIGEMID equivalentes genericos. Muestra farmacias cercanas con stock y precio. Farmacia paga comision por cliente enviado.
+
+**Insight:** Similar a GoodRx en USA ($2.6B valuacion) pero para mercado peruano donde la diferencia marca/generico es aun mayor y menos conocida por el paciente.
+
+**Why now:** OCR preciso y barato. DIGEMID tiene base de equivalentes terapeuticos publica. Pacientes cronicos son segmento cautivo con compra recurrente mensual.
+
+**Fuentes/data hooks:** DIGEMID equivalentes terapeuticos, MINSA lista de medicamentos esenciales, entrevistas con pacientes cronicos, Inkafarma/Mifarma APIs de stock.
+
+**Mercado:** Peru: 4M+ pacientes cronicos. LATAM: mismo problema en Colombia, Mexico. USA: GoodRx ya valido el modelo a escala.
+
+**Competencia:** Ninguna app peruana especializada. DIGEMID tiene lista pero sin app usable. Inkafarma/Mifarma no tienen incentivo de mostrar genericos.
+
+**Moat posible:** Base de datos de equivalencias terapeuticas, relaciones con farmacias independientes, datos de precios en tiempo real, habito del paciente cronico.
+
+**Modelo de negocio:** Paciente gratis. Farmacia paga comision por cliente derivado (lead generation) o suscripcion mensual por listing destacado.
+
+**GTM:** Grupos de WhatsApp de pacientes diabeticos e hipertensos. Alianza con medicos de cabecera que recetan cronico. Farmacias independientes como early adopters.
+
+**Riesgos:** Resistencia de cadenas grandes (Inkafarma no quiere mostrar genericos baratos), precision del OCR en recetas manuscritas, regulacion DIGEMID sobre recomendacion de medicamentos.
+
+**Validacion inmediata:** 5 pacientes cronicos fotografian su receta, validar si el generico sugerido es correcto y si irian a la farmacia sugerida.
+
+**validator_idea:**
+
+```text
+OCR-Receta Peru: app donde el paciente fotografa su receta medica, el sistema extrae los medicamentos via OCR y muestra el generico equivalente mas barato en farmacia cercana por GPS, con modelo de negocio B2B donde farmacias pagan comision por cada cliente derivado.
+```
+
+---
+
+## 16. SaludData Peru
+
+**Nombre corto:** SaludData Peru
+
+**One-liner:** App de salud personal donde el usuario peruano es dueno de su propia data — registra dieta, citas medicas y boletas de farmacia — y recibe alertas de riesgo de enfermedades cronicas, con monetizacion B2B hacia EPS y farmacias.
+
+**Segmento inicial:** Pacientes con diabetes, hipertension o anemia en Lima que visitan medico regularmente pero no tienen historial de salud accesible.
+
+**Problema:** En Peru no existe open health ni historial clinico digital accesible para el ciudadano. El paciente llega sin datos al medico. Sin datos longitudinales de dieta y medicamentos, la deteccion temprana de enfermedades cronicas es imposible.
+
+**Solucion:** (1) Registro de dieta y recetas de comida. (2) Agenda de citas medicas con historial. (3) OCR de boletas de farmacia para historial de medicamentos. (4) Comparador de precios de medicamentos por ubicacion. (5) Modelo de ML que detecta riesgo de diabetes T2, hipertension y anemia sobre datos acumulados del usuario.
+
+**Insight:** El usuario no tiene incentivo de pagar — pero si acumula su propia data de salud, se convierte en activo valioso para EPS, aseguradoras y gobierno SIS que hoy toman decisiones sin datos reales del paciente.
+
+**Why now:** LLMs baratos para extraccion de datos de boletas/recetas. MINSA/EsSalud sin digitalizacion = oportunidad de ser la capa de datos del paciente. Modelos de riesgo de diabetes (FINDRISC) son publicos y validados.
+
+**Fuentes/data hooks:** MINSA, EsSalud, DIGEMID, INEI encuesta ENDES (salud y nutricion), modelos FINDRISC para diabetes.
+
+**Mercado:** Peru: 35M habitantes, 4M+ pacientes cronicos, EsSalud 12M afiliados. LATAM replicable donde no hay open health.
+
+**Competencia:** Ada Health (global, no Peru), Yodawy (Egipto), ninguna app peruana de historial personal de salud con prediccion.
+
+**Moat posible:** Data longitudinal de salud del usuario (imposible de replicar sin tiempo), base de datos crowdsourced de precios de medicamentos, confianza del paciente.
+
+**Modelo de negocio:** Usuario gratis. B2B: EPS compran dashboard de riesgo de su poblacion afiliada. MINSA/SIS compran insights para politica publica. Farmacias pagan por derivacion.
+
+**GTM:** Pacientes cronicos como wedge (compra mensual de medicamentos = habito de uso). Medicos de cabecera como canal de recomendacion.
+
+**Riesgos:** Privacidad datos de salud (Ley 29733), responsabilidad por predicciones erroneas, friccion de registro de dieta, WTP B2C nulo en Peru.
+
+**Validacion inmediata:** 5 pacientes cronicos prueban registro de boleta + cita medica durante 2 semanas. Medir retencion y si el comparador de precios cambia donde compran.
+
+**validator_idea:**
+
+```text
+SaludData Peru: app de salud personal para Peru donde el usuario registra dieta, citas medicas y boletas de farmacia, recibe alertas de riesgo de enfermedades cronicas via ML, y accede a comparador de precios de medicamentos por ubicacion, con monetizacion B2B hacia EPS, MINSA y farmacias que pagan por insights agregados de salud poblacional.
+```
+
+---
+
 ## Comandos sugeridos para validar
 
 Ejemplo individual:
