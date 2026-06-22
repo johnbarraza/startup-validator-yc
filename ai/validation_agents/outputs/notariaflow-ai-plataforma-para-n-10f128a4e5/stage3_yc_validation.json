@@ -1,0 +1,229 @@
+{
+  "idea": "NotariaFlow AI: AI copilot for small/medium notary firms to accelerate document preparation with reviewable extraction and automated drafts.",
+  "selected_gap": {
+    "id": "gap1",
+    "title": "Revisable AI Notarial Extraction",
+    "pain": "Notaries fear AI errors that can have legal consequences; they spend excessive time manually verifying AI output, negating efficiency gains.",
+    "why_now": "AI/NLP advanced enough for high-accuracy extraction, but trust remains a barrier; no competitor offers an explainable, reviewable AI layer tailored to notarial acts.",
+    "evidence_needed": "Build prototype with highlighted extracted fields, confidence scores, and an editing interface; conduct user tests with 5 notaries, measure verification time reduction and trust scores.",
+    "priority": "high",
+    "risk": "Direct competitor LexNotari could add explainability features quickly; regulatory uncertainty about AI usage in legally binding documents."
+  },
+  "friedman_scores": [
+    {
+      "criterion": "Founder-market fit",
+      "score": 6,
+      "note": "Assumed domain knowledge but no explicit founder background provided."
+    },
+    {
+      "criterion": "Market size",
+      "score": 6,
+      "note": "Niche vertical; TAM uncertain but likely in hundreds of millions, not billions."
+    },
+    {
+      "criterion": "Problem acuity",
+      "score": 9,
+      "note": "High pain: manual work and fear of errors are costly and time-consuming."
+    },
+    {
+      "criterion": "Competition",
+      "score": 6,
+      "note": "Some legal tech exists; gap indicates differentiation but incumbents could pivot."
+    },
+    {
+      "criterion": "Personal pull",
+      "score": 5,
+      "note": "No evidence of founder's personal connection to notarial pain."
+    },
+    {
+      "criterion": "Recently possible or necessary",
+      "score": 9,
+      "note": "AI/NLP advances enable high-accuracy extraction and explainability."
+    },
+    {
+      "criterion": "Successful proxies",
+      "score": 7,
+      "note": "Legal AI success stories (e.g., Harvey) but notary-specific is new."
+    },
+    {
+      "criterion": "Years-long commitment",
+      "score": 7,
+      "note": "Building trust and regulatory navigation require long-term focus."
+    },
+    {
+      "criterion": "Scalability",
+      "score": 7,
+      "note": "Software product can scale, but localization to jurisdictions limits it."
+    },
+    {
+      "criterion": "Good idea space",
+      "score": 8,
+      "note": "Vertical AI with clear workflow integration and trust barrier is promising."
+    }
+  ],
+  "yc_rule_scores": [
+    {
+      "criterion": "Do not wait for the perfect idea",
+      "score": 8,
+      "note": "Actionable gap with clear evidence-needed steps."
+    },
+    {
+      "criterion": "Burn the boats",
+      "score": 7,
+      "note": "Single focus on notarial AI, but no sign of all-in commitment yet."
+    },
+    {
+      "criterion": "Go deep into customer workflow",
+      "score": 9,
+      "note": "Integrated into daily notarial process with reviewable editor."
+    },
+    {
+      "criterion": "Build at the edge of AI",
+      "score": 8,
+      "note": "Uses specialized OCR and LLMs; moat from domain-specific training."
+    },
+    {
+      "criterion": "Sell outcomes, not tools",
+      "score": 7,
+      "note": "Outcome-oriented (reduced errors, time saved) but pricing not defined."
+    },
+    {
+      "criterion": "Choose ambitious scope",
+      "score": 8,
+      "note": "Aims to automate entire document preparation from scan to draft."
+    },
+    {
+      "criterion": "Treat failure as structured data",
+      "score": 5,
+      "note": "Not explicitly mentioned; could improve with systematic learning from errors."
+    },
+    {
+      "criterion": "Pick low-trust, high-expertise markets",
+      "score": 9,
+      "note": "Notaries are high-expertise and initially distrustful of AI; perfect fit."
+    },
+    {
+      "criterion": "The process is the product",
+      "score": 8,
+      "note": "Review workflow is core; product is the validated extraction process."
+    },
+    {
+      "criterion": "Avoid early-demand trap",
+      "score": 6,
+      "note": "Risk of demand only if prototype proves trust; need rigorous validation."
+    },
+    {
+      "criterion": "Price per unit or result",
+      "score": 7,
+      "note": "Could price per document or per verified act, aligning with value."
+    },
+    {
+      "criterion": "Obsess over COGS",
+      "score": 6,
+      "note": "AI inference costs matter but manageable; not obsessing yet."
+    },
+    {
+      "criterion": "Do not bolt AI onto legacy",
+      "score": 8,
+      "note": "New interface, not an add-on to existing notarial software."
+    },
+    {
+      "criterion": "Cover domain, model, and operations fluency",
+      "score": 6,
+      "note": "Unclear if team covers notarial law, NLP, and deployment expertise."
+    }
+  ],
+  "vc_rubric_scores": [
+    {
+      "dimension": "Team",
+      "weight": 0.25,
+      "score": 6,
+      "weighted": 1.5,
+      "rationale": "Assumed domain knowledge but no concrete evidence of unique expertise."
+    },
+    {
+      "dimension": "Market",
+      "weight": 0.2,
+      "score": 7,
+      "weighted": 1.4,
+      "rationale": "TAM likely >$1B globally with growing AI adoption in legal."
+    },
+    {
+      "dimension": "Product",
+      "weight": 0.15,
+      "score": 8,
+      "weighted": 1.2,
+      "rationale": "Defensible moat from domain-specific training data and trust-oriented workflow."
+    },
+    {
+      "dimension": "Traction",
+      "weight": 0.15,
+      "score": 2,
+      "weighted": 0.3,
+      "rationale": "No prototype or user tests yet; only a defined gap."
+    },
+    {
+      "dimension": "Business Model",
+      "weight": 0.1,
+      "score": 5,
+      "weighted": 0.5,
+      "rationale": "SaaS likely but pricing and unit economics not defined."
+    },
+    {
+      "dimension": "Competition",
+      "weight": 0.08,
+      "score": 6,
+      "weighted": 0.48,
+      "rationale": "Differentiated but incumbents like LexNotari could add explainability."
+    },
+    {
+      "dimension": "Financials",
+      "weight": 0.05,
+      "score": 5,
+      "weighted": 0.25,
+      "rationale": "No financial details; early stage with reasonable burn if lean."
+    },
+    {
+      "dimension": "Risk Profile",
+      "weight": 0.02,
+      "score": 4,
+      "weighted": 0.08,
+      "rationale": "Regulatory uncertainty and trust barriers are significant risks."
+    }
+  ],
+  "vc_verdict": {
+    "composite_score": 5.71,
+    "verdict": "DECLINE",
+    "reason": "Disqualifying score on: traction",
+    "weak_dims": [
+      "traction"
+    ],
+    "disqualifying_dims": [
+      "traction"
+    ],
+    "investor_lenses": {
+      "sequoia": "PASS",
+      "yc": "FAIL",
+      "tiger_global": "FAIL",
+      "risk_mgmt": "ELEVATED"
+    },
+    "source": "deterministic_vc_calcs"
+  },
+  "go_no_go": "CONDITIONAL_GO",
+  "decision": "Proceed with building the prototype and conducting user tests as specified in the gap evidence. Reassess after achieving milestones.",
+  "next_experiments": [
+    "Develop a minimum viable prototype with OCR and LLM extraction, highlighting fields and confidence scores.",
+    "Conduct user tests with 5 notaries, measuring verification time and trust scores.",
+    "Interview 20 notaries to validate pain intensity and willingness to pay.",
+    "Analyze competitors (e.g., LexNotari) for feature gaps and potential responses."
+  ],
+  "kill_criteria": [
+    "After user tests, verification time reduction is less than 20% or average trust score is below 3/5.",
+    "No notary expresses willingness to pay >$50/month after prototype demo.",
+    "A major incumbent launches a similar explainable feature within 6 months."
+  ],
+  "source": "llm",
+  "_iteration_id": "I1",
+  "_iteration_angle": "ORIGINAL",
+  "_iteration_one_liner": "Automatizamos la extracción y validación de datos para borradores notariales con IA revisable, ahorrando horas de trabajo manual y eliminando errores en firmas pequeñas y medianas."
+}

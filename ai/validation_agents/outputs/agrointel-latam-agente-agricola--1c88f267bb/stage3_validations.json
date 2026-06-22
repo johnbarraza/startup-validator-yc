@@ -1,0 +1,649 @@
+[
+  {
+    "idea": "AgroIntel LatAm is a voice-first agricultural assistant that transforms how smallholder farmers and cooperatives report field problems. Instead of sending unstructured WhatsApp voice notes, farmers speak to a chatbot that transcribes and classifies their reports into structured categories like pests, diseases, or nutrient deficiencies, using a vocabulary optimized for local jargon and low-bandwidth environments. The system then creates geotagged, prioritized alerts for extension technicians, who receive actionable, searchable logs instead of hours of messy audio. This structured data becomes the backbone for coordinating on-site visits and tracking issue resolution, helping cooperatives deliver faster, more efficient technical assistance while building a rich dataset of farm-level problems.",
+    "selected_gap": {
+      "id": 1,
+      "title": "Structured Voice-Based Reporting and Classification",
+      "pain": "Smallholder farmers lack a systematic way to report field problems. They rely on chaotic WhatsApp groups or manual notebooks, leading to lost reports, no classification, and delayed response.",
+      "why_now": "Advances in speech-to-text and NLP for low-resource languages, combined with widespread use of basic phones with voice messaging, make it feasible to build a voice-first interface.",
+      "evidence_needed": "Interview 20 farmers to quantify time spent in current methods, error rates, and willingness to use voice. Assess accuracy of transcription in target languages.",
+      "priority": "high",
+      "risk": "User adoption of voice interface, accuracy in noisy farm environments, and convincing farmers to switch from familiar WhatsApp."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No founder info provided; assuming generic team. Need domain experience in agriculture and LatAm markets."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "Large TAM: millions of smallholder farmers in LatAm, cooperatives represent a viable segment."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Pain is real and vocalized: lost reports, delayed assistance. Farmers and technicians both suffer."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Main competition is manual/WhatsApp; some agtech startups exist but few focus on structured voice for smallholders."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 4,
+        "note": "No evidence of founder's personal connection; would benefit from a founder who has lived the problem."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 9,
+        "note": "Speech-to-text and NLP for low-resource languages have improved dramatically; voice messaging is ubiquitous."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar voice-first tools in healthcare (e.g., Suki) show promise, but agriculture is less proven."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "Building datasets and trust in agriculture takes time; unclear if founders are committed for 5+ years."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Voice interface scales well with cloud; but language/crop diversity may require localization effort."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Vertical AI in agriculture is underpenetrated; structured data from voice is a defensible moat."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "Idea is well-scoped; should validate quickly without over-engineering."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 5,
+        "note": "Cannot assess founder commitment; recommendation is to focus solely on this."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "The idea directly addresses a critical workflow gap: reporting to resolution."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 9,
+        "note": "Voice AI for low-resource languages is at the edge; model improvements will directly benefit product."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Potential to sell 'reduced response time' or 'accurate problem tracking' as outcome."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Ambitious but not impossible; starting with one crop/region is wise."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "If adoption fails, insights on farmer behavior could pivot to advisory or insurance."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Agriculture has low trust in tech; cooperatives as intermediaries can help."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "The reporting and resolution workflow is the product; smooth UX is key."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Risk of demand from cooperatives but not from farmers; need to validate both sides."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Pricing per report or per resolved incident aligns with value."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 5,
+        "note": "Voice processing costs can add up; need efficient models and offline capabilities."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Building a new voice-first system rather than adding AI to WhatsApp is correct."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Team needs agronomy, NLP, and on-the-ground ops expertise; unclear if covered."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No founder information provided; cannot assess unique advantages. Generic team lacks credibility."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "TAM > $1B (smallholder agriculture in LatAm is massive), growing interest in agtech, right timing with mobile penetration."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Defensible moat from localized voice data and workflow integration; but technically replicable with sufficient investment."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of customers, pilots, or revenue. At conceptual stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "Likely SaaS per cooperative with potential for outcome-based pricing; margins could be high if voice processing optimized, but unit economics unproven."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Mainly manual methods and generic agtech platforms; funded incumbents like Climate Corp focus on data analytics, not voice. Wins via deep workflow integration."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial data provided; burn rate unknown. Early stage likely requires seed funding."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 6,
+        "weighted": 0.12,
+        "rationale": "Primary risk: farmer adoption of voice interface and accuracy in noisy environments. Mitigable with iterative UX and offline support."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.85,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Dont invest at this stage; need founder team with domain expertise and initial traction evidence.",
+    "next_experiments": [
+      "Interview 20 farmers and 5 cooperatives to validate willingness to use voice reporting.",
+      "Build a minimal prototype (e.g., voice-to-classify via Twilio + GPT) and test with 5 farmers.",
+      "Quantify current time-to-resolution and error rates in manual systems.",
+      "Assess transcription accuracy in Spanish and indigenous languages (Quechua, Nahuatl)."
+    ],
+    "kill_criteria": [
+      "Less than 60% of farmers willing to try voice interface after demo.",
+      "Speech-to-text accuracy below 70% for key dialects in noisy conditions.",
+      "Cooperatives unwilling to pay more than $100/month for the service.",
+      "No founder with background in agronomy or Latin American agriculture joins within 3 months."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "AgroIntel LatAm turns farmers' voice reports into structured, classified field issues for agricultural technicians, cutting response times from days to hours."
+  },
+  {
+    "idea": "AgroIntel LatAm pivoted to a B2B platform for agricultural extension agencies and large cooperatives, enabling them to deploy a voice-first AI agent that smallholder farmers call to report field issues. The system automatically transcribes, classifies (pest, disease, drought, etc.), geotags, and creates prioritized tickets, routing them to the right field technician. The buyer pays a subscription per farmer covered, gaining a management dashboard to track response times, resolution rates, and aggregate agronomic data. This replaces fragmented WhatsApp and phone-call triage, reducing crop losses and optimizing extension resources.",
+    "selected_gap": {
+      "id": 1,
+      "title": "Structured Voice-Based Reporting and Classification",
+      "pain": "Smallholder farmers lack a systematic way to report field problems. They rely on chaotic WhatsApp groups or manual notebooks, leading to lost reports, no classification, and delayed response.",
+      "why_now": "Advances in speech-to-text and NLP for low-resource languages, combined with widespread use of basic phones with voice messaging, make it feasible to build a voice-first interface.",
+      "evidence_needed": "Interview 20 farmers to quantify time spent in current methods, error rates, and willingness to use voice. Assess accuracy of transcription in target languages.",
+      "priority": "high",
+      "risk": "User adoption of voice interface, accuracy in noisy farm environments, and convincing farmers to switch from familiar WhatsApp."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No information on founder background; assumed generic but plausible agri background"
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "Large TAM across LatAm smallholders, but B2B segment narrows to extension agencies and cooperatives"
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Clear pain: chaotic reporting leads to crop losses and delayed response"
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Fragmented manual workaround; no direct AI voice-based competitor yet"
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unknown founder connection to the problem"
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Recent advances in speech-to-text for low-resource languages enable this"
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 5,
+        "note": "Similar voice-based systems exist in other verticals, but not specifically in agri extension"
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "No indication of long-term commitment from founder"
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "B2B subscription model can scale across cooperatives and regions"
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Agtech underserved, voice-first approach leverages basic phones"
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is specific and actionable, not waiting"
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 6,
+        "note": "No evidence of single focus, but plausible"
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 5,
+        "note": "Planned farmer interviews, but not yet deep"
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Voice AI for low-resource languages is cutting-edge"
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 6,
+        "note": "Pricing per farmer, but outcome (crop loss reduction) not directly sold"
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Ambitious to transform entire extension workflow"
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 4,
+        "note": "Not yet incorporating failure analysis"
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 6,
+        "note": "Extension agencies require trust, but expertise in agri is high"
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "The structured triage and routing is the key product"
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "No early demand validated yet"
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Per farmer subscription is unit-based"
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "Voice transcription costs could be significant, but manageable"
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "Replaces WhatsApp/phone, not bolted onto legacy system"
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 4,
+        "note": "Unclear if team has deep agri domain, NLP model expertise, and operations capability"
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No specific founder background provided; assume moderate fit"
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "TAM for extension agencies and large cooperatives in LatAm likely exceeds $1B, but timing is good"
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Moat from voice data and workflow integration, but replicable"
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No customers, only planned interviews"
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "Subscription per farmer, but LTV:CAC and margins unproven"
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "No direct funded competitor, but agtech platforms could adapt"
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial data; burn rate unknown"
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Key risk is farmer adoption and speech accuracy in noisy environments"
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.86,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "no_go",
+    "decision": "DECLINE - composite VC score below 5.0 due to lack of traction and team evidence; need to validate farmer adoption and build a strong team first.",
+    "next_experiments": [
+      "Interview 20 smallholder farmers to quantify pain and willingness to use voice.",
+      "Test speech-to-text accuracy in target languages under field conditions.",
+      "Identify 3-5 cooperatives or extension agencies and gauge subscription interest."
+    ],
+    "kill_criteria": [
+      "Less than 50% of farmers willing to try voice-based reporting.",
+      "Speech-to-text accuracy below 70% for key local languages.",
+      "No letter of intent from at least 2 agencies after initial conversations."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We give agricultural extension agencies a voice-first field intelligence system that automatically classifies and geotags farmer reports, turning chaotic phone calls into actionable tickets."
+  },
+  {
+    "idea": "CoffeeGuard is a voice-first reporting and triage system for coffee cooperatives battling coffee rust, where farmers call a local number and describe symptoms, and the system classifies, geotags, and alerts technicians with a severity score.",
+    "selected_gap": {
+      "id": 1,
+      "title": "Structured Voice-Based Reporting and Classification",
+      "pain": "Smallholder farmers lack a systematic way to report field problems. They rely on chaotic WhatsApp groups or manual notebooks, leading to lost reports, no classification, and delayed response.",
+      "why_now": "Advances in speech-to-text and NLP for low-resource languages, combined with widespread use of basic phones with voice messaging, make it feasible to build a voice-first interface.",
+      "evidence_needed": "Interview 20 farmers to quantify time spent in current methods, error rates, and willingness to use voice. Assess accuracy of transcription in target languages.",
+      "priority": "high",
+      "risk": "User adoption of voice interface, accuracy in noisy farm environments, and convincing farmers to switch from familiar WhatsApp."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 4,
+        "note": "No information about founder background; typical team lacks domain expertise in coffee agriculture."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "Coffee cooperative market is large globally, but segment is fragmented and smallholder-focused; TAM likely in hundreds of millions."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Coffee rust is devastating; current manual reporting leads to significant yield losses; urgency is high."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "WhatsApp and some agri apps exist, but no dominant voice-based solution for cooperatives; moderate competition."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 4,
+        "note": "No indication of founder's personal connection to coffee farmers or rust problem."
+      },
+      {
+        "criterion": "Recently possible",
+        "score": 8,
+        "note": "Advances in low-resource language speech-to-text and NLP make voice-based classification feasible for smallholder contexts."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 5,
+        "note": "Few successful voice-first agri-tech startups; Plantix (image-based) is a partial proxy but not voice."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Requires long-term partnership with cooperatives and trust-building; founder must be committed for years."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "Voice interface can scale across languages, but requires localization and handling of noisy environments; moderate scalability."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Agri-tech for climate-resilient crops is a promising space, especially with AI for low-resource settings."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "The idea addresses a clear pain point; it's good enough to start validating quickly."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focused on one idea; no distraction from other concepts."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 9,
+        "note": "Replaces chaotic WhatsApp notes with structured voice reporting; deeply integrated into farmer/technician workflow."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Uses NLP for low-resource languages; model improvements will directly enhance classification."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Value proposition is reduced yield loss and faster response, not just a reporting tool."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Ambitious to cover all coffee cooperatives; but scope is manageable initially."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "Misclassifications can provide data to improve taxonomy; but not explicitly designed for that."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Coffee rust expertise is specialized; cooperatives are low-trust but high need; voice system can build trust."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "The structured reporting process itself becomes the product; farmers adopt it as standard practice."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Risk of false positive interest from cooperatives; need to verify willingness to pay."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 8,
+        "note": "Can price per report or per cooperative subscription; aligns with outcome-based pricing."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "Costs include phone calls, transcription, and SMS; need to keep low especially in low-margin agriculture."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 9,
+        "note": "Replaces manual WhatsApp notes with AI-native voice system; not bolting onto legacy."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 8,
+        "note": "Requires coffee disease domain expertise, NLP model fluency, and field operations understanding."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No evidence of founder background in agriculture or NLP; typical team lacks unique advantage."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "TAM for coffee cooperatives is large but fragmented; growth tied to climate pressures; timing is right."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 5,
+        "weighted": 0.75,
+        "rationale": "Defensible moat is limited; voice data and taxonomy can be replicated; network effects weak."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of user interviews, pilots, or letters of intent; pure concept stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "LTV:CAC unknown; subscription per cooperative likely low margins; no pricing validated."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Main competitor is manual WhatsApp; some agri-tech apps but none focused on voice; moderate threat from incumbents."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No financial data; assumed lean but burn rate not justified; runway unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Key risks: farmer adoption, transcription accuracy in noisy fields, and reliance on phone networks; manageable but significant."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.58,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "no",
+    "decision": "Do not pursue at this stage; requires stronger founder-market fit and initial traction evidence.",
+    "next_experiments": [
+      "Conduct 20 farmer interviews to quantify pain and willingness to use voice-based reporting.",
+      "Run a pilot with one cooperative to test transcription accuracy and classification in local languages.",
+      "Build a simple MVP using Twilio voice and a basic NLP model to validate workflow feasibility."
+    ],
+    "kill_criteria": [
+      "Fewer than 50% of farmers express interest in switching from WhatsApp to voice system.",
+      "Transcription accuracy falls below 70% for key disease terms in target languages.",
+      "Cooperatives unwilling to pay even a nominal fee for the service."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We turn chaotic farmer voice notes into structured, triaged disease alerts for coffee cooperative technicians using a simple phone call."
+  }
+]

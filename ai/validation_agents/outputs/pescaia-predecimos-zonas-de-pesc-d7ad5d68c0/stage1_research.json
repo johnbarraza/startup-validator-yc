@@ -1,0 +1,165 @@
+{
+  "idea": "PescaIA: predecimos zonas de pesca para embarcaciones artesanales peruanas usando temperatura superficial del mar (satelite NASA gratuito), clorofila, corrientes y historial de capturas. Peru es el 2do pais pesquero del mundo con 60000 pescadores artesanales que gastan 40-60por ciento de su combustible buscando cardumenes sin datos. El pescador recibe por WhatsApp cada manana un mapa de zonas calientes para su tipo de especie y zona. Revenue B2B: cooperativas pesqueras y FONDEPES pagan por acceso al servicio para su flota. Expansion: Ecuador, Chile, Indonesia.",
+  "market": "TAM: 12M small-scale fishers globally; SAM: 200k in Pacific South America; SOM: 500 vessels Year 1 via pilot cooperatives in Peru. Peru has 60k artisanal fishermen, 15k vessels, annual catch value ~$1.5B. 40–60% of fuel costs are wasted in search of fish schools.",
+  "solutions": [
+    {
+      "id": "none",
+      "name": "Conocimiento empírico y avistamiento de aves",
+      "category": "Tradicional / Do-nothing",
+      "observed_positioning": "Pescadores confían en su experiencia, color del agua, aves, y zonas conocidas. Sin costo pero ineficiente."
+    },
+    {
+      "id": "ecosonda",
+      "name": "Ecosondas y sondas de pesca (Furuno, Garmin, Lowrance)",
+      "category": "Hardware embarcado",
+      "observed_positioning": "Dispositivos que detectan cardúmenes bajo la embarcación. Reactivo, no predictivo. Inversión inicial $500-$2000."
+    },
+    {
+      "id": "imarpe",
+      "name": "Boletines oceanográficos del IMARPE",
+      "category": "Servicio gubernamental",
+      "observed_positioning": "Reportes trimestrales sobre condiciones del mar y recursos pesqueros. No específicos por zona de pesca diaria."
+    },
+    {
+      "id": "fondepes_talleres",
+      "name": "Capacitaciones y extensionismo de FONDEPES",
+      "category": "Asistencia técnica",
+      "observed_positioning": "Talleres presenciales sobre técnicas de pesca y sostenibilidad. No es servicio diario ni digital."
+    },
+    {
+      "id": "noaa_coastwatch",
+      "name": "NOAA CoastWatch (datos satelitales crudos)",
+      "category": "Datos abiertos",
+      "observed_positioning": "Imágenes satelitales gratuitas de SST y clorofila. Requiere procesamiento y análisis experto."
+    },
+    {
+      "id": "copernicus",
+      "name": "Copernicus Marine Service",
+      "category": "Datos abiertos",
+      "observed_positioning": "Plataforma europea de datos oceánicos. Similar a NOAA, sin análisis predictivo para pesca."
+    },
+    {
+      "id": "globalfishingwatch",
+      "name": "Global Fishing Watch",
+      "category": "Monitoreo de flotas industriales",
+      "observed_positioning": "Mapa de actividad pesquera usando AIS/VMS. Útil para transparencia, no para predicción diaria de cardúmenes."
+    },
+    {
+      "id": "fishbrain",
+      "name": "FishBrain",
+      "category": "App recreativa",
+      "observed_positioning": "Red social y predicciones para pesca deportiva basada en clima y luna. No adaptado a pesca comercial artesanal."
+    },
+    {
+      "id": "abalobi",
+      "name": "ABALOBI",
+      "category": "Plataforma móvil para pesca artesanal",
+      "observed_positioning": "App sudafricana que integra bitácora de captura, trazabilidad y mercado. Potencial de expansión a LATAM con módulo de predicción."
+    },
+    {
+      "id": "orbitaleos",
+      "name": "Orbital EOS Fish Finder",
+      "category": "Teledetección satelital avanzada",
+      "observed_positioning": "Usa imágenes de alta resolución para detectar cardúmenes de túnidos. Enfocado en flotas industriales; costo elevado para artesanales."
+    },
+    {
+      "id": "xpertsea",
+      "name": "XpertSea",
+      "category": "IA para acuicultura",
+      "observed_positioning": "Plataforma para camaroneras que usa visión por computadora. No aplicable a pesca de captura."
+    },
+    {
+      "id": "pescandoapp",
+      "name": "Pescando App (Latinoamérica)",
+      "category": "App para pesca artesanal",
+      "observed_positioning": "Aplicación colombiana que provee información de precios de pescado y condiciones de mar. No incluye predicción de zonas de pesca."
+    },
+    {
+      "id": "pelagic",
+      "name": "Pelagic Data Systems",
+      "category": "Seguimiento de embarcaciones pequeñas",
+      "observed_positioning": "Sensores solares para rastreo de flotas artesanales. No funcionalidad predictiva."
+    },
+    {
+      "id": "earthwave",
+      "name": "EarthWave",
+      "category": "Analítica satelital genérica",
+      "observed_positioning": "Ofrece soluciones de monitoreo ambiental satelital; podría adaptarse a pesca pero no es su foco actual."
+    },
+    {
+      "id": "cooperativas",
+      "name": "Redes de radio y comunicación entre cooperativas",
+      "category": "Colaboración informal",
+      "observed_positioning": "Pescadores comparten ubicaciones de pesca exitosa vía radio VHF. Conocimiento disperso y no sistematizado."
+    }
+  ],
+  "research_summary": "El mercado de herramientas predictivas para pesca artesanal en Perú está dominado por métodos tradicionales sin tecnología, con algunas alternativas gubernamentales esporádicas y plataformas móviles incipientes en otros países. Los competidores directos más peligrosos son ABALOBI (Sudáfrica), que ya opera con éxito en pequeña escala y podría añadir predicción satelital al expandirse a Latinoamérica; y Orbital EOS, que ofrece teledetección avanzada para flotas industriales y podría adaptar una versión de bajo coste. Los servicios públicos peruanos (IMARPE/FONDEPES) representan una amenaza si digitalizan sus boletines, pero su ejecución es débil. Otras apps regionales como Pescando y PescaData aún carecen de capacidades predictivas. La ventana de oportunidad reside en ser el primero en ofrecer un producto simple vía WhatsApp y monetizar B2B antes de que estos actores maduren.",
+  "competitor_signals": [
+    {
+      "competitor": "ABALOBI",
+      "hiring_score": 5,
+      "funding_score": 6,
+      "product_score": 7,
+      "team_score": 6,
+      "market_score": 8,
+      "tech_score": 5,
+      "overall_score": 61.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Plataforma consolidada para pesca artesanal con módulos de captura, trazabilidad y mercado. Financiamiento filantrópico estable y adopción creciente en África. Tiene el conocimiento del sector y la base de usuarios para lanzar un módulo predictivo similar, aunque su tecnología satelital actual es limitada. Su expansión a LATAM es plausible pero no inminente."
+    },
+    {
+      "competitor": "Orbital EOS Fish Finder",
+      "hiring_score": 7,
+      "funding_score": 7,
+      "product_score": 8,
+      "team_score": 8,
+      "market_score": 6,
+      "tech_score": 9,
+      "overall_score": 73.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Startup española con ronda Serie A, equipo sólido en observación de la Tierra y clientes en flotas industriales. Su servicio de detección satelital de cardúmenes es el más avanzado, pero su costo y enfoque en grandes pelágicos dejan vacío el segmento artesanal. Si lanzan una versión ligera con precios accesibles, sería un competidor directo de alto calibre."
+    },
+    {
+      "competitor": "Gobierno Peruano (IMARPE/FONDEPES App)",
+      "hiring_score": 3,
+      "funding_score": 5,
+      "product_score": 4,
+      "team_score": 4,
+      "market_score": 9,
+      "tech_score": 3,
+      "overall_score": 44.5,
+      "classification": "MONITOR",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Amenaza potencial: un servicio gubernamental gratuito aprovecharía la capilaridad institucional y la confianza de los pescadores. Sin embargo, IMARPE y FONDEPES tienen escasa agilidad digital y sus boletines actuales son poco frecuentes y genéricos. La probabilidad de que ejecuten una app con predicciones diarias es baja en el corto plazo."
+    },
+    {
+      "competitor": "Pescando App",
+      "hiring_score": 4,
+      "funding_score": 4,
+      "product_score": 6,
+      "team_score": 5,
+      "market_score": 6,
+      "tech_score": 5,
+      "overall_score": 48.0,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "App colombiana con información de precios y condiciones oceanográficas. Buena penetración regional pero aún sin predicción de zonas de pesca. Si integran análisis satelital, podrían competir en el Pacífico sudamericano. Actualmente su roadmap parece enfocado en mercado de transacción más que en inteligencia predictiva."
+    },
+    {
+      "competitor": "PescaData",
+      "hiring_score": 4,
+      "funding_score": 4,
+      "product_score": 5,
+      "team_score": 5,
+      "market_score": 6,
+      "tech_score": 5,
+      "overall_score": 46.0,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Plataforma mexicana de registro de capturas y datos de mercado para pesca artesanal. Similar a ABALOBI pero con menor tracción y alcance. Al igual que Pescando, carece de componente predictivo. Su base de usuarios es pequeña y depende de financiamiento de ONGs, con lento desarrollo tecnológico."
+    }
+  ],
+  "source": "llm"
+}

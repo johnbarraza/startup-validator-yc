@@ -1,151 +1,230 @@
 {
-  "idea": "VocacionData AI: orientacion vocacional basada en datos laborales reales para postulantes y estudiantes peruanos, usando un agente conversacional que cruza intereses, salarios, empleabilidad, oferta universitaria y ubicacion para reducir malas decisiones de carrera.",
+  "idea": "VocacionData AI - Enterprise SaaS for Peruvian universities to offer AI-driven vocational guidance using labor market data and university outcomes.",
   "selected_gap": {
-    "id": "G1",
-    "title": "Narrow painful workflow",
-    "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
-    "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
-    "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
-    "priority": 1,
-    "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+    "id": 1,
+    "title": "Unified Data-Driven Career Conversation",
+    "pain": "Peruvian students face fragmented, static data across government portals, psychometric tests, and generic AI. No single solution provides a conversational, personalized recommendation that integrates interests, salaries, universities, and regional demand, causing high career mismatch and dropout.",
+    "why_now": "Generative AI advances make conversational agents feasible. Datasets like Ponte en Carrera and MiFuturo are available but underutilized. Peruvian youth are digitally native and open to AI guidance, while government open data initiatives provide a reliable foundation.",
+    "evidence_needed": "User interviews to confirm frustration with current tools. Prototype engagement metrics (time on task, conversion). Benchmark against ChatGPT's accuracy on local career queries.",
+    "priority": "Critical (pain: very high, validation speed: medium, defensibility: high via data integration and vertical tuning)",
+    "risk": "ChatGPT may integrate local data via plugins. Government portals could add basic AI. Data licensing/accuracy risks."
   },
   "friedman_scores": [
     {
       "criterion": "Founder-market fit",
       "score": 5,
-      "note": "Unknown until the founder proves unusual access or insight into the users."
+      "note": "No specific founder background provided; overall domain expertise assumed moderate."
     },
     {
       "criterion": "Market size",
-      "score": 5,
-      "note": "Unknown in fallback mode; estimate TAM/SAM/SOM with external evidence."
+      "score": 6,
+      "note": "Peruvian university market is limited; TAM likely under $1B but growing with education investment."
     },
     {
       "criterion": "Problem acuity",
-      "score": 6,
-      "note": "Potentially strong if the selected gap maps to urgent time, money, or risk."
+      "score": 8,
+      "note": "Career mismatch and dropout are high-priority issues for students and universities."
     },
     {
       "criterion": "Competition",
-      "score": 6,
-      "note": "Alternatives probably exist; competition is validation if the wedge is sharper."
+      "score": 5,
+      "note": "Existing alternatives like ChatGPT and government portals are generic; no dedicated solution yet."
     },
     {
       "criterion": "Personal pull",
-      "score": 5,
-      "note": "Unknown until the founder states why they would work on this for years."
+      "score": 4,
+      "note": "Unknown founder motivation; no personal story provided."
     },
     {
       "criterion": "Recently possible or necessary",
-      "score": 6,
-      "note": "Likely if AI, regulation, platform shifts, or cost changes enable it now."
+      "score": 8,
+      "note": "Generative AI and open data availability make this timely."
     },
     {
       "criterion": "Successful proxies",
       "score": 5,
-      "note": "Find adjacent companies, workflows, or budgets that prove willingness to pay."
+      "note": "Similar platforms exist in other regions (e.g., India), but not proven in Peru."
     },
     {
       "criterion": "Years-long commitment",
-      "score": 5,
-      "note": "Unknown; validate whether the domain is deep enough for compounding insight."
+      "score": 7,
+      "note": "Education sales cycles are long; founder must commit for 5+ years."
     },
     {
       "criterion": "Scalability",
-      "score": 6,
-      "note": "Software can scale, but sales, service, and data access may constrain the model."
+      "score": 7,
+      "note": "Model can expand to other Latin American countries with similar data."
     },
     {
       "criterion": "Good idea space",
-      "score": 6,
-      "note": "Promising only if the first customer segment has repeated painful workflows."
+      "score": 8,
+      "note": "AI in career guidance is a promising vertical with tangible outcomes."
     }
   ],
   "yc_rule_scores": [
     {
       "criterion": "Do not wait for the perfect idea",
-      "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "score": 8,
+      "note": "Idea is well-defined; should start customer discovery immediately."
     },
     {
       "criterion": "Burn the boats",
       "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "note": "Founder must commit fully and avoid side projects."
     },
     {
       "criterion": "Go deep into customer workflow",
       "score": 7,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "note": "Needs immersion in career services departments to understand daily pain."
     },
     {
       "criterion": "Build at the edge of AI",
-      "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "score": 7,
+      "note": "Uses generative AI for conversation; moat comes from integrated data."
     },
     {
       "criterion": "Sell outcomes, not tools",
-      "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "score": 8,
+      "note": "Outcome is reduced dropout and improved employability; price accordingly."
     },
     {
       "criterion": "Choose ambitious scope",
-      "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "score": 7,
+      "note": "Aiming to become the standard career guidance platform for Peru is ambitious."
     },
     {
       "criterion": "Treat failure as structured data",
       "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "note": "Early failures should inform pivots; need systematic learning approach."
     },
     {
       "criterion": "Pick low-trust, high-expertise markets",
-      "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "score": 8,
+      "note": "Universities require high trust; domain expertise in education and labor data is critical."
     },
     {
       "criterion": "The process is the product",
-      "score": 7,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "score": 6,
+      "note": "Workflow of career services must be deeply integrated; not just a standalone tool."
     },
     {
       "criterion": "Avoid early-demand trap",
-      "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "score": 7,
+      "note": "Ensure real demand exists beyond initial enthusiasm; pilot with paying customers."
     },
     {
       "criterion": "Price per unit or result",
-      "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "score": 7,
+      "note": "Price per student or per graduate outcome; aligns incentives."
     },
     {
       "criterion": "Obsess over COGS",
-      "score": 7,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "score": 6,
+      "note": "AI inference costs matter; need efficient model and data pipeline."
     },
     {
       "criterion": "Do not bolt AI onto legacy",
-      "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "score": 8,
+      "note": "Building a new, AI-native platform rather than adding chatbot to existing system."
     },
     {
       "criterion": "Cover domain, model, and operations fluency",
       "score": 6,
-      "note": "Provisional pass; replace assumptions with customer evidence."
+      "note": "Need team with expertise in Peruvian education, labor data, and AI operations."
     }
   ],
-  "go_no_go": "GO_WITH_CONSTRAINTS",
-  "decision": "Proceed only as a validation sprint. Do not build more product surface area until at least 5 target users confirm the selected gap is painful, frequent, and tied to a budget or urgent workflow.",
+  "vc_rubric_scores": [
+    {
+      "dimension": "Team",
+      "weight": 0.25,
+      "score": 5,
+      "weighted": 1.25,
+      "rationale": "No evidence of unique founder or advisor background; critical gap."
+    },
+    {
+      "dimension": "Market",
+      "weight": 0.2,
+      "score": 6,
+      "weighted": 1.2,
+      "rationale": "TAM likely $100-200M; growing but not massive; timing is right."
+    },
+    {
+      "dimension": "Product",
+      "weight": 0.15,
+      "score": 7,
+      "weighted": 1.05,
+      "rationale": "Conversational agent with proprietary data integration creates a defensible moat."
+    },
+    {
+      "dimension": "Traction",
+      "weight": 0.15,
+      "score": 2,
+      "weighted": 0.3,
+      "rationale": "No users, prototypes, or letters of intent; pure idea stage."
+    },
+    {
+      "dimension": "Business Model",
+      "weight": 0.1,
+      "score": 6,
+      "weighted": 0.6,
+      "rationale": "SaaS with potential for high margins, but unit economics unproven."
+    },
+    {
+      "dimension": "Competition",
+      "weight": 0.08,
+      "score": 5,
+      "weighted": 0.4,
+      "rationale": "Generic AI assistants and government tools exist; differentiation depends on execution."
+    },
+    {
+      "dimension": "Financials",
+      "weight": 0.05,
+      "score": 4,
+      "weighted": 0.2,
+      "rationale": "No financial plan or burn rate provided; assumed lean."
+    },
+    {
+      "dimension": "Risk Profile",
+      "weight": 0.02,
+      "score": 5,
+      "weighted": 0.1,
+      "rationale": "Key risks: university sales cycles, data accuracy, and ChatGPT commoditization."
+    }
+  ],
+  "vc_verdict": {
+    "composite_score": 5.1,
+    "verdict": "DECLINE",
+    "reason": "Disqualifying score on: traction",
+    "weak_dims": [
+      "traction"
+    ],
+    "disqualifying_dims": [
+      "traction"
+    ],
+    "investor_lenses": {
+      "sequoia": "WATCH",
+      "yc": "FAIL",
+      "tiger_global": "FAIL",
+      "risk_mgmt": "ELEVATED"
+    },
+    "source": "deterministic_vc_calcs"
+  },
+  "go_no_go": "Conditional Go",
+  "decision": "Proceed with structured validation steps before committing full resources.",
   "next_experiments": [
-    "Interview 5 target users about the last time they experienced this problem.",
-    "Ask what they use today, how much it costs, and what happens if they do nothing.",
-    "Run a concierge or fake-door test for the smallest paid outcome.",
-    "Compare the idea against the strongest incumbent and the status quo."
+    "Conduct 20+ interviews with university career services directors and students to confirm pain and willingness to pay.",
+    "Build a simple prototype (e.g., chatbot using existing API) and test with 50 students to measure engagement.",
+    "Secure one letter of intent or pilot agreement with a mid-sized Peruvian university.",
+    "Benchmark against ChatGPT on 50 local career queries to identify accuracy gaps."
   ],
   "kill_criteria": [
-    "Users cannot recall a recent painful instance of the problem.",
-    "No one can identify a budget owner or urgent operational metric.",
-    "The proposed workflow is only mildly better than the current workaround."
+    "Fewer than 50% of interviewees express strong interest or pain.",
+    "Prototype shows <60% student engagement or high error rate.",
+    "University pilot fails to convert to a paid contract within 3 months.",
+    "Government or ChatGPT releases a competitive product that matches core functionality."
   ],
-  "source": "deterministic_fallback",
-  "llm_error": "No module named 'jiter.jiter'"
+  "source": "llm",
+  "_iteration_id": "I2",
+  "_iteration_angle": "PIVOT_B2B",
+  "_iteration_one_liner": "We provide universities with an AI-powered career guidance platform that uses real labor market data to help students make informed major and career decisions."
 }

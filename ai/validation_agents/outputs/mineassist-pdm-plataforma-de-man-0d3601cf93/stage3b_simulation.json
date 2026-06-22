@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "MineAssist-PdM Enterprise is a predictive maintenance platform licensed to mining trade associations, enabling centralized deployment of explainable AI that translates complex vibration data into natural language, actionable repair instructions tailored to mining assets. The platform bridges the sector’s critical skills gap by allowing even novice technicians to diagnose and resolve faults quickly, while providing association leadership with aggregated insights to benchmark member performance, standardize safety practices, and negotiate lower insurance premiums. Unlike generic PdM tools, its mining-specific language model and asset library ensure high accuracy and trust, turning unplanned downtime from a daily risk into a managed process.",
+  "selected_gap": {
+    "id": "gap1",
+    "title": "Mining-Specific Natural Language Vibration Diagnosis",
+    "pain": "Maintenance teams struggle to translate complex vibration data and dashboards into actionable maintenance decisions, leading to delayed responses and reliance on scarce expert analysts.",
+    "why_now": "Advances in NLP make it technically feasible to generate domain-specific, clear recommendations, while established mining vibration providers (e.g., Bently Nevada) still rely on rule-based outputs and pure-play AI startups (e.g., Augury) are just beginning to enter mining.",
+    "evidence_needed": "Customer discovery with mining maintenance managers to quantify time lost interpreting data and gauge willingness to pay for explainable NLP outputs; competitive analysis of Augury's mining traction.",
+    "priority": "high",
+    "risk": "Augury accelerates mining deployment with its strong NLP and funding; incumbents may add NLP features to existing dashboards."
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "This sounds promising—explaining vibration data in plain language would save me hours of deciphering complex charts. But I'm skeptical about trusting AI to give repair instructions for critical equipment; one wrong recommendation could cause a major failure.",
+      "concern": "Trust in AI-generated repair instructions for safety-critical machinery; false positives or missed faults could lead to catastrophic downtime or accidents.",
+      "evidence_request": "A pilot study showing that the platform's diagnostic accuracy matches or exceeds that of expert analysts on a diverse set of mining assets over several months.",
+      "score": 0.6,
+      "score_rationale": "The idea addresses a real workflow pain, but trust is a major barrier that needs concrete proof of reliability before I would adopt it weekly.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "Given Peru's mining sector still relies heavily on manual processes and senior technicians, introducing AI-driven diagnosis feels premature. While the idea addresses a real skills gap, our industry's distrust of opaque algorithms makes this a hard sell until proven in local conditions.",
+      "concern": "The biggest risk is that the 'explainable AI' still hides black-box logic behind natural language, and mine managers won't trust it for high-stakes decisions until they can independently verify every recommendation against known mechanical rules.",
+      "evidence_request": "I need to see a controlled pilot at a Peruvian mine where the platform's recommendations were compared one-to-one against expert human analysts, with zero false positives and 100% verified accuracy over at least 6 months.",
+      "score": 0.2,
+      "score_rationale": "While the problem is real, the low trust in AI outputs and the need for local validation in a conservative industry keep my confidence very low.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "The association licensing model reduces procurement complexity for member companies, but I worry about the timeline to see ROI. If I can't demonstrate a clear cost saving within the current quarter, I can't justify the budget. The idea has merit for protecting uptime, but the proof needs to be immediate.",
+      "concern": "The platform's ROI is indirect and may not materialize within my quarterly budget cycle, especially if adoption across the association is slow.",
+      "evidence_request": "A pilot at one of our mines showing a 20% reduction in unplanned downtime costs within the first month, with a clear attribution to the platform's recommendations.",
+      "score": 0.45,
+      "score_rationale": "The idea addresses a real pain point, but the indirect sales channel and uncertain near-term ROI make it unlikely to meet my stringent quarterly payback requirement.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "The concept addresses a real skills gap, but I'm wary of the integration effort needed to interface with existing vibration sensors and analytics platforms, and the change management required to get maintenance teams to trust and adopt AI-generated natural language instructions.",
+      "concern": "The biggest risk is the heavy reliance on centralized deployment via trade associations, which adds coordination overhead and may slow down rollout, while the accuracy of the mining-specific NLP model on diverse, real-world vibration data is unproven, threatening reliability and increasing support load.",
+      "evidence_request": "I need to see results from a pilot at a single mine site where the system was deployed and integrated without custom IT projects, and where novice technicians were able to correctly diagnose and fix faults using the natural language instructions within one week, with less than 10% escalation rate to experts.",
+      "score": 0.3,
+      "score_rationale": "The integration complexity and change management burden are high, and the centralized model introduces coordination overhead, making it unlikely to fit seamlessly into existing operations without significant extra support and rollout risk.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "The idea addresses a genuine pain point in mining maintenance, but incumbents like Bently Nevada already have deep domain expertise and extensive vibration data, and can quickly add NLP layers to their existing rule-based systems. Free substitutes or generic PdM tools also pose a threat as they may integrate similar capabilities.",
+      "concern": "The largest risk is that incumbents (e.g., Bently Nevada) or emerging players (e.g., Augury) can rapidly incorporate mining-specific NLP into their platforms, leveraging their established trust and data, making the startup's wedge short-lived.",
+      "evidence_request": "Show evidence of a defensible technical moat, such as proprietary mining-specific training data from multiple associations that is not easily replicable or licensable by incumbents.",
+      "score": 0.3,
+      "score_rationale": "The startup's differentiation (mining-specific NLP) is likely easy for incumbents to copy given they already have the vibration data and domain knowledge.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "The B2B2B model through trade associations is clever for distribution but introduces a long sales cycle and limited addressable market if associations are the only channel. The NLP-driven wedge for mining vibration is timely, but the path to $10M ARR seems risky given the dependency on a few large associations and the threat from well-funded incumbents like Augury.",
+      "concern": "The indirect licensing model via associations may cap the SAM below $50M, as there are only a handful of large mining trade associations globally, and they may be slow to adopt and distribute such a tool to their members.",
+      "evidence_request": "A signed letter of intent from at least one major mining trade association indicating willingness to license the platform and forecasted member adoption rates, along with a concrete plan to hit $10M ARR within 3 years.",
+      "score": 0.55,
+      "score_rationale": "The idea has a sharp wedge but the indirect go-to-market and niche vertical limit the initial TAM and scalability, making it a moderate investment opportunity.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "The idea of translating vibration data into natural language for mining maintenance is compelling, but I'm deeply concerned about the data acquisition challenge. Without a rich, labeled dataset of vibration patterns and corresponding repairs, the model will struggle with accuracy and trust. The licensing model to trade associations could help aggregate data, but it also introduces dependencies on member participation.",
+      "concern": "The critical risk is the inability to obtain sufficient high-quality labeled vibration data from diverse mining assets to train and maintain a mining-specific NLP model, which would undermine accuracy, trust, and the learning loop.",
+      "evidence_request": "Show a concrete data acquisition strategy with committed pilot partners or a clear plan to generate labeled data (e.g., using synthetic data or transfer learning) and a timeline for achieving acceptable model accuracy.",
+      "score": 0.4,
+      "score_rationale": "While the problem is real and the NLP approach innovative, the heavy reliance on scarce and heterogeneous labeled data makes the technical feasibility uncertain, and COGS could be high without a clear data advantage.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "This sounds like it's for big mining companies, not for my small informal business. I run a workshop with 5 guys; we fix things with a wrench and WhatsApp, not AI. Why would I care about vibration data for mining equipment?",
+      "concern": "This product is completely irrelevant to my daily reality—I have no mining assets, no vibration data, and no use for predictive maintenance. You're solving a problem I don't have.",
+      "evidence_request": "Show me how this saves me money or reduces my risk right now with a simple example using WhatsApp and Yape, or it's a no-go.",
+      "score": 0.1,
+      "score_rationale": "The idea targets a completely different market (mining industry) and doesn't address any pain point of a Peruvian informal SME buyer.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "This product is designed for private mining trade associations, not for direct government procurement. As a public institution, we have no budget code or discretionary funds to license a platform that serves private enterprises, and our procurement cycles cannot accommodate a new tool without a clear public benefit mandate.",
+      "concern": "The product lacks a clear use case or procurement pathway within the public sector—there is no existing budget line for mining-specific predictive maintenance software for trade associations.",
+      "evidence_request": "Demonstrate a specific public program, such as MINEDU's technical training budget or PRODUCE's mining innovation fund, that could directly finance a license for a government agency or public university, with a clear justification of public benefit.",
+      "score": 0.1,
+      "score_rationale": "The product does not fit any existing public sector budget code and would require a new, lengthy procurement process with no guarantee of approval, making it essentially non-procurable from a government lens.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "The idea targets a critical pain in Peru's mining sector with an innovative NLP approach, which is promising. However, the go-to-market through trade associations is unproven and could involve long sales cycles, and the need for international co-investment is pressing given the thin local VC market.",
+      "concern": "The reliance on mining trade associations as the primary distribution channel is high-risk; these entities often have slow decision-making and limited budget authority, which could delay revenue generation and deter international co-investors who seek faster traction.",
+      "evidence_request": "I need to see signed letters of intent or pilot agreements with at least 3 major Peruvian mining trade associations (e.g., SNMPE, PERUMIN, Instituto de Ingenieros de Minas del Perú) demonstrating willingness to deploy the platform and a clear path to $300K+ in initial bookings.",
+      "score": 0.4,
+      "score_rationale": "Despite strong local relevance, the unproven distribution model and reliance on thin local VC for scale potential keep the score moderate-high risk.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.34,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.34,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "Trust in AI-generated repair instructions for safety-critical machinery; false positives or missed faults could lead to catastrophic downtime or accidents.",
+      "The biggest risk is that the 'explainable AI' still hides black-box logic behind natural language, and mine managers won't trust it for high-stakes decisions until they can independently verify every recommendation against known mechanical rules.",
+      "The platform's ROI is indirect and may not materialize within my quarterly budget cycle, especially if adoption across the association is slow."
+    ],
+    "top_evidence_requests": [
+      "A pilot study showing that the platform's diagnostic accuracy matches or exceeds that of expert analysts on a diverse set of mining assets over several months.",
+      "I need to see a controlled pilot at a Peruvian mine where the platform's recommendations were compared one-to-one against expert human analysts, with zero false positives and 100% verified accuracy over at least 6 months.",
+      "A pilot at one of our mines showing a 20% reduction in unplanned downtime costs within the first month, with a clear attribution to the platform's recommendations."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "conditional_go"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

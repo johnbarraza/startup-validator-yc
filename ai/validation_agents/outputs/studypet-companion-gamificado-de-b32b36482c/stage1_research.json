@@ -1,0 +1,165 @@
+{
+  "idea": "StudyPet: companion gamificado de estudio que convierte sesiones de estudio en el cuidado de una mascota virtual, usando IA para personalizar la experiencia y mantener la motivación.",
+  "market": "Estudiantes globales con smartphones (~1.5B), mercado edtech >$300B, con crecimiento en gamificación y bienestar digital.",
+  "solutions": [
+    {
+      "id": "alt1",
+      "name": "Study Bunny",
+      "category": "Direct Competitor",
+      "observed_positioning": "Virtual bunny companion, focus timer, rewards for study streaks, free with in-app purchases."
+    },
+    {
+      "id": "alt2",
+      "name": "Forest",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Focus timer that grows virtual trees, social accountability, one-time purchase."
+    },
+    {
+      "id": "alt3",
+      "name": "Habitica",
+      "category": "Indirect Substitute",
+      "observed_positioning": "RPG habit tracker, gamified to-do lists, social quests, freemium."
+    },
+    {
+      "id": "alt4",
+      "name": "Quizlet",
+      "category": "Adjacent Competitor",
+      "observed_positioning": "Flashcards with study modes and learning games, AI tutoring, large UGC library, freemium."
+    },
+    {
+      "id": "alt5",
+      "name": "Duolingo",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Language learning app with heavy gamification, streaks, characters, leaderboards, freemium."
+    },
+    {
+      "id": "alt6",
+      "name": "Flora",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Green focus timer, grows virtual trees, social planting, free with in-app purchases."
+    },
+    {
+      "id": "alt7",
+      "name": "Focusmate",
+      "category": "Alternative Approach",
+      "observed_positioning": "Virtual coworking for accountability, scheduled sessions, subscription."
+    },
+    {
+      "id": "alt8",
+      "name": "Pomodone",
+      "category": "Tool / Workaround",
+      "observed_positioning": "Pomodoro timer integrated with task managers, not gamified beyond timer."
+    },
+    {
+      "id": "alt9",
+      "name": "Do Nothing (no app)",
+      "category": "Do-Nothing",
+      "observed_positioning": "Studying without any digital companion, relying on willpower or physical planners."
+    },
+    {
+      "id": "alt10",
+      "name": "Manual Spreadsheets / Bullet Journal",
+      "category": "Manual Workaround",
+      "observed_positioning": "Paper or digital logs for tracking study hours, no automation or gamification."
+    },
+    {
+      "id": "alt11",
+      "name": "Anki",
+      "category": "Adjacent Competitor",
+      "observed_positioning": "Spaced repetition flashcards, highly customizable, open-source, limited gamification."
+    },
+    {
+      "id": "alt12",
+      "name": "Brainscape",
+      "category": "Adjacent Competitor",
+      "observed_positioning": "Flashcards with adaptive learning, some gamification via confidence rating, freemium."
+    },
+    {
+      "id": "alt13",
+      "name": "Khan Academy",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Educational platform with video lessons, badges, energy points, and mastery system, free."
+    },
+    {
+      "id": "alt14",
+      "name": "Todoist",
+      "category": "Tool / Workaround",
+      "observed_positioning": "Task manager with karma system, not specifically for study but used for organization."
+    },
+    {
+      "id": "alt15",
+      "name": "Notion",
+      "category": "Tool / Workaround",
+      "observed_positioning": "All-in-one workspace, students build custom study dashboards, templates, no built-in gamification."
+    }
+  ],
+  "research_summary": "El mercado de herramientas de estudio gamificadas está fragmentado, con actores consolidados (Duolingo, Quizlet) y apps móviles de nicho (Study Bunny, Forest). La propuesta de una mascota virtual de estudio no es nueva pero carece de un líder claro. Las alternativas indirectas compiten en funcionalidad parcial (temporizadores, flashcards, gestión de tareas) mientras que los sustitutos directos son pocos y con equipos pequeños. Existe oportunidad si se integra IA personalizada y una experiencia completa.",
+  "competitor_signals": [
+    {
+      "competitor": "Study Bunny",
+      "hiring_score": 2,
+      "funding_score": 1,
+      "product_score": 5,
+      "team_score": 2,
+      "market_score": 6,
+      "tech_score": 3,
+      "overall_score": 28.0,
+      "classification": "MONITOR",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Desarrollador independiente, sin financiamiento conocido, actualizaciones esporádicas, reviews positivas pero base de usuarios limitada."
+    },
+    {
+      "competitor": "Forest",
+      "hiring_score": 3,
+      "funding_score": 2,
+      "product_score": 7,
+      "team_score": 4,
+      "market_score": 7,
+      "tech_score": 4,
+      "overall_score": 41.5,
+      "classification": "MONITOR",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "App bootstrapped con millones de descargas, enfoque en árboles virtuales, equipo pequeño, sin financiamiento externo pero con marca fuerte."
+    },
+    {
+      "competitor": "Habitica",
+      "hiring_score": 4,
+      "funding_score": 3,
+      "product_score": 7,
+      "team_score": 5,
+      "market_score": 6,
+      "tech_score": 5,
+      "overall_score": 47.5,
+      "classification": "ENGAGE",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Comunidad activa, código abierto, ingresos por suscripción y gemas, equipo remoto pequeño, buena retención pero crecimiento lento."
+    },
+    {
+      "competitor": "Quizlet",
+      "hiring_score": 7,
+      "funding_score": 8,
+      "product_score": 8,
+      "team_score": 8,
+      "market_score": 8,
+      "tech_score": 8,
+      "overall_score": 77.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Serie C ($62M), más de 60M usuarios activos, integración de IA, fuerte presencia en educación secundaria y universitaria, puede agregar mascota virtual con facilidad."
+    },
+    {
+      "competitor": "Duolingo",
+      "hiring_score": 9,
+      "funding_score": 10,
+      "product_score": 9,
+      "team_score": 9,
+      "market_score": 9,
+      "tech_score": 9,
+      "overall_score": 92.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Compañía pública, inversión masiva en I+D, gamificación líder del mercado, personajes carismáticos, base de usuarios masiva, podría pivotar a estudio general con personajes."
+    }
+  ],
+  "source": "llm"
+}

@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "StudyPet is an AI-powered study companion that turns focus into a game for students with attention disorders. It uses machine learning to personalize study sessions based on attention patterns, topic difficulty, and optimal times of day. A virtual pet evolves by rewarding deep work and real improvement, not just raw hours logged. The wedge is college students with ADHD or chronic procrastination who need external structure to overcome paralysis. The pet acts as a smart accountability partner, predicting focus lapses and intervening with nudges or breaks, making study a sustainable habit.",
+      "one_liner": "We help procrastinating students build consistent study habits using an AI-powered virtual pet that adapts to their focus patterns.",
+      "target_customer": "A college sophomore diagnosed with ADHD who has failed multiple exams due to procrastination and feels anxious every night about falling behind.",
+      "core_problem": "Without structured motivation, they delay studying until the last minute, costing them at least 3 hours of sleep per night during exam weeks and risking academic probation.",
+      "solution_hook": "Unlike generic study timers or static virtual pets, StudyPet uses real-time behavioral AI to detect focus lapses and dynamically adjust study tasks, creating a personalized, evolving companion.",
+      "why_this_angle": "By narrowing to students with attention disorders, we address an acute, clinical-level pain where a personalized AI partner can provide the missing executive function support, making the value proposition undeniable.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 8,
+        "founder_feasibility": 10,
+        "total": 27
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "A B2B platform that licenses an AI-powered virtual study pet to universities, integrating with the LMS to provide each student a personalized companion that adapts to their learning patterns, nudges them with study reminders, emotional support, and micro-learning sessions, while giving administrators real-time dashboards on engagement and early dropout risk indicators. The university pays per enrolled student per term, aiming to reduce freshman attrition and improve academic outcomes.",
+      "one_liner": "We help universities slash dropout rates by giving every student an AI study pet that learns with them and alerts advisors early.",
+      "target_customer": "Dean of Student Success at a mid-sized private university with ~5,000 undergrads, facing a 20% first-year dropout rate and understaffed academic advisors.",
+      "core_problem": "Every semester, the Dean loses about 200 freshmen, each costing roughly $30K in annual tuition, plus damage to rankings and future enrollment. Their team relies on manual check-ins and midterm grades to spot at-risk students, but by then it's often too late. The current approach fails to capture daily study habits, motivation dips, or emotional disengagement, leaving a blind spot that costs millions annually.",
+      "solution_hook": "The virtual pet forms an emotional bond with each student, using AI to detect subtle disengagement (e.g., skipping study sessions, pet neglect) and deliver personalized interventions—like a pep talk or study break—while aggregating risk scores into a dean's dashboard for proactive outreach, not reactive crisis management.",
+      "why_this_angle": "B2B shifts the buyer from cash-strapped students to budget-holding institutions with a clear metric (retention). The virtual pet's empathetic layer is rare in edtech, and recurring per-student licensing creates a scalable SaaS model with higher ACV and stickiness than consumer apps.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 7,
+        "founder_feasibility": 5,
+        "total": 21
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "StudyPet for Med Students: An AI-powered virtual pet that lives in your study app, learns your patterns, senses when you're burning out via typed notes or pauses, and nudges you with personalized encouragement and adaptive flashcards. It focuses solely on medical students during their dedicated USMLE Step 1 study period (a 6-8 week sprint where every day counts). The pet grows with study streaks, but its primary value is emotional support and smart prioritization of weak topics.",
+      "one_liner": "An empathetic AI study pet that keeps burned-out medical students on track during high-stakes exam prep.",
+      "target_customer": "A second-year med student in their first month of dedicated USMLE Step 1 study, studying 12 hours a day, feeling isolated and overwhelmed.",
+      "core_problem": "During dedicated board prep, med students study 10+ hours daily with little external accountability, often hitting emotional lows that cause them to skip study sessions or procrastinate on weak areas, risking exam failure and delaying their career path, costing thousands in rescheduling fees and added living expenses.",
+      "solution_hook": "Unlike generic study timers, StudyPet uses AI to detect burnout from study behavior (long pauses, negative self-talk in notes) and intervenes with a virtual pet that shows genuine concern (sending motivational quotes, suggesting micro-breaks, or offering a quick breathing exercise) while also pushing adaptive flashcards on their weakest topics.",
+      "why_this_angle": "By narrowing to med students in the most intense study phase, we create a 'must-have' tool rather than a nice-to-have. The pain is acute (exam failure = career delay), they are a concentrated, accessible cohort online, and willingness to pay is high given the cost of other resources. This wedge also builds a passionate early user base for word-of-mouth.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 4,
+        "founder_feasibility": 9,
+        "total": 22
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "We help procrastinating students build consistent study habits using an AI-powered virtual pet that adapts to their focus patterns.",
+  "source": "parallel_iteration"
+}

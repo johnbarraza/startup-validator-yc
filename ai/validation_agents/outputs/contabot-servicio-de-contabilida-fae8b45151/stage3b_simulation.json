@@ -1,0 +1,220 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "ContaBot se enfoca en bodegas limeñas que emiten más de 50 facturas electrónicas al mes. Estos negocios facturan montos pequeños (S/50k-100k/año), pero el propietario no tiene tiempo ni conocimiento contable. Actualmente pagan S/200-300 a un contador freelance que suele fallar en las presentaciones, resultando en multas de S/300-500. ContaBot automatiza completamente el proceso: extrae facturas del portal SUNAT, categoriza con IA entrenada en reglas tributarias peruanas, genera el PDT 621 y lo envía, sin intervención del usuario. El dueño solo paga S/79/mes y recibe confirmación de todo en regla. Validamos en 30 días ofreciendo a 10 bodegas una prueba gratuita y midiendo su disposición a pagar al final del mes.",
+  "selected_gap": {
+    "id": "g1",
+    "title": "Manejo contable 100% automático para microempresas",
+    "pain": 9,
+    "why_now": "SUNAT obliga a facturación electrónica y PDT, y el segmento microempresarial paga entre S/200-500/mes a contadores humanos o incurre en multas. No existe un servicio gestionado de extremo a extremo a bajo costo.",
+    "evidence_needed": "Disposición a pagar S/80/mes, viabilidad de integración con APIs SUNAT en producción, precisión del sistema en un piloto con 30 empresas.",
+    "priority": 9,
+    "risk": "Competidores SaaS con recursos (Alegra, QuickBooks) podrían replicar el modelo gestionado; cambios normativos repentinos; errores automáticos con impacto fiscal si la tasa de fallo no es cercana a cero."
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "Esto suena bien, pero me da miedo que un error automático me genere una multa más grande. Si realmente funciona sin que yo haga nada, me ahorraría tiempo y sustos.",
+      "concern": "Mi mayor preocupación es que la IA cometa un error en la categorización o en el envío del PDT, y yo termine con una multa que no pueda reclamar automáticamente.",
+      "evidence_request": "Necesito ver resultados de un piloto con al menos 10 bodegas similares a la mía, donde hayan tenido cero errores en todo un mes, incluyendo la presentación exitosa del PDT.",
+      "score": 0.4,
+      "score_rationale": "El dolor es real y el precio es atractivo, pero la confianza en la automatización es baja; necesito pruebas contundentes de que no fallará.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "La idea parece interesante, pero como profesional conservador en Perú, desconfío profundamente de que una IA pueda reemplazar a un contador para trámites fiscales con tantas multas en juego. Los bodegueros no tienen el conocimiento para verificar los resultados, y un error automático podría ser más costoso que el ahorro mensual.",
+      "concern": "El mayor riesgo es que la IA cometa errores en la categorización o en el PDT que el dueño no pueda detectar, resultando en multas mayores a las actuales y una pérdida de confianza total.",
+      "evidence_request": "Necesito ver un piloto con al menos 30 bodegas durante 3 meses completos donde cada declaración sea auditada de forma independiente por un contador humano y se demuestre una tasa de error cero en las presentaciones.",
+      "score": 0.3,
+      "score_rationale": "El alto riesgo de errores no verificables por el usuario y la naturaleza crítica de las declaraciones fiscales me hacen asignar una puntuación baja, a pesar del dolor evidente del problema.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "The value proposition is compelling: S/79/mo replaces a S/200-300 expense and eliminates fine risk. However, as an economic buyer, I need to be certain the automation is flawless—any error could result in fines that erase savings.",
+      "concern": "The accuracy of automated tax filing is critical; a single mistake could cost more than the savings and damage my compliance record.",
+      "evidence_request": "I need to see results from a pilot of at least 100 bodegas over 3 months with zero filing errors and validated tax payments.",
+      "score": 0.6,
+      "score_rationale": "Clear ROI exists, but uncertainty about error rates prevents full confidence; evidence of near-zero error rate would raise score.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "The concept is appealing for its automation potential, but I'm worried about the dependency on SUNAT's portal and the complexity of reliably extracting and categorizing invoices without manual oversight. Any failure could lead to fines, creating a high support burden.",
+      "concern": "The risk of unrecoverable errors in automated PDT submission due to SUNAT API changes or AI misclassification could cause severe compliance penalties, and the support load for debugging such issues is untenable for a small team.",
+      "evidence_request": "A successful live demo processing invoices from 10 different bodegas over a full month with zero errors or manual interventions, including proof of correct PDT generation and submission confirmation from SUNAT.",
+      "score": 0.25,
+      "score_rationale": "The integration and reliability risks are too high given the criticality of tax compliance, and the lack of a proven error-handling mechanism makes this a non-starter for operations.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "Automation of tax filings for microenterprises is a clever wedge, but I'm skeptical that a tiny player can achieve the near-zero error rate required for fiscal compliance without massive investment; incumbents like us have the resources to replicate this if it gains traction, but we're not incentivized to cannibalize our existing profitable segments.",
+      "concern": "The single mistake in PDT submission could incur fines for the customer, destroying trust and leading to churn; the startup's liability and error handling are unclear.",
+      "evidence_request": "Show me pilot results with 10 bodegas over 3 months, proving zero errors in PDT submissions and successful handling of edge cases like invoice corrections or SUNAT outages.",
+      "score": 0.4,
+      "score_rationale": "The concept addresses a real pain point, but the operational risk of automated tax filing with no human oversight is too high for a startup with limited resources and no proven track record.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "ContaBot clearly solves a painful, manual process for micro-businesses in Peru, and your early validation shows some traction. However, the unit economics—$20/month per customer—require a massive customer base to reach $10M ARR, and the market of bodegas in Lima alone may be insufficient without a clear path to broader acquisition.",
+      "concern": "The low price point forces you to acquire tens of thousands of customers, but the current validation with 10 bodegas doesn't prove you can scale customer acquisition cost-effectively or that the total addressable market exceeds 100,000 businesses.",
+      "evidence_request": "Show that you can acquire customers at less than $10 each, ideally through organic or referral channels, and that there are over 100,000 qualifying micro-businesses in Peru with similar needs.",
+      "score": 0.35,
+      "score_rationale": "While the problem is real and the initial wedge is sharp, the path to venture-scale revenue (≥$10M ARR) is dubious given the low price point and unproven scalable acquisition.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "The automation of SUNAT PDT submissions is technically feasible but high-risk: any parsing or categorization error could lead to fines, eroding trust. COGS for reliable API integration and validation must be far below S/79/mo, which is aggressive. The learning loop is weak because each micro-business has unique, infrequent transactions, limiting model improvement.",
+      "concern": "Reliability near 100% is required for tax filings, but the system cannot recover from errors like a human accountant—one mistake could cause legal liability and customer churn.",
+      "evidence_request": "Demo of the full pipeline processing 10 real bodegas' historical data for an entire month with zero submission errors and validation against SUNAT receipts.",
+      "score": 0.4,
+      "score_rationale": "High technical risk and low defensibility outweigh the clear pain point and low price point; I need proof of near-perfect reliability to invest further.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "La idea suena bien porque sí pierdo plata con las multas y el contador que me falla. Pero no confío en un bot para algo tan crítico como la SUNAT—si se equivoca, pierdo más. Además, pago solo con Yape o Plin, no tengo tarjeta ni quiero más apps complicadas.",
+      "concern": "Si el bot se equivoca, la multa me la pongo yo, y eso es peor que lo que tengo ahora.",
+      "evidence_request": "Muéstrame un video de 3 meses de uso en una bodega real como la mía, sin errores, y déjame probarlo gratis 2 meses antes de pagar un sol.",
+      "score": 0.3,
+      "score_rationale": "El dolor es real pero la desconfianza en la automatización y el riesgo de multa hacen que no pague hasta ver cero errores en un piloto largo.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "ContaBot targets micro-business owners, not government institutions. Our procurement cycles and budget codes are designed for education, infrastructure, or public services—not individual business accounting tools. Even if the product were useful for a public program, it would require a new procurement process and MINEDU/PRODUCE approval, which takes 6-18 months.",
+      "concern": "The product has no place in any existing budget code used by UGELs or universities; it would require creating a new line item, which is nearly impossible given zero discretionary budget.",
+      "evidence_request": "Show me a documented case where a public institution in Peru has procured a similar micro-business accounting tool within an existing budget category, or demonstrate that ContaBot can be bundled into a larger existing public program (e.g., 'Fondo MYPE' or 'Impulsa Perú').",
+      "score": 0.1,
+      "score_rationale": "The product is designed for individual micro-businesses, not for institutional procurement, so it fails the primary metric of fitting an existing budget code.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "I see a clear pain point and initial validation, but the US$20/month price point and the need for thousands of customers to reach $1M ARR raise red flags about scalability and unit economics. The path to an international co-investor is unclear without a clear expansion model beyond Peru.",
+      "concern": "The low price point (S/79/mo) combined with high customer acquisition costs and potential support overhead makes it difficult to achieve sustainable unit economics needed for a VC-backable business.",
+      "evidence_request": "Show a paid pilot of at least 100 customers over 3 months with a churn rate below 5% and customer acquisition cost below S/100 (1.3 months of revenue).",
+      "score": 0.6,
+      "score_rationale": "The idea targets a real pain but the small ticket size and regulatory complexity create doubts about reaching $1M ARR profitably in Peru and attracting international follow-on investment.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.37,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.37,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "Mi mayor preocupación es que la IA cometa un error en la categorización o en el envío del PDT, y yo termine con una multa que no pueda reclamar automáticamente.",
+      "El mayor riesgo es que la IA cometa errores en la categorización o en el PDT que el dueño no pueda detectar, resultando en multas mayores a las actuales y una pérdida de confianza total.",
+      "The accuracy of automated tax filing is critical; a single mistake could cost more than the savings and damage my compliance record."
+    ],
+    "top_evidence_requests": [
+      "Necesito ver resultados de un piloto con al menos 10 bodegas similares a la mía, donde hayan tenido cero errores en todo un mes, incluyendo la presentación exitosa del PDT.",
+      "Necesito ver un piloto con al menos 30 bodegas durante 3 meses completos donde cada declaración sea auditada de forma independiente por un contador humano y se demuestre una tasa de error cero en las presentaciones.",
+      "I need to see results from a pilot of at least 100 bodegas over 3 months with zero filing errors and validated tax payments."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": {
+      "decision": "GO with caution",
+      "reasoning": "El composite de 5.05 indica potencial pero con riesgos significativos. La tracción inicial y el dolor alto justifican continuar, pero se requieren milestones claros para avanzar."
+    }
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

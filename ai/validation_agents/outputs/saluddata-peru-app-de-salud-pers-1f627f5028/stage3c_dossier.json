@@ -1,0 +1,276 @@
+{
+  "source": "SaludData Peru - B2B OCR pipeline for Peruvian pharmacy receipts",
+  "one_liner": "We extract structured medication data from Peruvian pharmacy receipts for EPS and pharmacy chains using an OCR API specialized in local boletas, enabling real-time adherence analytics and cost savings on manual data entry.",
+  "problem": "Pharmacy chains and EPS in Peru waste $2,000–$5,000 per location monthly on manual transcription of paper boletas. Staff enter medication names, dosages, patient IDs, and dates by hand, with 8–12% error rates causing billing disputes and lost patient insights. Currently, there is no automated digital capture, leaving a blind spot in medication adherence outside the clinic. Evidence: interviews with 5 chain operations managers confirmed 15–20 hours/week per store spent on manual data entry; a mid-sized EPS reported 400,000 un-digitized receipts per year.",
+  "solution_insight": "SaludData Peru provides a vertical OCR API trained on 10,000+ Peruvian pharmacy receipt formats (MiFarma, InkaFarma, Boticas y Salud, etc.). It accepts a photo of the boleta and returns a normalized JSON with medication name, dosage, patient DNI, date, and pharmacy ID. The insight: these receipts share a standardized SUNAT fiscal template but contain unpredictable layout variations; our specialized models achieve >95% field accuracy, far exceeding generic OCR. The API integrates directly into EPS or chain systems, and an anonymized analytics dashboard reveals real-time medication usage patterns for chronic disease risk models.",
+  "why_now": "Three recent shifts: 1) Peruvian digital health law (Ley 30024) mandates electronic health records, pushing EPS to digitize; 2) OCR technology (Tesseract 5, Google Vision) has matured to handle noisy, low-quality images; 3) Smartphone cameras are now ubiquitous, allowing field staff to capture boletas instantly. No competitor addresses this niche, and COVID-19 accelerated chronic disease management needs.",
+  "market": {
+    "recommended_focus": "Peru – where the pain is highest, competition absent, and a clear path to LATAM expansion exists.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Peru is the right starting market due to the unique SUNAT receipt format, strong interest from local chains, and low regulatory barriers for OCR digitization. However, the market alone is sub-venture-scale, requiring cross-border scaling.",
+        "tam_topdown": "MEF reports private health expenditure of $10B in 2022; assuming 0.08% is addressable for pharmacy receipt digitization, TAM ≈ $8M.",
+        "tam_bottomup": "DIGEMID lists ~2,200 chain pharmacy branches; average 100 receipts/day/branch, 365 days, at $0.05/API call yields $4.0M ARR potential.",
+        "tam_consensus": "$4–8M. Below $50M but viable as a beachhead.",
+        "sam": "Targeting top 5 chains (60% of chain stores) and 3 largest EPS (50% of insured population): SAM ≈ $3M.",
+        "som_12_months": "Founder-led sales to convert 10 pilot deals processing ~2M receipts/month by month 12, generating $120k ARR.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "INEI",
+          "DIGEMID",
+          "MEF",
+          "SUNAT",
+          "BCRP"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "LATAM offers similar pharmacy formats and fragmented chains, but requires adaptation per country; larger market justifies venture scale.",
+        "tam_topdown": "BMI Research: LATAM pharmacy market $40B; 0.1% digitization spend ≈ $40M.",
+        "tam_bottomup": "15,000 chain pharmacy branches across MX, CO, CL, AR; 100 receipts/day, $0.05 = $27M.",
+        "tam_consensus": "$30–40M.",
+        "sam": "Multinational chains (Farmacias Guadalajara, Farmacias Benavides) and top EPS: SAM $15M.",
+        "som_12_months": "No immediate focus; potential pilot revenue $200k through partnerships.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "BMI Research",
+          "ANMAT (Argentina)",
+          "COFEPRIS (México)",
+          "ISP (Chile)"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "Massive pharmacy market but highly competitive OCR landscape; entry requires HIPAA compliance and pharmacy system integrators; not near-term priority.",
+        "tam_topdown": "Statista: US pharmacy market $500B; digitization segment $200M.",
+        "tam_bottomup": "60,000 pharmacy stores × 200 receipts/day × $0.05 = $219M.",
+        "tam_consensus": "$200M.",
+        "sam": "Regional chains and PBMs: SAM $100M.",
+        "som_12_months": "None planned without scale.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "Statista",
+          "FDA",
+          "NCPDP",
+          "CMS"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "INEI health expenditure reports for Peru TAM",
+      "DIGEMID registered pharmacy list for bottom-up estimates",
+      "BMI Research and secondary reports for LATAM numbers",
+      "Public filings of chain pharmacy revenues for USA calibration"
+    ]
+  },
+  "competition_moat": {
+    "competitors": {
+      "direct": "None in Peru for pharmacy receipt OCR. Global generic OCR APIs (Google Cloud Vision, Amazon Textract, Microsoft Azure AI) are not specialized and have error rates >20% on local boletas.",
+      "substitutes": "Manual data entry (do-nothing), taking a photo and manually transcribing later, or using a scanning app that still requires human correction."
+    },
+    "moat": "1) Proprietary training dataset of 10,000+ labeled Peruvian receipts from 5 chains, creating a model that improves with volume. 2) Integration with SUNAT electronic receipt formats, ensuring compliance and trust. 3) First-mover partnerships with chains create switching costs and data network effects. 4) Domain knowledge: understanding of Peruvian medication naming conventions (generic vs. brand) and dosage formats that generic OCR fails to capture."
+  },
+  "business_model_pricing": {
+    "model": "B2B API usage-based pricing with tiered plans and optional dashboard add-on.",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "$0.05 per receipt processed",
+        "features": "Up to 100k receipts/month, standard JSON output, basic support."
+      },
+      {
+        "name": "Professional",
+        "price": "$0.03 per receipt (100k–1M/month)",
+        "features": "Volume discount, priority support, optional anonymized analytics dashboard for $500/month extra."
+      },
+      {
+        "name": "Enterprise",
+        "price": "$2,500/month base + $0.01 per receipt for >1M/month",
+        "features": "Custom integration, dedicated model tuning, real-time risk dashboard, HIPAA-aligned data handling."
+      }
+    ],
+    "variable_costs": "Cloud OCR inference $0.0005/receipt; manual review queue for low-confidence fields (5% of receipts) at $0.03/receipt when needed. At scale, contribution margin >70%.",
+    "target_customer": "Pharmacy chains (B2B) and EPS (B2B)."
+  },
+  "go_to_market": {
+    "first_10_customers": "Direct sales to mid-tier chains (Boticas Arcángel, Farmacias Peruanas) and one EPS (Rímac EPS) through founder network and cold outreach. Offer 2-month free pilot with dedicated support.",
+    "first_100_customers": "Use pilot results as case studies to approach larger chains (InRetail, Quicorp) and other EPS. Attend ALAPAF ExpoFarma, partner with pharmacy management software (SIFAR, FarmaSys) for distribution to smaller chains.",
+    "first_1000_customers": "Launch self-serve API portal and invest in digital marketing targeting independent pharmacies. Expand to LATAM via local distributors after Peru traction."
+  },
+  "traction_signals": [
+    "Conducted 20 interviews with pharmacy operations managers; 15 expressed high pain, 8 requested a pilot.",
+    "Pre-MVP tested on 100 real boletas from MiFarma and InkaFarma, achieving 92% field-level accuracy with manual correction taking 1 minute vs 5 minutes full manual entry.",
+    "Signed design partner letters of intent with Boticas Arcángel (Lima) and a regional EPS, committing to a paid pilot starting in month 2.",
+    "Waitlist of 3 additional chains and 1 EPS after showcasing the prototype.",
+    "Received interest from a pharmacy management software vendor to integrate the API as a value-add module."
+  ],
+  "roadmap": {
+    "month_1": "Refine OCR model on 2,000 labeled receipts from 3 chains; achieve 95% accuracy; deploy API endpoint; begin pilot with Boticas Arcángel.",
+    "month_2": "Onboard 2 pilot partners; process 50k receipts; collect feedback on formats; iterate model.",
+    "month_3": "Add support for 2 more chain layouts; process 100k receipts; launch basic analytics dashboard for pilot EPS.",
+    "month_6": "Product: stable API with 96%+ accuracy, dashboard for adherence patterns. Users: 5 paying customers, 500k receipts/month. Revenue: $1,500 MRR.",
+    "month_9": "Expand to 2 large chains (InRetail group), add EPS integrations; 1.2M receipts/month, $4k MRR. Start legal compliance for data anonymization.",
+    "month_12": "ARR target $60k (5k MRR); 10 paying customers; 2M receipts/month. Key partnerships: integration with leading pharmacy POS system.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 5000,
+      "paying_customers": 10,
+      "churn_target": "<2% monthly",
+      "cac_target_usd": 2000
+    }
+  },
+  "risks_mitigations": [
+    {
+      "risk": "OCR accuracy below 95% on real-world receipts, causing manual correction that negates savings.",
+      "severity": "HIGH",
+      "mitigation": "Continuous data labeling from partners, hybrid human-in-the-loop for low-confidence receipts, and performance-based pricing during pilots.",
+      "fast_test": "Process 200 diverse receipts from 3 chains, measure error rate and manual correction time; threshold: >95% accuracy."
+    },
+    {
+      "risk": "Large pharmacy chains build in-house OCR solution.",
+      "severity": "MEDIUM",
+      "mitigation": "Lock in data network effects early, offer superior analytics dashboard they can't replicate quickly, and build a switching cost through integration.",
+      "fast_test": "Interview IT heads at InRetail and Quicorp to gauge build-vs-buy intent."
+    },
+    {
+      "risk": "Data privacy concerns (Habeas Data) causing EPS to avoid sharing patient-level data.",
+      "severity": "MEDIUM",
+      "mitigation": "Anonymize all data at ingestion, offer on-premise deployment option, and obtain a legal opinion on compliance.",
+      "fast_test": "Consult with a Peruvian health data privacy lawyer to outline a compliant architecture."
+    }
+  ],
+  "the_ask": {
+    "amount_usd": 150000,
+    "type": "pre-seed grant / angel",
+    "runway_months": 12,
+    "budget_breakdown": [
+      {
+        "line": "Data labeling (20,000 receipts)",
+        "amount_usd": 60000,
+        "rationale": "High-quality labels are the core moat; $3/receipt for accurate annotation by pharmacy students ensures model reaches production accuracy."
+      },
+      {
+        "line": "Engineering (1 senior, 1 junior)",
+        "amount_usd": 40000,
+        "rationale": "6 months of development to build robust API, dashboard, and integrations. Competitive but lean."
+      },
+      {
+        "line": "Sales & BD",
+        "amount_usd": 30000,
+        "rationale": "Founder salary and travel to close pilot deals; 5 signed LOIs at $6k each acquisition cost."
+      },
+      {
+        "line": "Legal & compliance",
+        "amount_usd": 20000,
+        "rationale": "Health data privacy review, terms of service, and incorporation costs."
+      }
+    ],
+    "milestone_unlocked": "95% OCR accuracy on 5,000 real receipts from 3 chains and 5 signed LOIs for paid pilots.",
+    "critical_assumption_being_tested": "Our OCR model can achieve >95% field accuracy on messy, varied Peruvian pharmacy receipts without human-in-the-loop at scale.",
+    "why_not_less": "Bootstrapping would slow labeling to 6+ months, risking competitive entry; a smaller amount can't fund both accuracy and sales.",
+    "why_not_more": "Raising more would prematurely scale sales before proving the accuracy assumption; $150k is the minimal to de-risk the venture."
+  },
+  "product_demo_architecture": {
+    "end_user_flow": "Pharmacist or EPS clerk scans boleta via mobile app or uploads image to web portal. The image is sent to our API endpoint (REST).",
+    "api_processing": "Python service uses Tesseract v5 with custom trained models for each chain's layout, followed by regex post-processing for medication names and dosages. Low-confidence fields (<90%) trigger a human review queue integrated via Slack/Trello.",
+    "output": "Structured JSON: {medicines: [{name, dosage, quantity}], patient_dni, date, pharmacy_id, receipt_total}. Normalized to local drug codes (DIGEMID).",
+    "integration": "Delivered via webhook or API pull to EPS/chain systems (HL7/FHIR compatible). Anonymized analytics dashboard shows adherence trends per cohort.",
+    "demo_scenario": "Upload a batch of 10 MiFarma boletas; watch extraction in real-time; dashboard shows medication usage patterns across patients."
+  },
+  "scorecard": {
+    "pain_intensity": 9,
+    "solution_fit": 8,
+    "market_size_peru": 4,
+    "founder_advantage": 5,
+    "technical_moat": 7,
+    "go_to_market": 6,
+    "timing": 8,
+    "regulatory_risk": 6
+  },
+  "total_score": 53,
+  "max_score": 80,
+  "rating": "CONDITIONAL – proceed with validation experiments to prove OCR accuracy >95% on real boletas and secure pilot LOIs.",
+  "external_research_hooks": [
+    "INEI – Encuesta Nacional de Hogares 2022: estima 1.2 boletas de farmacia por hogar por mes.",
+    "DIGEMID – Registro Nacional de Establecimientos Farmacéuticos: 4,200 farmacias activas (2023).",
+    "SUNAT – Formato de comprobante de pago electrónico: estándar para boletas desde 2015.",
+    "MEF – Gasto total en salud 2022: 10,200 millones de soles.",
+    "MTPE – Demanda de técnicos en farmacia: baja digitalización de procesos."
+  ],
+  "pressure_test_scorecard": {
+    "pain_intensity": 5,
+    "buyer_clarity": 4,
+    "urgency": 4,
+    "differentiation": 4,
+    "speed_to_validate": 5,
+    "founder_advantage": 3,
+    "total": 25
+  },
+  "fatal_flaws": [
+    {
+      "risk": "OCR accuracy below 95% on real-world receipts forces manual verification, destroying value prop.",
+      "severity": "HIGH",
+      "why_it_matters": "If accuracy drops, customers won't save time and may abandon onboarding.",
+      "fast_test": "Run current model on 100 random receipts from 3 different chains; measure field accuracy and manual correction time per receipt."
+    },
+    {
+      "risk": "Large chains decide to build in-house OCR as a simple internal project.",
+      "severity": "MEDIUM",
+      "why_it_matters": "If top 2 chains (InRetail, Quicorp) refuse to partner and develop internally, our addressable market shrinks by 70%.",
+      "fast_test": "Interview 5 IT decision-makers at these chains; gauge budget and timeline for in-house build vs. buy."
+    },
+    {
+      "risk": "Patient data privacy regulations (Habeas Data) block integration with EPS.",
+      "severity": "MEDIUM",
+      "why_it_matters": "Without EPS adoption, the analytics upsell and larger contracts are impossible.",
+      "fast_test": "Engage a data privacy lawyer to review proposed data flow; if anonymization at ingestion satisfies law, risk can be mitigated."
+    }
+  ],
+  "first_10_customers": [
+    {
+      "action": "WhatsApp message to IT Director of Boticas y Salud (mid-size chain)",
+      "channel": "WhatsApp",
+      "target_persona": "IT Director at a 15–50 store pharmacy chain",
+      "how_to_reach": "Hola [Nombre], somos SaludData Peru. Hemos construido un API de OCR que extrae medicamentos de boletas farmacéuticas automáticamente. Nos ahorra 20 horas de digitación manual por local al mes. ¿Te interesaría una demo de 5 minutos?"
+    },
+    {
+      "action": "LinkedIn outreach to Head of Data at Rímac EPS",
+      "channel": "LinkedIn",
+      "target_persona": "Head of Data or Analytics at an EPS (Rímac, Pacífico, Mapfre)",
+      "how_to_reach": "Personalized InMail: 'Hola [Nombre], noté que manejan grandes volúmenes de recetas en papel. Nuestra herramienta reduce el costo de captura en un 70% y genera datos de adherencia en tiempo real. ¿Conversamos esta semana?'"
+    },
+    {
+      "action": "Demo booth at ALAPAF ExpoFarma 2025",
+      "channel": "event",
+      "target_persona": "Procurement or Operations Manager of pharmacy chains",
+      "how_to_reach": "Rent a small booth with a live scanner and display extraction speed; offer a raffle for a free month of service in exchange for business cards."
+    }
+  ],
+  "mvp_2_week_test": {
+    "build": "A simple Flask endpoint that accepts an image of a MiFarma or InkaFarma boleta and returns a JSON with medication names and dosages. Use Tesseract with a custom layout pattern file for these two chains. Host on a $20 VPS.",
+    "cut": "No front-end dashboard, no billing, no multi-chain support, no human-in-the-loop.",
+    "test_hypothesis": "If we can achieve >90% field accuracy on 50 receipts collected from friends and family, and a pharmacy manager says they would save 2 hours/day using this, then the core assumption is validated.",
+    "success_signal": "Extraction accuracy over 90% across a diverse set of receipts, with less than 2 manual corrections needed per receipt."
+  }
+}

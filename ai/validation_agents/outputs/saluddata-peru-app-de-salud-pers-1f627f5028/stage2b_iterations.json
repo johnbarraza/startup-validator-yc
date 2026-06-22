@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "SaludData Peru se enfoca inicialmente en el talón de farmacia como puerta de entrada: los usuarios escanean sus boletas mediante OCR localizado que extrae medicamento, dosis, precio y farmacia, construyendo un historial digital de medicamentos. A partir de ahí, la app compara precios en farmacias cercanas y genera alertas de riesgos (interacciones, duplicidades) y recordatorios de reposición. Los datos agregados y anonimizados se monetizan con EPS y farmacias interesadas en patrones de adherencia y gasto real por zona, mientras el usuario accede gratis a su pasaporte de medicación.",
+      "one_liner": "We digitize Peruvian pharmacy receipts into a personal medication ledger, enabling price savings and health alerts, and sell anonymized adherence insights to insurers and pharmacies.",
+      "target_customer": "Un paciente diabético de 45 años en Lima que visita distintas farmacias cada semana y acumula boletas en una caja de zapatos, sin recordar cuándo tomó cada medicamento ni cuánto gastó.",
+      "core_problem": "Cada visita a la farmacia en Perú termina con una boleta de papel térmico que se desvanece, se pierde o se guarda sin orden. Los pacientes crónicos olvidan medicamentos, repiten compras innecesarias, no pueden compartir su historial con médicos y sobrepagan por desconocer precios. Este desorden diario incrementa el riesgo de complicaciones de salud y representa un gasto evitable de cientos de soles al año, además de dejar a las EPS a ciegas sobre la adherencia real de sus afiliados.",
+      "solution_hook": "Un OCR entrenado específicamente en formatos de boletas peruanas (incluyendo manuscritas y con códigos locales) que convierte ese papel en un perfil farmacológico estructurado, combinado con un comparador de precios geolocalizado en tiempo real—ninguna otra app peruana une estos dos mundos.",
+      "why_this_angle": "Al reducir el alcance al talón de farmacia, se ataca un dolor diario y concreto que genera datos de altísimo valor (medicación real vs. recetada), se construye un foso de datos rápido y se evita la complejidad de múltiples integraciones iniciales (dieta, citas). Esto acelera la validación, permite monetizar desde el día uno con farmacias y EPS, y crea un hábito de escaneo que luego puede expandirse al resto del ecosistema de salud.",
+      "quick_score": {
+        "problem_acuity": 8,
+        "market_size": 7,
+        "founder_feasibility": 9,
+        "total": 24
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "SaludData Peru becomes a B2B data pipeline provider: an OCR API specialized in Peruvian pharmacy receipts (boletas) that automatically extracts medication names, dosages, patient IDs, and dates, structuring them into a normalized format for direct integration with EPS, clinic, or pharmacy chain systems. The platform aggregates real-time, anonymized medication usage patterns and adherence analytics, feeding risk models for chronic disease management. The buyer is the head of data or operations at a pharmacy chain or an EPS, who currently wastes thousands of dollars monthly on manual data entry and lacks visibility into patient medication behavior outside their walls.",
+      "one_liner": "We provide an OCR API trained on Peruvian pharmacy receipts that automates medication data extraction and delivers adherence analytics to pharmacies and insurers.",
+      "target_customer": "Gerente de Innovación y Datos at a major Peruvian pharmacy chain (like Inkafarma or Mifarma) or Director de Riesgos at an EPS (like Rímac Seguros), who is accountable for reducing operational costs and improving patient outcomes through data.",
+      "core_problem": "Pharmacy chains and EPS manually process thousands of paper receipts daily—up to 20,000 per month per chain—to digitize medication histories for loyalty programs, inventory forecasting, or claims auditing. This manual effort costs around $0.10 per receipt in labor and leads to 5-7% error rates, causing delays in reimbursement and missed opportunities for adherence interventions that could lower chronic disease costs by up to 15%.",
+      "solution_hook": "Unlike generic OCR APIs that fail on Peruvian receipt formats (mixed Spanish/English, inconsistent drug names, handwritten doctor stamps), our solution is fine-tuned on local document structures, integrates with SUNAT tax validation, and maps extracted drugs to Peru's national medication catalog, offering a ready-to-use adapter for existing EPS and pharmacy management systems.",
+      "why_this_angle": "This framing shifts from a consumer app with uncertain monetization to a direct B2B sale where the buyer recognizes an immediate, measurable cost: manual data entry. The OCR specialization on a unique, high-friction data source (Peruvian boletas) creates a defensible niche that generic tools overlook, and the adherence analytics bundle addresses a strategic priority (chronic disease management) for insurers, shortening the sales cycle versus broad population insights.",
+      "quick_score": {
+        "problem_acuity": 8,
+        "market_size": 7,
+        "founder_feasibility": 6,
+        "total": 21
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "A service that automatically digitizes Peruvian pharmacy receipts via OCR, creating a personal medication log for elderly patients with polypharmacy. It targets families managing multiple chronic medications, where paper receipts are often lost or illegible, leading to dangerous medication errors. By simply photographing any pharmacy receipt (even handwritten) and sending it via WhatsApp, users get a structured digital record of medication names, dosages, and costs, shareable with doctors and family members. This wedge focuses solely on solving the acute, life-critical pain of medication reconciliation for caregivers, offering an immediate safety net and peace of mind.",
+      "one_liner": "We digitize pharmacy receipts for Peruvian families managing elderly medications, using OCR on WhatsApp photos to prevent medical errors.",
+      "target_customer": "A working daughter in Lima who manages health care for her 75-year-old diabetic mother on six medications, often spending hours before doctor visits searching for paper receipts and trying to recall dosages.",
+      "core_problem": "She manually collects and stores paper pharmacy receipts, which fade, get lost, or are illegible. Before each medical appointment, she spends an average of two hours searching and reconciling medication information. This causes stress, delays, and risks serious drug interactions or missed doses because doctors lack an accurate, up-to-date list of current medications.",
+      "solution_hook": "Instant OCR tailored to Peruvian pharmacy receipts—including handwritten notes and local drug names—accessible via a simple WhatsApp chatbot. It extracts data into a secure, shareable medication timeline without requiring a new app download.",
+      "why_this_angle": "By narrowly focusing on the acute, life-threatening pain of medication mismanagement for elderly polypharmacy patients, we address a burning need that caregivers will pay to solve immediately. This ignores broad wellness features and instead delivers a must-have safety tool, enabling rapid validation with desperate users willing to commit cash within 30 days.",
+      "quick_score": {
+        "problem_acuity": 10,
+        "market_size": 6,
+        "founder_feasibility": 9,
+        "total": 25
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I3",
+  "recommended_one_liner": "We digitize pharmacy receipts for Peruvian families managing elderly medications, using OCR on WhatsApp photos to prevent medical errors.",
+  "source": "parallel_iteration"
+}

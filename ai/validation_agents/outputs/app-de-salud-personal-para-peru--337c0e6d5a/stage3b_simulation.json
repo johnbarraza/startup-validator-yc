@@ -1,0 +1,227 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "[ORIGINAL] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+  "selected_gap": {
+    "id": "G1",
+    "title": "Narrow painful workflow",
+    "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+    "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+    "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+    "priority": 1,
+    "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "From the End user (target customer) view, the idea is interesting only if it proves the product saves meaningful time or reduces a real stress in a repeated task.",
+      "concern": "This sounds useful, but I already have a workaround that's good enough.",
+      "evidence_request": "Show a real recent example from the target customer segment.",
+      "score": 0.5,
+      "score_rationale": "Fallback used — no LLM available.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "From the AI adoption skeptic (conservative professional in Peru) view, the idea is interesting only if it proves the ai outputs are accurate, explainable, and i can verify them before acting.",
+      "concern": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?",
+      "evidence_request": "Show a real recent example from the target customer segment.",
+      "score": 0.5,
+      "score_rationale": "Fallback used — no LLM available.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "From the Economic buyer with budget view, the idea is interesting only if it proves the product clearly pays for itself this quarter or protects a critical metric i own.",
+      "concern": "Who approves this purchase and why would they prioritize it over other line items?",
+      "evidence_request": "Show a real recent example from the target customer segment.",
+      "score": 0.5,
+      "score_rationale": "Fallback used — no LLM available.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "From the Operations / implementation owner view, the idea is interesting only if it proves the workflow fits existing operations without creating extra coordination cost.",
+      "concern": "This adds another tool my team has to learn, maintain, and debug.",
+      "evidence_request": "Show a real recent example from the target customer segment.",
+      "score": 0.5,
+      "score_rationale": "Fallback used — no LLM available.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "From the Incumbent competitor or free substitute view, the idea is interesting only if it proves the startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "concern": "We can add this feature in one sprint, or bundle it with our existing platform.",
+      "evidence_request": "Show a real recent example from the target customer segment.",
+      "score": 0.5,
+      "score_rationale": "Fallback used — no LLM available.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "From the YC / LATAM VC partner view, the idea is interesting only if it proves the idea has a sharp initial wedge and a defensible path to $10m arr.",
+      "concern": "This is a feature, not a company. Or the market is too small for VC returns.",
+      "evidence_request": "Show a real recent example from the target customer segment.",
+      "score": 0.5,
+      "score_rationale": "Fallback used — no LLM available.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "From the Technical builder / CTO view, the idea is interesting only if it proves the system can be built cheaply, reliably, and improves with usage data.",
+      "concern": "The demo works, but production edge cases and data access will break it.",
+      "evidence_request": "Show a real recent example from the target customer segment.",
+      "score": 0.5,
+      "score_rationale": "Fallback used — no LLM available.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "From the Peruvian SME buyer (informal sector) view, the idea is interesting only if it proves the product solves a real cost or risk i cannot solve with whatsapp + excel today.",
+      "concern": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?",
+      "evidence_request": "Show a real recent example from the target customer segment.",
+      "score": 0.5,
+      "score_rationale": "Fallback used — no LLM available.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "From the Peru institutional / public buyer (government or university) view, the idea is interesting only if it proves the product fits within an existing budget code and avoids a new procurement process.",
+      "concern": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado.",
+      "evidence_request": "Show a real recent example from the target customer segment.",
+      "score": 0.5,
+      "score_rationale": "Fallback used — no LLM available.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "From the Peruvian Series A investor (local VC or family office) view, the idea is interesting only if it proves the idea can reach $1m arr in peru and attract a magma/wayra/international co-investor.",
+      "concern": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?",
+      "evidence_request": "Show a real recent example from the target customer segment.",
+      "score": 0.5,
+      "score_rationale": "Fallback used — no LLM available.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    }
+  ],
+  "aggregate_score": 0.5,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.5,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "This sounds useful, but I already have a workaround that's good enough.",
+      "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?",
+      "Who approves this purchase and why would they prioritize it over other line items?"
+    ],
+    "top_evidence_requests": [
+      "Show a real recent example from the target customer segment.",
+      "Show a real recent example from the target customer segment.",
+      "Show a real recent example from the target customer segment."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "GO_WITH_CONSTRAINTS"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

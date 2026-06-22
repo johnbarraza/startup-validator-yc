@@ -1,0 +1,62 @@
+{
+  "research_source": "mining_safety_competitive_research_2024",
+  "gaps": [
+    {
+      "id": "gap-01",
+      "title": "AI-Powered Voice-to-Text for Mining Field Reports in Spanish/Portuguese",
+      "pain": "Field workers waste hours writing reports manually; delays in hazard communication lead to incidents. Existing general transcription tools fail on mining jargon and accents.",
+      "why_now": "Advances in multilingual NLP and edge AI allow on-device processing; growing demand for hands-free reporting in hazardous environments.",
+      "evidence_needed": "5 pilot users transcribing actual field reports, accuracy >90% on mining terms, reduction in report creation time.",
+      "priority": "Critical",
+      "risk": "Competitors like Voxel may add voice; technical challenge in noisy mining environments."
+    },
+    {
+      "id": "gap-02",
+      "title": "Predictive Risk Scoring for Contractor Safety Activities",
+      "pain": "Safety management is reactive; near-misses and leading indicators are ignored. Existing systems lack mining-specific predictive models.",
+      "why_now": "Sufficient data from digital checklists and IoT sensors in modern mines; AI models for time-series prediction maturing.",
+      "evidence_needed": "Historical incident and near-miss data from 2-3 mines, model showing 70% precision in predicting incident probability.",
+      "priority": "High",
+      "risk": "Data access from competitors; long validation cycle; model may require continuous tuning."
+    },
+    {
+      "id": "gap-03",
+      "title": "Offline-First Mobile Safety Platform for Remote Mining Sites",
+      "pain": "Many mines lack reliable connectivity, making cloud-dependent apps useless. Workers revert to paper, losing digital benefits.",
+      "why_now": "Edge computing and local storage advancements; increased focus on digitization in remote operations post-pandemic.",
+      "evidence_needed": "MVP functional offline with sync, UX tested with workers, reduction in data loss vs. paper.",
+      "priority": "High",
+      "risk": "Incumbents adding offline modes; hardware limitations in extreme conditions."
+    },
+    {
+      "id": "gap-04",
+      "title": "Localized Contractor Safety Compliance for Latin American Mining Regulations",
+      "pain": "Mid-tier contractors struggle with complex, country-specific regulations (e.g., Sernageomin, ANM). Global tools not adapted, risking fines.",
+      "why_now": "Stricter enforcement in Chile, Peru, Colombia; digital transformation incentives by governments.",
+      "evidence_needed": "Mapping of top 10 regulations to checklist items, compliance rate improvement in pilot.",
+      "priority": "Critical",
+      "risk": "Regulatory changes; competition from local players; language/cultural barriers."
+    },
+    {
+      "id": "gap-05",
+      "title": "AI Severity Classification for Safety Observations",
+      "pain": "Manually sorting incident reports by severity is slow and inconsistent; delayed responses to critical risks.",
+      "why_now": "NLP models can classify texts based on context; mining-specific severity matrix is unique.",
+      "evidence_needed": "Classifier trained on 1,000+ labeled reports, achieving >85% accuracy, time saved vs. manual triage.",
+      "priority": "Critical",
+      "risk": "General EHS platforms may train their own classifiers; need for continuous data feeding."
+    },
+    {
+      "id": "gap-06",
+      "title": "Integration of Contractor Safety Data with Mine Operational Systems",
+      "pain": "Safety data siloed from fleet management, fatigue monitors, and environmental sensors limits holistic risk view.",
+      "why_now": "APIs increasingly available from mining OEMs; demand for unified dashboards.",
+      "evidence_needed": "Integration of at least two data sources (e.g., checklists + fatigue alerts) with correlation analysis showing insight.",
+      "priority": "Medium",
+      "risk": "OEM lock-in; high integration costs; slow adoption by conservative operators."
+    }
+  ],
+  "recommended_gap_id": "gap-01",
+  "checkpoint_instruction": "Validate mining field workers' pain point with manual report writing, measure time savings and transcription accuracy for Spanish mining terms, and ensure AI classification of severity matches expert judgment before scaling.",
+  "source": "llm"
+}

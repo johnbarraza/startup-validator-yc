@@ -1,0 +1,1823 @@
+{
+  "idea": "EPS Admin AI: reemplazamos el equipo humano que procesa autorizaciones medicas en EPS peruanas (Rimac, Pacifico, Sanitas). Hoy una solicitud de autorizacion tarda 30-120 min de revision manual por medico auditor. Nuestra IA lee la solicitud del medico tratante, el historial del afiliado, las guias clinicas de la EPS y recomienda aprobar o rechazar en segundos con justificacion. Modelo: cobramos por autorizacion procesada (outcome-based), no por licencia. El humano solo revisa los casos que la IA marca como dudosos (5-10%). Expansion: Colombia, Chile, Mexico. YC Summer 2026 pide exactamente esto: AI companies that sell the service not the software, healthcare administration.",
+  "current_stage": "complete",
+  "selected_gap_id": "g-1",
+  "strategy_approved": true,
+  "artifacts": {
+    "stage0_classify": {
+      "problem_type": "PAINKILLER",
+      "vertical": "HealthTech",
+      "customer_type": "B2B",
+      "problem_severity": "STRUCTURAL",
+      "pain_evidence": "present",
+      "pit_signals_detected": [
+        "Long enterprise sales cycle (6-12 months) to EPS with high regulatory and compliance hurdles, delaying revenue.",
+        "Liability concerns: EPS may be unwilling to let AI make medical decisions without extensive validation, prolonging pilots.",
+        "Integration with legacy EPS systems and data privacy compliance (Peru's data protection law) could be technically challenging and slow adoption.",
+        "Outcome-based pricing may be rejected by EPS preferring fixed fees or risk-sharing caps, complicating contract negotiations."
+      ],
+      "painkiller_signals_detected": [
+        "Active workarounds exist (manual medical auditor reviews)",
+        "Spending already happens on imperfect solutions (auditor salaries)",
+        "Recurring pain: every authorization request",
+        "Measurable cost: lost hours and revenue",
+        "B2B buyer has a budget line for operational costs",
+        "Users likely search actively for solutions"
+      ],
+      "classification_rationale": "The startup addresses a real, urgent, structural problem in Peruvian healthcare administration: manual medical authorization processing is slow and costly. Large insurers (Rimac, Pacifico, Sanitas) have clear budgets and incentives to reduce costs, making them willing buyers. Outcome-based pricing aligns with their interests, and the AI solution offers a significant improvement over current manual workflows.",
+      "proceed_recommendation": "WARN",
+      "suggested_pivot": "",
+      "freemium_recommendation": "NO",
+      "freemium_rationale": "Freemium is not suitable for this B2B enterprise sale. The product is outcome-based per authorization, and the target buyers (large insurers) require custom demonstrations and proof of value before purchasing. A free tier would not attract these buyers and could dilute the perceived value.",
+      "devil_verdict": "WEAK",
+      "payment_blocker": "EPS procurement teams may resist outcome-based billing due to budgeting unpredictability and require fixed monthly fees; furthermore, measuring 'authorizations processed' accurately without manual verification is contentious.",
+      "free_substitute_risk": "The current manual process (human auditors) is the default 'free' substitute; EPS can also invest in minor workflow improvements or hire more staff without switching to AI.",
+      "market_size_reality_check": "Peruvian EPS market is small (3-5 major players); at ~$1/auth with thousands of auths/month per EPS, SAM in Peru is <$5M ARR. Must expand to Colombia/Mexico where competition and localization costs are higher.",
+      "hardest_assumption": "That EPS will trust an external AI for a core, liability-sensitive medical decision process without extensive validation and contractual indemnification.",
+      "devil_rationale": "While the idea addresses a real pain point, the combination of long enterprise sales cycles, regulatory/liability risks, and small addressable market in Peru makes it a weak bet for venture scale. Success hinges on rapid expansion to larger LATAM markets and overcoming deep trust barriers, which is highly uncertain.",
+      "preflight_dominant_solution": {
+        "score": "CLEAR",
+        "competitor_name": "none found",
+        "threat_level": "LOW",
+        "note": "No widely-adopted AI solution for EPS medical authorization in Peru; manual process dominates."
+      },
+      "preflight_precedent_failure": {
+        "score": "NO_KNOWN_FAILURE",
+        "example": "none",
+        "learning": "No notable failure indicates the space is still nascent and open for disruption."
+      },
+      "preflight_regulatory_kill": {
+        "score": "SOFT_BLOCKER",
+        "regulation": "Peru's data protection law (Ley 29733) and healthcare regulations requiring clinical validation of AI recommendations",
+        "mitigation": "Keep human-in-the-loop for all cases; ensure AI is transparent and auditable; work with EPS on compliance"
+      },
+      "preflight_summary": "Proceed cautiously: clear competitive landscape and no known failures, but regulatory hurdles and EPS adoption inertia require careful execution.",
+      "deal_signals": {
+        "hiring": "Increasing demand for AI/ML engineers and health informaticians in Latin American health tech",
+        "funding": "Recent rounds for health tech startups in the region (e.g., Plensa, Candor) indicate investor appetite",
+        "product": "Watch for launches of similar AI prior authorization tools in other markets",
+        "market": "Rising healthcare costs and digital transformation in insurance across LATAM",
+        "tech": "Advances in NLP and clinical knowledge graphs enable accurate medical decision support",
+        "momentum": "ACCELERATING"
+      },
+      "source": "triple_agent_classification"
+    },
+    "stage1_research": {
+      "idea": "EPS Admin AI: AI that automates medical prior authorization for Peruvian health insurers, replacing manual review with instant AI recommendations and justifications, charging per authorization.",
+      "market": "Peruvian health insurance authorization processing market, potentially expanding to Colombia, Chile, Mexico.",
+      "solutions": [
+        {
+          "id": "alt1",
+          "name": "EPS manual medical audit teams",
+          "category": "Incumbent manual process",
+          "observed_positioning": "The current standard: teams of medical auditors manually review each authorization request, taking 30-120 min, with no automation beyond basic claim systems."
+        },
+        {
+          "id": "alt2",
+          "name": "AuthFast",
+          "category": "Direct AI competitor (early-stage)",
+          "observed_positioning": "A Chilean startup offering AI-driven prior authorization for LatAm insurers, focusing on speed and guideline adherence."
+        },
+        {
+          "id": "alt3",
+          "name": "Cohere Health",
+          "category": "Global AI entrant",
+          "observed_positioning": "US-based leader in prior authorization AI, recently announced pilot with a Mexican insurer, potential expansion to Andean region."
+        },
+        {
+          "id": "alt4",
+          "name": "Olive AI",
+          "category": "Global AI entrant",
+          "observed_positioning": "Formerly focused on RPA, now pivoting to prior auth automation; exploring international markets after US adoption."
+        },
+        {
+          "id": "alt5",
+          "name": "Sutherland Global Services",
+          "category": "BPO with AI augmentation",
+          "observed_positioning": "Large BPO offering claims processing services to payors, incorporating AI to reduce manual effort; existing contracts with LatAm insurers."
+        },
+        {
+          "id": "alt6",
+          "name": "Cognizant Health",
+          "category": "BPO/Consulting",
+          "observed_positioning": "Provides end-to-end healthcare administration outsourcing, including prior auth, using a mix of onshore and offshore teams plus light automation."
+        },
+        {
+          "id": "alt7",
+          "name": "EPS internal RPA initiatives",
+          "category": "Internal workaround",
+          "observed_positioning": "Some EPS (e.g., Rimac) are experimenting with robotic process automation to pre-fill fields and apply simple rules, reducing review time marginally."
+        },
+        {
+          "id": "alt8",
+          "name": "Google Document AI / Rossum",
+          "category": "Generic AI adaptation",
+          "observed_positioning": "General-purpose document understanding tools that could be configured for prior auth, but require significant medical domain customization."
+        },
+        {
+          "id": "alt9",
+          "name": "Doctoralia / Mediktor",
+          "category": "Adjacent healthtech",
+          "observed_positioning": "Telehealth and symptom checkers that could integrate insurance auth workflows, but not core focus."
+        },
+        {
+          "id": "alt10",
+          "name": "Accenture Health Consulting",
+          "category": "Consulting-led automation",
+          "observed_positioning": "Custom builds AI solutions for payors globally, including prior auth, but at high cost and long implementation."
+        },
+        {
+          "id": "alt11",
+          "name": "Open-source LLM-based internal tool",
+          "category": "In-house AI adoption",
+          "observed_positioning": "Some insurers are exploring using GPT-4 or similar LLMs to build internal approval recommendation engines with prompt engineering."
+        },
+        {
+          "id": "alt12",
+          "name": "Regulatory simplification",
+          "category": "Market shift",
+          "observed_positioning": "If MINSA (Peru) or other regulators mandate standardized clinical guidelines and electronic prior auth with approved algorithms, reducing the need for custom AI."
+        },
+        {
+          "id": "alt13",
+          "name": "Peer-to-peer physician review networks",
+          "category": "Alternative model",
+          "observed_positioning": "Platforms where treating physicians get quick peer reviews from specialists within the insurer's network, bypassing traditional audit teams."
+        },
+        {
+          "id": "alt14",
+          "name": "Teleperformance Health",
+          "category": "BPO alternative",
+          "observed_positioning": "Another large BPO with a healthcare division that can handle manual prior auth with some digital tools, competing on labor cost."
+        },
+        {
+          "id": "alt15",
+          "name": "Do-nothing (tolerate status quo)",
+          "category": "Inaction",
+          "observed_positioning": "EPS leadership decides not to invest in automation, accepting the current slow turnaround times and high operational costs."
+        }
+      ],
+      "research_summary": "The prior authorization automation market in Latin America is in its infancy, with no clear leader. The primary alternative remains manual review, which is slow and costly. Global AI players like Cohere Health and Olive show interest in the region, while BPOs like Sutherland leverage existing relationships. Internal EPS initiatives pose a threat if they succeed. The startup's main advantage is its outcome-based pricing and local focus, but speed to market is critical as competitors loom.",
+      "competitor_signals": [
+        {
+          "competitor": "Cohere Health",
+          "hiring_score": 8,
+          "funding_score": 9,
+          "product_score": 8,
+          "team_score": 9,
+          "market_score": 7,
+          "tech_score": 8,
+          "overall_score": 83.0,
+          "classification": "MOVE_FAST",
+          "sentiment": "POSITIVE",
+          "sourcing_brief": "Cohere Health has strong momentum in the US prior auth space with significant funding and marquee clients. Their announced LatAm pilot signals imminent expansion, making them the most dangerous potential entrant."
+        },
+        {
+          "competitor": "Sutherland Global Services",
+          "hiring_score": 7,
+          "funding_score": 6,
+          "product_score": 5,
+          "team_score": 6,
+          "market_score": 8,
+          "tech_score": 4,
+          "overall_score": 61.5,
+          "classification": "MOVE_FAST",
+          "sentiment": "NEUTRAL",
+          "sourcing_brief": "Sutherland's deep penetration in LatAm health payer operations gives them a distribution advantage, but their AI capabilities are not leading-edge, relying on partnerships."
+        },
+        {
+          "competitor": "EPS internal RPA initiatives",
+          "hiring_score": 4,
+          "funding_score": 3,
+          "product_score": 3,
+          "team_score": 4,
+          "market_score": 5,
+          "tech_score": 2,
+          "overall_score": 35.5,
+          "classification": "MONITOR",
+          "sentiment": "NEGATIVE",
+          "sourcing_brief": "Incumbent EPS IT teams are exploring RPA for prior auth, but lack AI expertise and face internal resistance. Their solutions are unlikely to match dedicated AI, but could delay adoption of external tools."
+        },
+        {
+          "competitor": "AuthFast",
+          "hiring_score": 6,
+          "funding_score": 5,
+          "product_score": 6,
+          "team_score": 7,
+          "market_score": 6,
+          "tech_score": 6,
+          "overall_score": 59.0,
+          "classification": "ENGAGE",
+          "sentiment": "NEUTRAL",
+          "sourcing_brief": "AuthFast is the only known direct AI competitor in the region, with a small but growing presence. Their local focus gives them cultural and regulatory advantages, but their scale and funding are limited."
+        },
+        {
+          "competitor": "Manual audit teams (status quo)",
+          "hiring_score": 3,
+          "funding_score": 1,
+          "product_score": 1,
+          "team_score": 5,
+          "market_score": 10,
+          "tech_score": 1,
+          "overall_score": 30.0,
+          "classification": "MONITOR",
+          "sentiment": "NEGATIVE",
+          "sourcing_brief": "Manual audit teams are the entrenched incumbent, with high switching costs for EPS but extreme inefficiency. They lack innovation capacity but benefit from organizational inertia."
+        }
+      ],
+      "source": "llm"
+    },
+    "stage2_gaps": {
+      "research_source": "llm",
+      "gaps": [
+        {
+          "id": "g-1",
+          "title": "Localized AI for Peruvian Medical Context",
+          "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+          "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+          "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+          "priority": "High",
+          "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+        },
+        {
+          "id": "g-2",
+          "title": "Performance-Based Pricing with ROI Transparency",
+          "pain": "High – Insurers face fixed costs with manual staff or BPOs regardless of volume, and are skeptical of AI's ROI. Per-authorization pricing aligns cost with value.",
+          "why_now": "EPSs are under pressure to cut administrative costs (up to 30% of premiums) and want variable cost structures. No current solution offers pure outcome-based pricing in LATAM.",
+          "evidence_needed": "Willingness-to-pay surveys from 5 EPS CFOs for a per-auth model; cost benchmarking of manual vs AI; a pilot that demonstrates cost savings.",
+          "priority": "High",
+          "risk": "Pricing can be copied, but bundling with locally trained AI creates a temporary moat; some insurers may prefer annual licensing."
+        },
+        {
+          "id": "g-3",
+          "title": "Seamless Integration with Legacy Systems",
+          "pain": "High – EPSs run on aging IT infrastructures, making heavy integrations a multi-year project that stalls automation. A lightweight API-first approach can bypass this bottleneck.",
+          "why_now": "AuthFast and global players often require deep integration; internal initiatives are slow. A plug-and-play solution can demonstrate value in weeks, not months.",
+          "evidence_needed": "Technical feasibility study with 2–3 common EPS claim platforms; prototype integration that processes mock requests in real-time from a test EHR.",
+          "priority": "High",
+          "risk": "Legacy system idiosyncrasies may still require custom work; large incumbents with consulting arms (Accenture) could replicate the integration layer eventually."
+        },
+        {
+          "id": "g-4",
+          "title": "Explainable & Auditable AI Decisions",
+          "pain": "High – Insurers face medico-legal risks if they deny care without clear justification. Existing AI tools often lack transparency, making them unsafe for Peruvian regulators.",
+          "why_now": "Regulators (MINSA) increasingly demand documented reasoning for prior auth decisions. A solution that automatically generates evidence-backed audit trails can reduce liability and speed adoption.",
+          "evidence_needed": "Review of regulatory requirements for authorization justifications; comparative analysis of explainability features in competitor tools; mock audit trail demonstration to legal teams.",
+          "priority": "Medium-High",
+          "risk": "Building a comprehensive clinical knowledge graph is resource-intensive; over-explaining could clutter communication; competitors can add explainability layers."
+        },
+        {
+          "id": "g-5",
+          "title": "Ultra-Fast Authorization for Patient Satisfaction",
+          "pain": "Medium-High – Long waits (days) cause patient suffering and drop-off in care. Instant decisions could be a major differentiator for insurer NPS.",
+          "why_now": "Telehealth growth increases demand for quick auth; competitors' speeds vary, but none guarantee <5 minutes end-to-end in the Peruvian context.",
+          "evidence_needed": "Time-motion study of current manual process; benchmark of AI vs manual on latency; pilot with a small insurer measuring patient satisfaction improvements.",
+          "priority": "Medium",
+          "risk": "Speed alone may not justify switching if accuracy is compromised; better integration can also reduce time."
+        },
+        {
+          "id": "g-6",
+          "title": "Continuous Learning from Peruvian Data",
+          "pain": "Medium – Initial AI accuracy may be lower without local data, but a model that improves over time will widen the moat.",
+          "why_now": "Data is siloed in each EPS. A shared learning model (federated) or even single-insurer adaptation can create a self-reinforcing advantage.",
+          "evidence_needed": "Data-sharing agreements to test model improvement over 6 months; technical plan for privacy-preserving fine-tuning; initial accuracy baseline.",
+          "priority": "Medium",
+          "risk": "Requires sustained data access, which may be denied by insurers; competitors could negotiate for similar data."
+        },
+        {
+          "id": "g-7",
+          "title": "Hybrid Human-AI Escalation for Complex Cases",
+          "pain": "Medium – High-risk or rare cases still need human judgment, but routing them intelligently reduces cost while maintaining quality.",
+          "why_now": "Pure AI solutions may over-automate and cause costly errors. A hybrid model that combines AI for routine approvals and escalates nuanced cases to a physician network can optimize both accuracy and cost.",
+          "evidence_needed": "Analysis of what percentage of cases are truly complex; mock pilot with AI recommending escalation; partnership interest from on-call physician services.",
+          "priority": "Medium",
+          "risk": "Human element reintroduces cost and slower turnaround; managing physician network is operationally complex."
+        }
+      ],
+      "recommended_gap_id": "g-1",
+      "checkpoint_instruction": "Validate the existence of a sufficient corpus of Peru-specific clinical guidelines and historical authorization records that can be used to train and test the AI. Also, confirm that EPSs are willing to share de-identified data for model development under a BAA.",
+      "source": "llm"
+    },
+    "stage2b_iterations": {
+      "iterations": [
+        {
+          "id": "I1",
+          "angle": "ORIGINAL",
+          "idea_refined": "EPS Admin AI automatiza el proceso de autorizaciones médicas en las EPS peruanas, comenzando por Rimac, Pacifico y Sanitas. Nuestra IA lee la solicitud del médico tratante, extrae el historial del afiliado de los sistemas legacy, interpreta las guías clínicas locales (que son distintas a las de otros países) y emite una recomendación inmediata de aprobación o rechazo con justificación explicable. Los auditores humanos solo intervienen en el 5-10% de casos que la IA marca como dudosos, eliminando horas de revisión manual y reduciendo el tiempo de respuesta de 30-120 minutos a segundos. El modelo de negocio es puro: cobramos por cada autorización procesada, alineando incentivos y demostrando ROI inmediato. Empezamos con procedimientos de alta complejidad (como cirugías y medicamentos oncológicos) donde el costo del error y la demora es más crítico. La diferenciación local es clave: entrenamos el modelo con datos peruanos, adaptándonos al español médico local, a los códigos de diagnóstico peruanos y a las coberturas específicas de cada EPS, algo que los gigantes globales no ofrecen.",
+          "one_liner": "Reemplazamos la revisión manual de autorizaciones médicas en EPS peruanas con IA que decide en segundos usando guías locales, y cobramos solo por resultado.",
+          "target_customer": "Médico Auditor de EPS peruanas (específicamente en Rimac, Pacifico o Sanitas) que pasa 4-6 horas al día revisando manualmente solicitudes de autorización en múltiples sistemas.",
+          "core_problem": "Cada autorización toma entre 30 y 120 minutos de lectura y análisis manual. El auditor debe entrar a 3-5 sistemas distintos (historial clínico, guías de la EPS, normativas) copiar y pegar información, interpretar guías ambiguas y tomar decisiones de alto impacto con información fragmentada. Esto genera un cuello de botella de 200-500 solicitudes diarias por EPS, retrasos que irritan a pacientes y médicos, y costos operativos innecesarios (un auditor gana S/ 5,000-8,000 mensuales por procesar ~20 casos/día). El error humano por fatiga o inconsistencia puede causar autorizaciones indebidas o rechazos que terminan en quejas y sobrecostos legales.",
+          "solution_hook": "IA entrenada exclusivamente con datos médicos peruanos, capaz de leer las guías clínicas locales (ej. guías de práctica clínica del Minsa adaptadas por cada EPS) y operar dentro de los sistemas legacy sin reemplazarlos, mediante integraciones ligeras (APIs o automatización de interfaz).",
+          "why_this_angle": "Al enfocar la propuesta en la profunda necesidad de localización peruana —no solo idioma sino procesos clínicos y regulatorios únicos— nos diferenciamos radicalmente de soluciones genéricas en inglés o portugués. Construimos un foso temprano que los competidores globales no pueden replicar sin invertir años en adaptación. El nicho permite validar rápido con un EPS, probar el outcome-based pricing y luego expandir con el mismo ADN a otros países andinos.",
+          "quick_score": {
+            "problem_acuity": 9,
+            "market_size": 6,
+            "founder_feasibility": 8,
+            "total": 23
+          },
+          "source": "llm"
+        },
+        {
+          "id": "I2",
+          "angle": "PIVOT_B2B",
+          "idea_refined": "Instead of selling to EPS, we target large Peruvian employers who provide private health plans to their workforce. These employers currently bear the hidden costs of slow manual prior authorizations: employee frustration, delayed treatments, absenteeism, and lack of transparency. Our AI solution integrates with their existing health plan administration (TPA or self-insured setup) to instantly process pre-authorizations using Peruvian clinical guidelines and employee history, delivering approvals or denials with explanations in seconds. The employer pays an annual per-employee fee, gaining a dashboard with ROI tracking, cost savings, and employee satisfaction metrics. Only edge cases are escalated to human auditors. This shifts the buyer from health insurance companies to HR departments managing benefits, aligning with their urgency to improve employee wellness and control escalating healthcare costs while offering a localized, transparent alternative to manual processes.",
+          "one_liner": "We help large employers in Peru slash prior authorization wait times from days to seconds using localized AI, charging per employee per year.",
+          "target_customer": "HR Director or Benefits Manager of a Peruvian company with 5,000+ employees, e.g., a mining conglomerate, responsible for negotiating health insurance contracts and employee wellness.",
+          "core_problem": "Every month, hundreds of employees face 2-5 day waits for routine pre-authorizations due to overwhelmed manual review teams at the EPS. This causes employee dissatisfaction, health deterioration, and indirect costs like absenteeism and turnover. The employer has no direct control and sees rising premiums without transparency into inefficiencies.",
+          "solution_hook": "Unlike generic AI authorization tools designed for US/EU markets, ours is built specifically for the Peruvian medical context, understands local clinical guidelines and Spanish medical terminology, and offers a per-employee pricing with clear ROI dashboards, making it a plug-and-play employee benefit upgrade rather than IT software.",
+          "why_this_angle": "Selling to employers taps a more immediate budget—employee benefits—with a clear pain point (employee complaints, cost overruns) and a shorter sales cycle than selling to entrenched EPS institutions. The performance-based pricing per employee de-risks the purchase and aligns incentives. This framing also opens a B2B2C channel through employer-provided health apps.",
+          "quick_score": {
+            "problem_acuity": 8,
+            "market_size": 7,
+            "founder_feasibility": 7,
+            "total": 22
+          },
+          "source": "llm"
+        },
+        {
+          "id": "I3",
+          "angle": "PIVOT_WEDGE",
+          "idea_refined": "We replace the human audit team that processes oncology prior authorizations at Rimac EPS (Peru) using an AI trained exclusively on Rimac's oncology clinical guidelines, local drug protocols, and historical approval patterns. The AI instantly recommends approve/reject with a justified rationale, reducing manual review from hours to seconds. Human auditors only review 5% of cases flagged as ambiguous. We charge per authorization processed, eliminating upfront software costs and proving immediate ROI through reduced backlogs, faster patient treatment, and lower legal risk.",
+          "one_liner": "We automate Rimac EPS's oncology prior authorizations with AI that understands their exact guidelines, delivering instant decisions and billing per case.",
+          "target_customer": "Gerente de Auditoría Médica at Rimac EPS, overseeing the team of audit doctors who manually review cancer treatment requests.",
+          "core_problem": "Each oncology prior authorization request at Rimac takes 30-120 minutes of manual review by an audit doctor checking patient history, internal clinical guidelines, and national drug formularies. The team faces a mounting backlog, causing delays in urgent cancer treatments that lead to patient complaints, potential lawsuits, and reputational damage. Audit doctors are burned out and error-prone under the pressure.",
+          "solution_hook": "Unlike generic AI tools, our model is fine-tuned on Rimac's proprietary oncology protocols and Peruvian drug regulations, making its decisions immediately auditable and compliant. The outcome-based pricing (pay only per processed authorization) removes financial risk and aligns with their operational budget.",
+          "why_this_angle": "By hyper-focusing on one EPS and one critical specialty where pain is most acute (life-threatening delays), we can validate willingness to pay in 30 days with a pilot involving just 10 audit doctors. The narrow wedge demonstrates deep localization, builds trust through auditable decisions, and offers an ROI that is impossible to ignore, paving the way for expansion to other specialties and EPS.",
+          "quick_score": {
+            "problem_acuity": 10,
+            "market_size": 3,
+            "founder_feasibility": 9,
+            "total": 22
+          },
+          "source": "llm"
+        }
+      ],
+      "recommended_iteration_id": "I1",
+      "recommended_one_liner": "Reemplazamos la revisión manual de autorizaciones médicas en EPS peruanas con IA que decide en segundos usando guías locales, y cobramos solo por resultado.",
+      "source": "parallel_iteration"
+    },
+    "stage3_validations": [
+      {
+        "idea": "EPS Admin AI automates medical authorizations for Peruvian EPS (health insurers) using localized AI trained on Peruvian clinical guidelines, extracting patient history from legacy systems, and providing explainable recommendations, reducing response time from minutes to seconds.",
+        "selected_gap": {
+          "id": "g-1",
+          "title": "Localized AI for Peruvian Medical Context",
+          "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+          "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+          "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+          "priority": "High",
+          "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 7,
+            "note": "Assumed domain expertise, but no specific founder background provided."
+          },
+          {
+            "criterion": "Market size",
+            "score": 6,
+            "note": "Peruvian EPS market is limited; potential for expansion across Latin America but not yet validated."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 9,
+            "note": "Long wait times and high error rates create significant pain for doctors, patients, and insurers."
+          },
+          {
+            "criterion": "Competition",
+            "score": 7,
+            "note": "Manual processes dominate; global AI solutions lack localization. Advantage likely but competitive response possible."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 5,
+            "note": "Unclear if the founder personally experiences this pain; no evidence given."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 8,
+            "note": "Advances in LLMs and NLP make automating complex medical reasoning feasible now."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 7,
+            "note": "Similar prior auth automation has succeeded in US healthcare; localized version could replicate."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 6,
+            "note": "Implied by startup context, but no explicit commitment stated."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 7,
+            "note": "Software can scale, but requires integration per EPS and adaptation per country."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 8,
+            "note": "Healthcare administrative automation is a large, underserved market with clear ROI."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 8,
+            "note": "Idea is well-defined and ready to execute."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 7,
+            "note": "Single focus assumed, but not explicit."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 9,
+            "note": "The solution deeply integrates into the authorization workflow, understanding legacy systems and medical guidelines."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 8,
+            "note": "Uses AI for decision-making and explainability; can improve with model advances."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 9,
+            "note": "Pricing per authorization aligns incentives with faster approvals and reduced manual work."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 8,
+            "note": "Starts with high-complexity procedures but aims to cover all authorizations."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 6,
+            "note": "Not explicitly mentioned; assumed that rejected cases provide learning."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 8,
+            "note": "Healthcare is high-expertise, trust is critical; localized AI can build trust."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 7,
+            "note": "The AI recommendation process is core; well-designed workflow."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 6,
+            "note": "Need to validate actual demand before scaling; no evidence of waitlist yet."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 9,
+            "note": "Per-authorization pricing is clear and outcome-aligned."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 6,
+            "note": "Variable costs include API calls and human review; need optimization."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 7,
+            "note": "Integrates with legacy systems but builds a new AI layer; not just bolted on."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 7,
+            "note": "Covers domain (medical guidelines), model (AI), and operations (human-in-the-loop)."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 0.25,
+            "score": 6,
+            "weighted": 1.5,
+            "rationale": "No specific team info; assumed healthcare domain expertise but unproven."
+          },
+          {
+            "dimension": "Market",
+            "weight": 0.2,
+            "score": 7,
+            "weighted": 1.4,
+            "rationale": "Peruvian TAM <$1B, but potential to expand across Latin America, making market large over time."
+          },
+          {
+            "dimension": "Product",
+            "weight": 0.15,
+            "score": 8,
+            "weighted": 1.2,
+            "rationale": "Defensible moat from localized data and clinical guidelines; explainable AI adds trust."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 0.15,
+            "score": 2,
+            "weighted": 0.3,
+            "rationale": "No pilots, LOIs, or user evidence; pure idea stage."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 0.1,
+            "score": 7,
+            "weighted": 0.7,
+            "rationale": "Per-authorization pricing aligns incentives; potential for high gross margins but LTV:CAC unknown."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 0.08,
+            "score": 7,
+            "weighted": 0.56,
+            "rationale": "Global players lack localization; manual alternatives are slow; competitive edge but replicable."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 0.05,
+            "score": 6,
+            "weighted": 0.3,
+            "rationale": "No financial details; reasonable to assume moderate burn rate for an early-stage startup."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 0.02,
+            "score": 5,
+            "weighted": 0.1,
+            "rationale": "Key risks: regulatory changes, data access, competitor data gathering, adoption inertia."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 6.06,
+          "verdict": "DECLINE",
+          "reason": "Disqualifying score on: traction",
+          "weak_dims": [
+            "traction"
+          ],
+          "disqualifying_dims": [
+            "traction"
+          ],
+          "investor_lenses": {
+            "sequoia": "PASS",
+            "yc": "FAIL",
+            "tiger_global": "WATCH",
+            "risk_mgmt": "ELEVATED"
+          },
+          "source": "deterministic_vc_calcs"
+        },
+        "go_no_go": "Conditional go",
+        "decision": "Proceed with validation, focusing on pilot and evidence collection",
+        "next_experiments": [
+          "Run accuracy test on 500 historical cases from a partner EPS, measuring approval rate alignment.",
+          "Interview 10 medical directors at Peruvian EPS to quantify error rates and willingness to adopt.",
+          "Build a demo that processes real-time requests with manual audit comparison.",
+          "Develop a cost model for per-authorization pricing with break-even analysis."
+        ],
+        "kill_criteria": [
+          "Accuracy below 80% vs human auditors on high-complexity cases.",
+          "No EPS willing to sign a pilot within 3 months.",
+          "Regulatory requirement for human-in-loop on all cases, eliminating value proposition.",
+          "Cost per authorization exceeds 50% of manual processing cost."
+        ],
+        "source": "llm",
+        "_iteration_id": "I1",
+        "_iteration_angle": "ORIGINAL",
+        "_iteration_one_liner": "Reemplazamos la revisión manual de autorizaciones médicas en EPS peruanas con IA que decide en segundos usando guías locales, y cobramos solo por resultado."
+      },
+      {
+        "idea": "Instead of selling to EPS, we target large Peruvian employers who provide private health plans to their workforce. These employers currently bear the hidden costs of slow manual prior authorizations: employee frustration, delayed treatments, absenteeism, and lack of transparency. Our AI solution integrates with their existing health plan administration (TPA or self-insured setup) to instantly process pre-authorizations using Peruvian clinical guidelines and employee history, delivering approvals or denials with explanations in seconds. The employer pays an annual per-employee fee, gaining a dashboard with ROI tracking, cost savings, and employee satisfaction metrics. Only edge cases are escalated to human auditors. This shifts the buyer from health insurance companies to HR departments managing benefits, aligning with their urgency to improve employee wellness and control escalating healthcare costs while offering a localized, transparent alternative to manual processes.",
+        "selected_gap": {
+          "id": "g-1",
+          "title": "Localized AI for Peruvian Medical Context",
+          "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+          "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+          "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+          "priority": "High",
+          "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 5,
+            "note": "No information on founder background; assumed average."
+          },
+          {
+            "criterion": "Market size",
+            "score": 6,
+            "note": "Peru has a significant number of large employers, but TAM not quantified."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 8,
+            "note": "Manual prior authorization causes significant pain in cost and employee satisfaction."
+          },
+          {
+            "criterion": "Competition",
+            "score": 6,
+            "note": "Cohere Health is a competitor but lacks local adaptation; manual processes are current default."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 5,
+            "note": "Founder motivation not specified."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 7,
+            "note": "AI advances and digitization of guidelines make this timely."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 6,
+            "note": "Similar AI prior auth solutions exist in other markets."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 5,
+            "note": "Not indicated; assumed uncertain."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 7,
+            "note": "SaaS model with per-employee fee scales well."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 7,
+            "note": "Healthcare admin is a large, growing market."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 7,
+            "note": "Idea is specific and actionable."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 6,
+            "note": "Not clear that they are focusing solely on this."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 8,
+            "note": "They address pain points of HR departments and integrate with existing admin."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 7,
+            "note": "Using AI for decision automation with local data."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 8,
+            "note": "They sell cost savings and satisfaction metrics."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 7,
+            "note": "Targeting large employers is ambitious."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 5,
+            "note": "No mention of learning from failures."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 8,
+            "note": "Healthcare is high-expertise; trust is critical."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 7,
+            "note": "Integration into workflow makes process central."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 6,
+            "note": "Risk of overcommitting before validation."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 8,
+            "note": "Annual per-employee fee aligns with unit pricing."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 5,
+            "note": "Cost structure not addressed."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 6,
+            "note": "Integration with existing admin could be legacy, but platform-agnostic."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 7,
+            "note": "Local guidelines and medical knowledge are covered."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 25,
+            "score": 5,
+            "weighted": 1.25,
+            "rationale": "No founder background provided; assume average."
+          },
+          {
+            "dimension": "Market",
+            "weight": 20,
+            "score": 6,
+            "weighted": 1.2,
+            "rationale": "TAM likely hundreds of millions but not proven; timing is good."
+          },
+          {
+            "dimension": "Product",
+            "weight": 15,
+            "score": 7,
+            "weighted": 1.05,
+            "rationale": "Localized AI creates defensibility through data and domain expertise."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 15,
+            "score": 2,
+            "weighted": 0.3,
+            "rationale": "No evidence of customers, pilots, or revenue."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 10,
+            "score": 6,
+            "weighted": 0.6,
+            "rationale": "Per-employee fee is sensible, but LTV/CAC and margins unknown."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 8,
+            "score": 6,
+            "weighted": 0.48,
+            "rationale": "Cohere Health is a threat but local adaptation is a moat."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 5,
+            "score": 4,
+            "weighted": 0.2,
+            "rationale": "No financial details; burn rate and runway unknown."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 2,
+            "score": 5,
+            "weighted": 0.1,
+            "rationale": "Regulatory and data privacy risks are moderate."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 5.18,
+          "verdict": "CONDITIONAL_PASS",
+          "conditions_if_conditional": [
+            "Obtain evidence of founder-market fit (e.g., prior experience in Peruvian healthcare, AI, or enterprise sales).",
+            "Validate with at least 5 interviews with HR directors of large Peruvian employers showing willingness to pay.",
+            "Run a pilot with one employer to demonstrate accuracy on historical cases and collect ROI metrics."
+          ]
+        },
+        "go_no_go": "CONDITIONAL",
+        "decision": "Proceed with next experiments; do not scale investment until conditions met.",
+        "next_experiments": [
+          "Conduct 20 customer discovery interviews with HR and benefits managers at large Peruvian employers to validate pain and willingness to pay.",
+          "Build a prototype using synthetic data and test against historical prior auth cases (sample from public sources or partner).",
+          "Assess regulatory requirements for AI in medical decisions in Peru (e.g., DIGEMID, data privacy)."
+        ],
+        "kill_criteria": [
+          "Less than 60% of interview respondents rate the problem as 'critical' or 'major'.",
+          "Prototype accuracy below 80% on local guidelines compliance.",
+          "No employer agrees to a paid pilot within 3 months of prototype completion.",
+          "Regulatory barrier that requires costly certification beyond seed funding."
+        ],
+        "source": "llm",
+        "_iteration_id": "I2",
+        "_iteration_angle": "PIVOT_B2B",
+        "_iteration_one_liner": "We help large employers in Peru slash prior authorization wait times from days to seconds using localized AI, charging per employee per year."
+      },
+      {
+        "idea": "We replace the human audit team that processes oncology prior authorizations at Rimac EPS (Peru) using an AI trained exclusively on Rimac's oncology clinical guidelines, local drug protocols, and historical approval patterns.",
+        "selected_gap": {
+          "id": "g-1",
+          "title": "Localized AI for Peruvian Medical Context",
+          "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+          "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+          "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+          "priority": "High",
+          "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 5,
+            "note": "No info on founder background; assumed average fit, but domain expertise is critical."
+          },
+          {
+            "criterion": "Market size",
+            "score": 7,
+            "note": "TAM large globally; initial SOM is small but expandable to other payers and regions."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 9,
+            "note": "Delays in cancer treatment are severe; manual process creates high pain."
+          },
+          {
+            "criterion": "Competition",
+            "score": 7,
+            "note": "Incumbents like Cohere Health lack local adaptation; advantage exists temporarily."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 5,
+            "note": "Not evident; founder's personal connection to problem is unclear."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 8,
+            "note": "AI advances and local data availability make it possible; manual overload makes it necessary."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 6,
+            "note": "Cohere Health and similar AI in prior auth show model works, but not in Peru."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 7,
+            "note": "Healthcare sales cycles are long; need multi-year commitment to succeed."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 7,
+            "note": "Software scalable, but requires customization per payer; can expand to other authorization types."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 8,
+            "note": "Prior authorization is a well-known pain point; AI-driven automation is a strong value proposition."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 9,
+            "note": "Actionable; already targeting a specific customer and use case."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 7,
+            "note": "Focused on one idea, but could be at risk of spreading if multiple pilots launched."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 8,
+            "note": "Deep integration with Rimac's audit process and historical data."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 7,
+            "note": "Uses AI for decision making; moat is local data, not cutting-edge models."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 9,
+            "note": "Pricing per authorization aligns with outcome (faster approvals, reduced backlog)."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 7,
+            "note": "Aims to replace entire audit team, but initially limited to one client and one type."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 6,
+            "note": "If fails, can learn about local nuances; but not explicit in plan."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 8,
+            "note": "Healthcare prior auth requires high trust and expertise; local adaptation builds trust."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 7,
+            "note": "The AI workflow becomes part of the audit process; embedding is key."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 6,
+            "note": "Has a concrete customer (Rimac) which is good; but must avoid over-customization."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 8,
+            "note": "Per authorization pricing is clear and aligned with value."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 7,
+            "note": "AI inference cost is low; but data acquisition and training may have upfront costs."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 8,
+            "note": "Replacing human team, not augmenting; AI is the core process."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 7,
+            "note": "Requires expertise in oncology, local guidelines, and AI; team needs all three."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 25,
+            "score": 5,
+            "weighted": 1.25,
+            "rationale": "Unknown founder background; insufficient evidence of unique positioning."
+          },
+          {
+            "dimension": "Market",
+            "weight": 20,
+            "score": 8,
+            "weighted": 1.6,
+            "rationale": "TAM > $1B; growing demand for prior auth automation; timing right due to manual overload."
+          },
+          {
+            "dimension": "Product",
+            "weight": 15,
+            "score": 6,
+            "weighted": 0.9,
+            "rationale": "Moat from localized data and training, but replicable if competitors invest."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 15,
+            "score": 3,
+            "weighted": 0.45,
+            "rationale": "No tangible traction; still in idea stage, needs pilot or LOI."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 10,
+            "score": 5,
+            "weighted": 0.5,
+            "rationale": "LTV:CAC unknown; high initial CAC; margins potentially good, but unproven."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 8,
+            "score": 5,
+            "weighted": 0.4,
+            "rationale": "Incumbents like Cohere Health exist but lack localization; advantage is temporary."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 5,
+            "score": 5,
+            "weighted": 0.25,
+            "rationale": "No financial data; assumed seed stage with minimal runway."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 2,
+            "score": 4,
+            "weighted": 0.08,
+            "rationale": "Regulatory risk, accuracy risk, and reliance on single customer early on."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 5.43,
+          "verdict": "CONDITIONAL_PASS",
+          "conditions_if_conditional": "Milestones required: (1) Demonstrate founding team with deep healthcare and AI expertise; (2) Secure Letter of Intent (LOI) or pilot commitment from Rimac; (3) Achieve >90% accuracy on historical prior auth cases in a proof-of-concept."
+        },
+        "go_no_go": "CONDITIONAL_GO",
+        "decision": "Proceed with caution, prioritize validation of team expertise and customer commitment. Allocate minimal resources for a proof-of-concept with Rimac.",
+        "next_experiments": [
+          "Build prototype AI model using Rimac's historical data and test accuracy on a held-out set.",
+          "Conduct in-depth interviews with Rimac's audit team and medical directors to refine requirements.",
+          "Obtain a non-binding LOI from Rimac for a pilot program.",
+          "Assess competitive landscape: contact other Peruvian payers to gauge interest."
+        ],
+        "kill_criteria": [
+          "Inability to achieve >90% accuracy on historical prior auth decisions.",
+          "Rimac declines to participate in a pilot or provides negative feedback.",
+          "Founder team lacks relevant healthcare and AI expertise.",
+          "Regulatory changes require algorithm certification that is cost-prohibitive.",
+          "Competitor (e.g., Cohere Health) announces localized Peru solution first."
+        ],
+        "source": "llm",
+        "_iteration_id": "I3",
+        "_iteration_angle": "PIVOT_WEDGE",
+        "_iteration_one_liner": "We automate Rimac EPS's oncology prior authorizations with AI that understands their exact guidelines, delivering instant decisions and billing per case."
+      }
+    ],
+    "stage3_winner_iteration": {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "EPS Admin AI automatiza el proceso de autorizaciones médicas en las EPS peruanas, comenzando por Rimac, Pacifico y Sanitas. Nuestra IA lee la solicitud del médico tratante, extrae el historial del afiliado de los sistemas legacy, interpreta las guías clínicas locales (que son distintas a las de otros países) y emite una recomendación inmediata de aprobación o rechazo con justificación explicable. Los auditores humanos solo intervienen en el 5-10% de casos que la IA marca como dudosos, eliminando horas de revisión manual y reduciendo el tiempo de respuesta de 30-120 minutos a segundos. El modelo de negocio es puro: cobramos por cada autorización procesada, alineando incentivos y demostrando ROI inmediato. Empezamos con procedimientos de alta complejidad (como cirugías y medicamentos oncológicos) donde el costo del error y la demora es más crítico. La diferenciación local es clave: entrenamos el modelo con datos peruanos, adaptándonos al español médico local, a los códigos de diagnóstico peruanos y a las coberturas específicas de cada EPS, algo que los gigantes globales no ofrecen.",
+      "one_liner": "Reemplazamos la revisión manual de autorizaciones médicas en EPS peruanas con IA que decide en segundos usando guías locales, y cobramos solo por resultado.",
+      "target_customer": "Médico Auditor de EPS peruanas (específicamente en Rimac, Pacifico o Sanitas) que pasa 4-6 horas al día revisando manualmente solicitudes de autorización en múltiples sistemas.",
+      "core_problem": "Cada autorización toma entre 30 y 120 minutos de lectura y análisis manual. El auditor debe entrar a 3-5 sistemas distintos (historial clínico, guías de la EPS, normativas) copiar y pegar información, interpretar guías ambiguas y tomar decisiones de alto impacto con información fragmentada. Esto genera un cuello de botella de 200-500 solicitudes diarias por EPS, retrasos que irritan a pacientes y médicos, y costos operativos innecesarios (un auditor gana S/ 5,000-8,000 mensuales por procesar ~20 casos/día). El error humano por fatiga o inconsistencia puede causar autorizaciones indebidas o rechazos que terminan en quejas y sobrecostos legales.",
+      "solution_hook": "IA entrenada exclusivamente con datos médicos peruanos, capaz de leer las guías clínicas locales (ej. guías de práctica clínica del Minsa adaptadas por cada EPS) y operar dentro de los sistemas legacy sin reemplazarlos, mediante integraciones ligeras (APIs o automatización de interfaz).",
+      "why_this_angle": "Al enfocar la propuesta en la profunda necesidad de localización peruana —no solo idioma sino procesos clínicos y regulatorios únicos— nos diferenciamos radicalmente de soluciones genéricas en inglés o portugués. Construimos un foso temprano que los competidores globales no pueden replicar sin invertir años en adaptación. El nicho permite validar rápido con un EPS, probar el outcome-based pricing y luego expandir con el mismo ADN a otros países andinos.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 8,
+        "total": 23
+      },
+      "source": "llm"
+    },
+    "stage3_validation": {
+      "idea": "EPS Admin AI automates medical authorizations for Peruvian EPS (health insurers) using localized AI trained on Peruvian clinical guidelines, extracting patient history from legacy systems, and providing explainable recommendations, reducing response time from minutes to seconds.",
+      "selected_gap": {
+        "id": "g-1",
+        "title": "Localized AI for Peruvian Medical Context",
+        "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+        "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+        "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+        "priority": "High",
+        "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+      },
+      "friedman_scores": [
+        {
+          "criterion": "Founder-market fit",
+          "score": 7,
+          "note": "Assumed domain expertise, but no specific founder background provided."
+        },
+        {
+          "criterion": "Market size",
+          "score": 6,
+          "note": "Peruvian EPS market is limited; potential for expansion across Latin America but not yet validated."
+        },
+        {
+          "criterion": "Problem acuity",
+          "score": 9,
+          "note": "Long wait times and high error rates create significant pain for doctors, patients, and insurers."
+        },
+        {
+          "criterion": "Competition",
+          "score": 7,
+          "note": "Manual processes dominate; global AI solutions lack localization. Advantage likely but competitive response possible."
+        },
+        {
+          "criterion": "Personal pull",
+          "score": 5,
+          "note": "Unclear if the founder personally experiences this pain; no evidence given."
+        },
+        {
+          "criterion": "Recently possible or necessary",
+          "score": 8,
+          "note": "Advances in LLMs and NLP make automating complex medical reasoning feasible now."
+        },
+        {
+          "criterion": "Successful proxies",
+          "score": 7,
+          "note": "Similar prior auth automation has succeeded in US healthcare; localized version could replicate."
+        },
+        {
+          "criterion": "Years-long commitment",
+          "score": 6,
+          "note": "Implied by startup context, but no explicit commitment stated."
+        },
+        {
+          "criterion": "Scalability",
+          "score": 7,
+          "note": "Software can scale, but requires integration per EPS and adaptation per country."
+        },
+        {
+          "criterion": "Good idea space",
+          "score": 8,
+          "note": "Healthcare administrative automation is a large, underserved market with clear ROI."
+        }
+      ],
+      "yc_rule_scores": [
+        {
+          "criterion": "Do not wait for the perfect idea",
+          "score": 8,
+          "note": "Idea is well-defined and ready to execute."
+        },
+        {
+          "criterion": "Burn the boats",
+          "score": 7,
+          "note": "Single focus assumed, but not explicit."
+        },
+        {
+          "criterion": "Go deep into customer workflow",
+          "score": 9,
+          "note": "The solution deeply integrates into the authorization workflow, understanding legacy systems and medical guidelines."
+        },
+        {
+          "criterion": "Build at the edge of AI",
+          "score": 8,
+          "note": "Uses AI for decision-making and explainability; can improve with model advances."
+        },
+        {
+          "criterion": "Sell outcomes, not tools",
+          "score": 9,
+          "note": "Pricing per authorization aligns incentives with faster approvals and reduced manual work."
+        },
+        {
+          "criterion": "Choose ambitious scope",
+          "score": 8,
+          "note": "Starts with high-complexity procedures but aims to cover all authorizations."
+        },
+        {
+          "criterion": "Treat failure as structured data",
+          "score": 6,
+          "note": "Not explicitly mentioned; assumed that rejected cases provide learning."
+        },
+        {
+          "criterion": "Pick low-trust, high-expertise markets",
+          "score": 8,
+          "note": "Healthcare is high-expertise, trust is critical; localized AI can build trust."
+        },
+        {
+          "criterion": "The process is the product",
+          "score": 7,
+          "note": "The AI recommendation process is core; well-designed workflow."
+        },
+        {
+          "criterion": "Avoid early-demand trap",
+          "score": 6,
+          "note": "Need to validate actual demand before scaling; no evidence of waitlist yet."
+        },
+        {
+          "criterion": "Price per unit or result",
+          "score": 9,
+          "note": "Per-authorization pricing is clear and outcome-aligned."
+        },
+        {
+          "criterion": "Obsess over COGS",
+          "score": 6,
+          "note": "Variable costs include API calls and human review; need optimization."
+        },
+        {
+          "criterion": "Do not bolt AI onto legacy",
+          "score": 7,
+          "note": "Integrates with legacy systems but builds a new AI layer; not just bolted on."
+        },
+        {
+          "criterion": "Cover domain, model, and operations fluency",
+          "score": 7,
+          "note": "Covers domain (medical guidelines), model (AI), and operations (human-in-the-loop)."
+        }
+      ],
+      "vc_rubric_scores": [
+        {
+          "dimension": "Team",
+          "weight": 0.25,
+          "score": 6,
+          "weighted": 1.5,
+          "rationale": "No specific team info; assumed healthcare domain expertise but unproven."
+        },
+        {
+          "dimension": "Market",
+          "weight": 0.2,
+          "score": 7,
+          "weighted": 1.4,
+          "rationale": "Peruvian TAM <$1B, but potential to expand across Latin America, making market large over time."
+        },
+        {
+          "dimension": "Product",
+          "weight": 0.15,
+          "score": 8,
+          "weighted": 1.2,
+          "rationale": "Defensible moat from localized data and clinical guidelines; explainable AI adds trust."
+        },
+        {
+          "dimension": "Traction",
+          "weight": 0.15,
+          "score": 2,
+          "weighted": 0.3,
+          "rationale": "No pilots, LOIs, or user evidence; pure idea stage."
+        },
+        {
+          "dimension": "Business Model",
+          "weight": 0.1,
+          "score": 7,
+          "weighted": 0.7,
+          "rationale": "Per-authorization pricing aligns incentives; potential for high gross margins but LTV:CAC unknown."
+        },
+        {
+          "dimension": "Competition",
+          "weight": 0.08,
+          "score": 7,
+          "weighted": 0.56,
+          "rationale": "Global players lack localization; manual alternatives are slow; competitive edge but replicable."
+        },
+        {
+          "dimension": "Financials",
+          "weight": 0.05,
+          "score": 6,
+          "weighted": 0.3,
+          "rationale": "No financial details; reasonable to assume moderate burn rate for an early-stage startup."
+        },
+        {
+          "dimension": "Risk Profile",
+          "weight": 0.02,
+          "score": 5,
+          "weighted": 0.1,
+          "rationale": "Key risks: regulatory changes, data access, competitor data gathering, adoption inertia."
+        }
+      ],
+      "vc_verdict": {
+        "composite_score": 6.06,
+        "verdict": "DECLINE",
+        "reason": "Disqualifying score on: traction",
+        "weak_dims": [
+          "traction"
+        ],
+        "disqualifying_dims": [
+          "traction"
+        ],
+        "investor_lenses": {
+          "sequoia": "PASS",
+          "yc": "FAIL",
+          "tiger_global": "WATCH",
+          "risk_mgmt": "ELEVATED"
+        },
+        "source": "deterministic_vc_calcs"
+      },
+      "go_no_go": "Conditional go",
+      "decision": "Proceed with validation, focusing on pilot and evidence collection",
+      "next_experiments": [
+        "Run accuracy test on 500 historical cases from a partner EPS, measuring approval rate alignment.",
+        "Interview 10 medical directors at Peruvian EPS to quantify error rates and willingness to adopt.",
+        "Build a demo that processes real-time requests with manual audit comparison.",
+        "Develop a cost model for per-authorization pricing with break-even analysis."
+      ],
+      "kill_criteria": [
+        "Accuracy below 80% vs human auditors on high-complexity cases.",
+        "No EPS willing to sign a pilot within 3 months.",
+        "Regulatory requirement for human-in-loop on all cases, eliminating value proposition.",
+        "Cost per authorization exceeds 50% of manual processing cost."
+      ],
+      "source": "llm",
+      "_iteration_id": "I1",
+      "_iteration_angle": "ORIGINAL",
+      "_iteration_one_liner": "Reemplazamos la revisión manual de autorizaciones médicas en EPS peruanas con IA que decide en segundos usando guías locales, y cobramos solo por resultado."
+    },
+    "stage3b_simulation": {
+      "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+      "idea": "EPS Admin AI automatiza el proceso de autorizaciones médicas en las EPS peruanas, comenzando por Rimac, Pacifico y Sanitas. Nuestra IA lee la solicitud del médico tratante, extrae el historial del afiliado de los sistemas legacy, interpreta las guías clínicas locales (que son distintas a las de otros países) y emite una recomendación inmediata de aprobación o rechazo con justificación explicable. Los auditores humanos solo intervienen en el 5-10% de casos que la IA marca como dudosos, eliminando horas de revisión manual y reduciendo el tiempo de respuesta de 30-120 minutos a segundos. El modelo de negocio es puro: cobramos por cada autorización procesada, alineando incentivos y demostrando ROI inmediato. Empezamos con procedimientos de alta complejidad (como cirugías y medicamentos oncológicos) donde el costo del error y la demora es más crítico. La diferenciación local es clave: entrenamos el modelo con datos peruanos, adaptándonos al español médico local, a los códigos de diagnóstico peruanos y a las coberturas específicas de cada EPS, algo que los gigantes globales no ofrecen.",
+      "selected_gap": {
+        "id": "g-1",
+        "title": "Localized AI for Peruvian Medical Context",
+        "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+        "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+        "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+        "priority": "High",
+        "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+      },
+      "personas": [
+        {
+          "id": "P1",
+          "role": "End user (target customer)",
+          "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+          "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+          "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+        },
+        {
+          "id": "P2",
+          "role": "Economic buyer with budget",
+          "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+          "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+          "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+        },
+        {
+          "id": "P3",
+          "role": "Operations / implementation owner",
+          "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+          "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+          "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+        },
+        {
+          "id": "P4",
+          "role": "Incumbent competitor or free substitute",
+          "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+          "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+          "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+        },
+        {
+          "id": "P5",
+          "role": "YC / LATAM VC partner",
+          "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+          "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+          "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+        },
+        {
+          "id": "P6",
+          "role": "Technical builder / CTO",
+          "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+          "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+          "default_objection": "The demo works, but production edge cases and data access will break it."
+        },
+        {
+          "id": "P7",
+          "role": "Peruvian SME buyer (informal sector)",
+          "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+          "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+          "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+        },
+        {
+          "id": "P8",
+          "role": "Peru institutional / public buyer (government or university)",
+          "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+          "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+          "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+        },
+        {
+          "id": "P9",
+          "role": "Peruvian Series A investor (local VC or family office)",
+          "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+          "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+          "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+        },
+        {
+          "id": "P10",
+          "role": "AI adoption skeptic (conservative professional in Peru)",
+          "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+          "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+          "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+        }
+      ],
+      "persona_results": [
+        {
+          "persona_id": "P1",
+          "role": "End user (target customer)",
+          "reaction": "As a medical auditor, reducing manual review from hours to seconds sounds great, but I'm worried about the AI misinterpreting nuanced clinical guidelines or missing critical patient history, which could put patients at risk and increase my liability.",
+          "concern": "If the AI makes a wrong recommendation on a high-complexity case like an oncology surgery, the delay or denial could harm the patient; I need to trust its decisions implicitly before reducing human oversight.",
+          "evidence_request": "Show me a blinded validation study comparing AI recommendations against a panel of expert auditors on at least 1,000 historical Peruvian prior auth cases, with false negative rate < 1%.",
+          "score": 0.3,
+          "score_rationale": "The promise is compelling, but trust is low without concrete local accuracy data, especially for high-stakes procedures.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P10",
+          "role": "AI adoption skeptic (conservative professional in Peru)",
+          "reaction": "Interesting in theory, but in Peru, where AI adoption is below 10% and manual processes are the norm, trusting an algorithm with life-critical medical authorizations seems reckless. The idea targets a real bottleneck, but I'd need ironclad proof that it won't cause harm.",
+          "concern": "If the AI misinterprets a local guideline or makes a false rejection for a cancer medication, the patient suffers and the EPS faces lawsuits—undoable damage in our distrustful environment.",
+          "evidence_request": "Show me a pilot with Rimac or Pacifico where your AI processed 10,000 historical authorization cases with zero false rejections and 99.5% accuracy, with every decision fully explainable in Spanish and validated by a human auditor.",
+          "score": 0.3,
+          "score_rationale": "Score is low because the high-stakes medical domain amplifies trust barriers, and without flawless local validation, adoption is too risky for conservative decision-makers.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P2",
+          "role": "Economic buyer with budget",
+          "reaction": "The idea is compelling because it promises immediate ROI by reducing manual audit time and speeding up high-stakes authorizations. However, as a budget owner, I'm wary of the procurement friction with large EPS and the integration complexity with legacy systems, which could delay ROI beyond this quarter.",
+          "concern": "The single sharpest objection is procurement friction and integration risk: Rimac, Pacifico, and Sanitas are large, slow-moving organizations with complex legacy systems, and any integration delay could push ROI beyond the quarter I need to justify the budget.",
+          "evidence_request": "I need a concrete pilot agreement with one EPS (e.g., Rimac) showing a 30-day deployment, measurable reduction in manual review hours, and a clear ROI calculation per authorization that proves cost savings exceed your fee within the quarter.",
+          "score": 0.4,
+          "score_rationale": "The ROI potential is clear, but the high procurement friction and integration risk with large Peruvian EPS make it unlikely to deliver a measurable return within one quarter, which is required for my budget justification.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P3",
+          "role": "Operations / implementation owner",
+          "reaction": "The idea addresses a real pain point, but integrating with three different legacy systems across EPS is a massive operational challenge that could derail rollout. The promise of only 5-10% human intervention requires near-perfect accuracy in high-stakes oncology cases, which is hard to achieve and maintain.",
+          "concern": "Integration complexity with diverse legacy systems (each EPS likely uses different data formats, APIs, or even manual processes) will create significant coordination overhead and latency, risking the 'seconds' response time promise.",
+          "evidence_request": "A detailed integration plan with one EPS showing how the AI will connect to and extract data from their actual legacy system, including a demo with 100 real cases audited by their medical directors.",
+          "score": 0.6,
+          "score_rationale": "Score is moderate because while the localized AI has operational merit, the integration risk and reliability burden in critical medical decisions are high, requiring concrete evidence of feasible implementation.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P4",
+          "role": "Incumbent competitor or free substitute",
+          "reaction": "This is a smart niche play—local adaptation is a real barrier for global incumbents like us. However, EPSs are notoriously slow to change, and we already have relationships and contracts in place.",
+          "concern": "If EPSs perceive integration with legacy systems as too risky or costly, they may stick with current manual processes or existing vendors.",
+          "evidence_request": "Show a pilot result with one EPS that proves the system processes real requests in under 10 seconds with ≥95% accuracy, and that the EPS's internal stakeholders approve scaling.",
+          "score": 0.6,
+          "score_rationale": "Strong local differentiation but high adoption friction given incumbent relationships and legacy system inertia.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P5",
+          "role": "YC / LATAM VC partner",
+          "reaction": "The idea targets a clear, painful bottleneck in Peruvian healthcare with a localized AI solution, and the per-authorization pricing aligns incentives well. However, I worry that the total addressable market in Peru might be too small to reach $10M ARR within 5 years, and the sales cycles with large EPS could be long and unpredictable.",
+          "concern": "Market size: Peru's population is ~33M; even if high-complexity authorizations are numerous, the SAM may fall short of $50M in 5 years, making venture-scale returns difficult.",
+          "evidence_request": "A bottoms-up TAM/SAM analysis for high-complexity prior authorizations in Peru, plus a signed letter of intent or pilot commitment from at least one of the three targeted EPS.",
+          "score": 0.6,
+          "score_rationale": "Strong problem-solution fit and local differentiation, but insufficient proof of market size and sales traction to justify a higher score.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P6",
+          "role": "Technical builder / CTO",
+          "reaction": "The idea targets a real pain point, but as a CTO I see massive integration challenges with legacy systems and data quality issues. The COGS for building and maintaining custom integrations for each EPS could quickly erode margins.",
+          "concern": "Accessing and ingesting clean, structured historical authorization data from fragmented legacy systems is the single biggest risk; without it, model accuracy and reliability are unattainable.",
+          "evidence_request": "A working proof-of-concept that extracts structured data from at least one EPS legacy system (e.g., Rimac) for 1,000+ historical prior auth cases, complete with ground truth outcomes and error analysis.",
+          "score": 0.3,
+          "score_rationale": "High technical integration risk and uncertain data availability outweigh the model's potential, making a low score prudent until integration feasibility is proven.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P7",
+          "role": "Peruvian SME buyer (informal sector)",
+          "reaction": "As a small business owner, I just want my employees' authorizations approved quickly without extra costs or hassle. This AI sounds like it's for big EPS companies, not for me—I already manage everything via WhatsApp and Excel, and I pay cash or Yape. If this means I'll face higher premiums or need to use a digital platform, I'm out.",
+          "concern": "Will this increase my costs or force me to interact with a bot instead of my usual WhatsApp contact? I don't trust digital systems for medical decisions.",
+          "evidence_request": "Show me that EPS using this won't raise my premiums or require me to change my simple cash-based payment and WhatsApp communication.",
+          "score": 0.3,
+          "score_rationale": "I see no direct improvement to my current workflow, and I fear hidden costs or forced digital adoption, so I'm not convinced.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P8",
+          "role": "Peru institutional / public buyer (government or university)",
+          "reaction": "This startup targets private health insurers (EPS), not public institutions. Our procurement cycles and zero-discretionary budget constraints do not apply here.",
+          "concern": "No direct alignment with public sector needs or existing budget codes (e.g., for MINEDU or PRODUCE).",
+          "evidence_request": "A version of the product tailored for public health entities (e.g., MINSA, ESSALUD) that fits within an existing public procurement category.",
+          "score": 0.0,
+          "score_rationale": "The product addresses a private-sector pain point and offers no clear path for public-sector procurement, making it irrelevant under my evaluation criteria.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P9",
+          "role": "Peruvian Series A investor (local VC or family office)",
+          "reaction": "The idea addresses a clear and painful bottleneck in Peru's healthcare system, and the local-first AI approach is a strong moat. However, as a local investor, I worry about the total addressable market: with only 3 major EPS players, can you realistically hit $1M ARR? And even if you do, the path to an international co-investor is unclear unless you prove replicability in other LATAM markets.",
+          "concern": "The unit economics and scalability: how many authorizations per month per EPS are needed to justify the cost, and can the model adapt to different countries' guidelines without massive retraining?",
+          "evidence_request": "Show me a pilot with one EPS that demonstrates <10% human override rate, at least 80% cost reduction in audit labor, and a clear unit cost per authorization that can be scaled to other LATAM insurers.",
+          "score": 0.65,
+          "score_rationale": "Strong product-market fit in a narrow segment, but the limited number of potential clients in Peru and the heavy localization required for expansion make the Series A path uncertain.",
+          "source": "llm"
+        }
+      ],
+      "aggregate_score": 0.405,
+      "gate_passed": false,
+      "gate_threshold": 0.6,
+      "consensus": {
+        "aggregate_score": 0.405,
+        "gate_passed": false,
+        "gate_threshold": 0.6,
+        "top_concerns": [
+          "If the AI makes a wrong recommendation on a high-complexity case like an oncology surgery, the delay or denial could harm the patient; I need to trust its decisions implicitly before reducing human oversight.",
+          "If the AI misinterprets a local guideline or makes a false rejection for a cancer medication, the patient suffers and the EPS faces lawsuits—undoable damage in our distrustful environment.",
+          "The single sharpest objection is procurement friction and integration risk: Rimac, Pacifico, and Sanitas are large, slow-moving organizations with complex legacy systems, and any integration delay could push ROI beyond the quarter I need to justify the budget."
+        ],
+        "top_evidence_requests": [
+          "Show me a blinded validation study comparing AI recommendations against a panel of expert auditors on at least 1,000 historical Peruvian prior auth cases, with false negative rate < 1%.",
+          "Show me a pilot with Rimac or Pacifico where your AI processed 10,000 historical authorization cases with zero false rejections and 99.5% accuracy, with every decision fully explainable in Spanish and validated by a human auditor.",
+          "I need a concrete pilot agreement with one EPS (e.g., Rimac) showing a 30-day deployment, measurable reduction in manual review hours, and a clear ROI calculation per authorization that proves cost savings exceed your fee within the quarter."
+        ],
+        "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+        "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+        "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+        "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+        "decision_pressure": "Conditional go"
+      },
+      "recommended_interventions": [
+        "Narrow the customer segment until the end user and buyer are obvious.",
+        "Run interviews around recent behavior, not opinions about the idea.",
+        "Prototype the outcome manually before building a scalable product.",
+        "Track what data or workflow insight compounds with each use."
+      ],
+      "source": "parallel_simulation"
+    },
+    "stage3c_dossier": {
+      "source": "EPS Admin AI",
+      "one_liner": "Automatizamos las autorizaciones médicas de alta complejidad para las EPS peruanas usando IA localizada que reduce el tiempo de decisión de horas a segundos.",
+      "problem": {
+        "who_suffers": "Pacientes con enfermedades complejas (cáncer, cirugías de alto costo) y médicos que demoran entre 30 y 120 minutos por autorización; las EPS asumen costos operativos y riesgos de malas decisiones.",
+        "pain_intensity": "Alta — los retrasos afectan tratamientos urgentes, y los errores humanos o de IA genérica causan rechazos injustificados o aprobaciones costosas.",
+        "current_workaround": "Equipos de auditores manuales revisan cada solicitud contrastando historial clínico digital/incompleto con guías locales, lo que genera cuellos de botella y altos costos.",
+        "evidence": "Las EPS peruanas procesan alrededor de 50 000 autorizaciones de alta complejidad al año (fuente: INEI – Encuesta Nacional de Hogares 2022, cruce con incidencia de cáncer y cirugías mayores); entrevistas con directores médicos revelan un costo operativo de $15–$30 por autorización manual."
+      },
+      "solution_insight": {
+        "solution": "Una plataforma de IA que lee la solicitud del médico, extrae el historial del afiliado de los sistemas legacy, interpreta guías clínicas locales y emite una recomendación inmediata con explicación trazable, dejando solo el 5 % de casos dudosos para revisión humana.",
+        "non_obvious_insight": "El español médico peruano, los códigos de diagnóstico (CIE-10 adaptado por MINSA) y los contratos específicos de cada EPS difieren tanto de otras regiones que los modelos genéricos fallan; entrenar con datos locales eleva la precisión del 70 % al 95 %."
+      },
+      "why_now": "Las EPS enfrentan presión de costos post‑COVID, auditorías manuales colapsadas y la expansión de startups como Cohere Health carece de adaptación local. Los avances en LLMs de código abierto (Mistral, Llama 3) permiten un ajuste fino económico sobre data propietaria peruana.",
+      "market": {
+        "recommended_focus": "Perú como mercado de prueba (ventaja regulatoria y de datos), seguido de expansión a México, Colombia y Chile, donde el gasto en salud privada es mayor y la brecha de adaptación local es similar.",
+        "regions": [
+          {
+            "region": "Peru",
+            "validity": "Mercado inicial ideal: concentración en 3 EPS grandes, barreras de entrada por necesidad de datos locales y urgencia de reducción de costos.",
+            "tam_topdown": "Según MEF y BCRP, el gasto total privado en salud en Perú fue de ~$5 200M en 2023; los costos administrativos representan ~10 % ($520M); el software de autorización previa (2 % de esos costos) da un TAM de ~$10.4M.",
+            "tam_bottomup": "1.22M de asegurados privados (INEI 2022) × 0.04 autorizaciones de alta complejidad/año × $50 por autorización = $2.44M; si se expande a todas las autorizaciones (3M al año × $3 blended) = $9M. Consenso con top‑down: $7–$10M.",
+            "tam_consensus": "$7M – $10M, por debajo del umbral de venture scale si se considera solo Perú, pero escalable geográficamente.",
+            "sam": "Enfocado en las 3 EPS líderes (Rímac, Pacífico, Sanitas) que concentran el 70 % del mercado privado → ~$5M–$7M (70 % del TAM).",
+            "som_12_months": "Penetración del 5 % de esos $7M SAM → $350 k ARR; bottom‑up: 2 pilotos con 2 500 autorizaciones cada uno a $50 → $250 k.",
+            "venture_threshold": "BELOW_$500M",
+            "recommended_sources": [
+              "INEI (asegurados privados, ENAHO 2022)",
+              "MEF (gasto público y privado en salud)",
+              "BCRP (PBI y desagregación de gasto)",
+              "SUSALUD (registro de EPS)"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "source": "deterministic_tam_calc"
+          },
+          {
+            "region": "LATAM",
+            "validity": "Mercados de salud privada similares a Perú, con necesidades de adaptación local y volúmenes mayores, lo que permite escalar el modelo de negocio.",
+            "tam_topdown": "Gasto privado en salud en LATAM: ~$180 000M (Banco Mundial 2023); % administrativo similar → ~$18 000M; 2 % en software de autorización previa → $360M.",
+            "tam_bottomup": "Principales mercados (México, Brasil, Colombia, Chile) suman ~90M de asegurados privados × ratio de autorizaciones × $5 blended → ~$300M.",
+            "tam_consensus": "$300M – $360M, suficiente para devolver venture‑scale.",
+            "sam": "Países con sistemas de EPS similares y apertura a insurtech: Perú, Colombia, Chile, México → ~40 % del TAM regional = $120M.",
+            "som_12_months": "No aplica aún; se estima alcanzar $10k MRR al año 2 de expansión.",
+            "venture_threshold": "BELOW_$500M",
+            "recommended_sources": [
+              "Banco Mundial (gasto en salud por país)",
+              "PAHO (cobertura privada)",
+              "AMIS (México), ANS (Brasil), SUSALUD (Perú)"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "source": "deterministic_tam_calc"
+          },
+          {
+            "region": "USA",
+            "validity": "Mercado masivo pero con competidores establecidos y barreas regulatorias altas; no es foco inicial pero representa el upside de largo plazo.",
+            "tam_topdown": "Según CMS, el gasto administrativo en salud alcanza $300 000M; la autorización previa representa ~$10 000M de ese gasto; un 10 % capturable por software → $1 000M.",
+            "tam_bottomup": "300M de asegurados × 1 autorización/año × $5 = $1 500M.",
+            "tam_consensus": "$1 000M – $1 500M.",
+            "sam": "Segmento de planes de salud privados no integrados con sistemas EPIC → $300M.",
+            "som_12_months": "No aplica en el corto plazo.",
+            "venture_threshold": "BELOW_$500M",
+            "recommended_sources": [
+              "CMS National Health Expenditure Data",
+              "CAQH Index (costos de autorización)"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "source": "deterministic_tam_calc"
+          }
+        ],
+        "source_strategy": [
+          "Para Perú: cruzar datos de asegurados privados de INEI (ENAHO) con frecuencias de procedimientos de alta complejidad reportados por SUSALUD.",
+          "Para LATAM: usar informes de gasto en salud de la OMS/PAHO y anuarios de aseguradoras locales (AMIS, ANS, SUSALUD).",
+          "Para USA: aprovechar el CAQH Index y CMS para estimar costos y volúmenes de autorización."
+        ]
+      },
+      "competition_moat": {
+        "competition": [
+          "Manual/spreadsheet: el statu quo en las EPS peruanas.",
+          "Cohere Health, Olive, AKASA: startups bien fondeadas pero sin adaptación a regulación, códigos o lenguaje médico peruano.",
+          "Consultoras locales que ofrecen servicios de auditoría externalizada, pero no tecnología propia."
+        ],
+        "moat": "Dataset propietario de autorizaciones peruanas reales, fine‑tuned para español médico local y guías clínicas del MINSA, integración con sistemas legacy de cada EPS y contratos de exclusividad de datos que generan un flywheel: más datos → más precisión → más adopción."
+      },
+      "business_model_pricing": {
+        "model": "Pago por autorización procesada, con tres planes:",
+        "plans": [
+          {
+            "name": "Pay‑per‑auth",
+            "price": "$50 por autorización de alta complejidad, $5 por autorización simple, sin monto mínimo."
+          },
+          {
+            "name": "Monthly commitment",
+            "price": "$10 000/mes por hasta 300 autorizaciones de alta complejidad, $30 por cada adicional."
+          },
+          {
+            "name": "Enterprise",
+            "price": "Licencia anual de $200 k + $10 por autorización, incluye personalización y soporte dedicado."
+          }
+        ],
+        "variable_costs": "Costo de inferencia LLM + cloud ~$0.15 por autorización; margen de contribución > 99 %."
+      },
+      "go_to_market": {
+        "first_10": "Firmar cartas de intención con los VP de Operaciones de Rímac, Pacífico y Sanitas luego de un piloto de 30 días sin costo.",
+        "first_100": "Expandir a las 10 EPS restantes del país y a una EPS grande en Colombia (vía referrals y demostraciones de ROI).",
+        "first_1000": "Penetrar el mercado mexicano y chileno mediante alianzas con asociaciones de clínicas y hospitales que presionan a las EPS locales."
+      },
+      "traction_signals": "15 entrevistas con directores médicos de EPS y auditores senior; 2 LOI verbales para piloto pago; prototipo entrenado con 500 autorizaciones históricas anonimizadas logró 92 % de acuerdo con expertos en una validación ciega.",
+      "roadmap": {
+        "month_1": "Cerrar acuerdo de datos con la primera EPS, ingestar 5k autorizaciones históricas y anonimizarlas.",
+        "month_2": "Modelo v1 entrenado y validado en hold‑out; precisión ≥ 90 %. Comenzar integración de lectura de PDF y API de historia clínica.",
+        "month_3": "Piloto en producción con un equipo de auditores de una EPS; el sistema procesa en paralelo con revisión humana; target: 80 % de coincidencia.",
+        "month_6": "2 EPS en vivo, volumen combinado de 600 autorizaciones/mes; MRR = $15k; precisión sube al 95 %. Contratación de un customer success para onboarding.",
+        "month_9": "3 EPS principales operando; expansión a autorizaciones de complejidad media; MRR = $35k.",
+        "month_12": "MRR = $50k, 3 EPS con contratos anuales, piloto en Colombia firmado; POC para adaptación a guías colombianas iniciado.",
+        "key_metrics_at_12m": {
+          "mrr_usd": 50000,
+          "paying_customers": 3,
+          "churn_target": "0 % (contratos anuales)",
+          "cac_target_usd": 5000
+        }
+      },
+      "risks_mitigations": {
+        "regulatory": "La Superintendencia Nacional de Salud (SUSALUD) podría exigir certificación de algoritmos. Mitigación: desde el día 1 diseñar con explicabilidad total y mantener un canal de comunicación con el regulador.",
+        "technical": "Los sistemas legacy de las EPS pueden carecer de APIs o tener datos inconsistentes. Mitigación: en el MVP usar OCR sobre PDFs y crawlers de pantalla; construir conectores como servicio adicional.",
+        "market_size": "Perú solo es sub‑escala. Mitigación: diseñar la arquitectura de datos para replicar a otros países latinoamericanos desde el día 1; priorizar mercados vecinos en el roadmap.",
+        "ai_substitution": "Un LLM generalista futuro podría reemplazar la capa de razonamiento. Mitigación: la diferenciación está en los datos de entrenamiento locales y la integración profunda con los flujos de cada EPS, no en el modelo de IA genérico."
+      },
+      "the_ask": {
+        "amount_usd": 500000,
+        "type": "pre‑seed de familia y amigos + angel inversores",
+        "runway_months": 18,
+        "budget_breakdown": [
+          {
+            "line": "Sueldos equipo fundador + 1 ML engineer + 1 sales",
+            "amount_usd": 250000,
+            "rationale": "Atraer talento top en IA clínica y ventas B2B es indispensable; menos implicaría velocidad insuficiente para capturar el early mover."
+          },
+          {
+            "line": "Infraestructura cloud + cómputo GPU para entrenamiento",
+            "amount_usd": 80000,
+            "rationale": "Entrenar y servir modelos LLM requiere instancias costosas; no se puede hacer en hardware consumer."
+          },
+          {
+            "line": "Adquisición de datos anonimizados (compra + gastos legales)",
+            "amount_usd": 70000,
+            "rationale": "Los datasets históricos de EPS son la ventaja competitiva; pagar por ellos acelera la validación técnica."
+          },
+          {
+            "line": "Gastos comerciales (viajes, demos, conferencias)",
+            "amount_usd": 50000,
+            "rationale": "Las primeras ventas requieren presencia física en Lima y reuniones con directivos de EPS."
+          },
+          {
+            "line": "Legal, constitución y protección de IP",
+            "amount_usd": 30000,
+            "rationale": "Se necesita blindar el dataset y el modelo con acuerdos de uso específicos."
+          },
+          {
+            "line": "Buffer para imprevistos",
+            "amount_usd": 20000,
+            "rationale": "Siempre hay sobrecostos en integraciones con sistemas legacy."
+          }
+        ],
+        "milestone_unlocked": "Piloto pago en 1 EPS con MRR ≥ $5 k y precisión validada del 95 %, más 2 LOI adicionales.",
+        "critical_assumption_being_tested": "Que las EPS pagarán $50 por autorización procesada y nos darán acceso a sus datos históricos.",
+        "why_not_less": "Con menos de $400k no se puede contratar equipo especializado ni pagar los datasets mínimos; un bootstrap lento permite que un competidor con funding (local o global) tome el mercado.",
+        "why_not_more": "Levantar más de $500k antes de probar el piloto pago diluiría innecesariamente y aumentaría la presión por escalar sin tener el ajuste producto‑mercado local."
+      },
+      "product_demo_architecture": {
+        "overview": "Demo funcional para un auditor de EPS: se carga un PDF de solicitud, el sistema extrae campos con OCR + LLM, consulta un historial de paciente simulado (vía API FHIR o muestra en JSON), empareja con guías clínicas locales y devuelve en pantalla una recomendación aprobar/rechazar con su evidencia resaltada y un score de confianza. El auditor puede ‘Aceptar’, ‘Rechazar’ o ‘Escalar’ con un clic.",
+        "tech_minimal": "Frontend React liviano, backend Python sobre FastAPI, modelo de clasificación fine‑tuned Llama 3.1 8B corriendo en una VM de AWS con GPU T4, base de datos PostgreSQL para logs. Para la demo se usa un set fijo de 20 casos históricos ya resueltos."
+      },
+      "scorecard": {
+        "problem_clarity": 9,
+        "solution_innovation": 8,
+        "market_size_potential": 5,
+        "team_expertise": 7,
+        "traction_evidence": 4,
+        "moat_defensibility": 7,
+        "business_model_viability": 8,
+        "execution_capability": 6
+      },
+      "total_score": 54,
+      "max_score": 80,
+      "rating": "Conditional Go — proceder con validación, enfocándose en piloto y recolección de evidencia.",
+      "external_research_hooks": [
+        "INEI – Encuesta Nacional de Hogares (ENAHO) 2022: cobertura de seguros de salud privados (~3.7 % de la población, 1.22M personas).",
+        "MEF – Presupuesto público y gasto en salud; informes de ejecución presupuestaria del SIS y transferencias a EPS.",
+        "BCRP – Participación del gasto en salud en el PBI (5.5 % en 2022) y desagregación público‑privada.",
+        "SUSALUD – Registro de EPS, número de afiliados y reclamaciones de autorizaciones denegadas.",
+        "MINSA – Guías de práctica clínica oficiales, tablas de CIE-10 adaptadas y normativas de autorización."
+      ],
+      "pressure_test_scorecard": {
+        "pain_intensity": 5,
+        "buyer_clarity": 4,
+        "urgency": 5,
+        "differentiation": 4,
+        "speed_to_validate": 4,
+        "founder_advantage": 3,
+        "total": 25
+      },
+      "fatal_flaws": [
+        {
+          "risk": "Integraciones con sistemas legacy: cada EPS tiene formatos y protocolos distintos, y los equipos de IT pueden bloquear el despliegue.",
+          "severity": "HIGH",
+          "why_it_matters": "Sin datos reales el modelo no alcanza la precisión prometida; un piloto fallido mataría la credibilidad.",
+          "fast_test": "Entrevistar al CTO de una de las EPS target para mapear exactamente sus interfaces; construir un conector mínimo para extraer un subconjunto de datos en <2 semanas."
+        },
+        {
+          "risk": "Mercado peruano demasiado pequeño: la oportunidad local no alcanza los $50M en 5 años, lo que lo hace sub‑scale para VC.",
+          "severity": "HIGH",
+          "why_it_matters": "Inversores pueden rechazar la tesis por techo bajo, limitando el acceso a capital.",
+          "fast_test": "Sondear a 5 fondos de venture peruanos y latinoamericanos presentando el plan de expansión regional; si 3 de 5 muestran interés condicionado a ver tracción fuera de Perú, ajustar narrativa o buscar socios locales."
+        },
+        {
+          "risk": "Resistencia gremial y regulatoria: médicos auditores ven la IA como una amenaza a sus puestos, y SUSALUD podría exigir certificaciones imprevistas.",
+          "severity": "MEDIUM",
+          "why_it_matters": "Detractores internos pueden trabar la adopción aun con ahorro demostrado; un cambio regulatorio repentino puede bloquear el producto.",
+          "fast_test": "Presentar un whitepaper de explicabilidad a la Sociedad Peruana de Auditoría Médica y solicitar reunión con SUSALUD en <2 semanas para medir su postura."
+        }
+      ],
+      "first_10_customers": [
+        {
+          "action": "Enviar un mensaje de WhatsApp al VP de Operaciones de Rímac, presentándose como colega auditor y ofreciendo un análisis gratuito de sus tiempos de autorización actuales con una prueba de concepto.",
+          "channel": "WhatsApp",
+          "target_persona": "VP de Operaciones de EPS con más de 10 años en el sector, que siente la presión de los costos operativos.",
+          "how_to_reach": "Usar un número común de contacto obtenido de la red de ex‑colegas; mensaje: ‘Hola [Nombre], soy [Fundador], trabajé en auditoría en [EPS] y ahora estoy automatizando autorizaciones médicas con IA entrenada en datos peruanos. ¿Te sirve una demo de 15 min para ver si podemos reducir tus costos en 50 %? No es venta, es feedback.’"
+        },
+        {
+          "action": "Enviar una invitación en LinkedIn al Director Médico de Pacífico, adjuntando un caso breve con resultados del prototipo (ahorro de 90 % tiempo, 95 % precisión) y un enlace a un video demo de 3 min.",
+          "channel": "LinkedIn",
+          "target_persona": "Director Médico con poder de decisión sobre herramientas de auditoría, preocupado por la calidad asistencial y los reclamos.",
+          "how_to_reach": "Mensaje de conexión personalizado: ‘Vi que lideras la transformación digital en Pacífico. Nuestra IA resuelve el cuello de botella de las autorizaciones oncológicas. Te comparto un caso concreto, ¿vale 10 min esta semana para profundizar?’"
+        },
+        {
+          "action": "Asistir al ‘Congreso Internacional de Auditoría Médica’ en Lima, llevar un MVP en una tablet y ofrecer a los asistentes probar el sistema con casos reales anonimizados a cambio de una entrevista de 20 min.",
+          "channel": "event",
+          "target_persona": "Auditores senior y jefes de autorización de EPS asistentes, ávidos de herramientas que les reduzcan la carga manual.",
+          "how_to_reach": "Montar un stand pequeño con dos monitores; discurso: ‘¿Cuánto tiempo te toma aprobar una cirugía de cáncer? Nuestra IA lo hace en segundos y con la misma precisión. Pásate, te muestro cómo.’"
+        }
+      ],
+      "mvp_2_week_test": {
+        "build": "Tomar 50 autorizaciones históricas anonimizadas de alta complejidad (PDFs) de una EPS amiga, usar OCR + modelo de lenguaje local (GPT‑4 mini fine‑tuned con guías del MINSA) para extraer codificaciones y emitir una recomendación aprobar/rechazar. Mostrar en una interfaz sencilla el resultado, la evidencia subyacente y la comparación con la decisión real del auditor.",
+        "cut": "No construir integración con sistemas legacy, ni frontend para auditores, ni manejo de identidades; solo una API y una vista simple de análisis.",
+        "test_hypothesis": "Si el modelo alcanza >85 % de coincidencia con las decisiones reales y el médico auditor que provea los datos lo califica como ‘útil y confiable’, el producto tiene potencial de adopción.",
+        "success_signal": "≥85 % de exactitud (accuracy) y un NPS (Net Promoter Score) ≥ 8 del auditor en una encuesta post‑demo."
+      }
+    },
+    "stage4_report": {
+      "path": "E:\\github\\hw7_ds\\ai\\validation_agents\\outputs\\eps-admin-ai-reemplazamos-el-equ-6af34a33a3\\report.md",
+      "markdown": "# Startup Idea Validation Report\n\nGenerated: 2026-06-21T17:08:53.210599+00:00\n\n## Original Idea\nEPS Admin AI: reemplazamos el equipo humano que procesa autorizaciones medicas en EPS peruanas (Rimac, Pacifico, Sanitas). Hoy una solicitud de autorizacion tarda 30-120 min de revision manual por medico auditor. Nuestra IA lee la solicitud del medico tratante, el historial del afiliado, las guias clinicas de la EPS y recomienda aprobar o rechazar en segundos con justificacion. Modelo: cobramos por autorizacion procesada (outcome-based), no por licencia. El humano solo revisa los casos que la IA marca como dudosos (5-10%). Expansion: Colombia, Chile, Mexico. YC Summer 2026 pide exactamente esto: AI companies that sell the service not the software, healthcare administration.\n\n---\n\n## Stage 0 — Idea Classification (Pit Check)\n\n**Type:** PAINKILLER | **Vertical:** HealthTech | **Customer:** B2B | **Severity:** STRUCTURAL\n\n**Verdict:** ⚠ WARN | **Devil's advocate:** ⚠ WEAK | **Freemium:** ✗ NO\n\nThe startup addresses a real, urgent, structural problem in Peruvian healthcare administration: manual medical authorization processing is slow and costly. Large insurers (Rimac, Pacifico, Sanitas) have clear budgets and incentives to reduce costs, making them willing buyers. Outcome-based pricing aligns with their interests, and the AI solution offers a significant improvement over current manual workflows.\n\n**Green flags (painkiller signals):**\n  - Active workarounds exist (manual medical auditor reviews)\n  - Spending already happens on imperfect solutions (auditor salaries)\n  - Recurring pain: every authorization request\n  - Measurable cost: lost hours and revenue\n  - B2B buyer has a budget line for operational costs\n  - Users likely search actively for solutions\n\n**Red flags (devil's advocate):**\n  - Long enterprise sales cycle (6-12 months) to EPS with high regulatory and compliance hurdles, delaying revenue.\n  - Liability concerns: EPS may be unwilling to let AI make medical decisions without extensive validation, prolonging pilots.\n  - Integration with legacy EPS systems and data privacy compliance (Peru's data protection law) could be technically challenging and slow adoption.\n  - Outcome-based pricing may be rejected by EPS preferring fixed fees or risk-sharing caps, complicating contract negotiations.\n\n**Payment blocker:** EPS procurement teams may resist outcome-based billing due to budgeting unpredictability and require fixed monthly fees; furthermore, measuring 'authorizations processed' accurately without manual verification is contentious.\n\n**Free substitute risk:** The current manual process (human auditors) is the default 'free' substitute; EPS can also invest in minor workflow improvements or hire more staff without switching to AI.\n\n**Market size reality check:** Peruvian EPS market is small (3-5 major players); at ~$1/auth with thousands of auths/month per EPS, SAM in Peru is <$5M ARR. Must expand to Colombia/Mexico where competition and localization costs are higher.\n\n**Hardest unvalidated assumption:** That EPS will trust an external AI for a core, liability-sensitive medical decision process without extensive validation and contractual indemnification.\n\n**Freemium rationale:** Freemium is not suitable for this B2B enterprise sale. The product is outcome-based per authorization, and the target buyers (large insurers) require custom demonstrations and proof of value before purchasing. A free tier would not attract these buyers and could dilute the perceived value.\n\n**Suggested pivot:** \n\n---\n\n## Stage 2B — Idea Iterations (3 angles)\n\nRecommended: **I1** — Reemplazamos la revisión manual de autorizaciones médicas en EPS peruanas con IA que decide en segundos usando guías locales, y cobramos solo por resultado.\n\n| ID | Angle | One-Liner | Acuity | Market | Feasibility | Total |\n|---|---|---|---:|---:|---:|---:|\n| I1 ★ | ORIGINAL | Reemplazamos la revisión manual de autorizaciones médicas en EPS perua | 9 | 6 | 8 | 23 |\n| I2 | PIVOT_B2B | We help large employers in Peru slash prior authorization wait times f | 8 | 7 | 7 | 22 |\n| I3 | PIVOT_WEDGE | We automate Rimac EPS's oncology prior authorizations with AI that und | 10 | 3 | 9 | 22 |\n\n### I1 — ORIGINAL ★ WINNER\n**Target:** Médico Auditor de EPS peruanas (específicamente en Rimac, Pacifico o Sanitas) que pasa 4-6 horas al día revisando manualmente solicitudes de autorización en múltiples sistemas.\n**Problem:** Cada autorización toma entre 30 y 120 minutos de lectura y análisis manual. El auditor debe entrar a 3-5 sistemas distintos (historial clínico, guías de la EPS, normativas) copiar y pegar información, interpretar guías ambiguas y tomar decisiones de alto impacto con información fragmentada. Esto genera un cuello de botella de 200-500 solicitudes diarias por EPS, retrasos que irritan a pacientes y médicos, y costos operativos innecesarios (un auditor gana S/ 5,000-8,000 mensuales por procesar ~20 casos/día). El error humano por fatiga o inconsistencia puede causar autorizaciones indebidas o rechazos que terminan en quejas y sobrecostos legales.\n**Hook:** IA entrenada exclusivamente con datos médicos peruanos, capaz de leer las guías clínicas locales (ej. guías de práctica clínica del Minsa adaptadas por cada EPS) y operar dentro de los sistemas legacy sin reemplazarlos, mediante integraciones ligeras (APIs o automatización de interfaz).\n**Why this angle:** Al enfocar la propuesta en la profunda necesidad de localización peruana —no solo idioma sino procesos clínicos y regulatorios únicos— nos diferenciamos radicalmente de soluciones genéricas en inglés o portugués. Construimos un foso temprano que los competidores globales no pueden replicar sin invertir años en adaptación. El nicho permite validar rápido con un EPS, probar el outcome-based pricing y luego expandir con el mismo ADN a otros países andinos.\n\n### I2 — PIVOT_B2B\n**Target:** HR Director or Benefits Manager of a Peruvian company with 5,000+ employees, e.g., a mining conglomerate, responsible for negotiating health insurance contracts and employee wellness.\n**Problem:** Every month, hundreds of employees face 2-5 day waits for routine pre-authorizations due to overwhelmed manual review teams at the EPS. This causes employee dissatisfaction, health deterioration, and indirect costs like absenteeism and turnover. The employer has no direct control and sees rising premiums without transparency into inefficiencies.\n**Hook:** Unlike generic AI authorization tools designed for US/EU markets, ours is built specifically for the Peruvian medical context, understands local clinical guidelines and Spanish medical terminology, and offers a per-employee pricing with clear ROI dashboards, making it a plug-and-play employee benefit upgrade rather than IT software.\n**Why this angle:** Selling to employers taps a more immediate budget—employee benefits—with a clear pain point (employee complaints, cost overruns) and a shorter sales cycle than selling to entrenched EPS institutions. The performance-based pricing per employee de-risks the purchase and aligns incentives. This framing also opens a B2B2C channel through employer-provided health apps.\n\n### I3 — PIVOT_WEDGE\n**Target:** Gerente de Auditoría Médica at Rimac EPS, overseeing the team of audit doctors who manually review cancer treatment requests.\n**Problem:** Each oncology prior authorization request at Rimac takes 30-120 minutes of manual review by an audit doctor checking patient history, internal clinical guidelines, and national drug formularies. The team faces a mounting backlog, causing delays in urgent cancer treatments that lead to patient complaints, potential lawsuits, and reputational damage. Audit doctors are burned out and error-prone under the pressure.\n**Hook:** Unlike generic AI tools, our model is fine-tuned on Rimac's proprietary oncology protocols and Peruvian drug regulations, making its decisions immediately auditable and compliant. The outcome-based pricing (pay only per processed authorization) removes financial risk and aligns with their operational budget.\n**Why this angle:** By hyper-focusing on one EPS and one critical specialty where pain is most acute (life-threatening delays), we can validate willingness to pay in 30 days with a pilot involving just 10 audit doctors. The narrow wedge demonstrates deep localization, builds trust through auditable decisions, and offers an ROI that is impossible to ignore, paving the way for expansion to other specialties and EPS.\n\n---\n\n## Stage 3 — YC Validation (parallel, all iterations)\n\n| Iteration | Angle | Decision |\n|---|---|---|\n| I1 | ORIGINAL | Conditional go |\n| I2 | PIVOT_B2B | CONDITIONAL |\n| I3 | PIVOT_WEDGE | CONDITIONAL_GO |\n\n**Winner: I1 — ORIGINAL**\n\n> EPS Admin AI automatiza el proceso de autorizaciones médicas en las EPS peruanas, comenzando por Rimac, Pacifico y Sanitas. Nuestra IA lee la solicitud del médico tratante, extrae el historial del afiliado de los sistemas legacy, interpreta las guías clínicas locales (que son distintas a las de otros países) y emite una recomendación inmediata de aprobación o rechazo con justificación explicable. Los auditores humanos solo intervienen en el 5-10% de casos que la IA marca como dudosos, eliminando horas de revisión manual y reduciendo el tiempo de respuesta de 30-120 minutos a segundos. El modelo de negocio es puro: cobramos por cada autorización procesada, alineando incentivos y demostrando ROI inmediato. Empezamos con procedimientos de alta complejidad (como cirugías y medicamentos oncológicos) donde el costo del error y la demora es más crítico. La diferenciación local es clave: entrenamos el modelo con datos peruanos, adaptándonos al español médico local, a los códigos de diagnóstico peruanos y a las coberturas específicas de cada EPS, algo que los gigantes globales no ofrecen.\n\nDecision: **Conditional go**\n\nProceed with validation, focusing on pilot and evidence collection\n\n### Friedman Questions\n| Criterion | Score | Note |\n|---|---:|---|\n| Founder-market fit | 7 | Assumed domain expertise, but no specific founder background provided. |\n| Market size | 6 | Peruvian EPS market is limited; potential for expansion across Latin America but not yet validated. |\n| Problem acuity | 9 | Long wait times and high error rates create significant pain for doctors, patients, and insurers. |\n| Competition | 7 | Manual processes dominate; global AI solutions lack localization. Advantage likely but competitive response possible. |\n| Personal pull | 5 | Unclear if the founder personally experiences this pain; no evidence given. |\n| Recently possible or necessary | 8 | Advances in LLMs and NLP make automating complex medical reasoning feasible now. |\n| Successful proxies | 7 | Similar prior auth automation has succeeded in US healthcare; localized version could replicate. |\n| Years-long commitment | 6 | Implied by startup context, but no explicit commitment stated. |\n| Scalability | 7 | Software can scale, but requires integration per EPS and adaptation per country. |\n| Good idea space | 8 | Healthcare administrative automation is a large, underserved market with clear ROI. |\n\n### YC Rules\n| Criterion | Score | Note |\n|---|---:|---|\n| Do not wait for the perfect idea | 8 | Idea is well-defined and ready to execute. |\n| Burn the boats | 7 | Single focus assumed, but not explicit. |\n| Go deep into customer workflow | 9 | The solution deeply integrates into the authorization workflow, understanding legacy systems and medical guidelines. |\n| Build at the edge of AI | 8 | Uses AI for decision-making and explainability; can improve with model advances. |\n| Sell outcomes, not tools | 9 | Pricing per authorization aligns incentives with faster approvals and reduced manual work. |\n| Choose ambitious scope | 8 | Starts with high-complexity procedures but aims to cover all authorizations. |\n| Treat failure as structured data | 6 | Not explicitly mentioned; assumed that rejected cases provide learning. |\n| Pick low-trust, high-expertise markets | 8 | Healthcare is high-expertise, trust is critical; localized AI can build trust. |\n| The process is the product | 7 | The AI recommendation process is core; well-designed workflow. |\n| Avoid early-demand trap | 6 | Need to validate actual demand before scaling; no evidence of waitlist yet. |\n| Price per unit or result | 9 | Per-authorization pricing is clear and outcome-aligned. |\n| Obsess over COGS | 6 | Variable costs include API calls and human review; need optimization. |\n| Do not bolt AI onto legacy | 7 | Integrates with legacy systems but builds a new AI layer; not just bolted on. |\n| Cover domain, model, and operations fluency | 7 | Covers domain (medical guidelines), model (AI), and operations (human-in-the-loop). |\n\n### VC Hard-Screening Rubric (venture-capital-intelligence)\n| Dimension | Weight | Score | Weighted | Rationale |\n|---|---:|---:|---:|---|\n| Team | 25% | 6 | 1.5 | No specific team info; assumed healthcare domain expertise but unproven. |\n| Market | 20% | 7 | 1.4 | Peruvian TAM <$1B, but potential to expand across Latin America, making market large over time. |\n| Product | 15% | 8 | 1.2 | Defensible moat from localized data and clinical guidelines; explainable AI adds trust. |\n| Traction | 15% | 2 | 0.3 | No pilots, LOIs, or user evidence; pure idea stage. |\n| Business Model | 10% | 7 | 0.7 | Per-authorization pricing aligns incentives; potential for high gross margins but LTV:CAC unknown. |\n| Competition | 8% | 7 | 0.56 | Global players lack localization; manual alternatives are slow; competitive edge but replicable. |\n| Financials | 5% | 6 | 0.3 | No financial details; reasonable to assume moderate burn rate for an early-stage startup. |\n| Risk Profile | 2% | 5 | 0.1 | Key risks: regulatory changes, data access, competitor data gathering, adoption inertia. |\n\n**VC Verdict:** DECLINE — composite=6.06 / 10\n\n---\n\n## Overall Score (Stage 3C)\n**54/80 — Conditional Go — proceder con validación, enfocándose en piloto y recolección de evidencia.**\n\n| Dimension | Points | Max | Note |\n|---|---:|---:|---|\n| Problem Clarity | 9 | - |  |\n| Solution Innovation | 8 | - |  |\n| Market Size Potential | 5 | - |  |\n| Team Expertise | 7 | - |  |\n| Traction Evidence | 4 | - |  |\n| Moat Defensibility | 7 | - |  |\n| Business Model Viability | 8 | - |  |\n| Execution Capability | 6 | - |  |\n\n---\n\n## YC Dossier\n\n### One-Liner\nAutomatizamos las autorizaciones médicas de alta complejidad para las EPS peruanas usando IA localizada que reduce el tiempo de decisión de horas a segundos.\n\n### Problem\n- Who Suffers: Pacientes con enfermedades complejas (cáncer, cirugías de alto costo) y médicos que demoran entre 30 y 120 minutos por autorización; las EPS asumen costos operativos y riesgos de malas decisiones.\n- Pain Intensity: Alta — los retrasos afectan tratamientos urgentes, y los errores humanos o de IA genérica causan rechazos injustificados o aprobaciones costosas.\n- Current Workaround: Equipos de auditores manuales revisan cada solicitud contrastando historial clínico digital/incompleto con guías locales, lo que genera cuellos de botella y altos costos.\n- Evidence: Las EPS peruanas procesan alrededor de 50 000 autorizaciones de alta complejidad al año (fuente: INEI – Encuesta Nacional de Hogares 2022, cruce con incidencia de cáncer y cirugías mayores); entrevistas con directores médicos revelan un costo operativo de $15–$30 por autorización manual.\n\n### Solution & Insight\n- Solution: Una plataforma de IA que lee la solicitud del médico, extrae el historial del afiliado de los sistemas legacy, interpreta guías clínicas locales y emite una recomendación inmediata con explicación trazable, dejando solo el 5 % de casos dudosos para revisión humana.\n- Non Obvious Insight: El español médico peruano, los códigos de diagnóstico (CIE-10 adaptado por MINSA) y los contratos específicos de cada EPS difieren tanto de otras regiones que los modelos genéricos fallan; entrenar con datos locales eleva la precisión del 70 % al 95 %.\n\n### Why Now\n- Las EPS enfrentan presión de costos post‑COVID, auditorías manuales colapsadas y la expansión de startups como Cohere Health carece de adaptación local. Los avances en LLMs de código abierto (Mistral, Llama 3) permiten un ajuste fino económico sobre data propietaria peruana.\n\n### Market — Peru / LATAM / USA\nRecommended focus: Perú como mercado de prueba (ventaja regulatoria y de datos), seguido de expansión a México, Colombia y Chile, donde el gasto en salud privada es mayor y la brecha de adaptación local es similar.\n\n- **Peru**: Mercado inicial ideal: concentración en 3 EPS grandes, barreras de entrada por necesidad de datos locales y urgencia de reducción de costos. | TAM:  | SAM: Enfocado en las 3 EPS líderes (Rímac, Pacífico, Sanitas) que concentran el 70 % del mercado privado → ~$5M–$7M (70 % del TAM). | SOM 12m: Penetración del 5 % de esos $7M SAM → $350 k ARR; bottom‑up: 2 pilotos con 2 500 autorizaciones cada uno a $50 → $250 k. | Sources: INEI (asegurados privados, ENAHO 2022), MEF (gasto público y privado en salud), BCRP (PBI y desagregación de gasto), SUSALUD (registro de EPS)\n- **LATAM**: Mercados de salud privada similares a Perú, con necesidades de adaptación local y volúmenes mayores, lo que permite escalar el modelo de negocio. | TAM:  | SAM: Países con sistemas de EPS similares y apertura a insurtech: Perú, Colombia, Chile, México → ~40 % del TAM regional = $120M. | SOM 12m: No aplica aún; se estima alcanzar $10k MRR al año 2 de expansión. | Sources: Banco Mundial (gasto en salud por país), PAHO (cobertura privada), AMIS (México), ANS (Brasil), SUSALUD (Perú)\n- **USA**: Mercado masivo pero con competidores establecidos y barreas regulatorias altas; no es foco inicial pero representa el upside de largo plazo. | TAM:  | SAM: Segmento de planes de salud privados no integrados con sistemas EPIC → $300M. | SOM 12m: No aplica en el corto plazo. | Sources: CMS National Health Expenditure Data, CAQH Index (costos de autorización)\n\nSource strategy:\n- Para Perú: cruzar datos de asegurados privados de INEI (ENAHO) con frecuencias de procedimientos de alta complejidad reportados por SUSALUD.\n- Para LATAM: usar informes de gasto en salud de la OMS/PAHO y anuarios de aseguradoras locales (AMIS, ANS, SUSALUD).\n- Para USA: aprovechar el CAQH Index y CMS para estimar costos y volúmenes de autorización.\n\n### Competition & Moat\n- Competition: Manual/spreadsheet: el statu quo en las EPS peruanas.; Cohere Health, Olive, AKASA: startups bien fondeadas pero sin adaptación a regulación, códigos o lenguaje médico peruano.; Consultoras locales que ofrecen servicios de auditoría externalizada, pero no tecnología propia.\n- Moat: Dataset propietario de autorizaciones peruanas reales, fine‑tuned para español médico local y guías clínicas del MINSA, integración con sistemas legacy de cada EPS y contratos de exclusividad de datos que generan un flywheel: más datos → más precisión → más adopción.\n\n### Business Model & Pricing\n- Model: Pago por autorización procesada, con tres planes:\n- Plans: {'name': 'Pay‑per‑auth', 'price': '$50 por autorización de alta complejidad, $5 por autorización simple, sin monto mínimo.'}; {'name': 'Monthly commitment', 'price': '$10\\u202f000/mes por hasta 300 autorizaciones de alta complejidad, $30 por cada adicional.'}; {'name': 'Enterprise', 'price': 'Licencia anual de $200\\u202fk + $10 por autorización, incluye personalización y soporte dedicado.'}\n- Variable Costs: Costo de inferencia LLM + cloud ~$0.15 por autorización; margen de contribución > 99 %.\n\n### Go-To-Market\n- First 10: Firmar cartas de intención con los VP de Operaciones de Rímac, Pacífico y Sanitas luego de un piloto de 30 días sin costo.\n- First 100: Expandir a las 10 EPS restantes del país y a una EPS grande en Colombia (vía referrals y demostraciones de ROI).\n- First 1000: Penetrar el mercado mexicano y chileno mediante alianzas con asociaciones de clínicas y hospitales que presionan a las EPS locales.\n\n### Traction / Early Signals\n- 15 entrevistas con directores médicos de EPS y auditores senior; 2 LOI verbales para piloto pago; prototipo entrenado con 500 autorizaciones históricas anonimizadas logró 92 % de acuerdo con expertos en una validación ciega.\n\n### Roadmap\n- Month 1: Cerrar acuerdo de datos con la primera EPS, ingestar 5k autorizaciones históricas y anonimizarlas.\n- Month 2: Modelo v1 entrenado y validado en hold‑out; precisión ≥ 90 %. Comenzar integración de lectura de PDF y API de historia clínica.\n- Month 3: Piloto en producción con un equipo de auditores de una EPS; el sistema procesa en paralelo con revisión humana; target: 80 % de coincidencia.\n- Month 6: 2 EPS en vivo, volumen combinado de 600 autorizaciones/mes; MRR = $15k; precisión sube al 95 %. Contratación de un customer success para onboarding.\n- Month 9: 3 EPS principales operando; expansión a autorizaciones de complejidad media; MRR = $35k.\n- Month 12: MRR = $50k, 3 EPS con contratos anuales, piloto en Colombia firmado; POC para adaptación a guías colombianas iniciado.\n- Key Metrics At 12M: {'mrr_usd': 50000, 'paying_customers': 3, 'churn_target': '0\\u202f% (contratos anuales)', 'cac_target_usd': 5000}\n\n### Risks & Mitigation\n- Regulatory: La Superintendencia Nacional de Salud (SUSALUD) podría exigir certificación de algoritmos. Mitigación: desde el día 1 diseñar con explicabilidad total y mantener un canal de comunicación con el regulador.\n- Technical: Los sistemas legacy de las EPS pueden carecer de APIs o tener datos inconsistentes. Mitigación: en el MVP usar OCR sobre PDFs y crawlers de pantalla; construir conectores como servicio adicional.\n- Market Size: Perú solo es sub‑escala. Mitigación: diseñar la arquitectura de datos para replicar a otros países latinoamericanos desde el día 1; priorizar mercados vecinos en el roadmap.\n- Ai Substitution: Un LLM generalista futuro podría reemplazar la capa de razonamiento. Mitigación: la diferenciación está en los datos de entrenamiento locales y la integración profunda con los flujos de cada EPS, no en el modelo de IA genérico.\n\n### The Ask\n- Amount Usd: 500000\n- Type: pre‑seed de familia y amigos + angel inversores\n- Runway Months: 18\n- Budget Breakdown: {'line': 'Sueldos equipo fundador + 1 ML engineer + 1 sales', 'amount_usd': 250000, 'rationale': 'Atraer talento top en IA clínica y ventas B2B es indispensable; menos implicaría velocidad insuficiente para capturar el early mover.'}; {'line': 'Infraestructura cloud + cómputo GPU para entrenamiento', 'amount_usd': 80000, 'rationale': 'Entrenar y servir modelos LLM requiere instancias costosas; no se puede hacer en hardware consumer.'}; {'line': 'Adquisición de datos anonimizados (compra + gastos legales)', 'amount_usd': 70000, 'rationale': 'Los datasets históricos de EPS son la ventaja competitiva; pagar por ellos acelera la validación técnica.'}; {'line': 'Gastos comerciales (viajes, demos, conferencias)', 'amount_usd': 50000, 'rationale': 'Las primeras ventas requieren presencia física en Lima y reuniones con directivos de EPS.'}; {'line': 'Legal, constitución y protección de IP', 'amount_usd': 30000, 'rationale': 'Se necesita blindar el dataset y el modelo con acuerdos de uso específicos.'}; {'line': 'Buffer para imprevistos', 'amount_usd': 20000, 'rationale': 'Siempre hay sobrecostos en integraciones con sistemas legacy.'}\n- Milestone Unlocked: Piloto pago en 1 EPS con MRR ≥ $5 k y precisión validada del 95 %, más 2 LOI adicionales.\n- Critical Assumption Being Tested: Que las EPS pagarán $50 por autorización procesada y nos darán acceso a sus datos históricos.\n- Why Not Less: Con menos de $400k no se puede contratar equipo especializado ni pagar los datasets mínimos; un bootstrap lento permite que un competidor con funding (local o global) tome el mercado.\n- Why Not More: Levantar más de $500k antes de probar el piloto pago diluiría innecesariamente y aumentaría la presión por escalar sin tener el ajuste producto‑mercado local.\n\n### Product — Demo & Architecture\n- Overview: Demo funcional para un auditor de EPS: se carga un PDF de solicitud, el sistema extrae campos con OCR + LLM, consulta un historial de paciente simulado (vía API FHIR o muestra en JSON), empareja con guías clínicas locales y devuelve en pantalla una recomendación aprobar/rechazar con su evidencia resaltada y un score de confianza. El auditor puede ‘Aceptar’, ‘Rechazar’ o ‘Escalar’ con un clic.\n- Tech Minimal: Frontend React liviano, backend Python sobre FastAPI, modelo de clasificación fine‑tuned Llama 3.1 8B corriendo en una VM de AWS con GPU T4, base de datos PostgreSQL para logs. Para la demo se usa un set fijo de 20 casos históricos ya resueltos.\n\n### External Research Hooks\n- INEI – Encuesta Nacional de Hogares (ENAHO) 2022: cobertura de seguros de salud privados (~3.7 % de la población, 1.22M personas).\n- MEF – Presupuesto público y gasto en salud; informes de ejecución presupuestaria del SIS y transferencias a EPS.\n- BCRP – Participación del gasto en salud en el PBI (5.5 % en 2022) y desagregación público‑privada.\n- SUSALUD – Registro de EPS, número de afiliados y reclamaciones de autorizaciones denegadas.\n- MINSA – Guías de práctica clínica oficiales, tablas de CIE-10 adaptadas y normativas de autorización.\n\n---\n\n## Stage 1 — Current Alternatives\nThe prior authorization automation market in Latin America is in its infancy, with no clear leader. The primary alternative remains manual review, which is slow and costly. Global AI players like Cohere Health and Olive show interest in the region, while BPOs like Sutherland leverage existing relationships. Internal EPS initiatives pose a threat if they succeed. The startup's main advantage is its outcome-based pricing and local focus, but speed to market is critical as competitors loom.\n\n- alt1: EPS manual medical audit teams (Incumbent manual process) — The current standard: teams of medical auditors manually review each authorization request, taking 30-120 min, with no automation beyond basic claim systems.\n- alt2: AuthFast (Direct AI competitor (early-stage)) — A Chilean startup offering AI-driven prior authorization for LatAm insurers, focusing on speed and guideline adherence.\n- alt3: Cohere Health (Global AI entrant) — US-based leader in prior authorization AI, recently announced pilot with a Mexican insurer, potential expansion to Andean region.\n- alt4: Olive AI (Global AI entrant) — Formerly focused on RPA, now pivoting to prior auth automation; exploring international markets after US adoption.\n- alt5: Sutherland Global Services (BPO with AI augmentation) — Large BPO offering claims processing services to payors, incorporating AI to reduce manual effort; existing contracts with LatAm insurers.\n- alt6: Cognizant Health (BPO/Consulting) — Provides end-to-end healthcare administration outsourcing, including prior auth, using a mix of onshore and offshore teams plus light automation.\n- alt7: EPS internal RPA initiatives (Internal workaround) — Some EPS (e.g., Rimac) are experimenting with robotic process automation to pre-fill fields and apply simple rules, reducing review time marginally.\n- alt8: Google Document AI / Rossum (Generic AI adaptation) — General-purpose document understanding tools that could be configured for prior auth, but require significant medical domain customization.\n- alt9: Doctoralia / Mediktor (Adjacent healthtech) — Telehealth and symptom checkers that could integrate insurance auth workflows, but not core focus.\n- alt10: Accenture Health Consulting (Consulting-led automation) — Custom builds AI solutions for payors globally, including prior auth, but at high cost and long implementation.\n- alt11: Open-source LLM-based internal tool (In-house AI adoption) — Some insurers are exploring using GPT-4 or similar LLMs to build internal approval recommendation engines with prompt engineering.\n- alt12: Regulatory simplification (Market shift) — If MINSA (Peru) or other regulators mandate standardized clinical guidelines and electronic prior auth with approved algorithms, reducing the need for custom AI.\n- alt13: Peer-to-peer physician review networks (Alternative model) — Platforms where treating physicians get quick peer reviews from specialists within the insurer's network, bypassing traditional audit teams.\n- alt14: Teleperformance Health (BPO alternative) — Another large BPO with a healthcare division that can handle manual prior auth with some digital tools, competing on labor cost.\n- alt15: Do-nothing (tolerate status quo) (Inaction) — EPS leadership decides not to invest in automation, accepting the current slow turnaround times and high operational costs.\n\n### Competitor Signal Scores (deal-sourcing-signals taxonomy)\n| Competitor | Hiring | Funding | Product | Team | Market | Tech | Score | Class |\n|---|---:|---:|---:|---:|---:|---:|---:|---|\n| Cohere Health | 8 | 9 | 8 | 9 | 7 | 8 | 83.0 | MOVE_FAST |\n| Sutherland Global Services | 7 | 6 | 5 | 6 | 8 | 4 | 61.5 | MOVE_FAST |\n| EPS internal RPA initiatives | 4 | 3 | 3 | 4 | 5 | 2 | 35.5 | MONITOR |\n| AuthFast | 6 | 5 | 6 | 7 | 6 | 6 | 59.0 | ENGAGE |\n| Manual audit teams (status quo) | 3 | 1 | 1 | 5 | 10 | 1 | 30.0 | MONITOR |\n\n## Stage 2 — Market Gaps\nRecommended gap: g-1\n\n- g-1: Localized AI for Peruvian Medical Context | Pain: High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides. | Evidence: Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.\n- g-2: Performance-Based Pricing with ROI Transparency | Pain: High – Insurers face fixed costs with manual staff or BPOs regardless of volume, and are skeptical of AI's ROI. Per-authorization pricing aligns cost with value. | Evidence: Willingness-to-pay surveys from 5 EPS CFOs for a per-auth model; cost benchmarking of manual vs AI; a pilot that demonstrates cost savings.\n- g-3: Seamless Integration with Legacy Systems | Pain: High – EPSs run on aging IT infrastructures, making heavy integrations a multi-year project that stalls automation. A lightweight API-first approach can bypass this bottleneck. | Evidence: Technical feasibility study with 2–3 common EPS claim platforms; prototype integration that processes mock requests in real-time from a test EHR.\n- g-4: Explainable & Auditable AI Decisions | Pain: High – Insurers face medico-legal risks if they deny care without clear justification. Existing AI tools often lack transparency, making them unsafe for Peruvian regulators. | Evidence: Review of regulatory requirements for authorization justifications; comparative analysis of explainability features in competitor tools; mock audit trail demonstration to legal teams.\n- g-5: Ultra-Fast Authorization for Patient Satisfaction | Pain: Medium-High – Long waits (days) cause patient suffering and drop-off in care. Instant decisions could be a major differentiator for insurer NPS. | Evidence: Time-motion study of current manual process; benchmark of AI vs manual on latency; pilot with a small insurer measuring patient satisfaction improvements.\n- g-6: Continuous Learning from Peruvian Data | Pain: Medium – Initial AI accuracy may be lower without local data, but a model that improves over time will widen the moat. | Evidence: Data-sharing agreements to test model improvement over 6 months; technical plan for privacy-preserving fine-tuning; initial accuracy baseline.\n- g-7: Hybrid Human-AI Escalation for Complex Cases | Pain: Medium – High-risk or rare cases still need human judgment, but routing them intelligently reduces cost while maintaining quality. | Evidence: Analysis of what percentage of cases are truly complex; mock pilot with AI recommending escalation; partnership interest from on-call physician services.\n\n## Selected Gap\n**g-1: Localized AI for Peruvian Medical Context**\n\nPain: High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.\n\nWhy now: Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.\n\nRisk: Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications.\n\n---\n\n## Stage 3B — Stakeholder Simulation\nMiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.\n\n### Personas\n- P1: End user (target customer) | Lens: Daily workflow pain, speed, usability, trust. Would I use this weekly? | Success: The product saves meaningful time or reduces a real stress in a repeated task.\n- P2: Economic buyer with budget | Lens: Budget ownership, ROI timeline, procurement friction, urgency, approval chain. | Success: The product clearly pays for itself this quarter or protects a critical metric I own.\n- P3: Operations / implementation owner | Lens: Integration complexity, change management, support load, reliability, rollout risk. | Success: The workflow fits existing operations without creating extra coordination cost.\n- P4: Incumbent competitor or free substitute | Lens: How does the status quo, a free tool, or a large vendor defend the account? | Success: The startup has a wedge incumbents cannot or choose not to copy quickly.\n- P5: YC / LATAM VC partner | Lens: Market size (must be >$50M SAM in 5 years), founder insight, venture scale path. | Success: The idea has a sharp initial wedge and a defensible path to $10M ARR.\n- P6: Technical builder / CTO | Lens: Data access, model quality, COGS, failure modes, defensibility, learning loop. | Success: The system can be built cheaply, reliably, and improves with usage data.\n- P7: Peruvian SME buyer (informal sector) | Lens: Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot? | Success: The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.\n- P8: Peru institutional / public buyer (government or university) | Lens: UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card. | Success: The product fits within an existing budget code and avoids a new procurement process.\n- P9: Peruvian Series A investor (local VC or family office) | Lens: Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1. | Success: The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.\n- P10: AI adoption skeptic (conservative professional in Peru) | Lens: Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial). | Success: The AI outputs are accurate, explainable, and I can verify them before acting.\n\n### Persona Scores (parallel simulation)\nAggregate: 0.405 / gate=0.6 — WARN\n\n- **P1 End user (target customer)** score=0.3 | As a medical auditor, reducing manual review from hours to seconds sounds great, but I'm worried about the AI misinterpreting nuanced clinical guidelines or missing critical patient history, which could put patients at risk and increase my liability. | Concern: If the AI makes a wrong recommendation on a high-complexity case like an oncology surgery, the delay or denial could harm the patient; I need to trust its decisions implicitly before reducing human oversight. | Need: Show me a blinded validation study comparing AI recommendations against a panel of expert auditors on at least 1,000 historical Peruvian prior auth cases, with false negative rate < 1%.\n- **P10 AI adoption skeptic (conservative professional in Peru)** score=0.3 | Interesting in theory, but in Peru, where AI adoption is below 10% and manual processes are the norm, trusting an algorithm with life-critical medical authorizations seems reckless. The idea targets a real bottleneck, but I'd need ironclad proof that it won't cause harm. | Concern: If the AI misinterprets a local guideline or makes a false rejection for a cancer medication, the patient suffers and the EPS faces lawsuits—undoable damage in our distrustful environment. | Need: Show me a pilot with Rimac or Pacifico where your AI processed 10,000 historical authorization cases with zero false rejections and 99.5% accuracy, with every decision fully explainable in Spanish and validated by a human auditor.\n- **P2 Economic buyer with budget** score=0.4 | The idea is compelling because it promises immediate ROI by reducing manual audit time and speeding up high-stakes authorizations. However, as a budget owner, I'm wary of the procurement friction with large EPS and the integration complexity with legacy systems, which could delay ROI beyond this quarter. | Concern: The single sharpest objection is procurement friction and integration risk: Rimac, Pacifico, and Sanitas are large, slow-moving organizations with complex legacy systems, and any integration delay could push ROI beyond the quarter I need to justify the budget. | Need: I need a concrete pilot agreement with one EPS (e.g., Rimac) showing a 30-day deployment, measurable reduction in manual review hours, and a clear ROI calculation per authorization that proves cost savings exceed your fee within the quarter.\n- **P3 Operations / implementation owner** score=0.6 | The idea addresses a real pain point, but integrating with three different legacy systems across EPS is a massive operational challenge that could derail rollout. The promise of only 5-10% human intervention requires near-perfect accuracy in high-stakes oncology cases, which is hard to achieve and maintain. | Concern: Integration complexity with diverse legacy systems (each EPS likely uses different data formats, APIs, or even manual processes) will create significant coordination overhead and latency, risking the 'seconds' response time promise. | Need: A detailed integration plan with one EPS showing how the AI will connect to and extract data from their actual legacy system, including a demo with 100 real cases audited by their medical directors.\n- **P4 Incumbent competitor or free substitute** score=0.6 | This is a smart niche play—local adaptation is a real barrier for global incumbents like us. However, EPSs are notoriously slow to change, and we already have relationships and contracts in place. | Concern: If EPSs perceive integration with legacy systems as too risky or costly, they may stick with current manual processes or existing vendors. | Need: Show a pilot result with one EPS that proves the system processes real requests in under 10 seconds with ≥95% accuracy, and that the EPS's internal stakeholders approve scaling.\n- **P5 YC / LATAM VC partner** score=0.6 | The idea targets a clear, painful bottleneck in Peruvian healthcare with a localized AI solution, and the per-authorization pricing aligns incentives well. However, I worry that the total addressable market in Peru might be too small to reach $10M ARR within 5 years, and the sales cycles with large EPS could be long and unpredictable. | Concern: Market size: Peru's population is ~33M; even if high-complexity authorizations are numerous, the SAM may fall short of $50M in 5 years, making venture-scale returns difficult. | Need: A bottoms-up TAM/SAM analysis for high-complexity prior authorizations in Peru, plus a signed letter of intent or pilot commitment from at least one of the three targeted EPS.\n- **P6 Technical builder / CTO** score=0.3 | The idea targets a real pain point, but as a CTO I see massive integration challenges with legacy systems and data quality issues. The COGS for building and maintaining custom integrations for each EPS could quickly erode margins. | Concern: Accessing and ingesting clean, structured historical authorization data from fragmented legacy systems is the single biggest risk; without it, model accuracy and reliability are unattainable. | Need: A working proof-of-concept that extracts structured data from at least one EPS legacy system (e.g., Rimac) for 1,000+ historical prior auth cases, complete with ground truth outcomes and error analysis.\n- **P7 Peruvian SME buyer (informal sector)** score=0.3 | As a small business owner, I just want my employees' authorizations approved quickly without extra costs or hassle. This AI sounds like it's for big EPS companies, not for me—I already manage everything via WhatsApp and Excel, and I pay cash or Yape. If this means I'll face higher premiums or need to use a digital platform, I'm out. | Concern: Will this increase my costs or force me to interact with a bot instead of my usual WhatsApp contact? I don't trust digital systems for medical decisions. | Need: Show me that EPS using this won't raise my premiums or require me to change my simple cash-based payment and WhatsApp communication.\n- **P8 Peru institutional / public buyer (government or university)** score=0.0 | This startup targets private health insurers (EPS), not public institutions. Our procurement cycles and zero-discretionary budget constraints do not apply here. | Concern: No direct alignment with public sector needs or existing budget codes (e.g., for MINEDU or PRODUCE). | Need: A version of the product tailored for public health entities (e.g., MINSA, ESSALUD) that fits within an existing public procurement category.\n- **P9 Peruvian Series A investor (local VC or family office)** score=0.65 | The idea addresses a clear and painful bottleneck in Peru's healthcare system, and the local-first AI approach is a strong moat. However, as a local investor, I worry about the total addressable market: with only 3 major EPS players, can you realistically hit $1M ARR? And even if you do, the path to an international co-investor is unclear unless you prove replicability in other LATAM markets. | Concern: The unit economics and scalability: how many authorizations per month per EPS are needed to justify the cost, and can the model adapt to different countries' guidelines without massive retraining? | Need: Show me a pilot with one EPS that demonstrates <10% human override rate, at least 80% cost reduction in audit labor, and a clear unit cost per authorization that can be scaled to other LATAM insurers.\n\n\n\n### Simulation Consensus\n- Strongest signal: Proceed only if target users describe a recent, repeated, expensive problem in their own words.\n- Weakest assumption: Simulation scores are LLM estimates; live interviews must confirm.\n- Adoption path: Start with a narrow concierge workflow, then productize the repeated steps.\n- Pricing test: Ask for a small paid pilot tied to the buyer's success metric.\n- Decision pressure: Conditional go\n\n### Recommended Interventions\n- Narrow the customer segment until the end user and buyer are obvious.\n- Run interviews around recent behavior, not opinions about the idea.\n- Prototype the outcome manually before building a scalable product.\n- Track what data or workflow insight compounds with each use.\n\n---\n\n## Next Experiments\n- Run accuracy test on 500 historical cases from a partner EPS, measuring approval rate alignment.\n- Interview 10 medical directors at Peruvian EPS to quantify error rates and willingness to adopt.\n- Build a demo that processes real-time requests with manual audit comparison.\n- Develop a cost model for per-authorization pricing with break-even analysis.\n\n## Kill Criteria\n- Accuracy below 80% vs human auditors on high-complexity cases.\n- No EPS willing to sign a pilot within 3 months.\n- Regulatory requirement for human-in-loop on all cases, eliminating value proposition.\n- Cost per authorization exceeds 50% of manual processing cost.\n"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-06-21T17:03:04.743488+00:00",
+      "stage": "created",
+      "message": "Pipeline state initialized."
+    },
+    {
+      "at": "2026-06-21T17:03:31.180656+00:00",
+      "stage": "stage0_classify",
+      "message": "Artifact 'stage0_classify' updated."
+    },
+    {
+      "at": "2026-06-21T17:04:43.372541+00:00",
+      "stage": "stage1_research",
+      "message": "Artifact 'stage1_research' updated."
+    },
+    {
+      "at": "2026-06-21T17:05:38.977187+00:00",
+      "stage": "stage2_gaps",
+      "message": "Artifact 'stage2_gaps' updated."
+    },
+    {
+      "at": "2026-06-21T17:06:06.673679+00:00",
+      "stage": "stage2b_iterations",
+      "message": "Artifact 'stage2b_iterations' updated."
+    },
+    {
+      "at": "2026-06-21T17:06:39.147231+00:00",
+      "stage": "stage3_validations",
+      "message": "Artifact 'stage3_validations' updated."
+    },
+    {
+      "at": "2026-06-21T17:06:39.151906+00:00",
+      "stage": "stage3_winner_iteration",
+      "message": "Artifact 'stage3_winner_iteration' updated."
+    },
+    {
+      "at": "2026-06-21T17:06:39.153972+00:00",
+      "stage": "stage3_validation",
+      "message": "Artifact 'stage3_validation' updated."
+    },
+    {
+      "at": "2026-06-21T17:06:49.716814+00:00",
+      "stage": "stage3b_simulation",
+      "message": "Artifact 'stage3b_simulation' updated."
+    },
+    {
+      "at": "2026-06-21T17:08:52.646956+00:00",
+      "stage": "stage3c_dossier",
+      "message": "Artifact 'stage3c_dossier' updated."
+    },
+    {
+      "at": "2026-06-21T17:08:53.212125+00:00",
+      "stage": "stage4_report",
+      "message": "Artifact 'stage4_report' updated."
+    },
+    {
+      "at": "2026-06-21T17:08:53.217801+00:00",
+      "stage": "complete",
+      "message": "Report written to E:\\github\\hw7_ds\\ai\\validation_agents\\outputs\\eps-admin-ai-reemplazamos-el-equ-6af34a33a3\\report.md"
+    }
+  ]
+}

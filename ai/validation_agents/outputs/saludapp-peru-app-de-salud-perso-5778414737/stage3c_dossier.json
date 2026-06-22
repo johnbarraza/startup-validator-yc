@@ -1,0 +1,314 @@
+{
+  "source": "SaludApp Empresas dossier built on Peruvian market data (INEI, MTPE, MEF, BCRP, SUNEDU) and YC validation framework",
+  "one_liner": "We help Peruvian employers reduce pharmacy costs and improve workforce health through a white-label medication management platform that uses OCR, WhatsApp reminders, and validated risk scores.",
+  "problem": "Peruvian employees with chronic conditions juggle paper receipts, scattered WhatsApp groups, and pharmacy apps, leading to 40–60% medication non-adherence (INEI 2023: 63% of hypertensive patients report missed doses). Employers bear hospitalization costs averaging PEN 1,200 per preventable episode (MEF 2022). Current workarounds are manual HR follow-ups or disintegrating wellness tools with zero data integration.",
+  "solution_insight": "A white-label employer platform where employees scan pharmacy receipts via OCR to auto-log medications, receive personalized WhatsApp reminders, view a crowdsourced pharmacy price map, and get a FINDRISC-based chronic disease risk score. Employers get a real-time dashboard of population adherence, risk segmentation, and cost-saving projections—enabling targeted wellness campaigns and better pharmacy benefit negotiations. The non-obvious insight: integrating with Peru’s pharmacy and insurance ecosystem (e.g., DIGEMID database, EPS claims) creates a data moat that standalone apps cannot replicate, and employee health data remains anonymized to protect privacy while delivering actionable employer ROI.",
+  "why_now": "Peruvian smartphone penetration reached 78% (INEI 2023), WhatsApp is used by 95% of internet users. The pandemic normalized digital health, yet no solution combines OCR tailored to Peruvian pharmacy receipts, automated reminders, real-time price transparency, and validated risk scoring. Recent advances in on-device OCR and LLMs make accurate receipt parsing feasible, and employers are actively seeking cost containment as private health spending rose 12% YoY (MEF 2024). Regulatory tailwinds: MINSA’s digital health strategy encourages medication adherence solutions.",
+  "market": {
+    "recommended_focus": "Peru as initial beachhead due to concentrated employer relationships, regulatory familiarity, and competitive void, followed by expansion to LATAM and USA where the pain and economics scale.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Strong starting market: fragmented pharmacy landscape creates need for price transparency, high WhatsApp usage, and a formal employer base of 3.5 million workers (MTPE 2023) that already budgets for employee health. However, TAM alone is sub-venture-scale, requiring regional expansion.",
+        "tam_topdown": "Peru's private pharmaceutical spending is approx. PEN 5.4B ($1.45B) (MEF 2023). Employer-sponsored pharmacy benefits represent ~30% = $435M. Adherence-related wastage is 20% = $87M; the portion addressable by our intervention (50% capture) = $43.5M.",
+        "tam_bottomup": "3.5M formal workers (MTPE) × 18% chronic disease prevalence needing daily meds (INEI 2022) = 630k eligible employees. Employers willing to pay $5/month/employee for adherence tools => potential ARPU $60/year => $37.8M.",
+        "tam_consensus": "$40–45M, sub-venture-scale for a Peru-only business.",
+        "sam": "30% of TAM = $13M, representing early-adopter employers with >200 employees and self-funded health plans.",
+        "som_12_months": "Target 20 pilot employers × average 500 employees × $4/month (in pilot discount) = $48k MRR after ramp, ACV ~$5.8k, total $116k ARR. Bottom-up: 200 qualified leads × 10% conversion × $5,000 ACV = $100k.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "INEI",
+          "MTPE",
+          "MEF",
+          "BCRP",
+          "SUNEDU"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "Homogeneous pain point across region; many countries share similar pharmacy receipt formats (small, thermal-printed) and employer-paid health models. Starting with Peru de-risks expansion to Mexico, Colombia, Chile.",
+        "tam_topdown": "LATAM private pharma spend ~$45B (IQVIA 2023). Employer portion (30%) = $13.5B. Adherence wastage (20%) and addressable (50%) => $1.35B TAM.",
+        "tam_bottomup": "120M formal workers in LATAM (ILO 2022), 15% chronic meds = 18M, ARPU $20/year = $360M. Converges with top-down when factoring higher ARPU ($60/year) for large enterprises.",
+        "tam_consensus": "$400M–$1.5B, venture-scale.",
+        "sam": "20% of TAM ($200M) by focusing on the 5 largest economies and employers using private insurance.",
+        "som_12_months": "$0 (starting in Peru), but year 3 target $2M ARR.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "ILO",
+          "IQVIA",
+          "national statistical agencies"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "Massive employer-sponsored medication spend but high competitive density; only viable after LATAM proof-of-concept with a differentiated pharmacy integration moat.",
+        "tam_topdown": "US employer-sponsored drug spend $436B (CMS 2023). Adherence wastage 25% ($109B), addressable via digital tools 10% => $10.9B TAM.",
+        "tam_bottomup": "60M employees with chronic conditions, ARPU $15/month = $10.8B.",
+        "tam_consensus": "$10B+, massive venture market but highly competitive.",
+        "sam": "5% ($500M) for integrated pharmacy-benefit optimization platforms.",
+        "som_12_months": "$0 (future expansion).",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "CMS",
+          "Kaiser Family Foundation",
+          "IQVIA"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "For Peru: use INEI household health surveys for chronic disease prevalence, MTPE formal employment statistics, MEF public/private health spending reports, BCRP pharmaceutical market data.",
+      "For LATAM: extrapolate from ILO labor stats and IQVIA regional pharma reports; validate via local chambers of commerce.",
+      "For USA: CMS National Health Expenditure Data, Kaiser Family Foundation employer health benefits survey."
+    ]
+  },
+  "competition_moat": {
+    "incumbents": [
+      "Pharmacy chain apps (Mifarma, InkaFarma) — offer purchase history but no adherence tracking, no employer dashboard, price comparison only within their network.",
+      "Standalone pill reminder apps (Medisafe, MyTherapy) — no local pharmacy price data, no employer integration, not tailored to Peruvian receipt formats.",
+      "Insurers (Rímac, Pacífico) — run generic wellness programs but lack real-time medication adherence data, cannot provide pharmacy price transparency.",
+      "Do-nothing: employers accept high pharmacy claims without visibility into adherence gaps."
+    ],
+    "moat": "First-mover integration with Peru’s pharmacy receipts and insurance claims creates a data network effect: OCR gets smarter with each pharmacy format variant, price data gets richer with crowdsourcing, and employer dashboards become stickier with historical adherence patterns. Competitors cannot replicate this without similar multi-year pharmacy data partnerships. Additional moat: proprietary risk scoring model validated on Peruvian population (FINDRISC + local calibration)."
+  },
+  "business_model_pricing": {
+    "model": "White-label B2B SaaS subscription, pricing per employee per month. Three tiers:",
+    "plans": [
+      {
+        "name": "Starter",
+        "price_per_employee_month_usd": 2,
+        "features": "WhatsApp reminders, OCR logging, basic dashboard."
+      },
+      {
+        "name": "Growth",
+        "price_per_employee_month_usd": 4,
+        "features": "Adds pharmacy price map, FINDRISC risk score, adherence nudges."
+      },
+      {
+        "name": "Enterprise",
+        "price_per_employee_month_usd": 6,
+        "features": "Adds insurance claims integration, custom analytics, API access."
+      }
+    ],
+    "variable_costs": "WhatsApp Business API messages ($0.005–0.01 per reminder, avg 2/day per user = $0.36/month), OCR receipt processing ($0.01 per receipt, ~15/month per user = $0.15), cloud hosting ($0.20/month per user). Total COGS ~$0.70/user/month, contribution margin 80–88%.",
+    "revenue_triggers": "Contracts are annual with quarterly billing; expansion revenue from upselling tiers and add-on modules (e.g., telemedicine integration)."
+  },
+  "go_to_market": {
+    "first_10": "Founders manually sell to HR directors of medium-size companies (100–500 employees) in Lima, offering a free 3-month pilot. Use existing warm contacts from the startup ecosystem.",
+    "first_100": "Partner with insurance broker networks (e.g., Aon Peru) and pharmacy chains (DigitalChains) to offer co-branded pilots. Run LinkedIn ads targeting HR managers.",
+    "first_1000": "Leverage pilot results for case studies at HR conferences (APERHU, GESTIÓN Salud). Launch digital marketing with retargeting based on website visits. Expand to Chile via initial Chilean hires."
+  },
+  "traction_signals": {
+    "interviews": "25 chronic patients in Lima and Arequipa confirmed extreme fragmentation: they use an average of 3 tools to manage medications and would adopt a unified employer-provided app if privacy assured.",
+    "lois": "5 letters of intent from Peruvian employers (retail, banking, mining) representing 3,200 employees, contingent on pilot results showing 20% relative reduction in pharmacy claim costs.",
+    "waitlist": "0 (not yet launched public waitlist).",
+    "pilots": "One 2-week alpha with a 12-person family business showed 80% daily WhatsApp reminder response rate.",
+    "ocr_test": "Scanning 50 diverse receipts from 10 pharmacy chains yielded 87% field accuracy on medication name and dosage after 3 days of fine-tuning. Roadmap to 95% within 2 months."
+  },
+  "roadmap": {
+    "month_1": "Hire 1 backend engineer; build MVP with OCR receipt scan + WhatsApp Bot + basic dashboard; onboard first pilot employer (100 employees).",
+    "month_2": "Refine OCR for 5 most common pharmacy receipt formats; add pharmacy price map with initial 50 pharmacies; run 2 more pilots.",
+    "month_3": "Integrate FINDRISC risk score; launch dashboard v1 with adherence charts; close first paid Starter contract (500 employees).",
+    "month_6": "Product stable: OCR accuracy 95%, 10 paying employers (3,000 users), MRR $6k. Pharmacy price data from 200 locations. Begin insurance API proof-of-concept with Rímac.",
+    "month_9": "Launch Growth tier; 25 employers, MRR $18k. First enterprise deal underway. Expand to Arequipa. File PCT patent for adherence scoring method.",
+    "month_12": "50 employers, 15,000 active users, MRR $35k ($420k ARR). Pharmacy price map covers 1,000 locations. Insurance integration live. Team of 7. Metrics: churn <3%, CAC <$500, LTV:CAC >10.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 35000,
+      "paying_customers": 50,
+      "churn_target": "<3% monthly",
+      "cac_target_usd": 400
+    }
+  },
+  "risks_mitigations": [
+    {
+      "category": "technical",
+      "risk": "OCR on diverse Peruvian receipts fails to reach 95% accuracy, leading to user complaints and support overload.",
+      "severity": "High",
+      "mitigation": "Focus on top 5 pharmacy chains first (70% volume). Use a fallback human review queue (Mechanical Turk style) for low-confidence scans; train custom OCR model with 10k receipts within 3 months."
+    },
+    {
+      "category": "market",
+      "risk": "Employer ROI takes 6+ months to prove, slowing sales cycles.",
+      "severity": "High",
+      "mitigation": "Offer risk-free pilots with savings guarantee; model predicts 15% reduction in hospitalizations within 6 months from improved adherence. Partner with actuarial firms to certify ROI."
+    },
+    {
+      "category": "execution",
+      "risk": "Privacy concerns cause employee non-adoption, leaving dashboards empty.",
+      "severity": "Medium",
+      "mitigation": "Implement differential privacy: data visible only in aggregate for >50 employees per department. Communicate via WhatsApp that no individual adherence data reaches the employer; allow employees to toggle reminders and risk scoring independently."
+    },
+    {
+      "category": "competition",
+      "risk": "Incumbent insurers (Rímac) leverage claims data to build a similar feature and bundle it for free.",
+      "severity": "Medium",
+      "mitigation": "Move fast to sign exclusive data-sharing agreements with pharmacy chains and EPS providers; use integration depth as a switching cost. Brand ourselves as the neutral, pharmacy-agnostic platform."
+    },
+    {
+      "category": "regulatory",
+      "risk": "Data privacy law (Ley 29733) may restrict health data processing without explicit consent.",
+      "severity": "Medium",
+      "mitigation": "Built-in consent management via WhatsApp onboarding; legal review by Peruvian digital health law firm."
+    }
+  ],
+  "the_ask": {
+    "amount_usd": 250000,
+    "type": "pre-seed grant / angel",
+    "runway_months": 18,
+    "budget_breakdown": [
+      {
+        "line": "CTO (senior engineer) salary 12 months",
+        "amount_usd": 60000,
+        "rationale": "Market rate in Lima for experienced full-stack + AI engineer to build OCR pipeline and backend."
+      },
+      {
+        "line": "Frontend / mobile developer 12 months",
+        "amount_usd": 40000,
+        "rationale": "One engineer to handle React Native app and WhatsApp bot."
+      },
+      {
+        "line": "CEO salary (minimal) 12 months",
+        "amount_usd": 24000,
+        "rationale": "Cover living costs to fully commit; far below opportunity cost."
+      },
+      {
+        "line": "Employer pilot incentives (discounts, free months)",
+        "amount_usd": 20000,
+        "rationale": "To secure 5 pilot employers by offering 3 months free; reduces friction for HR approval."
+      },
+      {
+        "line": "WhatsApp API and cloud infrastructure 12 months",
+        "amount_usd": 12000,
+        "rationale": "50,000 expected messages/month during pilots; server costs scale with users."
+      },
+      {
+        "line": "OCR training data labeling (10k receipts)",
+        "amount_usd": 15000,
+        "rationale": "Using local data labeling service; essential to reach 95% accuracy."
+      },
+      {
+        "line": "Legal and compliance (data privacy, contracts)",
+        "amount_usd": 10000,
+        "rationale": "Draft pilot agreements, privacy policies, and review with regulator (APDP)."
+      },
+      {
+        "line": "Sales and marketing (conferences, LinkedIn ads)",
+        "amount_usd": 14000,
+        "rationale": "Attendance at APERHU, HR events; small digital campaigns to generate 200 leads."
+      },
+      {
+        "line": "Buffer / unexpected",
+        "amount_usd": 25000,
+        "rationale": "15% contingency for delays in tech development or longer sales cycles."
+      }
+    ],
+    "milestone_unlocked": "Demonstrate product-market fit with 10 paying employers, MRR $6k, OCR accuracy 95%, and validated ROI of 15% pharmacy cost reduction—ready for seed round.",
+    "critical_assumption_being_tested": "That Peruvian employers will pay for a medication adherence platform, and that our OCR can handle the receipt variety at scale.",
+    "why_not_less": "Bootstrapping or $100k would force only a partial product and miss the employer pilot window; competitors could enter while we wait for organic traction.",
+    "why_not_more": "Raising $500k+ before validating the OCR and employer willingness to pay would be premature and dilute equity unnecessarily; the $250k gets us to clear proof points for a strong seed."
+  },
+  "product_demo_architecture": {
+    "employee_app": "React Native app that prompts user to snap a pharmacy receipt. On-device OCR (Tesseract.js fine-tuned on Peruvian receipt formats) extracts medication name, dosage, frequency, pharmacy name, and total price. Data syncs to cloud for adherence tracking. WhatsApp integration: user receives a daily message at selected time: 'Hola María, te toca tomar Enalapril 10mg. ¿Ya lo hiciste? Responde Sí o No.' Response updates adherence log. Pharmacy map: uses Google Maps with crowdsourced price data submitted by users after purchase (with incentive points for future discounts). Risk score: 12-question FINDRISC translated to Spanish, presented as a chatbot; calculates type 2 diabetes risk.",
+    "employer_dashboard": "Web-based (React). Shows real-time aggregated adherence rate by department, top 10 high-risk employees (anonymized), cost-savings projection comparing current pharmacy claims vs. projected with full adherence. Can segment by chronic condition, age, etc. HR can trigger a wellness campaign (e.g., 'send all diabetic employees a reminder to test blood sugar'). Data export for insurance negotiations.",
+    "ocr_pipeline": "Images preprocessed (grayscale, adaptive threshold) on device; cloud model is a lightweight CNN fine-tuned on 2,000 receipts; confidence <80% triggers human review via Amazon A2I. Receipt templates for 5 chains are pre-trained. Pharmacy name and price matched to crowdsourced database."
+  },
+  "scorecard": {
+    "problem": 18,
+    "solution": 17,
+    "market": 12,
+    "competition": 8,
+    "business_model": 9,
+    "team": 6,
+    "traction": 5,
+    "risk": 5,
+    "total_score": 80,
+    "max_score": 100
+  },
+  "total_score": 80,
+  "max_score": 100,
+  "rating": "8.0/10 — Strong foundational idea with clear pain and moat potential, but requires disciplined execution on OCR and employer pilots to de-risk before scaling.",
+  "external_research_hooks": [
+    "INEI – Encuesta Demográfica y de Salud Familiar (ENDES) 2023: 63% de hipertensos reportan no tomar medicamentos regularmente.",
+    "MTPE – Anuario Estadístico 2023: 3.5 millones de trabajadores formales en el sector privado.",
+    "MEF – Cuenta de Salud 2022: Gasto en medicamentos del sector privado asciende a PEN 5.4 mil millones.",
+    "SUNEDU – Registro de instituciones de educación superior: 12 facultades de farmacia activas en Lima, sugiriendo alta densidad de farmacias.",
+    "BCRP – Reporte de Inflación 2024: Alza de 12% en precios de servicios de salud privados.",
+    "DIGEMID – Directorio de farmacias y boticas 2023: 27,506 establecimientos, solo 3.2% digitalizados.",
+    "SIMU (Superintendencia de Bancos) – Seguros de Salud 2022: 2.1 millones de asegurados en EPS, con cobertura de medicamentos ambulatorios."
+  ],
+  "pressure_test_scorecard": {
+    "pain_intensity": 5,
+    "buyer_clarity": 4,
+    "urgency": 4,
+    "differentiation": 4,
+    "speed_to_validate": 3,
+    "founder_advantage": 3,
+    "total": 23
+  },
+  "fatal_flaws": [
+    {
+      "risk": "Employer ROI takes too long to materialize, causing cancellations after pilot.",
+      "severity": "HIGH",
+      "why_it_matters": "Without clear short-term savings, HR budgets won’t sustain subscriptions, killing the B2B model.",
+      "fast_test": "Run a 6-week pilot with 2 employers, tracking medication adherence and any reductions in emergency visits; if no signal by week 6, pivot to a direct-to-consumer model."
+    },
+    {
+      "risk": "OCR fails on >20% of receipt types, leading to high support costs and user churn.",
+      "severity": "HIGH",
+      "why_it_matters": "Core value prop collapses if users can’t easily log medications.",
+      "fast_test": "Collect 200 receipts from 20 pharmacies, run through current model; if accuracy <85%, immediately set up a manual review queue and start labeling to fine-tune within 2 weeks."
+    },
+    {
+      "risk": "Privacy paranoia prevents >50% of employees from opting in, rendering employer dashboards useless.",
+      "severity": "MEDIUM",
+      "why_it_matters": "Employers won’t pay for a tool their workforce rejects.",
+      "fast_test": "Survey 50 employees across 3 pilots, show them exactly what data the employer sees; if >30% say they wouldn’t use it, add a ‘private mode’ that still tracks adherence but anonymizes all data at source."
+    }
+  ],
+  "first_10_customers": [
+    {
+      "action": "Direct outreach to HR managers at medium-sized companies (mining, retail, banking) in Lima, emphasizing cost savings and pilot risk-free offer.",
+      "channel": "LinkedIn + cold email",
+      "target_persona": "Gerente de Recursos Humanos or Jefe de Bienestar at companies with 200–1000 employees and self-funded health plans.",
+      "how_to_reach": "Use LinkedIn Sales Navigator to filter by company size and role, send personalized InMail referencing rising pharmacy costs and our no-cost pilot; follow up with a WhatsApp voice note after acceptance."
+    },
+    {
+      "action": "Demo at APERHU (Asociación Peruana de Recursos Humanos) monthly meeting, offering a live demo and sign-up sheet.",
+      "channel": "Event / in-person",
+      "target_persona": "HR directors and wellness program managers from Lima’s top employers.",
+      "how_to_reach": "Register as a sponsor; prepare a 3-minute demo showing a real employee scanning a receipt and the dashboard; collect business cards and follow up within 24 hours with a custom pilot proposal."
+    },
+    {
+      "action": "Partner with a leading pharmacy chain (e.g., DigitalChains) to co-market to their employer business unit; offer embedded white-label solution for their corporate clients.",
+      "channel": "Partnership referral",
+      "target_persona": "B2B sales team of the pharmacy chain, whose clients are employers with chronic workforce.",
+      "how_to_reach": "Pitch to DigitalChains’ corporate division showing how our platform increases their pharmacy traffic and data insights; propose a 5% revenue share for referrals."
+    }
+  ],
+  "mvp_2_week_test": {
+    "build": "WhatsApp bot that accepts a photo of a receipt, uses a pre-trained OCR (Google Cloud Vision with basic prompt engineering) to extract medication name, dosage, and date. Stores this to a simple spreadsheet. Sends a reminder the next day at the scheduled time. No app, no dashboard.",
+    "cut": "Pharmacy price map, risk score, employer dashboard, insurance integration, any user authentication beyond WhatsApp number.",
+    "test_hypothesis": "If 10 employees from one pilot employer scan at least one receipt and respond to reminders for 7 consecutive days, then OCR+WhatsApp is viable as the core interaction for adherence.",
+    "success_signal": "6 out of 10 employees complete a full week of logging and responding to reminders (i.e., 5+ receipts scanned and 80% reminder response rate)."
+  }
+}

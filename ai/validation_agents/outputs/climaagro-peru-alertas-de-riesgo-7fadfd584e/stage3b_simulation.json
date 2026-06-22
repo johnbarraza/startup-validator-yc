@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "ClimaAgro provides a B2B2C hyper-local climate alert system for agribusiness buyers sourcing from smallholder farmers in Peru. Using satellite data (NASA CHIRPS, MODIS), climate models, and SENAMHI data, we deliver farm-specific weather risk alerts and actionable advice via WhatsApp 7-14 days before events like frost, drought, or heavy rains. The buyer is an agribusiness—a coffee exporter, cacao cooperative, or quinoa processor—who pays a subscription to protect their supply chain. They onboard their farmer networks, improving crop resilience, reducing procurement cost volatility, and strengthening farmer loyalty.",
+  "selected_gap": {
+    "id": "gap_1",
+    "title": "Personalized, hyper-local climate alerts via WhatsApp",
+    "pain": "Small farmers depend on generic forecasts or informal word-of-mouth, leading to poor decisions and crop losses. No existing service delivers actionable, parcel-specific advice through an accessible, low-tech channel like WhatsApp.",
+    "why_now": "WhatsApp penetration in rural Peru exceeds 80%; El Niño intensifies climate volatility; insurers and cooperatives seek tools to reduce loss ratios and improve farmer engagement.",
+    "evidence_needed": "Pilot with 500 farmers to measure reduction in crop loss versus control group; message open rates and action compliance data.",
+    "priority": "High",
+    "risk": "Low"
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "I like the concept in theory—anything that helps my supplier farmers avoid weather losses is good for my supply chain—but I'm skeptical whether farmers will actually act on WhatsApp alerts, especially when advice is generic or arrives too late. Also, I worry about the reliability of satellite-based predictions for small, irregular parcels in the Andes.",
+      "concern": "If farmers don't trust or follow the advice, I'm wasting my subscription money and getting no supply chain benefit.",
+      "evidence_request": "Show me a clear reduction in crop loss (at least 15% vs. control) from a pilot with at least 200 farmers who received actionable alerts and followed them, along with proof that farmers found the advice timely and easy to implement.",
+      "score": 0.55,
+      "score_rationale": "Promising but unproven; the weekly pain of procurement volatility is real, but without hard evidence of farmer compliance and loss reduction, I'm not prepared to pay a subscription.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "Interesting concept, but I'm wary of relying on AI-generated alerts for critical farming decisions. In Peru, we don't trust black-box models—they often fail in our unique microclimates, and farmers need advice they can verify against their own knowledge.",
+      "concern": "The AI's predictions for frost or drought 7-14 days out in the diverse Peruvian terrain are likely too unreliable; a single false alert could cause unnecessary panic or costs for farmers who act on it.",
+      "evidence_request": "Show me a controlled pilot with at least 500 farmers where you can demonstrate a statistically significant reduction in crop losses compared to a control group, with all false and missed alerts documented and explained.",
+      "score": 0.3,
+      "score_rationale": "I'm only slightly convinced because the problem is real and WhatsApp reach is high, but the trust deficit in AI accuracy for hyper-local weather is too large without solid proof.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "Climate volatility is a real pain point, but I need to see immediate ROI. A subscription for alerts might help, but onboarding hundreds of farmers is slow and costly—I can't justify spending budget unless I see direct cost savings or supply protection within this quarter.",
+      "concern": "The pilot with 500 farmers may not generate enough cost savings or risk reduction within a single quarter to justify a full subscription, given the time needed for onboarding and behavior change.",
+      "evidence_request": "A controlled pilot that shows at least a 15% reduction in crop loss costs for the buyer (e.g., from reduced procurement price spikes) within one harvest cycle (quarter), with farmer compliance rates above 70%.",
+      "score": 0.55,
+      "score_rationale": "The idea addresses a real urgency (El Niño), but the ROI timeline is uncertain and procurement friction is high, making it a marginal fit for a budget-constrained buyer needing quarterly payback.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "Hyper-local alerts via WhatsApp are compelling for reach, but integrating into agribusiness workflows will be messy—onboarding farmers, validating parcel data, and ensuring compliance will generate heavy support loads and coordination overhead that could negate supply chain gains.",
+      "concern": "The support burden and change management required for agribusinesses to onboard and train farmers, while ensuring consistent message compliance, will likely outweigh the benefits, especially if alerts demand specific actions that conflict with traditional practices.",
+      "evidence_request": "A detailed operational plan for onboarding 500 farmers, including estimated person-hours for the agribusiness and support team, plus pilot results showing crop loss reduction without increasing coordination costs.",
+      "score": 0.3,
+      "score_rationale": "High operational complexity and support load for hyper-local alerts in smallholder contexts create unacceptable rollout risk without proven low-cost integration.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "As a large agri-tech platform like Climate FieldView, I already provide field-level weather insights, but my platform is more comprehensive—integrating soil data, crop models, and prescriptions. ClimaAgro's reliance on WhatsApp and simple alerts might be a temporary advantage, but I can easily add WhatsApp notifications to my existing platform and leverage my larger dataset. The key differentiator—hyper-local advice—is not unique; it's a feature, not a business model.",
+      "concern": "The startup's dependence on a single communication channel (WhatsApp) and a narrow geographical focus makes it easy for incumbents to replicate the core feature and outcompete with superior data integration and existing farmer relationships.",
+      "evidence_request": "Show me a pilot where the crop loss reduction is at least 20% compared to my platform's users, and that the cost of acquiring farmers through buyers is lower than my customer acquisition cost.",
+      "score": 0.3,
+      "score_rationale": "While the idea addresses a real pain point, incumbents can easily copy the WhatsApp feature and leverage broader data and existing relationships to render the startup's advantage fleeting.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "Interesting B2B2C model leveraging WhatsApp for hyper-local alerts, but Peru's smallholder agriculture market may be too small to reach $50M SAM in 5 years. The wedge is sharp, but venture-scale growth likely requires rapid expansion across Latin America, which introduces significant execution risk.",
+      "concern": "Market size may be insufficient for venture-scale returns; Peru's total pool of agribusiness buyers is limited and ARPU likely low, making it hard to reach $10M ARR without massive geographic scaling.",
+      "evidence_request": "Show that the total addressable market in Peru alone exceeds $50M or provide a concrete expansion plan to at least three other Latin American countries with pilot commitments.",
+      "score": 0.4,
+      "score_rationale": "Sharp wedge but questionable market size for venture-scale; need proof of larger TAM or faster expansion path to justify investment.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "The idea leverages accessible channels and open data, but integrating multiple satellite sources and local models into hyper-local, actionable alerts is technically challenging and costly. The reliance on publicly available data limits defensibility, and COGS for data processing and storage could be high without clear economies of scale.",
+      "concern": "Data quality and model calibration for hyper-local forecasts across Peru's diverse microclimates is the sharpest risk—errors could erode farmer trust and nullify the value proposition.",
+      "evidence_request": "A pilot with 500 farmers demonstrating a statistically significant reduction in crop loss (e.g., 15%+ vs control) and >80% message open rates, validated through independent agronomic assessment.",
+      "score": 0.35,
+      "score_rationale": "The idea addresses a real need but faces high technical execution risk, low defensibility, and uncertain COGS, making it unconvincing from a build perspective.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "Hyper-local alerts sound useful for my farmers, but I'm skeptical about the accuracy and whether they'll actually follow the advice. I need to see real proof that this reduces my procurement losses before I spend cash on a subscription via Yape or Plin.",
+      "concern": "Data accuracy and farmer trust: if alerts are wrong even once, farmers will ignore them, and I waste my investment.",
+      "evidence_request": "A pilot with 500 farmers showing at least 20% reduction in crop loss from frost/drought compared to a control group, with documented farmer compliance to the alerts.",
+      "score": 0.4,
+      "score_rationale": "The idea addresses a real pain point, but without proven accuracy and farmer adoption, I cannot justify the cost from my tight cash flow.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "As a public institution, we cannot directly subscribe to a B2B2C service for private agribusinesses. Our procurement is bound to predefined budget codes and lengthy cycles, and this product does not fit any existing line item without a new procurement process that would take 6-18 months.",
+      "concern": "The startup targets the wrong buyer: private agribusinesses, not public agencies. Even if indirect benefits exist, we have zero discretionary budget and cannot justify a new subscription without ministerial approval and alignment with programs like school feeding or agricultural extension.",
+      "evidence_request": "Demonstrate how ClimaAgro can be procured under an existing budget code (e.g., 'Servicios de información agroclimática') or through a framework agreement, and show a precedent of a Peruvian public institution purchasing a similar service without a new tender.",
+      "score": 0.15,
+      "score_rationale": "The product is misaligned with public procurement constraints and target customer, resulting in a very low likelihood of adoption by public institutions.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "I like the B2B2B model and use of WhatsApp, which aligns with farmer accessibility. However, the Peruvian agribusiness market is small and concentrated, so landing a single large buyer is critical but uncertain. Without a signed pilot from a top-5 buyer, I'm skeptical about reaching $1M ARR here.",
+      "concern": "The biggest risk is that agribusinesses may not see enough value to pay a recurring subscription, especially given thin margins in commodity supply chains, making unit economics and churn uncertain.",
+      "evidence_request": "A signed pilot agreement or LOI from a leading Peruvian agribusiness (e.g., Volcafe, Sol y Café, or a major cooperative) with defined KPIs (e.g., ≥20% reduction in crop losses) and a commitment to pay post-pilot.",
+      "score": 0.4,
+      "score_rationale": "Potential exists, but the local market is too small and concentrated to guarantee $1M ARR without immediate buyer validation, and the path to international co-investor hinges on that traction.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.37,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.37,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "If farmers don't trust or follow the advice, I'm wasting my subscription money and getting no supply chain benefit.",
+      "The AI's predictions for frost or drought 7-14 days out in the diverse Peruvian terrain are likely too unreliable; a single false alert could cause unnecessary panic or costs for farmers who act on it.",
+      "The pilot with 500 farmers may not generate enough cost savings or risk reduction within a single quarter to justify a full subscription, given the time needed for onboarding and behavior change."
+    ],
+    "top_evidence_requests": [
+      "Show me a clear reduction in crop loss (at least 15% vs. control) from a pilot with at least 200 farmers who received actionable alerts and followed them, along with proof that farmers found the advice timely and easy to implement.",
+      "Show me a controlled pilot with at least 500 farmers where you can demonstrate a statistically significant reduction in crop losses compared to a control group, with all false and missed alerts documented and explained.",
+      "A controlled pilot that shows at least a 15% reduction in crop loss costs for the buyer (e.g., from reduced procurement price spikes) within one harvest cycle (quarter), with farmer compliance rates above 70%."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "CONDITIONAL_GO"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

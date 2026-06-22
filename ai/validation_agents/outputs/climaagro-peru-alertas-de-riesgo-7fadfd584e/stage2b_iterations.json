@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "ClimaAgro Peru delivers hyper-local climate risk alerts straight to smallholder farmers via WhatsApp. Using a blend of satellite data (NASA CHIRPS, MODIS), local weather station data (SENAMHI), and proprietary models, we generate field-specific forecasts for frost, drought, and extreme rainfall 7–14 days in advance. Each alert includes a specific, actionable recommendation (e.g., 'Cover your potato crop with plastic sheeting by Thursday or risk 80% loss'). We sell this as a proactive risk mitigation tool to agricultural cooperatives and insurers, who pay us to protect their members and portfolios, while farmers receive the service for free.",
+      "one_liner": "We give Peruvian smallholders life-saving weather alerts on WhatsApp so they never lose a harvest to a surprise frost again.",
+      "target_customer": "A smallholder potato farmer in the highlands of Huancavelica who depends on his harvest to feed his family and pay debts.",
+      "core_problem": "Every year, unpredictable frosts, droughts, or floods wipe out entire harvests because alerts from radio or informal WhatsApp groups arrive too late, are too general, or never come at all. This forces families into cycles of debt and food insecurity.",
+      "solution_hook": "Unlike generic weather forecasts, our alert tells each farmer exactly what to do for their specific plot 10 days before a climate shock hits.",
+      "why_this_angle": "This framing zeroes in on the acute, behavioral pain of relying on vague forecasts—the 'do-nothing' alternative—and narrows the wedge to the one distribution channel farmers already trust: WhatsApp. It turns a broad climate-tech platform into a simple, life-changing notification service, making it easier to pilot with cooperatives and prove value in weeks, not months.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 7,
+        "founder_feasibility": 9,
+        "total": 25
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "ClimaAgro provides a B2B2C hyper-local climate alert system for agribusiness buyers sourcing from smallholder farmers in Peru. Using satellite data (NASA CHIRPS, MODIS), climate models, and SENAMHI data, we deliver farm-specific weather risk alerts and actionable advice via WhatsApp 7-14 days before events like frost, drought, or heavy rains. The buyer is an agribusiness—a coffee exporter, cacao cooperative, or quinoa processor—who pays a subscription to protect their supply chain. They onboard their farmer networks, improving crop resilience, reducing procurement cost volatility, and strengthening farmer loyalty.",
+      "one_liner": "We deliver hyper-local, actionable climate alerts to smallholder farmers via WhatsApp, paid for by agribusiness buyers to de-risk their supply chains.",
+      "target_customer": "Procurement Sustainability Manager at a Peruvian organic coffee exporter sourcing from 2,000+ small farmers.",
+      "core_problem": "Every El Niño cycle, unexpected frosts or droughts wipe out 20% of contracted smallholder coffee volume, forcing last-minute spot market purchases at a 30% premium, eroding margins and farmer trust. This occurs at least every 3-7 years and costs millions in lost procurement value.",
+      "solution_hook": "Unlike generic regional forecasts, our system combines satellite data and local models to give each farmer a personalized, actionable alert (e.g., 'Cover your coffee plants tonight') via WhatsApp, cutting crop losses by up to 30% and integrating directly into the exporter's farmer management platform.",
+      "why_this_angle": "Agribusinesses hold the budget for supply chain resilience and have a direct economic incentive to reduce procurement cost volatility. Their willingness to pay is higher and sales cycles shorter than with governments or insurers, enabling faster validation and scale without relying on farmer payments.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 7,
+        "founder_feasibility": 8,
+        "total": 24
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "ClimaAgro Wedge: FrostAlert for Andean Potato Farmers. We deliver hyper-local frost warnings via WhatsApp to smallholder potato farmers in Peru's Mantaro Valley seven days in advance, with actionable steps like ‘cover crops tonight’. We charge a seasonal subscription of $5, validated by directly recruiting 10 farmers from existing WhatsApp groups within 30 days who prepay via mobile money.",
+      "one_liner": "We send 7-day advance frost alerts via WhatsApp to potato farmers in the Peruvian Andes, helping them save crops from sudden freezes.",
+      "target_customer": "Smallholder potato farmer in the Mantaro Valley, Peru, who uses WhatsApp daily and lost part of their harvest to frost last season.",
+      "core_problem": "Every June-August, unexpected nighttime frosts wipe out potato crops; farmers currently rely on delayed radio bulletins or informal WhatsApp chatter, often receiving warnings too late to cover fields, costing $500–$2,000 per hectare in lost income.",
+      "solution_hook": "Unlike generic weather alerts, our satellite-driven model predicts frost precisely at the farm level and delivers automated WhatsApp messages with specific protective actions (e.g., ‘spread ash on soil tonight’), making it immediately actionable.",
+      "why_this_angle": "This wedge targets the most acute pain point (frost) during a predictable high-risk season for a concentrated user group, enabling rapid paid pilots with minimal build; success here can fund expansion to other risks and regions.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 2,
+        "founder_feasibility": 9,
+        "total": 20
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "We give Peruvian smallholders life-saving weather alerts on WhatsApp so they never lose a harvest to a surprise frost again.",
+  "source": "parallel_iteration"
+}

@@ -1,0 +1,247 @@
+{
+  "source": "YC-style dossier based on input idea and gap",
+  "one_liner": "MineSafety AI converts spoken field safety observations into structured, prioritized hazard reports for mining supervisors, even offline.",
+  "problem": {
+    "who_suffers": "Mine HSE supervisors, contractors, safety officers",
+    "pain_intensity": "High – manual reporting consumes hours per shift, voice data is lost, risks are identified too late",
+    "current_workaround": "Paper/Excel reports written after inspections; delayed data entry into safety systems",
+    "evidence": "Time-and-motion study needed; initial interviews indicate 2–4 hours lost daily per supervisor"
+  },
+  "solution_insight": {
+    "what": "Real‑time offline voice‑to‑text with automatic severity classification and prioritized actions for mining safety reports.",
+    "insight": "Voice is the fastest input method in the field, but noise, dialects, and mining jargon have prevented adoption. Edge AI now enables accurate transcription tailored to this environment, integrating directly into mandated safety workflows.",
+    "unique_angle": "Built exclusively for mining: noise‑robust models, Spanish/Portuguese dialect handling, offline capability, and severity classification aligned with DS‑024‑2016‑EM."
+  },
+  "why_now": "Advances in edge AI (e.g., Whisper) allow low‑latency offline transcription. Mining safety regulations in Peru (DS‑024‑2016‑EM) demand detailed, real‑time reporting. Generic voice tools fail in noisy mines; no tailored solution exists.",
+  "market": {
+    "recommended_focus": "Peru – largest mining country in LATAM with stringent safety reporting, ideal beachhead to prove value before expanding to Chile and the US.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Mining is 10% of GDP (BCRP). Safety law DS‑024‑2016‑EM requires immediate, structured hazard reports. The volume of reports is high, and mines are open to efficiency innovations.",
+        "tam_topdown": "Peru mining revenue ~$35B (BCRP 2024). Safety costs ≈5% of opex; software ≈2% of safety; voice‑to‑text niche ≈10% of safety software → ~$3.5M. Alternative: global mining safety software $2.5B (Mordor Intelligence 2023) × Peru's 3% share = $75M; voice fraction 10% → $7.5M.",
+        "tam_bottomup": "~200 large/medium mines (MINEM). Safety officers/contractors per mine: 20–50, assume 30 → 6,000 users. ARPU $1,000/yr → $6M. If small mines and contractors included, up to 10,000 users → $10M.",
+        "tam_consensus": "$5–10M (sub‑$50M, sub‑venture‑scale).",
+        "sam": "30% reachable among large mines in 3 years → $1.5–3M.",
+        "som_12_months": "10 large mines with paid pilots; 20 users each at $600/yr → $120K ARR; 20% conversion of early leads → $100–150K.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "MINEM (mining units)",
+          "BCRP (mining GDP)",
+          "MEF (fiscal mining data)",
+          "INEI (employment in mining)",
+          "SUNEDU (safety training requirements)",
+          "MTPE (occupational safety statistics)",
+          "Mordor Intelligence"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM (excl. Peru)",
+        "validity": "Chile, Mexico, Brazil produce ~4× Peru's output. Similar Spanish/Portuguese languages and safety regulations.",
+        "tam_topdown": "Total LATAM mining revenue ~$140B → same fractions → $14M. Bottom‑up: 24,000 users × $1,000 = $24M.",
+        "tam_consensus": "$14–24M",
+        "sam": "30% reachable → $4–7M",
+        "som_12_months": "Negligible in year 1; expansion starts year 2.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "Codelco (Chile)",
+          "SERNAGEOMIN (Chile safety)",
+          "statista mining data"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "Significant mining (MSHA‑regulated). Market is larger, but English‑first and competitive. Entry after Latin American validation.",
+        "tam_topdown": "USA mining revenue ~$80B → $8M (same fraction). Or: USA share of global EHS software ($5B × 35%) = $1.75B; voice niche 5% = $87.5M.",
+        "tam_bottomup": "10,000 users × $2,000 = $20M.",
+        "tam_consensus": "$20–50M",
+        "sam": "10% reachable after adaptation → $2–5M",
+        "som_12_months": "Not targeted in year 1.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "MSHA incident data",
+          "Bureau of Labor Statistics",
+          "IBISWorld mining software"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "MINEM and BCRP for Peru mine counts and revenue.",
+      "Bottom‑up user counts from MTPE job postings, Sociedad Nacional de Minería, and interviews.",
+      "Validate ARPU through HSE manager interviews.",
+      "Cross‑check with Mordor Intelligence and IBISWorld for global mining safety software."
+    ]
+  },
+  "competition_moat": {
+    "direct_competitors": [
+      "None specifically for voice‑to‑text in mining. Generic tools: Otter.ai, Google speech‑to‑text, Microsoft Azure Speech."
+    ],
+    "indirect_substitutes": [
+      "Manual paper/Excel (most common)",
+      "Checklist apps without voice (iAuditor, SafetyCulture)",
+      "EHS suites with text input only (Intelex, Cority)"
+    ],
+    "moat": "Domain‑specific NLP – noise‑robust models trained on mining jargon and Spanish/Portuguese dialects. Offline edge capability. Workflow integration with existing safety systems (APIs). Regulatory compliance templates. Data network effect from user corrections improving accuracy over time."
+  },
+  "business_model_pricing": {
+    "model": "Per‑user monthly SaaS, plus one‑time implementation fee.",
+    "plans": [
+      {
+        "name": "Starter",
+        "price_per_user_month_usd": 99,
+        "features": "Voice‑to‑text, basic risk classification, offline mode, up to 500 reports/month"
+      },
+      {
+        "name": "Professional",
+        "price_per_user_month_usd": 199,
+        "features": "Unlimited reports, advanced analytics, API integration, multilingual support"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "features": "Custom noise models, dedicated deployment, SSO, SLA, training program"
+      }
+    ],
+    "variable_costs": "Cloud/hosting ~$5/user/month; edge processing keeps speech‑to‑text API costs low; support ~$10/user/month.",
+    "contribution_margin": "~80% on Professional plan"
+  },
+  "go_to_market": {
+    "first_10": "Direct outreach to HSE managers at top 5 Peruvian mines (Yanacocha, Las Bambas). Free 1‑month pilot for feedback. Exhibit at Congreso de Seguridad Minera.",
+    "first_100": "Expand to 20–30 mines via referrals and presentations at Perumin, Exponor. Partner with mining safety consultants (e.g., INTE) for distribution.",
+    "first_1000": "Scale to Chile and Mexico. Build integrations with SAP EHS, Cority. Hire local sales reps. Target 100 mines (10 users each)."
+  },
+  "traction_signals": {
+    "interviews": "Planned 20 interviews (YC condition). 2 initial conversations confirmed pain.",
+    "LOIs": "None yet.",
+    "pilots": "3 pilot agreements targeted within 3 months.",
+    "prototype": "Functional offline demo using Whisper and basic severity classifier.",
+    "usage": "N/A"
+  },
+  "roadmap": {
+    "month_1": "Complete 20 interviews; refine feature set; start prototype.",
+    "month_2": "Build noise‑robust model with mine audio samples; test with 2 mines.",
+    "month_3": "MVP: offline transcription, basic classification; pilot at 3 mines. Target: >90% accuracy, >2 hours saved/shift.",
+    "month_6": "First 10 paying customers; MRR $5k; integration APIs built.",
+    "month_9": "Expand to Chile; Portuguese support; 50% QoQ MRR growth.",
+    "month_12": "30 customers, MRR $20k (ARR $240k). Team of 5. Validate heavy industry expansion.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 20000,
+      "paying_customers": 30,
+      "churn_target": "<5% monthly",
+      "cac_target_usd": 5000
+    }
+  },
+  "risks_mitigations": [
+    {
+      "risk": "Technical accuracy in noisy mines with dialects",
+      "category": "technical",
+      "mitigation": "Fine‑tune models on targeted mine audio; noise‑cancelling hardware integration"
+    },
+    {
+      "risk": "Small SAM limits venture‑scale returns",
+      "category": "market",
+      "mitigation": "Expand to construction, oil & gas; upsell analytics modules to raise ARPU"
+    },
+    {
+      "risk": "Incumbents quickly add voice features",
+      "category": "competition",
+      "mitigation": "Lock in flagship mines early; build deep integrations that are hard to replicate cheaply"
+    },
+    {
+      "risk": "AI misclassification leads to liability",
+      "category": "execution",
+      "mitigation": "Human‑in‑the‑loop for high‑risk items; disclaimers; product liability insurance"
+    },
+    {
+      "risk": "Long mining sales cycles (6–12 months)",
+      "category": "execution",
+      "mitigation": "Small, rapid pilots (1‑month) to prove value; free trials; target progressive HSE champions"
+    }
+  ],
+  "the_ask": {
+    "amount_usd": 500000,
+    "type": "pre-seed",
+    "runway_months": 18,
+    "budget_breakdown": [
+      {
+        "line": "Salaries (2 FTEs: CTO/ML eng, CEO/sales)",
+        "amount_usd": 200000,
+        "rationale": "$50k/person/year (Peru rates), 2 years, inclusive of benefits"
+      },
+      {
+        "line": "Compute & infrastructure",
+        "amount_usd": 50000,
+        "rationale": "Cloud GPU training, edge hardware for pilots"
+      },
+      {
+        "line": "Pilot deployments & travel",
+        "amount_usd": 60000,
+        "rationale": "On‑site support at 3–5 mines, travel to mining regions"
+      },
+      {
+        "line": "Business development & legal",
+        "amount_usd": 40000,
+        "rationale": "Contracts, IP protection, incorporation"
+      },
+      {
+        "line": "Contingency",
+        "amount_usd": 150000,
+        "rationale": "Buffer for longer sales cycles or additional model fine‑tuning"
+      }
+    ],
+    "milestone_unlocked": "ARR $120K from 10 paying mines, proving product‑market fit and willingness‑to‑pay",
+    "critical_assumption_being_tested": "Mines will pay for voice‑to‑text safety reporting, and accuracy in noise is sufficient for adoption",
+    "why_not_less": "Insufficient to reach 10 paying customers within mining sales cycles; bootstrap would lose first‑mover advantage",
+    "why_not_more": "Premature before validating the critical assumption; excess capital would dilute focus"
+  },
+  "product_demo_architecture": {
+    "frontend": "Mobile app (iOS/Android) with push‑to‑talk, real‑time transcription, and hazard dashboard.",
+    "backend": "Edge device (Jetson Nano or smartphone) running quantized Whisper fine‑tuned on mining audio; BERT‑based severity classifier. Syncs with cloud when online.",
+    "integration": "REST API to export structured reports to EHS systems (SAP, Cority) or PDF/email.",
+    "key_tech": "Whisper, HuggingFace Transformers, ONNX Runtime"
+  },
+  "scorecard": {
+    "problem_intensity": 8,
+    "solution_fit": 7,
+    "market_size": 3,
+    "team_potential": 6,
+    "defensibility": 6,
+    "traction_early": 2,
+    "timing": 8,
+    "financial_model": 7,
+    "regulatory_risk": 7,
+    "ai_substitution_risk": 5
+  },
+  "total_score": 59,
+  "max_score": 100,
+  "rating": "CONDITIONAL_GO",
+  "external_research_hooks": [
+    "INEI: Mining workforce size for bottom‑up user count",
+    "BCRP: Mining GDP and revenue for top‑down TAM",
+    "MINEM: Official list of operating mines and production scales",
+    "MTPE: Occupational safety incident statistics in mining",
+    "DS‑024‑2016‑EM: Mandatory safety reporting regulation, driving need for structured reports",
+    "Mordor Intelligence: Global mining safety software market size"
+  ]
+}

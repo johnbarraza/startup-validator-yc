@@ -1,0 +1,14 @@
+{
+  "idea": "LiftCoach AI: app de gimnasio que permite registrar entrenamientos por voz, visualizar sobrecarga progresiva y recibir recomendaciones simples para ajustar pesos, repeticiones y estancamientos.",
+  "current_stage": "created",
+  "selected_gap_id": null,
+  "strategy_approved": false,
+  "artifacts": {},
+  "history": [
+    {
+      "at": "2026-06-20T17:10:04.450299+00:00",
+      "stage": "created",
+      "message": "Pipeline state initialized."
+    }
+  ]
+}

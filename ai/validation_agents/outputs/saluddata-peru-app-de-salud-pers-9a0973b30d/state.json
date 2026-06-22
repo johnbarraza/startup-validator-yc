@@ -1,0 +1,246 @@
+{
+  "idea": "SaludData Peru: app de salud personal para Peru donde el usuario registra dieta, citas medicas y boletas de farmacia, recibe alertas de riesgo de enfermedades cronicas via ML, y accede a comparador de precios de medicamentos por ubicacion, con monetizacion B2B hacia EPS, MINSA y farmacias que pagan por insights agregados de salud poblacional.",
+  "current_stage": "stage1_research",
+  "selected_gap_id": null,
+  "strategy_approved": false,
+  "artifacts": {
+    "stage0_classify": {
+      "problem_type": "PAINKILLER",
+      "vertical": "HealthTech",
+      "customer_type": "B2B2C",
+      "problem_severity": "STRUCTURAL",
+      "pain_evidence": "evidence present",
+      "pit_signals_detected": [
+        "B2C engagement is a massive hurdle: users must manually log diet, medical appointments, and pharmacy receipts daily. Given low digital literacy and informal economy, most will abandon after a week, mirroring the 90% attrition seen in health tracking apps globally.",
+        "Monetization depends on selling aggregated insights to EPS/MINSA, but these buyers face 6-18 month procurement cycles, limited budgets for 'population health analytics', and often prefer government-collected data. Without a large user base (chicken-and-egg), insights lack statistical significance.",
+        "ML-based risk alerts require high-quality, labeled health data that doesn't exist in Peru. Building accurate models is expensive and talent-scarce. Moreover, false positives/negatives could cause regulatory liability.",
+        "Price comparison for medicines requires real-time partnerships with thousands of dispersed pharmacies (including informal ones). Most pharmacies lack digital inventories, making aggregation infeasible at launch."
+      ],
+      "painkiller_signals_detected": [
+        "Active workarounds exist (spreadsheets, paper records)",
+        "Spending already happens on imperfect solutions (EPS use legacy data systems)",
+        "Recurring pain: chronic disease management is ongoing",
+        "Measurable cost: healthcare costs from chronic diseases"
+      ],
+      "classification_rationale": "The startup addresses a real, structural problem of chronic disease management in Peru. EPS and MINSA have budgets for health data analytics, and the consumer app provides a unique data collection channel. The B2B monetization path aligns with Peru's economic realities where consumer willingness to pay is low but institutional budgets exist.",
+      "proceed_recommendation": "WARN",
+      "suggested_pivot": "",
+      "freemium_recommendation": "YES",
+      "freemium_rationale": "A free consumer app is essential to collect the data needed for B2B insights. Without a free tier, user acquisition would be limited, reducing data value. The B2B customers will pay for the aggregated insights, subsidizing the free tier.",
+      "devil_verdict": "WEAK",
+      "payment_blocker": "EPS and MINSA have no budget line for 'population health insights from a consumer app' and require long, bureaucratic procurement cycles. Consumers (B2C) cannot pay due to low WTP (S/50-200/month is unaffordable for 70% informal workers).",
+      "free_substitute_risk": "Google Sheets (manual health logging), WhatsApp groups (medication price sharing), and MINSA's free SMS health alerts cover 80% of the pain without effort.",
+      "market_size_reality_check": "Realistic paying market: top 5% of Lima's affluent (≈200K people) might pay S/20/month, yielding ~$6K MRR. B2B: 10-20 EPS with 12-month sales cycles, each paying S/500-2000/month for insights, adding <$10K MRR. Total <$200K ARR in year 1 – far below venture scale.",
+      "hardest_assumption": "That users will consistently and accurately log diet, appointments, and receipts over months to generate actionable population health insights.",
+      "devil_rationale": "The idea combines multiple high-risk elements: low B2C engagement, slow expensive B2B sales, data acquisition hurdles, and a chicken-and-egg monetization model. Peru's structural realities make it unlikely to achieve the revenue required for venture returns without a massive pivot.",
+      "preflight_dominant_solution": {
+        "score": "CLEAR",
+        "competitor_name": "none found",
+        "threat_level": "LOW",
+        "note": "No single app in Peru combines all features (diet tracking, appointment logs, pharmacy receipts, ML risk alerts, drug price comparison, and B2B aggregate insights) under one platform."
+      },
+      "preflight_precedent_failure": {
+        "score": "NO_KNOWN_FAILURE",
+        "example": "none",
+        "learning": "No notable startup has publicly failed with this exact integrated model, but individual features have been tried by apps like Doctoralia (appointments) and FarmaEnLinea (price compare) without full integration."
+      },
+      "preflight_regulatory_kill": {
+        "score": "SOFT_BLOCKER",
+        "regulation": "Peru's Ley de Protección de Datos Personales (Law 29733) and MINSA regulations for health data handling and medical device classification of ML-based risk alerts.",
+        "mitigation": "Implement strong data anonymization, obtain explicit user consent, and classify ML alerts as non-diagnostic decision support to avoid medical device regulation. Engage a local data privacy consultant."
+      },
+      "preflight_summary": "Proceed cautiously: no dominant competitor and no known failures, but regulatory hurdles (data privacy, health data compliance) require careful planning and local expertise.",
+      "deal_signals": {
+        "hiring": "Watch for increased hiring of data scientists and health informatics specialists in Peru's health tech startups.",
+        "funding": "Recent funding rounds for Peruvian health tech (e.g., RunaHealth, Doctoralia) indicate growing investor interest; check for larger rounds in LATAM digital health.",
+        "product": "Monitor launches of integrated health platforms by MINSA or EPS (e.g., 'Sistema de Información en Salud') that could validate or compete.",
+        "market": "Growing digital health adoption post-COVID, rising chronic disease prevalence in Peru, and government push for digital transformation in healthcare.",
+        "tech": "Advances in ML for preventive health and cloud infrastructure in LATAM are enabling real-time risk scoring and data aggregation.",
+        "momentum": "ACCELERATING"
+      },
+      "source": "triple_agent_classification"
+    },
+    "stage1_research": {
+      "idea": "SaludData Peru: app de salud personal para Peru donde el usuario registra dieta, citas medicas y boletas de farmacia, recibe alertas de riesgo de enfermedades cronicas via ML, y accede a comparador de precios de medicamentos por ubicacion, con monetizacion B2B hacia EPS, MINSA y farmacias que pagan por insights agregados de salud poblacional.",
+      "market": "Peru health tech, personal health management, B2B population health insights",
+      "solutions": [
+        {
+          "id": "alt1",
+          "name": "Do-nothing (inercia del usuario)",
+          "category": "Comportamiento",
+          "observed_positioning": "Los usuarios no realizan seguimiento de salud, solo acuden al médico cuando presentan síntomas. Barrera de adopción muy baja."
+        },
+        {
+          "id": "alt2",
+          "name": "Registros manuales (libreta, Excel, notas del teléfono)",
+          "category": "Workaround",
+          "observed_positioning": "Algunos usuarios anotan dietas o medicamentos en papel o notas digitales, sin análisis ni alertas."
+        },
+        {
+          "id": "alt3",
+          "name": "MyFitnessPal",
+          "category": "App global de tracking",
+          "observed_positioning": "Líder global en registro de dieta y ejercicio, con base de datos de alimentos y premium con ML. No incluye precios de medicamentos Perú ni integración con EPS."
+        },
+        {
+          "id": "alt4",
+          "name": "Apple Health",
+          "category": "Plataforma de salud integrada",
+          "observed_positioning": "Hub de salud en iOS, agrega datos de múltiples apps, incluye registro de medicamentos desde iOS 16. No tiene comparador de precios ni alertas de crónicas integradas."
+        },
+        {
+          "id": "alt5",
+          "name": "Google Fit",
+          "category": "Plataforma de salud",
+          "observed_positioning": "Similar a Apple Health en Android. Seguimiento de actividad y sueño, pero sin enfoque en medicamentos ni dieta detallada."
+        },
+        {
+          "id": "alt6",
+          "name": "Samsung Health",
+          "category": "App de salud preinstalada",
+          "observed_positioning": "Popular en dispositivos Samsung, registro de dieta y ejercicio, algunas funciones de salud, pero no orientado a Perú ni comparación de farmacias."
+        },
+        {
+          "id": "alt7",
+          "name": "Doctoralia Perú",
+          "category": "Plataforma de reserva de citas",
+          "observed_positioning": "Dominante en Perú para encontrar médicos y agendar citas, con teleconsulta. No incluye seguimiento de dieta ni alertas de crónicas, pero podría expandirse."
+        },
+        {
+          "id": "alt8",
+          "name": "Smart Doctor",
+          "category": "App de telemedicina local",
+          "observed_positioning": "App peruana para reservar citas médicas y teleconsultas. Enfoque limitado a booking, sin tracking proactivo de salud."
+        },
+        {
+          "id": "alt9",
+          "name": "Inkafarma App",
+          "category": "App de cadena de farmacias",
+          "observed_positioning": "App de la cadena Intercorp, permite compras, promociones, historial de compras. No compara precios de otras cadenas ni integra salud preventiva."
+        },
+        {
+          "id": "alt10",
+          "name": "Mifarma App",
+          "category": "App de cadena de farmacias",
+          "observed_positioning": "Similar a Inkafarma, orientada a transacciones y fidelización, con limitado valor más allá de la compra."
+        },
+        {
+          "id": "alt11",
+          "name": "Aplicativo MINSA (SIS, Vacunación)",
+          "category": "App de salud pública",
+          "observed_positioning": "Aplicaciones oficiales del Ministerio de Salud para información de seguros y campañas. No ofrecen personalización ni tracking continuo."
+        },
+        {
+          "id": "alt12",
+          "name": "Apps de EPS (Rimac, Pacífico)",
+          "category": "Apps de aseguradoras",
+          "observed_positioning": "Algunas integran programas de bienestar con pasos o retos, pero no abarcan dieta, citas ni comparador de medicamentos. Enfoque en incentivar hábitos, no en prevención de crónicas."
+        },
+        {
+          "id": "alt13",
+          "name": "Calculadoras de riesgo cardiovascular (ej. Framingham online)",
+          "category": "Herramientas puntuales",
+          "observed_positioning": "Webs o PDFs que estiman riesgo a 10 años con datos puntuales. Sin persistencia de datos ni integración con farmacias."
+        },
+        {
+          "id": "alt14",
+          "name": "1Doc3",
+          "category": "Plataforma de teleconsulta LATAM",
+          "observed_positioning": "Chat médico anónimo, contenido de salud. Presente en varios países de LATAM, pero sin seguimiento crónico proactivo ni comparador de precios."
+        },
+        {
+          "id": "alt15",
+          "name": "WhatsApp + Google Sheets",
+          "category": "Workaround digital",
+          "observed_positioning": "Usuarios que comparten recibos de farmacia por WhatsApp con familia o médicos y llevan control básico en hojas de cálculo compartidas. Sin automatización ni privacidad."
+        }
+      ],
+      "research_summary": "El mercado de salud digital personal en Perú está fragmentado y carece de una solución integrada que combine seguimiento de dieta, citas, medicamentos y alertas de crónicas con un comparador de precios de farmacias. Los competidores globales (MyFitnessPal, Apple Health) no están adaptados al contexto peruano ni incluyen precios locales. Las apps locales de farmacias y telemedicina (Inkafarma, Smart Doctor, Doctoralia) cubren partes del viaje pero no ofrecen el valor integral de prevención y ahorro. El 'do-nothing' y los registros manuales siguen siendo la alternativa más común, lo que indica una oportunidad de disrupción si se logra cambiar el comportamiento con incentivos claros (precios más bajos, alertas predictivas). El modelo B2B de insights agregados no tiene competidores directos visibles en el mercado peruano, aunque existen plataformas de analítica de salud poblacional en otros países que podrían ingresar (ej. Innovaccer). La principal barrera es la adopción de los usuarios y la integración de datos de farmacias y EPS, que podría generar un foso de datos si se ejecuta correctamente.",
+      "competitor_signals": [
+        {
+          "competitor": "MyFitnessPal",
+          "hiring_score": 5,
+          "funding_score": 5,
+          "product_score": 7,
+          "team_score": 6,
+          "market_score": 8,
+          "tech_score": 6,
+          "overall_score": 59.0,
+          "classification": "ENGAGE",
+          "sentiment": "NEUTRAL",
+          "sourcing_brief": "Jugador global masivo con base de usuarios estable y modelo freemium sólido, pero poco enfoque en el mercado peruano y sin comparador de precios. Adquirido por Francisco Partners, innovación incremental."
+        },
+        {
+          "competitor": "Apple Health",
+          "hiring_score": 8,
+          "funding_score": 10,
+          "product_score": 8,
+          "team_score": 9,
+          "market_score": 8,
+          "tech_score": 9,
+          "overall_score": 87.0,
+          "classification": "MOVE_FAST",
+          "sentiment": "POSITIVE",
+          "sourcing_brief": "Plataforma predeterminada en iOS, con inversión masiva en salud. Si agrega comparador de medicamentos local o alertas de crónicas más proactivas, sería amenaza seria. Aprovechar ventana actual antes de que refuercen funciones en mercados emergentes."
+        },
+        {
+          "competitor": "Smart Doctor",
+          "hiring_score": 3,
+          "funding_score": 2,
+          "product_score": 4,
+          "team_score": 3,
+          "market_score": 4,
+          "tech_score": 4,
+          "overall_score": 31.0,
+          "classification": "MONITOR",
+          "sentiment": "NEUTRAL",
+          "sourcing_brief": "Startup local pequeña centrada en telemedicina y reservas. Baja sofisticación de producto y pocos recursos; probablemente no priorice tracking de salud en el corto plazo."
+        },
+        {
+          "competitor": "Inkafarma App",
+          "hiring_score": 4,
+          "funding_score": 5,
+          "product_score": 4,
+          "team_score": 3,
+          "market_score": 6,
+          "tech_score": 3,
+          "overall_score": 42.5,
+          "classification": "MONITOR",
+          "sentiment": "NEUTRAL",
+          "sourcing_brief": "Respaldo de Intercorp le da alcance masivo y datos de compras, pero su app es transaccional y carece de funcionalidades de salud preventiva. Podría evolucionar, pero no es su core."
+        },
+        {
+          "competitor": "Doctoralia Perú",
+          "hiring_score": 7,
+          "funding_score": 8,
+          "product_score": 7,
+          "team_score": 8,
+          "market_score": 7,
+          "tech_score": 6,
+          "overall_score": 73.5,
+          "classification": "MOVE_FAST",
+          "sentiment": "POSITIVE",
+          "sourcing_brief": "Plataforma de DocPlanner con fuerte presencia en Perú y financiamiento internacional. Si agrega seguimiento de salud y alertas, podría cruzar fácilmente a nuestro espacio. Vigilar movimientos de producto."
+        }
+      ],
+      "source": "llm"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-06-21T16:23:22.255022+00:00",
+      "stage": "created",
+      "message": "Pipeline state initialized."
+    },
+    {
+      "at": "2026-06-21T16:23:40.135657+00:00",
+      "stage": "stage0_classify",
+      "message": "Artifact 'stage0_classify' updated."
+    },
+    {
+      "at": "2026-06-21T16:24:52.665329+00:00",
+      "stage": "stage1_research",
+      "message": "Artifact 'stage1_research' updated."
+    }
+  ]
+}

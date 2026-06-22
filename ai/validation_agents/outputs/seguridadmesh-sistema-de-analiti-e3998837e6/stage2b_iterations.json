@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "SeguridadMesh is an AI video analytics overlay for municipal serenazgo camera networks in Peru that detects street-level incidents—such as assaults, thefts, and traffic accidents—in real time and instantly alerts operators with minimal distraction. Built specifically for the visual chaos of Peruvian streets (mototaxis, narrow market alleys, low-light conditions), it plugs into existing low-cost cameras without replacing hardware. The system reduces reliance on fatigued human monitors who miss events until citizen calls come in, enabling faster dispatch and improved public safety. Sold as an annual B2G license aligned with PIM security budgets, it transforms passive surveillance into a proactive response tool tailored to the daily workflow of serenazgo staff.",
+      "one_liner": "We give serenazgo operators an AI copilot that detects street crimes in real-time on their existing cameras, so they can dispatch officers faster instead of waiting for phone calls.",
+      "target_customer": "Jefe de Operaciones de Serenazgo or Municipal Security Director managing a team of camera operators in a mid-sized Peruvian municipality.",
+      "core_problem": "Serenazgo operators manually stare at up to 40 camera feeds for hours, suffering vigilance fatigue that causes them to miss 70% of incidents until a citizen calls—delaying response by an average of 12 minutes, during which crimes escalate, evidence disappears, and public trust erodes. This daily failure leads to political pressure on mayors, wasted PIM security budgets, and preventable harm.",
+      "solution_hook": "Unlike generic AI platforms, SeguridadMesh is trained exclusively on Peruvian street contexts (mototaxis, informal commerce, crowded plazas) and delivers simple audio-visual alerts without requiring operators to learn complex software, fitting into their existing workflow as a drop-in augmentation.",
+      "why_this_angle": "By zeroing in on the specific, habitual pain of serenazgo operators—who lose time and face daily failure due to manual monitoring—and tailoring detection to local incident patterns, the product becomes an urgent operational necessity rather than a marginal upgrade. The narrow wedge of Peruvian street crime detection creates a defensible moat against global competitors and aligns perfectly with the PIM budget cycle for rapid purchase.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 7,
+        "total": 22
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "A software-only AI overlay for existing campus surveillance cameras that detects security incidents (theft, vandalism, trespassing, fights) in real-time and alerts security personnel, sold to university security directors as an annual license, aligning with their operational budgets and avoiding hardware lock-in.",
+      "one_liner": "We provide real-time AI incident detection for university security cameras, reducing response times and losses, using existing infrastructure.",
+      "target_customer": "Head of Security at a private university in Lima with a 50+ camera network",
+      "core_problem": "Security guards manually monitor dozens of camera feeds, missing over 90% of incidents, leading to daily losses from stolen equipment, vandalized property, and unsafe situations that cost the university thousands of soles monthly and risk student safety.",
+      "solution_hook": "Our AI is pre-trained on Latin American campus-specific threats (e.g., motorcycle-borne snatch thefts, student brawls) and plugs into any existing IP camera system with a simple interface designed for non-technical security staff.",
+      "why_this_angle": "University security directors have dedicated budgets and urgent need, but lack affordable, operationally simple solutions that fit their local threat patterns; this B2B pivot circumvents lengthy public procurement processes while maintaining high problem acuity.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 7,
+        "founder_feasibility": 9,
+        "total": 25
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "SeguridadMesh se enfoca exclusivamente en la detección en tiempo real de motos lineales con dos ocupantes sin casco, un patrón delictivo común en robos al paso y arrebatos en distritos peruanos. El sistema se superpone a las cámaras de serenazgo existentes y envía alertas inmediatas a los operadores cuando se identifica esta combinación específica, permitiendo una respuesta rápida. Se vende como una licencia anual B2G utilizando el presupuesto PIM de seguridad ciudadana, comenzando con un piloto de alto impacto en 10 municipalidades con alta incidencia de este delito para demostrar valor en 30 días.",
+      "one_liner": "Detectamos motos con dos ocupantes sin casco desde cámaras municipales para alertar al serenazgo y prevenir robos.",
+      "target_customer": "Jefe de Serenazgo de un distrito peruano con alta tasa de robos en moto, como San Juan de Lurigancho o Comas, que opera un centro de monitoreo con cámaras analógicas o IP y personal no técnico saturado de falsas alarmas.",
+      "core_problem": "Los operadores de serenazgo monitorean manualmente docenas de cámaras y no logran detectar a tiempo los arrebatos cometidos por motociclistas sin casco, ya que estos incidentes duran segundos. Esto genera una percepción de ineficacia, presión política y pérdida de confianza ciudadana, mientras los recursos se desperdician en vigilancia reactiva y poco focalizada.",
+      "solution_hook": "Un modelo de visión artificial entrenado específicamente con escenas callejeras peruanas que identifica el patrón delictivo 'moto + 2 ocupantes sin casco', ignorando otros vehículos o personas, para reducir falsas alarmas y sobrecarga del operador.",
+      "why_this_angle": "Permite atacar un dolor agudo y cuantificable que los municipios reconocen de inmediato, diferencia a SeguridadMesh de genéricos como Hikvision o Avigilon sin necesidad de competir en todas las funcionalidades, y facilita una validación rápida con pocos clientes dispuestos a pagar por una solución puntual a su principal problema de monitoreo.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 3,
+        "founder_feasibility": 8,
+        "total": 20
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I2",
+  "recommended_one_liner": "We provide real-time AI incident detection for university security cameras, reducing response times and losses, using existing infrastructure.",
+  "source": "parallel_iteration"
+}

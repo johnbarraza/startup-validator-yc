@@ -1,0 +1,60 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "FinTech",
+  "customer_type": "B2B",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "Present: SMEs currently pay S/200-500/month for manual accounting or face fines; active workarounds and spending exist.",
+  "pit_signals_detected": [
+    "Informal economy: 70-75% of businesses are informal and don't file taxes or can evade for years. The addressable market is only formal micro/SMEs, estimated at ~200K out of 3M+ businesses.",
+    "Low willingness to pay: Peruvian SMEs typically pay S/200-500/month for a full accountant. At S/80/month, the value prop may not be compelling enough to overcome inertia and trust issues, especially when a cheap local accountant provides personalized service.",
+    "Trust + security risk: SMEs must share SUNAT credentials (or API access) with ContaBot. Any error or data breach could result in fines or audits, making adoption slow for risk-averse owners.",
+    "SUNAT API fragility: The API for electronic invoices may change, have downtime, or not cover all edge cases (e.g., manual receipts). ContaBot becomes a single point of failure for compliance.",
+    "Sales cycle via WhatsApp: B2B sales in Peru require multiple face-to-face demos and personal relationships. Scaling via WhatsApp alone is difficult; unit economics may break if high-touch sales needed."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual contador)",
+    "Spending already happens (S/200-500/month)",
+    "Regulatory forcing function (SUNAT, fines)",
+    "Recurring pain (monthly declarations)",
+    "Measurable cost (fines, hours)",
+    "B2B buyer has budget (already paying for accounting)",
+    "Users search actively for solutions"
+  ],
+  "classification_rationale": "ContaBot addresses a structural, recurring compliance pain for Peruvian SMEs. They currently pay higher fees for manual accounting or risk fines. The AI-powered service offers a cheaper, automated alternative with direct SUNAT integration. Strong painkiller signals and clear willingness to pay given existing budget. Not crowded by incumbents with same model; regulatory mandate ensures urgency.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "NO",
+  "freemium_rationale": "The service is full-service (filing tax returns), not a self-serve software. A free tier would require limiting core filing, reducing value, and increasing costs. Given low price point (S/80/month), converting free users to paid is uncertain; better to monetize directly. A free trial (e.g., first month free) could work but is not a permanent freemium tier.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "B2B payment is via CCI bank transfer (not credit card or instant payment), adding friction for monthly recurring billing. Many SMEs pay quarterly or annually, causing cash flow gaps.",
+  "free_substitute_risk": "SUNAT's free portal allows manual PDF upload and PDT generation. Combined with a spreadsheet and WhatsApp accountant guidance, many businesses will stick with the free, familiar workaround.",
+  "market_size_reality_check": "Realistic SAM: formal micro and SMEs in Peru that need automated filing and can pay S/80/month ≈ 100,000-200,000 businesses. At S/960/year per business, max TAM ~$50M/year; but actual penetration will be <5% in 3 years, giving <$2.5M ARR — too small for YC-scale venture.",
+  "hardest_assumption": "That Peruvian SMEs value automation enough to pay S/80/month and trust an AI service over a human accountant, despite cultural preference for personal relationships and low digital trust.",
+  "devil_rationale": "ContaBot addresses a real pain but faces structural headwinds: a small formal market, low WTP, strong free workaround, and trust barriers. The idea is not fatal but requires exceptional execution and likely a pivot to higher-value segments or regional expansion to reach venture scale.",
+  "preflight_dominant_solution": {
+    "score": "CLEAR",
+    "competitor_name": "none found",
+    "threat_level": "LOW",
+    "note": "No widely-adopted automated full-service accounting provider for Peruvian microenterprises exists; existing players are software tools or traditional accountants."
+  },
+  "preflight_precedent_failure": {
+    "score": "NO_KNOWN_FAILURE",
+    "example": "none",
+    "learning": "The space lacks documented failures for this exact AI-powered service model, suggesting it might be early or unproven."
+  },
+  "preflight_regulatory_kill": {
+    "score": "SOFT_BLOCKER",
+    "regulation": "Peruvian tax regulations may require a certified public accountant (CPC) to sign off on certain declarations (e.g., PDT, income tax returns).",
+    "mitigation": "Hire or partner with CPAs to sign off, or structure the service as a managed accounting firm with CPAs on staff."
+  },
+  "preflight_summary": "Proceed with caution: the idea has a clear market gap and favorable tailwinds, but regulatory hurdles (CPA sign-off) and operational complexity require careful mitigation.",
+  "deal_signals": {
+    "hiring": "Increased hiring of AI/ML engineers and Spanish-speaking tax specialists signals market entry.",
+    "funding": "YC and other VCs are actively exploring AI-powered service agencies in LATAM; watch for Series A rounds in fintech/accounting B2B.",
+    "product": "Look for launch of similar AI accounting agents in other LATAM countries (e.g., Mexico, Colombia) as proof of concept.",
+    "market": "Mandatory e-invoicing in Peru and digitization of tax processes create a tailwind for adoption.",
+    "tech": "Advances in generative AI and OCR for parsing complex PDF invoices reduce cost of automation.",
+    "momentum": "ACCELERATING"
+  },
+  "source": "triple_agent_classification"
+}

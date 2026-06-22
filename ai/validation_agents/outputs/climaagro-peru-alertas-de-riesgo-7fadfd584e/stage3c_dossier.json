@@ -1,0 +1,287 @@
+{
+  "source": "YC Startup School 2025 – ClimaAgro",
+  "one_liner": "ClimaAgro delivers farm-specific weather risk alerts and actionable advice via WhatsApp to smallholder farmers, paid by agribusiness buyers to protect their supply chains.",
+  "problem": "Smallholder farmers in Peru rely on generic forecasts or word-of-mouth, leading to misinformed planting, fertilization, and harvesting decisions. Climate volatility (El Niño, frosts, droughts) causes crop losses of 20–50% annually for vulnerable crops like coffee, cacao, and quinoa. Agribusiness buyers (exporters, cooperatives, processors) suffer procurement cost spikes, volume shortfalls, and weakened farmer loyalty. Current workarounds include subsidized SMS alerts from SENAMHI (too broad) or informal advice from field technicians (unscalable). There is no hyper-local, action-oriented alert system tailored to individual parcels and delivered through a channel farmers already use daily.",
+  "solution_insight": "We provide a B2B2C platform that ingests satellite data (NASA CHIRPS, MODIS), local sensor data (SENAMHI), and climate models to generate parcel-specific alerts for frost, drought, heavy rain, or heat stress 7–14 days ahead. Alerts are sent via WhatsApp with simple, context-appropriate actions (e.g., 'Cover your young plants tonight, frost risk on Thursday'). The agribusiness buyer pays a subscription per farmer onboarded, gaining supply chain resilience and data-driven sourcing insights. The non-obvious insight: Farmers trust and act on voice–note style, locally branded alerts from their own cooperative, not a generic app. Our moat is the hyper-local calibration using Peruvian microclimate data and the buyer-farmer relationship network that ensures high open rates and action compliance.",
+  "why_now": "WhatsApp penetration in rural Peru exceeds 80% (INEI 2023). El Niño intensifies climate unpredictability (SENAMHI 2024 reports record temperature anomalies). Agribusinesses face margin pressure and are seeking direct-to-farmer digital tools; insurers and development agencies increasingly fund climate resilience tech. Recent AI/ML advances in downscaling satellite data make hyper-local forecasts feasible without dense ground sensors. Regulatory tailwind: MIDAGRI promotes digital extension services for smallholders.",
+  "market": {
+    "recommended_focus": "Peru – home to the largest concentration of smallholder farmers supplying formal agribusiness export supply chains (coffee, cacao, quinoa), with accessible WhatsApp infrastructure and urgent climate risk.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Peru is the ideal starting market: 2.2 million smallholder farmers (INEI, 2022), 80%+ WhatsApp penetration, high dependency on climate-sensitive crops (70% of agricultural exports from smallholders, MIDAGRI). Agribusinesses are concentrated and digitally reachable (500+ formal exporters/associations, SUNAT). El Niño impacts are accelerating, creating urgency for buyers to secure supply.",
+        "tam_topdown": "Peru’s agricultural export value is ~US$9B (BCRP 2023). Roughly 30% of production is lost to weather-related risks annually (FAO). If ClimaAgro can capture 1% of that loss reduction as value, addressable market is US$27M. However, TAM as subscription revenue is more narrowly defined: number of smallholder farmers of interest to commercial buyers (~500k) × ARPU (US$20/ farmer/year) = US$10M/year. We use bottom-up for consensus.",
+        "tam_bottomup": "~500k smallholder farmers directly supplying formal agribusiness export chains (MINAGRI producer registry). Annual subscription per farmer = US$12–24. TAM = 500k × US$18 average = US$9M. Market could expand to all 2.2M smallholders if adoption widens, but immediate TAM is sub-venture-scale at <US$50M.",
+        "tam_consensus": "US$9–10M (sub-venture-scale as a standalone Peruvian market, but serves as a beachhead for LATAM expansion).",
+        "sam": "~30% of TAM = US$2.7M (reachable within 3 years: agribusinesses with >100 farmers, already digital payment capable, located in high–climate risk zones like Cajamarca, San Martín, Puno).",
+        "som_12_months": "US$60k–120k: bottom-up from pilot partnerships converting to 5–8 paying agribusinesses covering 3,000–5,000 farmers at US$2–3/farmer/month pilot pricing (discounted). Based on targeted outreach to 50 qualified buyers with conversion of 10–16%.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "MIDAGRI",
+          "SENAMHI",
+          "INEI",
+          "BCRP",
+          "FAO",
+          "SUNAT"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "tam_topdown": "LATAM smallholder farmer population is ~60 million (FAO). Assuming similar ARPU (US$18/year) for 10% addressable by formal supply chains, TAM ≈ US$108M. Top-down: LATAM agricultural exports ~US$200B, climate loss fraction 10% = US$20B, capturing 0.1% as value = US$20M (conservative).",
+        "tam_bottomup": "Addressable farmers in top coffee/cacao/quinoa countries (Colombia, Ecuador, Bolivia, Brazil): ~2 million farmers × US$18 = US$36M.",
+        "tam_consensus": "US$20–36M",
+        "sam": "10% of TAM = US$2–3.6M (early expansion into Colombia and Ecuador, similar supply chain structures).",
+        "som_12_months": "Path to US$0 after Year 1 (focus on Peru only).",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "FAO",
+          "SICA",
+          "CEPAL",
+          "Banco Mundial"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "tam_topdown": "U.S. specialty crop imports from LATAM are significant, but the direct smallholder buyer model does not translate; alternative B2B for U.S. importers monitoring offshore supply chains could be sized at US$50M+.",
+        "tam_bottomup": "≈500 U.S. importers of Peruvian coffee/cacao/ quinoa × US$50k/year subscription = US$25M.",
+        "tam_consensus": "US$25–50M (viable as expansion after LATAM).",
+        "sam": "US$5–10M (top 100 importers with sustainability programs).",
+        "som_12_months": "US$0 (Year 1 focus entirely on Peru).",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "USDA",
+          "ITC",
+          "SIECA",
+          "USITC"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "Use MIDAGRI’s producer registry to estimate number of smallholder farmers selling to formal buyers.",
+      "SUNAT export records to count active agribusiness exporters by product category.",
+      "INEI household surveys for WhatsApp penetration and farmer demographics.",
+      "BCRP agricultural GDP and export values to bound economic impact.",
+      "FAO and SENAMHI for crop loss estimates from climate events.",
+      "Primary interview data with 20+ agribusinesses to gauge willingness-to-pay and price sensitivity."
+    ]
+  },
+  "competition_moat": {
+    "do_nothing": "Farmers continue using generic media forecasts and intuition. Agribusinesses absorb supply risk and deploy field technicians sporadically.",
+    "incumbents": [
+      "SENAMHI public alerts (free, too broad, no individualized advice).",
+      "Agritech startups like Agrotools (Brazil) or CropX (global) offer farm management platforms, but require app installations and high farmer digital literacy; not integrated with WhatsApp.",
+      "ClimateAi (US) offers climate resilience tools for large enterprises, not tailored for smallholder supply chains in Peru."
+    ],
+    "moat": [
+      "Hyper-local, WhatsApp-first delivery creates an unassailable distribution advantage where farmers are already active.",
+      "Agribusiness buyer relationship is sticky: once a buyer integrates their farmer network, switching costs are high due to reconfigured trust, SMS templates, and historical alert data.",
+      "Data network effects: more farmer feedback on alert accuracy improves models for the entire network of that buyer, reinforcing retention."
+    ],
+    "free_substitutes": "Farmer WhatsApp groups sharing informal weather updates, but these lack predictive power and actionable advice."
+  },
+  "business_model_pricing": {
+    "model": "Subscription fee paid by agribusiness buyer, based on number of farmers covered, with tiers and optional premium analytics.",
+    "plans": [
+      {
+        "name": "Starter",
+        "price_usd_per_month": 300,
+        "farmers_included": 100,
+        "overage_per_farmer": 3,
+        "description": "Basic alerts for one crop/region, monthly report."
+      },
+      {
+        "name": "Growth",
+        "price_usd_per_month": 1200,
+        "farmers_included": 500,
+        "overage_per_farmer": 2.5,
+        "description": "Multi-crop, detailed advice, seasonal forecast, API access."
+      },
+      {
+        "name": "Enterprise",
+        "price_usd_per_month": "Custom",
+        "farmers_included": "1000+",
+        "overage_per_farmer": "Negotiable",
+        "description": "Full analytics suite, white-label, dedicated support, integration with buyer’s ERP."
+      }
+    ],
+    "variable_costs": "Twilio WhatsApp API (~US$0.005/msg), cloud hosting, satellite data acquisition (costs covered by existing NASA open data; processing cost minimal). Contribution margin >85% at scale."
+  },
+  "go_to_market": {
+    "first_10_users": "Hand-recruit 2–3 anchor agribusinesses (coffee cooperative in Cajamarca, cacao exporter in San Martín, quinoa processor in Puno) via direct referrals from MIDAGRI extension officers and industry associations (Junta Nacional del Café, APPCACAO). Offer free 3-month pilot for up to 200 farmers each, with success fee only if crop loss reduction verified.",
+    "first_100_users": "Convert 5–8 paying agribusinesses through pilot results (published case studies, ROI data). Partner with Peruvian trade associations to host workshops on climate resilience. Reach 20+ buyers on waitlist.",
+    "first_1000_users": "Expand to 25+ buyers covering 10,000+ farmers via inbound referrals and direct sales team. Launch integration with financial products (crop insurance, input credit) to increase buyer stickiness and ARPU. Begin Colombia expansion in Year 2."
+  },
+  "traction_signals": {
+    "interviews": "25 interviews with agribusiness managers, farmer cooperatives, and MIDAGRI officials, confirming pain and willingness to pay pilot.",
+    "waitlist": "3 LOIs from a cacao cooperative (300 farmers), a coffee exporter (200 farmers), and a quinoa processor (150 farmers) to pilot once WhatsApp bot is ready.",
+    "pilot": "None yet; conditional on funding.",
+    "usage": "Prototype WhatsApp alert system tested internally with historical data; open rate simulation with farmer focus groups showed >90% intent to follow actionable advice when sent from familiar sender."
+  },
+  "roadmap": {
+    "month_1": "Finalize partnership with first pilot buyer (cacao cooperative); set up data pipeline for their specific region using CHIRPS/MODIS & SENAMHI APIs; build basic WhatsApp alert using Twilio; onboard 50 farmers for controlled test.",
+    "month_2": "Run pilot: send daily forecasts and alerts; collect farmer feedback via WhatsApp surveys and buyer field reports; measure open rates and action compliance.",
+    "month_3": "Analyze pilot crop loss vs control group; publish results; convert pilot buyer to paid plan if successful; initiate sales conversations with 10 additional buyers.",
+    "month_6": "Product: WhatsApp bot with 3 crops, personalized advice, and dashboard v1. Paying customers: 3 buyers covering 1,200 farmers. MRR: $3,500.",
+    "month_9": "Add frost and drought early warnings with longer lead times. Paying customers: 8 buyers covering 4,000 farmers. MRR: $10,000.",
+    "month_12": "ARR target: $150,000 (15 buyers, 6,000 farmers). Key partnership with at least one agritech insurer to bundle insurance with alerts. Begin user research in Colombia.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 12500,
+      "paying_customers": 15,
+      "churn_target": "<5% monthly (buyer churn practically zero if value proven)",
+      "cac_target_usd": 2000
+    }
+  },
+  "risks_mitigations": {
+    "market": "Limited number of agribusiness buyers in Peru might cap growth; mitigation: expand to LATAM and adjacent use cases (insurers, input providers).",
+    "technical": "Hyper-local forecast accuracy in complex Andean microclimates may be low; mitigation: combine multiple models, use farmer correction feedback loop, and start with crops/regions where satellite data is most reliable (e.g., coastal valleys).",
+    "execution": "Farmer adoption and behavior change may lag (only 30% follow advice initially); mitigation: engage buyer’s field staff as local champions, use voice notes to build trust, iterate on message tone and timing.",
+    "regulatory": "Potential liability if a missed forecast leads to crop loss; mitigate: include clear disclaimer as advisory service, partner with insurance to embed coverage.",
+    "ai_substitution": "ChatGPT-like agents could parse public weather data and send generic WhatsApp alerts, but lack hyper-local calibration; mitigation: proprietary data from partner networks creates a defensible model that improves with more users."
+  },
+  "the_ask": {
+    "amount_usd": 150000,
+    "type": "pre-seed angel round",
+    "runway_months": 12,
+    "budget_breakdown": [
+      {
+        "line": "Pilot costs (Twilio, farmer incentives, field validation)",
+        "amount_usd": 20000,
+        "rationale": "Cover WhatsApp costs and small tokens for pilot farmers to maximize engagement and data collection."
+      },
+      {
+        "line": "Backend engineer (part-time) to build data pipeline and alert logic",
+        "amount_usd": 60000,
+        "rationale": "Part-time for 12 months; local Peruvian engineer salary competitive to ensure platform stability."
+      },
+      {
+        "line": "Founder stipend (single founder)",
+        "amount_usd": 30000,
+        "rationale": "Survival for one year to dedicate full-time on sales and partnerships."
+      },
+      {
+        "line": "Sales & partnership travel and materials",
+        "amount_usd": 15000,
+        "rationale": "Travel to Cajamarca, San Martín, Puno for on-the-ground buyer meetings; cannot be done remotely."
+      },
+      {
+        "line": "Legal and incorporation (Peru + Delaware)",
+        "amount_usd": 5000,
+        "rationale": "Essential for formal contracts with buyers and future investment."
+      },
+      {
+        "line": "Contingency",
+        "amount_usd": 20000,
+        "rationale": "Unforeseen data acquisition costs or extended pilot duration."
+      }
+    ],
+    "milestone_unlocked": "Prove that at least one agribusiness buyer achieves >20% reduction in weather-related crop loss among 500+ farmers, and converts to a paid subscription of at least $1,500/month, demonstrating product-market fit and replicability.",
+    "critical_assumption_being_tested": "That agribusiness buyers will pay a recurring subscription based on demonstrated ROI in farmer resilience, and that hyper-local alerts via WhatsApp can change farmer behavior enough to materially impact crop loss.",
+    "why_not_less": "Bootstrapping with less would force part-time engagement and slow pilots to a point where climate seasonality misses windows; would fail to generate statistically significant results within one year.",
+    "why_not_more": "More than $150k before proving the core value prop would be misallocated on scaling a product that might need pivoting; a larger round better raised after solid pilots with paying customers."
+  },
+  "product_demo_architecture": {
+    "description": "Input: NASA CHIRPS precipitation data, MODIS land surface temperature, SENAMHI station observations, and digital elevation model. ML pipeline: downscales to 1km grid, uses LSTM ensemble to predict frost/drought/rain probability 7-14 days out, calibrated against historical crop damage records. Output: Twilio WhatsApp bot sends bilingual (Spanish/Quechua) alerts with specific actions. Buyer dashboard (React) shows farmer compliance, alert accuracy, and estimated cost avoidance. All on AWS, serverless.",
+    "key_demos": [
+      "Live WhatsApp message: 'Hola Juan, ClimaAgro te avisa: probabilidad de helada en tu parcela el viernes 4/4 a 4°C. Cubre tus plantones de café con plástico esa noche. Llama a tu técnico Carlos si necesitas ayuda.'",
+      "Buyer dashboard showing map of alerted farmers and percentage who confirmed protective actions."
+    ]
+  },
+  "scorecard": {
+    "founder_market_fit": 7,
+    "problem_clarity": 8,
+    "solution_differentiation": 7,
+    "market_size_potential": 4,
+    "gtm_strategy": 6,
+    "tech_feasibility": 6,
+    "business_model": 6,
+    "traction_progress": 2,
+    "team_strength": 5,
+    "overall_gut_feel": 5
+  },
+  "total_score": 56,
+  "max_score": 100,
+  "rating": "CONDITIONAL_GO",
+  "external_research_hooks": [
+    "INEI (2023): 82.6% of rural households in Peru have at least one member using WhatsApp.",
+    "MIDAGRI (2022): 2.2 million smallholder farmers, 70% of agricultural exports generated by smallholders.",
+    "SENAMHI (2024): 2023–24 El Niño event caused a 1.5°C temperature anomaly in the Peruvian highlands, triggering record frost events.",
+    "BCRP (2023): Agricultural exports reached US$9.2B, with coffee (+15%), cacao (+22%), and quinoa (+8%) showing strong growth.",
+    "FAO: Climate-related disasters cause annual average losses of 23% of agricultural value in the Andean region."
+  ],
+  "pressure_test_scorecard": {
+    "pain_intensity": 4,
+    "buyer_clarity": 3,
+    "urgency": 4,
+    "differentiation": 4,
+    "speed_to_validate": 4,
+    "founder_advantage": 3,
+    "total": 22
+  },
+  "fatal_flaws": [
+    {
+      "risk": "AI prediction accuracy in hyper-local settings is insufficient, causing false alarms that erode farmer trust and buyer renewals.",
+      "severity": "HIGH",
+      "why_it_matters": "If 20%+ alerts are false, farmers will ignore them, and the entire value proposition collapses.",
+      "fast_test": "Run a 2-week silent pilot with historical forecasts vs observed weather for 10 pilot farmer parcels; measure RMSE and false alarm rate."
+    },
+    {
+      "risk": "Agribusiness buyers will not pay a recurring subscription because they cannot capture enough value from reduced crop loss within a short horizon, or they expect it as a free service.",
+      "severity": "MEDIUM",
+      "why_it_matters": "Thin-margin commodity supply chains may see the cost as an extra expense rather than ROI.",
+      "fast_test": "Present a pilot pricing proposal to 10 buyers with a conditional 90-day opt-out; measure willingness to pay and negotiate."
+    },
+    {
+      "risk": "Farmer non-compliance: even with alerts, farmers fail to take protective actions due to lack of resources or disbelief.",
+      "severity": "MEDIUM",
+      "why_it_matters": "Buyer pays for supply chain resilience but sees no reduction in crop loss if farmers ignore advice.",
+      "fast_test": "During pilot, offer simple actions that require minimal resources; measure action compliance via WhatsApp confirmation surveys and buyer field reports."
+    }
+  ],
+  "first_10_customers": [
+    {
+      "action": "Reach out to Gerente de Acopio of COOPCABANA (coffee cooperative in Cajamarca) via WhatsApp introduction from a MIDAGRI extension officer, offering a free pilot for 100 farmers.",
+      "channel": "WhatsApp",
+      "target_persona": "Cooperative manager responsible for farmer supply and quality.",
+      "how_to_reach": "Get intro from Known intermediary, send voice note: 'Hola, soy [Founder] de ClimaAgro. Estamos ayudando a cooperativas como la suya a reducir pérdidas por heladas con alertas WhatsApp. ¿Podemos hacer una prueba sin costo con 100 de sus agricultores?'"
+    },
+    {
+      "action": "Attend ExpoCafé 2025 and demo the WhatsApp alert live to cacao buyers; collect 10 expressions of interest.",
+      "channel": "event",
+      "target_persona": "Procurement heads of cacao exporters.",
+      "how_to_reach": "Set up a small stand, show live alert demo on phone, and offer a pilot sign-up sheet."
+    },
+    {
+      "action": "Cold-email quinoa processors in Puno with a one-pager of SENAMHI frost statistics and a testimonial draft from a farmer cooperative already in talks.",
+      "channel": "email",
+      "target_persona": "General Managers of quinoa export companies.",
+      "how_to_reach": "Subject: 'Reduzca la pérdida de quinua por heladas en un 30% – piloto gratis' with a specific attachable case study."
+    }
+  ],
+  "mvp_2_week_test": {
+    "build": "Build a minimal WhatsApp bot that sends 7-day advance frost alerts to 20 farmers of a single cooperative. Use historical CHIRPS data and simple threshold model for frost (temp < 2°C). Alerts include one actionable instruction. Track open rate and send a follow-up yes/no question: '¿Tomó acción? Sí/No'.",
+    "cut": "No dashboard, no multi-crop support, no buyer analytics. Manual sending if needed.",
+    "test_hypothesis": "If >70% of farmers open the alert and >50% take action within 2 weeks, the engagement model is validated.",
+    "success_signal": ">70% open rate and >50% action compliance in at least 10 out of 20 farmers."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "RutaLeche Peru is an offline-first mobile app that uses machine learning to optimize milk collection routes for Peruvian dairy cooperatives and processing plants. It tackles the daily pain of manual route planning that leads to milk spoilage, excess fuel consumption, and unnecessary trips in areas with no reliable internet. Unlike generic route optimizers, RutaLeche learns from historical collection data, road conditions, and milk quality to predict the best pickup sequence and timing, all running locally on a basic smartphone. When connectivity is restored, it syncs seamlessly. This narrow wedge addresses the most critical barrier to adoption in remote Andean regions, delivering immediate cost savings and reducing waste without forcing users to change their fundamental workflow.",
+      "one_liner": "We optimize milk collection routes for Peruvian dairy cooperatives and plants using an offline-first mobile app with machine learning.",
+      "target_customer": "Logistics coordinator at a medium-sized Peruvian dairy cooperative responsible for daily milk pickup from 50–200 small farms scattered across rural mountains.",
+      "core_problem": "Every morning, they manually sketch routes on paper based on intuition, because internet-based tools fail in the field. As a result, 15% of raw milk spoils before reaching the plant due to delayed pickups—costing around $500 per day in lost product, plus excess fuel and driver overtime. They repeat this frustrating, loss-making process daily with no alternative.",
+      "solution_hook": "The only route optimizer that works completely offline on a basic smartphone, using on-device machine learning that gets smarter with each trip and automatically prioritizes high-risk milk.",
+      "why_this_angle": "Narrowing to an offline-first mobile app directly removes the connectivity hurdle that makes all competitors useless in the Peruvian highlands. This wedge lets us prove value quickly with a segment desperate for a practical tool, then expand online features later.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 8,
+        "total": 23
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "RutaLeche Peru reimagined as an institutional solution: we partner with regional milk processing conglomerates or government agricultural programs to deploy an offline-first mobile app that optimizes daily collection routes from hundreds of small farms. The app uses on-device machine learning to adjust routes based on real-time milk volume, quality data, and spoilage risk, even without internet in remote areas. The institutional buyer (e.g., a processing plant's logistics director) gets a centralized dashboard for fleet management, reducing milk waste, fuel costs, and farmer dissatisfaction, while gaining data-driven insights for strategic sourcing.",
+      "one_liner": "We optimize milk collection logistics for large dairy processors and government programs using an offline-first mobile app with embedded ML, slashing spoilage and fuel costs.",
+      "target_customer": "Supply Chain Director at a mid-sized Peruvian milk processing plant that relies on daily pickups from over 100 dispersed smallholder farms.",
+      "core_problem": "Every morning, logistics coordinators manually plan routes for a fleet of collection trucks using phone calls, spreadsheets, and intuition. Inevitable miscoordination leads to delayed pickups, milk spoilage (up to 10% loss), excessive fuel consumption, and friction with farmers who lose income and trust.",
+      "solution_hook": "A driver app that runs ML-based route optimization entirely offline, syncing data when connectivity returns, giving institutional buyers real-time anomaly detection and a control tower to cut waste by 20–30% from day one.",
+      "why_this_angle": "Institutions have both the budget for a SaaS license and the urgency to standardize across dozens of routes, making unit economics far stronger than selling one-off to small cooperatives. Regulatory pressure on food loss also creates top-down pull.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 7,
+        "founder_feasibility": 7,
+        "total": 23
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "A lightweight, offline-first mobile application that uses on-device machine learning to generate optimal milk collection routes for small dairy cooperatives in the Peruvian highlands, where cellular connectivity is unreliable. The app works without internet during route planning and execution, syncing data later when connectivity is restored, directly targeting cooperatives losing 20-30% of milk due to spoilage from inefficient routing and lack of real-time data.",
+      "one_liner": "We provide an offline-first, ML-powered route optimization mobile app for remote dairy cooperatives in Peru to slash milk spoilage and fuel costs, working entirely without connectivity.",
+      "target_customer": "Cooperativa de Servicios Múltiples Sol de Oro's logistics coordinator, who juggles WhatsApp calls and paper maps to arrange daily collection from 50+ small farms in the Cajamarca region.",
+      "core_problem": "Every morning, the coordinator spends hours manually sequencing pickups based on vague farmer estimates, leading to long, inefficient routes. Milk often spoils because trucks arrive late, costing each cooperative an estimated $300–$500 per day in lost product and wasted fuel. With no internet in the field, existing apps are useless.",
+      "solution_hook": "Unlike any other routing tool, ours performs all route calculations on the phone using a compressed ML model, requiring zero cloud connectivity during use. It pre-loads farm data and adapts routes on-the-fly without signal.",
+      "why_this_angle": "By focusing exclusively on offline-first for high-altitude cooperatives with proven spoilage losses, we create a must-have tool for a desperate micro-segment. It bypasses the need for internet infrastructure and competes directly with 'do-nothing' inertia by offering instant, tangible savings that can be demonstrated in a single day of piloting.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 5,
+        "founder_feasibility": 9,
+        "total": 23
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "We optimize milk collection routes for Peruvian dairy cooperatives and plants using an offline-first mobile app with machine learning.",
+  "source": "parallel_iteration"
+}

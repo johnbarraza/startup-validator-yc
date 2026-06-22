@@ -1,0 +1,645 @@
+[
+  {
+    "idea": "RutaLeche Peru is an offline-first mobile app that uses machine learning to optimize milk collection routes for Peruvian dairy cooperatives and processing plants.",
+    "selected_gap": {
+      "id": 3,
+      "title": "Offline-First Mobile App for Remote Milk Collection",
+      "pain": "Rural areas lack reliable internet, making real-time optimization useless and forcing drivers to rely on paper and memory, leading to delays and errors.",
+      "why_now": "Smartphone penetration is high in rural Peru; offline sync technology is mature and can bridge the connectivity gap.",
+      "evidence_needed": "Test offline-capable MVP with drivers in remote regions and compare on-time collection and data accuracy against manual methods.",
+      "priority": 3,
+      "risk": "Infrastructure may improve faster than expected; offline sync adds development complexity and maintenance overhead."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "No explicit founder background provided; assumes domain knowledge in Peruvian dairy or logistics, but not confirmed."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "Peruvian dairy collection market estimated at ~$50M TAM; niche but not massive."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Milk spoilage and fuel waste are high-pain, frequently occurring issues with clear cost impact."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Generic route optimizers exist but lack offline-first and milk-specific features; manual methods are the main alternative."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unknown founder motivation; assumed moderate personal connection to problem."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 7,
+        "note": "High smartphone penetration and mature offline-sync tech make this newly feasible."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar offline-first logistics tools have succeeded in other regions (e.g., India), but not directly analogous."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "No signal of long-term commitment from founder; assumed moderate."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Potential to expand to other perishables and regions in Latin America."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Narrow wedge in a large, underserved market with clear need for digitization."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 9,
+        "note": "Founder appears to be acting on a specific, validated pain point in a niche market."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Assumed single-minded focus on this idea; no evidence of multiple concurrent ventures."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Understanding of manual route planning and milk collection is evident from the solution design."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "ML model runs on-device, leveraging edge computing and sync when connectivity returns."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Value proposition centered on cost savings and waste reduction, not just route software."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Current scope is narrow but could expand to full supply chain; ambition is moderate."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No mention of learning from failures; assumed standard approach."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Rural dairy cooperatives require trust and domain expertise; RutaLeche addresses this."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 8,
+        "note": "Offline-first sync and seamless integration with existing workflow is a core feature."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "No evidence of pre-sales; risk of overbuilding before validated demand."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Likely pricing per route or savings-share; aligns with outcome-based model."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 5,
+        "note": "No analysis of cost of goods or infrastructure costs provided."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "App is built natively for offline-first, not retrofitted onto old systems."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Demonstrates understanding of dairy collection operations and ML modeling."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 6,
+        "weighted": 1.5,
+        "rationale": "No detailed team background; assumed relevant but not proven."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 5,
+        "weighted": 1.0,
+        "rationale": "Peru dairy collection TAM ~$50M; growth moderate but timing right."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Offline ML on basic smartphones is a defensible moat given domain data."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of users, pilots, or revenue; purely conceptual."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 4,
+        "weighted": 0.4,
+        "rationale": "No defined pricing or unit economics; LTV:CAC and margins unknown."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 7,
+        "weighted": 0.56,
+        "rationale": "Incumbents are manual; generic route apps lack offline and domain fit."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial details; burn rate and runway unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Realistic failure mode: connectivity improves or incumbents add offline features."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.06,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Requires evidence of at least 5 pilot drivers using the MVP and demonstrating a 20% reduction in fuel cost/spoilage within 3 months."
+    },
+    "go_no_go": "CONDITIONAL_GO",
+    "decision": "Proceed with caution, focusing on rapid MVP testing with real drivers in a single cooperative.",
+    "next_experiments": [
+      "Recruit 3-5 dairy drivers in one remote valley to test offline MVP for 2 weeks; measure on-time collection rate vs manual baseline.",
+      "Conduct structured interviews to assess willingness to pay $10-$20/month per driver.",
+      "Evaluate technical feasibility of offline ML inference on low-end Android phones (e.g., RAM usage, battery drain)."
+    ],
+    "kill_criteria": [
+      "Less than 50% of drivers use the app consistently after 4 weeks.",
+      "On-time collection rate improves by less than 5% over manual methods.",
+      "Unable to achieve stable offline model performance on target devices."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "We optimize milk collection routes for Peruvian dairy cooperatives and plants using an offline-first mobile app with machine learning."
+  },
+  {
+    "idea": "RutaLeche Peru reimagined as an institutional solution: offline-first mobile app for daily milk collection route optimization from small farms, targeting regional milk processing conglomerates or government agricultural programs",
+    "selected_gap": {
+      "id": 3,
+      "title": "Offline-First Mobile App for Remote Milk Collection",
+      "pain": "Rural areas lack reliable internet, making real-time optimization useless and forcing drivers to rely on paper and memory, leading to delays and errors.",
+      "why_now": "Smartphone penetration is high in rural Peru; offline sync technology is mature and can bridge the connectivity gap.",
+      "evidence_needed": "Test offline-capable MVP with drivers in remote regions and compare on-time collection and data accuracy against manual methods.",
+      "priority": 3,
+      "risk": "Infrastructure may improve faster than expected; offline sync adds development complexity and maintenance overhead."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "Assuming founders have agri/logistics background; without specific info, fit is moderate."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "Total addressable market for B2B milk collection optimization in Peru likely under $500M, not huge."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Spoilage and inefficiency are acute pain points for processing plants and farmers."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Few dedicated digital solutions; manual methods dominate, but logistics software incumbents could adapt."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unclear founders' deep personal connection to dairy logistics."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Offline ML and smartphone penetration make this feasible now; infrastructure gap persists."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Analogous solutions in India (e.g., Stellapps) but not identical; limited direct evidence."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "Agriculture requires long cycles; founder commitment not demonstrated."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "Could expand to other perishables or regions, but customization may limit speed."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Agri-tech B2B is promising but crowded; this niche is relatively underserved."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is concrete and ready for customer feedback."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 5,
+        "note": "Assumes single focus; not verified."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "App addresses daily route planning and execution deeply."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "On-device ML for route optimization qualifies as edge AI."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 6,
+        "note": "Potential to sell on spoilage reduction but pricing not explicit."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Aims to transform regional milk collection, not just incremental improvement."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No mention of learning from failures."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Agriculture in Peru is low-trust; expertise in dairy logistics is high."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "Optimization algorithm is core value."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "Risk of building without validated demand from buyers."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 6,
+        "note": "Could price per route or per liter, but not defined."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "Offline app has low COGS, but driver training and support may add cost."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "New mobile app, not on legacy systems."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Requires deep dairy logistics expertise which is not yet demonstrated."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No specific team information provided; average assumption."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 5,
+        "weighted": 1.0,
+        "rationale": "TAM likely <$1B; moderate growth but underserved niche."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Offline ML creates defendable moat but can be replicated with effort."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of customer validation or pilots."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "Potential for high-margin SaaS but LTV:CAC unknown."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 7,
+        "weighted": 0.56,
+        "rationale": "Weak competition from manual methods and non-specialized software."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "Reasonable burn for MVP, but no details."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 6,
+        "weighted": 0.12,
+        "rationale": "Infrastructure risk and offline complexity are manageable but real."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.98,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": ""
+    },
+    "go_no_go": "NO GO",
+    "decision": "Decline investment at this stage due to lack of team depth, traction, and moderate market size. Founder should first secure LOIs from processing plants and build a working offline prototype.",
+    "next_experiments": [
+      "Conduct 20+ interviews with logistics directors at Peruvian milk processing plants to validate pain and willingness to pay.",
+      "Build a no-code prototype or mockup and test offline route capturing with 5 drivers for 2 weeks.",
+      "Seek a letter of intent (LOI) from at least one processing plant before building full MVP."
+    ],
+    "kill_criteria": [
+      "Less than 2 LOIs from processing plants within 3 months.",
+      "Drivers reject offline app due to usability or complexity after pilot.",
+      "No measurable reduction in spoilage or fuel cost in beta test."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We optimize milk collection logistics for large dairy processors and government programs using an offline-first mobile app with embedded ML, slashing spoilage and fuel costs."
+  },
+  {
+    "idea": "A lightweight, offline-first mobile application that uses on-device machine learning to generate optimal milk collection routes for small dairy cooperatives in the Peruvian highlands, where cellular connectivity is unreliable. The app works without internet during route planning and execution, syncing data later when connectivity is restored, directly targeting cooperatives losing 20-30% of milk due to spoilage from inefficient routing and lack of real-time data.",
+    "selected_gap": {
+      "id": 3,
+      "title": "Offline-First Mobile App for Remote Milk Collection",
+      "pain": "Rural areas lack reliable internet, making real-time optimization useless and forcing drivers to rely on paper and memory, leading to delays and errors.",
+      "why_now": "Smartphone penetration is high in rural Peru; offline sync technology is mature and can bridge the connectivity gap.",
+      "evidence_needed": "Test offline-capable MVP with drivers in remote regions and compare on-time collection and data accuracy against manual methods.",
+      "priority": 3,
+      "risk": "Infrastructure may improve faster than expected; offline sync adds development complexity and maintenance overhead."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 4,
+        "note": "No specific founder background provided; unsure of domain expertise in dairy logistics or Peruvian rural markets."
+      },
+      {
+        "criterion": "Market size",
+        "score": 3,
+        "note": "Niche market of dairy cooperatives in Peruvian highlands; TAM likely under $10M, limiting growth potential."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "20-30% spoilage is a critical pain point with clear financial impact for cooperatives."
+      },
+      {
+        "criterion": "Competition",
+        "score": 5,
+        "note": "Manual methods and spreadsheets dominate; some generic routing apps exist but few target offline-first milk collection specifically."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 3,
+        "note": "No evidence of founder having direct personal stake or connection to the problem."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 7,
+        "note": "On-device ML and offline sync technologies have matured; smartphone penetration in rural Peru is high, making the solution feasible now."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 4,
+        "note": "Similar offline-first logistics apps exist in other sectors (e.g., delivery) but none widely adopted in dairy cooperatives."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 4,
+        "note": "Uncertain if founder is willing to commit 5+ years; no information provided."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 5,
+        "note": "Potentially replicable to other agricultural supply chains in remote areas, but each region may require customization."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Addresses a genuine underserved need with a focused offline-first approach, but market size limits attractiveness."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Founder is acting on a specific identified gap rather than seeking perfection."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 5,
+        "note": "Unclear if founder has committed fully to this single idea; multiple ideas could dilute focus."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "App targets a specific workflow (milk collection routing) but depth of understanding driver daily life is uncertain."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "On-device ML for route optimization is edge AI, but the innovation is more in offline capability than AI sophistication."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Pain point is spoilage reduction; pitching 'reduce milk loss by X%' aligns with outcome selling."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 6,
+        "note": "Potential to expand to other crops or logistics in remote areas, but initial scope is modest."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 4,
+        "note": "No mention of systematic learning from failures; risk of ignoring valuable data."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 5,
+        "note": "Dairy cooperatives may be high-trust communities, not necessarily low-trust; expertise in offline logistics needed."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 5,
+        "note": "Offline sync and route optimization form the core process, but differentiation from existing tools is unclear."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Problem is acute, suggesting real demand, but validation with actual cooperatives is missing."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 6,
+        "note": "Could price per liter saved or per route; but feasible model not detailed."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 8,
+        "note": "Mobile app with no physical goods; COGS is low, primarily server sync costs."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "Building native offline-first app rather than adding AI to existing paper workflow."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 5,
+        "note": "Needs deep dairy logistics domain knowledge; unclear if team has it."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 3,
+        "weighted": 0.75,
+        "rationale": "No information on founder background or domain expertise; team risk is high."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "TAM is small ($1M-$10M) and not obviously growing; timing is okay but market is narrow."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 5,
+        "weighted": 0.75,
+        "rationale": "Offline ML routing provides mild defensibility but could be replicated; moat is weak."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No users, no pilots, no revenue; completely pre-traction."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 4,
+        "weighted": 0.4,
+        "rationale": "Unclear pricing; likely subscription but margins uncertain; LTV:CAC unproven."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Manual methods are weak competition, but funded incumbents in ag-tech could enter; low differentiation."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 6,
+        "weighted": 0.3,
+        "rationale": "Low burn for app development, but no revenue to offset; runway dependent on funding."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Main failure mode is lack of market adoption due to small TAM or inability to scale beyond Peru."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 3.72,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": ""
+    },
+    "go_no_go": "NO-GO",
+    "decision": "Decline",
+    "next_experiments": [
+      "Conduct deep interviews with 5 dairy cooperative managers to validate pain and willingness to pay",
+      "Test a lightweight paper-based simulation of the app to gauge feasibility and gather feedback"
+    ],
+    "kill_criteria": [
+      "No strong founder with dairy/logistics domain expertise within 3 months",
+      "Inability to demonstrate a clear path to $10M+ ARR within 1 year"
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We provide an offline-first, ML-powered route optimization mobile app for remote dairy cooperatives in Peru to slash milk spoilage and fuel costs, working entirely without connectivity."
+  }
+]

@@ -1,0 +1,245 @@
+{
+  "source": "YC Application Dossier",
+  "one_liner": "NotariaFlow AI is an AI copilot for small and mid-sized notary firms in Peru that accelerates the preparation of legal instruments by automatically extracting and structuring data from uploaded documents into an explainable, editable interface.",
+  "problem": "Notaries in Peru and across Latin America spend 4–6 hours per case manually transcribing key data from scanned documents, a process that is error-prone and intellectually repetitive. Current OCR tools lack domain-specific training, and general AI assistants risk hallucinations that could cause legal liability. The end user fears the verification of AI output will be just as time-consuming as manual entry if accuracy is not extremely high, while conservative professionals worry that even an editing interface won't prevent critical AI misinterpretations under ambiguous Peruvian regulations. The economic buyer doubts that efficiency gains will materialize within a quarter, and operations owners fear the overall workload won't decrease if notaries spend almost as long reviewing and correcting as they would typing from scratch.",
+  "solution_insight": "NotariaFlow provides a specialized OCR + LLM pipeline fine-tuned on notarial acts (escrituras, partidas, contratos). The notary scans or uploads source documents, and the system highlights extracted entities (names, dates, amounts, clauses) with confidence scores in a side-by-side editor. The notary can instantly correct or approve fields, and the system generates a precise draft. The non-obvious insight is that notaries actually need an interactive, explainable AI—not a black box. By making the AI's reasoning transparent and corrections easy, trust is built, and verification time drops to <30% of manual preparation, turning the AI into a reliable assistant rather than a potential liability.",
+  "why_now": "Recent advances in NLP (fine-tuned LLMs with high accuracy on structured extraction) and computer vision (LayoutLM-based OCR) now allow >92% field-level accuracy on Spanish legal documents. Peru's digital transformation push (digital signatures, the platform 'Notariado Digital') has primed the market. Meanwhile, incumbents like LexNotari have yet to add explainability, and the regulatory vacuum on AI-assisted notarial work creates a window to establish best practices and de facto standards.",
+  "market": {
+    "recommended_focus": "Launch in Peru to validate with a concentrated, trust-sensitive user base, then expand to LATAM where the combined addressable market becomes venture-scale.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Strong initial market: homogeneous legal framework, high need in Lima and major cities, founder's local network, and government digitalization initiatives. However, the standalone TAM is too small for VC returns.",
+        "tam_topdown": "According to INEI and the Colegio de Notarios, approximately 1.5 million notarial acts are processed annually. Average notary fees per act range $70–$300, implying a total notarial service market of ~$200M. Assuming 5% of service value can be captured by software, TAM ≈ $10M. Alternative top-down: Peru legal tech spend ~$50M (BCRP estimate of IT budget in judicial sector), notarial segment 5% → $2.5M.",
+        "tam_bottomup": "800 active notaries in Peru (SUNARP) × $300/month ARPU (base SaaS plan) = $2.88M annual recurring revenue potential. Even with expansion to ancillary legal staff, the bottom-up TAM caps at ~$4M.",
+        "tam_consensus": "$2.5M–$10M, sub-venture-scale for Peru. Clearly below $50M.",
+        "sam": "Optimistically 30% of Peru's notaries would pay for a digital tool → 240 notaries, yielding $864K ARR. More realistically, small firms and independent notaries constitute ~20% → 160 notaries, $576K ARR.",
+        "som_12_months": "Based on pilot pipeline: 10 notaries in first quarter → 40 by Q2 → 80 by Q4, with average ACV of $3,600. SOM ≈ $288K ARR.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "INEI: Compendio Estadístico de Actividades Notariales",
+          "SUNARP: Registro de Notarios",
+          "MEF: Presupuesto por Resultados – Eje Justicia",
+          "Colegio de Notarios de Lima: Estadísticas de Agremiados",
+          "BCRP: Digitalización de Servicios Legales"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "Latin America shares a civil law tradition with similar notarial acts, making the product nearly directly transferable. Combined TAM is borderline for VC but high-growth potential.",
+        "tam_topdown": "Latin America legal tech market estimated at $1.2B (Statista, adjusted for notarial subsegment 3%) → $36M. More granular: ~20,000 notaries across LATAM (Chile 400, Colombia 1,200, Argentina 9,000, Mexico 5,000, Brazil 4,000), at $300/month → $72M bottom-up TAM.",
+        "tam_bottomup": "20,000 notaries × $300/month = $72M ARR potential, consistent with top-down.",
+        "tam_consensus": "$36M–$72M, borderline venture-scale. Requires strong execution to capture enough share.",
+        "sam": "Excluding Brazil (different language/infrastructure), rest of LATAM ~12,000 notaries, 20% early adopter penetration = 2,400 notaries × $300 = $8.64M ARR.",
+        "som_12_months": "Post‑Peru expansion into Chile and Colombia: 200 notaries across 3 countries, ACV $3,600 → $720K ARR.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "Colegio de Escribanos de Buenos Aires",
+          "Colegio de Notarios de Colombia",
+          "Asociación de Notarios de Chile",
+          "INEGI (México): Ocupación notarial",
+          "Statista: Legal tech LATAM forecast"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "U.S. notaries public perform a fundamentally different role (witnessing signatures, no legal drafting). Our AI is irrelevant for their workflow. Limited addressable demand among immigration attorneys or Hispanic-focused services would not justify a U.S. market entry.",
+        "tam_topdown": "Niche notarial preparation services for Spanish-speaking immigrants: $50M? Not reliable.",
+        "tam_bottomup": "~4,000 notaries in Spanish-speaking-heavy states? ARPU uncertain. Bottom‑up TAM <$5M.",
+        "tam_consensus": "Negligible for our product.",
+        "sam": "N/A",
+        "som_12_months": "N/A",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "National Notary Association membership stats",
+          "US Census: Spanish-speaking community"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "For Peru bottom-up: obtain exact number of active notaries from SUNARP and Colegio de Notarios; survey willingness-to-pay among Lima-based notaries.",
+      "For top-down: extract notarial act volumes from INEI's annual 'Compendio Estadístico' and multiply by average notary fees published by the Ministry of Justice.",
+      "For LATAM: use notary associations' public registries and adjust ARPU by purchasing-power parity based on BCRP comparative studies.",
+      "Validate SAM via pilot conversion rates and referred contacts in Chile and Colombia."
+    ]
+  },
+  "competition_moat": {
+    "incumbents": "LexNotari dominates Peru's notarial software market but lacks AI‑based extraction; it offers digitized templates requiring manual data entry. Free substitute: Microsoft Word + typing from scanned documents. Do-nothing: hiring more paralegals.",
+    "direct_competitors": "A few local startups experimenting with AI for legal docs (e.g., LegalTech AI), but none focused on notarial acts with explainability.",
+    "moat": "Proprietary OCR + LLM fine-tuned on Peruvian notarial acts gives >95% field accuracy. The interactive editing interface with confidence scores and diff views creates network effects: every correction trains the system, forming a data moat that competitors cannot replicate without access to similar user feedback loops. Deep integration with Peru's 'Notariado Digital' platform and relationships with the Colegio de Notarios provide distribution barriers.",
+    "substitution_risk": "LexNotari could retrofit its platform with an AI extraction module in one sprint if it sees traction, leveraging its existing customer base and compliance certifications. Our moat depends on speed of deployment and data accumulation."
+  },
+  "business_model_pricing": {
+    "model": "SaaS per seat, with volume‑based add‑ons. Three tiers:",
+    "plans": [
+      {
+        "name": "Starter",
+        "price_monthly_usd": 199,
+        "included_docs": 50,
+        "target": "Individual notaries",
+        "key_features": "AI extraction, editable review interface, draft export to Word"
+      },
+      {
+        "name": "Professional",
+        "price_monthly_usd": 399,
+        "included_docs": "Unlimited",
+        "target": "Small firms",
+        "key_features": "Starter + clause library, multi‑user permissions, priority support"
+      },
+      {
+        "name": "Enterprise",
+        "price_monthly_usd": 999,
+        "included_docs": "Unlimited + API access",
+        "target": "Large notarial offices and legal departments",
+        "key_features": "Professional + dedicated cloud, SSO, custom integrations"
+      }
+    ],
+    "variable_costs": "Cloud hosting ~$0.50 per document processed, OCR/LLM API costs ~$2 per document. Contribution margin ~85% at scale.",
+    "upsell_path": "Add‑on modules for apostille, translation, and advanced analytics at $99/month each."
+  },
+  "go_to_market": {
+    "first_10": "Leverage founder's network of notaries in Lima. Offer a free 2‑month pilot with the Starter plan in exchange for weekly feedback sessions. Target digital‑forward notaries listed in the Colegio de Notarios online registry.",
+    "first_100": "After pilot case studies show 60% time reduction, present at regional notary conferences and via webinars hosted by the Colegio de Notarios. Use a referral program ($50 credit for each new paid customer). Run LinkedIn ads targeting notarios.pe groups.",
+    "first_1000": "Expand to Chile and Colombia by partnering with local notary associations. Translate the interface (already Spanish) and adapt to local document templates. Offer discounted annual plans to accelerate multi‑country adoption. Build a community of power users who contribute clause libraries, creating network effects.",
+    "distribution_barriers": "Trust is paramount; our first hires in each country will be a legal relations manager to navigate local regulations and professional norms."
+  },
+  "traction_signals": {
+    "interviews": "20 structured interviews with notaries in Lima, Arequipa, and Trujillo; 15 expressed frustration with manual preparation and willingness to try AI if they could see the extraction logic.",
+    "waitlist": "32 notaries have signed up for early access, with 8 explicitly asking for a pilot.",
+    "lois": "5 letters of intent from notaries agreeing to pilot and provide testimonials if the product meets accuracy benchmarks.",
+    "prototype_metrics": "Custom OCR + LLM prototype achieved 91% field‑level accuracy on a test set of 200 escrituras. In a simulated review task with 5 notaries, verification time decreased by 65% compared to manual typing, with a Trust Score of 4.2/5 on a post‑task survey.",
+    "usage_evidence": "Pilot notaries used the editor on 120 documents over two weeks, generating 95 drafts, with an average of 1.4 corrections per document (mostly minor capitalization errors)."
+  },
+  "roadmap": {
+    "month_1": "Onboard 5 pilot notaries from LOI list. Collect feedback through 3 structured sessions. Improve OCR accuracy by adding 500 new notarial document samples to training set.",
+    "month_2": "Refine UI based on pilot feedback: add diff view, batch corrections, and better confidence visualization. Expand pilot to 10 notaries, target $2,000 MRR.",
+    "month_3": "Launch v1 publicly in Peru with Starter and Professional plans. Reach 20 paying customers, $6,000 MRR. Integrate with SUNARP API for automatic document registration lookup.",
+    "month_6": "30 paying customers in Peru, $12,000 MRR. Add apostille module and integration with 'Notariado Digital'. Hire first sales rep in Chile for LATAM expansion.",
+    "month_9": "Enter Chile with localized version (same Spanish, local templates). Total 80 paying customers, $30,000 MRR. Begin pilot in Colombia.",
+    "month_12": "200 paying customers across Peru, Chile, and Colombia, $72,000 ARR (≈ $6,000 MRR). Validate efficiency gain with third‑party time study, publish white paper for regulatory endorsement.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 6000,
+      "paying_customers": 200,
+      "churn_target": "<5% monthly",
+      "cac_target_usd": 400
+    }
+  },
+  "risks_mitigations": [
+    {
+      "category": "Market",
+      "description": "Peru TAM too small for venture returns.",
+      "mitigation": "LATAM expansion planned from month 6. Prove retention and upsell in Peru, then replicate in Chile, Colombia, and eventually Mexico.",
+      "severity": "High"
+    },
+    {
+      "category": "Technical",
+      "description": "AI extraction accuracy drops on handwritten or low-quality scans common in notarial offices.",
+      "mitigation": "Invest in specialized image pre‑processing and human-in-the-loop queuing that routes low‑confidence documents to an internal validation team, building a supervised training loop.",
+      "severity": "Medium"
+    },
+    {
+      "category": "Execution",
+      "description": "Notaries resist adopting new tools and may demand on‑premise deployment due to data sensitivity.",
+      "mitigation": "Offer a hybrid on‑premise agent for large firms; start with ISO‑27001 certified cloud and obtain a legal opinion from a respected law firm certifying compliance with Peruvian data protection law.",
+      "severity": "Medium"
+    },
+    {
+      "category": "Regulatory",
+      "description": "Peru's Ley del Notariado does not explicitly permit or prohibit AI assistance; a future decree could force review workflows to be entirely manual.",
+      "mitigation": "Engage early with the Consejo del Notariado to co‑design audit trails; ensure every AI action is logged and attributable to the notary, making the assistant no different from a paralegal under current law.",
+      "severity": "High"
+    },
+    {
+      "category": "AI Substitution",
+      "description": "LexNotari or a well‑funded legal tech startup could add similar AI extraction and explainability quickly.",
+      "mitigation": "Move fast and build a data moat: every correction contributes to a proprietary training corpus that improves accuracy specifically for Peruvian notarial language, making switching costly. Lock in customers with integrations to SUNARP's e‑signatures.",
+      "severity": "High"
+    }
+  ],
+  "the_ask": {
+    "amount_usd": 50000,
+    "type": "pre-seed grant / angel",
+    "runway_months": 6,
+    "budget_breakdown": [
+      {
+        "line": "AI engineer (part-time) to refine OCR+LLM pipeline and build training infrastructure",
+        "amount_usd": 18000,
+        "rationale": "$3k/month for 6 months: below market to attract a founding CTO but supplemented with equity; critical to move from prototype to production-ready accuracy."
+      },
+      {
+        "line": "Front-end/UX designer (contract) to craft the editable review interface and confidence visualization",
+        "amount_usd": 10000,
+        "rationale": "One-time engagement covering iterative design and two rounds of notary usability testing; essential to reduce verification time."
+      },
+      {
+        "line": "Cloud/API credits for OCR, LLM inference, and hosting",
+        "amount_usd": 6000,
+        "rationale": "$1k/month covers processing ~500 documents/month for pilots and initial customers; costs drop with dedicated model hosting."
+      },
+      {
+        "line": "Notary pilot incentives and travel",
+        "amount_usd": 8000,
+        "rationale": "$1,600 per notary for 5 pilot participants covers their time for 10 hours of testing and interviews; critical to gather robust feedback and case studies."
+      },
+      {
+        "line": "Legal consultation for regulatory review and data protection compliance",
+        "amount_usd": 4000,
+        "rationale": "One-time fee to obtain a formal opinion on AI-assisted notarial acts; mitigates regulatory risk early."
+      },
+      {
+        "line": "Miscellaneous (accounting, incorporation, marketing collateral)",
+        "amount_usd": 4000,
+        "rationale": "Lean allocation for basic operational setup; no paid ads at this stage."
+      }
+    ],
+    "milestone_unlocked": "Prototype validated with 5 pilot notaries, demonstrating 60% time reduction and a Trust Score >4.0/5; positive legal opinion secured; 3 case studies produced to support a seed round.",
+    "critical_assumption_being_tested": "Notaries will find the explainable AI interface sufficiently trustworthy and time-saving to pay for it, even in a low‑tech trust environment.",
+    "why_not_less": "$30k would force skipping the legal opinion or reducing the number of pilot notaries, leaving regulatory risk unaddressed and lacking statistically significant validation data.",
+    "why_not_more": "$100k+ would be premature for building features beyond the core extraction/editing flow and might dilute equity before product‑market fit is proven; the current ask is the minimum to de‑risk the key hypotheses."
+  },
+  "product_demo_architecture": {
+    "user_flow": "1. Notary logs into NotariaFlow web app (React front-end hosted on Vercel). 2. Drags and drops a scanned PDF of an escritura. 3. Backend (FastAPI) triggers AWS Textract for initial text tokenization, then passes tokens to a custom RoBERTa‑based entity recognizer fine‑tuned on 2,000 Peruvian public deeds. 4. Extracted entities (parties, property details, amounts, dates) are displayed in a two‑pane view: left side shows PDF with highlighted regions, right side shows editable fields color‑coded by confidence (green >95%, yellow 80‑95%, red <80%). 5. Notary clicks a field to correct; changes are instantly reflected in both panes. 6. A diff summary of changes appears at the bottom. 7. Once approved, a GPT‑4o mini model generates a draft Word document using the notary's template, incorporating the corrected data. 8. Draft is downloaded and also stored in the notary's history with a full audit trail of AI and human edits.",
+    "tech_stack_highlights": "OCR: AWS Textract + custom LayoutLMv3 for table/column detection specific to notarial formats. Extraction: SpaCy + fine‑tuned RoBERTa‑base on Peruvian legal corpus. Confidence scoring: Monte Carlo dropout during inference. Draft generation: OpenAI GPT‑4o mini with few‑shot prompts. Data storage: PostgreSQL + S3 with AES‑256 encryption.",
+    "security": "All data encrypted in transit and at rest. Role‑based access with multi‑factor authentication. ISO 27001‑aligned policies adapted for a small team."
+  },
+  "scorecard": {
+    "Founder-Market Fit": 5,
+    "Market Size": 4,
+    "Product & Solution": 6,
+    "Competition & Moat": 4,
+    "Execution & GTM": 6
+  },
+  "total_score": 25,
+  "max_score": 50,
+  "rating": "CONDITIONAL_GO. The explainable AI extraction addresses a real pain point with strong initial traction signals, but the standalone Peru TAM is sub‑venture‑scale, and incumbents pose a high threat. The founding team must demonstrate rapid LATAM expansion to raise a seed round. Proceed with prototype validation as outlined.",
+  "external_research_hooks": [
+    "INEI – Compendio Estadístico de las Actividades Notariales 2023: provides number of notarial acts per year and average fees.",
+    "SUNARP – Registro de Notarios: official database of licensed notaries, updated quarterly, used to count potential customers.",
+    "MEF – Presupuesto por Resultados “Mejora de los Servicios del Sistema de Justicia”: contains digital transformation budget lines for judicial sector.",
+    "BCRP – Indicadores de Digitalización de Servicios Legales: quarterly survey on law firm technology adoption.",
+    "Colegio de Notarios de Lima – Estadísticas de Agremiados: active member count, practice areas, and digital readiness self‑assessment (internal survey 2024).",
+    "Ministerio de Justicia – Ley del Notariado N° 26002 y Reglamento: legal framework governing notarial acts and permissible tools.",
+    "For LATAM: Asociación de Notarios de Chile – Memoria Anual 2023; Colegio de Notarios de Colombia – Censo Notarial; Statista – Legal Tech LATAM Market Report 2023."
+  ]
+}

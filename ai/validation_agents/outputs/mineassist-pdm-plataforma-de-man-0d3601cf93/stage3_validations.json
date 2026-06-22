@@ -1,0 +1,647 @@
+[
+  {
+    "idea": "MineVibe is an AI-powered tool that ingests vibration signals from critical rotating mining equipment and outputs clear, jargon-free diagnosis and repair guides in the technician's language.",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "Mining-Specific Natural Language Vibration Diagnosis",
+      "pain": "Maintenance teams struggle to translate complex vibration data and dashboards into actionable maintenance decisions, leading to delayed responses and reliance on scarce expert analysts.",
+      "why_now": "Advances in NLP make it technically feasible to generate domain-specific, clear recommendations, while established mining vibration providers (e.g., Bently Nevada) still rely on rule-based outputs and pure-play AI startups (e.g., Augury) are just beginning to enter mining.",
+      "evidence_needed": "Customer discovery with mining maintenance managers to quantify time lost interpreting data and gauge willingness to pay for explainable NLP outputs; competitive analysis of Augury's mining traction.",
+      "priority": "high",
+      "risk": "Augury accelerates mining deployment with its strong NLP and funding; incumbents may add NLP features to existing dashboards."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "No specific founder info provided; domain expertise assumed but not confirmed."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "Mining equipment monitoring is a large but niche market; TAM likely >$1B."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Downtime in mining is extremely costly; pain is acute and well-documented."
+      },
+      {
+        "criterion": "Competition",
+        "score": 5,
+        "note": "Incumbents like Bently Nevada and emerging AI players like Augury pose significant competition."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unknown founder motivation; assumed moderate."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Advances in NLP and edge AI make this technically feasible now."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar AI-for-maintenance tools exist in other industries, but mining-specific is less proven."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Building trust and adoption in mining will require multi-year effort."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "SaaS model can scale to many mines, but sales cycles may be long."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Vertical AI for industrial maintenance is a promising and defensible niche."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is specific and actionable; could be refined through customer feedback."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focus on this idea is reasonable; but multiple ideas may dilute effort."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 9,
+        "note": "Deep integration with maintenance workflow is essential and planned."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Leverages latest NLP and vibration analysis models; moat from domain data."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Pricing per outcome (e.g., per protected asset) aligns with this rule, but not yet implemented."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 6,
+        "note": "Aiming for full 'nervous system' is ambitious, but starting narrow is wise."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No evidence of structured experimentation yet; need to embed this."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Mining maintenance is high-expertise and low-trust for AI; perfect for deep domain focus."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "Workflow integration is key; product should improve with use."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 7,
+        "note": "Need to validate willingness to pay before building full product."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 6,
+        "note": "Outcome-based pricing is strong but complex to implement early."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 5,
+        "note": "Model inference costs and data acquisition are non-trivial; need to optimize."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Building native AI solution instead of adding NLP to existing rule-based systems."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Team needs expertise in mining, ML, and operations; not yet confirmed."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No information on team background; assume lack of proven domain or technical expertise."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "TAM likely >$1B, growing with mining digitization; timing is right."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Mining-specific training data and NLP provide defensible moat, but not yet built."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of customer discovery, waitlist, or pilots; pure idea stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "SaaS with outcome-based pricing potential, but unproven; margins could be high."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Incumbents (Bently Nevada) and well-funded AI players (Augury) pose strong threat."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial projections; burn rate and runway unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 6,
+        "weighted": 0.12,
+        "rationale": "Main risk is Augury entering mining; technical risk moderate; execution risk high."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.94,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "RECALIBRATE",
+    "decision": "Decline funding at this stage due to lack of team and traction. Recommend founder build domain credibility and conduct customer discovery before reapplying.",
+    "next_experiments": [
+      "Conduct 20 interviews with mining maintenance managers to validate pain and willingness to pay.",
+      "Build a manual MVP using existing vibration data and a general LLM to test NLP output quality in mining context.",
+      "Analyze Augury's mining traction and identify specific gaps their product does not address."
+    ],
+    "kill_criteria": [
+      "Less than 50% of interviewees rank the problem as 'critical' or 'urgent'.",
+      "Unable to find 5 mines willing to pilot for free within 3 months.",
+      "Competitive analysis shows Augury already solving the same use case with strong traction."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "We turn raw vibration data into plain-language diagnosis and repair steps for mining equipment, so maintenance technicians act faster without specialist analysts."
+  },
+  {
+    "idea": "MineAssist-PdM Enterprise - predictive maintenance platform for mining trade associations",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "Mining-Specific Natural Language Vibration Diagnosis",
+      "pain": "Maintenance teams struggle to translate complex vibration data and dashboards into actionable maintenance decisions, leading to delayed responses and reliance on scarce expert analysts.",
+      "why_now": "Advances in NLP make it technically feasible to generate domain-specific, clear recommendations, while established mining vibration providers (e.g., Bently Nevada) still rely on rule-based outputs and pure-play AI startups (e.g., Augury) are just beginning to enter mining.",
+      "evidence_needed": "Customer discovery with mining maintenance managers to quantify time lost interpreting data and gauge willingness to pay for explainable NLP outputs; competitive analysis of Augury's mining traction.",
+      "priority": "high",
+      "risk": "Augury accelerates mining deployment with its strong NLP and funding; incumbents may add NLP features to existing dashboards."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 7,
+        "note": "Assumes team with mining domain and AI expertise; not explicitly provided but inferred from domain-specific focus."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "Mining PdM market is large (billions), but need to quantify specific TAM; growth driven by digitalization."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Unplanned downtime costs mining millions per hour; skills gap is critical and worsening."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Incumbents (Bently Nevada) have data and trust; Augury is entering mining with AI; differentiation via mining-specific NLP."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 7,
+        "note": "Assumes founder has personal experience or passion for mining maintenance; not detailed."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 9,
+        "note": "NLP advances (LLMs) make explainability feasible; mining margins squeezed, so efficiency is urgent."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 8,
+        "note": "Vertical AI successes in manufacturing (e.g., Augury, Uptake) show path; mining trade associations as distribution is novel."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 8,
+        "note": "Mining sales cycles are long; founder likely prepared for 10+ year journey."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Targeting trade associations could enable broad reach, but each deployment may require customization."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Vertical AI in industrial maintenance is a strong space; mining-specific angle reduces direct competition."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is specific enough to test immediately; not over-optimized."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focus on one idea; risk of distraction but plausible commitment."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 9,
+        "note": "Targets specific pain of interpreting vibration data; need to observe technician workflow."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 9,
+        "note": "Uses NLP for explainability; mining-specific model creates defensibility."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Outcome-based pricing (e.g., per asset protected) aligns with customer desire for reduced downtime."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 8,
+        "note": "Aims to be the 'nervous system' of mining maintenance; ambitious but focused."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "Not explicitly mentioned; but agile iteration is implied."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 9,
+        "note": "Mining maintenance is high-stakes; trust is critical. Domain expertise is a moat."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "The platform integrates diagnosis, reporting, and benchmarking; workflow embedded."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Risk of building features without validation; customer discovery needed."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 8,
+        "note": "Outcome-based pricing suggested; strong alignment."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "Cloud and inference costs matter; need to optimize model size and data storage."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Native AI solution, not adding ML to existing dashboards."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 9,
+        "note": "Mining domain expertise, custom NLP model, and operational deployment fluency required."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 7,
+        "weighted": 1.75,
+        "rationale": "Assumes team has combined mining maintenance and AI expertise; not proven but plausible given domain focus."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 8,
+        "weighted": 1.6,
+        "rationale": "Global mining PdM TAM likely >$1B; growing due to digitalization and skills shortage; timing is right."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 8,
+        "weighted": 1.2,
+        "rationale": "Mining-specific explainable AI creates defensibility; natural language output is differentiated from rule-based tools."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 4,
+        "weighted": 0.6,
+        "rationale": "No pilots or customers yet; only gap analysis and concept; significant evidence required."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 7,
+        "weighted": 0.7,
+        "rationale": "SaaS to associations with outcome-based pricing can yield high margins; LTV:CAC >3x achievable if distribution through associations."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Incumbents (Bently) have data and trust; Augury is AI-focused and entering mining; differentiation is narrow but defensible if mining-specific model works."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No financial projections provided; assume moderate burn for prototype; 18+ months runway not confirmed."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 6,
+        "weighted": 0.12,
+        "rationale": "Main risk: incumbents add NLP features; mining conservative adoption; realistic failure mode is failure to get association buy-in."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 6.7,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Must secure a pilot LOI with at least one mining trade association within 3 months; build prototype validated on public dataset (e.g., CWRU) with demonstrated accuracy >90% for top 5 fault types; show early customer discovery quantifies willingness to pay >$50k/year per site."
+    },
+    "go_no_go": "conditional_go",
+    "decision": "Proceed with focused customer discovery and prototype development; do not scale until pilot validation.",
+    "next_experiments": [
+      "Conduct 20 interviews with mining maintenance managers to quantify time lost interpreting vibration data and price sensitivity.",
+      "Build a prototype using public dataset (CWRU) that generates natural language repair instructions; test with 5 technicians.",
+      "Approach 3 mining trade associations (e.g., National Mining Association, ICMM) to gauge interest in benchmarking and insurance negotiation features."
+    ],
+    "kill_criteria": [
+      "No association interest or pilot commitment within 3 months.",
+      "Incumbents (Bently Nevada or Augury) launch a competing NLP feature with mining traction within 6 months.",
+      "Customer discovery reveals that technicians prefer existing workflow over NLP recommendations (e.g., do-nothing or manual interpretation)."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We equip mining trade associations with a white-label predictive maintenance platform that converts vibration anomalies into plain-language repair steps, cutting downtime and upskilling workers industry-wide."
+  },
+  {
+    "idea": "We provide an AI-driven, natural-language vibration diagnosis tool exclusively for SAG mill gearbox bearings in copper mines. It ingests raw accelerometer data from the gearbox, classifies specific fault types, and instantly generates a plain-language triage report tailored to the shift maintenance lead—no vibration analysis certification needed.",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "Mining-Specific Natural Language Vibration Diagnosis",
+      "pain": "Maintenance teams struggle to translate complex vibration data and dashboards into actionable maintenance decisions, leading to delayed responses and reliance on scarce expert analysts.",
+      "why_now": "Advances in NLP make it technically feasible to generate domain-specific, clear recommendations, while established mining vibration providers (e.g., Bently Nevada) still rely on rule-based outputs and pure-play AI startups (e.g., Augury) are just beginning to enter mining.",
+      "evidence_needed": "Customer discovery with mining maintenance managers to quantify time lost interpreting data and gauge willingness to pay for explainable NLP outputs; competitive analysis of Augury's mining traction.",
+      "priority": "high",
+      "risk": "Augury accelerates mining deployment with its strong NLP and funding; incumbents may add NLP features to existing dashboards."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No founder background provided. Deep mining gearbox expertise is critical but unverified."
+      },
+      {
+        "criterion": "Market size",
+        "score": 4,
+        "note": "Extremely narrow: only copper mines running SAG mills with specific gearbox bearing faults. TAM likely under $100M."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "A single misdiagnosis can cause millions in downtime. Pain is acute and well-documented."
+      },
+      {
+        "criterion": "Competition",
+        "score": 3,
+        "note": "Incumbents with strong moats (Bently Nevada, SKF) and well-funded AI startups (Augury) already moving into mining. High barrier."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 4,
+        "note": "No evidence of founder having worked in mining or with vibration data. Personal connection unclear."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "NLP advances (GPT-4, fine-tuning) make natural-language generation feasible. Timing is right."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 5,
+        "note": "Augury has shown success in factories but not yet proven in mining. No direct mining-NLP success known."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 6,
+        "note": "Assuming founder is committed, but mining sales cycles are 12-24 months. Need long horizon."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 4,
+        "note": "Hard to scale beyond a few hundred gearboxes per mine. Each new asset type requires custom models."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Underserved niche with high willingness to pay. Strong founder-market fit could make it work."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "Idea is specific and actionable. Should validate quickly with maintenance leads."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 4,
+        "note": "Unclear if founder is fully committed to this single idea vs. exploring others."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 3,
+        "note": "Idea claims to understand pain, but no evidence of deep immersion in mines (shadowing, interviews)."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 6,
+        "note": "NLP generation is at the edge, but vibration classification is mature. Moats come from data, not model."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Triage reports directly enable faster decisions. Outcome is 'avoided downtime.'"
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 3,
+        "note": "Scope is narrow. Could expand later, but initial wedge is tiny."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No evidence of systematic learning from previous attempts."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Mining is low-trust, high-expertise. Good fit if team has credibility."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 4,
+        "note": "No mention of how customer feedback loops into product improvement."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 2,
+        "note": "High risk: mining companies say 'interesting' but slow to buy. Need paid pilots."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 9,
+        "note": "Pricing by protected asset or avoided downtime aligns well."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 5,
+        "note": "Hardware sensors and ML compute costs could be high. Not addressed."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Integrates directly with existing accelerometers. Not bolting on a generic tool."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 2,
+        "note": "No indication of team expertise across all three dimensions."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 3,
+        "weighted": 0.75,
+        "rationale": "No founder background provided. Critical domain expertise in mining vibration is missing."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "TAM for just SAG mill gearbox bearings in copper mines is <$100M. Not growing fast. Timing might be right but market small."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Moat comes from proprietary fault data and domain-specific NLP. Defensible if achieved."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of customer discovery, pilots, or LOIs. Pure idea stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "Potential for high-margin SaaS, but unclear pricing and sales cycle. LTV:CAC hard to estimate."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Faces established mining OEMs and AI startups with more resources. Hard to see sustainable edge."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial data. Likely needs significant capital for hardware, data collection, and sales. Burn rate unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Realistic failure modes include inability to acquire training data, long sales cycles, or incumbents copying NLP features."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.05,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO",
+    "decision": "DECLINE",
+    "next_experiments": [
+      "Conduct 20 interviews with mining maintenance managers to validate problem acuity and willingness to pay.",
+      "Build a prototype using public bearing fault datasets (e.g., CWRU) and a simple LLM to generate plain-language reports; test with 5 maintenance leads for usability.",
+      "Analyze Augury's mining traction and identify specific entry barriers."
+    ],
+    "kill_criteria": [
+      "If fewer than 60% of interviewed maintenance managers rank 'instant NLP diagnosis' as top-3 priority, kill.",
+      "If no mining partner agrees to a paid pilot within 3 months at $50K+ ACV, kill.",
+      "If Bently Nevada announces a similar NLP feature for mining within 6 months, re-evaluate."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We turn SAG mill gearbox vibration data into actionable, plain-language repair instructions for non-expert maintenance leads in copper mines."
+  }
+]

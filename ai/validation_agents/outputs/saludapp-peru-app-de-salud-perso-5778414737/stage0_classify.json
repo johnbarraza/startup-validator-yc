@@ -1,0 +1,57 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "HealthTech",
+  "customer_type": "B2B2C",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "Patient adoption is a chicken-and-egg problem: the app requires users to consistently scan pharmacy receipts to build the data moat, but there's no compelling immediate value to drive daily usage — phone reminders and crowdsourced prices are weak hooks in a low-WTP market.",
+    "B2B sales to EPS (Rimac, Pacífico) face long procurement cycles (6-12 months), committee decisions, and low budget priority — S/2000/month is meaningful but unproven ROI for adherence improvement, and they may already work with larger health-tech vendors.",
+    "Pharmacy listing monetization (S/500/month) is fragile: large chains already have their own apps and loyalty programs; small bodegas can't afford it. Crowdsourced price accuracy is unreliable and easily gamed.",
+    "Longitudinal health data moat requires years of active users; with no viral growth and limited organic distribution, reaching critical mass is unlikely before competitors or free workarounds emerge."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual tracking, no price comparisons)",
+    "Spending already happens (EPS spends on health management, pharmacies on marketing)",
+    "Recurring pain (daily medication adherence, weekly pharmacy visits)",
+    "Measurable cost (non-adherence leads to complications and higher costs for EPS)",
+    "B2B buyer has budget line (EPS have budgets for member health programs)"
+  ],
+  "classification_rationale": "SaludApp Peru addresses a real, recurring health management problem in Peru. Chronic disease non-adherence is costly for EPS and pharmacies, and patients lack tools for medication tracking and price comparison. The B2B model targets buyers with clear incentives and budget, and the longitudinal data moat is defensible. The idea is not a vitamin, pit, or crowded copycat as no equivalent exists locally.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "YES",
+  "freemium_rationale": "The consumer app is free to drive adoption and accumulate valuable longitudinal data, which is the core moat. EPS and pharmacies pay for the B2B dashboard and listing. A free tier is essential for network effects and data collection in Peru's price-sensitive market.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "EPS buyers (Rimac, Pacífico) have rigid procurement processes and low urgency — adherence data isn't a regulatory mandate; without a pilot showing clear cost savings, budgets go elsewhere.",
+  "free_substitute_risk": "Existing phone alarm apps, WhatsApp broadcast lists, and Google Keep for medication tracking cover 80% of the reminder need; pharmacy prices can be checked via Facebook marketplace groups or WhatsApp pharmacy chains for free.",
+  "market_size_reality_check": "Formal private health insurance in Peru covers ~5-10 million people across 5-7 major EPS; realistic SAM for S/2000/month dashboards is <100 accounts. Pharmacy listing market: top 2 chains (Inkafarma, Mifarma) have ~80% market share, unlikely to pay S/500/month for low-traffic platform. Realistic near-term revenue <$100K ARR.",
+  "hardest_assumption": "That Peruvian patients will habitually scan pharmacy receipts without a strong incentive (e.g., cashback or insurance discounts), given low digital engagement and privacy concerns.",
+  "devil_rationale": "The idea has sound logic but underestimates user acquisition and B2B sales friction in Peru. The data moat is theoretically strong but practically unachievable without massive upfront investment. Free substitutes exist and buyer willingness to pay is unvalidated. Likely fails to achieve product-market fit before funding runs out.",
+  "preflight_dominant_solution": {
+    "score": "CLEAR",
+    "competitor_name": "none found",
+    "threat_level": "LOW",
+    "note": "No widely-adopted app in Peru combines OCR medication tracking, pharmacy map, and chronic disease risk scores; global incumbents lack local pharmacy integration."
+  },
+  "preflight_precedent_failure": {
+    "score": "NO_KNOWN_FAILURE",
+    "example": "none",
+    "learning": "The specific combination of OCR, pharmacy maps, and risk scoring has not been attempted in Peru; thus no direct failure lessons, but general health app failures often cite low engagement and data quality issues."
+  },
+  "preflight_regulatory_kill": {
+    "score": "SOFT_BLOCKER",
+    "regulation": "Peru's Law of Personal Data Protection (Law N° 29733) and DIGEMID/MINSA regulations for health data and potential medical device classification if risk scoring is deemed diagnostic.",
+    "mitigation": "Use disclaimers, obtain legal counsel, register with DIGEMID if necessary, encrypt data, and seek user consent for WhatsApp integration."
+  },
+  "preflight_summary": "Proceed with caution: no dominant competitor nor known failure, but regulatory soft blockers (data privacy, potential medical device classification) require careful navigation.",
+  "deal_signals": {
+    "hiring": "Look for health data engineers, regulatory specialists, and partnerships with pharmacy chains.",
+    "funding": "Latin American health tech funding is accelerating; recent rounds in Colombia and Mexico suggest investor appetite.",
+    "product": "Monitor launches of competitive pharmacy apps or OCR-based health trackers in Peru.",
+    "market": "Rising chronic disease prevalence in Peru and growing smartphone penetration drive demand.",
+    "tech": "Advances in OCR (PaddleOCR, Claude Vision) and WhatsApp Business API enable low-cost deployment.",
+    "momentum": "ACCELERATING"
+  },
+  "source": "triple_agent_classification"
+}

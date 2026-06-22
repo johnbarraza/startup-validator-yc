@@ -1,0 +1,165 @@
+{
+  "idea": "ClimaAgro Peru: alertas de riesgo climático hiper-locales para pequeños agricultores peruanos via WhatsApp. Usamos datos satelitales (NASA CHIRPS, MODIS), modelos climáticos y datos de SENAMHI para dar alertas 7-14 días antes de heladas, sequías o lluvias extremas específicas por parcela. El agricultor recibe: alerta + acción concreta (cubrir cultivo, adelantar cosecha, reubicar ganado). Revenue B2B: Agrorural, cooperativas agrícolas y aseguradoras de cosecha (La Positiva, Rimac) pagan por el servicio para proteger su cartera de agricultores asegurados.",
+  "market": "Mercado peruano de pequeños agricultores expuestos a El Niño, ~2.2 millones de unidades agropecuarias familiares. TAM estimado en $50M anuales considerando suscripciones B2B por agricultor ($25/año) y primas de seguros agrícolas ($200M/año en Perú). SAM inicial: cooperativas cafetaleras y aseguradoras como La Positiva y Rímac, con 100k agricultores asegurados (~$5M). SOM 12 meses: 10 cooperativas y 1 aseguradora, 5k agricultores (~$250k ARR). Fuentes: CENAGRO 2012, APESEG, Minagri.",
+  "solutions": [
+    {
+      "id": 1,
+      "name": "SENAMHI (Servicio Nacional de Meteorología e Hidrología)",
+      "category": "Government Service",
+      "observed_positioning": "Pronósticos meteorológicos generales y alertas regionales. No personalizado, no hiper-local, no orientado a acciones concretas por cultivo. Canal principal: web y boletines, no WhatsApp."
+    },
+    {
+      "id": 2,
+      "name": "Agrorural (Programa de Desarrollo Productivo Agrario Rural)",
+      "category": "Government Extension",
+      "observed_positioning": "Asistencia técnica presencial a comunidades. A veces difunde avisos climáticos vía extensionistas, pero sin tecnología satelital ni escalabilidad. Puede convertirse en cliente o canal."
+    },
+    {
+      "id": 3,
+      "name": "Cooperativas agrícolas con agrónomos",
+      "category": "Workaround",
+      "observed_positioning": "Agrónomos de cooperativas monitorean clima manualmente (fuentes públicas) y envían recomendaciones vía WhatsApp o reuniones. Baja frecuencia, cobertura limitada, alta dependencia de personal."
+    },
+    {
+      "id": 4,
+      "name": "Aseguradoras de cosecha (La Positiva, Rímac)",
+      "category": "Potential Partner/Competitor",
+      "observed_positioning": "Modelos actuariales propios para pricing de seguros, pero no ofrecen alertas en tiempo real a los asegurados. Podrían desarrollar algo in-house si ven retorno, pero hoy es oportunidad de partnership."
+    },
+    {
+      "id": 5,
+      "name": "Ignitia",
+      "category": "Direct Competitor (International)",
+      "observed_positioning": "Pronóstico hiper-local para pequeños agricultores en África Occidental (Ghana, Mali). Vía SMS, no WhatsApp. Validó el modelo de pago vía telco y B2B con asociaciones. No opera en Perú aún."
+    },
+    {
+      "id": 6,
+      "name": "aWhere",
+      "category": "Direct Competitor (Ag Data Platform)",
+      "observed_positioning": "Plataforma global de inteligencia climática para agricultura. API y dashboards para grandes empresas y gobiernos. No enfocada en pequeños agricultores ni WhatsApp. Precio elevado."
+    },
+    {
+      "id": 7,
+      "name": "Tomorrow.io (antes ClimaCell)",
+      "category": "Weather Intelligence Enterprise",
+      "observed_positioning": "Web y API de pronóstico meteorológico de alta precisión. Enfocado en logística y utilities, no en agricultura de subsistencia. Costoso, poco adaptado al canal WhatsApp."
+    },
+    {
+      "id": 8,
+      "name": "Plantix",
+      "category": "Adjacent (Crop Health)",
+      "observed_positioning": "App de diagnóstico de plagas y enfermedades con IA, incluye alguna información meteorológica. No está diseñado para alertas proactivas hiper-locales, sino para diagnóstico reactivo."
+    },
+    {
+      "id": 9,
+      "name": "Weather.com / AccuWeather / Meteored",
+      "category": "Generic Weather App",
+      "observed_positioning": "Pronóstico genérico para ciudades, sin resolución por parcela. Publicidad, no adaptado a necesidades agrícolas ni a alertas accionables. Gratuito pero poco confiable para decisiones de cultivo."
+    },
+    {
+      "id": 10,
+      "name": "Local radio/TV weather bulletins",
+      "category": "Traditional Media",
+      "observed_positioning": "Alertas regionales en horarios fijos, baja granularidad. Cobertura amplia, pero sin personalización ni oportunidad de acción inmediata."
+    },
+    {
+      "id": 11,
+      "name": "SMS alerts de operadores móviles (Movistar, Claro, Entel)",
+      "category": "Telco Bundles",
+      "observed_positioning": "Algunas iniciativas de SMS masivos con alertas de desastres (INDECI), pero no agro-específicas. Sin acciones recomendadas ni segmentación por cultivo."
+    },
+    {
+      "id": 12,
+      "name": "Agricultural extension apps (FAO, CGIAR)",
+      "category": "International Development",
+      "observed_positioning": "Proyectos piloto con apps de información climática, generalmente discontinuos y sin sostenibilidad comercial. No tienen un modelo de negocio probado."
+    },
+    {
+      "id": 13,
+      "name": "Do-nothing (conocimiento tradicional)",
+      "category": "Status Quo",
+      "observed_positioning": "Los agricultores confían en su experiencia y observación del cielo. No adoptan tecnología formal. Mayor riesgo de pérdida total durante eventos extremos de El Niño."
+    },
+    {
+      "id": 14,
+      "name": "Grupos de WhatsApp de agricultores",
+      "category": "Peer-to-Peer",
+      "observed_positioning": "Redes informales donde comparten observaciones y consejos. Viral, pero sin respaldo científico. Pueden difundir rumores o alertas falsas."
+    },
+    {
+      "id": 15,
+      "name": "Climate FieldView (Bayer)",
+      "category": "Big Ag Digital Platform",
+      "observed_positioning": "Plataforma digital para agricultura de precisión en cultivos extensivos (soja, maíz) en mercados desarrollados. No se adapta a minifundios andinos ni al canal WhatsApp. Costo prohibitivo."
+    }
+  ],
+  "research_summary": "El ecosistema de alertas climáticas para pequeños agricultores peruanos está fragmentado: los servicios gubernamentales carecen de granularidad y accionabilidad; las aseguradoras no llegan al agricultor directamente; las apps internacionales son caras y no están localizadas. El mayor riesgo inmediato no es un competidor directo sino la inercia (do-nothing) y la posible entrada de Ignitia si percibe oportunidad en LATAM. La ventana de ClimaAgro es de 12-18 meses para asegurar distribución B2B y construir datos propietarios antes de que SENAMHI o un jugador global se vuelva peligroso.",
+  "competitor_signals": [
+    {
+      "competitor": "SENAMHI",
+      "hiring_score": 3,
+      "funding_score": 4,
+      "product_score": 2,
+      "team_score": 3,
+      "market_score": 5,
+      "tech_score": 4,
+      "overall_score": 33.0,
+      "classification": "MONITOR",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "SENAMHI es una entidad estatal con poco presupuesto y escasa agilidad. Su producto actual no es hiper-local ni accionable. Tiene datos y confianza institucional, pero le falta capacidad técnica y comercial para dar alertas personalizadas vía WhatsApp. Riesgo latente si recibe fondos adicionales, pero no inminente."
+    },
+    {
+      "competitor": "Ignitia",
+      "hiring_score": 6,
+      "funding_score": 7,
+      "product_score": 8,
+      "team_score": 7,
+      "market_score": 7,
+      "tech_score": 7,
+      "overall_score": 69.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Ignitia es el competidor más peligroso: ha validado el modelo de pronóstico hiper-local en África Occidental con SMS, tiene financiamiento de impacto (incl. FMO, USAID) y un equipo experimentado. Aún no opera en Perú, pero su expansión futura es plausible. Su puntaje alto refleja tracción y capacidad comprobada; sin embargo, la adaptación a WhatsApp y al contexto andino podría ser lenta."
+    },
+    {
+      "competitor": "Agrorural (o cooperativas con agrónomos)",
+      "hiring_score": 2,
+      "funding_score": 2,
+      "product_score": 1,
+      "team_score": 4,
+      "market_score": 3,
+      "tech_score": 1,
+      "overall_score": 21.5,
+      "classification": "MONITOR",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Estos son los 'competidores' actuales que los agricultores usan hoy: extensionistas y agrónomos que envían mensajes manuales. No escalan, no usan datos satelitales ni modelos. Su valor está en la confianza y presencia local; es más un canal que un rival. Puntaje técnico y de producto mínimo."
+    },
+    {
+      "competitor": "aWhere",
+      "hiring_score": 5,
+      "funding_score": 8,
+      "product_score": 7,
+      "team_score": 6,
+      "market_score": 6,
+      "tech_score": 8,
+      "overall_score": 65.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "aWhere es una plataforma madura de datos climáticos para agricultura. Con financiamiento de riesgo y API robusta, tiene ventaja técnica y de datos globales. No obstante, su foco es el mercado de alto valor (grandes productores, seguros), no los pequeños agricultores peruanos. Su precio y complejidad lo alejan de la competencia directa en el segmento de ClimaAgro, pero podría pivotar o asociarse con una aseguradora local."
+    },
+    {
+      "competitor": "Aseguradora con alertas propias (ej. La Positiva + socio tech)",
+      "hiring_score": 4,
+      "funding_score": 6,
+      "product_score": 3,
+      "team_score": 5,
+      "market_score": 7,
+      "tech_score": 5,
+      "overall_score": 48.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Las aseguradoras tienen un fuerte incentivo para reducir siniestros con alertas, y podrían crear un sistema propio o con un proveedor tecnológico. La Positiva y Rímac tienen capital y datos de cartera, pero carecen de la capacidad técnica en clima y del enfoque B2B con agricultores. Actualmente no tienen un producto así; si lo hicieran, sería una amenaza directa. Monitorear sus movimientos de inversión en insurtech."
+    }
+  ],
+  "source": "llm"
+}

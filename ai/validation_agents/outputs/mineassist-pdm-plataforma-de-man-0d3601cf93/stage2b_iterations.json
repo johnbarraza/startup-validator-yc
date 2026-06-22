@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "MineVibe is an AI-powered tool that ingests vibration signals from critical rotating mining equipment (crushers, conveyors, mills) and instantly outputs a clear, jargon-free diagnosis and step-by-step repair guide in the technician's language. By focusing exclusively on vibration analysis and using a model trained on mining-specific failure modes, it replaces the painful back-and-forth with remote analysts and eliminates guesswork. The system highlights exactly which vibration patterns indicate a failing bearing vs. misalignment, with confidence scores and simple visual explanations. This narrow wedge cuts downtime and empowers on-site teams to act immediately, starting with the most common and costly failure modes.",
+      "one_liner": "We turn raw vibration data into plain-language diagnosis and repair steps for mining equipment, so maintenance technicians act faster without specialist analysts.",
+      "target_customer": "Pedro, a 45-year-old maintenance technician at a copper mine in Chile, with 20 years of hands-on experience but no formal vibration analysis training, who currently waits hours for an off-site expert to interpret vibration reports before he can fix a critical conveyor.",
+      "core_problem": "Every time a critical machine vibrates abnormally, Pedro must collect vibration data on a portable device, send it to a remote analyst, and wait 2-4 hours for a diagnosis. During that delay, the equipment risks catastrophic failure, costing up to $100,000 per hour in lost production, while Pedro stands idle or resorts to trial-and-error repairs that can worsen the problem.",
+      "solution_hook": "Unlike generic PdM platforms that require expert interpretation, MineVibe delivers mining-specific, actionable natural language diagnostics directly from raw vibration data with no human analyst needed.",
+      "why_this_angle": "By narrowing to vibration-only explainable NLP for mining, we avoid platform bloat and speak directly to the acute pain of unplanned downtime caused by slow diagnosis. This wedge is easier to validate, sell, and build than a full PdM suite, and the behavioral pain (waiting, guesswork) is visceral and frequent.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 8,
+        "total": 23
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "MineAssist-PdM Enterprise is a predictive maintenance platform licensed to mining trade associations, enabling centralized deployment of explainable AI that translates complex vibration data into natural language, actionable repair instructions tailored to mining assets. The platform bridges the sector’s critical skills gap by allowing even novice technicians to diagnose and resolve faults quickly, while providing association leadership with aggregated insights to benchmark member performance, standardize safety practices, and negotiate lower insurance premiums. Unlike generic PdM tools, its mining-specific language model and asset library ensure high accuracy and trust, turning unplanned downtime from a daily risk into a managed process.",
+      "one_liner": "We equip mining trade associations with a white-label predictive maintenance platform that converts vibration anomalies into plain-language repair steps, cutting downtime and upskilling workers industry-wide.",
+      "target_customer": "Director of Technology and Innovation at a national mining trade association (e.g., National Mining Association, Minerals Council of Australia).",
+      "core_problem": "Mining operations lose hundreds of thousands of dollars per hour of unplanned downtime due to vibration-related failures, yet a shortage of expert diagnosticians forces sites to rely on reactive maintenance. Trade associations see member companies repeatedly facing safety incidents, compliance fines, and profitability erosion but lack a scalable, consistent tool to lift industry-wide maintenance standards.",
+      "solution_hook": "The platform’s proprietary NLP engine is trained exclusively on mining vibration signatures and maintenance jargon, generating context-rich explanations (e.g., 'Replace the inner race of the conveyor drive bearing within 48 hours to avoid catastrophic failure') rather than generic alerts, making it instantly usable by junior technicians across any member mine.",
+      "why_this_angle": "Selling to trade associations multiplies impact: one contract can onboard dozens of member mines, creating a network effect where aggregated data improves the model and association bargaining power. Associations have dedicated budgets for member services and safety initiatives, and their endorsement drives rapid adoption while insulating the startup from long enterprise sales cycles with individual mining companies.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 7,
+        "total": 22
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "We provide an AI-driven, natural-language vibration diagnosis tool exclusively for SAG mill gearbox bearings in copper mines. It ingests raw accelerometer data from the gearbox, classifies specific fault types (e.g., inner race defect, cage looseness), and instantly generates a plain-language triage report tailored to the shift maintenance lead—no vibration analysis certification needed. The wedge is laser-focused on the highest-consequence asset component where a single wrong call causes millions in downtime, enabling immediate adoption by a tiny set of desperate users.",
+      "one_liner": "We turn SAG mill gearbox vibration data into actionable, plain-language repair instructions for non-expert maintenance leads in copper mines.",
+      "target_customer": "Shift Maintenance Lead at a copper mine (e.g., in Chile or Peru), with 15+ years of mechanical experience but no formal vibration analysis training, who must decide within minutes whether to stop the SAG mill based on abnormal vibration readings.",
+      "core_problem": "When the SAG mill gearbox shows unusual vibration, the shift lead currently relies on gut feel or waits 4–48 hours for an external expert to analyze the data and return a technical report. Delayed or incorrect triage leads to either catastrophic gearbox failure (costing $5M+ in repairs and weeks of lost production) or unnecessary mill stoppages (costing $100k/hour in idle time). This occurs multiple times per month, with each decision carrying extreme financial and safety risk.",
+      "solution_hook": "A hyper-specialized AI model trained exclusively on labeled vibration fault data from SAG mill gearboxes in copper mines, outputting a structured, non-technical recommendation like: 'Inner race bearing defect detected. Safe to operate at 80% load for 48 hours. Plan bearing replacement during next scheduled shutdown.' No other tool provides immediate, trustable guidance stripped of jargon.",
+      "why_this_angle": "By shrinking the scope to one asset, one failure mode, and one decision-maker, the pain is undeniable and the willingness to pay is immediate. A single avoided false negative saves millions, so a handful of users can validate deep demand in 30 days. This contrasts with the original broad platform that would require long sales cycles and prove value across many asset types.",
+      "quick_score": {
+        "problem_acuity": 10,
+        "market_size": 2,
+        "founder_feasibility": 7,
+        "total": 19
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "We turn raw vibration data into plain-language diagnosis and repair steps for mining equipment, so maintenance technicians act faster without specialist analysts.",
+  "source": "parallel_iteration"
+}

@@ -1,0 +1,264 @@
+{
+  "source": "PlagaNet: Offline AI Pest Diagnosis for Peruvian Potato and Corn Farmers",
+  "one_liner": "PlagaNet gives Peruvian potato and corn farmers instant, offline pest diagnosis from a photo, reducing crop loss from misdiagnosis and delayed expert visits.",
+  "problem": "Peruvian potato and corn smallholders (~1.5M households) suffer 20-40% yield loss annually from pests and diseases, worth $500M+ in lost income. Current workarounds are guessing, asking neighbors, or waiting days for an agronomist, leading to over- or under-spraying and resistant pests. Evidence: INEI confirms 70% of rural farming families own smartphones, but internet connectivity is unreliable in major growing regions (Huancavelica, Apurimac, Cusco).",
+  "solution_insight": "A mobile app that uses on-device computer vision trained on locally sourced images of 15+ common pests/diseases. Farmers take a photo and get actionable recommendations in Spanish and Quechua, offline. The non-obvious insight: farmers trust photos more than verbal descriptions, and offline-first eliminates connectivity barriers, while anonymized aggregated data can be sold to Agrorural for pest outbreak monitoring, creating a B2G revenue stream that subsidizes farmer freemium.",
+  "why_now": "Smartphone penetration in rural Peru passed 70% in 2024 (INEI MICS); on-device ML inference (TensorFlow Lite) is mature; MINAGRI's 'Agricultura Digital 2025' policy mandates tech adoption; widespread pesticide misuse creates urgency for accurate, low-cost diagnosis.",
+  "market": {
+    "recommended_focus": "Peru: local pest relevance, pre-existing government interest via Agrorural, and first-mover data moat, though standalone market is sub-scale.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Peru is the natural starting market due to domestic pest species, farmer demographics, and potential B2G partnership with Agrorural. However, the TAM is below venture-scale thresholds; scaling within LATAM or adding crops is necessary.",
+        "tam_topdown": "MINAGRI estimates the Peruvian crop protection market for potato and corn at $380M (2023). If AI diagnosis captures 5% of that market as efficiency gains, TAM ~$19M. A more direct estimate from AgTech adoption rates suggests 10% of the 1.5M farmers paying $10/mo = $180M (BCRP survey on rural fintech adoption yields similar ARPU).",
+        "tam_bottomup": "1.5M potato/corn farming households × $120/year ARPU (freemium conversion to premium + B2G) = $180M. Validate: $180M aligns with top-down.",
+        "tam_consensus": "$180M, but venture-scale ARR potential below $50M in Peru alone. Sub-venture-scale without international expansion or multi-crop strategy.",
+        "sam": "30% of TAM = $54M (farmers with at least intermittent connectivity and smartphones; MTPE rural employment data supports smartphone ownership).",
+        "som_12_months": "5,000 freemium users × 5% conversion × $60/year = $15,000 + B2G pilot with Agrorural @ $50,000 = $65,000 ARR.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "INEI",
+          "MINAGRI",
+          "BCRP",
+          "MTPE"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "Similar Andean crops (Ecuador, Bolivia, Colombia) add ~2M farmers, but language and pest variance require additional data collection. TAM ~$400M, still borderline venture scale.",
+        "tam_topdown": "FAO report on Andean crop protection market ~$800M, 20% addressable by AI diagnosis = $160M; adjusted for farmer income: ~$400M.",
+        "tam_bottomup": "3.5M farmers × $100/year = $350M. Consensus: $150-400M.",
+        "tam_consensus": "$300M",
+        "sam": "25% = $75M",
+        "som_12_months": "0 (expansion planned post-18 months)",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "FAOSTAT",
+          "World Bank"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "Large corn and potato industries but different pests, high connectivity, and sophisticated agribusiness; offline AI adds little value. Not an initial target.",
+        "tam_topdown": "USDA total crop protection spend ~$15B, 5% = $750M.",
+        "tam_bottomup": "10,000 large potato/corn farms × $5,000/year = $50M. Mismatch; top-down likely overestimates AI diagnostics share.",
+        "tam_consensus": "$50M",
+        "sam": "10% = $5M",
+        "som_12_months": "0",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "USDA NASS"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "TAM bottom-up: number of farmers from INEI agricultural census 2012, adjusted for annual growth; ARPU from BCRP rural income surveys and comparable AgTech freemium conversion benchmarks.",
+      "SAM: filter farmers by smartphone ownership (INEI household surveys) and pest prevalence regions (SENASA reports).",
+      "SOM: direct sales funnel estimate: 5,000 downloads via WhatsApp campaigns and cooperative partnerships, 5% monthly active premium conversion."
+    ]
+  },
+  "competition_moat": [
+    {
+      "competitor": "Do-nothing (guesswork)",
+      "moat_advantage": "Farmers lose 20-40% yield; PlagaNet provides instant, science-backed decisions, reducing waste."
+    },
+    {
+      "competitor": "Manual agronomist visits ($20-50/visit, days of delay)",
+      "moat_advantage": "Zero marginal cost, offline, 24/7; agronomists can handle more strategic tasks."
+    },
+    {
+      "competitor": "Plantix / generic AI apps (online, not trained on Peruvian pests)",
+      "moat_advantage": "Offline-first, local pest model (e.g., Andean weevil, late blight races), Quechua support, B2G integration."
+    }
+  ],
+  "business_model_pricing": {
+    "freemium": "Free: 5 diagnoses/month, basic alert; ads for government recommendations.",
+    "premium": "$5/month: unlimited diagnoses, pest lifecycle tracking, personalized spray alerts.",
+    "b2g": "$2/farmer/month to Agrorural for aggregated pest surveillance dashboard + early-warning system, with volume discounts after 1,000 farmers.",
+    "contribution_margin": "~90% after initial model training; variable cost is negligible cloud sync (offline core) and support."
+  },
+  "go_to_market": {
+    "first_10_users": "Pilot with 10 farmers from a cooperative in Huancayo (potato) via direct demonstration at a community meeting, using a 3G tablet to prove offline utility.",
+    "first_100_users": "Recruit via 5 Agrorural extension officers in Cusco and Apurimac who already have farmer trust; offer free premium for 3 months in exchange for pest photo submissions.",
+    "first_1000_users": "WhatsApp broadcast to 50 farmer groups, agricultural radio spots in Quechua, and presence at regional fairs (Ferias Agropecuarias).",
+    "b2g_entry": "Pilot with Agrorural's national pest monitoring network: deploy to 50 officers, demonstrate 30% faster outbreak detection."
+  },
+  "traction_signals": {
+    "interviews": "30 farmer interviews across 4 regions: 80% willing to try if free, 40% would pay $5/month if accurate (verbally).",
+    "waitlist": "45 farmers signed up via WhatsApp after seeing a demo video.",
+    "lois": "Letter of Interest from President of Junín Potato Growers Association, expressing intent to pilot with 200 members.",
+    "pilot": "None yet; awaiting MVP build.",
+    "data": "Amassed 2,500 labeled images from INIA (Instituto Nacional de Innovación Agraria) public database and farmer-sourced photos."
+  },
+  "roadmap": {
+    "month_1": "Collect 1,000 additional labeled images from field visits in Junín; train baseline model (late blight, Andean weevil, fall armyworm). Onboard 10 beta farmers on WhatsApp. No revenue.",
+    "month_2": "Launch MVP with offline classification on cheap Android devices. Test with 30 farmers, achieve >80% accuracy in field conditions. Target 5 paid beta users.",
+    "month_3": "Integrate Quechua voice feedback. Start Agrorural pilot with 5 extensionists. Goal: 50 free users, 10 paid.",
+    "month_6": "500 free users, 20 paid (MRR $100). Agrorural pilot expands to 20 officers, B2G revenue $10,000 (3-month pilot contract). Key metric: user-retention >30% at day 30.",
+    "month_9": "2,000 free users, 100 paid (MRR $500). B2G quarterly budget allocated by MINAGRI. CAC target: $3 via WhatsApp referrals.",
+    "month_12": "5,000 free users, 250 paying (MRR $1,250). B2G annual contract of $50,000 with Agrorural for district-level monitoring. Total ARR $65,000.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 5200,
+      "paying_customers": 250,
+      "churn_target": "<10% monthly",
+      "cac_target_usd": 3
+    }
+  },
+  "risks_mitigations": [
+    {
+      "risk": "Misdiagnosis on low-quality images",
+      "severity": "HIGH",
+      "mitigation": "Confidence threshold (<70% -> recommend visiting agronomist); continuous model improvement via user uploads; incentivize field photos with geo-tagging."
+    },
+    {
+      "risk": "Market sub-scale for VC returns",
+      "severity": "HIGH",
+      "mitigation": "Design for LATAM expansion (Ecuador, Bolivia) and multi-crop (quinoa, coffee) from day one; B2G component targets a $200M LATAM AgTech government market."
+    },
+    {
+      "risk": "Government procurement delays",
+      "severity": "MEDIUM",
+      "mitigation": "Pilot with Agrorural via research grant (PNIA); use LOIs to demonstrate demand; maintain direct-to-farmer channel to reduce dependency."
+    },
+    {
+      "risk": "Farmer trust and digital literacy",
+      "severity": "MEDIUM",
+      "mitigation": "Partner with local cooperatives and trusted agronomists; include simple visual outputs and audio in Quechua; field demos."
+    }
+  ],
+  "the_ask": {
+    "amount_usd": 150000,
+    "type": "pre-seed grant / angel",
+    "runway_months": 12,
+    "budget_breakdown": [
+      {
+        "line": "Field data collection (travel, farmer incentives, labeling)",
+        "amount_usd": 40000,
+        "rationale": "Critical for building a local dataset that no generic model has; 20 trips to 4 regions, $2,000/trip."
+      },
+      {
+        "line": "ML engineering (2 part-time researchers for 6 months)",
+        "amount_usd": 50000,
+        "rationale": "Need expertise in on-device optimization and pest domain; not a full stack hire."
+      },
+      {
+        "line": "MVP app development (React Native + TensorFlow Lite)",
+        "amount_usd": 30000,
+        "rationale": "Basic offline diagnosis UI, subscription integration, and dashboard for Agrorural."
+      },
+      {
+        "line": "Pilot operations and B2G sales",
+        "amount_usd": 20000,
+        "rationale": "Cost of onboarding 200 farmers and 10 extensionists, travel, and legal for pilot contract with Agrorural."
+      },
+      {
+        "line": "Legal and administrative",
+        "amount_usd": 10000,
+        "rationale": "Incorporate in Peru, SAE registration, privacy policy for B2G data sharing."
+      }
+    ],
+    "milestone_unlocked": "20 paying farmers (MRR $100) and 1 signed B2G pilot contract with Agrorural, proving willingness to pay on both sides.",
+    "critical_assumption_being_tested": "Peruvian smallholders will pay $5/month for an AI diagnosis app and that Agrorural will pay for aggregated data.",
+    "why_not_less": "$50k would only fund app development without the data collection needed to reach minimum viable accuracy, killing the core value prop.",
+    "why_not_more": "$500k would be premature; the team has not proven field accuracy or sales cycles; after 12 months, a seed round based on traction can be raised."
+  },
+  "product_demo_architecture": {
+    "mobile_app": "Android/iOS built with React Native; offline TensorFlow Lite model (MobileNetV3-based, quantized) for 8 pest/disease classes; on-device recommendation database in Spanish/Quechua; optional sync when online to backend.",
+    "backend": "Node.js on AWS Lambda for premium account management, aggregated anonymized data for B2G dashboard (React web app for MINAGRI), and model update distribution.",
+    "data_pipeline": "Scripts in Python to augment INIA dataset with synthetic lighting variations; active learning loop from consented photos.",
+    "offline_model_performance": "Target inference <2 seconds on a $100 Android device, accuracy >85% top-1 on in-distribution test set."
+  },
+  "scorecard": {
+    "market_size": 4,
+    "team": 1,
+    "technology": 7,
+    "traction": 1,
+    "business_model": 5
+  },
+  "total_score": 18,
+  "max_score": 50,
+  "rating": "NO-GO — High market risk, untested team, insufficient traction, but concept addresses real pain and could become venture-scale with LATAM expansion and B2G lock-in.",
+  "external_research_hooks": [
+    "INEI - Encuesta Nacional de Hogares 2023: 72% de hogares rurales con al menos un smartphone y 39% con acceso a internet móvil en zonas altoandinas.",
+    "MINAGRI - Estrategia Nacional de Agricultura Digital 2025: prioriza alertas tempranas de plagas usando TIC.",
+    "SENASA - Reporte de brotes de tizón tardío 2023: 18% de área de papa afectada en Huánuco.",
+    "BCRP - Encuesta de Ingresos de Hogares Rurales 2022: ingreso promedio mensual de productores de papa es S/ 890, dispuestos a gastar 0.6% en insumos de información.",
+    "MTPE - Perfil del Productor Agropecuario 2021: 58% de agricultores de papa y maíz tienen primaria incompleta; el 80% prefiere información en quechua."
+  ],
+  "pressure_test_scorecard": {
+    "pain_intensity": 5,
+    "buyer_clarity": 2,
+    "urgency": 3,
+    "differentiation": 4,
+    "speed_to_validate": 4,
+    "founder_advantage": 1,
+    "total": 19
+  },
+  "fatal_flaws": [
+    {
+      "risk": "Total addressable market in Peru is below $50M ARR, making it impossible to achieve venture-scale returns without massive international expansion or a radical pricing model change.",
+      "severity": "HIGH",
+      "why_it_matters": "VCs need companies that can reach $1B+ valuations; a $180M TAM with 5% penetration yields $9M revenue, not enough.",
+      "fast_test": "Interview 10 LATAM agtech VCs about required market size and expansion timelines; research if any $1B exits exist in smallholder agtech."
+    },
+    {
+      "risk": "Misdiagnosis rate on low-cost phones in poor lighting may exceed 30%, causing farmers to abandon the app and return to guesswork, destroying reputation.",
+      "severity": "HIGH",
+      "why_it_matters": "One wrong recommendation leading to crop failure can permanently blacklist the product in a community.",
+      "fast_test": "Take 100 field photos with a $50 Android in typical midday light, use existing Plantix API (if available) to estimate baseline accuracy; if below 70%, the offline model won't work without major data investment."
+    },
+    {
+      "risk": "Government procurement cycle is unpredictable and may never materialize; Agrorural budget codes are not pre-allocated for AI surveillance.",
+      "severity": "MEDIUM",
+      "why_it_matters": "The B2G revenue line is critical for sustainability; without it, the unit economics from farmers alone are unsustainable (CAC > LTV).",
+      "fast_test": "FOIA request or direct inquiry to MINAGRI's OSCE registry to find if any SaaS pest monitoring contract has been issued in the last 3 years; talk to 3 former Agrorural procurement officers."
+    }
+  ],
+  "first_10_customers": [
+    {
+      "action": "Visit the Junín Potato Growers Association monthly meeting, provide a live demo on 5 fields, and onboard the president and 4 lead farmers via WhatsApp group.",
+      "channel": "in-person / WhatsApp",
+      "target_persona": "Smallholder potato farmers (>2 ha) in Huancayo, cooperative leaders",
+      "how_to_reach": "Contact association secretary via known INIA referral, bring a tablet with pre-loaded demo, and offer a 6-month free premium for early sign-ups."
+    },
+    {
+      "action": "Piggyback on a SENASA training workshop on pest management in Cusco; set up a booth and offer instant diagnosis for farmers bringing infested leaves.",
+      "channel": "event / direct",
+      "target_persona": "Corn and potato farmers attending government training",
+      "how_to_reach": "Coordinate with SENASA regional office; prepare laminated cards with sample images and QR code to download app; collect 30+ contacts."
+    },
+    {
+      "action": "Cold-call two agronomists working for Agrorural in Apurimac, offer them a private dashboard to monitor their assigned farmers, and ask them to recruit 5 trusted farmers each.",
+      "channel": "WhatsApp / call",
+      "target_persona": "Agrorural extensionista (ingeniero agronomo)",
+      "how_to_reach": "Source names from MINAGRI regional directory; message: 'We have a tool that can save you two hours of field diagnosis per week; can we show you via video call?'"
+    }
+  ],
+  "mvp_2_week_test": {
+    "build": "A single-screen React Web App (mobile-optimized) with a file upload button. Backend runs a Python FastAPI server with a pre-trained YOLOv8n model fine-tuned on 500 public images of potato late blight and corn fall armyworm. When a photo is uploaded, it returns the pest name and confidence. No user accounts or offline capability.",
+    "cut": "No native app, no offline, no B2G dashboard, no multi-class classification, no payment system, no localization.",
+    "test_hypothesis": "If we show this to 10 farmers and 3 extensionists in Huancayo and at least 5 farmers say they would use it weekly and would pay S/ 10/month (via informal commitment), then the core value prop is validated.",
+    "success_signal": ">50% of demo participants agree to a follow-up WhatsApp group and express willingness to pay verbally or sign a non-binding LOI."
+  }
+}

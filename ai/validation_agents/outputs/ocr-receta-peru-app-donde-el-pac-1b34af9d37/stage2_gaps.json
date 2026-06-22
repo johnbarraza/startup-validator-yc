@@ -1,0 +1,62 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": "gap_1",
+      "title": "Real-time generic price & availability aggregation across all pharmacy types",
+      "pain": "Patients waste time manually calling or visiting multiple pharmacies to compare generic prices, often settling for higher prices due to lack of real-time, consolidated information. No existing solution combines OCR-based prescription scanning with live inventory and pricing from both chains and independent pharmacies.",
+      "why_now": "Smartphone adoption in Peru is high, and the success of GoodRx abroad validates the model. Local attempts (RecetaFácil) show early traction but lack scale, leaving a wide gap for a better-executed aggregator.",
+      "evidence_needed": "Survey 100 prescription holders on current price-comparison behaviors and willingness to switch. Build an MVP with 3 pharmacy partners to test real-time data integration feasibility and user satisfaction.",
+      "priority": "High",
+      "risk": "Pharmacy partners may not provide accurate real-time data; scaling partnerships across many independents is resource-intensive; large chains may block integration."
+    },
+    {
+      "id": "gap_2",
+      "title": "Digital customer acquisition platform for independent pharmacies",
+      "pain": "Small independent pharmacies lack digital channels to attract price-sensitive patients, losing potential revenue to large chains that have their own apps. They need a cost-effective way to pay for qualified leads.",
+      "why_now": "Digital transformation is accelerating, yet no marketplace effectively connects independents with prescription holders looking for generics. Early adopters among pharmacies could gain a competitive edge.",
+      "evidence_needed": "Interview at least 10 independent pharmacy owners to assess willingness to pay per referral and technical readiness. Run a manual concierge pilot to measure conversion and average order value for referred customers.",
+      "priority": "High",
+      "risk": "Payment collection and ensuring pharmacies honor advertised prices could be challenging; pharmacies may not prioritize online referrals if foot traffic is sufficient."
+    },
+    {
+      "id": "gap_3",
+      "title": "Building trust and education on generic drug equivalence",
+      "pain": "Many Peruvian patients distrust generic medications, believing they are inferior to brand-name drugs, leading them to overspend. There is no easy, trustworthy source of information at the point of purchase decision.",
+      "why_now": "Government encourages generic use but lacks engaging communication tools. An app can visually show official bioequivalence data and savings, leveraging Minsa's reference list to build credibility.",
+      "evidence_needed": "Design a low-fidelity prototype that presents brand-generic comparisons with official equivalences. Test user understanding and trust change with 20 patients, measuring intent to switch to generic.",
+      "priority": "Medium",
+      "risk": "Deep-seated cultural beliefs may be hard to change; educational features are easily copied by competitors; risk of perceived liability if a generic is ineffective."
+    },
+    {
+      "id": "gap_4",
+      "title": "End-to-end flow from prescription scan to guaranteed pharmacy pickup",
+      "pain": "Even after finding a cheaper generic online, patients face uncertainty about stock and face a disconnect between digital discovery and physical purchase. No service offers reservation or hold functionality tied to the scanned prescription.",
+      "why_now": "Consumer expectations for seamless digital-to-physical experiences are rising. Enabling reservation reduces anxiety and dropout, and creates a stickier platform.",
+      "evidence_needed": "Run a concierge MVP where a team manually contacts pharmacies to reserve, measuring conversion improvement over a control that only shows prices. Gather pharmacy feedback on reservation willingness.",
+      "priority": "Medium",
+      "risk": "Requires deep pharmacy system integration, which many independents lack; pharmacies may resist holding inventory without prepayment; complex to scale."
+    },
+    {
+      "id": "gap_5",
+      "title": "Mobile-friendly access to Minsa’s generic price reference list",
+      "pain": "The official governmental list of generic drug prices is difficult to navigate on mobile, leaving patients without a trusted pricing benchmark. An easily accessible, searchable version could empower cost-conscious patients.",
+      "why_now": "Transparency initiatives are topical, and repackaging public data into a user-friendly mobile interface can attract users at low cost, serving as an entry point for the broader service.",
+      "evidence_needed": "Check Minsa website traffic from mobile devices. Build a simple progressive web app that scrapes and displays the data; measure usage and user satisfaction in a public beta.",
+      "priority": "Low",
+      "risk": "Low barrier to entry—any competitor or the government itself can replicate the feature; not directly monetizable; may distract from the core OCR+referral value proposition."
+    },
+    {
+      "id": "gap_6",
+      "title": "Integration with telemedicine platforms for generic-first prescribing",
+      "pain": "Telemedicine consultations often result in brand-name prescriptions without considering patient cost. Neither doctors nor platforms systematically suggest affordable generics, leaving a gap in the care journey.",
+      "why_now": "Telemedicine usage is growing rapidly, and platforms seek differentiation. Embedding a generic suggestion tool at the point of prescription could improve patient satisfaction and adherence.",
+      "evidence_needed": "Form a pilot partnership with a small telemedicine provider (e.g., Doc24) to test an API that suggests generics during e-prescribing. Measure prescription fill rates and pharmacy referral conversion.",
+      "priority": "Medium",
+      "risk": "Regulatory restrictions on substitution suggestions; long B2B sales cycles; reliance on partner’s tech stack and willingness to integrate."
+    }
+  ],
+  "recommended_gap_id": "gap_1",
+  "checkpoint_instruction": "Validate core pain and behavior: interview 30 patients with recent prescriptions, observe their current price-comparison process, and test a clickable prototype of an OCR scan-to-price feature. Simultaneously, interview 5 pharmacy decision-makers (mix of chains and independents) to gauge real-time data sharing feasibility and willingness to pay per referral.",
+  "source": "llm"
+}

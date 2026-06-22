@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "NotariaFlow AI es un copiloto de IA para notarios de pequeñas y medianas firmas que acelera la preparación de escrituras, partidas y contratos. Se integra directamente al flujo de trabajo diario: el notario escanea o sube documentos fuente, y el sistema extrae y estructura automáticamente datos clave (nombres, fechas, montos, cláusulas) con OCR especializado y modelos de lenguaje entrenados en documentos notariales. La extracción se presenta en un editor donde el notario puede revisar, corregir y aprobar los datos antes de que se generen automáticamente borradores precisos, reduciendo errores manuales y horas de trabajo administrativo por cada caso.",
+      "one_liner": "Automatizamos la extracción y validación de datos para borradores notariales con IA revisable, ahorrando horas de trabajo manual y eliminando errores en firmas pequeñas y medianas.",
+      "target_customer": "Notarios titulares o responsables de oficina en notarías pequeñas y medianas de Latinoamérica, que personalmente revisan y validan cada documento legal.",
+      "core_problem": "Cada día, estos notarios o sus asistentes transcriben manualmente datos desde documentos físicos o imágenes escaneadas (cédulas, certificados, contratos) a plantillas de escrituras. Este proceso toma de 30 a 90 minutos por caso, es propenso a errores tipográficos que pueden invalidar un documento y genera cuellos de botella que retrasan la facturación y aumentan la carga de trabajo, obligando a trabajar fuera de horario o rechazar clientes.",
+      "solution_hook": "La extracción IA revisable y verticalizada: a diferencia de OCR genérico o asistentes de IA amplios, nuestro motor entiende la estructura y jerga legal notarial, presenta los datos extraídos en campos editables con referencias visuales al documento original, y permite al notario validar y ajustar antes de generar el borrador final, manteniendo el control humano pero acelerando el 80% del trabajo tedioso.",
+      "why_this_angle": "Al centrarnos exclusivamente en la extracción y revisión humana, abordamos la actividad más dolorosa y frecuente del notario, construyendo confianza en un sector que teme a la automatización total. Esta cuña estrecha permite una adopción más rápida y un ciclo de validación corto, diferenciándonos de plataformas genéricas que intentan abarcar demasiado.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 8,
+        "total": 23
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "NotariaFlow Enterprise: a SaaS platform for large law firms, corporate legal departments, and government property registries that automates the extraction, validation, and drafting of notarial deeds, certificates, and contracts from scanned documents. It uses domain-specific, revisable AI to reduce manual processing from hours to minutes, enabling teams to handle 5x more cases with fewer errors and full audit trails.",
+      "one_liner": "We automate notarial document processing for institutional legal teams using revisable AI, slashing turnaround and compliance risk.",
+      "target_customer": "Head of Notarial Services at a National Land Registry or General Counsel at a multinational law firm processing high volumes of property transfers.",
+      "core_problem": "Every day, legal teams manually transcribe data from thousands of scanned notarial documents into case management systems, a process that takes 30–60 minutes per document, introduces typos in 1 out of 10 entries, and creates backlogs that delay property registrations by weeks, incurring penalty fees and client dissatisfaction.",
+      "solution_hook": "Unlike generic OCR or AI scribes, our engine is pre-trained on notarial legal context, understands jurisdiction-specific formats, and outputs a fully revisable draft that legal professionals can quickly verify and edit, ensuring trust and precision.",
+      "why_this_angle": "Shifts from low-ACV, feature-shy small notaries to high-urgency, budget-backed institutional buyers who face regulatory penalties for delays. Enterprise contracts and recurring usage create stickier, larger revenue.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 7,
+        "total": 22
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "NotariaFlow AI, en su versión cuña, se enfoca exclusivamente en notarios de la Zona Metropolitana de Guadalajara que manejan más de 30 escrituras de compraventa de inmuebles al mes. Para ellos, ofrecemos un extractor de datos con IA óptica (OCR) entrenado específicamente en el formato y léxico de las escrituras notariales mexicanas, que convierte automáticamente el escaneo de una escritura en los campos requeridos para el aviso de compraventa ante el Registro Público de la Propiedad. La IA marca segmentos de baja confianza para revisión humana en una interfaz simple, garantizando que el notario mantenga el control y responsabilidad legal. Validaremos la disposición de pago ofreciendo las primeras 50 extracciones gratuitas a 10 notarías en los próximos 30 días.",
+      "one_liner": "Extraemos automáticamente los datos de escrituras de compraventa para notarios de Guadalajara usando IA revisable, reduciendo horas de transcripción manual a minutos.",
+      "target_customer": "Notario titular de una notaría en Guadalajara con alta carga de trabajo (50+ operaciones de compraventa al mes), que actualmente destina personal a transcribir manualmente datos de las escrituras al sistema de avisos del Registro Público.",
+      "core_problem": "Cada vez que cierra una compraventa, el notario o su auxiliar dedica entre 2 y 4 horas a transcribir manualmente nombres, direcciones, medidas, folios y otros datos desde el PDF escaneado de la escritura hacia el formulario electrónico del Registro Público. Un error de tipeo o discrepancia provoca el rechazo del trámite, multas, retrasos de días para el cliente y llamadas de reclamo. Este proceso se repite más de 30 veces al mes, consumiendo el equivalente a un empleado de tiempo completo solo en transcripción, con un costo de oportunidad altísimo y estrés constante por los plazos legales.",
+      "solution_hook": "A diferencia de OCR genérico o plataformas de IA horizontal, nuestro motor está entrenado exclusivamente con miles de escrituras reales de compraventa del estado de Jalisco, reconociendo la estructura y jerga legal específica. La extracción no es una caja negra: cada campo extraído muestra su nivel de confianza y permite corrección inmediata, combinando la velocidad de la IA con la responsabilidad humana que exige la función notarial.",
+      "why_this_angle": "Esta versión hiperfocalizada triplica la probabilidad de adopción temprana porque ataca el dolor más agudo y frecuente de un segmento geográficamente concentrado. Al reducir la validación a un solo tipo de documento y jurisdicción, el time-to-value es inmediato: un notario ve en 10 minutos que ahorrará 20 horas semanales. Además, facilita validar la disposición de pago con solo 10 usuarios en 30 días, ya que las asociaciones notariales locales facilitan el acceso a entrevistas y pruebas piloto, sin necesidad de escalar a otras regiones o tipos de escritura hasta tener tracción.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 2,
+        "founder_feasibility": 9,
+        "total": 20
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "Automatizamos la extracción y validación de datos para borradores notariales con IA revisable, ahorrando horas de trabajo manual y eliminando errores en firmas pequeñas y medianas.",
+  "source": "parallel_iteration"
+}

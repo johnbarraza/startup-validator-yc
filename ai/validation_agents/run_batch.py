@@ -209,6 +209,17 @@ def _run_stage0_direct(entry: dict[str, str], args: argparse.Namespace) -> dict[
 
 # ── Scoring ───────────────────────────────────────────────────────────────────
 
+def _go_verdict(raw: Any) -> int:
+    """Return +1 (go), -1 (no-go), or 0 (unclear) from any LLM go_no_go value."""
+    s = str(raw or "").upper().replace(" ", "_").replace("-", "_")
+    # Negatives first — prevents "GO" substring matching inside "NO_GO"
+    if "NO_GO" in s or "DECLINE" in s or "ABORT" in s or s in ("FALSE", "NO"):
+        return -1
+    if "GO" in s or "YES" in s or "TRUE" in s or "PROCEED" in s:
+        return 1
+    return 0
+
+
 def _composite_score(r: dict[str, Any]) -> float:
     s = float(r.get("total_score") or 0)
     if r.get("proceed") == "PROCEED":
@@ -219,8 +230,11 @@ def _composite_score(r: dict[str, Any]) -> float:
         s += 10
     elif r.get("devil") == "FATAL":
         s -= 20
-    if str(r.get("go_no_go", "")).upper() in ("TRUE", "GO", "YES"):
+    verdict = _go_verdict(r.get("go_no_go"))
+    if verdict > 0:
         s += 10
+    elif verdict < 0:
+        s -= 15
     sim = r.get("sim_score")
     if isinstance(sim, (int, float)):
         s += sim * 10
@@ -230,10 +244,10 @@ def _composite_score(r: dict[str, Any]) -> float:
 def _stage3_score(r: dict[str, Any]) -> float:
     """Score based only on Stage 3 YC validation for Round 2 elimination."""
     s = 0.0
-    go = str(r.get("go_no_go", "")).upper()
-    if go in ("TRUE", "GO", "YES"):
+    verdict = _go_verdict(r.get("go_no_go"))
+    if verdict > 0:
         s += 30
-    elif go in ("FALSE", "NO_GO", "NO"):
+    elif verdict < 0:
         s -= 10
     if r.get("proceed") == "PROCEED":
         s += 15

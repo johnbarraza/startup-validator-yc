@@ -1,0 +1,27 @@
+{
+  "problem_type": "VITAMIN",
+  "vertical": "EdTech",
+  "customer_type": "B2C",
+  "problem_severity": "RECURRING",
+  "pain_evidence": "missing",
+  "pit_signals_detected": [
+    "B2C subscription model in Peru fails because 70-75% of workforce is informal and 36% live below $8.30/day — students and parents have negligible WTP for a paid study app; any pricing above free is a barrier.",
+    "Free substitutes already dominate: students use WhatsApp groups, YouTube tutorials, Khan Academy, and MINEDU's free digital resources (e.g., Aprendo en Casa). A gamified wrapper is not enough to switch from these ubiquitous zero-cost options.",
+    "Behavior change is notoriously hard: students lack intrinsic motivation for a standalone study app; gamification has short novelty; retention decays quickly without institutional enforcement (teachers assigning it). Without embedding into school workflow, daily active use is unlikely.",
+    "Market size illusion: even if 10M students in Peru, only ~2-3M have consistent internet access and ability to pay. Realistic paying users in first 12 months likely <5,000 — not venture scale without regional expansion.",
+    "MINEDU could launch a free gamified study platform (e.g., as part of PeruEduca) or partner with existing edtech nonprofits — a government-funded free alternative would collapse the value proposition overnight."
+  ],
+  "painkiller_signals_detected": [],
+  "classification_rationale": "Gamified study companion addresses student motivation, a recurring but non-urgent problem. In Peru, B2C edtech faces low willingness to pay and high competition from free resources. No structural pain or regulatory forcing function.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "YES",
+  "freemium_rationale": "Freemium model aligns with low WTP in Peru; free tier builds user base while premium features (e.g., advanced analytics, unlimited sessions) monetize a small percentage of dedicated users.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "Students/parents have near-zero willingness to pay for a study companion; the vast majority cannot afford any subscription (S/10-20/month is already prohibitive for 70% of population), and those who can already use free tools or pay for tutoring.",
+  "free_substitute_risk": "WhatsApp study groups, YouTube explainer videos, free resources from MINEDU (Aprendo en Casa, PeruEduca), and free apps like Duolingo or Kahoot! cover 90% of the 'gamified study' use case at zero cost.",
+  "market_size_reality_check": "Realistic SOM in Peru: ~200,000 students with strong WTP (upper-middle-class in Lima), but conversion to paid subscription <2% → 4,000 users at S/20/month = S/80,000/month (~$21K) — not enough for a VC-backed startup; regional expansion needed but adds complexity cost.",
+  "hardest_assumption": "That students will consistently use and pay for a standalone gamified study app without integration into school curriculum or teacher mandate — a pattern that has failed globally (most edtech B2C apps have <30% retention after 1 month).",
+  "devil_rationale": "StudyPet faces a triple threat: no effective monetization in Peru's low-WTP, informal economy; abundant free substitutes that students already use; and extreme difficulty in changing student behavior without school buy-in. The idea is a nice-to-have, not a must-have, and can't reach venture scale without a radical pivot (e.g., B2B selling to schools or embedding in government curriculum).",
+  "source": "dual_agent_classification"
+}

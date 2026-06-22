@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "StudyPet is a study companion app for university students that transforms their syllabi and PDFs into an emotionally engaging experience. Using AI, it parses course materials to auto-generate a smart calendar, quizzes, and flashcards, then ties completion to the growth and well-being of a virtual pet (or garden). The pet thrives when students stick to their study plan, creating a daily caregiving loop that replaces procrastination with consistent, low-anxiety study habits. The wedge is narrow: first-semester students struggling with self-directed learning get an immediate, visual, and emotional reward system that makes studying feel like nurturing a living companion, not a chore.",
+      "one_liner": "We turn course syllabi into a virtual pet that only thrives when you actually study, using AI to auto-plan tasks and emotionally reward progress.",
+      "target_customer": "A 19-year-old second-semester college sophomore who routinely procrastinates, relies on last-minute cramming, and feels overwhelmed by the cognitive load of managing multiple course schedules and PDF readings.",
+      "core_problem": "Every week, students open a syllabus PDF filled with deadlines and reading lists, feel a wave of anxiety and detachment, and then avoid the work until the pressure becomes unbearable. This behavioral loop—triggered by a lack of immediate emotional payoff for planning and starting—costs them sleep, lower grades, and self-blame. Existing tools either focus on dry flashcards or generic to-do lists, which fail to bridge the gap between intention and consistent action because they ignore the emotional dimension of habit formation.",
+      "solution_hook": "The sole differentiator is a caregiving-driven emotional engagement layer: a pet whose health, happiness, and evolution are directly tied to real academic actions (not just app opens). By parsing actual syllabi, StudyPet makes the study plan feel personal and urgent—neglecting it means neglecting a creature, which triggers a powerful psychological stickiness no points-based system can match.",
+      "why_this_angle": "By doubling down on the emotional gamification gap and narrowing the wedge to syllabus auto-parsing for first-year courses, this framing sharpens the pain from a generic 'I should study more' to a acute, daily 'my pet suffers if I procrastinate.' It outperforms the original by making the behavioral loop tangible and the solution feel less like a tool and more like a relationship, which is harder for incumbents to replicate quickly.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 8,
+        "founder_feasibility": 8,
+        "total": 25
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "A B2B platform that universities license to automatically transform syllabi and course materials into emotionally engaging, gamified study plans. By giving each student a virtual pet or garden that thrives only through consistent academic engagement, the platform drives daily study habits, reduces freshman dropout rates, and provides administrators with real-time analytics on student engagement and at-risk behaviors. The solution integrates with existing LMS and student information systems, offering a scalable way to boost retention without adding counseling staff.",
+      "one_liner": "We provide an AI-powered, emotionally engaging study companion for universities to improve student retention by converting course materials into personalized, gamified learning journeys.",
+      "target_customer": "Director of Student Success at a mid-sized university struggling with first-year retention.",
+      "core_problem": "University freshmen often lack the motivation and study skills to persist, leading to dropout rates as high as 30% in the first year. Institutions currently rely on costly, reactive interventions like academic advising and tutoring that fail to engage students daily. The result is millions in lost tuition and diminished graduation rates, making retention a top strategic priority.",
+      "solution_hook": "Unlike generic study apps or LMS plugins, our solution creates a durable emotional bond between the student and their academic progress through a virtual pet or garden that is directly tied to their real syllabi and assignments—no other retention tool makes daily studying viscerally rewarding in this way.",
+      "why_this_angle": "B2B sales unlock larger, recurring contracts from buyers with dedicated retention budgets. The emotional gamification layer fills a gap in the edtech market, where most tools are utilitarian. University pilots can be validated quickly, and the high switching cost once integrated creates a defensible moat.",
+      "quick_score": {
+        "problem_acuity": 8,
+        "market_size": 7,
+        "founder_feasibility": 6,
+        "total": 21
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "StudyPet pivots into a razor-sharp wedge for first-year pre-med students struggling with Organic Chemistry. The product ingests a professor's dense syllabus PDF and uses AI to auto-generate a personalized daily study plan, breaking down intimidating topics into bite-sized, emotionally rewarding tasks. Each completed task feeds a virtual pet, visually reflecting the student's consistency and progress. The emotional hook directly combats procrastination by making skipped study sessions feel like neglecting a dependent creature, leveraging guilt and nurturing instincts to sustain daily habits during a make-or-break semester.",
+      "one_liner": "We help pre-med students survive Organic Chemistry by turning their syllabus into a daily pet-nurturing study routine using AI.",
+      "target_customer": "A first-year pre-medical student at a large state university, currently enrolled in Organic Chemistry I, who is highly motivated but overwhelmed by the volume of self-directed study and fears that failing or getting below a B will permanently derail their medical school aspirations.",
+      "core_problem": "Every semester, they receive a 20-page syllabus detailing chapters, problem sets, and exam dates, but they repeatedly procrastinate because manually breaking it into daily tasks feels daunting and unrewarding. This leads to last-minute cramming, extreme anxiety, poor retention, and a real risk of scoring below a B—a critical threshold for med school applications. The emotional toll includes daily guilt, stress, and a sense of losing control over their academic future.",
+      "solution_hook": "Unlike generic study planners or flashcard apps, this version ingests the specific Organic Chemistry syllabus and auto-generates a daily, emotionally gamified routine where each completed task directly feeds and grows a virtual pet. The pet's health and happiness provide an immediate, visual feedback loop that makes procrastination feel emotionally costly, activating loss aversion and nurturing instincts to maintain study consistency.",
+      "why_this_angle": "By hyper-focusing on pre-med Organic Chemistry students, we target a micro-segment with extreme, acute pain (high failure rates, career-altering stakes) and a demonstrated willingness to pay for any tool that boosts their grade and reduces anxiety. The emotional gamification layer directly addresses the procrastination-anxiety cycle that generic apps ignore. Validation is fast: the founder can find 10 desperate Organic Chemistry students on campus or in pre-med forums within days to test willingness to pay.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 8,
+        "total": 23
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "We turn course syllabi into a virtual pet that only thrives when you actually study, using AI to auto-plan tasks and emotionally reward progress.",
+  "source": "parallel_iteration"
+}

@@ -1,0 +1,62 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": 1,
+      "title": "Structured Voice-Based Reporting and Classification",
+      "pain": "Smallholder farmers lack a systematic way to report field problems. They rely on chaotic WhatsApp groups or manual notebooks, leading to lost reports, no classification, and delayed response.",
+      "why_now": "Advances in speech-to-text and NLP for low-resource languages, combined with widespread use of basic phones with voice messaging, make it feasible to build a voice-first interface.",
+      "evidence_needed": "Interview 20 farmers to quantify time spent in current methods, error rates, and willingness to use voice. Assess accuracy of transcription in target languages.",
+      "priority": "high",
+      "risk": "User adoption of voice interface, accuracy in noisy farm environments, and convincing farmers to switch from familiar WhatsApp."
+    },
+    {
+      "id": 2,
+      "title": "Geolocated Alert System for Field Issues",
+      "pain": "Extensionists and cooperatives cannot prioritize or locate field problems efficiently. Without geotagging, response is slow and uncoordinated.",
+      "why_now": "Even basic phones have GPS or network-based location; geolocated alerts can be mapped for rapid dispatch and trend analysis.",
+      "evidence_needed": "Map current response times and distances traveled by extensionists. Test if farmers are comfortable sharing location.",
+      "priority": "high",
+      "risk": "Privacy concerns, accuracy of location in rural areas with poor GPS, and need for intuitive location collection method."
+    },
+    {
+      "id": 3,
+      "title": "Coordination of Technical Assistance Requests",
+      "pain": "There is no platform to match farmer reports with available extensionists, resulting in long wait times, redundant visits, and inefficient use of experts.",
+      "why_now": "Messaging APIs and scheduling algorithms can automate coordination, similar to ride-hailing or telemedicine platforms.",
+      "evidence_needed": "Measure average wait time for assistance, technician utilization rates, and potential cost savings from better coordination.",
+      "priority": "high",
+      "risk": "Supply-side onboarding of enough technicians, ensuring timely response, and managing expectations."
+    },
+    {
+      "id": 4,
+      "title": "Low-Bandwidth, Offline-Capable Agricultural Assistant",
+      "pain": "Existing digital agriculture solutions (Plantix, AgroSmart) require smartphones and constant internet, excluding millions of smallholders with feature phones or intermittent connectivity.",
+      "why_now": "SMS, USSD, and offline voice processing technologies have matured, enabling rich interactions on basic phones.",
+      "evidence_needed": "Survey farmer phone types and connectivity. Test SMS/voice-based prototype performance and user satisfaction.",
+      "priority": "medium",
+      "risk": "Rapid smartphone adoption could make this less relevant; voice UI may be slower than graphical UI for complex tasks."
+    },
+    {
+      "id": 5,
+      "title": "Personalized Advisory Based on Farm History",
+      "pain": "Farmers receive generic advice from radio or one-size-fits-all extension; they need tailored recommendations based on their specific crops, past problems, and local conditions.",
+      "why_now": "AI can analyze individual farm data (weather, soil, pest history) to deliver personalized insights via simple voice messages.",
+      "evidence_needed": "Compare outcomes of personalized vs. generic advice in a pilot. Assess data collection feasibility without digital forms.",
+      "priority": "medium",
+      "risk": "Building accurate user profiles without digital literacy; data sparsity for new users."
+    },
+    {
+      "id": 6,
+      "title": "Early Warning System for Pest/Disease Outbreaks",
+      "pain": "Cooperatives and extension agencies lack real-time aggregated data on field problems, delaying detection of outbreaks and causing widespread crop losses.",
+      "why_now": "Geolocated reports can be aggregated in a dashboard, triggering alerts when thresholds are exceeded, enabling proactive interventions.",
+      "evidence_needed": "Analyze historical losses from outbreaks, current detection lag, and willingness of authorities to act on aggregated alerts.",
+      "priority": "high",
+      "risk": "Data quality from farmer reports (false positives/negatives), integration with government systems, and privacy."
+    }
+  ],
+  "recommended_gap_id": 1,
+  "checkpoint_instruction": "Interview 20 smallholder farmers and 5 extensionists to validate the pain of unstructured reporting and the willingness to adopt a voice-based system. Additionally, test a basic prototype for speech-to-text accuracy in target dialects.",
+  "source": "llm"
+}

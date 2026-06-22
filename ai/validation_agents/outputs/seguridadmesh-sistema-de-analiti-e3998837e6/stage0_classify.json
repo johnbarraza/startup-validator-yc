@@ -1,0 +1,56 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "GovTech",
+  "customer_type": "B2G",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "Municipalities in Peru already invest in security cameras and personnel for monitoring, but manual monitoring is inefficient and incident response is delayed. There is an active workaround (manual video review) and budget lines (PIM de seguridad ciudadana) for security tech.",
+  "pit_signals_detected": [
+    "B2G sales cycles in Peru average 6-18 months via OSCE procurement; a startup may run out of cash before closing first deal.",
+    "Municipal security budgets (PIM) are rigid and often underspent; approval requires political will and may be diverted to other priorities like salaries or equipment.",
+    "Existing cameras may be outdated, low-resolution, or not connected to a network, requiring costly upgrades that municipalities are unwilling to fund."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual monitoring, spreadsheets)",
+    "Spending already happens on imperfect solutions (cameras, personnel)",
+    "Recurring pain: daily crime incidents",
+    "Measurable cost: lost response time, increased crime",
+    "Buyer has a budget line (PIM) that already covers this cost"
+  ],
+  "classification_rationale": "Crime and public safety are urgent, structural problems in Peruvian municipalities. They already spend on security infrastructure and have dedicated budgets for security technology. The solution directly addresses a clear pain point with no alternative AI-based product widely adopted. Buyer ability to pay is high given allocated PIM funds.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "NO",
+  "freemium_rationale": "B2G sales cycles are long and involve procurement processes. A free tier would not accelerate adoption among municipal buyers who expect to purchase licenses after a proof-of-concept. Freemium could dilute perceived value and extend revenue generation.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "Municipal budgets are locked in annual PIM and require multiple bureaucratic approvals (mayor, council, procurement office); even if interested, payment can take 6-12 months after service start.",
+  "free_substitute_risk": "Manual monitoring of camera feeds by serenazgo staff or simple motion detection DVR systems (already installed) cover 80% of incident detection needs for most municipalities.",
+  "market_size_reality_check": "Realistic SAM: only ~50-100 of Peru's 1,843 municipalities have >20 cameras, digital maturity, and budget for external AI analytics. At $10-50k/year per license, TAM < $5M/year in Peru.",
+  "hardest_assumption": "That municipal buyers will prioritize AI video analytics over other security spending (e.g., more patrols, streetlights) and that the procurement process can be completed within a startup's runway.",
+  "devil_rationale": "While the problem (slow incident detection) is real, the B2G sales motion in Peru is too slow and unpredictable for a seed-stage startup. The market is tiny, and free/cheap substitutes (manual watching, basic DVR) are good enough. Without a clear, fast procurement path, the idea will fail to generate revenue before capital runs out.",
+  "preflight_dominant_solution": {
+    "score": "CLEAR",
+    "competitor_name": "Hikvision",
+    "threat_level": "LOW",
+    "note": "While there are global video management systems, no single provider dominates AI analytics specifically for municipal serenazgo in Peru."
+  },
+  "preflight_precedent_failure": {
+    "score": "NO_KNOWN_FAILURE",
+    "example": "none",
+    "learning": "Space appears greenfield for AI analytics in municipal security in Peru."
+  },
+  "preflight_regulatory_kill": {
+    "score": "SOFT_BLOCKER",
+    "regulation": "Ley de Protección de Datos Personales (Ley N° 29733) and municipal ordinances.",
+    "mitigation": "Ensure compliance with data privacy, obtain consent, and avoid facial recognition without clear legal basis."
+  },
+  "preflight_summary": "Proceed with caution: market gap exists but regulatory data privacy compliance is a manageable soft blocker.",
+  "deal_signals": {
+    "hiring": "Increase in hiring for public sector sales and AI/ML engineers indicates growing demand.",
+    "funding": "Recent funding rounds in smart city and security AI startups show investor interest.",
+    "product": "Watch for product launches by large vendors like Huawei or Dahua with embedded AI for municipalities.",
+    "market": "Rising urban crime rates and government digitization push drive adoption of smart security solutions.",
+    "tech": "Edge AI and low-cost cameras enable real-time analytics at scale, lowering barriers to entry.",
+    "momentum": "ACCELERATING"
+  },
+  "source": "triple_agent_classification"
+}

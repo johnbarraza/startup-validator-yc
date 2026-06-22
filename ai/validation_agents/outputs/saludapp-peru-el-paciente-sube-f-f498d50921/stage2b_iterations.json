@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "SaludApp helps chronic patients in Peru instantly find the cheapest generic equivalent of their prescribed medication at nearby pharmacies. Users simply photograph their prescription; OCR extracts drug and dosage, then the app displays real-time prices from a crowdsourced database of receipts, comparing options within a 500-meter radius. This turns a habitual overpayment into a simple switch, saving patients up to 70% on monthly drug costs. By uploading their purchase receipts, they contribute to the price database and build a personal health record as a side effect, enabling future features like adherence reminders and clinical summaries.",
+      "one_liner": "We help chronic patients in Peru stop overpaying for medications by showing them real-time, crowdsourced prices for generic substitutes at pharmacies near them.",
+      "target_customer": "A 55-year-old hypertensive patient in Lima who buys losartan monthly at the same chain pharmacy, unaware that a generic version is available 200 meters away for half the price.",
+      "core_problem": "Every month, millions of Peruvians with chronic conditions walk into their usual pharmacy and overpay for branded or non-optimal generic drugs because they have no easy way to compare real prices across pharmacies in real time. This behavior costs them thousands of soles annually, yet they repeat it out of habit and lack of accessible information.",
+      "solution_hook": "Unlike pharmacy apps that only show their own prices or government lists with outdated declared prices, SaludApp uses OCR on prescription photos and a crowdsourced network of receipt verifications to provide genuine, location-specific prices for generics, turning every purchase into a data point that saves money for the next user.",
+      "why_this_angle": "Sharpening the focus to price comparison as the primary wedge addresses the most acute, frequent pain—direct monetary loss—while creating a simple, viral hook ('see how much you could save'). This narrow entry point builds a rapid user base, whose receipt uploads then generate the longitudinal data moat, making the larger health platform economically inevitable.",
+      "quick_score": {
+        "problem_acuity": 8,
+        "market_size": 8,
+        "founder_feasibility": 7,
+        "total": 23
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "SaludApp for Employers is a B2B medication cost and adherence platform sold to companies and insurers that cover prescription drug expenses. Beneficiaries use a mobile app to upload prescriptions via OCR, get real-time geo-priced comparisons for cheapest generic equivalents at nearby pharmacies, and receive reminders and alerts. Employers gain a dashboard showing aggregate savings, adherence rates, and population health risk scores, enabling better pharmacy negotiations and targeted wellness programs. Pricing is a per-member-per-month license, transforming medication spend from a cost center to a controlled, value-driven benefit.",
+      "one_liner": "We give employers a turnkey medication savings and adherence program that cuts prescription costs by 30% and improves employee health outcomes.",
+      "target_customer": "HR Director of a mid-sized Peruvian manufacturing company with 500+ employees facing double-digit annual health insurance premium increases.",
+      "core_problem": "Every month, the HR Director watches health plan costs rise due to chronic disease medications, yet employees often skip doses or overpay for brands because they lack real-time, localized guidance on cheaper generic alternatives. This non-adherence leads to worse health outcomes, higher absenteeism, and escalating claims, while manual solutions like static drug lists fail to drive behavior change.",
+      "solution_hook": "Unlike generic reference lists or single-pharmacy apps, our platform combines OCR-powered prescription digitization, live geo-pricing from crowdsourced pharmacy data, and automated adherence nudges, all feeding a real-time ROI dashboard for the employer that proves hard savings and health improvements.",
+      "why_this_angle": "Employers have larger budgets, existing wellness spend, and a clear ROI from reducing drug costs and improving adherence, leading to stickier, higher-value annual contracts compared to a consumer model that must later seek B2B buyers. This positioning directly aligns with institutional procurement cycles and pain points.",
+      "quick_score": {
+        "problem_acuity": 7,
+        "market_size": 7,
+        "founder_feasibility": 6,
+        "total": 20
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "A simple mobile tool for low-income hypertensive patients in Lima's Comas district to instantly compare real-time generic losartan prices at nearby pharmacies. Instead of visiting multiple stores and potentially overspending by 50%, users text their dose to a WhatsApp bot and receive a list of the three cheapest options within walking distance, sourced from crowdsourced receipts. This wedge avoids complex OCR and adherence features, focusing purely on immediate cost savings to quickly demonstrate user demand and a willingness to pay through a S/2 per query fee or a weekly subscription.",
+      "one_liner": "We help cost-conscious chronic patients in Peru save up to 70% on generic drugs by texting a WhatsApp bot for real-time local pharmacy price comparisons.",
+      "target_customer": "A 55-year-old hypertensive patient in Comas, Lima, earning minimum wage, who currently spends 15% of their weekly income on losartan and physically checks three pharmacies every refill to find an affordable price.",
+      "core_problem": "This patient loses S/10–S/20 per month by buying the wrong generic version, equivalent to a day's wages, and risks skipping doses when money is tight. Price opacity forces them to spend 2 hours each month walking between pharmacies to compare, often settling for the first acceptable price due to exhaustion.",
+      "solution_hook": "Unlike pharmacy apps that show only their own prices or government lists with outdated data, our WhatsApp bot gives real-time, geo-located price comparisons sourced from actual customer receipts, making it as easy as sending a text to find the cheapest option.",
+      "why_this_angle": "By concentrating on a single drug and neighborhood, we can manually curate price data, validate demand with 10 users in days, and observe actual savings behavior before building complex OCR or adherence systems. This ultra-narrow wedge proves willingness to pay and creates a foundation for later expansion.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 3,
+        "founder_feasibility": 9,
+        "total": 21
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "We help chronic patients in Peru stop overpaying for medications by showing them real-time, crowdsourced prices for generic substitutes at pharmacies near them.",
+  "source": "parallel_iteration"
+}

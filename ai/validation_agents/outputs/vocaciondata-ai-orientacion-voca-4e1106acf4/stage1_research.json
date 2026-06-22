@@ -1,98 +1,165 @@
 {
-  "idea": "VocacionData AI: orientacion vocacional basada en datos laborales reales para postulantes y estudiantes peruanos, usando un agente conversacional que cruza intereses, salarios, empleabilidad, oferta universitaria y ubicacion para reducir malas decisiones de carrera.",
-  "market": "Peru",
+  "idea": "VocacionData AI: Vocational guidance based on real labor data for Peruvian applicants and students, using a conversational agent that crosses interests, salaries, employability, university offerings, and location to reduce poor career decisions.",
+  "market": "Peruvian postulants and students facing a critical career choice with limited data-driven guidance; TAM of ~500k annual school graduates and ~1.2M university students, with high information asymmetry.",
   "solutions": [
     {
       "id": 1,
-      "name": "Ponte en Carrera",
-      "category": "Plataforma gubernamental de información laboral",
-      "observed_positioning": "Portal oficial del Ministerio de Trabajo peruano que ofrece datos de empleabilidad, salarios y demanda laboral por carrera y región. Es gratuito, pero no personalizado ni interactivo."
+      "name": "Portal MiFuturo (Pronabec/MINEDU)",
+      "category": "Government Data Portal",
+      "observed_positioning": "Free official source of university programs, tuition, and labor outcomes."
     },
     {
       "id": 2,
-      "name": "Test vocacionales tradicionales (Kuder, Holland, etc.)",
-      "category": "Test psicométricos en papel o web",
-      "observed_positioning": "Evaluaciones de intereses y personalidad ampliamente usadas en colegios y universidades. No integran datos laborales reales ni son conversacionales."
+      "name": "Ponte en Carrera (MTPE)",
+      "category": "Government Data Portal",
+      "observed_positioning": "Salary and employability statistics per career, renewed annually by labor survey."
     },
     {
       "id": 3,
-      "name": "Orientación vocacional presencial (psicólogos educativos)",
-      "category": "Servicio profesional humano",
-      "observed_positioning": "Sesiones individuales o grupales con psicólogos especializados. Costosas, escalabilidad limitada, dependen de la experiencia del orientador."
+      "name": "LinkedIn Salary Insights",
+      "category": "Professional Network",
+      "observed_positioning": "Global platform with localized salary data from self-reported profiles, limited to professional roles."
     },
     {
       "id": 4,
-      "name": "Plataformas de búsqueda de carreras (CareerExplorer, MyNextMove)",
-      "category": "Plataformas web internacionales",
-      "observed_positioning": "Sitios como CareerExplorer o MyNextMove ofrecen tests y perfiles de carreras, pero con datos genéricos de EE.UU., no adaptados a Perú."
+      "name": "ChatGPT / OpenAI",
+      "category": "Generic AI Assistant",
+      "observed_positioning": "Conversational agent that can provide career advice based on broad web knowledge, not tailored to local data."
     },
     {
       "id": 5,
-      "name": "LinkedIn Learning / Coursera Career Guides",
-      "category": "Plataformas de cursos con orientación",
-      "observed_positioning": "Ofrecen rutas de aprendizaje y guías de carrera, pero enfocadas en habilidades digitales y con datos globales, no locales."
+      "name": "Career Counselors (private + school staff)",
+      "category": "Human Service",
+      "observed_positioning": "One-on-one guidance often based on psychometric tests and personal experience; low scalability."
     },
     {
       "id": 6,
-      "name": "Universidad del Pacífico - Observatorio Laboral",
-      "category": "Investigación académica",
-      "observed_positioning": "Reportes y análisis del mercado laboral peruano, pero no interactivos ni personalizados."
+      "name": "Test de Holland (RIASEC) online",
+      "category": "Psychometric Test",
+      "observed_positioning": "Free/paid web tests matching personality to broad career families, without local labor context."
     },
     {
       "id": 7,
-      "name": "Chatbots educativos genéricos (ej. ChatGPT, Bard)",
-      "category": "IA conversacional general",
-      "observed_positioning": "Pueden responder preguntas vocacionales, pero sin datos estructurados ni actualizados del mercado peruano, riesgo de alucinaciones."
+      "name": "University Career Fairs & Open Houses",
+      "category": "Event-based Exploration",
+      "observed_positioning": "Direct exposure to programs and alumni, but time‑intensive and institution‑biased."
     },
     {
       "id": 8,
-      "name": "Aplicaciones móviles de test vocacional (ej. Test Vocacional Perú)",
-      "category": "Apps móviles básicas",
-      "observed_positioning": "Apps simples que ofrecen tests de intereses, pero sin integración de datos laborales ni actualización constante."
+      "name": "YouTube / TikTok career influencers",
+      "category": "Social Media",
+      "observed_positioning": "Unstructured peer advice and day‑in‑the‑life content, trending among Gen Z."
     },
     {
       "id": 9,
-      "name": "Ferias vocacionales universitarias",
-      "category": "Eventos presenciales",
-      "observed_positioning": "Eventos anuales donde universidades presentan sus carreras. Información sesgada hacia la oferta educativa, no hacia la demanda laboral."
+      "name": "Manual research on university websites",
+      "category": "Do‑Nothing / DIY",
+      "observed_positioning": "Prospective students browse curricula, brochures, and scattered job forums on their own."
     },
     {
       "id": 10,
-      "name": "Redes de mentores (ej. Alumni de universidades)",
-      "category": "Redes de contacto humano",
-      "observed_positioning": "Programas de mentoría donde profesionales guían a estudiantes. Dependen de disponibilidad y no tienen datos agregados."
+      "name": "Family & peer pressure",
+      "category": "Social Convention",
+      "observed_positioning": "Choices heavily influenced by parental expectations or friend trends, ignoring labor data."
     },
     {
       "id": 11,
-      "name": "Plataformas de empleo (Computrabajo, Bumeran, Indeed)",
-      "category": "Portales de empleo",
-      "observed_positioning": "Muestran ofertas laborales actuales, pero no ofrecen orientación vocacional ni cruce con intereses del usuario."
+      "name": "Bumeran / CompuTrabajo job listings",
+      "category": "Local Job Board",
+      "observed_positioning": "Reveals demand and advertised salaries for specific roles; no comparative tool for careers."
     },
     {
       "id": 12,
-      "name": "Ministerio de Educación - Sistema de Información de Educación Superior",
-      "category": "Base de datos gubernamental",
-      "observed_positioning": "Datos sobre universidades, carreras y egresados, pero sin interfaz amigable ni recomendaciones personalizadas."
+      "name": "Glassdoor / Indeed Peru",
+      "category": "Employer Insights",
+      "observed_positioning": "Salary brackets and employee reviews for companies, not career‑entry guidance."
     },
     {
       "id": 13,
-      "name": "Consultorías privadas de orientación vocacional (ej. Vocacional.pe)",
-      "category": "Servicio privado online",
-      "observed_positioning": "Empresas que ofrecen tests y asesoría online, pero con costos y sin integración de datos laborales en tiempo real."
+      "name": "Coursera / EdX Career Academy",
+      "category": "Global Ed‑Tech",
+      "observed_positioning": "Skill‑based career paths and certificates, weak on Peruvian university system mapping."
     },
     {
       "id": 14,
-      "name": "Redes sociales y foros (Reddit, grupos de Facebook)",
-      "category": "Comunidades informales",
-      "observed_positioning": "Estudiantes comparten experiencias y consejos, pero la información no es estructurada ni verificada."
+      "name": "Laboratoria (Peruvian bootcamp)",
+      "category": "Training Provider",
+      "observed_positioning": "Targets women for digital skills, with employment outcomes, but only for tech roles."
     },
     {
       "id": 15,
-      "name": "Libros y guías impresas de carreras",
-      "category": "Material educativo tradicional",
-      "observed_positioning": "Publicaciones con descripciones de carreras, pero desactualizadas y sin personalización."
+      "name": "Apps like ‘Elegir Carrera’ (Universia)",
+      "category": "First‑gen Ed‑Tech",
+      "observed_positioning": "Basic test+name‑match, rarely updated with current salaries or regional demand."
     }
   ],
-  "research_summary": "El mercado peruano de orientación vocacional está fragmentado entre soluciones gubernamentales estáticas (Ponte en Carrera), tests psicométricos tradicionales, servicios profesionales costosos y plataformas internacionales no adaptadas localmente. Ninguna alternativa combina datos laborales reales (salarios, empleabilidad, oferta educativa, ubicación) con un agente conversacional personalizado. Las soluciones existentes carecen de actualización dinámica, integración de múltiples fuentes y accesibilidad gratuita. VocacionData AI tiene oportunidad de diferenciarse por su enfoque data-driven, localizado y conversacional, dirigido a un segmento masivo de postulantes y estudiantes peruanos que actualmente toman decisiones con información incompleta o desactualizada.",
+  "research_summary": "Identified 15 alternatives spanning government data portals, global platforms, legacy psychometrics, human counselors, social media, and DIY methods. The five most dangerous competitors were selected based on their data depth, user reach, and potential to block adoption of a new AI native tool.",
+  "competitor_signals": [
+    {
+      "competitor": "Portal MiFuturo",
+      "hiring_score": 3,
+      "funding_score": 6,
+      "product_score": 5,
+      "team_score": 4,
+      "market_score": 8,
+      "tech_score": 2,
+      "overall_score": 47.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Government portal with institutional traffic; low innovation capacity but high trust and free access."
+    },
+    {
+      "competitor": "Ponte en Carrera",
+      "hiring_score": 2,
+      "funding_score": 5,
+      "product_score": 6,
+      "team_score": 4,
+      "market_score": 7,
+      "tech_score": 2,
+      "overall_score": 43.5,
+      "classification": "MONITOR",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "MTPE´s salary observatory; updated yearly with official INEI data, but static and slow to iterate."
+    },
+    {
+      "competitor": "LinkedIn",
+      "hiring_score": 9,
+      "funding_score": 9,
+      "product_score": 6,
+      "team_score": 8,
+      "market_score": 9,
+      "tech_score": 7,
+      "overall_score": 81.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Global network effects, potential to add AI‑career guidance features for Peru; strong data on professional salaries but weak on entry‑level and university match."
+    },
+    {
+      "competitor": "ChatGPT (OpenAI)",
+      "hiring_score": 10,
+      "funding_score": 10,
+      "product_score": 4,
+      "team_score": 10,
+      "market_score": 9,
+      "tech_score": 10,
+      "overall_score": 87.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Rapid AI evolution could obsolete vertical solutions if it integrates hyper‑local labor data; current responses lack Peru‑specific accuracy."
+    },
+    {
+      "competitor": "Career Counselors (aggregate)",
+      "hiring_score": 5,
+      "funding_score": 3,
+      "product_score": 5,
+      "team_score": 6,
+      "market_score": 7,
+      "tech_score": 1,
+      "overall_score": 46.5,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Fragmented and labor‑intensive; high trust in personal contact but no real‑time data integration."
+    }
+  ],
   "source": "llm"
 }

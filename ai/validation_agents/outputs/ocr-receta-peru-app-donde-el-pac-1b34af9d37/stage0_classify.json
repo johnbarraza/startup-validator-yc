@@ -1,0 +1,55 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "HealthTech",
+  "customer_type": "B2B2C",
+  "problem_severity": "RECURRING",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "Patient behavior change is high: Most patients ask the pharmacist directly for the cheapest option, a free and instantaneous workaround. The app requires downloading, photographing a prescription, and trusting OCR to show prices — a multi-step process that adds friction over the habitual 'just ask' loop.",
+    "Pharmacy willingness to pay is dubious: In Peru, the pharmacy industry is dominated by large chains (Inkafarma, Mifarma) with thin margins and existing loyalty programs (e.g., Inkafarma's 'Puntos Beneficio'). They are unlikely to pay a commission per customer when they already attract foot traffic. Small bodega pharmacies operate on even tighter margins and see no value in paying for inbound traffic they already have.",
+    "OCR on handwritten Peruvian prescriptions is unreliable: Prescriptions are often handwritten with varying legibility, using brand names (not generics). The OCR would need to handle Spanish, drug name variations, and dosage errors. Any misread leads to mistrust and abandonment. The technical risk is high and the human-in-the-loop (verification) is costly."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual comparison or relying on pharmacy staff)",
+    "Spending already happens on imperfect solutions (paying more for branded drugs)",
+    "Recurring pain: every prescription fill",
+    "Measurable cost: potential savings on generic equivalents"
+  ],
+  "classification_rationale": "Peruvian patients face a recurring financial and health burden from expensive branded medications, with manual workarounds. Pharmacies actively seek customer acquisition channels and are willing to pay per lead. The B2B commission model aligns incentives and fits local payment realities.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "NO",
+  "freemium_rationale": "The consumer app is already free; revenue comes from pharmacy commissions per referred customer, so no freemium tier is needed. A free trial for pharmacies (e.g., first leads free) could be part of sales, not a freemium product model.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "Pharmacies in Peru, especially the small and informal ones that would benefit most from price comparison traffic, rarely have digital payment infrastructure. They operate on cash and basic CCI transfers. Commission collection would require manual invoicing and follow-up, making the unit economics negative for low-value transactions.",
+  "free_substitute_risk": "The patient's existing behavior – asking the pharmacy clerk '¿Cuál es el genérico más barato?' – is free, instantaneous, and requires no app. For patients who are extremely price-sensitive, they already comparison-shop between two nearby pharmacies by walking, not using an app.",
+  "market_size_reality_check": "The real paying market is constrained to formal pharmacy chains (Lima-based) and price-sensitive patients with smartphones. Assuming 5% of Lima's 10M population (500K) might use it, and each referral is worth S/2-5 ($0.5-1.3), the potential annual revenue is < $1M — too small for VC scale without broader LATAM expansion, which requires separate localization for each country's drug databases and pricing.",
+  "hardest_assumption": "That patients will adopt a new app to do something they already do for free with less friction (asking the pharmacist), and that pharmacies will pay for leads when they already have high walk-in traffic and thin margins.",
+  "devil_rationale": "While the idea superficially solves a real pain point (drug price opacity), the behavioral friction, pharmacy payment aversion, and OCR reliability issues create a weak product-market fit. The market is too small to reach venture scale within Peru, and the unit economics in B2B are unproven. I rate this idea 'WEAK' due to high customer acquisition cost and low willingness to pay on both sides.",
+  "preflight_dominant_solution": {
+    "score": "CLEAR",
+    "competitor_name": "none found",
+    "threat_level": "LOW",
+    "note": "No well-funded, widely-adopted solution exists in Peru for prescription OCR and generic price comparison with nearby pharmacy GPS."
+  },
+  "preflight_precedent_failure": {
+    "score": "NO_KNOWN_FAILURE",
+    "example": "none",
+    "learning": "No publicly known failure of this exact model indicates an unproven but not necessarily invalid space."
+  },
+  "preflight_regulatory_kill": {
+    "score": "SOFT_BLOCKER",
+    "regulation": "Peru's Personal Data Protection Law (Ley 29733) requires user consent and data security; pharmacy integration may need agreements for real-time pricing.",
+    "mitigation": "Implement robust privacy policies, obtain explicit consent, partner with pharmacies via API contracts, and ensure compliance with health data regulations."
+  },
+  "preflight_summary": "Proceed cautiously: no dominant player or known failure, but soft regulatory blockers (data privacy) require careful handling; market momentum is favorable.",
+  "deal_signals": {
+    "hiring": "Hiring for OCR/ML engineers, pharmacy business development, and legal/compliance roles signals market entry or scaling.",
+    "funding": "Recent funding rounds in LATAM health tech (e.g., in Mexico, Brazil) suggest investor interest in digital pharmacy solutions.",
+    "product": "Key product launches include pharmacy API integrations and generic drug databases; watch for similar apps from incumbents like Farmatodo.",
+    "market": "Macro trend: rising healthcare costs and government promotion of generics drive demand for price transparency tools.",
+    "tech": "OCR accuracy improvements (e.g., Transformer-based models) and GPS proximity matching enable the core functionality.",
+    "momentum": "ACCELERATING"
+  },
+  "source": "triple_agent_classification"
+}

@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "AgroIntel LatAm is a voice-first agricultural assistant that transforms how smallholder farmers and cooperatives report field problems. Instead of sending unstructured WhatsApp voice notes, farmers speak to a chatbot that transcribes and classifies their reports into structured categories like pests, diseases, or nutrient deficiencies, using a vocabulary optimized for local jargon and low-bandwidth environments. The system then creates geotagged, prioritized alerts for extension technicians, who receive actionable, searchable logs instead of hours of messy audio. This structured data becomes the backbone for coordinating on-site visits and tracking issue resolution, helping cooperatives deliver faster, more efficient technical assistance while building a rich dataset of farm-level problems.",
+      "one_liner": "AgroIntel LatAm turns farmers' voice reports into structured, classified field issues for agricultural technicians, cutting response times from days to hours.",
+      "target_customer": "A smallholder coffee farmer in Colombia who sends daily WhatsApp voice notes to her cooperative's extension agent to report discolored leaves or pest sightings.",
+      "core_problem": "Farmers rely on unstructured voice messages to report issues, forcing technicians to waste hours manually transcribing and sorting reports; this delay allows minor problems to escalate into major outbreaks, costing farmers up to 30% of their harvest.",
+      "solution_hook": "A voice interface that transcribes, classifies, and geotags field issues using a custom speech model trained on local dialects and agricultural terms, working over WhatsApp with no app install required.",
+      "why_this_angle": "By zeroing in on the most painful, high-frequency interaction—unstructured voice reporting—we solve the root bottleneck in agricultural extension. This wedge creates immediate value (time savings, faster response) and a data foundation that makes coordination features inevitable.",
+      "quick_score": {
+        "problem_acuity": 10,
+        "market_size": 8,
+        "founder_feasibility": 9,
+        "total": 27
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "AgroIntel LatAm pivoted to a B2B platform for agricultural extension agencies and large cooperatives, enabling them to deploy a voice-first AI agent that smallholder farmers call to report field issues. The system automatically transcribes, classifies (pest, disease, drought, etc.), geotags, and creates prioritized tickets, routing them to the right field technician. The buyer pays a subscription per farmer covered, gaining a management dashboard to track response times, resolution rates, and aggregate agronomic data. This replaces fragmented WhatsApp and phone-call triage, reducing crop losses and optimizing extension resources.",
+      "one_liner": "We give agricultural extension agencies a voice-first field intelligence system that automatically classifies and geotags farmer reports, turning chaotic phone calls into actionable tickets.",
+      "target_customer": "Director of Agricultural Extension Services at a Ministry of Agriculture or a Head of Technical Assistance in a large producer cooperative (e.g., coffee, cocoa, banana).",
+      "core_problem": "Extension teams are flooded with unstructured voice calls and WhatsApp messages from hundreds of farmers daily, leading to slow, subjective triage, missed early-warning signals, and delayed field visits that result in preventable crop losses and farmer distrust.",
+      "solution_hook": "Unlike generic messaging apps, our platform turns any farmer’s phone call into a structured, classified, geotagged alert that is instantly queued by severity and matched to the right technician—all via a low-bandwidth voice interface, no smartphone or Internet required.",
+      "why_this_angle": "By targeting institutions with existing budgets and a mandate to improve farmer support, we shift from high-volume farmer acquisition to scalable, high-ticket B2B sales. The pain is acute: extension services are underfunded yet accountable, and our system directly addresses their operational inefficiencies and reporting gaps.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 8,
+        "founder_feasibility": 8,
+        "total": 25
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "CoffeeGuard is a voice-first reporting and triage system for coffee cooperatives battling coffee rust. Farmers call a local number and describe their plants' symptoms in their own words. The system uses structured prompts to capture key details (leaf appearance, spread pattern), automatically transcribes and classifies the issue using a coffee-disease taxonomy, geotags the report, and sends an alert to the cooperative technician with a severity score. This replaces the chaos of WhatsApp voice notes that technicians must manually sift through, enabling faster response to outbreaks and reducing yield losses.",
+      "one_liner": "We turn chaotic farmer voice notes into structured, triaged disease alerts for coffee cooperative technicians using a simple phone call.",
+      "target_customer": "Ana, a field technician for a 500-member coffee cooperative in Huila, Colombia, who receives over 30 unstructured voice messages daily from farmers reporting crop issues.",
+      "core_problem": "Ana spends 3 hours daily listening to voice notes, transcribing them, and trying to remember which farms need urgent attention. She often misses early signs of coffee rust because reports lack consistent detail, leading to delayed fungicide application and up to 30% yield loss on affected plots.",
+      "solution_hook": "A structured voice interface that prompts farmers with simple questions (e.g., 'Are the spots yellow or brown?') and instantly classifies the report into actionable alerts, without requiring farmers to install an app or type.",
+      "why_this_angle": "By zeroing in on a single disease for one crop and one cooperative role, we create a solution so tailored that it's immediately indispensable. The narrow focus makes it easy to demonstrate a 10x reduction in triage time and measurable impact on disease control, proving willingness to pay within 30 days.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 4,
+        "founder_feasibility": 10,
+        "total": 23
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "AgroIntel LatAm turns farmers' voice reports into structured, classified field issues for agricultural technicians, cutting response times from days to hours.",
+  "source": "parallel_iteration"
+}

@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "NotariaFlow AI es un copiloto de IA para notarios de pequeñas y medianas firmas que acelera la preparación de escrituras, partidas y contratos. Se integra directamente al flujo de trabajo diario: el notario escanea o sube documentos fuente, y el sistema extrae y estructura automáticamente datos clave (nombres, fechas, montos, cláusulas) con OCR especializado y modelos de lenguaje entrenados en documentos notariales. La extracción se presenta en un editor donde el notario puede revisar, corregir y aprobar los datos antes de que se generen automáticamente borradores precisos, reduciendo errores manuales y horas de trabajo administrativo por cada caso.",
+  "selected_gap": {
+    "id": "gap1",
+    "title": "Revisable AI Notarial Extraction",
+    "pain": "Notaries fear AI errors that can have legal consequences; they spend excessive time manually verifying AI output, negating efficiency gains.",
+    "why_now": "AI/NLP advanced enough for high-accuracy extraction, but trust remains a barrier; no competitor offers an explainable, reviewable AI layer tailored to notarial acts.",
+    "evidence_needed": "Build prototype with highlighted extracted fields, confidence scores, and an editing interface; conduct user tests with 5 notaries, measure verification time reduction and trust scores.",
+    "priority": "high",
+    "risk": "Direct competitor LexNotari could add explainability features quickly; regulatory uncertainty about AI usage in legally binding documents."
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "I deal with dozens of documents daily and any tool that reduces manual data entry sounds promising. But I'm wary of AI errors in legal documents; even with confidence scores, I'd still double-check everything, which might not save much time.",
+      "concern": "The verification process could be as time-consuming as manual entry if the AI's accuracy isn't extremely high or if the interface doesn't let me quickly spot and correct errors.",
+      "evidence_request": "Show me a live demo with my own typical documents where I can measure the time from input to approved draft versus my current manual process.",
+      "score": 0.4,
+      "score_rationale": "The concept addresses a real pain point, but without clear evidence of significant time savings and high trust in accuracy, I remain skeptical.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "A tool that promises to accelerate legal document preparation sounds risky—any error in a notarial deed could have severe legal consequences. I would need ironclad proof that the AI extraction is both accurate and fully transparent before trusting it in my workflow.",
+      "concern": "Even with an editing interface, the underlying AI might hallucinate or misinterpret critical legal clauses, and in Peru regulatory ambiguity about AI in notarial acts could expose me to liability.",
+      "evidence_request": "Show me a prototype with real notarial documents where each extracted field shows a confidence score, and let me test it with 5 notaries to prove that verification time actually decreases without increasing error rates.",
+      "score": 0.3,
+      "score_rationale": "The explainability and review features are promising but Peru's low AI adoption and high legal stakes mean I need substantial evidence from real-world use before I would consider adopting this.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "The idea addresses a genuine pain point for small notary firms, but I’m concerned about the adoption speed and whether the ROI will materialize within my typical budget cycle. Notaries may be slow to trust AI, delaying the cost savings needed to justify the investment.",
+      "concern": "The most critical risk is that notaries will require extensive validation before trusting the AI, prolonging the time to realize efficiency gains and making it unlikely to pay back within a single quarter.",
+      "evidence_request": "I need a pilot study with 5 notaries demonstrating at least 30% reduction in document preparation time with error rates equal to or lower than manual processing, plus a clear cost-benefit projection showing breakeven within 3 months.",
+      "score": 0.5,
+      "score_rationale": "The concept is promising, but without proven rapid ROI and low adoption friction, I cannot commit budget yet.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "From an operations standpoint, the need for manual verification could easily become a bottleneck rather than a time-saver, especially if notaries distrust the AI and double-check every field. Integration with existing document management systems and training across different firm sizes will also add hidden coordination costs.",
+      "concern": "The verification step may not reduce overall workload if AI accuracy isn't high enough—notaries might spend almost as much time reviewing and correcting as they would typing from scratch, negating the efficiency gain.",
+      "evidence_request": "Concrete user test data showing that total time (document prep + AI extraction + verification) is at least 30% less than manual preparation, with notaries reporting a trust score above 4/5.",
+      "score": 0.4,
+      "score_rationale": "While the concept addresses key pain points, the operational risk of increased coordination cost due to manual verification oversight remains high without proven, significant time savings.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "This feels like a feature, not a standalone product. LexNotari already offers document automation; adding confidence scores and review workflows is a minor update, not a moat. Notaries already use free OCR tools and generic LLMs for summarization—why pay for niche integration?",
+      "concern": "Incumbents like LexNotari can replicate this in a single sprint if they see traction, and they already have the legal compliance workflows and customer trust that NotariaFlow lacks.",
+      "evidence_request": "Show a user test where NotariaFlow reduces verification time by at least 40% compared to existing tools (e.g., LexNotari or manual methods) with a statistically significant p-value, and demonstrate that the editing interface increases trust scores by 30% over baseline.",
+      "score": 0.3,
+      "score_rationale": "The bar for displacing incumbents is high: they can quickly add a review layer, and free substitutes already provide basic functionality with limited trust.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "The idea solves a real pain point for notaries with an explainable AI layer, but I'm concerned that the market of small/medium notaries in LATAM is too niche to support a venture-scale business. The path to $50M SAM seems unclear given low ARPU and potential regulatory hurdles.",
+      "concern": "The total addressable market may be too small: if there are only a few thousand notaries in LATAM, even at high ARPU, the SAM might not reach $50M, making it unattractive for VC investment.",
+      "evidence_request": "Provide a bottom-up market sizing analysis: number of target notaries in LATAM, estimated ARPU (e.g., subscription fee per notary), and adoption rate assumptions that yield a SAM >$50M in 5 years.",
+      "score": 0.3,
+      "score_rationale": "The product is well-designed for the niche, but the venture-scale market size is unproven; without evidence of a larger adjacent market or higher ARPU, the investment thesis is weak.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "The idea addresses a real pain point for notaries, but achieving reliable extraction from diverse notarial documents is technically challenging and costly, especially with legal liability concerns. The need for high accuracy and low COGS makes this a tough problem to solve profitably.",
+      "concern": "High cost and complexity of achieving reliable structured extraction across varied notarial documents and jurisdictions, combined with potential legal liability for extraction errors, even with human review.",
+      "evidence_request": "A prototype demonstrating >95% extraction accuracy on a diverse test set of 100 real notarial documents, with measured average review time reduction of at least 50% compared to manual entry.",
+      "score": 0.4,
+      "score_rationale": "The technical risk is high due to data scarcity, model accuracy requirements, and cost constraints, but the pain point is real and prototype evidence could shift the score upward.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "As someone who pays cash for everything and relies on word-of-mouth, I don't see how AI for notaries helps me directly. I'd rather the notary stick to their tried-and-true methods, because a mistake on my property deed could ruin my business.",
+      "concern": "AI errors in notarial documents could lead to legal disputes that I can't afford; the notary's liability is unclear, and I'd have no way to verify the AI's work myself.",
+      "evidence_request": "Show me proof from a pilot with real Peruvian notaries and informal-sector clients that the system catches more errors than manual work and leads to lower fees or faster service without any increase in legal claims.",
+      "score": 0.3,
+      "score_rationale": "The product's benefit to me as an informal buyer is indirect and uncertain, while the risk of AI mistakes in legally binding documents is unacceptable given my limited recourse and cash-based operations.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "This product seems tailored for private notaries, not for public institutions like ours. Our procurement cycles are rigid and budget codes are predefined; this solution doesn't map to any existing category we fund. The need for AI-assisted document drafting is not a priority for our entities, as we typically rely on standardized formats and manual processing.",
+      "concern": "The biggest risk is that this product has no clear fit within any existing budget code used by Peruvian public entities (e.g., for legal services, IT systems, or notarial functions), and a new procurement process would be required, which is unacceptable.",
+      "evidence_request": "Show a specific budget code from a Peruvian public entity (e.g., UGEL, OSCE, MINEDU) under which this product could be procured without a new procurement process, along with a case where a similar AI tool was procured under that code.",
+      "score": 0.1,
+      "score_rationale": "The product addresses private notaries, not public sector needs, and there is no obvious path for procurement by Peruvian government institutions given budget and regulatory constraints.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "Interesting niche, but I'm cautious. The Peruvian notary market is small and conservative, making it tough to reach $1M ARR locally. Without a clear LATAM expansion plan, it's hard to see how we attract an international co-investor for a Series A.",
+      "concern": "Regulatory uncertainty and slow adoption by notaries could severely limit ARR growth, stalling the path to a meaningful international round.",
+      "evidence_request": "Commitments from at least 10 notaries to pilot and pay, plus a documented go-to-market strategy for Mexico or Chile within 12 months.",
+      "score": 0.4,
+      "score_rationale": "Given the thin Peruvian VC market and regulatory risks, the potential to hit $1M ARR and attract a co-investor is uncertain, hence a low score.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.34,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.34,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "The verification process could be as time-consuming as manual entry if the AI's accuracy isn't extremely high or if the interface doesn't let me quickly spot and correct errors.",
+      "Even with an editing interface, the underlying AI might hallucinate or misinterpret critical legal clauses, and in Peru regulatory ambiguity about AI in notarial acts could expose me to liability.",
+      "The most critical risk is that notaries will require extensive validation before trusting the AI, prolonging the time to realize efficiency gains and making it unlikely to pay back within a single quarter."
+    ],
+    "top_evidence_requests": [
+      "Show me a live demo with my own typical documents where I can measure the time from input to approved draft versus my current manual process.",
+      "Show me a prototype with real notarial documents where each extracted field shows a confidence score, and let me test it with 5 notaries to prove that verification time actually decreases without increasing error rates.",
+      "I need a pilot study with 5 notaries demonstrating at least 30% reduction in document preparation time with error rates equal to or lower than manual processing, plus a clear cost-benefit projection showing breakeven within 3 months."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "CONDITIONAL_GO"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

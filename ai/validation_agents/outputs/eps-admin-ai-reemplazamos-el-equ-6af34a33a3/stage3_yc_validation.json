@@ -1,0 +1,230 @@
+{
+  "idea": "EPS Admin AI automates medical authorizations for Peruvian EPS (health insurers) using localized AI trained on Peruvian clinical guidelines, extracting patient history from legacy systems, and providing explainable recommendations, reducing response time from minutes to seconds.",
+  "selected_gap": {
+    "id": "g-1",
+    "title": "Localized AI for Peruvian Medical Context",
+    "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+    "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+    "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+    "priority": "High",
+    "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+  },
+  "friedman_scores": [
+    {
+      "criterion": "Founder-market fit",
+      "score": 7,
+      "note": "Assumed domain expertise, but no specific founder background provided."
+    },
+    {
+      "criterion": "Market size",
+      "score": 6,
+      "note": "Peruvian EPS market is limited; potential for expansion across Latin America but not yet validated."
+    },
+    {
+      "criterion": "Problem acuity",
+      "score": 9,
+      "note": "Long wait times and high error rates create significant pain for doctors, patients, and insurers."
+    },
+    {
+      "criterion": "Competition",
+      "score": 7,
+      "note": "Manual processes dominate; global AI solutions lack localization. Advantage likely but competitive response possible."
+    },
+    {
+      "criterion": "Personal pull",
+      "score": 5,
+      "note": "Unclear if the founder personally experiences this pain; no evidence given."
+    },
+    {
+      "criterion": "Recently possible or necessary",
+      "score": 8,
+      "note": "Advances in LLMs and NLP make automating complex medical reasoning feasible now."
+    },
+    {
+      "criterion": "Successful proxies",
+      "score": 7,
+      "note": "Similar prior auth automation has succeeded in US healthcare; localized version could replicate."
+    },
+    {
+      "criterion": "Years-long commitment",
+      "score": 6,
+      "note": "Implied by startup context, but no explicit commitment stated."
+    },
+    {
+      "criterion": "Scalability",
+      "score": 7,
+      "note": "Software can scale, but requires integration per EPS and adaptation per country."
+    },
+    {
+      "criterion": "Good idea space",
+      "score": 8,
+      "note": "Healthcare administrative automation is a large, underserved market with clear ROI."
+    }
+  ],
+  "yc_rule_scores": [
+    {
+      "criterion": "Do not wait for the perfect idea",
+      "score": 8,
+      "note": "Idea is well-defined and ready to execute."
+    },
+    {
+      "criterion": "Burn the boats",
+      "score": 7,
+      "note": "Single focus assumed, but not explicit."
+    },
+    {
+      "criterion": "Go deep into customer workflow",
+      "score": 9,
+      "note": "The solution deeply integrates into the authorization workflow, understanding legacy systems and medical guidelines."
+    },
+    {
+      "criterion": "Build at the edge of AI",
+      "score": 8,
+      "note": "Uses AI for decision-making and explainability; can improve with model advances."
+    },
+    {
+      "criterion": "Sell outcomes, not tools",
+      "score": 9,
+      "note": "Pricing per authorization aligns incentives with faster approvals and reduced manual work."
+    },
+    {
+      "criterion": "Choose ambitious scope",
+      "score": 8,
+      "note": "Starts with high-complexity procedures but aims to cover all authorizations."
+    },
+    {
+      "criterion": "Treat failure as structured data",
+      "score": 6,
+      "note": "Not explicitly mentioned; assumed that rejected cases provide learning."
+    },
+    {
+      "criterion": "Pick low-trust, high-expertise markets",
+      "score": 8,
+      "note": "Healthcare is high-expertise, trust is critical; localized AI can build trust."
+    },
+    {
+      "criterion": "The process is the product",
+      "score": 7,
+      "note": "The AI recommendation process is core; well-designed workflow."
+    },
+    {
+      "criterion": "Avoid early-demand trap",
+      "score": 6,
+      "note": "Need to validate actual demand before scaling; no evidence of waitlist yet."
+    },
+    {
+      "criterion": "Price per unit or result",
+      "score": 9,
+      "note": "Per-authorization pricing is clear and outcome-aligned."
+    },
+    {
+      "criterion": "Obsess over COGS",
+      "score": 6,
+      "note": "Variable costs include API calls and human review; need optimization."
+    },
+    {
+      "criterion": "Do not bolt AI onto legacy",
+      "score": 7,
+      "note": "Integrates with legacy systems but builds a new AI layer; not just bolted on."
+    },
+    {
+      "criterion": "Cover domain, model, and operations fluency",
+      "score": 7,
+      "note": "Covers domain (medical guidelines), model (AI), and operations (human-in-the-loop)."
+    }
+  ],
+  "vc_rubric_scores": [
+    {
+      "dimension": "Team",
+      "weight": 0.25,
+      "score": 6,
+      "weighted": 1.5,
+      "rationale": "No specific team info; assumed healthcare domain expertise but unproven."
+    },
+    {
+      "dimension": "Market",
+      "weight": 0.2,
+      "score": 7,
+      "weighted": 1.4,
+      "rationale": "Peruvian TAM <$1B, but potential to expand across Latin America, making market large over time."
+    },
+    {
+      "dimension": "Product",
+      "weight": 0.15,
+      "score": 8,
+      "weighted": 1.2,
+      "rationale": "Defensible moat from localized data and clinical guidelines; explainable AI adds trust."
+    },
+    {
+      "dimension": "Traction",
+      "weight": 0.15,
+      "score": 2,
+      "weighted": 0.3,
+      "rationale": "No pilots, LOIs, or user evidence; pure idea stage."
+    },
+    {
+      "dimension": "Business Model",
+      "weight": 0.1,
+      "score": 7,
+      "weighted": 0.7,
+      "rationale": "Per-authorization pricing aligns incentives; potential for high gross margins but LTV:CAC unknown."
+    },
+    {
+      "dimension": "Competition",
+      "weight": 0.08,
+      "score": 7,
+      "weighted": 0.56,
+      "rationale": "Global players lack localization; manual alternatives are slow; competitive edge but replicable."
+    },
+    {
+      "dimension": "Financials",
+      "weight": 0.05,
+      "score": 6,
+      "weighted": 0.3,
+      "rationale": "No financial details; reasonable to assume moderate burn rate for an early-stage startup."
+    },
+    {
+      "dimension": "Risk Profile",
+      "weight": 0.02,
+      "score": 5,
+      "weighted": 0.1,
+      "rationale": "Key risks: regulatory changes, data access, competitor data gathering, adoption inertia."
+    }
+  ],
+  "vc_verdict": {
+    "composite_score": 6.06,
+    "verdict": "DECLINE",
+    "reason": "Disqualifying score on: traction",
+    "weak_dims": [
+      "traction"
+    ],
+    "disqualifying_dims": [
+      "traction"
+    ],
+    "investor_lenses": {
+      "sequoia": "PASS",
+      "yc": "FAIL",
+      "tiger_global": "WATCH",
+      "risk_mgmt": "ELEVATED"
+    },
+    "source": "deterministic_vc_calcs"
+  },
+  "go_no_go": "Conditional go",
+  "decision": "Proceed with validation, focusing on pilot and evidence collection",
+  "next_experiments": [
+    "Run accuracy test on 500 historical cases from a partner EPS, measuring approval rate alignment.",
+    "Interview 10 medical directors at Peruvian EPS to quantify error rates and willingness to adopt.",
+    "Build a demo that processes real-time requests with manual audit comparison.",
+    "Develop a cost model for per-authorization pricing with break-even analysis."
+  ],
+  "kill_criteria": [
+    "Accuracy below 80% vs human auditors on high-complexity cases.",
+    "No EPS willing to sign a pilot within 3 months.",
+    "Regulatory requirement for human-in-loop on all cases, eliminating value proposition.",
+    "Cost per authorization exceeds 50% of manual processing cost."
+  ],
+  "source": "llm",
+  "_iteration_id": "I1",
+  "_iteration_angle": "ORIGINAL",
+  "_iteration_one_liner": "Reemplazamos la revisión manual de autorizaciones médicas en EPS peruanas con IA que decide en segundos usando guías locales, y cobramos solo por resultado."
+}

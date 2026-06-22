@@ -1,0 +1,1958 @@
+{
+  "idea": "SaludApp Peru: el paciente sube foto de su RECETA medica (no boleta). OCR extrae: paciente, DNI, medico, hospital, diagnostico, medicamentos con dosis. La app muestra inmediatamente el generico equivalente mas barato en farmacia CERCANA con precio real (crowdsourced de boletas + linea base OPM-DIGEMID). El ahorro es visible en soles: 'Losartan 50mg: Inkafarma S/0.65 vs Botica Arcangel S/0.33 a 200m. Ahorras S/51 al mes.' El paciente compra, sube la BOLETA para confirmar precio, y la app registra adherencia automaticamente. Los datos de salud se acumulan como EFECTO SECUNDARIO del ahorro. Valor agregado: recordatorios de pastillas, alertas WhatsApp a familiares si no tomo, reporte clinico PDF para el medico, score de riesgo FINDRISC. Modelo de negocio B2B: EPS pagan S/2000/mes por dashboard de adherencia real de sus afiliados. Farmacias pagan S/500/mes por leads derivados. Moat: primer dataset longitudinal de salud en Peru (recetas + boletas + adherencia + precios reales). Roadmap: con 10K pacientes, reemplazar FINDRISC con transformer tipo MOTOR/FEMR entrenado en data peruana. Stakeholders: paciente ahorra plata, medico recibe historial, EPS reduce siniestralidad, farmacia recibe clientes, familia recibe alertas. Competencia: OPM-DIGEMID (precios declarados sin geo, nadie lo usa), farmacias apps (solo sus precios, sin historial).",
+  "current_stage": "complete",
+  "selected_gap_id": "g1",
+  "strategy_approved": true,
+  "artifacts": {
+    "stage0_classify": {
+      "problem_type": "PAINKILLER",
+      "vertical": "HealthTech",
+      "customer_type": "B2B2C",
+      "problem_severity": "STRUCTURAL",
+      "pain_evidence": "present",
+      "pit_signals_detected": [
+        "OCR accuracy on handwritten Peruvian prescriptions is unreliable, likely causing high user drop-off",
+        "Crowdsourced pricing via boleta uploads faces chicken-and-egg adoption: users won't upload without savings, savings need existing data",
+        "B2B sales cycle with EPS (health insurers) is 6-12 months; S/2000/month is unvalidated willingness to pay for an unproven dashboard",
+        "Free substitutes already exist: OPM-DIGEMID price list, pharmacy WhatsApp groups, pharmacy own apps – current workaround is 'good enough'",
+        "Health data privacy compliance (Ley de Protección de Datos Personales) adds legal friction and user consent barriers"
+      ],
+      "painkiller_signals_detected": [
+        "Active workarounds exist (informal price comparisons, asking pharmacists)",
+        "Spending already happens on imperfect solutions (overpaying for branded drugs)",
+        "Recurring pain (chronic medication monthly purchases)",
+        "Measurable cost (excess spending on medications)",
+        "B2B buyer has a budget line (EPS spend on healthcare cost reduction)",
+        "Users search actively (some patients already seek cheaper alternatives)"
+      ],
+      "classification_rationale": "The startup addresses a real, urgent, and structural problem in Peru: overpaying for medications and poor adherence. The B2B model targets insurers (EPS) and pharmacies with clear ROI (reduced claims, increased traffic), while patients get free savings. The longitudinal data moat and roadmap to replace FINDRISC with local AI strengthen the proposition. Peru's economic realities (low B2C WTP, informal workforce) are mitigated by free patient app and B2B revenue, which is feasible given EPS/pharmacy budgets.",
+      "proceed_recommendation": "WARN",
+      "suggested_pivot": "",
+      "freemium_recommendation": "YES",
+      "freemium_rationale": "In Peru, B2C willingness to pay is very low (GDP per capita ~$8,400, 36% below $8.30/day PPP). A free patient app is essential to drive adoption and generate the data/engagement that B2B clients value. EPS and pharmacies have budget for dashboards and leads, making freemium viable: free for patients, paid for enterprises.",
+      "devil_verdict": "WEAK",
+      "payment_blocker": "EPS procurement is slow and price-sensitive; they already have adherence data from claims, so paying S/2000/month for an external dashboard with unproven ROI is unlikely initially",
+      "free_substitute_risk": "WhatsApp groups and OPM-DIGEMID web portal already provide price comparisons with minimal effort; pharmacy-branded apps offer geo-located prices without upload friction",
+      "market_size_reality_check": "Realistic B2B market: only ~25% formal workforce with health insurance; among them, regular medication buyers are <2M. EPS may pay only after proven value with large user base, creating a cold start",
+      "hardest_assumption": "That patients will reliably upload boletas post-purchase to seed price data and adherence logs, despite low intrinsic motivation",
+      "devil_rationale": "While the idea addresses a real problem (medication price comparison and adherence), the execution relies on fragile user-generated data and faces high friction from existing free alternatives. B2B monetization is unvalidated and slow, making it difficult to reach venture-scale in Peru without overcoming severe adoption and data network effects.",
+      "preflight_dominant_solution": {
+        "score": "CLEAR",
+        "competitor_name": "none found",
+        "threat_level": "LOW",
+        "note": "No dominant player combines OCR, price comparison, and adherence tracking in Peru."
+      },
+      "preflight_precedent_failure": {
+        "score": "NO_KNOWN_FAILURE",
+        "example": "none",
+        "learning": "No publicly known failure in this exact niche, suggesting room to pioneer."
+      },
+      "preflight_regulatory_kill": {
+        "score": "SOFT_BLOCKER",
+        "regulation": "Peru's Data Protection Law (Ley N° 29733) and health data regulations",
+        "mitigation": "Obtain explicit user consent, anonymize data for B2B, ensure secure data handling."
+      },
+      "preflight_summary": "Proceed with caution: clear market opportunity but must navigate data privacy regulations and build pharmacy partnerships.",
+      "deal_signals": {
+        "hiring": "Growing demand for OCR and health tech engineers; pharmacy partnership roles emerging",
+        "funding": "Healthtech funding in LATAM is rising, with interest in adherence and price transparency",
+        "product": "Key milestone: accurate OCR and real-time price aggregation from crowdsourced receipts",
+        "market": "Rising chronic disease burden and healthcare costs drive demand for affordable medicines",
+        "tech": "Advances in OCR and mobile payment APIs enable seamless prescription to purchase flow",
+        "momentum": "ACCELERATING"
+      },
+      "source": "triple_agent_classification"
+    },
+    "stage1_research": {
+      "idea": "SaludApp Peru: patient uploads prescription photo, OCR extracts data, shows cheapest generic equivalent in nearby pharmacies with real crowdsourced prices, tracks adherence, B2B model selling adherence data to insurers and leads to pharmacies.",
+      "market": "Peruvian pharmacy retail market worth ~$2B, high out-of-pocket spending, low digital health penetration, fragmented pharmacy chains and independent outlets, growing mobile usage.",
+      "solutions": [
+        {
+          "id": "1",
+          "name": "Status Quo / Manual Search",
+          "category": "Status Quo",
+          "observed_positioning": "Patients ask at local pharmacies or call several; accept prices without systematic comparison; no adherence tracking."
+        },
+        {
+          "id": "2",
+          "name": "Inkafarma App",
+          "category": "Pharmacy Chain App",
+          "observed_positioning": "Largest chain, own app with loyalty points, online ordering, and delivery; shows only its own prices, no cross-chain comparison, no adherence features."
+        },
+        {
+          "id": "3",
+          "name": "Mifarma App",
+          "category": "Pharmacy Chain App",
+          "observed_positioning": "Second largest chain, app with e-commerce and promotions; limited to their inventory and prices; no health data integration."
+        },
+        {
+          "id": "4",
+          "name": "Boticas Arcangel App",
+          "category": "Pharmacy Chain App",
+          "observed_positioning": "Growing chain with price-focused positioning; app offers deals and delivery but no adherence or comparative tools."
+        },
+        {
+          "id": "5",
+          "name": "Farmacias Peruanas App",
+          "category": "Pharmacy Chain App",
+          "observed_positioning": "Mid-size chain, basic app for ordering; no price comparison or adherence features."
+        },
+        {
+          "id": "6",
+          "name": "Rappi Farma",
+          "category": "Delivery Platform",
+          "observed_positioning": "Multi-category delivery app with pharmacy section; shows prices from affiliated pharmacies, convenient for comparison within its network, but no adherence or health data analytics."
+        },
+        {
+          "id": "7",
+          "name": "OPM-DIGEMID",
+          "category": "Official Price Reference",
+          "observed_positioning": "Government price observatory; publishes maximum declared prices, no geographical availability, no real-time updates, not user-friendly."
+        },
+        {
+          "id": "8",
+          "name": "Farmagangas",
+          "category": "Price Comparison Website",
+          "observed_positioning": "Peruvian website aggregating pharmacy promotions manually; lacks mobile app, OCR, adherence tracking, or real-time data."
+        },
+        {
+          "id": "9",
+          "name": "Minsa Receta Digital",
+          "category": "E-Prescription Platform",
+          "observed_positioning": "Government digital prescription system, low adoption; could become standard but currently no price or adherence features."
+        },
+        {
+          "id": "10",
+          "name": "Tarjeta Oh! / Club de Beneficios",
+          "category": "Loyalty Discount Program",
+          "observed_positioning": "Loyalty cards offering fixed discounts at partner chains; no price comparison or health tracking."
+        },
+        {
+          "id": "11",
+          "name": "Farmacias Independientes",
+          "category": "Informal Sector",
+          "observed_positioning": "Small independent pharmacies with variable pricing; no digital presence, manual transactions."
+        },
+        {
+          "id": "12",
+          "name": "WhatsApp Groups / Redes Sociales",
+          "category": "Crowdsourced Advice",
+          "observed_positioning": "Communities sharing recommendations on where to buy cheap medicine; no structured data, unreliable."
+        },
+        {
+          "id": "13",
+          "name": "Doctoralia / Teleconsultation",
+          "category": "Digital Health Platform",
+          "observed_positioning": "Online doctor appointments and e-prescriptions; no price comparison or adherence follow-up."
+        },
+        {
+          "id": "14",
+          "name": "Apps EPS (Rímac, Pacífico)",
+          "category": "Insurer App",
+          "observed_positioning": "Insurance apps showing coverage and provider networks; no real-time pharmacy pricing or adherence monitoring."
+        },
+        {
+          "id": "15",
+          "name": "Google Maps / Search",
+          "category": "Search Engine",
+          "observed_positioning": "Used to find nearby pharmacies and call for prices; manual, time-consuming, no price history or adherence."
+        }
+      ],
+      "research_summary": "The market lacks an integrated solution combining real-time geo-specific drug price comparison, adherence tracking, and B2B data monetization. Current alternatives are either single-chain apps (Inkafarma, Mifarma), delivery platforms with limited pharmacy scope (Rappi), government reference lists (OPM-DIGEMID), or rudimentary promotion websites (Farmagangas). No competitor leverages OCR for prescription ingestion, crowdsourced price confirmation, or longitudinal health data. Major threats are well-funded chains that could copy features and Rappi's expansive logistics network. Government platforms pose a long-term regulatory risk if made mandatory.",
+      "competitor_signals": [
+        {
+          "competitor": "Inkafarma",
+          "hiring_score": 7,
+          "funding_score": 9,
+          "product_score": 6,
+          "team_score": 8,
+          "market_score": 7,
+          "tech_score": 6,
+          "overall_score": 74.0,
+          "classification": "MOVE_FAST",
+          "sentiment": "POSITIVE",
+          "sourcing_brief": "Largest pharmacy chain in Peru, backed by Intercorp, strong digital presence with over 1M app downloads, high customer loyalty, potential to add competitive features."
+        },
+        {
+          "competitor": "Mifarma",
+          "hiring_score": 6,
+          "funding_score": 8,
+          "product_score": 5,
+          "team_score": 7,
+          "market_score": 7,
+          "tech_score": 5,
+          "overall_score": 65.0,
+          "classification": "MOVE_FAST",
+          "sentiment": "NEUTRAL",
+          "sourcing_brief": "Second largest chain, owned by Quicorp, app with basic e-commerce, strong offline presence, could invest in digital."
+        },
+        {
+          "competitor": "Rappi",
+          "hiring_score": 9,
+          "funding_score": 10,
+          "product_score": 8,
+          "team_score": 9,
+          "market_score": 8,
+          "tech_score": 9,
+          "overall_score": 89.5,
+          "classification": "MOVE_FAST",
+          "sentiment": "POSITIVE",
+          "sourcing_brief": "Multi-billion dollar unicorn with presence across Latin America, including Peru. Aggressive expansion in pharmacy delivery and digital services; could easily add price comparison."
+        },
+        {
+          "competitor": "Farmagangas",
+          "hiring_score": 3,
+          "funding_score": 2,
+          "product_score": 4,
+          "team_score": 3,
+          "market_score": 4,
+          "tech_score": 3,
+          "overall_score": 30.5,
+          "classification": "MONITOR",
+          "sentiment": "NEGATIVE",
+          "sourcing_brief": "Peruvian website that compares pharmacy prices manually, low traffic, no mobile app, limited to promotional offers, no health data angle."
+        },
+        {
+          "competitor": "OPM-DIGEMID",
+          "hiring_score": 2,
+          "funding_score": 3,
+          "product_score": 3,
+          "team_score": 2,
+          "market_score": 7,
+          "tech_score": 2,
+          "overall_score": 29.5,
+          "classification": "MONITOR",
+          "sentiment": "NEUTRAL",
+          "sourcing_brief": "Official drug price observatory by DIGEMID, publishes maximum prices but lacks real-time data, geographic availability, or user-friendly interface. Potential to become mandatory reference."
+        }
+      ],
+      "source": "llm"
+    },
+    "stage2_gaps": {
+      "research_source": {
+        "idea": "SaludApp Peru: patient uploads prescription photo, OCR extracts data, shows cheapest generic equivalent in nearby pharmacies with real crowdsourced prices, tracks adherence, B2B model selling adherence data to insurers and leads to pharmacies.",
+        "market": "Peruvian pharmacy retail market worth ~$2B, high out-of-pocket spending, low digital health penetration, fragmented pharmacy chains and independent outlets, growing mobile usage.",
+        "solutions": [
+          {
+            "id": "1",
+            "name": "Status Quo / Manual Search",
+            "category": "Status Quo",
+            "observed_positioning": "Patients ask at local pharmacies or call several; accept prices without systematic comparison; no adherence tracking."
+          },
+          {
+            "id": "2",
+            "name": "Inkafarma App",
+            "category": "Pharmacy Chain App",
+            "observed_positioning": "Largest chain, own app with loyalty points, online ordering, and delivery; shows only its own prices, no cross-chain comparison, no adherence features."
+          },
+          {
+            "id": "3",
+            "name": "Mifarma App",
+            "category": "Pharmacy Chain App",
+            "observed_positioning": "Second largest chain, app with e-commerce and promotions; limited to their inventory and prices; no health data integration."
+          },
+          {
+            "id": "4",
+            "name": "Boticas Arcangel App",
+            "category": "Pharmacy Chain App",
+            "observed_positioning": "Growing chain with price-focused positioning; app offers deals and delivery but no adherence or comparative tools."
+          },
+          {
+            "id": "5",
+            "name": "Farmacias Peruanas App",
+            "category": "Pharmacy Chain App",
+            "observed_positioning": "Mid-size chain, basic app for ordering; no price comparison or adherence features."
+          },
+          {
+            "id": "6",
+            "name": "Rappi Farma",
+            "category": "Delivery Platform",
+            "observed_positioning": "Multi-category delivery app with pharmacy section; shows prices from affiliated pharmacies, convenient for comparison within its network, but no adherence or health data analytics."
+          },
+          {
+            "id": "7",
+            "name": "OPM-DIGEMID",
+            "category": "Official Price Reference",
+            "observed_positioning": "Government price observatory; publishes maximum declared prices, no geographical availability, no real-time updates, not user-friendly."
+          },
+          {
+            "id": "8",
+            "name": "Farmagangas",
+            "category": "Price Comparison Website",
+            "observed_positioning": "Peruvian website aggregating pharmacy promotions manually; lacks mobile app, OCR, adherence tracking, or real-time data."
+          },
+          {
+            "id": "9",
+            "name": "Minsa Receta Digital",
+            "category": "E-Prescription Platform",
+            "observed_positioning": "Government digital prescription system, low adoption; could become standard but currently no price or adherence features."
+          },
+          {
+            "id": "10",
+            "name": "Tarjeta Oh! / Club de Beneficios",
+            "category": "Loyalty Discount Program",
+            "observed_positioning": "Loyalty cards offering fixed discounts at partner chains; no price comparison or health tracking."
+          },
+          {
+            "id": "11",
+            "name": "Farmacias Independientes",
+            "category": "Informal Sector",
+            "observed_positioning": "Small independent pharmacies with variable pricing; no digital presence, manual transactions."
+          },
+          {
+            "id": "12",
+            "name": "WhatsApp Groups / Redes Sociales",
+            "category": "Crowdsourced Advice",
+            "observed_positioning": "Communities sharing recommendations on where to buy cheap medicine; no structured data, unreliable."
+          },
+          {
+            "id": "13",
+            "name": "Doctoralia / Teleconsultation",
+            "category": "Digital Health Platform",
+            "observed_positioning": "Online doctor appointments and e-prescriptions; no price comparison or adherence follow-up."
+          },
+          {
+            "id": "14",
+            "name": "Apps EPS (Rímac, Pacífico)",
+            "category": "Insurer App",
+            "observed_positioning": "Insurance apps showing coverage and provider networks; no real-time pharmacy pricing or adherence monitoring."
+          },
+          {
+            "id": "15",
+            "name": "Google Maps / Search",
+            "category": "Search Engine",
+            "observed_positioning": "Used to find nearby pharmacies and call for prices; manual, time-consuming, no price history or adherence."
+          }
+        ],
+        "research_summary": "The market lacks an integrated solution combining real-time geo-specific drug price comparison, adherence tracking, and B2B data monetization. Current alternatives are either single-chain apps (Inkafarma, Mifarma), delivery platforms with limited pharmacy scope (Rappi), government reference lists (OPM-DIGEMID), or rudimentary promotion websites (Farmagangas). No competitor leverages OCR for prescription ingestion, crowdsourced price confirmation, or longitudinal health data. Major threats are well-funded chains that could copy features and Rappi's expansive logistics network. Government platforms pose a long-term regulatory risk if made mandatory.",
+        "competitor_signals": [
+          {
+            "competitor": "Inkafarma",
+            "hiring_score": 7,
+            "funding_score": 9,
+            "product_score": 6,
+            "team_score": 8,
+            "market_score": 7,
+            "tech_score": 6,
+            "overall_score": 74.0,
+            "classification": "MOVE_FAST",
+            "sentiment": "POSITIVE",
+            "sourcing_brief": "Largest pharmacy chain in Peru, backed by Intercorp, strong digital presence with over 1M app downloads, high customer loyalty, potential to add competitive features."
+          },
+          {
+            "competitor": "Mifarma",
+            "hiring_score": 6,
+            "funding_score": 8,
+            "product_score": 5,
+            "team_score": 7,
+            "market_score": 7,
+            "tech_score": 5,
+            "overall_score": 65.0,
+            "classification": "MOVE_FAST",
+            "sentiment": "NEUTRAL",
+            "sourcing_brief": "Second largest chain, owned by Quicorp, app with basic e-commerce, strong offline presence, could invest in digital."
+          },
+          {
+            "competitor": "Rappi",
+            "hiring_score": 9,
+            "funding_score": 10,
+            "product_score": 8,
+            "team_score": 9,
+            "market_score": 8,
+            "tech_score": 9,
+            "overall_score": 89.5,
+            "classification": "MOVE_FAST",
+            "sentiment": "POSITIVE",
+            "sourcing_brief": "Multi-billion dollar unicorn with presence across Latin America, including Peru. Aggressive expansion in pharmacy delivery and digital services; could easily add price comparison."
+          },
+          {
+            "competitor": "Farmagangas",
+            "hiring_score": 3,
+            "funding_score": 2,
+            "product_score": 4,
+            "team_score": 3,
+            "market_score": 4,
+            "tech_score": 3,
+            "overall_score": 30.5,
+            "classification": "MONITOR",
+            "sentiment": "NEGATIVE",
+            "sourcing_brief": "Peruvian website that compares pharmacy prices manually, low traffic, no mobile app, limited to promotional offers, no health data angle."
+          },
+          {
+            "competitor": "OPM-DIGEMID",
+            "hiring_score": 2,
+            "funding_score": 3,
+            "product_score": 3,
+            "team_score": 2,
+            "market_score": 7,
+            "tech_score": 2,
+            "overall_score": 29.5,
+            "classification": "MONITOR",
+            "sentiment": "NEUTRAL",
+            "sourcing_brief": "Official drug price observatory by DIGEMID, publishes maximum prices but lacks real-time data, geographic availability, or user-friendly interface. Potential to become mandatory reference."
+          }
+        ],
+        "source": "llm"
+      },
+      "gaps": [
+        {
+          "id": "g1",
+          "title": "Real-time cross-pharmacy price comparison for generic drugs",
+          "pain": "Patients face high out-of-pocket drug costs and spend significant time calling or visiting multiple pharmacies to find the lowest price, with no way to systematically compare prices across chains and independents.",
+          "why_now": "Mobile usage is growing rapidly, out-of-pocket health spending is high, and no integrated solution exists despite widespread demand.",
+          "evidence_needed": "Landing page sign-ups, patient willingness to switch pharmacies based on price in interviews, pharmacist openness to sharing prices.",
+          "priority": "high",
+          "risk": "medium"
+        },
+        {
+          "id": "g2",
+          "title": "Automated prescription digitization via OCR",
+          "pain": "Patients must manually search drug names, often misspelling or confusing them, leading to errors and wasted time, especially those with low digital literacy.",
+          "why_now": "OCR technology is mature and accessible via smartphones, yet no Peruvian pharmacy tool uses it to simplify prescription handling.",
+          "evidence_needed": "Usability tests with sample prescriptions, accuracy rates on different handwriting and formats, user preference vs. manual typing.",
+          "priority": "high",
+          "risk": "low"
+        },
+        {
+          "id": "g3",
+          "title": "Generic substitution guidance and savings calculation",
+          "pain": "Many patients are unaware of cheaper generic equivalents and continue buying expensive branded drugs, missing out on significant savings.",
+          "why_now": "Government promotes generic use, high inflation makes affordability critical, and no tool currently highlights generic alternatives with price differences.",
+          "evidence_needed": "A/B test showing generic savings in prototype, patient surveys on willingness to switch, pharmacy cooperation on generic availability.",
+          "priority": "high",
+          "risk": "low"
+        },
+        {
+          "id": "g4",
+          "title": "Medication adherence tracking and reminders",
+          "pain": "Poor medication adherence leads to health complications, hospitalizations, and increased healthcare costs, especially for chronic disease patients who lack any digital support system.",
+          "why_now": "Chronic diseases like diabetes and hypertension are rising in Peru, smartphone penetration enables reminders, and no existing consumer app addresses adherence locally.",
+          "evidence_needed": "Survey of adherence challenges, pilot usage data on reminder effectiveness, correlation between app usage and refill rates.",
+          "priority": "high",
+          "risk": "medium"
+        },
+        {
+          "id": "g5",
+          "title": "Crowdsourced real-time pharmacy price and inventory data",
+          "pain": "Small independent pharmacies, which often have the lowest prices, remain invisible digitally; patients rely on word-of-mouth or costly manual checks.",
+          "why_now": "Gig economy and messaging group norms make crowdsourcing feasible; no competitor leverages it for pharmacy data.",
+          "evidence_needed": "Test user willingness to submit price updates, incentive models (e.g., points), data accuracy over time, fraud resistance mechanisms.",
+          "priority": "medium",
+          "risk": "high"
+        },
+        {
+          "id": "g6",
+          "title": "B2B monetization of anonymized patient adherence and price data",
+          "pain": "Insurers and pharmaceutical companies lack real-world patient behavior data in Peru to design better plans, incentives, or market strategies, missing cost-saving opportunities.",
+          "why_now": "Data-driven healthcare is growing; insurers face pressure to control costs; no local aggregator provides adherence and pricing insights.",
+          "evidence_needed": "Letters of intent from insurers, data privacy compliance plan, willingness of patients to share anonymized data, pricing model acceptance.",
+          "priority": "medium",
+          "risk": "high"
+        },
+        {
+          "id": "g7",
+          "title": "Digital health profile for medication history across providers",
+          "pain": "Patients lack a consolidated record of prescribed medications, leading to fragmented care, duplicate prescriptions, and adverse interactions, particularly for those without insurance or regular doctors.",
+          "why_now": "Digital identity initiatives and smartphone adoption make it possible; no user-owned health profile exists in Peru.",
+          "evidence_needed": "Prototype testing with patients, willingness to input drug history manually, interest from providers to view such profiles.",
+          "priority": "medium",
+          "risk": "low"
+        }
+      ],
+      "recommended_gap_id": "g1",
+      "checkpoint_instruction": "Build a simple landing page that allows users to search for a drug and view mock price comparisons from nearby pharmacies (chain and independent). Drive traffic via targeted social media ads. Measure sign-up requests and conduct 20 structured phone interviews with patients to understand their price comparison habits, pain points, and willingness to switch pharmacies based on price. Validate willingness to pay for a premium version that includes adherence features.",
+      "source": "llm"
+    },
+    "stage2b_iterations": {
+      "iterations": [
+        {
+          "id": "I1",
+          "angle": "ORIGINAL",
+          "idea_refined": "SaludApp helps chronic patients in Peru instantly find the cheapest generic equivalent of their prescribed medication at nearby pharmacies. Users simply photograph their prescription; OCR extracts drug and dosage, then the app displays real-time prices from a crowdsourced database of receipts, comparing options within a 500-meter radius. This turns a habitual overpayment into a simple switch, saving patients up to 70% on monthly drug costs. By uploading their purchase receipts, they contribute to the price database and build a personal health record as a side effect, enabling future features like adherence reminders and clinical summaries.",
+          "one_liner": "We help chronic patients in Peru stop overpaying for medications by showing them real-time, crowdsourced prices for generic substitutes at pharmacies near them.",
+          "target_customer": "A 55-year-old hypertensive patient in Lima who buys losartan monthly at the same chain pharmacy, unaware that a generic version is available 200 meters away for half the price.",
+          "core_problem": "Every month, millions of Peruvians with chronic conditions walk into their usual pharmacy and overpay for branded or non-optimal generic drugs because they have no easy way to compare real prices across pharmacies in real time. This behavior costs them thousands of soles annually, yet they repeat it out of habit and lack of accessible information.",
+          "solution_hook": "Unlike pharmacy apps that only show their own prices or government lists with outdated declared prices, SaludApp uses OCR on prescription photos and a crowdsourced network of receipt verifications to provide genuine, location-specific prices for generics, turning every purchase into a data point that saves money for the next user.",
+          "why_this_angle": "Sharpening the focus to price comparison as the primary wedge addresses the most acute, frequent pain—direct monetary loss—while creating a simple, viral hook ('see how much you could save'). This narrow entry point builds a rapid user base, whose receipt uploads then generate the longitudinal data moat, making the larger health platform economically inevitable.",
+          "quick_score": {
+            "problem_acuity": 8,
+            "market_size": 8,
+            "founder_feasibility": 7,
+            "total": 23
+          },
+          "source": "llm"
+        },
+        {
+          "id": "I2",
+          "angle": "PIVOT_B2B",
+          "idea_refined": "SaludApp for Employers is a B2B medication cost and adherence platform sold to companies and insurers that cover prescription drug expenses. Beneficiaries use a mobile app to upload prescriptions via OCR, get real-time geo-priced comparisons for cheapest generic equivalents at nearby pharmacies, and receive reminders and alerts. Employers gain a dashboard showing aggregate savings, adherence rates, and population health risk scores, enabling better pharmacy negotiations and targeted wellness programs. Pricing is a per-member-per-month license, transforming medication spend from a cost center to a controlled, value-driven benefit.",
+          "one_liner": "We give employers a turnkey medication savings and adherence program that cuts prescription costs by 30% and improves employee health outcomes.",
+          "target_customer": "HR Director of a mid-sized Peruvian manufacturing company with 500+ employees facing double-digit annual health insurance premium increases.",
+          "core_problem": "Every month, the HR Director watches health plan costs rise due to chronic disease medications, yet employees often skip doses or overpay for brands because they lack real-time, localized guidance on cheaper generic alternatives. This non-adherence leads to worse health outcomes, higher absenteeism, and escalating claims, while manual solutions like static drug lists fail to drive behavior change.",
+          "solution_hook": "Unlike generic reference lists or single-pharmacy apps, our platform combines OCR-powered prescription digitization, live geo-pricing from crowdsourced pharmacy data, and automated adherence nudges, all feeding a real-time ROI dashboard for the employer that proves hard savings and health improvements.",
+          "why_this_angle": "Employers have larger budgets, existing wellness spend, and a clear ROI from reducing drug costs and improving adherence, leading to stickier, higher-value annual contracts compared to a consumer model that must later seek B2B buyers. This positioning directly aligns with institutional procurement cycles and pain points.",
+          "quick_score": {
+            "problem_acuity": 7,
+            "market_size": 7,
+            "founder_feasibility": 6,
+            "total": 20
+          },
+          "source": "llm"
+        },
+        {
+          "id": "I3",
+          "angle": "PIVOT_WEDGE",
+          "idea_refined": "A simple mobile tool for low-income hypertensive patients in Lima's Comas district to instantly compare real-time generic losartan prices at nearby pharmacies. Instead of visiting multiple stores and potentially overspending by 50%, users text their dose to a WhatsApp bot and receive a list of the three cheapest options within walking distance, sourced from crowdsourced receipts. This wedge avoids complex OCR and adherence features, focusing purely on immediate cost savings to quickly demonstrate user demand and a willingness to pay through a S/2 per query fee or a weekly subscription.",
+          "one_liner": "We help cost-conscious chronic patients in Peru save up to 70% on generic drugs by texting a WhatsApp bot for real-time local pharmacy price comparisons.",
+          "target_customer": "A 55-year-old hypertensive patient in Comas, Lima, earning minimum wage, who currently spends 15% of their weekly income on losartan and physically checks three pharmacies every refill to find an affordable price.",
+          "core_problem": "This patient loses S/10–S/20 per month by buying the wrong generic version, equivalent to a day's wages, and risks skipping doses when money is tight. Price opacity forces them to spend 2 hours each month walking between pharmacies to compare, often settling for the first acceptable price due to exhaustion.",
+          "solution_hook": "Unlike pharmacy apps that show only their own prices or government lists with outdated data, our WhatsApp bot gives real-time, geo-located price comparisons sourced from actual customer receipts, making it as easy as sending a text to find the cheapest option.",
+          "why_this_angle": "By concentrating on a single drug and neighborhood, we can manually curate price data, validate demand with 10 users in days, and observe actual savings behavior before building complex OCR or adherence systems. This ultra-narrow wedge proves willingness to pay and creates a foundation for later expansion.",
+          "quick_score": {
+            "problem_acuity": 9,
+            "market_size": 3,
+            "founder_feasibility": 9,
+            "total": 21
+          },
+          "source": "llm"
+        }
+      ],
+      "recommended_iteration_id": "I1",
+      "recommended_one_liner": "We help chronic patients in Peru stop overpaying for medications by showing them real-time, crowdsourced prices for generic substitutes at pharmacies near them.",
+      "source": "parallel_iteration"
+    },
+    "stage3_validations": [
+      {
+        "idea": "SaludApp helps chronic patients in Peru instantly find the cheapest generic equivalent of their prescribed medication at nearby pharmacies. Users simply photograph their prescription; OCR extracts drug and dosage, then the app displays real-time prices from a crowdsourced database of receipts, comparing options within a 500-meter radius. This turns a habitual overpayment into a simple switch, saving patients up to 70% on monthly drug costs. By uploading their purchase receipts, they contribute to the price database and build a personal health record as a side effect, enabling future features like adherence reminders and clinical summaries.",
+        "selected_gap": {
+          "id": "g1",
+          "title": "Real-time cross-pharmacy price comparison for generic drugs",
+          "pain": "Patients face high out-of-pocket drug costs and spend significant time calling or visiting multiple pharmacies to find the lowest price, with no way to systematically compare prices across chains and independents.",
+          "why_now": "Mobile usage is growing rapidly, out-of-pocket health spending is high, and no integrated solution exists despite widespread demand.",
+          "evidence_needed": "Landing page sign-ups, patient willingness to switch pharmacies based on price in interviews, pharmacist openness to sharing prices.",
+          "priority": "high",
+          "risk": "medium"
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 5,
+            "note": "Unknown until founder proves access or insight."
+          },
+          {
+            "criterion": "Market size",
+            "score": 5,
+            "note": "Estimate TAM/SAM/SOM with external evidence."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 6,
+            "note": "Strong if gap maps to urgent time, money, or risk."
+          },
+          {
+            "criterion": "Competition",
+            "score": 6,
+            "note": "Alternatives exist; wedge must be sharper."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 5,
+            "note": "Unknown until founder states years-long commitment."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 6,
+            "note": "AI/regulation/cost shifts may enable now."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 5,
+            "note": "Find adjacent companies proving willingness to pay."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 5,
+            "note": "Validate domain depth for compounding insight."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 6,
+            "note": "Software scales; sales/data access may constrain."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 6,
+            "note": "Promising if segment has repeated painful workflows."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 0.25,
+            "score": 5,
+            "weighted": 1.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Market",
+            "weight": 0.2,
+            "score": 5,
+            "weighted": 1.0,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Product",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 0.1,
+            "score": 5,
+            "weighted": 0.5,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 0.08,
+            "score": 5,
+            "weighted": 0.4,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 0.05,
+            "score": 5,
+            "weighted": 0.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 0.02,
+            "score": 5,
+            "weighted": 0.1,
+            "rationale": "Fallback — requires LLM for real assessment."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 5.0,
+          "verdict": "DECLINE",
+          "reason": "Weighted score 5.0 below threshold; weak: ",
+          "weak_dims": [],
+          "disqualifying_dims": [],
+          "investor_lenses": {
+            "sequoia": "WATCH",
+            "yc": "WATCH",
+            "tiger_global": "WATCH",
+            "risk_mgmt": "ELEVATED"
+          },
+          "source": "deterministic_vc_calcs"
+        },
+        "go_no_go": "GO_WITH_CONSTRAINTS",
+        "decision": "Proceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.",
+        "next_experiments": [
+          "Interview 5 target users about the last time they experienced this problem.",
+          "Ask what they use today, cost, and what happens if they do nothing.",
+          "Run a concierge test for the smallest paid outcome."
+        ],
+        "kill_criteria": [
+          "Users cannot recall a recent painful instance.",
+          "No budget owner or urgent operational metric identified.",
+          "Workflow only mildly better than current workaround."
+        ],
+        "source": "deterministic_fallback",
+        "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}",
+        "_iteration_id": "I1",
+        "_iteration_angle": "ORIGINAL",
+        "_iteration_one_liner": "We help chronic patients in Peru stop overpaying for medications by showing them real-time, crowdsourced prices for generic substitutes at pharmacies near them."
+      },
+      {
+        "idea": "SaludApp for Employers is a B2B medication cost and adherence platform sold to companies and insurers that cover prescription drug expenses. Beneficiaries use a mobile app to upload prescriptions via OCR, get real-time geo-priced comparisons for cheapest generic equivalents at nearby pharmacies, and receive reminders and alerts. Employers gain a dashboard showing aggregate savings, adherence rates, and population health risk scores, enabling better pharmacy negotiations and targeted wellness programs. Pricing is a per-member-per-month license, transforming medication spend from a cost center to a controlled, value-driven benefit.",
+        "selected_gap": {
+          "id": "g1",
+          "title": "Real-time cross-pharmacy price comparison for generic drugs",
+          "pain": "Patients face high out-of-pocket drug costs and spend significant time calling or visiting multiple pharmacies to find the lowest price, with no way to systematically compare prices across chains and independents.",
+          "why_now": "Mobile usage is growing rapidly, out-of-pocket health spending is high, and no integrated solution exists despite widespread demand.",
+          "evidence_needed": "Landing page sign-ups, patient willingness to switch pharmacies based on price in interviews, pharmacist openness to sharing prices.",
+          "priority": "high",
+          "risk": "medium"
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 5,
+            "note": "Unknown until founder proves access or insight."
+          },
+          {
+            "criterion": "Market size",
+            "score": 5,
+            "note": "Estimate TAM/SAM/SOM with external evidence."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 6,
+            "note": "Strong if gap maps to urgent time, money, or risk."
+          },
+          {
+            "criterion": "Competition",
+            "score": 6,
+            "note": "Alternatives exist; wedge must be sharper."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 5,
+            "note": "Unknown until founder states years-long commitment."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 6,
+            "note": "AI/regulation/cost shifts may enable now."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 5,
+            "note": "Find adjacent companies proving willingness to pay."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 5,
+            "note": "Validate domain depth for compounding insight."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 6,
+            "note": "Software scales; sales/data access may constrain."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 6,
+            "note": "Promising if segment has repeated painful workflows."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 0.25,
+            "score": 5,
+            "weighted": 1.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Market",
+            "weight": 0.2,
+            "score": 5,
+            "weighted": 1.0,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Product",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 0.1,
+            "score": 5,
+            "weighted": 0.5,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 0.08,
+            "score": 5,
+            "weighted": 0.4,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 0.05,
+            "score": 5,
+            "weighted": 0.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 0.02,
+            "score": 5,
+            "weighted": 0.1,
+            "rationale": "Fallback — requires LLM for real assessment."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 5.0,
+          "verdict": "CONDITIONAL_PASS"
+        },
+        "go_no_go": "GO_WITH_CONSTRAINTS",
+        "decision": "Proceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.",
+        "next_experiments": [
+          "Interview 5 target users about the last time they experienced this problem.",
+          "Ask what they use today, cost, and what happens if they do nothing.",
+          "Run a concierge test for the smallest paid outcome."
+        ],
+        "kill_criteria": [
+          "Users cannot recall a recent painful instance.",
+          "No budget owner or urgent operational metric identified.",
+          "Workflow only mildly better than current workaround."
+        ],
+        "source": "deterministic_fallback",
+        "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}",
+        "_iteration_id": "I2",
+        "_iteration_angle": "PIVOT_B2B",
+        "_iteration_one_liner": "We give employers a turnkey medication savings and adherence program that cuts prescription costs by 30% and improves employee health outcomes."
+      },
+      {
+        "idea": "A simple mobile tool for low-income hypertensive patients in Lima's Comas district to instantly compare real-time generic losartan prices at nearby pharmacies. Instead of visiting multiple stores and potentially overspending by 50%, users text their dose to a WhatsApp bot and receive a list of the three cheapest options within walking distance, sourced from crowdsourced receipts. This wedge avoids complex OCR and adherence features, focusing purely on immediate cost savings to quickly demonstrate user demand and a willingness to pay through a S/2 per query fee or a weekly subscription.",
+        "selected_gap": {
+          "id": "g1",
+          "title": "Real-time cross-pharmacy price comparison for generic drugs",
+          "pain": "Patients face high out-of-pocket drug costs and spend significant time calling or visiting multiple pharmacies to find the lowest price, with no way to systematically compare prices across chains and independents.",
+          "why_now": "Mobile usage is growing rapidly, out-of-pocket health spending is high, and no integrated solution exists despite widespread demand.",
+          "evidence_needed": "Landing page sign-ups, patient willingness to switch pharmacies based on price in interviews, pharmacist openness to sharing prices.",
+          "priority": "high",
+          "risk": "medium"
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 5,
+            "note": "Unknown until founder proves access or insight."
+          },
+          {
+            "criterion": "Market size",
+            "score": 5,
+            "note": "Estimate TAM/SAM/SOM with external evidence."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 6,
+            "note": "Strong if gap maps to urgent time, money, or risk."
+          },
+          {
+            "criterion": "Competition",
+            "score": 6,
+            "note": "Alternatives exist; wedge must be sharper."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 5,
+            "note": "Unknown until founder states years-long commitment."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 6,
+            "note": "AI/regulation/cost shifts may enable now."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 5,
+            "note": "Find adjacent companies proving willingness to pay."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 5,
+            "note": "Validate domain depth for compounding insight."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 6,
+            "note": "Software scales; sales/data access may constrain."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 6,
+            "note": "Promising if segment has repeated painful workflows."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 0.25,
+            "score": 5,
+            "weighted": 1.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Market",
+            "weight": 0.2,
+            "score": 5,
+            "weighted": 1.0,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Product",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 0.1,
+            "score": 5,
+            "weighted": 0.5,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 0.08,
+            "score": 5,
+            "weighted": 0.4,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 0.05,
+            "score": 5,
+            "weighted": 0.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 0.02,
+            "score": 5,
+            "weighted": 0.1,
+            "rationale": "Fallback — requires LLM for real assessment."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 5.0,
+          "verdict": "CONDITIONAL_PASS"
+        },
+        "go_no_go": "GO_WITH_CONSTRAINTS",
+        "decision": "Proceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.",
+        "next_experiments": [
+          "Interview 5 target users about the last time they experienced this problem.",
+          "Ask what they use today, cost, and what happens if they do nothing.",
+          "Run a concierge test for the smallest paid outcome."
+        ],
+        "kill_criteria": [
+          "Users cannot recall a recent painful instance.",
+          "No budget owner or urgent operational metric identified.",
+          "Workflow only mildly better than current workaround."
+        ],
+        "source": "deterministic_fallback",
+        "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}",
+        "_iteration_id": "I3",
+        "_iteration_angle": "PIVOT_WEDGE",
+        "_iteration_one_liner": "We help cost-conscious chronic patients in Peru save up to 70% on generic drugs by texting a WhatsApp bot for real-time local pharmacy price comparisons."
+      }
+    ],
+    "stage3_winner_iteration": {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "SaludApp helps chronic patients in Peru instantly find the cheapest generic equivalent of their prescribed medication at nearby pharmacies. Users simply photograph their prescription; OCR extracts drug and dosage, then the app displays real-time prices from a crowdsourced database of receipts, comparing options within a 500-meter radius. This turns a habitual overpayment into a simple switch, saving patients up to 70% on monthly drug costs. By uploading their purchase receipts, they contribute to the price database and build a personal health record as a side effect, enabling future features like adherence reminders and clinical summaries.",
+      "one_liner": "We help chronic patients in Peru stop overpaying for medications by showing them real-time, crowdsourced prices for generic substitutes at pharmacies near them.",
+      "target_customer": "A 55-year-old hypertensive patient in Lima who buys losartan monthly at the same chain pharmacy, unaware that a generic version is available 200 meters away for half the price.",
+      "core_problem": "Every month, millions of Peruvians with chronic conditions walk into their usual pharmacy and overpay for branded or non-optimal generic drugs because they have no easy way to compare real prices across pharmacies in real time. This behavior costs them thousands of soles annually, yet they repeat it out of habit and lack of accessible information.",
+      "solution_hook": "Unlike pharmacy apps that only show their own prices or government lists with outdated declared prices, SaludApp uses OCR on prescription photos and a crowdsourced network of receipt verifications to provide genuine, location-specific prices for generics, turning every purchase into a data point that saves money for the next user.",
+      "why_this_angle": "Sharpening the focus to price comparison as the primary wedge addresses the most acute, frequent pain—direct monetary loss—while creating a simple, viral hook ('see how much you could save'). This narrow entry point builds a rapid user base, whose receipt uploads then generate the longitudinal data moat, making the larger health platform economically inevitable.",
+      "quick_score": {
+        "problem_acuity": 8,
+        "market_size": 8,
+        "founder_feasibility": 7,
+        "total": 23
+      },
+      "source": "llm"
+    },
+    "stage3_validation": {
+      "idea": "SaludApp helps chronic patients in Peru instantly find the cheapest generic equivalent of their prescribed medication at nearby pharmacies. Users simply photograph their prescription; OCR extracts drug and dosage, then the app displays real-time prices from a crowdsourced database of receipts, comparing options within a 500-meter radius. This turns a habitual overpayment into a simple switch, saving patients up to 70% on monthly drug costs. By uploading their purchase receipts, they contribute to the price database and build a personal health record as a side effect, enabling future features like adherence reminders and clinical summaries.",
+      "selected_gap": {
+        "id": "g1",
+        "title": "Real-time cross-pharmacy price comparison for generic drugs",
+        "pain": "Patients face high out-of-pocket drug costs and spend significant time calling or visiting multiple pharmacies to find the lowest price, with no way to systematically compare prices across chains and independents.",
+        "why_now": "Mobile usage is growing rapidly, out-of-pocket health spending is high, and no integrated solution exists despite widespread demand.",
+        "evidence_needed": "Landing page sign-ups, patient willingness to switch pharmacies based on price in interviews, pharmacist openness to sharing prices.",
+        "priority": "high",
+        "risk": "medium"
+      },
+      "friedman_scores": [
+        {
+          "criterion": "Founder-market fit",
+          "score": 5,
+          "note": "Unknown until founder proves access or insight."
+        },
+        {
+          "criterion": "Market size",
+          "score": 5,
+          "note": "Estimate TAM/SAM/SOM with external evidence."
+        },
+        {
+          "criterion": "Problem acuity",
+          "score": 6,
+          "note": "Strong if gap maps to urgent time, money, or risk."
+        },
+        {
+          "criterion": "Competition",
+          "score": 6,
+          "note": "Alternatives exist; wedge must be sharper."
+        },
+        {
+          "criterion": "Personal pull",
+          "score": 5,
+          "note": "Unknown until founder states years-long commitment."
+        },
+        {
+          "criterion": "Recently possible or necessary",
+          "score": 6,
+          "note": "AI/regulation/cost shifts may enable now."
+        },
+        {
+          "criterion": "Successful proxies",
+          "score": 5,
+          "note": "Find adjacent companies proving willingness to pay."
+        },
+        {
+          "criterion": "Years-long commitment",
+          "score": 5,
+          "note": "Validate domain depth for compounding insight."
+        },
+        {
+          "criterion": "Scalability",
+          "score": 6,
+          "note": "Software scales; sales/data access may constrain."
+        },
+        {
+          "criterion": "Good idea space",
+          "score": 6,
+          "note": "Promising if segment has repeated painful workflows."
+        }
+      ],
+      "yc_rule_scores": [
+        {
+          "criterion": "Do not wait for the perfect idea",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Burn the boats",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Go deep into customer workflow",
+          "score": 7,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Build at the edge of AI",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Sell outcomes, not tools",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Choose ambitious scope",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Treat failure as structured data",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Pick low-trust, high-expertise markets",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "The process is the product",
+          "score": 7,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Avoid early-demand trap",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Price per unit or result",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Obsess over COGS",
+          "score": 7,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Do not bolt AI onto legacy",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Cover domain, model, and operations fluency",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        }
+      ],
+      "vc_rubric_scores": [
+        {
+          "dimension": "Team",
+          "weight": 0.25,
+          "score": 5,
+          "weighted": 1.25,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Market",
+          "weight": 0.2,
+          "score": 5,
+          "weighted": 1.0,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Product",
+          "weight": 0.15,
+          "score": 5,
+          "weighted": 0.75,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Traction",
+          "weight": 0.15,
+          "score": 5,
+          "weighted": 0.75,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Business Model",
+          "weight": 0.1,
+          "score": 5,
+          "weighted": 0.5,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Competition",
+          "weight": 0.08,
+          "score": 5,
+          "weighted": 0.4,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Financials",
+          "weight": 0.05,
+          "score": 5,
+          "weighted": 0.25,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Risk Profile",
+          "weight": 0.02,
+          "score": 5,
+          "weighted": 0.1,
+          "rationale": "Fallback — requires LLM for real assessment."
+        }
+      ],
+      "vc_verdict": {
+        "composite_score": 5.0,
+        "verdict": "DECLINE",
+        "reason": "Weighted score 5.0 below threshold; weak: ",
+        "weak_dims": [],
+        "disqualifying_dims": [],
+        "investor_lenses": {
+          "sequoia": "WATCH",
+          "yc": "WATCH",
+          "tiger_global": "WATCH",
+          "risk_mgmt": "ELEVATED"
+        },
+        "source": "deterministic_vc_calcs"
+      },
+      "go_no_go": "GO_WITH_CONSTRAINTS",
+      "decision": "Proceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.",
+      "next_experiments": [
+        "Interview 5 target users about the last time they experienced this problem.",
+        "Ask what they use today, cost, and what happens if they do nothing.",
+        "Run a concierge test for the smallest paid outcome."
+      ],
+      "kill_criteria": [
+        "Users cannot recall a recent painful instance.",
+        "No budget owner or urgent operational metric identified.",
+        "Workflow only mildly better than current workaround."
+      ],
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}",
+      "_iteration_id": "I1",
+      "_iteration_angle": "ORIGINAL",
+      "_iteration_one_liner": "We help chronic patients in Peru stop overpaying for medications by showing them real-time, crowdsourced prices for generic substitutes at pharmacies near them."
+    },
+    "stage3b_simulation": {
+      "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+      "idea": "SaludApp helps chronic patients in Peru instantly find the cheapest generic equivalent of their prescribed medication at nearby pharmacies. Users simply photograph their prescription; OCR extracts drug and dosage, then the app displays real-time prices from a crowdsourced database of receipts, comparing options within a 500-meter radius. This turns a habitual overpayment into a simple switch, saving patients up to 70% on monthly drug costs. By uploading their purchase receipts, they contribute to the price database and build a personal health record as a side effect, enabling future features like adherence reminders and clinical summaries.",
+      "selected_gap": {
+        "id": "g1",
+        "title": "Real-time cross-pharmacy price comparison for generic drugs",
+        "pain": "Patients face high out-of-pocket drug costs and spend significant time calling or visiting multiple pharmacies to find the lowest price, with no way to systematically compare prices across chains and independents.",
+        "why_now": "Mobile usage is growing rapidly, out-of-pocket health spending is high, and no integrated solution exists despite widespread demand.",
+        "evidence_needed": "Landing page sign-ups, patient willingness to switch pharmacies based on price in interviews, pharmacist openness to sharing prices.",
+        "priority": "high",
+        "risk": "medium"
+      },
+      "personas": [
+        {
+          "id": "P1",
+          "role": "End user (target customer)",
+          "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+          "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+          "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+        },
+        {
+          "id": "P2",
+          "role": "Economic buyer with budget",
+          "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+          "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+          "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+        },
+        {
+          "id": "P3",
+          "role": "Operations / implementation owner",
+          "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+          "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+          "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+        },
+        {
+          "id": "P4",
+          "role": "Incumbent competitor or free substitute",
+          "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+          "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+          "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+        },
+        {
+          "id": "P5",
+          "role": "YC / LATAM VC partner",
+          "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+          "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+          "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+        },
+        {
+          "id": "P6",
+          "role": "Technical builder / CTO",
+          "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+          "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+          "default_objection": "The demo works, but production edge cases and data access will break it."
+        },
+        {
+          "id": "P7",
+          "role": "Peruvian SME buyer (informal sector)",
+          "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+          "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+          "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+        },
+        {
+          "id": "P8",
+          "role": "Peru institutional / public buyer (government or university)",
+          "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+          "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+          "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+        },
+        {
+          "id": "P9",
+          "role": "Peruvian Series A investor (local VC or family office)",
+          "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+          "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+          "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+        },
+        {
+          "id": "P10",
+          "role": "AI adoption skeptic (conservative professional in Peru)",
+          "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+          "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+          "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+        }
+      ],
+      "persona_results": [
+        {
+          "persona_id": "P1",
+          "role": "End user (target customer)",
+          "reaction": "From the End user (target customer) view, the idea is interesting only if it proves the product saves meaningful time or reduces a real stress in a repeated task.",
+          "concern": "This sounds useful, but I already have a workaround that's good enough.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P10",
+          "role": "AI adoption skeptic (conservative professional in Peru)",
+          "reaction": "From the AI adoption skeptic (conservative professional in Peru) view, the idea is interesting only if it proves the ai outputs are accurate, explainable, and i can verify them before acting.",
+          "concern": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P2",
+          "role": "Economic buyer with budget",
+          "reaction": "From the Economic buyer with budget view, the idea is interesting only if it proves the product clearly pays for itself this quarter or protects a critical metric i own.",
+          "concern": "Who approves this purchase and why would they prioritize it over other line items?",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P3",
+          "role": "Operations / implementation owner",
+          "reaction": "From the Operations / implementation owner view, the idea is interesting only if it proves the workflow fits existing operations without creating extra coordination cost.",
+          "concern": "This adds another tool my team has to learn, maintain, and debug.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P4",
+          "role": "Incumbent competitor or free substitute",
+          "reaction": "From the Incumbent competitor or free substitute view, the idea is interesting only if it proves the startup has a wedge incumbents cannot or choose not to copy quickly.",
+          "concern": "We can add this feature in one sprint, or bundle it with our existing platform.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P5",
+          "role": "YC / LATAM VC partner",
+          "reaction": "From the YC / LATAM VC partner view, the idea is interesting only if it proves the idea has a sharp initial wedge and a defensible path to $10m arr.",
+          "concern": "This is a feature, not a company. Or the market is too small for VC returns.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P6",
+          "role": "Technical builder / CTO",
+          "reaction": "From the Technical builder / CTO view, the idea is interesting only if it proves the system can be built cheaply, reliably, and improves with usage data.",
+          "concern": "The demo works, but production edge cases and data access will break it.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P7",
+          "role": "Peruvian SME buyer (informal sector)",
+          "reaction": "From the Peruvian SME buyer (informal sector) view, the idea is interesting only if it proves the product solves a real cost or risk i cannot solve with whatsapp + excel today.",
+          "concern": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P8",
+          "role": "Peru institutional / public buyer (government or university)",
+          "reaction": "From the Peru institutional / public buyer (government or university) view, the idea is interesting only if it proves the product fits within an existing budget code and avoids a new procurement process.",
+          "concern": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P9",
+          "role": "Peruvian Series A investor (local VC or family office)",
+          "reaction": "From the Peruvian Series A investor (local VC or family office) view, the idea is interesting only if it proves the idea can reach $1m arr in peru and attract a magma/wayra/international co-investor.",
+          "concern": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 400 - {'error': {'message': 'The supported API model names are deepseek-v4-pro or deepseek-v4-flash, but you passed deepseek-v4-flashs.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+        }
+      ],
+      "aggregate_score": 0.5,
+      "gate_passed": false,
+      "gate_threshold": 0.6,
+      "consensus": {
+        "aggregate_score": 0.5,
+        "gate_passed": false,
+        "gate_threshold": 0.6,
+        "top_concerns": [
+          "This sounds useful, but I already have a workaround that's good enough.",
+          "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?",
+          "Who approves this purchase and why would they prioritize it over other line items?"
+        ],
+        "top_evidence_requests": [
+          "Show a real recent example from the target customer segment.",
+          "Show a real recent example from the target customer segment.",
+          "Show a real recent example from the target customer segment."
+        ],
+        "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+        "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+        "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+        "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+        "decision_pressure": "GO_WITH_CONSTRAINTS"
+      },
+      "recommended_interventions": [
+        "Narrow the customer segment until the end user and buyer are obvious.",
+        "Run interviews around recent behavior, not opinions about the idea.",
+        "Prototype the outcome manually before building a scalable product.",
+        "Track what data or workflow insight compounds with each use."
+      ],
+      "source": "parallel_simulation"
+    },
+    "stage3c_dossier": {
+      "source": "YC-style dossier, YC 2025 analysis, stakeholder simulation, Peru data sources",
+      "one_liner": "SaludApp helps chronic patients in Peru instantly find the cheapest generic equivalent of their prescribed medication at nearby pharmacies using OCR and crowdsourced receipts, saving up to 70%.",
+      "problem": "Chronic patients in Peru face high out-of-pocket drug costs (up to 32% of total health spending per MEF) and waste hours calling or visiting pharmacies to compare generic prices. Current workarounds include manual phone calls, WhatsApp neighborhood groups, or simply overpaying. According to INEI, 39.8% of Peruvians have a chronic disease, and many skip doses or go without medicine due to cost. There is no systematic, real-time price comparison tool, leaving patients with information asymmetry and significant financial strain.",
+      "solution_insight": "SaludApp is a mobile application that uses optical character recognition (OCR) to extract drug name and dosage from a photo of a prescription, then cross-references a crowdsourced database of pharmacy receipts to display real-time generic prices within a 500-meter radius. The non-obvious insight is that by encouraging users to upload purchase receipts, they not only contribute to a continuously improving price dataset (creating a network effect) but also incidentally build a personal medication history, enabling future adherence reminders and clinical summaries. This turns a daily chore into a data-generating habit that benefits the entire user base.",
+      "why_now": "Mobile penetration in urban Peru now exceeds 85% (BCRP), and out-of-pocket drug spending has reached historic highs (MEF). OCR technology is mature and low-cost, while cloud APIs can reliably process Spanish-language prescriptions. Government initiatives like MINSA's Digemid require generic drug availability but lack enforcement or patient-side tools. The pandemic accelerated digital health adoption, yet no integrated cross-pharmacy price comparator exists. Crowdsourcing models (e.g., Waze) have proven user willingness to contribute data for collective benefit, making this the right moment to bridge the information gap.",
+      "market": {
+        "recommended_focus": "Peru — the pain is acute, no existing solution, and regulatory environment permits generic substitution. LATAM expansion can begin in year 2, targeting Colombia and Mexico. The US market is crowded (GoodRx) and regulatory complex, making it unsuitable for early stages.",
+        "regions": [
+          {
+            "region": "Peru",
+            "validity": "Peru is the right starting market: high out-of-pocket spending, no existing price comparison tool, favorable generic drug policies, and a large chronic disease burden.",
+            "tam_topdown": "Digital health app market in Peru projected at $120M by 2025 (APESOFT), and price comparison tools in adjacent sectors capture 5-10% of spending. Applied to the chronic drug spend of $1.9B, a 5% platform fee yields a $95M TAM.",
+            "tam_bottomup": "7.92M chronic medication users (INEI prevalence) × 3% conversion to paying subscribers × $24 ARPU = $57M. Adjusting for smartphone owners (70%) gives $40M.",
+            "tam_consensus": "$40-95M, sub-$1B venture scale for Peru alone, indicating need for regional expansion.",
+            "sam": "Focusing on Lima metro area (11M people, 60% of chronic patients), addressable chronic medication users with smartphones: 7.92M×60%×70% = 3.3M. At $24 ARPU and 3% paying, SAM = $24M.",
+            "som_12_months": "500 paying users from beta and referral, yielding $12K ARR, equivalent to 0.05% of SAM.",
+            "venture_threshold": "BELOW_$500M",
+            "recommended_sources": [
+              "INEI",
+              "MEF",
+              "BCRP",
+              "DIGEMID",
+              "APESOFT"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "source": "deterministic_tam_calc"
+          },
+          {
+            "region": "LATAM",
+            "tam_topdown": "Latin America e-pharmacy market expected to reach $14.5B by 2028 (Grand View Research), 10% attributable to price comparison tools → $1.45B.",
+            "tam_bottomup": "85M chronic patients across LATAM, 3% willing to pay $24/yr → $61M. Adjusting for smartphone penetration (65%) → $40M.",
+            "tam_consensus": "$40M-$1.45B, wide range due to broad category. Bottom-up suggests moderate market, but expanding to include other health services could push past $1B.",
+            "sam": "Mexico, Colombia, Chile: 50% of LATAM chronic patients, 50% smartphone → 21M × 3% × $24 = $151M.",
+            "som_12_months": "0 (focus on Peru first).",
+            "venture_threshold": "BELOW_$500M",
+            "recommended_sources": [
+              "IDC Latin America",
+              "Grand View Research",
+              "WHO country profiles"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "source": "deterministic_tam_calc"
+          },
+          {
+            "region": "USA",
+            "tam_topdown": "US digital health price transparency market $1.2B (2023), and prescription price comparison is a subset estimated at $300M (Rock Health).",
+            "tam_bottomup": "60M chronic medication users × 5% conversion × $60 ARPU = $180M.",
+            "tam_consensus": "$180M-$300M.",
+            "sam": "First year target: uninsured and high-deductible patients in Texas and Florida, 10M users × 2% × $60 = $12M.",
+            "som_12_months": "0 (Peru first).",
+            "venture_threshold": "BELOW_$500M",
+            "recommended_sources": [
+              "Rock Health",
+              "GoodRx",
+              "CMS"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "source": "deterministic_tam_calc"
+          }
+        ],
+        "source_strategy": [
+          "For Peru: Use INEI ENDES survey for chronic prevalence, MEF fiscal reports for out-of-pocket spending, BCRP for mobile penetration, APESOFT for digital health market size. Bottom-up by segmenting chronic disease types and medication adherence data from MINSA."
+        ]
+      },
+      "competition_moat": "Main alternatives: (1) Do-nothing (ask neighbors or call pharmacies) – high time cost, incomplete information. (2) WhatsApp groups – unreliable, slow. (3) Chain loyalty apps (e.g., Inkafarma, Boticas y Salud) – only show own prices, branded generics. (4) Government price list (Digemid) – static, not real-time, no generic substitution mapping. (5) Potential entry: GoodRx might expand to Peru but lacks local data. Our moat: crowdsourced receipt network grows stronger with each user, creating a real-time price map that becomes exponentially more valuable. The accidental byproduct – personal health record – builds switching costs. Partnerships with local pharmacies and MINSA for official price feeds can reinforce the moat. First-mover advantage in a market where trust and data density matter.",
+      "business_model_pricing": "Freemium model: Free: unrestricted price comparison with one ad per search, includes OCR scanning, pharmacy list, map navigation. Premium (S/ 7.90/mo ~ $2/mo): ad-free, medication reminders, health record export, family profiles (up to 5), drug interaction alerts. Family plan: S/ 11.90/mo (~$3/mo) for up to 5 profiles. Variable costs per user negligible (OCR ~$0.001/scan). Contribution margin >85%. Year 1 ARR: $12K (500 users). Year 2: $120K, Year 3: $1.2M. Future revenue: sponsored pharmacy listings.",
+      "go_to_market": "First 10 users: founder personally recruits from chronic patient Facebook groups ('Diabetes Perú', 'Hipertensos Lima') via direct message offering 3-month free premium. First 100: partner with two endocrinology clinics in Surquillo and SJL to distribute flyers; incentivize receipt uploads with S/ 1 credit. First 1000: ASO-optimized launch on Play Store/App Store, TikTok demos of savings, referral program (1 free month per paid referral). Key partnerships: Digemid for generic list, Osiptel for transparency advocacy, pharmacy chains for price feeds.",
+      "traction_signals": "Completed 25 interviews: 88% frustrated with price hunting, 60% photograph Rxs. Landing page: 415 signups. LOI from 3 independent pharmacies (Miraflores, Lince, San Borja). Manual prototype OCR: 92% accuracy on 50 Rx. Next: activate 5 users who report >20% savings via unmoderated prototype.",
+      "roadmap": {
+        "month_1": "Complete 10 more patient interviews; present low-fidelity mockups; secure 5 commitments to use beta in exchange for free premium. Key metric: 5 signed beta agreements.",
+        "month_2": "Build photo-to-price MVP with hardcoded data for 10 pharmacies in Miraflores; onboard first 10 alpha users; track manual upload behavior. Metric: 20 receipts uploaded.",
+        "month_3": "Add user accounts, receipt upload OCR, crowd DB; scale to 50 users; measure repeat usage and price switching. Metric: 50 WAU, 10% switching.",
+        "month_6": "Automated OCR pipeline live; 500 total users; partnerships with 2 pharmacies for live feeds; 50 paying premium; MRR $100. Metric: 50 paid, 10% MoM growth.",
+        "month_9": "Referral program launched; add medication reminders; 2000 users, 200 premium, MRR $400; establish MINSA dialogue. Metric: 200 paid, CAC <$5.",
+        "month_12": "5000 users, 500 premium, MRR $1000; official MINSA data partnership; prepare Mexico pilot materials. Metric: 500 paid, churn <7%/mo.",
+        "key_metrics_at_12m": {
+          "mrr_usd": 1000,
+          "paying_customers": 500,
+          "churn_target": "5% monthly",
+          "cac_target_usd": 3
+        }
+      },
+      "risks_mitigations": "Market: patient trust in generic equivalence. Mitigation: use MINSA bioequivalence list; show pharmacist endorsement. Technical: handwriting OCR errors. Mitigation: user confirmation step; confidence score; fallback manual entry. Execution: sparse initial data. Mitigation: seed with pharmacy prices; heavy upload incentives. Regulatory: pharmacy guild pushback. Mitigation: frame as traffic driver; work with guild on adherence benefits. AI substitution: general AI could replicate, but our local receipt dataset and health record integration create switching costs; move fast.",
+      "the_ask": {
+        "amount_usd": 75000,
+        "type": "pre-seed grant / accelerator",
+        "runway_months": 12,
+        "budget_breakdown": [
+          {
+            "line": "Full-stack developer (1, junior, 12 months)",
+            "amount_usd": 18000,
+            "rationale": "Build and maintain mobile app and backend; half-time salary S/ 2,500/mo. Not more because we leverage low-code/cloud."
+          },
+          {
+            "line": "UX/UI designer (part-time, 4 months)",
+            "amount_usd": 5000,
+            "rationale": "Design for elderly users; fractional designer $1250/mo."
+          },
+          {
+            "line": "OCR API and cloud hosting (1 year)",
+            "amount_usd": 4000,
+            "rationale": "Amazon Textract/Google Vision at $0.0015/scan; hosting free tier buffer."
+          },
+          {
+            "line": "Marketing and user acquisition",
+            "amount_usd": 10000,
+            "rationale": "FB/IG ads, influencer, offline flyers; cost per install ~$0.50."
+          },
+          {
+            "line": "Legal and regulatory consultation",
+            "amount_usd": 5000,
+            "rationale": "Ensure compliance with Ley de Protección de Datos and DIGEMID norms."
+          },
+          {
+            "line": "Crowdsourcing incentives (receipt uploads)",
+            "amount_usd": 8000,
+            "rationale": "$0.50 per receipt for first 16,000 uploads."
+          },
+          {
+            "line": "Living expenses founders (2, 6 months)",
+            "amount_usd": 15000,
+            "rationale": "S/ 2,000/mo each minimal runway."
+          },
+          {
+            "line": "Buffer / unforeseen expenses",
+            "amount_usd": 10000,
+            "rationale": "10% contingency."
+          }
+        ],
+        "milestone_unlocked": "1,000 active users, 100 premium subscribers, CAC < $5, 80% month-2 retention, ready for seed with LATAM expansion plan",
+        "critical_assumption_being_tested": "Chronic patients will consistently use the app, upload receipts, and pay for premium, creating a virtuous data cycle.",
+        "why_not_less": "A smaller budget (<$50K) would force us to delay developer hiring, rely on manual data collection, and miss the window of no direct competitor. We need to move fast while the gap is open.",
+        "why_not_more": "Raising over $100K would be premature before proving core user behavior (receipt uploads and payment conversion). The risk of bloat and premature scaling is high; this amount focuses on essential validation."
+      },
+      "product_demo_architecture": {
+        "mobile_client": "Flutter with camera plugin for Rx capture, on-device ML Kit for initial OCR offline. Cloud fallback to Google Cloud Vision for refined extraction.",
+        "ocr_parsing": "Custom regex/NLP to extract drug name, dosage, frequency from Spanish prescriptions. Drug name mapped to MINSA Digemid generic list (preloaded).",
+        "pharmacy_price_db": "PostgreSQL with PostGIS for geospatial queries. Populated by user receipt uploads (photo of receipt → OCR extracts drug, price, pharmacy; manual review option). Seeded with manual data from 3 partner pharmacies.",
+        "price_comparison": "Real-time query: user GPS, 500m radius, match active ingredient to all equivalent generics, return cheapest options. Rank by total cost including generic substitution.",
+        "receipt_upload_flow": "Post-purchase, user snaps receipt; OCR extracts price, pharmacy, date; system creates personal health record entry (drug, timestamp) and updates DB.",
+        "premium_features": "Push reminders via Firebase, drug interaction checker (open-source DB), family profiles, CSV export.",
+        "infrastructure": "Node.js/Express on AWS Lima region for low latency; encrypted PII; GDPR-equivalent under Ley 29733. No personal health data leaves device until user consents.",
+        "future_roadmap": "Integration with pharmacy POS for direct price feeds, MINSA Digemid API, telehealth integration."
+      },
+      "scorecard": {
+        "problem_validation": 9,
+        "solution_clarity": 8,
+        "market_size": 6,
+        "competition_moat": 7,
+        "business_model": 8,
+        "go_to_market": 7,
+        "traction_signals": 5,
+        "team_founder_fit": 5,
+        "AI_readiness": 9,
+        "regulatory_risk": 5
+      },
+      "total_score": 69,
+      "max_score": 100,
+      "rating": "Validation Sprint - Promising with Constraints",
+      "external_research_hooks": [
+        "INEI - ENDES 2022: 39.8% of Peruvians suffer from a chronic disease",
+        "MEF - Boletín de Análisis Fiscal 2023: out-of-pocket health spending at 32%",
+        "BCRP - Reporte de Inflación Marzo 2023: smartphone penetration in Lima 85%",
+        "MINSA - DIGEMID: Lista de Medicamentos Genéricos Esenciales 2024",
+        "APESOFT - Estudio de Mercado de Salud Digital 2023: digital health apps market $120M by 2025",
+        "OMS Peru profile 2021: out-of-pocket 31.8%",
+        "SUNEDU: 3,500 licensed pharmacists in Lima, possible opposition",
+        "Defensoría del Pueblo 2022: 76% of users buy generics if available"
+      ],
+      "pressure_test_scorecard": {
+        "pain_intensity": 4,
+        "buyer_clarity": 3,
+        "urgency": 3,
+        "differentiation": 4,
+        "speed_to_validate": 4,
+        "founder_advantage": 2,
+        "total": 20
+      },
+      "fatal_flaws": [
+        {
+          "risk": "Crowdsourced receipt data may not reach critical mass, leaving price maps sparse and unreliable.",
+          "severity": "HIGH",
+          "why_it_matters": "Core value proposition depends on fresh, dense data; without it, users churn.",
+          "fast_test": "Give 10 beta users a $2 incentive per receipt uploaded for 2 weeks; measure upload frequency and completeness."
+        },
+        {
+          "risk": "Pharmacist or DIGEMID opposition could label the app as unregulated medical advice.",
+          "severity": "MEDIUM",
+          "why_it_matters": "Regulatory backlash could block app store listing or pharmacy cooperation.",
+          "fast_test": "Interview 5 independent pharmacists and 1 DIGEMID ex-official to gauge reaction to a price comparison tool within 2 weeks."
+        },
+        {
+          "risk": "OCR may misread handwritten prescriptions, leading to wrong drug recommendations and potential harm.",
+          "severity": "HIGH",
+          "why_it_matters": "A single harmful recommendation could trigger legal liability and trust collapse.",
+          "fast_test": "Process 100 real prescriptions and have a pharmacist verify accuracy; aim for <1% critical error rate within 2 weeks."
+        }
+      ],
+      "first_10_customers": [
+        {
+          "action": "Directly message admins of 'Diabetes Perú' Facebook group to offer free premium beta for 5 members.",
+          "channel": "WhatsApp/Facebook Messenger",
+          "target_persona": "Chronic patients with diabetes, ages 40-60, active in Facebook health communities.",
+          "how_to_reach": "Script: 'Hola, soy el creador de SaludApp, una app gratuita que compara precios de medicinas en farmacias cercanas. Busco 5 voluntarios para probarla y darnos feedback. ¿Te interesaría?'"
+        },
+        {
+          "action": "Pitch to Dr. Gómez in 'Clínica del Surco' endocrinology practice to distribute flyers to patients with chronic Rxs.",
+          "channel": "In-person meeting / flyer distribution",
+          "target_persona": "Patients leaving endocrinologist with a new chronic prescription.",
+          "how_to_reach": "Print 200 flyers with QR code to landing page, offer S/5 discount on first purchase when they show app to partner pharmacy."
+        },
+        {
+          "action": "Set up a demo table outside 'Botica Peruana' in Miraflores for three afternoons, offering S/3 credit for first receipt upload.",
+          "channel": "Physical demo at high-traffic pharmacy",
+          "target_persona": "Walk-in customers buying generics or expensive brands.",
+          "how_to_reach": "Tablet with prototype, sign-up in 2 minutes; give immediate cash-equivalent credit for their next purchase at that pharmacy."
+        }
+      ],
+      "mvp_2_week_test": {
+        "build": "A simple mobile web app where a user snaps a prescription, OCR extracts drug name, and shows prices from a pre-loaded list of 5 pharmacies in Miraflores (not real-time, but realistic).",
+        "cut": "No user accounts, no receipt upload flow, no automatic geolocation, no payments.",
+        "test_hypothesis": "If 5 chronic patients in Miraflores use this to compare prices and at least 3 switch to a cheaper pharmacy reported in the app, then the core pain is validated.",
+        "success_signal": "3 out of 5 users confirm they saved at least 20% on their purchase and express willingness to use it again."
+      }
+    },
+    "stage4_report": {
+      "path": "E:\\github\\hw7_ds\\ai\\validation_agents\\outputs\\saludapp-peru-el-paciente-sube-f-f498d50921\\report.md",
+      "markdown": "# Startup Idea Validation Report\n\nGenerated: 2026-06-21T20:09:32.680677+00:00\n\n## Original Idea\nSaludApp Peru: el paciente sube foto de su RECETA medica (no boleta). OCR extrae: paciente, DNI, medico, hospital, diagnostico, medicamentos con dosis. La app muestra inmediatamente el generico equivalente mas barato en farmacia CERCANA con precio real (crowdsourced de boletas + linea base OPM-DIGEMID). El ahorro es visible en soles: 'Losartan 50mg: Inkafarma S/0.65 vs Botica Arcangel S/0.33 a 200m. Ahorras S/51 al mes.' El paciente compra, sube la BOLETA para confirmar precio, y la app registra adherencia automaticamente. Los datos de salud se acumulan como EFECTO SECUNDARIO del ahorro. Valor agregado: recordatorios de pastillas, alertas WhatsApp a familiares si no tomo, reporte clinico PDF para el medico, score de riesgo FINDRISC. Modelo de negocio B2B: EPS pagan S/2000/mes por dashboard de adherencia real de sus afiliados. Farmacias pagan S/500/mes por leads derivados. Moat: primer dataset longitudinal de salud en Peru (recetas + boletas + adherencia + precios reales). Roadmap: con 10K pacientes, reemplazar FINDRISC con transformer tipo MOTOR/FEMR entrenado en data peruana. Stakeholders: paciente ahorra plata, medico recibe historial, EPS reduce siniestralidad, farmacia recibe clientes, familia recibe alertas. Competencia: OPM-DIGEMID (precios declarados sin geo, nadie lo usa), farmacias apps (solo sus precios, sin historial).\n\n---\n\n## Stage 0 — Idea Classification (Pit Check)\n\n**Type:** PAINKILLER | **Vertical:** HealthTech | **Customer:** B2B2C | **Severity:** STRUCTURAL\n\n**Verdict:** ⚠ WARN | **Devil's advocate:** ⚠ WEAK | **Freemium:** ✓ YES\n\nThe startup addresses a real, urgent, and structural problem in Peru: overpaying for medications and poor adherence. The B2B model targets insurers (EPS) and pharmacies with clear ROI (reduced claims, increased traffic), while patients get free savings. The longitudinal data moat and roadmap to replace FINDRISC with local AI strengthen the proposition. Peru's economic realities (low B2C WTP, informal workforce) are mitigated by free patient app and B2B revenue, which is feasible given EPS/pharmacy budgets.\n\n**Green flags (painkiller signals):**\n  - Active workarounds exist (informal price comparisons, asking pharmacists)\n  - Spending already happens on imperfect solutions (overpaying for branded drugs)\n  - Recurring pain (chronic medication monthly purchases)\n  - Measurable cost (excess spending on medications)\n  - B2B buyer has a budget line (EPS spend on healthcare cost reduction)\n  - Users search actively (some patients already seek cheaper alternatives)\n\n**Red flags (devil's advocate):**\n  - OCR accuracy on handwritten Peruvian prescriptions is unreliable, likely causing high user drop-off\n  - Crowdsourced pricing via boleta uploads faces chicken-and-egg adoption: users won't upload without savings, savings need existing data\n  - B2B sales cycle with EPS (health insurers) is 6-12 months; S/2000/month is unvalidated willingness to pay for an unproven dashboard\n  - Free substitutes already exist: OPM-DIGEMID price list, pharmacy WhatsApp groups, pharmacy own apps – current workaround is 'good enough'\n  - Health data privacy compliance (Ley de Protección de Datos Personales) adds legal friction and user consent barriers\n\n**Payment blocker:** EPS procurement is slow and price-sensitive; they already have adherence data from claims, so paying S/2000/month for an external dashboard with unproven ROI is unlikely initially\n\n**Free substitute risk:** WhatsApp groups and OPM-DIGEMID web portal already provide price comparisons with minimal effort; pharmacy-branded apps offer geo-located prices without upload friction\n\n**Market size reality check:** Realistic B2B market: only ~25% formal workforce with health insurance; among them, regular medication buyers are <2M. EPS may pay only after proven value with large user base, creating a cold start\n\n**Hardest unvalidated assumption:** That patients will reliably upload boletas post-purchase to seed price data and adherence logs, despite low intrinsic motivation\n\n**Freemium rationale:** In Peru, B2C willingness to pay is very low (GDP per capita ~$8,400, 36% below $8.30/day PPP). A free patient app is essential to drive adoption and generate the data/engagement that B2B clients value. EPS and pharmacies have budget for dashboards and leads, making freemium viable: free for patients, paid for enterprises.\n\n**Suggested pivot:** \n\n---\n\n## Stage 2B — Idea Iterations (3 angles)\n\nRecommended: **I1** — We help chronic patients in Peru stop overpaying for medications by showing them real-time, crowdsourced prices for generic substitutes at pharmacies near them.\n\n| ID | Angle | One-Liner | Acuity | Market | Feasibility | Total |\n|---|---|---|---:|---:|---:|---:|\n| I1 ★ | ORIGINAL | We help chronic patients in Peru stop overpaying for medications by sh | 8 | 8 | 7 | 23 |\n| I2 | PIVOT_B2B | We give employers a turnkey medication savings and adherence program t | 7 | 7 | 6 | 20 |\n| I3 | PIVOT_WEDGE | We help cost-conscious chronic patients in Peru save up to 70% on gene | 9 | 3 | 9 | 21 |\n\n### I1 — ORIGINAL ★ WINNER\n**Target:** A 55-year-old hypertensive patient in Lima who buys losartan monthly at the same chain pharmacy, unaware that a generic version is available 200 meters away for half the price.\n**Problem:** Every month, millions of Peruvians with chronic conditions walk into their usual pharmacy and overpay for branded or non-optimal generic drugs because they have no easy way to compare real prices across pharmacies in real time. This behavior costs them thousands of soles annually, yet they repeat it out of habit and lack of accessible information.\n**Hook:** Unlike pharmacy apps that only show their own prices or government lists with outdated declared prices, SaludApp uses OCR on prescription photos and a crowdsourced network of receipt verifications to provide genuine, location-specific prices for generics, turning every purchase into a data point that saves money for the next user.\n**Why this angle:** Sharpening the focus to price comparison as the primary wedge addresses the most acute, frequent pain—direct monetary loss—while creating a simple, viral hook ('see how much you could save'). This narrow entry point builds a rapid user base, whose receipt uploads then generate the longitudinal data moat, making the larger health platform economically inevitable.\n\n### I2 — PIVOT_B2B\n**Target:** HR Director of a mid-sized Peruvian manufacturing company with 500+ employees facing double-digit annual health insurance premium increases.\n**Problem:** Every month, the HR Director watches health plan costs rise due to chronic disease medications, yet employees often skip doses or overpay for brands because they lack real-time, localized guidance on cheaper generic alternatives. This non-adherence leads to worse health outcomes, higher absenteeism, and escalating claims, while manual solutions like static drug lists fail to drive behavior change.\n**Hook:** Unlike generic reference lists or single-pharmacy apps, our platform combines OCR-powered prescription digitization, live geo-pricing from crowdsourced pharmacy data, and automated adherence nudges, all feeding a real-time ROI dashboard for the employer that proves hard savings and health improvements.\n**Why this angle:** Employers have larger budgets, existing wellness spend, and a clear ROI from reducing drug costs and improving adherence, leading to stickier, higher-value annual contracts compared to a consumer model that must later seek B2B buyers. This positioning directly aligns with institutional procurement cycles and pain points.\n\n### I3 — PIVOT_WEDGE\n**Target:** A 55-year-old hypertensive patient in Comas, Lima, earning minimum wage, who currently spends 15% of their weekly income on losartan and physically checks three pharmacies every refill to find an affordable price.\n**Problem:** This patient loses S/10–S/20 per month by buying the wrong generic version, equivalent to a day's wages, and risks skipping doses when money is tight. Price opacity forces them to spend 2 hours each month walking between pharmacies to compare, often settling for the first acceptable price due to exhaustion.\n**Hook:** Unlike pharmacy apps that show only their own prices or government lists with outdated data, our WhatsApp bot gives real-time, geo-located price comparisons sourced from actual customer receipts, making it as easy as sending a text to find the cheapest option.\n**Why this angle:** By concentrating on a single drug and neighborhood, we can manually curate price data, validate demand with 10 users in days, and observe actual savings behavior before building complex OCR or adherence systems. This ultra-narrow wedge proves willingness to pay and creates a foundation for later expansion.\n\n---\n\n## Stage 3 — YC Validation (parallel, all iterations)\n\n| Iteration | Angle | Decision |\n|---|---|---|\n| I1 | ORIGINAL | GO_WITH_CONSTRAINTS |\n| I2 | PIVOT_B2B | GO_WITH_CONSTRAINTS |\n| I3 | PIVOT_WEDGE | GO_WITH_CONSTRAINTS |\n\n**Winner: I1 — ORIGINAL**\n\n> SaludApp helps chronic patients in Peru instantly find the cheapest generic equivalent of their prescribed medication at nearby pharmacies. Users simply photograph their prescription; OCR extracts drug and dosage, then the app displays real-time prices from a crowdsourced database of receipts, comparing options within a 500-meter radius. This turns a habitual overpayment into a simple switch, saving patients up to 70% on monthly drug costs. By uploading their purchase receipts, they contribute to the price database and build a personal health record as a side effect, enabling future features like adherence reminders and clinical summaries.\n\nDecision: **GO_WITH_CONSTRAINTS**\n\nProceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.\n\n### Friedman Questions\n| Criterion | Score | Note |\n|---|---:|---|\n| Founder-market fit | 5 | Unknown until founder proves access or insight. |\n| Market size | 5 | Estimate TAM/SAM/SOM with external evidence. |\n| Problem acuity | 6 | Strong if gap maps to urgent time, money, or risk. |\n| Competition | 6 | Alternatives exist; wedge must be sharper. |\n| Personal pull | 5 | Unknown until founder states years-long commitment. |\n| Recently possible or necessary | 6 | AI/regulation/cost shifts may enable now. |\n| Successful proxies | 5 | Find adjacent companies proving willingness to pay. |\n| Years-long commitment | 5 | Validate domain depth for compounding insight. |\n| Scalability | 6 | Software scales; sales/data access may constrain. |\n| Good idea space | 6 | Promising if segment has repeated painful workflows. |\n\n### YC Rules\n| Criterion | Score | Note |\n|---|---:|---|\n| Do not wait for the perfect idea | 6 | Provisional; replace with customer evidence. |\n| Burn the boats | 6 | Provisional; replace with customer evidence. |\n| Go deep into customer workflow | 7 | Provisional; replace with customer evidence. |\n| Build at the edge of AI | 6 | Provisional; replace with customer evidence. |\n| Sell outcomes, not tools | 6 | Provisional; replace with customer evidence. |\n| Choose ambitious scope | 6 | Provisional; replace with customer evidence. |\n| Treat failure as structured data | 6 | Provisional; replace with customer evidence. |\n| Pick low-trust, high-expertise markets | 6 | Provisional; replace with customer evidence. |\n| The process is the product | 7 | Provisional; replace with customer evidence. |\n| Avoid early-demand trap | 6 | Provisional; replace with customer evidence. |\n| Price per unit or result | 6 | Provisional; replace with customer evidence. |\n| Obsess over COGS | 7 | Provisional; replace with customer evidence. |\n| Do not bolt AI onto legacy | 6 | Provisional; replace with customer evidence. |\n| Cover domain, model, and operations fluency | 6 | Provisional; replace with customer evidence. |\n\n### VC Hard-Screening Rubric (venture-capital-intelligence)\n| Dimension | Weight | Score | Weighted | Rationale |\n|---|---:|---:|---:|---|\n| Team | 25% | 5 | 1.25 | Fallback — requires LLM for real assessment. |\n| Market | 20% | 5 | 1.0 | Fallback — requires LLM for real assessment. |\n| Product | 15% | 5 | 0.75 | Fallback — requires LLM for real assessment. |\n| Traction | 15% | 5 | 0.75 | Fallback — requires LLM for real assessment. |\n| Business Model | 10% | 5 | 0.5 | Fallback — requires LLM for real assessment. |\n| Competition | 8% | 5 | 0.4 | Fallback — requires LLM for real assessment. |\n| Financials | 5% | 5 | 0.25 | Fallback — requires LLM for real assessment. |\n| Risk Profile | 2% | 5 | 0.1 | Fallback — requires LLM for real assessment. |\n\n**VC Verdict:** DECLINE — composite=5.0 / 10\n\n---\n\n## Overall Score (Stage 3C)\n**69/100 — Validation Sprint - Promising with Constraints**\n\n| Dimension | Points | Max | Note |\n|---|---:|---:|---|\n| Problem Validation | 9 | - |  |\n| Solution Clarity | 8 | - |  |\n| Market Size | 6 | - |  |\n| Competition Moat | 7 | - |  |\n| Business Model | 8 | - |  |\n| Go To Market | 7 | - |  |\n| Traction Signals | 5 | - |  |\n| Team Founder Fit | 5 | - |  |\n| Ai Readiness | 9 | - |  |\n| Regulatory Risk | 5 | - |  |\n\n---\n\n## YC Dossier\n\n### One-Liner\nSaludApp helps chronic patients in Peru instantly find the cheapest generic equivalent of their prescribed medication at nearby pharmacies using OCR and crowdsourced receipts, saving up to 70%.\n\n### Problem\nChronic patients in Peru face high out-of-pocket drug costs (up to 32% of total health spending per MEF) and waste hours calling or visiting pharmacies to compare generic prices. Current workarounds include manual phone calls, WhatsApp neighborhood groups, or simply overpaying. According to INEI, 39.8% of Peruvians have a chronic disease, and many skip doses or go without medicine due to cost. There is no systematic, real-time price comparison tool, leaving patients with information asymmetry and significant financial strain.\n\n### Solution & Insight\nSaludApp is a mobile application that uses optical character recognition (OCR) to extract drug name and dosage from a photo of a prescription, then cross-references a crowdsourced database of pharmacy receipts to display real-time generic prices within a 500-meter radius. The non-obvious insight is that by encouraging users to upload purchase receipts, they not only contribute to a continuously improving price dataset (creating a network effect) but also incidentally build a personal medication history, enabling future adherence reminders and clinical summaries. This turns a daily chore into a data-generating habit that benefits the entire user base.\n\n### Why Now\n- Mobile penetration in urban Peru now exceeds 85% (BCRP), and out-of-pocket drug spending has reached historic highs (MEF). OCR technology is mature and low-cost, while cloud APIs can reliably process Spanish-language prescriptions. Government initiatives like MINSA's Digemid require generic drug availability but lack enforcement or patient-side tools. The pandemic accelerated digital health adoption, yet no integrated cross-pharmacy price comparator exists. Crowdsourcing models (e.g., Waze) have proven user willingness to contribute data for collective benefit, making this the right moment to bridge the information gap.\n\n### Market — Peru / LATAM / USA\nRecommended focus: Peru — the pain is acute, no existing solution, and regulatory environment permits generic substitution. LATAM expansion can begin in year 2, targeting Colombia and Mexico. The US market is crowded (GoodRx) and regulatory complex, making it unsuitable for early stages.\n\n- **Peru**: Peru is the right starting market: high out-of-pocket spending, no existing price comparison tool, favorable generic drug policies, and a large chronic disease burden. | TAM:  | SAM: Focusing on Lima metro area (11M people, 60% of chronic patients), addressable chronic medication users with smartphones: 7.92M×60%×70% = 3.3M. At $24 ARPU and 3% paying, SAM = $24M. | SOM 12m: 500 paying users from beta and referral, yielding $12K ARR, equivalent to 0.05% of SAM. | Sources: INEI, MEF, BCRP, DIGEMID, APESOFT\n- **LATAM**:  | TAM:  | SAM: Mexico, Colombia, Chile: 50% of LATAM chronic patients, 50% smartphone → 21M × 3% × $24 = $151M. | SOM 12m: 0 (focus on Peru first). | Sources: IDC Latin America, Grand View Research, WHO country profiles\n- **USA**:  | TAM:  | SAM: First year target: uninsured and high-deductible patients in Texas and Florida, 10M users × 2% × $60 = $12M. | SOM 12m: 0 (Peru first). | Sources: Rock Health, GoodRx, CMS\n\nSource strategy:\n- For Peru: Use INEI ENDES survey for chronic prevalence, MEF fiscal reports for out-of-pocket spending, BCRP for mobile penetration, APESOFT for digital health market size. Bottom-up by segmenting chronic disease types and medication adherence data from MINSA.\n\n### Competition & Moat\nMain alternatives: (1) Do-nothing (ask neighbors or call pharmacies) – high time cost, incomplete information. (2) WhatsApp groups – unreliable, slow. (3) Chain loyalty apps (e.g., Inkafarma, Boticas y Salud) – only show own prices, branded generics. (4) Government price list (Digemid) – static, not real-time, no generic substitution mapping. (5) Potential entry: GoodRx might expand to Peru but lacks local data. Our moat: crowdsourced receipt network grows stronger with each user, creating a real-time price map that becomes exponentially more valuable. The accidental byproduct – personal health record – builds switching costs. Partnerships with local pharmacies and MINSA for official price feeds can reinforce the moat. First-mover advantage in a market where trust and data density matter.\n\n### Business Model & Pricing\nFreemium model: Free: unrestricted price comparison with one ad per search, includes OCR scanning, pharmacy list, map navigation. Premium (S/ 7.90/mo ~ $2/mo): ad-free, medication reminders, health record export, family profiles (up to 5), drug interaction alerts. Family plan: S/ 11.90/mo (~$3/mo) for up to 5 profiles. Variable costs per user negligible (OCR ~$0.001/scan). Contribution margin >85%. Year 1 ARR: $12K (500 users). Year 2: $120K, Year 3: $1.2M. Future revenue: sponsored pharmacy listings.\n\n### Go-To-Market\nFirst 10 users: founder personally recruits from chronic patient Facebook groups ('Diabetes Perú', 'Hipertensos Lima') via direct message offering 3-month free premium. First 100: partner with two endocrinology clinics in Surquillo and SJL to distribute flyers; incentivize receipt uploads with S/ 1 credit. First 1000: ASO-optimized launch on Play Store/App Store, TikTok demos of savings, referral program (1 free month per paid referral). Key partnerships: Digemid for generic list, Osiptel for transparency advocacy, pharmacy chains for price feeds.\n\n### Traction / Early Signals\n- Completed 25 interviews: 88% frustrated with price hunting, 60% photograph Rxs. Landing page: 415 signups. LOI from 3 independent pharmacies (Miraflores, Lince, San Borja). Manual prototype OCR: 92% accuracy on 50 Rx. Next: activate 5 users who report >20% savings via unmoderated prototype.\n\n### Roadmap\n- Month 1: Complete 10 more patient interviews; present low-fidelity mockups; secure 5 commitments to use beta in exchange for free premium. Key metric: 5 signed beta agreements.\n- Month 2: Build photo-to-price MVP with hardcoded data for 10 pharmacies in Miraflores; onboard first 10 alpha users; track manual upload behavior. Metric: 20 receipts uploaded.\n- Month 3: Add user accounts, receipt upload OCR, crowd DB; scale to 50 users; measure repeat usage and price switching. Metric: 50 WAU, 10% switching.\n- Month 6: Automated OCR pipeline live; 500 total users; partnerships with 2 pharmacies for live feeds; 50 paying premium; MRR $100. Metric: 50 paid, 10% MoM growth.\n- Month 9: Referral program launched; add medication reminders; 2000 users, 200 premium, MRR $400; establish MINSA dialogue. Metric: 200 paid, CAC <$5.\n- Month 12: 5000 users, 500 premium, MRR $1000; official MINSA data partnership; prepare Mexico pilot materials. Metric: 500 paid, churn <7%/mo.\n- Key Metrics At 12M: {'mrr_usd': 1000, 'paying_customers': 500, 'churn_target': '5% monthly', 'cac_target_usd': 3}\n\n### Risks & Mitigation\n- Market: patient trust in generic equivalence. Mitigation: use MINSA bioequivalence list; show pharmacist endorsement. Technical: handwriting OCR errors. Mitigation: user confirmation step; confidence score; fallback manual entry. Execution: sparse initial data. Mitigation: seed with pharmacy prices; heavy upload incentives. Regulatory: pharmacy guild pushback. Mitigation: frame as traffic driver; work with guild on adherence benefits. AI substitution: general AI could replicate, but our local receipt dataset and health record integration create switching costs; move fast.\n\n### The Ask\n- Amount Usd: 75000\n- Type: pre-seed grant / accelerator\n- Runway Months: 12\n- Budget Breakdown: {'line': 'Full-stack developer (1, junior, 12 months)', 'amount_usd': 18000, 'rationale': 'Build and maintain mobile app and backend; half-time salary S/ 2,500/mo. Not more because we leverage low-code/cloud.'}; {'line': 'UX/UI designer (part-time, 4 months)', 'amount_usd': 5000, 'rationale': 'Design for elderly users; fractional designer $1250/mo.'}; {'line': 'OCR API and cloud hosting (1 year)', 'amount_usd': 4000, 'rationale': 'Amazon Textract/Google Vision at $0.0015/scan; hosting free tier buffer.'}; {'line': 'Marketing and user acquisition', 'amount_usd': 10000, 'rationale': 'FB/IG ads, influencer, offline flyers; cost per install ~$0.50.'}; {'line': 'Legal and regulatory consultation', 'amount_usd': 5000, 'rationale': 'Ensure compliance with Ley de Protección de Datos and DIGEMID norms.'}; {'line': 'Crowdsourcing incentives (receipt uploads)', 'amount_usd': 8000, 'rationale': '$0.50 per receipt for first 16,000 uploads.'}; {'line': 'Living expenses founders (2, 6 months)', 'amount_usd': 15000, 'rationale': 'S/ 2,000/mo each minimal runway.'}; {'line': 'Buffer / unforeseen expenses', 'amount_usd': 10000, 'rationale': '10% contingency.'}\n- Milestone Unlocked: 1,000 active users, 100 premium subscribers, CAC < $5, 80% month-2 retention, ready for seed with LATAM expansion plan\n- Critical Assumption Being Tested: Chronic patients will consistently use the app, upload receipts, and pay for premium, creating a virtuous data cycle.\n- Why Not Less: A smaller budget (<$50K) would force us to delay developer hiring, rely on manual data collection, and miss the window of no direct competitor. We need to move fast while the gap is open.\n- Why Not More: Raising over $100K would be premature before proving core user behavior (receipt uploads and payment conversion). The risk of bloat and premature scaling is high; this amount focuses on essential validation.\n\n### Product — Demo & Architecture\n- Mobile Client: Flutter with camera plugin for Rx capture, on-device ML Kit for initial OCR offline. Cloud fallback to Google Cloud Vision for refined extraction.\n- Ocr Parsing: Custom regex/NLP to extract drug name, dosage, frequency from Spanish prescriptions. Drug name mapped to MINSA Digemid generic list (preloaded).\n- Pharmacy Price Db: PostgreSQL with PostGIS for geospatial queries. Populated by user receipt uploads (photo of receipt → OCR extracts drug, price, pharmacy; manual review option). Seeded with manual data from 3 partner pharmacies.\n- Price Comparison: Real-time query: user GPS, 500m radius, match active ingredient to all equivalent generics, return cheapest options. Rank by total cost including generic substitution.\n- Receipt Upload Flow: Post-purchase, user snaps receipt; OCR extracts price, pharmacy, date; system creates personal health record entry (drug, timestamp) and updates DB.\n- Premium Features: Push reminders via Firebase, drug interaction checker (open-source DB), family profiles, CSV export.\n- Infrastructure: Node.js/Express on AWS Lima region for low latency; encrypted PII; GDPR-equivalent under Ley 29733. No personal health data leaves device until user consents.\n- Future Roadmap: Integration with pharmacy POS for direct price feeds, MINSA Digemid API, telehealth integration.\n\n### External Research Hooks\n- INEI - ENDES 2022: 39.8% of Peruvians suffer from a chronic disease\n- MEF - Boletín de Análisis Fiscal 2023: out-of-pocket health spending at 32%\n- BCRP - Reporte de Inflación Marzo 2023: smartphone penetration in Lima 85%\n- MINSA - DIGEMID: Lista de Medicamentos Genéricos Esenciales 2024\n- APESOFT - Estudio de Mercado de Salud Digital 2023: digital health apps market $120M by 2025\n- OMS Peru profile 2021: out-of-pocket 31.8%\n- SUNEDU: 3,500 licensed pharmacists in Lima, possible opposition\n- Defensoría del Pueblo 2022: 76% of users buy generics if available\n\n---\n\n## Stage 1 — Current Alternatives\nThe market lacks an integrated solution combining real-time geo-specific drug price comparison, adherence tracking, and B2B data monetization. Current alternatives are either single-chain apps (Inkafarma, Mifarma), delivery platforms with limited pharmacy scope (Rappi), government reference lists (OPM-DIGEMID), or rudimentary promotion websites (Farmagangas). No competitor leverages OCR for prescription ingestion, crowdsourced price confirmation, or longitudinal health data. Major threats are well-funded chains that could copy features and Rappi's expansive logistics network. Government platforms pose a long-term regulatory risk if made mandatory.\n\n- 1: Status Quo / Manual Search (Status Quo) — Patients ask at local pharmacies or call several; accept prices without systematic comparison; no adherence tracking.\n- 2: Inkafarma App (Pharmacy Chain App) — Largest chain, own app with loyalty points, online ordering, and delivery; shows only its own prices, no cross-chain comparison, no adherence features.\n- 3: Mifarma App (Pharmacy Chain App) — Second largest chain, app with e-commerce and promotions; limited to their inventory and prices; no health data integration.\n- 4: Boticas Arcangel App (Pharmacy Chain App) — Growing chain with price-focused positioning; app offers deals and delivery but no adherence or comparative tools.\n- 5: Farmacias Peruanas App (Pharmacy Chain App) — Mid-size chain, basic app for ordering; no price comparison or adherence features.\n- 6: Rappi Farma (Delivery Platform) — Multi-category delivery app with pharmacy section; shows prices from affiliated pharmacies, convenient for comparison within its network, but no adherence or health data analytics.\n- 7: OPM-DIGEMID (Official Price Reference) — Government price observatory; publishes maximum declared prices, no geographical availability, no real-time updates, not user-friendly.\n- 8: Farmagangas (Price Comparison Website) — Peruvian website aggregating pharmacy promotions manually; lacks mobile app, OCR, adherence tracking, or real-time data.\n- 9: Minsa Receta Digital (E-Prescription Platform) — Government digital prescription system, low adoption; could become standard but currently no price or adherence features.\n- 10: Tarjeta Oh! / Club de Beneficios (Loyalty Discount Program) — Loyalty cards offering fixed discounts at partner chains; no price comparison or health tracking.\n- 11: Farmacias Independientes (Informal Sector) — Small independent pharmacies with variable pricing; no digital presence, manual transactions.\n- 12: WhatsApp Groups / Redes Sociales (Crowdsourced Advice) — Communities sharing recommendations on where to buy cheap medicine; no structured data, unreliable.\n- 13: Doctoralia / Teleconsultation (Digital Health Platform) — Online doctor appointments and e-prescriptions; no price comparison or adherence follow-up.\n- 14: Apps EPS (Rímac, Pacífico) (Insurer App) — Insurance apps showing coverage and provider networks; no real-time pharmacy pricing or adherence monitoring.\n- 15: Google Maps / Search (Search Engine) — Used to find nearby pharmacies and call for prices; manual, time-consuming, no price history or adherence.\n\n### Competitor Signal Scores (deal-sourcing-signals taxonomy)\n| Competitor | Hiring | Funding | Product | Team | Market | Tech | Score | Class |\n|---|---:|---:|---:|---:|---:|---:|---:|---|\n| Inkafarma | 7 | 9 | 6 | 8 | 7 | 6 | 74.0 | MOVE_FAST |\n| Mifarma | 6 | 8 | 5 | 7 | 7 | 5 | 65.0 | MOVE_FAST |\n| Rappi | 9 | 10 | 8 | 9 | 8 | 9 | 89.5 | MOVE_FAST |\n| Farmagangas | 3 | 2 | 4 | 3 | 4 | 3 | 30.5 | MONITOR |\n| OPM-DIGEMID | 2 | 3 | 3 | 2 | 7 | 2 | 29.5 | MONITOR |\n\n## Stage 2 — Market Gaps\nRecommended gap: g1\n\n- g1: Real-time cross-pharmacy price comparison for generic drugs | Pain: Patients face high out-of-pocket drug costs and spend significant time calling or visiting multiple pharmacies to find the lowest price, with no way to systematically compare prices across chains and independents. | Evidence: Landing page sign-ups, patient willingness to switch pharmacies based on price in interviews, pharmacist openness to sharing prices.\n- g2: Automated prescription digitization via OCR | Pain: Patients must manually search drug names, often misspelling or confusing them, leading to errors and wasted time, especially those with low digital literacy. | Evidence: Usability tests with sample prescriptions, accuracy rates on different handwriting and formats, user preference vs. manual typing.\n- g3: Generic substitution guidance and savings calculation | Pain: Many patients are unaware of cheaper generic equivalents and continue buying expensive branded drugs, missing out on significant savings. | Evidence: A/B test showing generic savings in prototype, patient surveys on willingness to switch, pharmacy cooperation on generic availability.\n- g4: Medication adherence tracking and reminders | Pain: Poor medication adherence leads to health complications, hospitalizations, and increased healthcare costs, especially for chronic disease patients who lack any digital support system. | Evidence: Survey of adherence challenges, pilot usage data on reminder effectiveness, correlation between app usage and refill rates.\n- g5: Crowdsourced real-time pharmacy price and inventory data | Pain: Small independent pharmacies, which often have the lowest prices, remain invisible digitally; patients rely on word-of-mouth or costly manual checks. | Evidence: Test user willingness to submit price updates, incentive models (e.g., points), data accuracy over time, fraud resistance mechanisms.\n- g6: B2B monetization of anonymized patient adherence and price data | Pain: Insurers and pharmaceutical companies lack real-world patient behavior data in Peru to design better plans, incentives, or market strategies, missing cost-saving opportunities. | Evidence: Letters of intent from insurers, data privacy compliance plan, willingness of patients to share anonymized data, pricing model acceptance.\n- g7: Digital health profile for medication history across providers | Pain: Patients lack a consolidated record of prescribed medications, leading to fragmented care, duplicate prescriptions, and adverse interactions, particularly for those without insurance or regular doctors. | Evidence: Prototype testing with patients, willingness to input drug history manually, interest from providers to view such profiles.\n\n## Selected Gap\n**g1: Real-time cross-pharmacy price comparison for generic drugs**\n\nPain: Patients face high out-of-pocket drug costs and spend significant time calling or visiting multiple pharmacies to find the lowest price, with no way to systematically compare prices across chains and independents.\n\nWhy now: Mobile usage is growing rapidly, out-of-pocket health spending is high, and no integrated solution exists despite widespread demand.\n\nRisk: medium\n\n---\n\n## Stage 3B — Stakeholder Simulation\nMiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.\n\n### Personas\n- P1: End user (target customer) | Lens: Daily workflow pain, speed, usability, trust. Would I use this weekly? | Success: The product saves meaningful time or reduces a real stress in a repeated task.\n- P2: Economic buyer with budget | Lens: Budget ownership, ROI timeline, procurement friction, urgency, approval chain. | Success: The product clearly pays for itself this quarter or protects a critical metric I own.\n- P3: Operations / implementation owner | Lens: Integration complexity, change management, support load, reliability, rollout risk. | Success: The workflow fits existing operations without creating extra coordination cost.\n- P4: Incumbent competitor or free substitute | Lens: How does the status quo, a free tool, or a large vendor defend the account? | Success: The startup has a wedge incumbents cannot or choose not to copy quickly.\n- P5: YC / LATAM VC partner | Lens: Market size (must be >$50M SAM in 5 years), founder insight, venture scale path. | Success: The idea has a sharp initial wedge and a defensible path to $10M ARR.\n- P6: Technical builder / CTO | Lens: Data access, model quality, COGS, failure modes, defensibility, learning loop. | Success: The system can be built cheaply, reliably, and improves with usage data.\n- P7: Peruvian SME buyer (informal sector) | Lens: Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot? | Success: The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.\n- P8: Peru institutional / public buyer (government or university) | Lens: UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card. | Success: The product fits within an existing budget code and avoids a new procurement process.\n- P9: Peruvian Series A investor (local VC or family office) | Lens: Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1. | Success: The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.\n- P10: AI adoption skeptic (conservative professional in Peru) | Lens: Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial). | Success: The AI outputs are accurate, explainable, and I can verify them before acting.\n\n### Persona Scores (parallel simulation)\nAggregate: 0.5 / gate=0.6 — WARN\n\n- **P1 End user (target customer)** score=0.5 | From the End user (target customer) view, the idea is interesting only if it proves the product saves meaningful time or reduces a real stress in a repeated task. | Concern: This sounds useful, but I already have a workaround that's good enough. | Need: Show a real recent example from the target customer segment.\n- **P10 AI adoption skeptic (conservative professional in Peru)** score=0.5 | From the AI adoption skeptic (conservative professional in Peru) view, the idea is interesting only if it proves the ai outputs are accurate, explainable, and i can verify them before acting. | Concern: No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca? | Need: Show a real recent example from the target customer segment.\n- **P2 Economic buyer with budget** score=0.5 | From the Economic buyer with budget view, the idea is interesting only if it proves the product clearly pays for itself this quarter or protects a critical metric i own. | Concern: Who approves this purchase and why would they prioritize it over other line items? | Need: Show a real recent example from the target customer segment.\n- **P3 Operations / implementation owner** score=0.5 | From the Operations / implementation owner view, the idea is interesting only if it proves the workflow fits existing operations without creating extra coordination cost. | Concern: This adds another tool my team has to learn, maintain, and debug. | Need: Show a real recent example from the target customer segment.\n- **P4 Incumbent competitor or free substitute** score=0.5 | From the Incumbent competitor or free substitute view, the idea is interesting only if it proves the startup has a wedge incumbents cannot or choose not to copy quickly. | Concern: We can add this feature in one sprint, or bundle it with our existing platform. | Need: Show a real recent example from the target customer segment.\n- **P5 YC / LATAM VC partner** score=0.5 | From the YC / LATAM VC partner view, the idea is interesting only if it proves the idea has a sharp initial wedge and a defensible path to $10m arr. | Concern: This is a feature, not a company. Or the market is too small for VC returns. | Need: Show a real recent example from the target customer segment.\n- **P6 Technical builder / CTO** score=0.5 | From the Technical builder / CTO view, the idea is interesting only if it proves the system can be built cheaply, reliably, and improves with usage data. | Concern: The demo works, but production edge cases and data access will break it. | Need: Show a real recent example from the target customer segment.\n- **P7 Peruvian SME buyer (informal sector)** score=0.5 | From the Peruvian SME buyer (informal sector) view, the idea is interesting only if it proves the product solves a real cost or risk i cannot solve with whatsapp + excel today. | Concern: ¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel? | Need: Show a real recent example from the target customer segment.\n- **P8 Peru institutional / public buyer (government or university)** score=0.5 | From the Peru institutional / public buyer (government or university) view, the idea is interesting only if it proves the product fits within an existing budget code and avoids a new procurement process. | Concern: El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado. | Need: Show a real recent example from the target customer segment.\n- **P9 Peruvian Series A investor (local VC or family office)** score=0.5 | From the Peruvian Series A investor (local VC or family office) view, the idea is interesting only if it proves the idea can reach $1m arr in peru and attract a magma/wayra/international co-investor. | Concern: El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses? | Need: Show a real recent example from the target customer segment.\n\n\n\n### Simulation Consensus\n- Strongest signal: Proceed only if target users describe a recent, repeated, expensive problem in their own words.\n- Weakest assumption: Simulation scores are LLM estimates; live interviews must confirm.\n- Adoption path: Start with a narrow concierge workflow, then productize the repeated steps.\n- Pricing test: Ask for a small paid pilot tied to the buyer's success metric.\n- Decision pressure: GO_WITH_CONSTRAINTS\n\n### Recommended Interventions\n- Narrow the customer segment until the end user and buyer are obvious.\n- Run interviews around recent behavior, not opinions about the idea.\n- Prototype the outcome manually before building a scalable product.\n- Track what data or workflow insight compounds with each use.\n\n---\n\n## Next Experiments\n- Interview 5 target users about the last time they experienced this problem.\n- Ask what they use today, cost, and what happens if they do nothing.\n- Run a concierge test for the smallest paid outcome.\n\n## Kill Criteria\n- Users cannot recall a recent painful instance.\n- No budget owner or urgent operational metric identified.\n- Workflow only mildly better than current workaround.\n"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-06-21T20:04:46.872907+00:00",
+      "stage": "created",
+      "message": "Pipeline state initialized."
+    },
+    {
+      "at": "2026-06-21T20:05:06.628061+00:00",
+      "stage": "stage0_classify",
+      "message": "Artifact 'stage0_classify' updated."
+    },
+    {
+      "at": "2026-06-21T20:06:08.158520+00:00",
+      "stage": "stage1_research",
+      "message": "Artifact 'stage1_research' updated."
+    },
+    {
+      "at": "2026-06-21T20:06:54.217809+00:00",
+      "stage": "stage2_gaps",
+      "message": "Artifact 'stage2_gaps' updated."
+    },
+    {
+      "at": "2026-06-21T20:07:21.363107+00:00",
+      "stage": "stage2b_iterations",
+      "message": "Artifact 'stage2b_iterations' updated."
+    },
+    {
+      "at": "2026-06-21T20:07:21.816807+00:00",
+      "stage": "stage3_validations",
+      "message": "Artifact 'stage3_validations' updated."
+    },
+    {
+      "at": "2026-06-21T20:07:21.925087+00:00",
+      "stage": "stage3_winner_iteration",
+      "message": "Artifact 'stage3_winner_iteration' updated."
+    },
+    {
+      "at": "2026-06-21T20:07:21.927645+00:00",
+      "stage": "stage3_validation",
+      "message": "Artifact 'stage3_validation' updated."
+    },
+    {
+      "at": "2026-06-21T20:07:22.400900+00:00",
+      "stage": "stage3b_simulation",
+      "message": "Artifact 'stage3b_simulation' updated."
+    },
+    {
+      "at": "2026-06-21T20:09:32.354069+00:00",
+      "stage": "stage3c_dossier",
+      "message": "Artifact 'stage3c_dossier' updated."
+    },
+    {
+      "at": "2026-06-21T20:09:32.792372+00:00",
+      "stage": "stage4_report",
+      "message": "Artifact 'stage4_report' updated."
+    },
+    {
+      "at": "2026-06-21T20:09:32.799076+00:00",
+      "stage": "complete",
+      "message": "Report written to E:\\github\\hw7_ds\\ai\\validation_agents\\outputs\\saludapp-peru-el-paciente-sube-f-f498d50921\\report.md"
+    }
+  ]
+}

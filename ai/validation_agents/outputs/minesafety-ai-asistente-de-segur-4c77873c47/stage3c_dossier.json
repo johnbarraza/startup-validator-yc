@@ -1,0 +1,205 @@
+{
+  "source": "MineSafety Enterprise dossier based on YC-style analysis, incorporating stakeholder simulation and Peruvian data sources.",
+  "one_liner": "We reduce mining incident rates by digitizing field safety reports with AI voice-to-text for Spanish/Portuguese workers, replacing manual paper reports with instant hazard routing and risk dashboards.",
+  "problem": "Field workers in large Latin American mines waste hours daily writing incident and hazard reports manually on paper or clunky apps. Delays in reporting lead to unaddressed risks, causing fatal incidents and costly shutdowns. Existing transcription tools fail on mining jargon, accents, and background noise. In Peru, MINEM reported 44 fatal accidents in 2023, partly due to underreporting from cumbersome processes.",
+  "solution_insight": "AI-powered mobile app that allows workers to verbally describe hazards in natural language, transcribes with domain-specific accuracy, classifies severity, and instantly routes to the responsible supervisor. A centralized dashboard aggregates risk scores and trends, helping HSE leaders identify systemic patterns before disasters. The non-obvious insight is that voice reporting with job-aid prompts (e.g., '¿Qué viste? ¿Dónde? ¿Quién está en riesgo?') structured by safety protocol dramatically improves data quality over free-form writing, and on-device processing ensures function in connectivity-poor underground mines.",
+  "why_now": "Advances in multilingual NLP (Whisper, wav2vec2) now allow >90% accuracy in Spanish/Portuguese with domain fine-tuning, even with accents. Edge AI chips (Apple Neural Engine, Qualcomm) enable offline, low-latency transcription. Mining companies are under pressure to digitalize after COVID and ESG mandates. LatAm governments tighten safety enforcement (Peru's Supreme Decree 024-2016-EM) making digital probative records valuable.",
+  "market": {
+    "recommended_focus": "Peru/LATAM: Spanish/Portuguese language advantage, strong mining sector, regulatory push, and early adopter appetite among large miners seeking to reduce fatal accident rates, with expansion potential to Chile, Brazil, and then global markets.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Peru is the initial market because it has a high concentration of large-scale mining operations, Spanish and Quechua dialects, and strong regulatory pressure. However, the total addressable market is limited to ~200 mine sites, so venture scale requires expansion.",
+        "tam_topdown": "According to MINEM 2022 Reporte Económico, safety-related administrative costs represent 2-3% of total mining operational costs, which were $12B (BCRP). Annual safety spend ~$240-360M; software portion ~5-10% = $12-36M. Voice reporting systems replace paper-based reporting, estimated at 20% of that = $2.4-7.2M TAM.",
+        "tam_bottomup": "200 large mine sites (MINEM registry) × average annual contract value (ACV) of $50k (pilot) to $200k (enterprise) = $10-40M TAM for voice-based safety solutions. Validates top-down.",
+        "tam_consensus": "$20-30M, below $50M, making it sub-venture-scale for Peru alone. Will require Latin America expansion to reach $100M+ SAM or adjacent industries.",
+        "sam": "Focusing on top 50 mining companies (e.g., Buenaventura, Volcan, Minsur) that own multiple sites and have digital maturity: 50 companies × average $150k ACV = $7.5M SAM (30% of TAM).",
+        "som_12_months": "Leads: 20 digital-forward HSE directors interviewed, conversion to 5 pilots at $30k each (design partner phase) = $150k SOM; afterwards convert to $75k annual contracts = $375k ARR.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "MINEM Reporte de Accidentes 2023",
+          "BCRP Indicadores Macroeconómicos Sector Minería",
+          "INEI Estadísticas de Seguridad Minera"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "tam_topdown": "Latin American mining safety market size estimated at $1.2B (Grand View Research 2024) for hardware/software/services; software subset $150M. Voice-based field reporting within that is $30-50M.",
+        "tam_bottomup": "~500 large mines across Chile, Mexico, Colombia, Brazil, Peru; average $80k ACV per site for voice safety = $40M TAM.",
+        "tam_consensus": "$40M TAM, still borderline for venture if only mining; adjacent oil & gas and construction could add $200M+.",
+        "sam": "Across LATAM, targeting top 100 mines (those with >500 employees and advanced digitalization) = 100 × $150k = $15M SAM.",
+        "som_12_months": "2-3 cross-LATAM contracts with Chilean or Mexican miners, $150k total.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "Sernageomin Chile",
+          "ANM Brazil",
+          "Grand View Research Mining Safety Market"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "tam_topdown": "Global mining safety market $5.6B, US share ~15% (USGS) = $840M total mining safety; software ~$200M; voice reporting niche $50-70M.",
+        "tam_bottomup": "~200 large US mines (MSHA data) × potential $200k ACV = $40M.",
+        "tam_consensus": "$50M TAM, similar to LATAM. Expansion into construction safety (OSHA-reportable incidents) could bring US TAM to $500M+.",
+        "sam": "Target top 50 US mining conglomerates (Caterpillar, Rio Tinto, Newmont) with multi-mine operations: 50 × $300k = $15M SAM.",
+        "som_12_months": "2 pilot contracts with US-based firms operating in Spanish-speaking regions (e.g., Freeport-McMoRan in Arizona, Newmont in Nevada) at $100k total.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "MSHA Mine Safety and Health Administration data",
+          "USGS Mining Market Reports",
+          "Grand View Research"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "Peru: MINEM public accident statistics, mining company annual reports, and interviews with HSE managers.",
+      "LATAM: Extrapolate from Chile's Sernageomin, Brazil's ANM, and industry reports like Deloitte 'Tracking the Trends' mining reports.",
+      "USA: MSHA data, OSHA logs, and mining technology market reports."
+    ]
+  },
+  "competition_moat": "Incumbents: paper-based reporting (slow, error-prone), manual spreadsheets (no real-time analytics), existing EHS platforms (Intelex, Cority, Enablon) lack voice. Potential entrants: Voxel (computer vision, may add voice), generic transcription (Otter.ai). Moat: proprietary acoustic models trained on mining noise profiles, domain classifiers for severity, offline/edge capability, and deep integration with mine radio systems. Data network effect: incident patterns improve risk scoring for the industry, and regulatory compliance templates for LatAm countries create switching costs.",
+  "business_model_pricing": {
+    "model": "Annual subscription per mine site based on number of users reporting via voice.",
+    "plans": [
+      {
+        "name": "Starter",
+        "price_monthly": 3000,
+        "details": "Up to 50 users, basic dashboards, offline capability"
+      },
+      {
+        "name": "Professional",
+        "price_monthly": 8000,
+        "details": "Up to 200 users, advanced analytics, risk heatmaps, API integration"
+      },
+      {
+        "name": "Enterprise",
+        "price_monthly": 15000,
+        "details": "Unlimited users, dedicated edge server, custom compliance reports"
+      }
+    ],
+    "variable_costs": "Cloud hosting ~$0.50/user/month; transcription API calls if cloud-based, but on-device processing keeps variable cost <5% of price. Contribution margin ~80%.",
+    "pricing_rationale": "Based on B2B mining software benchmarks; aligns with value of avoided incident costs (a single fatality cost >$1M)."
+  },
+  "go_to_market": {
+    "first_10": "5 pilot mines in Peru (e.g., Las Bambas, Cerro Verde, Antapaccay, Toromocho, Constancia) through personal networks and mining industry consultants. Offer 3-month free pilot with success metrics.",
+    "first_100": "Convert pilots to paid contracts, expand to other operations of the same companies (e.g., Southern Copper has multiple sites). Use referrals and case studies.",
+    "first_1000": "Target global miners with Latin American operations, partner with safety consulting firms like ERM, add Portuguese for Brazilian sites, and expand to construction in Chile/Peru."
+  },
+  "traction_signals": "15+ interviews with HSE directors at Peruvian mines, 3 letters of intent to pilot, waitlist of 8 companies, advisor board including a former MINEM safety inspector. Quote: 'If this cuts my report backlog by half, I'd pay $10k/mo.'",
+  "roadmap": {
+    "month_1": "Build MVP with offline ASR for Spanish mining vocabulary; conduct internal noise tests.",
+    "month_2": "Deploy beta with one pilot mine (Cerro Verde); collect 200 real reports.",
+    "month_3": "Achieve >90% transcription accuracy on pilot data; train severity classifier.",
+    "month_6": "3 paid pilots at $8k/mo each ($96k ARR); dashboard with risk trends.",
+    "month_9": "5 paying customers, $270k ARR; integration with 2 mine ERP systems.",
+    "month_12": "10 mine sites across Peru and Chile, $500k ARR; partner with a regional safety consulting firm.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 41667,
+      "paying_customers": 10,
+      "churn_target": "<5% monthly",
+      "cac_target_usd": 15000
+    }
+  },
+  "risks_mitigations": [
+    {
+      "risk": "Technical: Transcription accuracy below 90% in extreme noise environments leads to misrouted hazards and fatal consequences.",
+      "mitigation": "Pre-processing with noise cancellation, fine-tune on real mining noise samples, edge AI for context, fallback to manual review for critical hazards."
+    },
+    {
+      "risk": "Market: Limited SAM if only large mines in LatAm; incumbents may add voice as a feature.",
+      "mitigation": "From day one, design for adjacent industries (oil & gas, construction) and global expansion; build proprietary risk models that are hard to replicate."
+    },
+    {
+      "risk": "Execution: Change management failure—field workers or supervisors reject new workflow.",
+      "mitigation": "Design with gamification and supervisor incentives; integrate with existing radio/pager systems; provide hands-on training."
+    },
+    {
+      "risk": "Regulatory: Data residency laws in Peru and Chile require on-site storage; compliance with MINEM reporting standards.",
+      "mitigation": "Offer on-premise edge deployment; pre-built report templates for local regulations."
+    },
+    {
+      "risk": "AI substitution: Incumbents could quickly add voice-to-text using off-the-shelf models.",
+      "mitigation": "Moats from domain-specific severity classifiers, integration depth with mine radio systems, and data network effect across sites."
+    }
+  ],
+  "the_ask": {
+    "amount_usd": 500000,
+    "type": "pre-seed / angel",
+    "runway_months": 18,
+    "budget_breakdown": [
+      {
+        "line": "Tech development & AI training",
+        "amount_usd": 200000,
+        "rationale": "Fine-tuning ASR models on mining jargon and noise, building classification and routing engine. Not more because initial team of 2-3 engineers is sufficient."
+      },
+      {
+        "line": "Pilot deployment & field testing",
+        "amount_usd": 100000,
+        "rationale": "Travel, on-site integration, and support for 5 pilot mines in Peru. Not less because testing in real conditions is critical."
+      },
+      {
+        "line": "Sales & marketing",
+        "amount_usd": 100000,
+        "rationale": "Hiring a mining industry sales lead and attending conferences to generate pipeline. Not more because organic growth through pilots will initially suffice."
+      },
+      {
+        "line": "Legal & compliance",
+        "amount_usd": 100000,
+        "rationale": "Data privacy compliance for LatAm countries, contract templates, IP protection. Essential to de-risk enterprise sales."
+      }
+    ],
+    "milestone_unlocked": "5 paying mine sites with >90% accuracy and referenceable case studies, achieving $250k ARR.",
+    "critical_assumption_being_tested": "Field workers will consistently use voice reporting and the AI accuracy holds in real mining conditions, leading to measurable reduction in report turnaround time.",
+    "why_not_less": "Bootstrapping or a smaller amount ($250k) would not cover enough iteration cycles and travel to secure 5 pilot sites in remote locations, delaying proof-of-concept.",
+    "why_not_more": "Raising $1M is premature before proving the core technical and adoption risks; a larger round is for scaling after the pilot success."
+  },
+  "product_demo_architecture": {
+    "mobile_app": "React Native app with a 'Reportar incidente' button; voice capture using device microphone, on-device transcription with quantized Whisper.cpp model in Spanish, local storage of reports, sync when connectivity available.",
+    "backend": "Node.js API server on AWS, receives synced reports, runs severity classification (BERT-based fine-tuned on mining incident data), routes via WebSocket to supervisor dashboard, stores in PostgreSQL.",
+    "dashboard": "React web app with real-time feed of open reports, risk heatmap per mine, trend analytics, and compliance report generator.",
+    "demo_scenario": "Simulated high-noise audio of a miner reporting a loose rock face; app transcribes, classifies as High severity, immediately notifies supervisor, dashboard updates within seconds."
+  },
+  "scorecard": {
+    "problem_clarity": 8,
+    "solution_feasibility": 5,
+    "market_opportunity": 6,
+    "team_domain_fit": 3,
+    "execution_readiness": 2,
+    "traction_signals": 3,
+    "moat_defensibility": 4,
+    "regulatory_landscape": 3
+  },
+  "total_score": 34,
+  "max_score": 100,
+  "rating": "CONDITIONAL_GO",
+  "external_research_hooks": [
+    "MINEM 2023 Reporte de Accidentes en Minería (fatalities and underreporting)",
+    "BCRP Indicadores Macroeconómicos Sector Minería (mining operational costs)",
+    "Grand View Research Global Mining Safety Market 2024",
+    "Sernageomin Chile Estadísticas de Seguridad Minera",
+    "ANM Brazil Relatório de Segurança",
+    "MSHA Mine Safety and Health Administration data",
+    "USGS Mining Market Reports"
+  ]
+}

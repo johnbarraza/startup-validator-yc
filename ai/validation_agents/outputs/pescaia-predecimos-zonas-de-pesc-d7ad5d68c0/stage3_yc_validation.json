@@ -1,0 +1,226 @@
+{
+  "idea": "PescaIA",
+  "selected_gap": {
+    "id": "GAP-1",
+    "title": "Daily hyperlocal predictive fishing maps via accessible channel",
+    "pain": "Artisanal fishermen waste 40–60% of fuel costs searching for fish, relying on traditional methods, generic quarterly bulletins, or expensive reactive hardware. No existing solution delivers daily, species‑specific predictions tailored to their exact fishing zones through a low‑barrier channel like WhatsApp.",
+    "why_now": "Free satellite data (NASA, Copernicus) + cheap cloud computing enable scalable processing. WhatsApp penetration is high among fishing communities, and cooperatives seek fuel savings amid rising prices. Competitors are either industrial‑focused or lack predictive features.",
+    "evidence_needed": "Pilot with 50 vessels from 3 cooperatives: measure fuel consumption reduction and catch rate change vs control group; interview cooperative managers on willingness to pay per vessel per year.",
+    "priority": "high",
+    "risk": "Initial prediction inaccuracy could damage trust; government might eventually offer a free alternative; regulatory closures may limit actual fishing zones."
+  },
+  "friedman_scores": [
+    {
+      "criterion": "Founder-market fit",
+      "score": 5,
+      "note": "No founder background provided; assume moderate fit if founder has domain expertise, but unknown."
+    },
+    {
+      "criterion": "Market size",
+      "score": 6,
+      "note": "Tens of thousands of Peruvian artisanal fishermen; potential market in millions but limited by informal economy."
+    },
+    {
+      "criterion": "Problem acuity",
+      "score": 9,
+      "note": "Fuel waste is 40-60% of costs; problem is painful and quantifiable."
+    },
+    {
+      "criterion": "Competition",
+      "score": 7,
+      "note": "No direct predictive competitor; indirect alternatives include local knowledge, generic bulletins, expensive hardware."
+    },
+    {
+      "criterion": "Personal pull",
+      "score": 5,
+      "note": "Unknown; assume moderate without information."
+    },
+    {
+      "criterion": "Recently possible or necessary",
+      "score": 9,
+      "note": "Free satellite data, WhatsApp penetration, rising fuel costs make it urgent and feasible."
+    },
+    {
+      "criterion": "Successful proxies",
+      "score": 6,
+      "note": "Some comparable examples in agriculture but no exact proxy in fisheries prediction."
+    },
+    {
+      "criterion": "Years-long commitment",
+      "score": 8,
+      "note": "Founder likely committed to solving this problem based on YC context."
+    },
+    {
+      "criterion": "Scalability",
+      "score": 7,
+      "note": "Potentially scalable across coastal Peru and Latin America, but requires per-community calibration."
+    },
+    {
+      "criterion": "Good idea space",
+      "score": 8,
+      "note": "Targets a clear pain point with a simple, accessible solution."
+    }
+  ],
+  "yc_rule_scores": [
+    {
+      "criterion": "Do not wait for the perfect idea",
+      "score": 8,
+      "note": "Starting with pilot, not perfecting idea in abstract."
+    },
+    {
+      "criterion": "Burn the boats",
+      "score": 7,
+      "note": "Single-minded focus on this idea assumed."
+    },
+    {
+      "criterion": "Go deep into customer workflow",
+      "score": 9,
+      "note": "Deeply integrated into fishermen's morning decision process via WhatsApp."
+    },
+    {
+      "criterion": "Build at the edge of AI",
+      "score": 8,
+      "note": "Predictive model improves over time with user data; leverages AI."
+    },
+    {
+      "criterion": "Sell outcomes, not tools",
+      "score": 9,
+      "note": "Value proposition is fuel savings and higher catch rates."
+    },
+    {
+      "criterion": "Choose ambitious scope",
+      "score": 7,
+      "note": "Starting with 50 vessels but aims to transform fishing practices regionally."
+    },
+    {
+      "criterion": "Treat failure as structured data",
+      "score": 8,
+      "note": "Pilot is designed to provide data for iteration."
+    },
+    {
+      "criterion": "Pick low-trust, high-expertise markets",
+      "score": 9,
+      "note": "Fishermen are skeptical; domain expertise required to build trust."
+    },
+    {
+      "criterion": "The process is the product",
+      "score": 8,
+      "note": "Daily map becomes habit-forming and essential."
+    },
+    {
+      "criterion": "Avoid early-demand trap",
+      "score": 9,
+      "note": "Testing with cooperatives ensures real demand before scaling."
+    },
+    {
+      "criterion": "Price per unit or result",
+      "score": 7,
+      "note": "Likely per-vessel annual subscription; outcome-based pricing possible."
+    },
+    {
+      "criterion": "Obsess over COGS",
+      "score": 6,
+      "note": "Using free satellite data; computational costs assumed low."
+    },
+    {
+      "criterion": "Do not bolt AI onto legacy",
+      "score": 8,
+      "note": "AI is core from the start, not an add-on."
+    },
+    {
+      "criterion": "Cover domain, model, and operations fluency",
+      "score": 7,
+      "note": "Requires deep domain knowledge; assumed from problem selection."
+    }
+  ],
+  "vc_rubric_scores": [
+    {
+      "dimension": "Team",
+      "weight": 0.25,
+      "score": 6,
+      "weighted": 1.5,
+      "rationale": "No founder background provided; domain expertise assumed but unproven."
+    },
+    {
+      "dimension": "Market",
+      "weight": 0.2,
+      "score": 7,
+      "weighted": 1.4,
+      "rationale": "Global artisanal fishing market is large; Peruvian segment worth tens of millions; timing good due to fuel cost pressure."
+    },
+    {
+      "dimension": "Product",
+      "weight": 0.15,
+      "score": 8,
+      "weighted": 1.2,
+      "rationale": "Moat from data network effects; prediction accuracy improves with usage; high switching costs once trust is built."
+    },
+    {
+      "dimension": "Traction",
+      "weight": 0.15,
+      "score": 4,
+      "weighted": 0.6,
+      "rationale": "No traction yet; pilot is planned but not executed."
+    },
+    {
+      "dimension": "Business Model",
+      "weight": 0.1,
+      "score": 6,
+      "weighted": 0.6,
+      "rationale": "Potential for high margins and good unit economics, but unproven; pricing model not specified."
+    },
+    {
+      "dimension": "Competition",
+      "weight": 0.08,
+      "score": 8,
+      "weighted": 0.64,
+      "rationale": "No direct competitors; existing alternatives are inferior or expensive."
+    },
+    {
+      "dimension": "Financials",
+      "weight": 0.05,
+      "score": 5,
+      "weighted": 0.25,
+      "rationale": "No financial data provided; assume lean operations but need to validate."
+    },
+    {
+      "dimension": "Risk Profile",
+      "weight": 0.02,
+      "score": 7,
+      "weighted": 0.14,
+      "rationale": "Technical risk moderate; trust and adoption risk high but mitigable with pilot."
+    }
+  ],
+  "vc_verdict": {
+    "composite_score": 6.33,
+    "verdict": "CONDITIONAL_PASS",
+    "reason": "Needs improvement on: minor gaps",
+    "weak_dims": [],
+    "disqualifying_dims": [],
+    "investor_lenses": {
+      "sequoia": "PASS",
+      "yc": "WATCH",
+      "tiger_global": "WATCH",
+      "risk_mgmt": "MANAGEABLE"
+    },
+    "source": "deterministic_vc_calcs"
+  },
+  "go_no_go": "Go (conditional on pilot success)",
+  "decision": "Proceed with pilot immediately. Set clear milestones and kill criteria based on early results.",
+  "next_experiments": [
+    "Launch 1-month pilot with 5 fishermen from one cooperative to test map accuracy and delivery.",
+    "Iterate on prediction model based on feedback.",
+    "Expand to 50 vessels across 3 cooperatives for 3-month pilot with control group.",
+    "Measure fuel consumption via logs, catch rates, and interview willingness to pay."
+  ],
+  "kill_criteria": [
+    "If after 1 month of pilot, fuel reduction < 10% compared to control.",
+    "If fishermen report maps are not useful or too inaccurate in more than 30% of days.",
+    "If no cooperative manager expresses willingness to pay at least $50/vessel/year.",
+    "If government announces competing free service during pilot."
+  ],
+  "source": "llm",
+  "_iteration_id": "I1",
+  "_iteration_angle": "ORIGINAL",
+  "_iteration_one_liner": "We deliver daily personalized fishing hotspot maps via WhatsApp to artisanal fishermen, using satellite data and their own catch logs to eliminate fuel waste from blind searching."
+}

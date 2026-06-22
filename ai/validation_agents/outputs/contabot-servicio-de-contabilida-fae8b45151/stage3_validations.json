@@ -1,0 +1,649 @@
+[
+  {
+    "idea": "ContaBot - servicio de contabilidad tributaria automatizada para microempresas peruanas",
+    "selected_gap": {
+      "id": "g1",
+      "title": "Manejo contable 100% automático para microempresas",
+      "pain": 9,
+      "why_now": "SUNAT obliga a facturación electrónica y PDT, y el segmento microempresarial paga entre S/200-500/mes a contadores humanos o incurre en multas. No existe un servicio gestionado de extremo a extremo a bajo costo.",
+      "evidence_needed": "Disposición a pagar S/80/mes, viabilidad de integración con APIs SUNAT en producción, precisión del sistema en un piloto con 30 empresas.",
+      "priority": 9,
+      "risk": "Competidores SaaS con recursos (Alegra, QuickBooks) podrían replicar el modelo gestionado; cambios normativos repentinos; errores automáticos con impacto fiscal si la tasa de fallo no es cercana a cero."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "Founder background unknown; success depends on deep domain expertise in tax and SUNAT."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "TAM ~S/192M/year (~2M micro-enterprises); adoption limited by trust and digital literacy."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Pain is high: fines and stress from tax compliance; evidence provided."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Existing SaaS (Alegra, QuickBooks) and human accountants; incumbents have resources but lack managed service."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "No personal story; assumed moderate founder interest."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "SUNAT mandates and API availability make it timely."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 7,
+        "note": "Bench.co and others show automated bookkeeping works; but in different regulatory environments."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "No indication of long-term commitment; assumed."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software scales, but need accuracy and legal compliance checks."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Clear pain, underserved, but crowded; differentiation needed."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is ready to validate; no perfectionism."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 5,
+        "note": "No evidence of single focus."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 9,
+        "note": "Direct SUNAT integration implies deep workflow understanding."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 4,
+        "note": "Primarily rule-based; limited AI differentiation."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Sells 'stress-free compliance'."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Complete replacement of human accountant; ambitious but focused."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "Not applicable yet."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 6,
+        "note": "Accounting is high expertise; micro-enterprises may distrust automation."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 8,
+        "note": "Automated filing process is the core value."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "No evidence of demand validation yet."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 6,
+        "note": "Monthly fee per business; not per outcome."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "COGS includes API costs and support; need to maintain low."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "Built from scratch for automation; not bolted."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Domain (tax), model (automated), operations (filing) all covered."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No data on founder background; success hinges on tax and tech expertise."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "TAM ~$50M, not >$1B; growing if penetration increases."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Moat from workflow integration and trust; technically replicable."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No paying users or pilots mentioned."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 7,
+        "weighted": 0.7,
+        "rationale": "Recurring revenue with high margins; CAC unknown but potential."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "Incumbents (Alegra, QuickBooks) and human accountants; challenging."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 6,
+        "weighted": 0.3,
+        "rationale": "Low burn assumed; early stage, insufficient data."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Regulatory changes and accuracy requirements are high risks."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.13,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Need: (1) Founder domain expertise demonstrated, (2) Pilot with 30 companies achieving >99% accuracy, (3) Evidence of willingness to pay at S/80/month."
+    },
+    "go_no_go": "Conditional - proceed with validation",
+    "decision": "Proceed with caution; require pilot and team strength validation.",
+    "next_experiments": [
+      "Conduct pilot with 30 micro-enterprises to test accuracy and satisfaction.",
+      "Interview founders to assess domain expertise and commitment.",
+      "Test willingness to pay at S/80/month via pre-sales or landing page.",
+      "Monitor regulatory changes from SUNAT."
+    ],
+    "kill_criteria": [
+      "Pilot accuracy < 99% after 3 months.",
+      "No paying customers within 3 months.",
+      "Competitor launches similar managed service with stronger brand.",
+      "Regulatory change breaks automation workflow."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "ContaBot automatiza todo el proceso de declaración mensual ante SUNAT para dueños de microempresas, tomando las facturas desde la API oficial y presentando el PDT sin que toquen un papel."
+  },
+  {
+    "idea": "ContaBot pivot to institutional white-label compliance platform for Peruvian government agencies",
+    "selected_gap": "Manejo contable 100% automático para microempresas",
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 4,
+        "note": "No evidence of founder's deep domain or government procurement experience"
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "Large TAM in microenterprises but institutional buyers add a bottleneck"
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "High pain due to compliance penalties and high manual accounting costs"
+      },
+      {
+        "criterion": "Competition",
+        "score": 5,
+        "note": "Existing SaaS players like Alegra/QuickBooks could replicate or underprice"
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 4,
+        "note": "Founder motivation not demonstrated"
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "SUNAT mandates for e-invoicing and PDT create urgency"
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 5,
+        "note": "Similar managed compliance models exist in other LATAM markets, but not proven"
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Assuming founder dedication, but no evidence yet"
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Institutional model could scale via government contracts"
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Addressing a real, underserved need with a novel buyer approach"
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Pivot from micro direct sales to institutional shows action bias"
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Single focus on this model, but risk of spreading across multiple agencies"
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Integration with SUNAT APIs is necessary but depth of user needs unclear"
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "AI accounting engine automates classification and compliance"
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Compliance-as-a-service directly addresses pain of fines and filing"
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Targeting government-scale distribution is ambitious"
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No evidence of iterative learning from prior attempts"
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Tax compliance is high-expertise and trust-dependent, good moat"
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "Automated filing pipeline is a key part of the value"
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "Government sales cycles are long; risk of false early demand"
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 8,
+        "note": "Per-entity fee aligns with value per microenterprise"
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "AI engine marginal cost low, but integration and compliance updates cost"
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "Built from ground up for automation, not wrapping legacy system"
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Requires deep tax knowledge and operational ties to government"
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 3,
+        "weighted": 0.75,
+        "rationale": "No information on founder experience in Peruvian government or accounting tech"
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "TAM for microenterprise accounting in Peru is several hundred million, but institutional sales funnel is narrow"
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Defensibility via deep SUNAT integration and proprietary rules engine"
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No pilot, LOI, or waitlist; purely conceptual at this stage"
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 7,
+        "weighted": 0.7,
+        "rationale": "Potential for high LTV:CAC with long-term government contracts and low COGS"
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Funded incumbents like Alegra and QuickBooks have resources to replicate managed service"
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "Burn rate and runway unknown; assumed reasonable but no data"
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Regulatory risk from SUNAT policy changes and high cost of error in tax filing"
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.67,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": ""
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Decline investment at this stage due to missing team and traction. Recommend founder demonstrates domain expertise and secures a pilot with at least one government agency or trade association before resubmitting.",
+    "next_experiments": [
+      "Interview 10 procurement officers at SUNAT or Ministry of Production to understand buying process and willingness to pay",
+      "Build a prototype that ingests SUNAT e-invoices from a handful of microenterprises and validates classification accuracy",
+      "Seek a letter of intent from one trade association to pilot with 30-100 member businesses"
+    ],
+    "kill_criteria": [
+      "No LOI or pilot commitment from any institution after 3 months",
+      "Inability to achieve >95% accuracy on expense categorization for a sample of 1000 invoices",
+      "Discovery that government procurement process requires >12 months of sales cycle with no accelerated path"
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We provide an AI-driven tax compliance platform for Peruvian institutions to automate accounting and filing for microenterprises at scale."
+  },
+  {
+    "idea": "ContaBot: Automatización contable 100% para bodegas limeñas que emiten >50 facturas electrónicas/mes.",
+    "selected_gap": {
+      "id": "g1",
+      "title": "Manejo contable 100% automático para microempresas",
+      "pain": 9,
+      "why_now": "SUNAT obliga a facturación electrónica y PDT, y el segmento microempresarial paga entre S/200-500/mes a contadores humanos o incurre en multas. No existe un servicio gestionado de extremo a extremo a bajo costo.",
+      "evidence_needed": "Disposición a pagar S/80/mes, viabilidad de integración con APIs SUNAT en producción, precisión del sistema en un piloto con 30 empresas.",
+      "priority": 9,
+      "risk": "Competidores SaaS con recursos (Alegra, QuickBooks) podrían replicar el modelo gestionado; cambios normativos repentinos; errores automáticos con impacto fiscal si la tasa de fallo no es cercana a cero."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No se detalla experiencia del founder, pero la validación con 10 bodegas sugiere conocimiento tácito."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "Mercado de bodegas en Lima es grande (~50k+), pero ARPU bajo (S/79/mes). TAM estimado <$50M."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Multas de S/300-500 vs. precio del servicio S/79; dolor alto y recurrente."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Existen contadores humanos y software tipo Alegra, pero no un servicio totalmente automatizado y gestionado para microempresas."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 7,
+        "note": "El founder parece motivado, invirtió tiempo en construir la solución y validar."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Obligación SUNAT de facturación electrónica y PDT + madurez de APIs e IA hacen posible la automatización."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Existen SaaS contables exitosos, pero enfocados en PYMES más grandes; el nicho micro no tiene un líder claro."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 8,
+        "note": "El mercado requiere persistencia; se asume compromiso del founder."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Producto de software escalable, pero la adquisición de muchos clientes de bajo ticket requiere canales eficientes."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Automatización de contabilidad para microempresas es una oportunidad clara y poco explotada."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 9,
+        "note": "Ya iniciaron con 10 bodegas en prueba gratuita."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 8,
+        "note": "Enfoque en una sola idea; no hay evidencia de dispersión."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 9,
+        "note": "Integración con SUNAT y automatización completa del proceso contable."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "Usa IA para categorizar gastos, pero la diferenciación principal es la automatización del flujo."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Venden tranquilidad y cumplimiento sin multas, no solo un software."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 6,
+        "note": "Se limitan a bodegas limeñas; podrían expandirse a otros microempresas."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 7,
+        "note": "El piloto de 30 días generará datos sobre disposición a pagar y fricciones."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Contabilidad para microempresas requiere confianza y conocimiento tributario; la automatización lo reemplaza."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 9,
+        "note": "El proceso automatizado de principio a fin es el producto mismo."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Prueba gratuita puede generar señales falsas; falta medir pago real."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 5,
+        "note": "Precio fijo mensual, no atado al resultado o volumen de facturas."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 8,
+        "note": "Bajo costo marginal por cliente al ser software; las APIs SUNAT son gratuitas."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Construido desde cero para automatización, no añadido a un proceso manual."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 8,
+        "note": "Conocimiento de normativa peruana, modelo de IA y operaciones de extracción de datos."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No se proporciona perfil del founder; la ejecución inicial sugiere capacidad pero es insuficiente para ser única."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "TAM limitado (<$50M); ARPU bajo; crecimiento moderado."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Defensa inicial por integración SUNAT, pero replicable por competidores con recursos."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 4,
+        "weighted": 0.6,
+        "rationale": "Solo prueba gratuita con 10 negocios; aún no hay ingresos ni conversión validada."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 7,
+        "weighted": 0.7,
+        "rationale": "S/79/mes con márgenes altos; LTV:CAC >3x posible si retención es buena."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "Alegra/QuickBooks pueden bajar al nicho; contadores freelance compiten en precio."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 6,
+        "weighted": 0.3,
+        "rationale": "No se detalla burn; se asume lean, pero riesgo de efectivo en etapa temprana."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Alto riesgo regulatorio (cambios SUNAT) y de error automático con consecuencias fiscales."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.05,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": [
+        "Demostrar disposición a pago de al menos 5 de los 10 pilotos (50% conversión) en la siguiente semana.",
+        "Reducir tasa de error del sistema a <1% en un piloto ampliado a 30 bodegas.",
+        "Validar que el CAC vía canales orgánicos (boca a boca, redes) sea menor a S/100 por cliente."
+      ]
+    },
+    "go_no_go": {
+      "decision": "GO with caution",
+      "reasoning": "El composite de 5.05 indica potencial pero con riesgos significativos. La tracción inicial y el dolor alto justifican continuar, pero se requieren milestones claros para avanzar."
+    },
+    "next_experiments": [
+      "Finalizar el piloto de 30 días con las 10 bodegas y medir cuántas están dispuestas a pagar S/79/mes.",
+      "Si <5 pagan, entrevistar a los que no para entender barreras (precio, confianza, funcionalidad).",
+      "Ampliar piloto a 30 bodegas, midiendo precisión del sistema y satisfacción.",
+      "Probar un esquema de precios basado en resultados (ej. % de multas evitadas) vs. tarifa fija."
+    ],
+    "kill_criteria": [
+      "Menos del 30% de los pilotos dispuestos a pagar después de la prueba gratuita.",
+      "Tasa de error del sistema >5% en la clasificación de facturas o generación de PDT.",
+      "Imposibilidad de escalar la extracción de datos de SUNAT por limitaciones técnicas o legales.",
+      "Aparición de un competidor directo con financiamiento que ofrezca servicio gratuito o más barato."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "Servicio contable 100% automático para bodegas que necesitan cumplir con SUNAT sin esfuerzo, por S/79/mes."
+  }
+]

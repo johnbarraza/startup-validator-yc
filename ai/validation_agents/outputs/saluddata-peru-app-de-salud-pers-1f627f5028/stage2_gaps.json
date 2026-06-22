@@ -1,0 +1,62 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": "GAP-02",
+      "title": "Digitalización automatizada de boletas de farmacia peruanas",
+      "pain": "Alta",
+      "why_now": "La madurez del OCR y la ubicuidad de smartphones con cámara permiten capturar datos de comprobantes locales, eliminando la tediosa entrada manual sin competencia en el mercado.",
+      "evidence_needed": "Test de precisión con 100 boletas de cadenas como MiFarma e InkaFarma; medición de tiempo ahorrado vs registro manual; encuesta de satisfacción con 50 usuarios.",
+      "rank": 1,
+      "risk": "Bajo"
+    },
+    {
+      "id": "GAP-01",
+      "title": "Propiedad y portabilidad de datos de salud personales",
+      "pain": "Alta",
+      "why_now": "Creciente conciencia sobre privacidad digital y frustración con portales de EPS que no entregan control al paciente. Nueva regulación de datos personales en Perú (Ley N° 29733) crea marco favorable.",
+      "evidence_needed": "Entrevistas cualitativas con 15 pacientes afiliados a EPS para entender dolor actual; encuesta de disposición a usar una app que consolide y permita exportar su historial.",
+      "rank": 2,
+      "risk": "Medio"
+    },
+    {
+      "id": "GAP-03",
+      "title": "Alertas personalizadas de riesgo de enfermedades crónicas localizadas",
+      "pain": "Alta",
+      "why_now": "Alta prevalencia de hipertensión, diabetes y anemia en Perú; EPS buscan reducir costos por complicaciones evitables. No existen herramientas preventivas adaptadas a perfiles de riesgo locales.",
+      "evidence_needed": "Validación clínica con un conjunto de datos anonimizados de 500 pacientes; medición de engagement con alertas en piloto controlado; feedback de médicos sobre utilidad predictiva.",
+      "rank": 3,
+      "risk": "Alto"
+    },
+    {
+      "id": "GAP-04",
+      "title": "Comparador de precios de medicamentos integrado con historial",
+      "pain": "Media",
+      "why_now": "El gasto de bolsillo en medicamentos es alto en Perú y existe volatilidad de precios entre cadenas. Farmaprecio no ofrece integración con datos personales ni alertas proactivas.",
+      "evidence_needed": "Análisis de variación de precios en tiempo real para 20 medicamentos de alta rotación; test A/B con usuarios para medir tasa de cambio de farmacia inducida por alertas de ahorro.",
+      "rank": 4,
+      "risk": "Bajo"
+    },
+    {
+      "id": "GAP-06",
+      "title": "Integración con el ecosistema de salud local (EPS, clínicas)",
+      "pain": "Alta",
+      "why_now": "Esfuerzos gubernamentales por interoperabilidad (PEIS) y demanda de pacientes por evitar retipeos. Ningún jugador ofrece conectividad bidireccional con sistemas de EPS y clínicas.",
+      "evidence_needed": "Entrevistas con CIOs de 3 EPS para evaluar APIs disponibles y disposición a colaborar; mapeo de procesos actuales de transferencia de datos en 5 clínicas; prototipo de integración FHIR.",
+      "rank": 5,
+      "risk": "Medio"
+    },
+    {
+      "id": "GAP-05",
+      "title": "Análisis y reportes poblacionales para EPS y farmacias",
+      "pain": "Media",
+      "why_now": "Las EPS necesitan datos de adherencia y comportamiento para programas de prevención, pero carecen de fuentes externas confiables. Farmacias buscan perfiles de consumo para fidelización.",
+      "evidence_needed": "Piloto de 3 meses con una EPS para compartir datos agregados anonimizados y medir impacto en tasas de intervención temprana; encuesta de disposición a pagar por insights.",
+      "rank": 6,
+      "risk": "Medio"
+    }
+  ],
+  "recommended_gap_id": "GAP-02",
+  "checkpoint_instruction": "Valida la brecha de OCR construyendo un prototipo simple de captura móvil y probándolo con 20 usuarios de Lima. Mide precisión, tiempo de captura y percepción de utilidad frente al registro manual. Determina si los usuarios estarían dispuestos a cambiar sus métodos actuales.",
+  "source": "llm"
+}

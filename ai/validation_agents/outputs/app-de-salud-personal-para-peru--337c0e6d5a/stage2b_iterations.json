@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "[ORIGINAL] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+      "target_customer": "To be defined through user interviews.",
+      "core_problem": "To be validated through behavioral interviews.",
+      "solution_hook": "To be determined after problem validation.",
+      "why_this_angle": "Refine and sharpen the founder's original idea. Keep the same customer and problem but make the one-liner crisper, the pain more behavioral, and the wedge narrower.",
+      "quick_score": {
+        "problem_acuity": 5,
+        "market_size": 5,
+        "founder_feasibility": 5,
+        "total": 15
+      },
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "[PIVOT_B2B] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+      "target_customer": "To be defined through user interviews.",
+      "core_problem": "To be validated through behavioral interviews.",
+      "solution_hook": "To be determined after problem validation.",
+      "why_this_angle": "Reframe the same core problem for an institutional or B2B buyer: a university, employer, government agency, trade association, or distributor who has budget and urgency. The end user may be the same but the buyer and pricing model should change.",
+      "quick_score": {
+        "problem_acuity": 5,
+        "market_size": 5,
+        "founder_feasibility": 5,
+        "total": 15
+      },
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "[PIVOT_WEDGE] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+      "target_customer": "To be defined through user interviews.",
+      "core_problem": "To be validated through behavioral interviews.",
+      "solution_hook": "To be determined after problem validation.",
+      "why_this_angle": "Find the narrowest, sharpest slice of the problem that one specific micro-segment suffers most acutely right now. Ignore scale — optimize for fastest evidence of willingness to pay from 10 real users in the next 30 days.",
+      "quick_score": {
+        "problem_acuity": 5,
+        "market_size": 5,
+        "founder_feasibility": 5,
+        "total": 15
+      },
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "",
+  "source": "parallel_iteration"
+}

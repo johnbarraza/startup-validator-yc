@@ -1,0 +1,62 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": "gap1",
+      "title": "Mining-Specific Natural Language Vibration Diagnosis",
+      "pain": "Maintenance teams struggle to translate complex vibration data and dashboards into actionable maintenance decisions, leading to delayed responses and reliance on scarce expert analysts.",
+      "why_now": "Advances in NLP make it technically feasible to generate domain-specific, clear recommendations, while established mining vibration providers (e.g., Bently Nevada) still rely on rule-based outputs and pure-play AI startups (e.g., Augury) are just beginning to enter mining.",
+      "evidence_needed": "Customer discovery with mining maintenance managers to quantify time lost interpreting data and gauge willingness to pay for explainable NLP outputs; competitive analysis of Augury's mining traction.",
+      "priority": "high",
+      "risk": "Augury accelerates mining deployment with its strong NLP and funding; incumbents may add NLP features to existing dashboards."
+    },
+    {
+      "id": "gap2",
+      "title": "Lightweight Edge-Native PdM for Remote Sites",
+      "pain": "Remote mines often lack reliable connectivity, causing latency or failure in cloud-based predictive maintenance, yet many solutions assume constant cloud access.",
+      "why_now": "Edge computing hardware is increasingly affordable and powerful, enabling on-site processing of vibration data and real-time NLP recommendations without connectivity dependence.",
+      "evidence_needed": "Pilot deployment at a mine with intermittent connectivity to measure impact on uptime and maintenance response time; analysis of connectivity costs and downtime losses.",
+      "priority": "medium",
+      "risk": "Hardware integration complexity and maintenance overhead; satellite IoT solutions may reduce connectivity gaps."
+    },
+    {
+      "id": "gap3",
+      "title": "Integrated Vibration and Process Data Recommendations",
+      "pain": "Vibration data alone is often insufficient to diagnose root causes; maintenance teams need correlated context from process parameters, but current tools treat them in silos.",
+      "why_now": "Increasing sensorization in mining provides access to rich process data, and AI can fuse these streams for more accurate, holistic diagnostics.",
+      "evidence_needed": "Case studies from mining operations where vibration-only diagnostics failed; assessment of data integration challenges and improvement in recommendation accuracy from fusion.",
+      "priority": "medium-high",
+      "risk": "Data integration is technically complex and requires buy-in from multiple equipment vendors; incumbents may leverage existing platform breadth to add fusion."
+    },
+    {
+      "id": "gap4",
+      "title": "Bridging the Skills Gap with Explainable AI",
+      "pain": "The mining industry faces a severe shortage of experienced vibration analysts; junior technicians lack the expertise to interpret advanced analytics, slowing adoption of predictive maintenance.",
+      "why_now": "Aging workforce and declining vocational expertise create an urgent need for AI that not only predicts but educates and guides less-experienced staff.",
+      "evidence_needed": "Interviews with training managers and HR at mining companies to quantify skills gap; user testing of prototype NLP recommendations with technicians to measure comprehension and trust.",
+      "priority": "high",
+      "risk": "Over-reliance on AI recommendations may reduce attention to unusual scenarios; user trust must be carefully built."
+    },
+    {
+      "id": "gap5",
+      "title": "Pre-Built Mining Asset Model Library with Explainability",
+      "pain": "Deploying predictive maintenance on mining-specific assets (mills, crushers, haul trucks) requires extensive custom modeling, causing months of delay and high consulting costs.",
+      "why_now": "Few vendors offer out-of-the-box, explainable models tuned for common mining assets; a library of pre-built models dramatically accelerates time-to-value.",
+      "evidence_needed": "Benchmark deployment time and cost for custom PdM models versus a pre-built library; surveys with mining operations on willingness to adopt off-the-shelf models vs. bespoke.",
+      "priority": "high",
+      "risk": "Mining asset diversity may limit the transferability of pre-built models; competitors may build similar libraries from accumulated data."
+    },
+    {
+      "id": "gap6",
+      "title": "Compliance-Ready PdM with Audit Trail",
+      "pain": "Regulatory and safety standards increasingly require documented evidence of maintenance decisions; most PdM tools generate alerts without transparent reasoning logs suitable for audits.",
+      "why_now": "ESG pressures and stricter mining regulations demand justifiable, explainable maintenance actions to avoid penalties and demonstrate due diligence.",
+      "evidence_needed": "Review of regulatory requirements in key mining jurisdictions; interviews with safety and compliance officers to assess current pain in audit preparation.",
+      "priority": "medium",
+      "risk": "May be perceived as a nice-to-have rather than a must-have by maintenance teams; requires close alignment with evolving regulations."
+    }
+  ],
+  "recommended_gap_id": "gap1",
+  "checkpoint_instruction": "Conduct 5–10 structured interviews with mining maintenance managers to validate time spent interpreting vibration dashboards, quantify the cost of misdiagnosis, and test willingness to pay for NLP-generated recommendations. Build a minimal prototype of vibration-to-text pipeline using publicly available bearing datasets and a pre-trained LLM to demonstrate mining-specific explainability.",
+  "source": "llm"
+}

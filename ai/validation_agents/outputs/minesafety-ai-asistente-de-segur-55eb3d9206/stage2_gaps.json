@@ -1,0 +1,71 @@
+{
+  "research_source": "Competitive analysis of EHS and mining safety software market in Latin America, highlighting manual processes, generic checklist apps, large EHS platforms, and specialized mining safety technologies, with gaps in AI-driven field reporting and risk prioritization.",
+  "gaps": [
+    {
+      "id": "gap-1",
+      "title": "Voice-to-text field report transcription for mining",
+      "pain": "High – Contractors and HSE teams spend hours manually writing reports after inspections. Voice data is lost, leading to incomplete records and delayed risk identification.",
+      "why_now": "Advancements in NLP and mobile edge AI enable real-time, accurate transcription even in low-connectivity mining environments. Existing solutions do not integrate voice with checklist workflows.",
+      "evidence_needed": "Time-and-motion study comparing manual vs. voice-based reporting; interviews with mine HSE managers about pain points.",
+      "priority": 1,
+      "risk": "Technical – Accuracy in noisy mining environments and Spanish/Portuguese dialects. Competition from generic voice apps entering the space."
+    },
+    {
+      "id": "gap-2",
+      "title": "AI-based severity classification and risk prioritization from checklists",
+      "plain": "High – Current checklist tools only store data; they don't analyze it to surface critical risks. Supervisors manually review hundreds of forms to find urgent issues.",
+      "why_now": "LLMs and classification models can now parse unstructured field notes and rank hazards by severity, enabling proactive interventions before incidents occur.",
+      "evidence_needed": "Historical incident data to train/test severity models; feedback from safety professionals on desired prioritization logic.",
+      "priority": 2,
+      "risk": "Market – Incumbent EHS platforms may add similar features quickly. Defensibility requires deep mining-specific data and workflows."
+    },
+    {
+      "id": "gap-3",
+      "title": "Lightweight, contractor-focused safety assistant",
+      "pain": "Critical – Mining contractors (often small, with limited budgets) struggle with complex, expensive EHS suites. They need a simple, mobile-only tool that integrates with client systems.",
+      "why_now": "Growing outsourced operations in Latin American mining increase contractor safety responsibility. No solution tailors to their unique multi-client, transient workforce needs.",
+      "evidence_needed": "Surveys and interviews with contractor safety managers; analysis of contractor incidents vs. direct employees.",
+      "priority": 3,
+      "risk": "Go-to-market – Contractors have low willingness to pay; requires volume or integration with mine operator procurement mandates."
+    },
+    {
+      "id": "gap-4",
+      "title": "Offline-first mobile digitalization for remote sites",
+      "pain": "High – Many mining areas lack reliable internet. Safety checks and reports done on paper or spreadsheets due to connectivity failures, causing data loss and sync delays.",
+      "why_now": "Mobile storage and sync technologies (e.g., CRDTs) are mature enough to support seamless offline use with bi-directional sync, but no safety tool leverages them.",
+      "evidence_needed": "Technical feasibility test in simulated offline conditions; pilot with a mine using satellite internet to measure sync success.",
+      "priority": 4,
+      "risk": "Technical – Sync conflicts and data integrity in multi-user environments; user acceptance of offline workflows."
+    },
+    {
+      "id": "gap-5",
+      "title": "Predictive risk analytics from field data",
+      "pain": "Medium – HSE managers lack tools to forecast where and when incidents are likely to occur based on trends in checklist observations and near-misses.",
+      "why_now": "Mature machine learning models (e.g., time series, NLP) can identify patterns from unstructured safety data, but current platforms offer only descriptive analytics.",
+      "evidence_needed": "Longitudinal data from mines to validate predictive accuracy; stakeholder buy-in on prophylactic actions.",
+      "priority": 5,
+      "risk": "Data availability – Requires significant historical data and continuous input; may expose sensitive safety performance metrics."
+    },
+    {
+      "id": "gap-6",
+      "title": "Automated regulatory compliance mapping for mining safety",
+      "pain": "Medium – EHS teams manually cross-reference local regulations (e.g., Sernageomin, ANM) with safety findings, leading to compliance gaps and penalties.",
+      "why_now": "NLP can parse regulation documents and automatically tag checklist items to applicable rules, generating compliance dashboards. No tool does this for Latin America.",
+      "evidence_needed": "Regulation corpora for major mining countries; interviews with compliance officers on interpretation challenges.",
+      "priority": 6,
+      "risk": "Regulatory – Laws change frequently; maintenance burden. Niche appeal may limit market size."
+    },
+    {
+      "id": "gap-7",
+      "title": "Integrated voice + vision for hands-free hazard reporting",
+      "pain": "Medium – Workers using wearable cameras or smart PPE (e.g., Guardhat) still need to manually tag findings. Combining voice and visual data with AI could automate entire inspection narratives.",
+      "why_now": "Maturation of multimodal AI and edge processing on helmets/glasses allows real-time hazard captioning and logging without stopping work.",
+      "evidence_needed": "Prototype testing with existing smart PPE users; ergonomic studies on voice interaction acceptance.",
+      "priority": 7,
+      "risk": "Hardware dependency – Relies on third-party wearables with limited adoption; development cost high."
+    }
+  ],
+  "recommended_gap_id": "gap-1",
+  "checkpoint_instruction": "Conduct a 2-week pilot with three mining contractors in Chile to measure time savings and report completeness using a prototype voice-to-text checklist app, focusing on Spanish dialect accuracy and offline sync reliability.",
+  "source": "llm"
+}

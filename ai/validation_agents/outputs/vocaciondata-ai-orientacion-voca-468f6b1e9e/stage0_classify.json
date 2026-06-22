@@ -1,0 +1,32 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "EdTech",
+  "customer_type": "B2B2C",
+  "problem_severity": "RECURRING",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "Market size is dramatically smaller than it appears: 70-75% informality means most students and families have no formal career trajectory to optimize, and the paying segment (formal private schools, upper-middle class) is tiny in Peru alone.",
+    "Long sales cycles and buyer misalignment: Selling to schools requires convincing directors (who control budget) but the pain is felt by students and counselors. Government schools face 6-18 month procurement cycles and rigid budgets; private schools have low WTP for non-core services.",
+    "Free substitutes already cover the need: MINEDU's 'Ponte en Carrera' portal provides salary and employability data for free. WhatsApp-based career advice groups, Google Forms surveys, and human counselors already serve the market adequately without cost.",
+    "Payment blocker: Individuals cannot afford subscription fees (S/50-200/month is unrealistic for 36% below $8.30/day). Even institutional pricing (S/500-2000/month) is steep for most schools; payment via Yape/Plin requires high friction conversion.",
+    "Hardest assumption: That data-driven career decisions matter in an economy where most jobs are informal and connections/networks dominate hiring. The AI's value proposition is weakened when 'good careers' are often low-skill informal jobs with no data trail."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual research, forums, counselors)",
+    "Spending already happens on imperfect solutions (career counseling fees)",
+    "Recurring pain (annual career decisions for students)",
+    "Measurable cost (wrong career choices lead to lost income)"
+  ],
+  "classification_rationale": "The idea solves a real, recurring problem for Peruvian students making career decisions. Active workarounds and existing spending validate the pain. However, monetization is challenging given low WTP in Peru; a B2B2C model targeting universities may be viable but requires validation. One red flag: unclear immediate buyer payment path.",
+  "proceed_recommendation": "ABORT",
+  "suggested_pivot": "",
+  "freemium_recommendation": "YES",
+  "freemium_rationale": "Free basic guidance for students builds trust and usage; premium features (detailed reports, counselor access) can be monetized via schools or individual payments. Given low B2C WTP in Peru, freemium lowers adoption barriers and allows institutional upsell.",
+  "devil_verdict": "FATAL",
+  "payment_blocker": "Individuals have extremely low WTP due to high poverty and informality; schools have tight budgets and slow procurement (6-18 month cycles) with no dedicated line item for vocational guidance software.",
+  "free_substitute_risk": "MINEDU's 'Ponte en Carrera' portal provides free salary and employment data; Google Forms + WhatsApp groups offer crowd-sourced advice. Human career counselors at schools already provide guidance for free.",
+  "market_size_reality_check": "Realistic paying market in Peru: ~500 private schools (top tier) at S/500-1000/year each = S/250K-500K ($67K-135K) revenue potential. Plus 5,000-10,000 individual students from high-income families willing to pay S/50-100/year = another S/500K. Total <$200K/year, insufficient for venture scale without regional expansion.",
+  "hardest_assumption": "That students and parents will pay for AI career guidance when free alternatives exist and when career decisions in an informal economy are driven by immediate survival rather than long-term data analysis.",
+  "devil_rationale": "The idea solves a real problem but cannot achieve venture-scale returns in Peru due to tiny paying market, free government substitutes, and long institutional sales cycles. Without a clear path to $1M+ ARR in 3-4 years, it is a feature, not a startup.",
+  "source": "dual_agent_classification"
+}

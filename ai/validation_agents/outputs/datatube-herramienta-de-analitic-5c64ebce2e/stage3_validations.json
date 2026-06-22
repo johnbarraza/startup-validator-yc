@@ -1,0 +1,647 @@
+[
+  {
+    "idea": "DataTube is an analytics platform for serious YouTube creators that correlates speech rhythm, pauses, and vocal energy with audience drop-offs using video transcripts and retention data, turning retention data into a voice coaching dashboard.",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "Voice-to-Retention Correlation Analytics",
+      "pain": "Creators manually review retention graphs but cannot link drops to specific speech patterns, missing actionable insights to improve pacing, pauses, and delivery.",
+      "why_now": "AI transcription and speech analysis are mature, YouTube API provides second-by-second retention data, enabling direct correlation for the first time.",
+      "evidence_needed": "Prototype that overlays pacing, filler words, and silence patterns on retention curves for 50 videos; measure user-reported time saved and retention lift in A/B tests.",
+      "priority": 1,
+      "risk": "High – Descript or YouTube Studio could quickly integrate similar correlation features if they invest in R&D."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No information provided about founders' background in YouTube analytics or speech analysis."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "Large market of serious YouTube creators, but voice analytics is a niche subsegment."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 6,
+        "note": "Pain is real but not the top priority compared to thumbnails, titles, and content topics."
+      },
+      {
+        "criterion": "Competition",
+        "score": 4,
+        "note": "High risk from incumbents like Descript and YouTube Studio who can easily add similar features."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "No personal connection or passion evident from the description."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "AI transcription and YouTube API now allow this correlation, making it timely."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar tools for podcasters exist but not directly comparable; Descript is a partial proxy."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Potential to build a long-term platform if defensible moat is established."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 8,
+        "note": "Software product with high scalability to many creators."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Interesting but crowded space; differentiation is key."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is actionable and can be tested quickly."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Requires focused commitment to one idea."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Need deeper understanding of creator editing workflow."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Core AI component for speech analysis and correlation."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Positioned as optimizing watch time and revenue."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Ambitious to be the voice coaching dashboard for creators."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 7,
+        "note": "Drop-off analysis provides learning data."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 6,
+        "note": "Creators trust data but may be skeptical of new tools."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "The analysis process itself is valuable."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Need to validate demand before building full product."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Could price per video or subscription per creator."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "AI compute costs need to be managed."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "New tool, not adding to legacy system."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Requires expertise in speech analysis and YouTube ecosystem."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No information on founders' domain expertise or track record."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "TAM likely >$1B if serious creators, but voice analytics is a smaller segment."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 5,
+        "weighted": 0.75,
+        "rationale": "Defensibility is low; incumbents can replicate core features."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No prototype or user validation provided."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "SaaS model with high margins possible, but LTV:CAC unproven."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Funded incumbents like Descript and YouTube Studio pose significant threat."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No financial data; typical burn rate for AI startup is high."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "High risk of being copied or becoming a feature."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.9,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Do not pursue at this stage due to lack of defensibility and traction. Consider pivoting to a more differentiated offering or gathering stronger evidence of demand.",
+    "next_experiments": [
+      "Build a prototype with 10 test creators to validate that speech patterns cause drop-offs.",
+      "Conduct customer interviews to assess willingness to pay and feature priority.",
+      "Analyze Descript and YouTube Studio APIs to assess feasibility of integration."
+    ],
+    "kill_criteria": [
+      "No significant retention lift observed in A/B tests after 50 videos.",
+      "Less than 20% of interviewed creators willing to pay >$20/month.",
+      "Descript or YouTube Studio announces similar feature before launch."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "DataTube connects speech analytics to retention graphs so YouTube creators can see exactly how their vocal delivery hurts audience retention."
+  },
+  {
+    "idea": "DataTube Enterprise: An analytics platform that correlates speech patterns in institutional video content with viewer retention across an entire organization's video library.",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "Voice-to-Retention Correlation Analytics",
+      "pain": "Creators manually review retention graphs but cannot link drops to specific speech patterns, missing actionable insights to improve pacing, pauses, and delivery.",
+      "why_now": "AI transcription and speech analysis are mature, YouTube API provides second-by-second retention data, enabling direct correlation for the first time.",
+      "evidence_needed": "Prototype that overlays pacing, filler words, and silence patterns on retention curves for 50 videos; measure user-reported time saved and retention lift in A/B tests.",
+      "priority": 1,
+      "risk": "High – Descript or YouTube Studio could quickly integrate similar correlation features if they invest in R&D."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No specific founder background given; assumes ability to build but lacks domain expertise in video production or enterprise learning."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "Enterprise video content is large (training, internal comms) but not all organizations have high-volume video libraries; TAM in billions, but SAM narrower."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Real pain for video creators who cannot pinpoint why retention drops; current workaround is manual trial-and-error."
+      },
+      {
+        "criterion": "Competition",
+        "score": 3,
+        "note": "High risk from incumbents (Descript, YouTube Studio, Panopto) that could add similar features; barrier to entry is moderate."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 4,
+        "note": "Unclear if the founder personally experiences this pain; idea seems derived from market analysis rather than personal frustration."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 9,
+        "note": "AI transcription and speech analysis are mature; YouTube API provides granular retention data; timing is right."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Tools like Otter.ai and Descript show demand for speech analytics; but direct retention correlation is unproven in enterprise."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Building a sustainable analytics platform in this niche requires long-term investment in integrations and data models."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 8,
+        "note": "Software product with cloud deployment can scale across many organizations; network effects possible from aggregated benchmarks."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "B2B analytics in a growing video content market; defensible if proprietary correlation algorithms emerge from usage data."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "Idea is specific and actionable; founder should build prototype rather than over-analyze."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 5,
+        "note": "High competition risk means founder may need multiple pivots; commitment to one approach could be risky."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "The product integrates directly into video creation and review workflow; deep understanding of creator pain points needed."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 9,
+        "note": "Uses latest speech AI and retention data; improvements in models will directly enhance product."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Potential to sell 'improved retention/learning outcomes' rather than just analytics dashboard."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 6,
+        "note": "Scope is moderate: solving one specific correlation problem, not transforming entire video workflow."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 4,
+        "note": "No clear plan to learn from failed experiments; risk of binary success/failure mindset."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Enterprise learning and development requires trust; domain expertise in video production is a moat."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 5,
+        "note": "Value is in the analysis output, not the process itself; could be commoditized."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Risk of building for early adopters who may not represent mainstream enterprise buyers."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 8,
+        "note": "Could price per video analyzed or per retention improvement; aligns with value."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 4,
+        "note": "AI API costs and compute could erode margins if not optimized; need to keep COGS low."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 9,
+        "note": "Native AI product, not an add-on to existing video platforms; clean architecture."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Requires expertise in speech AI, video analytics, and enterprise sales; founder likely lacks all three."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No specific founder credentials given; assumes technical ability but lack of domain expertise in enterprise video or learning is a risk."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "Enterprise video content market is large and growing, but TAM may be <$1B until broader adoption of video analytics in training."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Defensible moat is uncertain; correlation algorithm could be copied; network effects via aggregated data are possible but unproven."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of customers, waitlist, or pilots; only stated need for prototype validation of 50 videos."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "SaaS pricing with high potential margins if COGS controlled; but LTV:CAC unknown and enterprise sales cycles could be long."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 3,
+        "weighted": 0.24,
+        "rationale": "Incumbents like Descript and YouTube Studio could integrate similar features quickly; differentiation is weak."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 4,
+        "weighted": 0.2,
+        "rationale": "No financial data; assumed lean burn, but AI API costs could escalate; need clear unit economics."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 3,
+        "weighted": 0.06,
+        "rationale": "Realistic failure mode: incumbents add feature, or enterprise buyers prefer bundled solutions; high execution risk."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.95,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO-GO",
+    "decision": "Idea currently insufficient evidence and high competitive risk; revisit after prototype demonstrates differentiated ROI.",
+    "next_experiments": [
+      "Build a prototype correlating speech features with retention data for 50 internal L&D videos; measure actionable insights per creator.",
+      "Interview 10 video producers in large enterprises; validate pain and willingness to pay for the correlation.",
+      "Analyze unit costs of AI transcription/speech analysis per video and model breakeven pricing."
+    ],
+    "kill_criteria": [
+      "Incumbent releases comparable feature within 6 months.",
+      "Less than 40% of interviewed buyers express strong interest (top 2 box on purchase intent).",
+      "Correlation accuracy fails to provide significantly better recommendations than simple heuristic baselines."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We help universities and corporate training departments improve video engagement by correlating speech patterns with viewer retention, using AI-driven voice analytics."
+  },
+  {
+    "idea": "DataTube: Voice analytics for educational YouTubers to correlate speech patterns with retention drops.",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "Voice-to-Retention Correlation Analytics",
+      "pain": "Creators manually review retention graphs but cannot link drops to specific speech patterns, missing actionable insights to improve pacing, pauses, and delivery.",
+      "why_now": "AI transcription and speech analysis are mature, YouTube API provides second-by-second retention data, enabling direct correlation for the first time.",
+      "evidence_needed": "Prototype that overlays pacing, filler words, and silence patterns on retention curves for 50 videos; measure user-reported time saved and retention lift in A/B tests.",
+      "priority": 1,
+      "risk": "High – Descript or YouTube Studio could quickly integrate similar correlation features if they invest in R&D."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 4,
+        "note": "Founder background unknown; no evidence of deep creator experience."
+      },
+      {
+        "criterion": "Market size",
+        "score": 3,
+        "note": "Niche micro-segment; TAM likely <$100M."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 6,
+        "note": "2-3 hours wasted per video is painful, but creators may deprioritize."
+      },
+      {
+        "criterion": "Competition",
+        "score": 4,
+        "note": "High risk from Descript, YouTube Studio, and other video analytics tools."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 4,
+        "note": "No founder personal connection stated."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "AI transcription and API data make this newly feasible."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 5,
+        "note": "Similar tools exist for thumbnails/SEO but not voice; uncertain adoption."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Problem persists and could expand to other creator niches."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 5,
+        "note": "Software scales but small market limits upside."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Interesting intersection of voice analytics and creator tools."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 5,
+        "note": "Idea is well-formed but still abstract; need to go to market."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 6,
+        "note": "Assumes founder will focus solely on this."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Strong alignment with creator's pain and manual process."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "Voice analytics is an emerging AI application."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Reports provide actionable retention improvements."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 6,
+        "note": "Could expand beyond programming tutorials, but initial niche is narrow."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "Not explicitly considered; assume iterative learning."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 6,
+        "note": "Creators trust data; high expertise in video production."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 5,
+        "note": "Product is a report; process not deeply embedded."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Possible demand but not yet validated."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Subscription fits; could charge per video or monthly."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "Low variable costs; API calls are cheap."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Novel solution, not just adding AI to existing tools."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Domain in voice and YouTube; model and ops fluency implied."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No information on founder expertise; unlikely unique positioning."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 3,
+        "weighted": 0.6,
+        "rationale": "TAM < $100M; niche segment limits growth."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 5,
+        "weighted": 0.75,
+        "rationale": "Moat is integration and data, but incumbents can replicate."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 1,
+        "weighted": 0.15,
+        "rationale": "No users, pilots, or waitlist mentioned."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "SaaS margins good but LTV:CAC unknown; small market may not support."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 3,
+        "weighted": 0.24,
+        "rationale": "Funded incumbents like Descript can easily add features."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No burn rate info; assume reasonable but not proven."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "High execution and platform risk; YouTube dependency."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 3.57,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Decline to pursue further given small TAM, strong competition, and lack of founder credentials. Recommend exploring larger adjacent markets or pivoting to a broader creator tool.",
+    "next_experiments": [
+      "Interview 20 programming tutorial creators to validate pain and willingness to pay.",
+      "Build a lightweight prototype using public YouTube data and test with 5 creators.",
+      "Assess if the same technology applies to larger creator segments (e.g., vloggers, educators) with bigger TAM."
+    ],
+    "kill_criteria": [
+      "Less than 30% of creators report 3+ hours weekly savings.",
+      "Unable to acquire first 10 paying users within 3 months.",
+      "Competitor (Descript, YouTube) announces similar integration before launch."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We correlate speech patterns to retention drops for programming tutorial YouTubers, providing actionable re-recording cues to boost ad revenue and course conversions."
+  }
+]

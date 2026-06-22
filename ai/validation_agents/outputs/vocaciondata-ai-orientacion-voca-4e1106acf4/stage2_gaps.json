@@ -3,78 +3,60 @@
   "gaps": [
     {
       "id": 1,
-      "title": "Falta de integración de datos laborales reales en orientación vocacional",
-      "pain": "Estudiantes peruanos toman decisiones de carrera basadas en información incompleta o desactualizada, sin acceso a datos concretos de salarios, empleabilidad y demanda laboral por región.",
-      "why_now": "El gobierno peruano publica datos laborales (Ponte en Carrera, MINEDU) pero no los integra en herramientas interactivas. La IA conversacional permite cruzar estos datos en tiempo real.",
-      "evidence_needed": "Validar que los estudiantes no encuentran fácilmente datos laborales actualizados al elegir carrera.",
-      "priority": 1,
-      "risk": "Bajo: datos públicos disponibles, solo falta integrarlos."
+      "title": "Unified Data-Driven Career Conversation",
+      "pain": "Peruvian students face fragmented, static data across government portals, psychometric tests, and generic AI. No single solution provides a conversational, personalized recommendation that integrates interests, salaries, universities, and regional demand, causing high career mismatch and dropout.",
+      "why_now": "Generative AI advances make conversational agents feasible. Datasets like Ponte en Carrera and MiFuturo are available but underutilized. Peruvian youth are digitally native and open to AI guidance, while government open data initiatives provide a reliable foundation.",
+      "evidence_needed": "User interviews to confirm frustration with current tools. Prototype engagement metrics (time on task, conversion). Benchmark against ChatGPT's accuracy on local career queries.",
+      "priority": "Critical (pain: very high, validation speed: medium, defensibility: high via data integration and vertical tuning)",
+      "risk": "ChatGPT may integrate local data via plugins. Government portals could add basic AI. Data licensing/accuracy risks."
     },
     {
       "id": 2,
-      "title": "Ausencia de personalización conversacional en orientación vocacional",
-      "pain": "Las soluciones existentes (tests, portales) son estáticas y no se adaptan al perfil individual del estudiante, generando recomendaciones genéricas.",
-      "why_now": "Los chatbots con IA (ChatGPT) son populares pero no especializados. Un agente conversacional entrenado con datos locales puede ofrecer interacción natural y personalizada.",
-      "evidence_needed": "Encuestas que muestren insatisfacción con tests genéricos y deseo de interacción personalizada.",
-      "priority": 2,
-      "risk": "Medio: requiere desarrollo de NLP y datos locales."
+      "title": "Mobile-First, Gen Z Career Exploration Platform",
+      "pain": "Official tools are desktop-only, text-heavy, and require active search. Gen Z prefers TikTok/YouTube for career inspiration, which is unstructured and biased. No engaging, on-the-go platform combines entertainment with reliable local career data.",
+      "why_now": "Smartphone penetration is high among Peruvian youth. Short-form content consumption is ingrained. Gamification and conversational UI can mimic social media stickiness and reach the majority who avoid traditional portals.",
+      "evidence_needed": "Pilot with a mobile prototype; measure daily active users and session length. Compare satisfaction scores vs. Ponte en Carrera. Analyze TikTok career content sentiment.",
+      "priority": "High (pain: high, validation speed: fast, defensibility: low-medium without network effects)",
+      "risk": "TikTok/Instagram may add career features quickly. High user acquisition cost to build a new habit."
     },
     {
       "id": 3,
-      "title": "Cobertura limitada de orientación vocacional en zonas fuera de Lima",
-      "pain": "Estudiantes en regiones del Perú tienen acceso reducido a orientación vocacional presencial y a información sobre oferta educativa local.",
-      "why_now": "La digitalización post-pandemia y la penetración de smartphones permiten llegar a zonas rurales con una solución móvil.",
-      "evidence_needed": "Datos de acceso a internet y demanda de orientación en regiones.",
-      "priority": 3,
-      "risk": "Medio: depende de conectividad y adopción digital."
+      "title": "Entry-Level Labor Market Intelligence",
+      "pain": "Existing salary data (Ponte en Carrera, LinkedIn) lacks granularity for recent graduates—no differentiation by university prestige, internships, or regional salary variations for junior roles. Students have unrealistic expectations, leading to disillusionment and early career switches.",
+      "why_now": "Peru's youth unemployment is rising; informed entry-level choices are critical. Government data is annual and aggregated; no real-time breakdowns exist. AI can model from multiple sources (job boards, surveys).",
+      "evidence_needed": "Compare salary ranges from job postings (Bumeran, CompuTrabajo) with Ponte en Carrera. Validate through employer surveys. Check user willingness to share anonymized salary data.",
+      "priority": "High (pain: high, validation speed: fast with existing data, defensibility: medium via proprietary aggregation)",
+      "risk": "Data gathering may be noisy and requires constant updating. LinkedIn could improve entry-level coverage."
     },
     {
       "id": 4,
-      "title": "Falta de actualización dinámica de información vocacional",
-      "pain": "Las guías impresas y portales estáticos se desactualizan rápidamente, mientras el mercado laboral cambia constantemente.",
-      "why_now": "Las APIs de empleo (Computrabajo, Bumeran) y datos gubernamentales permiten actualización automática. La IA puede procesar estos flujos en tiempo real.",
-      "evidence_needed": "Comparar fechas de actualización de fuentes existentes vs. necesidad de datos frescos.",
-      "priority": 4,
-      "risk": "Bajo: datos disponibles, solo automatizar."
+      "title": "Location-Specific Career Matching",
+      "pain": "Peru's labor market varies greatly by region, but government data is national or departmental. Students often migrate without understanding local job prospects. No tool maps career recommendations to specific cities, leading to regional mismatches and unemployment.",
+      "why_now": "Regional inequality and internal migration are policy priorities. New open data from MTPS can be parsed. Mobile location data can enhance personalization.",
+      "evidence_needed": "Geocode job posting data from major boards. Validate with regional employers. Test user demand for location filters in prototype.",
+      "priority": "Medium (pain: high for non-Lima students, validation speed: medium, defensibility: medium—data moat if integrated)",
+      "risk": "Government portals might add filters. Data quality poor in some regions."
     },
     {
       "id": 5,
-      "title": "Inexistencia de cruce entre intereses, empleabilidad y ubicación geográfica",
-      "pain": "Los tests vocacionales solo miden intereses, sin considerar dónde hay trabajo y con qué salario, llevando a carreras sin demanda local.",
-      "why_now": "Los datos de empleo por región (Ponte en Carrera) y oferta universitaria (MINEDU) están disponibles pero no se cruzan automáticamente.",
-      "evidence_needed": "Casos de estudiantes que eligieron carreras sin demanda en su región.",
-      "priority": 5,
-      "risk": "Bajo: integración de datos existentes."
+      "title": "Scalable, AI-Powered Counselor Alternative",
+      "pain": "Human career counselors are scarce, expensive, and often rely on outdated methods. Over 70% of Peruvian students never receive formal guidance. An AI agent can provide instant, 24/7, empathetic support, but trust and accuracy must be proven.",
+      "why_now": "ChatGPT has proven conversational AI can simulate empathetic dialogue. Peru's education system is resource-constrained. COVID accelerated acceptance of digital guidance.",
+      "evidence_needed": "Track user sentiment and trust scores in conversations. Compare decision satisfaction rates of AI-guided vs. unguided students (longitudinal study needed).",
+      "priority": "Medium (pain: very high, validation speed: slow due to outcome measurement, defensibility: low against ChatGPT unless heavily localized)",
+      "risk": "ChatGPT's free generic advice may be 'good enough'. Regulatory issues with AI counseling. Parents may distrust machines."
     },
     {
       "id": 6,
-      "title": "Orientación vocacional costosa y no escalable",
-      "pain": "Los servicios de psicólogos educativos y consultorías privadas son caros, limitando el acceso a estudiantes de bajos recursos.",
-      "why_now": "La IA conversacional puede ofrecer orientación gratuita o de bajo costo, escalando a millones de usuarios sin incrementar costos marginales.",
-      "evidence_needed": "Precios actuales de servicios privados y disposición a pagar de estudiantes.",
-      "priority": 6,
-      "risk": "Medio: modelo de negocio debe ser sostenible."
-    },
-    {
-      "id": 7,
-      "title": "Falta de confianza en información vocacional de fuentes no oficiales",
-      "pain": "Los estudiantes recurren a foros y redes sociales donde la información no es verificada, generando desinformación.",
-      "why_now": "La desconfianza en fuentes oficiales y la necesidad de datos confiables crean oportunidad para una plataforma que use datos gubernamentales verificados.",
-      "evidence_needed": "Encuestas sobre fuentes de información y nivel de confianza.",
-      "priority": 7,
-      "risk": "Bajo: usar datos oficiales genera credibilidad."
-    },
-    {
-      "id": 8,
-      "title": "Desconexión entre oferta educativa y demanda laboral en tiempo real",
-      "pain": "Las universidades promocionan carreras sin mostrar datos reales de empleabilidad, y los estudiantes no tienen cómo comparar.",
-      "why_now": "Los portales de empleo muestran demanda actual, pero no están vinculados a la oferta educativa. Un agente conversacional puede conectar ambos mundos.",
-      "evidence_needed": "Análisis de brechas entre egresados y ofertas laborales.",
-      "priority": 8,
-      "risk": "Medio: requiere colaboración con universidades."
+      "title": "Continuous Career Path Tracking and Adjustment",
+      "pain": "Once a career decision is made, there is no feedback loop. High first-year university dropout rates (30%) and later career changes are not systematically addressed. Students lack ongoing guidance to validate or adjust their path.",
+      "why_now": "AI can maintain a long-term relationship, using outcome data to refine predictions and suggest pivots. University dropout is a national concern, creating demand for reorientation services.",
+      "evidence_needed": "Longitudinal pilot tracking users over 1-2 years. Partner with universities for data sharing. Gauge willingness to share employment outcomes.",
+      "priority": "Low (pain: deferred, validation speed: very slow, defensibility: high if proprietary outcomes database built)",
+      "risk": "Time to prove value is long. Privacy concerns with tracking individuals."
     }
   ],
   "recommended_gap_id": 1,
-  "checkpoint_instruction": "Validate gap 1 by conducting 20 interviews with Peruvian high school seniors and college freshmen, asking: 'When choosing a career, how do you currently find information about salaries, job demand, and employment rates? What is the biggest frustration?' If >70% mention lack of concrete data or outdated info, proceed with MVP focusing on integrating Ponte en Carrera and MINEDU datasets into a conversational agent.",
+  "checkpoint_instruction": "Develop a clickable conversational prototype that integrates sample data from MiFuturo and Ponte en Carrera. Conduct 20 user interviews with high school graduates to measure perceived usefulness, trust, and willingness to try the product over existing alternatives.",
   "source": "llm"
 }

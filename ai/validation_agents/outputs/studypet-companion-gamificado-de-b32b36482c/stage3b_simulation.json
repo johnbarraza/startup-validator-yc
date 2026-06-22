@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "StudyPet is an AI-powered study companion that turns focus into a game for students with attention disorders. It uses machine learning to personalize study sessions based on attention patterns, topic difficulty, and optimal times of day. A virtual pet evolves by rewarding deep work and real improvement, not just raw hours logged. The wedge is college students with ADHD or chronic procrastination who need external structure to overcome paralysis. The pet acts as a smart accountability partner, predicting focus lapses and intervening with nudges or breaks, making study a sustainable habit.",
+  "selected_gap": {
+    "id": "gap1",
+    "title": "AI-Powered Personalized Study Companion",
+    "pain": "Students struggle with generic study tools that don't adapt to their learning style, schedule, or emotional state, leading to low motivation and burnout. Current virtual pets lack personalization.",
+    "why_now": "AI/ML tech is mature and affordable; students expect tailored experiences (TikTok, Spotify). Competitors like Duolingo use AI for language, but no one applies conversational AI and reinforcement learning to general study habits.",
+    "evidence_needed": "User interviews confirming frustration with one-size-fits-all apps; prototype A/B test showing AI adaptation improves session length/frequency.",
+    "priority": "high",
+    "risk": "medium"
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "As a student with ADHD, I'm tired of apps that promise focus but don't adapt to my chaotic patterns. The virtual pet sounds cute, but if it's just a glorified pomodoro timer with a cartoon, I'll lose interest fast.",
+      "concern": "If the AI can't truly keep up with my erratic focus and mood swings, the pet will become background noise and I'll revert to procrastination.",
+      "evidence_request": "I need to see a demo where the pet changes intervention strategies based on my real-time attention data, not just after a session, ideally with a time-lapsed impact on my study quality.",
+      "score": 0.55,
+      "score_rationale": "The idea addresses a real pain, but I'm skeptical about its ability to meaningfully adapt without feeling like a gimmick, so it barely passes the 'would I use this weekly?' test.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "Another 'smart' app promising to fix attention issues? In Peru, we've seen too many half-baked digital solutions that fail in practice. Your AI would need to prove it works with our students, not just college kids in Silicon Valley.",
+      "concern": "How can you guarantee the AI accurately recognizes attention states using only device sensors? Misinterpreting a pause as a 'focus lapse' could lead to counterproductive interruptions, eroding trust.",
+      "evidence_request": "Show me a pilot study with real Peruvian university students with ADHD, comparing study outcomes (e.g., test scores, session completion) between your AI-driven app and a non-AI timer-based app over at least one semester.",
+      "score": 0.2,
+      "score_rationale": "While the concept addresses a real need, the AI's reliability and explainability are insufficiently demonstrated, especially in a context where professionals like me require verifiable proof before adoption.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "As an economic buyer, I need clear near-term ROI. StudyPet's focus on students with ADHD is compelling, but I'm skeptical that it can show measurable impact on retention or grades within a single quarter. Without a proven cost-benefit analysis, I cannot justify the budget.",
+      "concern": "The ROI timeline is too long; improving study habits may not yield immediate, quantifiable savings or revenue gains for the institution.",
+      "evidence_request": "A pilot study with 50 students showing a 10% improvement in course pass rates or a reduction in dropouts over one semester.",
+      "score": 0.2,
+      "score_rationale": "The product does not demonstrate how it will generate a direct, short-term financial return or protect a critical metric I own within a quarter.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "The AI personalization sounds promising but introduces significant integration complexity—especially predicting focus lapses in real-time—and will likely generate high support loads from false positives. Rolling out to a diverse ADHD population without proven reliability is risky.",
+      "concern": "The ML model's accuracy for predicting focus lapses is unproven; errors will erode trust and increase support burden, potentially negating any productivity gains.",
+      "evidence_request": "A pilot study with at least 50 ADHD students showing <10% false positive/negative rate for focus-lapse alerts and <5% support ticket rate.",
+      "score": 0.3,
+      "score_rationale": "High operational risk from unreliable AI and support load, with no evidence of model robustness or scalability.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "As a large study app provider with millions of users, I see this as a trivial feature extension. We can clone the virtual pet and adaptive scheduling in a few sprints, leveraging our existing data and user base. The personalization might be slightly better, but our distribution and trust make it easy to defend.",
+      "concern": "The wedge is too thin—incumbents can quickly replicate the core functionality without significant investment, nullifying the startup's competitive advantage.",
+      "evidence_request": "Show that your AI model requires unique data sources (e.g., wearable sensors or proprietary behavioral tracking) or that you have a patented algorithm that outperforms generic ML by a wide margin, creating a moat incumbents cannot easily cross.",
+      "score": 0.2,
+      "score_rationale": "Incumbents can rapidly copy the feature, so the startup lacks a defensible moat, making it a low-confidence investment from this lens.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "The AI-powered study companion with a virtual pet for ADHD students is a clever hook, but the initial wedge feels too narrow—college students with ADHD is a small slice of the addressable market, and sustaining engagement beyond novelty is unproven.",
+      "concern": "The SAM is likely under $50M unless you expand beyond ADHD to general procrastination or workplace focus, but then the pet loses its sharp differentiation.",
+      "evidence_request": "Show me early paying users (at least 100) with strong retention (e.g., 30% D7) and a concrete plan to address non-ADHD students without diluting the core value.",
+      "score": 0.3,
+      "score_rationale": "Niche market and high risk of poor retention make it uninvestable at this stage, despite clever concept.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "The idea is appealing but technically risky. Data acquisition for personalization is a chicken-and-egg problem, and running real-time ML inference for a niche user base could push COGS too high for a startup. The learning loop depends on consistent engagement from a hard-to-retain cohort.",
+      "concern": "Data flywheel is weak: students with ADHD are a small, hard-to-retain cohort, and the model needs high-quality labeled data (attention patterns, topic difficulty) that is expensive to collect and validate, risking poor model quality and high churn before the loop kicks in.",
+      "evidence_request": "A working prototype with offline simulation using synthetic data or a public dataset demonstrating that personalized nudges improve study session metrics (e.g., duration, retention) by at least 20% compared to a baseline non-personalized approach.",
+      "score": 0.35,
+      "score_rationale": "High technical uncertainty around data acquisition, model quality, and COGS for a niche user base makes me skeptical, but the concept has potential if validated with strong prototype results.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "This product sounds like a toy for rich students, not for my business. I run a small shop on cash and WhatsApp—I need tools that save me money or reduce risk, not a virtual pet. I can't trust AI to manage my time when I barely trust bank apps.",
+      "concern": "Zero relevance to my daily problems: cash flow management, supplier payments via Yape, or avoiding fines from tax authorities. A study companion for ADHD students doesn't solve any cost or risk I face.",
+      "evidence_request": "Show me how this tool can directly increase my sales or reduce my operational costs within a WhatsApp workflow, using only Yape/Plin for payment—no credit card.",
+      "score": 0.1,
+      "score_rationale": "The product addresses a completely different market and need, with no clear benefit for an informal SME buyer, making it nearly worthless from my perspective.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "Conceptually interesting, but our procurement process is rigid and slow. Without a clear path to an existing budget code (e.g., for special education software or inclusive education materials), we cannot proceed.",
+      "concern": "No evidence that this product matches any existing MINEDU-approved budget line or program, making it impossible to procure without a new lengthy approval.",
+      "evidence_request": "Documentation showing that the Peruvian Ministry of Education (MINEDU) has approved similar AI-based tools for students with attention disorders and that it fits under an existing budget code.",
+      "score": 0.15,
+      "score_rationale": "The product does not align with any known procurement category and lacks institutional validation, rendering it nearly impossible to purchase under current constraints.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "Interesting concept but too niche for Peru's thin market. ADHD awareness and diagnosis rates are low, and students who can pay for a tool like this are a tiny subset. Without a clear path to $1M ARR in Peru and a plan to attract international co-investors, I can't justify a check.",
+      "concern": "Market size in Peru is insufficient; the total addressable students with ADHD who would pay is likely under 5,000, making $1M ARR impossible without international expansion from day one.",
+      "evidence_request": "Show a validated pilot with at least 100 paying users in Peru or a neighboring LATAM country (e.g., Chile, Colombia), plus a clear unit economics projection reaching $1M ARR within 3 years.",
+      "score": 0.2,
+      "score_rationale": "The idea is innovative and addresses a real pain, but the Peruvian market is too small and the YC rejection signals lack of team readiness, so the likelihood of reaching our success metric is very low.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.255,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.255,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "If the AI can't truly keep up with my erratic focus and mood swings, the pet will become background noise and I'll revert to procrastination.",
+      "How can you guarantee the AI accurately recognizes attention states using only device sensors? Misinterpreting a pause as a 'focus lapse' could lead to counterproductive interruptions, eroding trust.",
+      "The ROI timeline is too long; improving study habits may not yield immediate, quantifiable savings or revenue gains for the institution."
+    ],
+    "top_evidence_requests": [
+      "I need to see a demo where the pet changes intervention strategies based on my real-time attention data, not just after a session, ideally with a time-lapsed impact on my study quality.",
+      "Show me a pilot study with real Peruvian university students with ADHD, comparing study outcomes (e.g., test scores, session completion) between your AI-driven app and a non-AI timer-based app over at least one semester.",
+      "A pilot study with 50 students showing a 10% improvement in course pass rates or a reduction in dropouts over one semester."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "NO_GO"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

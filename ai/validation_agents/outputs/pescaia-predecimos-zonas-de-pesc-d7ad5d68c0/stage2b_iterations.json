@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "PescaIA sends a simple, color-coded map each dawn via WhatsApp directly to Peruvian artisanal fishermen’s phones, pinpointing the highest-probability catch zones for their target species within their specific fishing area. The prediction fuses free NASA satellite data (sea surface temperature, chlorophyll, currents) with the individual fisherman’s own historical catch logs, so the map becomes more accurate over time. No app install, no internet beyond basic messaging: the map is a hyperlocal, daily decision tool that replaces the guesswork and fuel waste of blind searching, directly addressing the 40-60% of fuel costs that normally go to prospecting barren waters.",
+      "one_liner": "We deliver daily personalized fishing hotspot maps via WhatsApp to artisanal fishermen, using satellite data and their own catch logs to eliminate fuel waste from blind searching.",
+      "target_customer": "General manager of an artisanal fishing cooperative in coastal Peru, managing 20-50 wooden boats, under pressure to reduce collective fuel spend and increase catch reliability for their fleet.",
+      "core_problem": "Each morning, artisanal fishermen head out based on intuition and yesterday’s luck, burning 40-60% of their precious fuel cruising empty waters. This daily blind search not only costs them $10-20 in wasted fuel per trip but also forces them into debt, limits their fishing range, and leads to overfishing in desperation—all because they lack a simple, timely signal of where the fish are.",
+      "solution_hook": "A WhatsApp bot that pushes a single, hyperlocal map every dawn—tailored to the exact species and fishing ground of each cooperative's boats—so crews have a clear, no‑guesswork plan before they even cast off.",
+      "why_this_angle": "By narrowing the wedge to a daily, zero-friction map via WhatsApp, we turn a complex analytics product into a habit-forming decision tool that directly attacks the most painful and frequent behavior: wasted time and fuel every single morning. This framing makes the value instantly tangible and the adoption barrier almost nonexistent, outperforming broad platforms by being indispensable to the fisherman’s daily routine.",
+      "quick_score": {
+        "problem_acuity": 10,
+        "market_size": 8,
+        "founder_feasibility": 9,
+        "total": 27
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "PescaIA pivots to serve seafood export companies in Peru who are dependent on artisanal fishermen for their supply. These companies bear the hidden cost of supply unpredictability caused by fishermen wasting 40-60% of their fuel searching blindly for fish. PescaIA sells a predictive intelligence platform directly to the exporter, who then provides the daily WhatsApp catch maps to their network of fishermen for free. This creates a sticky supply chain: fishermen get better catches and lower fuel costs, while the exporter gains real-time visibility into expected landings, reduces procurement risk, and secures higher compliance with international contracts. Revenue comes from annual enterprise licenses based on the number of vessels served, with premium features like supply forecasting dashboards for the buyer.",
+      "one_liner": "We help seafood exporters secure reliable supply by giving their artisanal fishing fleets daily predictive catch maps via WhatsApp.",
+      "target_customer": "Procurement Manager at a mid-to-large seafood export company in Chimbote, Peru, responsible for sourcing from hundreds of small-scale fishermen and ensuring export volume commitments.",
+      "core_problem": "Every morning, the procurement manager faces a gamble on whether their contracted fishermen will return with enough of the right species. Because fishermen lack data, they burn 40-60% of their fuel on unproductive search, leading to erratic catch volumes, missed shipment deadlines, and costly penalties from international buyers. The company loses up to 15% of potential revenue due to supply chain volatility alone.",
+      "solution_hook": "Unlike generic satellite tools, PescaIA fuses the fishermen's own historical catch data with real-time ocean conditions to generate hyperlocal, species-specific hot zones. For the first time, the buyer gets a predictive supply dashboard that shows expected landings by species and location up to 48 hours in advance, turning procurement from reactive to proactive.",
+      "why_this_angle": "This reframing transforms the payer from cash-strapped artisanal cooperatives to well-funded commercial enterprises whose survival depends on reliable supply. It aligns incentives perfectly—the exporter pays for the tool, the fisherman uses it for free, and both sides win with higher efficiency and predictable volumes. This unlocks faster B2B sales cycles and larger contract values than selling directly to fishermen.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 7,
+        "founder_feasibility": 6,
+        "total": 22
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "Focus exclusively on predicting daily aggregation zones for jumbo flying squid (pota) for a single artisanal fishing cooperative in Paita, Peru. Using free NASA satellite data (SST, chlorophyll) and simple behavioral rules for pota, we manually generate a heatmap image each morning and send it via WhatsApp to the cooperative’s 10–15 boat captains. The wedge is hyper-local, single-species, single-cooperative, delivered through the channel they already use, with the sole goal of demonstrating immediate fuel savings and securing a paid pilot within 30 days.",
+      "one_liner": "We send daily pota fishing hot zones via WhatsApp to one cooperative in Paita using satellite sea temperature and chlorophyll data.",
+      "target_customer": "President of a 12-boat artisanal jumbo flying squid cooperative in Paita, Piura, Peru, who coordinates daily departure decisions and bears fuel costs.",
+      "core_problem": "Every morning, each boat captain radios around or guesses where to find pota, burning 40–60% of their daily fuel budget (US$50–80) on aimless search, resulting in empty or low catches three out of five days and mounting financial pressure on the cooperative.",
+      "solution_hook": "A single, timely WhatsApp message containing a simple annotated map with 2–3 high-probability pota zones within 30 km of port, manually created from publicly available NASA satellite data—no app, no tech overhead, zero friction.",
+      "why_this_angle": "This wedge eliminates all complexity: one species, one port, one customer. It allows us to demonstrate clear, measurable fuel savings to 10 real users in 30 days, securing immediate willingness to pay and a proof-of-concept that de-risks expansion to other species or regions.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 2,
+        "founder_feasibility": 9,
+        "total": 20
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "We deliver daily personalized fishing hotspot maps via WhatsApp to artisanal fishermen, using satellite data and their own catch logs to eliminate fuel waste from blind searching.",
+  "source": "parallel_iteration"
+}

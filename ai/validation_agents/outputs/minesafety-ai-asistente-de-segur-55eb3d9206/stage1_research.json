@@ -1,0 +1,165 @@
+{
+  "idea": "MineSafety AI: asistente de seguridad para contratistas y equipos HSE mineros que digitaliza checklists, transcribe reportes de campo, clasifica severidad y prioriza riesgos operativos antes de incidentes.",
+  "market": "Mercado de software de seguridad y salud ocupacional (EHS) en minería, incluyendo herramientas de digitalización de checklists, gestión de riesgos y reportes de incidentes. Enfoque en grandes operaciones mineras y sus contratistas en Latinoamérica.",
+  "solutions": [
+    {
+      "id": "none",
+      "name": "Procesos manuales en papel",
+      "category": "Workaround",
+      "observed_positioning": "Listas de verificación en papel, informes manuscritos, sin centralización ni análisis."
+    },
+    {
+      "id": "spreadsheets",
+      "name": "Hojas de cálculo y correo electrónico",
+      "category": "Workaround",
+      "observed_positioning": "Uso de Excel, formularios en PDF y correo para seguimiento de seguridad, con consolidación manual."
+    },
+    {
+      "id": "safetyculture",
+      "name": "SafetyCulture (iAuditor)",
+      "category": "Checklist digital",
+      "observed_positioning": "Plataforma de inspección y checklist digital para múltiples industrias, con fotos, acciones y reportes básicos."
+    },
+    {
+      "id": "intelex",
+      "name": "Intelex (Fortive)",
+      "category": "Plataforma EHS",
+      "observed_positioning": "Suite EHS completa con módulos de gestión de incidentes, riesgos, auditorías y cumplimiento normativo."
+    },
+    {
+      "id": "cority",
+      "name": "Cority",
+      "category": "Plataforma EHS",
+      "observed_positioning": "Solución EHS integrada con énfasis en gestión de riesgos, seguridad del trabajador y análisis."
+    },
+    {
+      "id": "enablon",
+      "name": "Enablon (Wolters Kluwer)",
+      "category": "Plataforma EHS",
+      "observed_positioning": "Plataforma EHS de gran escala para gestión de riesgos operacionales, cumplimiento y sostenibilidad."
+    },
+    {
+      "id": "velocityehs",
+      "name": "VelocityEHS",
+      "category": "Plataforma EHS",
+      "observed_positioning": "Software EHS en la nube enfocado en ergonomía, gestión de incidentes y control de riesgos."
+    },
+    {
+      "id": "isometrix",
+      "name": "IsoMetrix",
+      "category": "EHS minero",
+      "observed_positioning": "Software EHS y ESG especializado en minería y metales, con gestión de riesgos y desarrollo sostenible."
+    },
+    {
+      "id": "hexagon_mining",
+      "name": "Hexagon Mining (MineProtect)",
+      "category": "Safety tech minero",
+      "observed_positioning": "Suite de seguridad minera que incluye anti-colisión, monitoreo de fatiga, y gestión de seguridad operacional."
+    },
+    {
+      "id": "modular_mining",
+      "name": "Modular Mining (Komatsu)",
+      "category": "Safety tech minero",
+      "observed_positioning": "Sistemas de gestión de flotas con módulos de seguridad como detección de proximidad y fatiga."
+    },
+    {
+      "id": "blackline_safety",
+      "name": "Blackline Safety",
+      "category": "Dispositivos conectados",
+      "observed_positioning": "Dispositivos portátiles de detección de gas y geolocalización con plataforma de monitoreo en tiempo real."
+    },
+    {
+      "id": "guardhat",
+      "name": "Guardhat",
+      "category": "Smart PPE",
+      "observed_positioning": "Cascos inteligentes con sensores ambientales, comunicación y localización para entornos mineros e industriales."
+    },
+    {
+      "id": "protex_ai",
+      "name": "Protex AI",
+      "category": "Visión por computadora",
+      "observed_positioning": "Sistema de IA que analiza video de cámaras de seguridad para detectar comportamientos inseguros en tiempo real."
+    },
+    {
+      "id": "smartcap",
+      "name": "SmartCap (Hexagon)",
+      "category": "Monitoreo de fatiga",
+      "observed_positioning": "Tecnología de monitoreo de fatiga y distracción para operadores de maquinaria minera."
+    },
+    {
+      "id": "presien",
+      "name": "Presien",
+      "category": "Visión por computadora",
+      "observed_positioning": "Solución de IA que detecta peligros usando cámaras montadas en maquinaria, emitiendo alertas."
+    }
+  ],
+  "research_summary": "El mercado de seguridad minera está dominado por soluciones EHS genéricas (Intelex, Cority) y tecnologías de seguridad especializadas (Hexagon, Modular). Existen múltiples herramientas de checklist digital (SafetyCulture) pero carecen de inteligencia específica para minería. Los competidores directos con IA en seguridad (Protex AI, Presien) se enfocan en visión por computadora, no en la digitalización de procesos de campo. La transcripción de voz y clasificación de severidad con IA en dispositivos móviles sigue siendo un espacio poco atendido.",
+  "competitor_signals": [
+    {
+      "competitor": "Hexagon Mining (MineProtect)",
+      "hiring_score": 8,
+      "funding_score": 9,
+      "product_score": 9,
+      "team_score": 9,
+      "market_score": 9,
+      "tech_score": 9,
+      "overall_score": 87.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Líder en tecnología de seguridad minera con hardware y software integrados, incluyendo anti-colisión y fatiga. Su suite completa y su base instalada representan una amenaza competitiva significativa si expanden hacia checklists inteligentes."
+    },
+    {
+      "competitor": "Intelex (Fortive)",
+      "hiring_score": 7,
+      "funding_score": 8,
+      "product_score": 8,
+      "team_score": 8,
+      "market_score": 8,
+      "tech_score": 7,
+      "overall_score": 77.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Plataforma EHS consolidada con amplios recursos corporativos. Aunque no es minero-específica, podría adaptar módulos con IA y competir en funcionalidad de reportes."
+    },
+    {
+      "competitor": "IsoMetrix",
+      "hiring_score": 7,
+      "funding_score": 5,
+      "product_score": 8,
+      "team_score": 8,
+      "market_score": 8,
+      "tech_score": 6,
+      "overall_score": 69.0,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Especialista en EHS minero con buena penetración. Su oferta no incluye IA avanzada para transcripción o clasificación de severidad, pero es un jugador cercano."
+    },
+    {
+      "competitor": "Protex AI",
+      "hiring_score": 6,
+      "funding_score": 7,
+      "product_score": 7,
+      "team_score": 7,
+      "market_score": 7,
+      "tech_score": 8,
+      "overall_score": 68.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Startup de visión por computadora para seguridad industrial. No es un competidor directo en checklists digitales, pero su enfoque en IA podría pivotar o integrarse con soluciones de reportes."
+    },
+    {
+      "competitor": "SafetyCulture (iAuditor)",
+      "hiring_score": 6,
+      "funding_score": 8,
+      "product_score": 7,
+      "team_score": 7,
+      "market_score": 7,
+      "tech_score": 6,
+      "overall_score": 69.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Herramienta líder de inspección digital con gran adopción en seguridad. Carece de verticalización minera y de capacidades de IA para priorización de riesgos."
+    }
+  ],
+  "source": "llm"
+}

@@ -1,0 +1,62 @@
+{
+  "research_source": "provided research",
+  "gaps": [
+    {
+      "id": "gap1",
+      "title": "Revisable AI Notarial Extraction",
+      "pain": "Notaries fear AI errors that can have legal consequences; they spend excessive time manually verifying AI output, negating efficiency gains.",
+      "why_now": "AI/NLP advanced enough for high-accuracy extraction, but trust remains a barrier; no competitor offers an explainable, reviewable AI layer tailored to notarial acts.",
+      "evidence_needed": "Build prototype with highlighted extracted fields, confidence scores, and an editing interface; conduct user tests with 5 notaries, measure verification time reduction and trust scores.",
+      "priority": "high",
+      "risk": "Direct competitor LexNotari could add explainability features quickly; regulatory uncertainty about AI usage in legally binding documents."
+    },
+    {
+      "id": "gap2",
+      "title": "Plug-and-Play Government e-Filing Integration",
+      "pain": "Manual submission to multiple registries causes errors, delays, and compliance risks.",
+      "why_now": "Government digitization initiatives are releasing APIs; notaries need a single integration hub to cut processing time.",
+      "evidence_needed": "Integrate with one country’s land registry API, pilot with 3 notaries, record time savings and error reduction.",
+      "priority": "high",
+      "risk": "Government APIs may be unstable or require lengthy certification; long sales cycles to gain official approval."
+    },
+    {
+      "id": "gap3",
+      "title": "AI-Powered Mobile Document Scanner for Notaries",
+      "pain": "Mobile notaries need to process and validate documents on the go; existing apps lack AI extraction and validation.",
+      "why_now": "Smartphone cameras and on-device AI models can now perform accurate OCR and field verification offline.",
+      "evidence_needed": "Create a mobile MVP with OCR and instant field validation; test with 10 traveling notaries for usability and accuracy.",
+      "priority": "medium",
+      "risk": "LexNotari or QuickNotary could add mobile features; hardware limitations may affect scanning quality in poor lighting."
+    },
+    {
+      "id": "gap4",
+      "title": "Collaborative Drafting Platform with Lawyer/Client Portal",
+      "pain": "Back-and-forth drafts via email cause version control chaos and delays in notarial document preparation.",
+      "why_now": "Remote work surge has increased demand for secure, real-time co-editing in legal workflows.",
+      "evidence_needed": "Design wireframes and a clickable prototype; interview 5 notaries handling complex documents about collaboration pain points.",
+      "priority": "medium",
+      "risk": "NotariaCloud may launch collaborative features; driving adoption requires change management in traditional offices."
+    },
+    {
+      "id": "gap5",
+      "title": "Offline-First Notarial App with Selective Sync",
+      "pain": "Frequent internet outages in rural LATAM disrupt notarial work, forcing fallback to paper or delayed processing.",
+      "why_now": "Modern web frameworks (CRDTs, IndexedDB) make robust offline-first apps feasible without high cost.",
+      "evidence_needed": "Develop an offline-capable MVP with document editing and queuing; survey 5 rural notaries on current outage impacts and willingness to adopt.",
+      "priority": "medium",
+      "risk": "Data sync conflicts could arise; the addressable market of rural notaries may be too small for rapid growth."
+    },
+    {
+      "id": "gap6",
+      "title": "Voice-to-Document AI for Notarial Interviews",
+      "pain": "Notaries spend significant time manually typing dictations from client interviews, leading to errors and fatigue.",
+      "why_now": "Speech recognition accuracy (e.g., Whisper) is now viable for specialized legal vocabulary and can be fine-tuned.",
+      "evidence_needed": "Prototype voice-to-structured-document pipeline; test with 3 notaries during live interviews, measure drafting time reduction.",
+      "priority": "low",
+      "risk": "Legal jargon may still cause transcription errors; privacy concerns with audio recording may deter adoption."
+    }
+  ],
+  "recommended_gap_id": "gap1",
+  "checkpoint_instruction": "Validate top gap by conducting 10 in-depth interviews with notaries and creating a clickable prototype that demonstrates explainable AI extraction; measure verification time and trust level compared to their current tools.",
+  "source": "llm"
+}

@@ -1,0 +1,58 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "FoodTech",
+  "customer_type": "B2B2C",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "B2B buyers are cooperatives and FONDEPES, but cooperatives are often cash-poor with informal operations and FONDEPES is a government entity with 6-18 month procurement cycles; unlikely to generate fast SaaS revenue.",
+    "Fishermen currently rely on generations of tacit knowledge and informal WhatsApp groups sharing spots — this free substitute covers 80% of the pain, making paid subscription a hard sell.",
+    "Payment collection is a nightmare: cooperatives lack digital payment infrastructure (no credit cards, only bank transfers), and informal workers have near-zero WTP for $10+/month software.",
+    "Peru's VC gap means Series A requires international co-investor, but local TAM (max 60k fishermen) is too small to attract them — growth story depends on expansion to Ecuador/Chile/Indonesia, which adds massive complexity.",
+    "The product requires constant satellite data ingestion and ML retraining for different species & regions — tech debt and talent scarcity in Peru makes this hard to maintain on a seed budget."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual search, experience)",
+    "Spending already happens on imperfect solutions (fuel costs)",
+    "Recurring pain (every fishing trip)",
+    "Measurable cost (40-60% of fuel budget)",
+    "B2B buyer has budget that covers this cost (cooperatives, FONDEPES)"
+  ],
+  "classification_rationale": "PescaIA solves a structural, recurring problem for artisanal fishers in Peru: high fuel waste from searching for fish without data. The target buyers (cooperatives and FONDEPES) have budgets to reduce operating costs, and the solution uses free satellite data and WhatsApp for distribution, aligning with local economics and tech usage. Multiple painkiller signals are present, making this a clear painkiller.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "MAYBE",
+  "freemium_rationale": "A free tier (e.g., basic zone map once a week) could help cooperatives trial the service and demonstrate fuel savings, but must be limited to avoid cannibalizing B2B sales. Given low individual WTP, a time-bound free trial for cooperatives may be more effective than a perpetual freemium.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "Cooperatives and artisanal fishermen operate in the informal economy with no credit cards and low disposable income — the only plausible payer is FONDEPES, but its procurement cycle is 6-18 months and budgets are rigidly allocated.",
+  "free_substitute_risk": "Fishermen already share fishing hotspots via WhatsApp voice notes and community knowledge — a free WhatsApp group or manual word-of-mouth covers 80% of the value without subscription fees.",
+  "market_size_reality_check": "Of 60,000 artisanal fishermen, <5% belong to formal cooperatives with budget to pay; FONDEPES serves a fraction. Realistic first-year paying customers: 50-100 cooperatives (200-400 boats) at S/200-500/month = $50-125K ARR, not venture-scale without extreme expansion.",
+  "hardest_assumption": "That artisanal fishermen will trust an AI prediction over their own intuition and experience, and that cooperatives will pay a subscription for a tool that competes with free local knowledge.",
+  "devil_rationale": "PescaIA addresses a real problem with a clever use of satellite data, but the business model is structurally fragile: low WTP, informal buyers, long government sales cycles, and a strong free substitute (word-of-mouth). The idea might work as a non-profit or government-subsidized service, but as a VC-backed startup it faces severe monetization and scalability challenges in Peru's economic reality.",
+  "preflight_dominant_solution": {
+    "score": "CLEAR",
+    "competitor_name": "none found",
+    "threat_level": "LOW",
+    "note": "No widely-adopted dominant solution for artisanal fishermen in Peru using free satellite data and WhatsApp."
+  },
+  "preflight_precedent_failure": {
+    "score": "NO_KNOWN_FAILURE",
+    "example": "none",
+    "learning": "Space is still early; failures likely due to poor distribution or UX, not fundamental viability."
+  },
+  "preflight_regulatory_kill": {
+    "score": "NO_BLOCKER",
+    "regulation": "n/a",
+    "mitigation": "Ensure compliance with fisheries management regulations and data privacy for catch history."
+  },
+  "preflight_summary": "Proceed: Clear space, no known failures, no regulatory blocker, and accelerating market momentum.",
+  "deal_signals": {
+    "hiring": "Look for hires in oceanography, ML, and B2B sales to cooperatives.",
+    "funding": "Recent investments in ocean tech startups indicate growing interest.",
+    "product": "Key milestone: successful pilot with a cooperative leading to repeat usage.",
+    "market": "Macro trends: overfishing and climate change increasing demand for efficiency tools.",
+    "tech": "Free satellite data (NASA) and ML enable cost-effective predictions; WhatsApp lowers barrier.",
+    "momentum": "ACCELERATING"
+  },
+  "source": "triple_agent_classification"
+}

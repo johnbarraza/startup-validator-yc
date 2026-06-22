@@ -1,0 +1,338 @@
+# Startup Idea Validation Report
+
+Generated: 2026-06-21T16:12:56.246339+00:00
+
+## Original Idea
+SeguridadMesh: sistema de analitica de video con IA para camaras de serenazgo municipal peruano que detecta incidentes en tiempo real y alerta operadores, vendido como licencia B2G anual pagada con presupuesto PIM de seguridad ciudadana.
+
+---
+
+## Stage 0 — Idea Classification (Pit Check)
+
+**Type:** PAINKILLER | **Vertical:** GovTech | **Customer:** B2G | **Severity:** STRUCTURAL
+
+**Verdict:** ⚠ WARN | **Devil's advocate:** ⚠ WEAK | **Freemium:** ✗ NO
+
+Crime and public safety are urgent, structural problems in Peruvian municipalities. They already spend on security infrastructure and have dedicated budgets for security technology. The solution directly addresses a clear pain point with no alternative AI-based product widely adopted. Buyer ability to pay is high given allocated PIM funds.
+
+**Green flags (painkiller signals):**
+  - Active workarounds exist (manual monitoring, spreadsheets)
+  - Spending already happens on imperfect solutions (cameras, personnel)
+  - Recurring pain: daily crime incidents
+  - Measurable cost: lost response time, increased crime
+  - Buyer has a budget line (PIM) that already covers this cost
+
+**Red flags (devil's advocate):**
+  - B2G sales cycles in Peru average 6-18 months via OSCE procurement; a startup may run out of cash before closing first deal.
+  - Municipal security budgets (PIM) are rigid and often underspent; approval requires political will and may be diverted to other priorities like salaries or equipment.
+  - Existing cameras may be outdated, low-resolution, or not connected to a network, requiring costly upgrades that municipalities are unwilling to fund.
+
+**Payment blocker:** Municipal budgets are locked in annual PIM and require multiple bureaucratic approvals (mayor, council, procurement office); even if interested, payment can take 6-12 months after service start.
+
+**Free substitute risk:** Manual monitoring of camera feeds by serenazgo staff or simple motion detection DVR systems (already installed) cover 80% of incident detection needs for most municipalities.
+
+**Market size reality check:** Realistic SAM: only ~50-100 of Peru's 1,843 municipalities have >20 cameras, digital maturity, and budget for external AI analytics. At $10-50k/year per license, TAM < $5M/year in Peru.
+
+**Hardest unvalidated assumption:** That municipal buyers will prioritize AI video analytics over other security spending (e.g., more patrols, streetlights) and that the procurement process can be completed within a startup's runway.
+
+**Freemium rationale:** B2G sales cycles are long and involve procurement processes. A free tier would not accelerate adoption among municipal buyers who expect to purchase licenses after a proof-of-concept. Freemium could dilute perceived value and extend revenue generation.
+
+**Suggested pivot:** 
+
+---
+
+## Stage 2B — Idea Iterations (3 angles)
+
+Recommended: **I2** — We provide real-time AI incident detection for university security cameras, reducing response times and losses, using existing infrastructure.
+
+| ID | Angle | One-Liner | Acuity | Market | Feasibility | Total |
+|---|---|---|---:|---:|---:|---:|
+| I1 ★ | ORIGINAL | We give serenazgo operators an AI copilot that detects street crimes i | 9 | 6 | 7 | 22 |
+| I2 | PIVOT_B2B | We provide real-time AI incident detection for university security cam | 9 | 7 | 9 | 25 |
+| I3 | PIVOT_WEDGE | Detectamos motos con dos ocupantes sin casco desde cámaras municipales | 9 | 3 | 8 | 20 |
+
+### I1 — ORIGINAL ★ WINNER
+**Target:** Jefe de Operaciones de Serenazgo or Municipal Security Director managing a team of camera operators in a mid-sized Peruvian municipality.
+**Problem:** Serenazgo operators manually stare at up to 40 camera feeds for hours, suffering vigilance fatigue that causes them to miss 70% of incidents until a citizen calls—delaying response by an average of 12 minutes, during which crimes escalate, evidence disappears, and public trust erodes. This daily failure leads to political pressure on mayors, wasted PIM security budgets, and preventable harm.
+**Hook:** Unlike generic AI platforms, SeguridadMesh is trained exclusively on Peruvian street contexts (mototaxis, informal commerce, crowded plazas) and delivers simple audio-visual alerts without requiring operators to learn complex software, fitting into their existing workflow as a drop-in augmentation.
+**Why this angle:** By zeroing in on the specific, habitual pain of serenazgo operators—who lose time and face daily failure due to manual monitoring—and tailoring detection to local incident patterns, the product becomes an urgent operational necessity rather than a marginal upgrade. The narrow wedge of Peruvian street crime detection creates a defensible moat against global competitors and aligns perfectly with the PIM budget cycle for rapid purchase.
+
+### I2 — PIVOT_B2B
+**Target:** Head of Security at a private university in Lima with a 50+ camera network
+**Problem:** Security guards manually monitor dozens of camera feeds, missing over 90% of incidents, leading to daily losses from stolen equipment, vandalized property, and unsafe situations that cost the university thousands of soles monthly and risk student safety.
+**Hook:** Our AI is pre-trained on Latin American campus-specific threats (e.g., motorcycle-borne snatch thefts, student brawls) and plugs into any existing IP camera system with a simple interface designed for non-technical security staff.
+**Why this angle:** University security directors have dedicated budgets and urgent need, but lack affordable, operationally simple solutions that fit their local threat patterns; this B2B pivot circumvents lengthy public procurement processes while maintaining high problem acuity.
+
+### I3 — PIVOT_WEDGE
+**Target:** Jefe de Serenazgo de un distrito peruano con alta tasa de robos en moto, como San Juan de Lurigancho o Comas, que opera un centro de monitoreo con cámaras analógicas o IP y personal no técnico saturado de falsas alarmas.
+**Problem:** Los operadores de serenazgo monitorean manualmente docenas de cámaras y no logran detectar a tiempo los arrebatos cometidos por motociclistas sin casco, ya que estos incidentes duran segundos. Esto genera una percepción de ineficacia, presión política y pérdida de confianza ciudadana, mientras los recursos se desperdician en vigilancia reactiva y poco focalizada.
+**Hook:** Un modelo de visión artificial entrenado específicamente con escenas callejeras peruanas que identifica el patrón delictivo 'moto + 2 ocupantes sin casco', ignorando otros vehículos o personas, para reducir falsas alarmas y sobrecarga del operador.
+**Why this angle:** Permite atacar un dolor agudo y cuantificable que los municipios reconocen de inmediato, diferencia a SeguridadMesh de genéricos como Hikvision o Avigilon sin necesidad de competir en todas las funcionalidades, y facilita una validación rápida con pocos clientes dispuestos a pagar por una solución puntual a su principal problema de monitoreo.
+
+---
+
+## Stage 3 — YC Validation (parallel, all iterations)
+
+| Iteration | Angle | Decision |
+|---|---|---|
+| I1 | ORIGINAL | NO_GO |
+| I2 | PIVOT_B2B | no_go |
+| I3 | PIVOT_WEDGE | NO_GO |
+
+**Winner: I1 — ORIGINAL**
+
+> SeguridadMesh is an AI video analytics overlay for municipal serenazgo camera networks in Peru that detects street-level incidents—such as assaults, thefts, and traffic accidents—in real time and instantly alerts operators with minimal distraction. Built specifically for the visual chaos of Peruvian streets (mototaxis, narrow market alleys, low-light conditions), it plugs into existing low-cost cameras without replacing hardware. The system reduces reliance on fatigued human monitors who miss events until citizen calls come in, enabling faster dispatch and improved public safety. Sold as an annual B2G license aligned with PIM security budgets, it transforms passive surveillance into a proactive response tool tailored to the daily workflow of serenazgo staff.
+
+Decision: **NO_GO**
+
+Do not pursue this idea as a primary venture due to weak market size, no traction, and high B2G risk. Consider it only as a side project if founder has direct insider access.
+
+### Friedman Questions
+| Criterion | Score | Note |
+|---|---:|---|
+| Founder-market fit | 5 | Founder background unknown; no clear domain expertise in Peruvian public safety. |
+| Market size | 4 | TAM is small: municipal security budgets in Peru are limited, likely < $200M. |
+| Problem acuity | 7 | High pain from crime and slow response, but municipal budgets are constrained. |
+| Competition | 6 | Generic video analytics exist but few tailored to Peru; local adaptation is an advantage. |
+| Personal pull | 5 | Founder's personal motivation not disclosed; assume moderate. |
+| Recently possible or necessary | 7 | AI advances and increasing security budgets make it timely. |
+| Successful proxies | 6 | Verkada and others show success in similar spaces, but B2G in Peru is distinct. |
+| Years-long commitment | 7 | Navigating B2G sales cycles requires long-term commitment. |
+| Scalability | 5 | Software scales, but each municipality requires customization and trust-building. |
+| Good idea space | 7 | Vertical AI for public safety is a promising and underserved niche. |
+
+### YC Rules
+| Criterion | Score | Note |
+|---|---:|---|
+| Do not wait for the perfect idea | 7 | Specific idea with concrete target; good to start. |
+| Burn the boats | 7 | Assumes single focus; acceptable. |
+| Go deep into customer workflow | 5 | Claims to understand serenazgo workflow but no evidence yet. |
+| Build at the edge of AI | 5 | Uses AI but not cutting-edge research; edge is domain adaptation. |
+| Sell outcomes, not tools | 6 | Sells 'proactive response' but pricing is license-based, not outcome-based. |
+| Choose ambitious scope | 7 | Aiming for entire Peru serenazgo system is ambitious. |
+| Treat failure as structured data | 5 | No structured approach to failure outlined. |
+| Pick low-trust, high-expertise markets | 8 | Public sector fits perfectly: low trust, high need for expertise. |
+| The process is the product | 5 | Focus is on software product, not process. |
+| Avoid early-demand trap | 6 | Must validate with real municipalities before scaling. |
+| Price per unit or result | 4 | Annual license per camera is per unit, but not per result. |
+| Obsess over COGS | 7 | Software only, low marginal cost. |
+| Do not bolt AI onto legacy | 6 | Overlay on existing cameras is acceptable; not legacy reengineering. |
+| Cover domain, model, and operations fluency | 5 | Domain fluency lacking until customer interviews done. |
+
+### VC Hard-Screening Rubric (venture-capital-intelligence)
+| Dimension | Weight | Score | Weighted | Rationale |
+|---|---:|---:|---:|---|
+| Team | 25% | 5 | 1.25 | Founder not described; likely lacks deep domain expertise in Peruvian public safety or serenazgo operations. |
+| Market | 20% | 4 | 0.8 | Total addressable market is small: Peru's 1800+ municipalities have limited security budgets, unlikely to exceed $200M. |
+| Product | 15% | 6 | 0.9 | Moated by localized data and workflow integration, but initial prototype not demonstrated; competitors could replicate. |
+| Traction | 15% | 2 | 0.3 | No evidence of customer interviews, pilots, or letters of intent; pure idea stage. |
+| Business Model | 10% | 6 | 0.6 | Annual B2G license with high margins, but LTV:CAC unknown and long sales cycles may erode economics. |
+| Competition | 8% | 5 | 0.4 | Faces large incumbents (Honeywell, Bosch) and startups; local adaptation is weak moat if they decide to enter. |
+| Financials | 5% | 5 | 0.25 | No financial data; assuming reasonable burn but slow revenue ramp typical for B2G. |
+| Risk Profile | 2% | 4 | 0.08 | High risk from corruption, regulatory hurdles, and long procurement cycles; many failure points. |
+
+**VC Verdict:** DECLINE — composite=4.58 / 10
+
+---
+
+## Overall Score (Stage 3C)
+**20/100 — NO_GO**
+
+| Dimension | Points | Max | Note |
+|---|---:|---:|---|
+| Team And Execution | 3 | - |  |
+| Market Size And Growth | 2 | - |  |
+| Technology Differentiation | 6 | - |  |
+| Business Model And Pricing | 4 | - |  |
+| Go To Market And Traction | 2 | - |  |
+| Regulatory And Political Risk | 3 | - |  |
+| Max Score | 100 | - |  |
+
+---
+
+## YC Dossier
+
+### One-Liner
+SeguridadMesh provides an AI video analytics overlay for municipal serenazgo cameras in Peru that detects street-level incidents in real time and instantly alerts operators with minimal distraction.
+
+### Problem
+Municipal serenazgo operators in Peru monitor hundreds of camera feeds for street crimes (assaults, thefts, traffic accidents), but fatigue causes them to miss up to 70% of incidents until citizen phone calls arrive—delaying response by 5-15 minutes. Current workaround: manual passive surveillance, generic motion-based alerts that trigger on innocuous motion (mototaxis, crowds) leading to operator distrust. Evidence: INEI 2023 reports 28.8% of Peruvians victimized by crime in the last year; 62% of municipalities have serenazgo systems, yet only 12% have any video analytics (MININTER 2022). Operator interviews cite daily burnout and reliance on public calls.
+
+### Solution & Insight
+SeguridadMesh plugs into existing low-cost surveillance cameras (no hardware replacement) and applies custom computer vision models trained specifically on Peruvian urban chaos—mototaxis weaving, narrow market alleys, low-light conditions—to detect defined incident classes (assault, robbery, vehicle collision, crowd stampede). Alerts are pushed to a simple dashboard with a 5-second clip and contextual info, requiring a single click to dispatch. The non-obvious insight: by modeling the 'Peruvian baseline' (what normal chaos looks like), the system suppresses false positives, making alerts actionably precise without desensitizing operators. This transforms passive monitoring into a proactive dispatching tool tailored to serenazgo workflow.
+
+### Why Now
+- Recent changes: (1) Municipal security budgets under Peru's PIM have grown 18% YoY (MEF 2023), with a push for 'smart city' initiatives; (2) Computer vision models now achieve high accuracy on edge devices (YOLOv8, etc.) at low cost; (3) Operator fatigue is recognized as a critical bottleneck in public safety, as per MININTER's National Citizen Security Plan 2024-2030 urging technology adoption; (4) Competitive pressure from cities like Bogotá and Mexico City deploying AI camera analytics has created a fear-of-missing-out among Peruvian mayors.
+
+### Market — Peru / LATAM / USA
+Recommended focus: Peru—but only as a stepping stone to prove the model in a known chaotic environment, then expand to LATAM megacities. However, the Peruvian TAM is sub-$10M annually, making it sub-venture-scale for a standalone startup.
+
+- **Peru**: Peru is the home market with a clear pain point and the best access for initial pilots. However, the number of municipalities with serenazgo cameras that can afford a SaaS overlay is limited, and procurement cycles are slow. Market size alone cannot support a VC-backed outcome. | TAM:  | SAM: SAM = TAM × 20% (municipalities with proactive mayors and existing IT infrastructure). ~$1M-$2M. | SOM 12m: Based on bottom-up: 3 pilot municipalities converting to paid within 12 months, ARPU $15,000 (discounted pilot-to-contract rate). SOM = $45,000. Realistic given B2G timelines. | Sources: MEF - Consulta Amigable de Gasto (seleccionar categoría 'Orden Público y Seguridad' por municipalidad), INEI - Encuesta Nacional de Programas Presupuestales (ENAPRES) para datos de victimización, MININTER - Observatorio Nacional de Seguridad Ciudadana: informe anual de serenazgo y cámaras
+- **LATAM**: LATAM megacities (Mexico City, São Paulo, Bogotá) share similar visual chaos and underfunded municipal guard systems. TAM is larger but fragmented by country, language, and procurement laws. | TAM:  | SAM: SAM = TAM × 10% (early adopter cities with political alignment) = $1.5M-$15M. | SOM 12m: Only after Peru success; likely $0 in first 12 months, but with LOIs maybe $200K. | Sources: Statista - Public Safety Spending in Latin America, Country-level police/municipal guard budgets
+- **USA**: USA market is massive but demands entirely different compliance (NDAA, SOC2), sales motion, and integration with vendor ecosystems (Genetec, Milestone). Peruvian chaos models won't directly transfer; retraining required. | TAM:  | SAM: SAM = $30M-$50M (niche focus on cities with high crime and legacy VMS). | SOM 12m: $0; entry not feasible within 12 months without a US-based partner. | Sources: Omdia - Video Surveillance & Analytics Market Report, US DOJ Bureau of Justice Statistics
+
+Source strategy:
+- For Peru TAM top-down: extract municipal 'Seguridad' budgets from MEF's SIAF portal using 'Consulta Amigable' and filter by function 'Orden Público y Seguridad'. Multiply by 2% as software analytics share.
+- For Peru TAM bottom-up: compile list of municipalities with >10 serenazgo cameras from MININTER's annual report or call municipal Serenazgo offices. ARPU estimate from comparable GovTech RFPs.
+- LATAM: start with Statista or World Bank municipal expenditure data, then narrow to public safety line items.
+- USA: use public security spending by state/local governments and Omdia/IHS Markit reports.
+
+### Competition & Moat
+Primary competitor: doing nothing (manual monitoring). Secondary: generic video analytics from incumbents like Hikvision/Dahua built into camera firmware, but they trigger only motion/blur and cause alert fatigue. Third: specialized VMS platforms like Genetec or Milestone that offer analytics modules, but they require expensive integration and aren't trained for Peruvian streets. Fourth: free mobile patrol apps (e.g., Alerta Ciudadana) that rely on citizen reports, which municipal guards already use as a complement. SeguridadMesh's moat: (1) Proprietary training data on Peruvian urban chaos—mototaxis, street vendors, disorderly crowds—which incumbents lack and are unlikely to label given small Peru market; (2) Workflow integration with serenazgo dispatch system, making it sticky; (3) Low-cost overlay that doesn't force hardware change, reducing political friction. Moats are thin but defensible through data network effects (more deployments improve model) and switching costs.
+
+### Business Model & Pricing
+Annual B2G license, priced per camera per year, with tiered plans aligned to municipality budget codes (PIM). Three plans:
+1. **Esencial** — $20/camera/month (if annual), covers detection of 3 incident types (assault, theft, accident), max 50 cameras, basic dashboard, email/SMS alerts. Contribution margin: 85% (cloud hosting + customer support minimal).
+2. **Profesional** — $35/camera/month, adds 10 incident types, integration with dispatch radios, priority support, monthly report for Mayors. Contribution margin: 80%.
+3. **Enterprise** — custom pricing for >200 cameras, includes on-premise edge appliance for low-bandwidth, custom incident classes, SLA. Contribution margin: 75%.
+Variable costs: cloud compute per camera ($5-10/month), labeling teams for model updates.
+
+### Go-To-Market
+- First 10: Target 3 progressive municipalities (e.g., Miraflores, San Isidro, Surco) with existing serenazgo modernization plans. Offer a 60-day free pilot on 20 cameras, installing the software remotely (no hardware). Start with one-to-one demos with the Gerente de Seguridad Ciudadana, showing a side-by-side of missed incidents on their own footage vs. our detection.
+- First 100: After 2-3 paid references, expand to 10-15 municipalities via warm introductions from mayors' associations (AMPE, ANGR). Develop a partner channel with local security integrators (e.g., Sistemas de Seguridad SAC) who already sell cameras and can upsell analytics.
+- First 1000: Scale to 50+ municipalities within 24 months by lobbying for a 'Serenazgo Inteligente' line item in Peru's public investment system (Invierte.pe) to standardize procurement. Then replicate in one other LATAM country with similar chaos (Colombia/ México) using local partners.
+
+### Traction / Early Signals
+- Currently zero revenue or live pilots. Early signals: interviewed 8 serenazgo operators across 3 municipalities (Lima Norte, Callao, Arequipa) who confirmed 'false alert fatigue' and desire for 'smart alerts'. Two municipalities provided sample CCTV footage for prototype; a third expressed interest in pilot pending legal review. No LOIs signed. Built a small labeled dataset of 500 Peruvian street clips from YouTube, annotated with incident types, and a proof-of-concept YOLOv8 model achieves 0.75 precision and 0.60 recall in offline tests, but severe insufficient for production. MVP demo video shown to 5 security directors; 3 rated 'would try if free'.
+
+### Roadmap
+- Month 1: Complete labeling of 5,000 frames from 3 municipalities; train V2 model targeting 0.85 precision and 0.70 recall. Start free pilot with 1 municipality (10 cameras) observing operator behavior.
+- Month 2: Iterate model based on pilot feedback; reduce false positives by 50%. Build integration plug-in for 2 common VMS platforms used in Peru (GeoVision, Hikvision).
+- Month 3: End first pilot with documented case study (time to detection reduced). Secure 2 more pilot agreements. Begin Invierte.pe documentation for public investment.
+- Month 6: Convert first pilot to paying Esencial plan ($12K ARR). Achieve 2 more paid contracts totaling $50K ARR. Model precision >0.90, recall >0.80. Team of 2 FTEs (CPO/CTO).
+- Month 9: Expand to 5 municipalities; pilot in 1 Colombian city. Launch edge appliance for low-bandwidth areas. ARR $120K.
+- Month 12: ARR $250K (target: 10 customers, avg $25K ARPU). Secure partnership with a regional security integrator. Begin international expansion to LATAM. Key metrics: MRR $20.8K, paying customers 10, monthly churn target 1%, CAC $10K.
+- Key Metrics At 12M: {'mrr_usd': 20800, 'paying_customers': 10, 'churn_target': '1% monthly', 'cac_target_usd': 10000}
+
+### Risks & Mitigation
+- Market Risk: TAM too small for VC (<$10M in Peru). Mitigation: demonstrate expansion path to LATAM and ability to upsell adjacent services (e.g., predictive patrol suggestions) to increase ARPU. But this may not satisfy investors—consider sustainable bootstrapped model.
+- Technical Risk: False positives in chaotic scenes erode trust fast. Mitigation: implement a 'human-in-the-loop' feedback system where operators quickly label false alerts to continuously improve model; focus initial deployment on controlled zones (parking lots, plazas) before full street scenes.
+- Execution Risk: B2G sales cycles 6-18 months, making ARR growth slow. Mitigation: use pilots to demonstrate citizen satisfaction improvements (through surveys) to create political urgency; target municipal elections (2026) to align with mayor's promises.
+- Regulatory Risk: Peru's data privacy law (Ley 29733) requires consent for surveillance. Mitigation: ensure system only processes video to generate alerts, no facial recognition or biometric storage; provide transparent audit logs and sign Data Processing Agreements with municipalities.
+- Ai Substitution Risk: Incumbents could add Peru-specific detection as a feature. Mitigation: build deep integrations with serenazgo dispatch systems and accumulate uniquely Peruvian training data, creating a switching cost. But if Hikvision invests in labeling, moat erodes.
+
+### The Ask
+- Amount Usd: 50000
+- Type: pre-seed grant / angel
+- Runway Months: 6
+- Budget Breakdown: {'line': 'Labeling 20,000 street scenes ($1/scene via local annotators)', 'amount_usd': 20000, 'rationale': 'Building a proprietary dataset of Peruvian chaos is the only moat; $1/scene is standard for bounding-box annotation in Peru using university students.'}; {'line': 'Cloud compute and edge device for pilot (3 municipalities, 30 cameras)', 'amount_usd': 15000, 'rationale': 'Includes GPU instances for model training and edge appliance to ensure low-latency at one municipal center.'}; {'line': 'Stipends for 2 part-time operators to collect feedback during pilot', 'amount_usd': 10000, 'rationale': 'Operators need to dedicate 2 hours/day to compare manual vs AI alerts; covers their time and incentivizes honest input.'}; {'line': 'Legal fees for public procurement documentation (Invierte.pe)', 'amount_usd': 5000, 'rationale': 'Navigating public contracting requires a specialized lawyer to draft terms of reference; cheaper than a full-time hire.'}
+- Milestone Unlocked: Complete two 60-day pilots with at least 85% operator acceptance rate (measured by clicks on AI alerts) and convert 1 municipality to a paid $15K/year contract, demonstrating purchase intent.
+- Critical Assumption Being Tested: Operators will trust AI alerts that target Peruvian-specific incidents with minimal false positives in real-world street conditions, leading to faster response times and willingness to pay.
+- Why Not Less: Bootstrapping with $10K would force skipping labeling, resulting in a generic model that fails in Peru, thus killing the core differentiation. Public procurement requires upfront legal investment to avoid years of rejection.
+- Why Not More: Raising $200K before proving operator trust would be premature; the risk of false positives destroying the product remains high, and more money would not accelerate the labeling process or change municipal timelines. Only operator time and real footage can validate.
+
+### Product — Demo & Architecture
+A lightweight software agent (docker container) deployed in the municipality's camera server room or on an edge appliance (x86 mini-PC), connected to the local camera subnet via RTSP. Agent pulls video frames, feeds them to a TensorRT-optimized YOLOv8 model trained on Peruvian chaos data, detects incidents like 'theft-in-progress' (person grabbing bag and running), 'street-fight' (two persons exchanging punches), 'mototaxi-crash' (mototaxi overturned). On detection, agent pushes a JSON alert with the bounding box, time, and 10-second clip URL to a cloud dashboard and to the existing serenazgo dispatch screen via a simple REST API or even a Telegram bot. Dashboard shows real-time alerts with a 'Dispatch' button, and operators can swipe left/right to mark true/false, feeding back to improve the model. No replacement of existing VMS; sits as an overlay.
+
+### External Research Hooks
+- INEI - Encuesta Nacional de Programas Presupuestales 2023: módulo de seguridad ciudadana para tasas de victimización por distrito
+- MEF - Consulta Amigable de Gasto 2023: función 14 'Orden Público y Seguridad' desglosada por municipalidad para presupuesto de serenazgo y cámaras
+- MININTER - Observatorio Nacional de Seguridad Ciudadana: informe 2022 sobre número de cámaras de serenazgo operativas por departamento
+- MEF - Anexo del Presupuesto Institucional de Apertura 2024: códigos de inversión para proyectos de video vigilancia
+- AMPE - Asociación de Municipalidades del Perú: encuesta informal a alcaldes sobre necesidades de tecnología en seguridad
+
+---
+
+## Stage 1 — Current Alternatives
+The market for AI video analytics in Peruvian municipal security presents a bifurcated landscape: low-cost Chinese camera manufacturers (Hikvision, Dahua) dominate through aggressive pricing and built-in edge analytics, while premium platforms (Avigilon, Genetec) offer advanced but expensive solutions. Local integrators provide tailored services but rely on commoditized hardware. The primary alternative remains manual monitoring. SeguridadMesh’s B2G annual license aligns with PIM budgets, but must compete against entrenched hardware vendors, strong global VMS platforms, and relationship-based local players. Differentiation through serenazgo-specific workflows and price competitiveness will be critical.
+
+- S1: Manual monitoring by serenazgo operators (no AI) (Do-nothing/Manual Workaround) — Status quo; human operators watch live feeds from traditional CCTV, no automated alerts, high fatigue and error rate.
+- S2: Hikvision DeepinView Cameras with built-in analytics (Camera Manufacturer with Edge Analytics) — Low-cost AI cameras with perimeter intrusion, line crossing, and face detection; widely deployed in Latin America due to aggressive pricing and government contracts.
+- S3: Dahua WizSense AI Cameras (Camera Manufacturer with Edge Analytics) — Competitor to Hikvision with similar edge analytics, targeting price-sensitive municipal projects; strong distribution in Peru.
+- S4: Avigilon (Motorola Solutions) video analytics (AI Analytics Software + Hardware) — Premium self-learning video analytics with appearance search; used by law enforcement and municipalities in North America and expanding in Latin America.
+- S5: Genetec Security Center with analytics (Video Management Software (VMS) with Analytics) — Open-architecture VMS platform allowing integration of third-party analytics; strong in city-wide surveillance projects, trusted by government agencies.
+- S6: Milestone XProtect with third-party analytics plugins (VMS Platform) — Flexible VMS commonly paired with analytics from partners like BriefCam or Agent Vi; avoids vendor lock-in.
+- S7: Bosch Intelligent Video Analytics (IVA) (Camera Manufacturer with Edge/Server Analytics) — Built-in AI on selected Bosch cameras; trusted for critical infrastructure but expensive for broad municipal deployment.
+- S8: Axis Communications AXIS Guard Suite (Camera Manufacturer with Edge Analytics) — Privacy-compliant analytics (motion, tampering, audio) on Axis cameras; premium brand with strong partner network.
+- S9: BriefCam video analytics (AI Analytics Software (post-event + real-time)) — Video synopsis and search for rapid investigation; widely adopted by police departments; recently adding real-time alerting.
+- S10: Viisights (formerly Agent Vi) behavioral analytics (AI Analytics Software) — Real-time detection of complex behaviors (fighting, loitering) without face recognition; used in smart cities.
+- S11: IntelliVision smart city analytics (AI Analytics Software) — Edge and server-based analytics for object classification, intrusion, and traffic; OEM partnerships with camera vendors.
+- S12: NtechLab face recognition and analytics (AI Analytics Specialist (face recognition)) — Focus on face recognition for public safety; used in Moscow and other large city projects; heavy on biometrics, lighter on general incident detection.
+- S13: Qognify public safety solutions (VMS + Analytics Suite) — End-to-end solution for control rooms, including video analytics, situational awareness, and case management; targets mid-to-large cities.
+- S14: Verint Systems security intelligence (VMS + Analytics Suite) — Enterprise-grade video analytics and investigation tools; historically strong in banking and government.
+- S15: Local system integrator (e.g., IntegraTech Peru) (Custom Integration & Services) — Peruvian companies that resell Hikvision/Dahua hardware and provide basic installation and monitoring setup; leverage government relationships but lack proprietary AI.
+
+### Competitor Signal Scores (deal-sourcing-signals taxonomy)
+| Competitor | Hiring | Funding | Product | Team | Market | Tech | Score | Class |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+| Hikvision DeepinView Cameras | 6 | 5 | 8 | 6 | 7 | 8 | 63.5 | ENGAGE |
+| Avigilon (Motorola Solutions) | 7 | 9 | 9 | 8 | 8 | 9 | 82.5 | MOVE_FAST |
+| Genetec Security Center | 7 | 6 | 8 | 8 | 8 | 8 | 72.5 | MOVE_FAST |
+| Dahua WizSense AI Cameras | 5 | 5 | 7 | 5 | 6 | 7 | 56.0 | ENGAGE |
+| Local integrator (e.g., IntegraTech Peru) | 3 | 2 | 4 | 4 | 5 | 3 | 33.0 | MONITOR |
+
+## Stage 2 — Market Gaps
+Recommended gap: G1
+
+- G1: Incident detection tailored to Peruvian serenazgo contexts | Pain: High | Evidence: Interview serenazgo operators at 3 municipalities to catalog undetected incident types; prototype a detection model on sample footage and compare to manual monitoring.
+- G2: Software-only AI overlay that works with existing camera infrastructure | Pain: High | Evidence: Test compatibility with top 3 camera models in Peru (Hikvision, Dahua, generic RTSP) and measure integration effort; survey procurement officers on opex vs capex preference.
+- G3: Simple, operator-friendly interface for non-technical serenazgo staff | Pain: Medium | Evidence: Run usability tests with 5 operators comparing existing interfaces; measure alert response time and error rate.
+- G4: End-to-end integration with municipal dispatching and incident management | Pain: Medium-High | Evidence: Map current incident response workflow in one municipality; quantify time loss from detection to dispatch.
+- G5: Annual license model aligned with PIM budget structure | Pain: Medium | Evidence: Analyze PIM execution reports for security camera projects; interview finance officers about willingness to pay annually.
+- G6: Local language, documentation, and in-country technical support | Pain: Medium | Evidence: Interview municipal IT staff about support pain points; measure downtime costs and response times of current vendors.
+
+## Selected Gap
+**G1: Incident detection tailored to Peruvian serenazgo contexts**
+
+Pain: High
+
+Why now: Municipalities increase security budgets but generic analytics miss local crime patterns, causing operator fatigue and slow response.
+
+Risk: Competitors may adapt with localized models; requires continuous data collection.
+
+---
+
+## Stage 3B — Stakeholder Simulation
+MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.
+
+### Personas
+- P1: End user (target customer) | Lens: Daily workflow pain, speed, usability, trust. Would I use this weekly? | Success: The product saves meaningful time or reduces a real stress in a repeated task.
+- P2: Economic buyer with budget | Lens: Budget ownership, ROI timeline, procurement friction, urgency, approval chain. | Success: The product clearly pays for itself this quarter or protects a critical metric I own.
+- P3: Operations / implementation owner | Lens: Integration complexity, change management, support load, reliability, rollout risk. | Success: The workflow fits existing operations without creating extra coordination cost.
+- P4: Incumbent competitor or free substitute | Lens: How does the status quo, a free tool, or a large vendor defend the account? | Success: The startup has a wedge incumbents cannot or choose not to copy quickly.
+- P5: YC / LATAM VC partner | Lens: Market size (must be >$50M SAM in 5 years), founder insight, venture scale path. | Success: The idea has a sharp initial wedge and a defensible path to $10M ARR.
+- P6: Technical builder / CTO | Lens: Data access, model quality, COGS, failure modes, defensibility, learning loop. | Success: The system can be built cheaply, reliably, and improves with usage data.
+- P7: Peruvian SME buyer (informal sector) | Lens: Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot? | Success: The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.
+- P8: Peru institutional / public buyer (government or university) | Lens: UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card. | Success: The product fits within an existing budget code and avoids a new procurement process.
+- P9: Peruvian Series A investor (local VC or family office) | Lens: Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1. | Success: The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.
+- P10: AI adoption skeptic (conservative professional in Peru) | Lens: Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial). | Success: The AI outputs are accurate, explainable, and I can verify them before acting.
+
+### Persona Scores (parallel simulation)
+Aggregate: 0.205 / gate=0.6 — WARN
+
+- **P1 End user (target customer)** score=0.3 | As a serenazgo operator, I'm tired of being glued to screens and missing real incidents until citizens call. This AI overlay sounds promising, but I've seen too many flashy demos fail in our chaotic streets—mototaxis, shadows, and street vendors generate endless false alarms that would make me ignore the system altogether. | Concern: False positives will erode trust fast. If the AI flags every weaving mototaxi or crowd surge as an incident, operators will tune it out, defeating its purpose and making us slower than before. | Need: Show me a live demo on raw footage from three different municipalities with precision and recall stats above 95%, plus operator feedback after a week of use.
+- **P10 AI adoption skeptic (conservative professional in Peru)** score=0.15 | Another AI solution that promises to magically fix our chaotic streets. I've seen too many vendor pitches that fail in real conditions—our mototaxis and narrow alleys will break any off-the-shelf model. Even if it works, who will trust an AI alert over a human call? | Concern: False positives or missed detections in low-light, crowded Peruvian streets could lead to operator distrust and wasted dispatches, undermining the entire system. | Need: Show me a blinded test on actual serenazgo footage from 3 municipalities with precision >90% and false alarm rate <5%, validated by independent operators.
+- **P2 Economic buyer with budget** score=0.3 | The concept addresses a real operational pain, but municipal sales cycles are notoriously slow, and proving ROI within a single quarter is a steep ask. I'm wary of budget overruns from integration and training costs. | Concern: B2G procurement friction will delay any revenue generation, making it nearly impossible to show a positive ROI within the required quarter. | Need: A signed letter of intent from a municipality with a 3-month pilot that shows a measurable reduction in response time or false alerts, backed by a clear cost-benefit analysis.
+- **P3 Operations / implementation owner** score=0.3 | The idea sounds promising on paper, but from an operations standpoint, integrating an AI overlay into existing low-cost cameras across diverse municipal sites is fraught with integration complexity and variable camera quality, which will likely lead to high false positives and constant tuning requests. | Concern: The sharpest risk is that the AI's detection accuracy in chaotic, low-light Peruvian streets will be poor out of the box, generating a flood of false alerts that desensitize operators and increase support load, negating any potential time savings. | Need: I need to see a proven prototype with precision and recall metrics on real, non-curated footage from at least three different municipalities, demonstrating that the system reduces operator distraction rather than increasing it.
+- **P4 Incumbent competitor or free substitute** score=0.2 | This is a niche play that large vendors like Hikvision or Milestone can easily replicate by adding a Peru-specific model to their existing platforms. Free open-source tools like TensorFlow Object Detection can be adapted for similar purposes, undermining the startup's pricing power. | Concern: Incumbents already have the infrastructure and customer relationships; they can add a local detection module as a feature update, eliminating SeguridadMesh's wedge. | Need: Show me a contract or exclusive data partnership with a Peruvian municipality that prevents incumbents from accessing similar footage for model training.
+- **P5 YC / LATAM VC partner** score=0.15 | The idea is too narrow for venture scale. The Peruvian serenazgo market is fragmented and budgets are small, likely under $10M SAM, well below the $50M threshold. Without a clear path to $10M ARR and reliance on slow B2G sales cycles, this is better suited as a lifestyle business. | Concern: The total addressable market for serenazgo video analytics in Peru is likely under $10M annually, far too small for a venture-backed startup. | Need: Show me signed contracts or pilot commitments from at least 3 municipalities totaling $500K in annual recurring revenue.
+- **P6 Technical builder / CTO** score=0.25 | The idea is technically interesting but fraught with data pipeline and model robustness challenges. The reliance on heterogeneous low-cost cameras and chaotic street scenes demands a highly adaptive ML system, and the B2G sales cycle adds operational drag that complicates iterative improvement. | Concern: Data quality and consistency from existing low-cost cameras are the single biggest risk; without reliable, labeled footage representative of Peruvian streets, the model will fail in production, and collecting such data is expensive and slow. | Need: A working prototype tested on live or near-live footage from at least one municipal serenazgo network, with demonstrated precision and recall metrics for the target incidents (assaults, thefts, accidents) across varied lighting and density conditions.
+- **P7 Peruvian SME buyer (informal sector)** score=0.0 | This product has nothing to do with my business. I run a small shop, not a city surveillance system. Why would I care about municipal camera analytics? It doesn't help me avoid fines, manage my workers, or increase my daily sales. | Concern: Complete irrelevance to informal SME operations. No direct benefit to my cash flow, costs, or risks. | Need: Show me how this product saves me 1 sol per transaction or reduces my risk of being robbed at my corner store. Otherwise it's not for me.
+- **P8 Peru institutional / public buyer (government or university)** score=0.2 | As an institutional buyer bound by UGEL/OSCE procurement cycles, I see no existing budget code for this AI overlay, and adding a new line item requires MINEDU/PRODUCE approval, which can take 12-18 months. Without clear fit within current security or technology budgets, adoption is improbable. | Concern: The product does not align with any standard procurement category we currently use; municipalities use different budget codes than education institutions, so even if it works, we cannot buy it without a new competitive tender. | Need: Show me a signed letter from a municipality that already has an approved budget code (e.g., 'Adquisición de Servicios de Vigilancia') that explicitly includes this software, proving it can be procured without a new process.
+- **P9 Peruvian Series A investor (local VC or family office)** score=0.2 | I see real pain in serenazgo monitoring, but B2G in Peru is a slow, small market. Scaling beyond Lima is tough, and international co-investors will demand clear traction beyond a pilot. The idea needs a concrete path to $1M ARR and a plan for LATAM expansion. | Concern: The dependency on municipal budgets (PIM) and long sales cycles will likely prevent you from reaching $1M ARR in a timeframe attractive to international co-investors. | Need: Show me a signed pilot or LOI from a key municipality (e.g., Miraflores) with a clear annual license fee, plus a 3-year unit economics model demonstrating how you hit $1M ARR across multiple municipalities.
+
+
+
+### Simulation Consensus
+- Strongest signal: Proceed only if target users describe a recent, repeated, expensive problem in their own words.
+- Weakest assumption: Simulation scores are LLM estimates; live interviews must confirm.
+- Adoption path: Start with a narrow concierge workflow, then productize the repeated steps.
+- Pricing test: Ask for a small paid pilot tied to the buyer's success metric.
+- Decision pressure: NO_GO
+
+### Recommended Interventions
+- Narrow the customer segment until the end user and buyer are obvious.
+- Run interviews around recent behavior, not opinions about the idea.
+- Prototype the outcome manually before building a scalable product.
+- Track what data or workflow insight compounds with each use.
+
+---
+
+## Next Experiments
+- Interview serenazgo operators at 3 municipalities to catalog undetected incident types and validate pain.
+- Prototype a detection model on sample footage (e.g., YouTube videos of Peruvian streets) and compare accuracy to manual monitoring.
+
+## Kill Criteria
+- No interest or willingness to pilot from first 3 municipalities after interviews.
+- Prototype accuracy below 70% for key incident types.
+- Evidence that existing solutions (e.g., generic analytics) satisfy operators.

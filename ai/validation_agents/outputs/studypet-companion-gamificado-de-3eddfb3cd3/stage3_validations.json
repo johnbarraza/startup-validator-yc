@@ -1,0 +1,649 @@
+[
+  {
+    "idea": "StudyPet",
+    "selected_gap": {
+      "id": "gap_emotional_gamification",
+      "title": "Lack of Emotional Engagement in Study Apps",
+      "pain": "Students find existing study tools boring and impersonal, leading to low daily usage and habit drop-off. They crave a fun, caring relationship with their study aid to sustain motivation over a semester.",
+      "why_now": "Smartphone natives expect app experiences to be delightful and gamified. The success of virtual pets (e.g., Tamagotchi) and habit games (Habitica) shows demand for emotional bonding, but no major study tool has integrated a nurturing pet/garden metaphor tied to real academic tasks.",
+      "evidence_needed": "A/B test comparing a basic flashcard app with a pet/garden version; measure daily active usage, session length, and user surveys on emotional connection.",
+      "priority": 1,
+      "risk": "Gamification could be perceived as childish by some students; requires ongoing content updates to keep the pet/garden engaging."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 4,
+        "note": "No information on founder's background; assumed average but lacking evidence of deep domain insight."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "While overall study app market is large, the narrow wedge (first-semester students) limits short-term TAM."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 6,
+        "note": "Procrastination is real, but not life-threatening; many students manage with existing tools."
+      },
+      {
+        "criterion": "Competition",
+        "score": 3,
+        "note": "Crowded space with Habitica, Forest, and dozens of AI study apps; differentiation is hard to sustain."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 4,
+        "note": "Founder connection not demonstrated; emotional engagement is assumed but unproven."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 7,
+        "note": "AI parsing of syllabi is now feasible, and emotional design trends support the concept."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 7,
+        "note": "Tamagotchi and Habitica show demand for virtual pet/habit apps, but academic integration is untested."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 3,
+        "note": "No indication of founder's long-term commitment; B2C education apps often fade quickly."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software product with low marginal cost, but user acquisition in education is expensive."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Emotional gamification in study is intriguing but not obviously better than existing approaches."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is concrete and ready to be tested."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 5,
+        "note": "Not clear if founder is fully committed; multiple ideas dilute focus."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 5,
+        "note": "Narrow wedge is good, but no evidence of deep immersion in student study habits."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "AI-driven syllabus parsing and personalization leverages current AI capabilities."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 6,
+        "note": "Outcome is 'consistent study habit' but pitch still focuses on features (pet, calendar)."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Ambitious to replace procrastination with emotional bonding; high risk but high potential."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 4,
+        "note": "No mention of systematic learning from failures; assumptions likely unvalidated."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 5,
+        "note": "Education is high-expertise, but trust from students is moderate; they are skeptical of new tools."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 4,
+        "note": "No evidence of process-driven development; likely building features without iterative loop."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 7,
+        "note": "Targeting a narrow segment (first-semester) reduces risk of building for too broad an audience."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 3,
+        "note": "Pricing model not defined; likely subscription but not outcome-based."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 8,
+        "note": "Software with low marginal cost; AI inference costs manageable."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 9,
+        "note": "Product is built from scratch with AI, not bolted onto an existing non-AI app."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 5,
+        "note": "Lacks evidence of deep domain expertise in education or behavioral psychology."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 3,
+        "weighted": 0.75,
+        "rationale": "No team information provided; assumed incapable of executing a complex AI + gamification product."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 5,
+        "weighted": 1.0,
+        "rationale": "Study app TAM >$1B, but narrow wedge limits initial addressable market; growth potential is moderate."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 5,
+        "weighted": 0.75,
+        "rationale": "Emotional engagement is a differentiator but easily replicated; lacks network effects or data moat."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 1,
+        "weighted": 0.15,
+        "rationale": "No evidence of customer interviews, waitlist, or prototypes; zero traction."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 3,
+        "weighted": 0.3,
+        "rationale": "No pricing or unit economics defined; likely low LTV:CAC due to high student churn."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Many funded competitors (e.g., Quizlet, Habitica) with larger engineering teams and existing user bases."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No burn rate or runway data; likely requires significant investment before monetization."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Key risk: gamification perceived as childish, leading to low adoption; moderate technical risk."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 3.5,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO GO",
+    "decision": "Given the lack of team info, traction, and strong competition, this idea does not meet the threshold for investment. Consider validating demand with a prototype before any further commitment.",
+    "next_experiments": [
+      "Create a landing page with A/B test (basic flashcard vs pet version) to gauge interest and collect emails.",
+      "Interview 20 first-semester students to understand pain points and willingness to pay.",
+      "Build a no-code prototype (e.g., using Glide + GPT) to test daily engagement over 2 weeks."
+    ],
+    "kill_criteria": [
+      "If fewer than 50 sign-ups on landing page within 2 weeks.",
+      "If less than 30% of interviewed students express strong interest.",
+      "If daily active usage in prototype drops below 30% after 5 days."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "We turn course syllabi into a virtual pet that only thrives when you actually study, using AI to auto-plan tasks and emotionally reward progress."
+  },
+  {
+    "idea": "B2B platform for universities to transform syllabi into gamified study plans with virtual pets/gardens to drive engagement and reduce dropout",
+    "selected_gap": {
+      "id": "gap_emotional_gamification",
+      "title": "Lack of Emotional Engagement in Study Apps",
+      "pain": "Students find existing study tools boring and impersonal, leading to low daily usage and habit drop-off.",
+      "why_now": "Smartphone natives expect delightful app experiences; success of virtual pets and habit games shows demand.",
+      "evidence_needed": "A/B test comparing basic flashcard app with pet/garden version.",
+      "priority": 1,
+      "risk": "Gamification could be perceived as childish; requires ongoing content updates."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No data on founder background; education/gaming experience assumed but not demonstrated."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "US higher education ~$200M TAM if $50k/university; global could scale but fragmented."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 7,
+        "note": "Freshman dropout is critical, but universities may not see study habits as primary cause vs. financial/social issues."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "LMS gamification features (Canvas, Blackboard) and apps like Habitica exist; emotional pet angle is unique but easily copied."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Founder's personal connection to student burnout? Not evident."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 6,
+        "note": "AI personalization improves relevance, but not a recent breakthrough; behavioral design trends help."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 8,
+        "note": "Duolingo, Habitica, Tamagotchi prove gamification drives engagement; but academic context is unproven."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "University sales cycles 12-18 months; retention requires long-term contracts."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "Software scalable, but sales to universities is high-touch and slow."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Edtech gamification is a good space but crowded; emotional angle is novel but high risk."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for perfect idea",
+        "score": 7,
+        "note": "Idea is actionable; could reduce scope to a single course for validation."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 5,
+        "note": "Unsure if team is committed solely to this; risk of distraction."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Need deep understanding of university admin and student daily study habits."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "AI can personalize study plans and pet responses; but core gamification is rule-based."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Can sell 'reduce dropout by X%' or 'increase daily engagement'."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Reducing dropout institution-wide is ambitious; may need to start small."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "Pilot failures yield insights on motivation drivers; but risk of quick pivot."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 5,
+        "note": "Universities are low-trust to new vendors; but decision-makers are experts in education."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "Student engagement process is key; pet growth mirrors study progress."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "Risk that universities say 'interesting' but never sign; need paid pilots."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Could price per student per year; outcome-based pricing (e.g., per retained student) is complex."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 8,
+        "note": "Low marginal cost; asset creation (virtual pets) is one-time investment."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 6,
+        "note": "Integration with LMS is necessary but could be seamless; risk of being a bolt-on."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 5,
+        "note": "Need expertise in edtech, gamification design, and university operations."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No indication of founder expertise in education, gaming, or sales to universities."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 5,
+        "weighted": 1.0,
+        "rationale": "TAM likely under $1B; university budget constraints limit willingness to pay for new tools."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Gamification with emotional bonding is novel but defensibility weak; no proprietary AI/data moat yet."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 1,
+        "weighted": 0.15,
+        "rationale": "No evidence of pilots, waitlist, or even student surveys; pure concept stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "SaaS per-university pricing likely; LTV:CAC uncertain due to long sales cycle and low unit revenue."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Incumbents like Canvas, Blackboard, and apps like Habitica, Khan Academy; emotional pet angle is easy to replicate."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "Assuming reasonable early burn, but no data; need 18+ months runway to survive slow sales."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 3,
+        "weighted": 0.06,
+        "rationale": "High risk: student perception as childish, university procurement friction, need for ongoing content updates."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.18,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Decline to invest. The idea lacks traction, team credibility, and a clear path to a large market. The gamification approach is interesting but faces high execution risk and low defensibility.",
+    "next_experiments": [
+      "Run a small pilot with one professor comparing engagement metrics between gamified and non-gamified study plans.",
+      "Interview 10 university administrators to gauge intent to purchase and willingness to pay.",
+      "Build a minimal prototype (e.g., a single course's study plan with a virtual plant) to test student retention over one month."
+    ],
+    "kill_criteria": [
+      "Pilot shows <20% increase in daily active usage compared to control.",
+      "Fewer than 3 out of 10 administrators express interest in a paid pilot.",
+      "Student surveys indicate the gamification is perceived as childish or distracting."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We provide an AI-powered, emotionally engaging study companion for universities to improve student retention by converting course materials into personalized, gamified learning journeys."
+  },
+  {
+    "idea": "StudyPet",
+    "selected_gap": {
+      "id": "gap_emotional_gamification",
+      "title": "Lack of Emotional Engagement in Study Apps",
+      "pain": "Students find existing study tools boring and impersonal, leading to low daily usage and habit drop-off. They crave a fun, caring relationship with their study aid to sustain motivation over a semester.",
+      "why_now": "Smartphone natives expect app experiences to be delightful and gamified. The success of virtual pets (e.g., Tamagotchi) and habit games (Habitica) shows demand for emotional bonding, but no major study tool has integrated a nurturing pet/garden metaphor tied to real academic tasks.",
+      "evidence_needed": "A/B test comparing a basic flashcard app with a pet/garden version; measure daily active usage, session length, and user surveys on emotional connection.",
+      "priority": 1,
+      "risk": "Gamification could be perceived as childish by some students; requires ongoing content updates to keep the pet/garden engaging."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No specific founder info provided; assumes average fit with pre-med organic chem pain."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "Niche of pre-med organic chem students; TAM likely under $100M, not massive."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Organic chemistry is a notorious gatekeeper course with high failure rates."
+      },
+      {
+        "criterion": "Competition",
+        "score": 5,
+        "note": "Many study apps exist (Anki, Quizlet) but none with emotional pet mechanic."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 7,
+        "note": "Likely founder experienced the pain, but not confirmed."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "AI makes personalized plans feasible; virtual pet trend is proven."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 7,
+        "note": "Habitica and Tamagotchi show gamification drives engagement."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 6,
+        "note": "Potential to expand to other subjects, but initial narrow focus requires sustained effort."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software product can scale, but content updates for different courses need resources."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "EdTech with emotional engagement is a novel and interesting space."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is concrete and addresses a clear pain point."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Single focus on StudyPet is plausible if founder is committed."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Understanding student study habits is critical, but depth may be limited initially."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Uses AI to parse syllabus and generate personalized plans, leveraging latest models."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Value proposition is acing Organic Chemistry, not just a planner."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 6,
+        "note": "Could expand to other courses, but starting narrow is wise."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "Usage data can inform improvements, but not explicitly designed for learning."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 6,
+        "note": "Education market demands expertise and trust; virtual pet might undermine credibility."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "The study plan generation process is core, but emotional engagement is also key."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "Risk of building before validating demand; waitlist needed."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 6,
+        "note": "Could charge per course or subscription; outcome-based pricing is challenging."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "AI compute costs can be high; need to manage margins."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "AI-native design, not adding AI to an existing non-AI product."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 5,
+        "note": "Requires deep organic chemistry domain knowledge and AI expertise."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No specific team background provided; assumes average team without unique insight into pre-med or edtech."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "TAM likely under $1B; niche of pre-med organic chem students, limited scalability without expansion."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Virtual pet + AI study plan is novel but has low defensibility; easily replicated by incumbents."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 1,
+        "weighted": 0.15,
+        "rationale": "No evidence of user validation, waitlist, or pilot; pure idea stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "Subscription plausible, but LTV:CAC and margins unproven; student price sensitivity is high."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Weak vs funded incumbents like Quizlet, Anki, Khan Academy; pet feature is a feature, not a moat."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial projections; burn rate and runway unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 6,
+        "weighted": 0.12,
+        "rationale": "Failure mode: students see pet as childish or distracting; low stickiness."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.19,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "no-go",
+    "decision": "DECLINE. The VC composite score is below 5.0, indicating significant gaps in team, market, traction, and business model. The emotional gamification angle is interesting but insufficient to overcome these weaknesses. Without strong founder-market fit or early traction, the idea does not pass the hard-screening rubric.",
+    "next_experiments": [
+      "Conduct 20+ interviews with pre-med organic chemistry students to validate problem acuity and willingness to pay.",
+      "Build a minimal prototype (e.g., Google Calendar integration with pet) and A/B test vs. standard planner for engagement.",
+      "Create a landing page with waitlist to gauge demand and collect email signups.",
+      "Run a pre-seed survey to estimate TAM and willingness to pay for premium features."
+    ],
+    "kill_criteria": [
+      "If <30% of interviewed students express strong pain and intent to use",
+      "If A/B test shows no significant increase in daily active usage over baseline",
+      "If waitlist fails to reach 100 signups within 2 weeks of targeted outreach",
+      "If any major competitor (e.g., Anki, Quizlet) announces a similar feature"
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We help pre-med students survive Organic Chemistry by turning their syllabus into a daily pet-nurturing study routine using AI."
+  }
+]

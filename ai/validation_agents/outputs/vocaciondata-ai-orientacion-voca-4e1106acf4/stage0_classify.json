@@ -1,0 +1,32 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "EdTech",
+  "customer_type": "B2C",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "Active workarounds exist (informal advice, private counselors); students and parents search actively for career guidance; measurable cost of wrong career decisions (lost income, debt); some spending on imperfect solutions.",
+  "pit_signals_detected": [
+    "70% informal economy means labor data on salaries and employability is unrepresentative, reducing tool's accuracy for most careers.",
+    "Target users (students) cannot pay; decision-makers (parents/schools) have low WTP (S/5-15/month) or face long procurement cycles.",
+    "MINEDU could launch a free AI career guide from existing data (SUNEDU, MTPE), killing paid adoption overnight.",
+    "Behavior change is huge: students rely on family, teachers, or free YouTube/TikTok for advice; switching to a paid AI bot is unlikely.",
+    "Post-2025 AI proliferation will spawn free alternatives (WhatsApp bots, Google Bard custom GPTs) that eliminate any moat."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist",
+    "Spending already happens on imperfect solutions",
+    "Measurable cost: lost hours, revenue, or compliance risk",
+    "Users search actively for solutions"
+  ],
+  "classification_rationale": "Career mismatch is a structural problem in Peru with high stakes. Users actively seek guidance, and some pay for private services. However, WTP is low in the B2C market due to income constraints, making B2B or government paths more viable. The AI agent differentiates from generic career sites.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "YES",
+  "freemium_rationale": "Freemium builds user base in a price-sensitive market; monetize via premium features, university leads, or B2B sales to schools/government. Low marginal cost of AI inference makes free tier sustainable.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "The buyer is either a student (no income) or a public/private school (budget <S/200/month, procurement cycle 6-12 months, and decision-maker not the end user).",
+  "free_substitute_risk": "A free WhatsApp group, school counselor recommendation, or a simple Google Sheet with SUNEDU salary data already covers 80% of the 'guidance' value.",
+  "market_size_reality_check": "Real paying SAM in Peru: ~500 private schools (max S/200/month = S/100k/year) + 2000 individual users (S/10/month = S/240k/year) = ~S/340k/year ($90k/year) – insufficient for VC scale without LATAM expansion.",
+  "hardest_assumption": "That students or parents will pay for career guidance when free substitutes (counselors, internet, family) are perceived as good enough.",
+  "devil_rationale": "The idea is logically appealing but ignores structural realities: high informality makes data less useful, low WTP and long procurement kill revenue, and free alternatives (including potential government tools) make switch costs zero. Without a clear, urgent pain that cannot be solved by a free chatbot or existing counselor, this will stall at sub-$100k ARR.",
+  "source": "dual_agent_classification"
+}

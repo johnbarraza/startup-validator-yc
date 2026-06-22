@@ -1,0 +1,1771 @@
+{
+  "idea": "App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+  "current_stage": "complete",
+  "selected_gap_id": "G1",
+  "strategy_approved": true,
+  "artifacts": {
+    "stage0_classify": {
+      "problem_type": "VITAMIN",
+      "vertical": "Other",
+      "customer_type": "B2C",
+      "problem_severity": "RECURRING",
+      "pain_evidence": "No LLM — assume VITAMIN.",
+      "pit_signals_detected": [
+        "Could not run devil's advocate without LLM."
+      ],
+      "painkiller_signals_detected": [],
+      "classification_rationale": "Deterministic fallback.",
+      "proceed_recommendation": "WARN",
+      "suggested_pivot": "",
+      "freemium_recommendation": "MAYBE",
+      "freemium_rationale": "Cannot assess without LLM.",
+      "devil_verdict": "WEAK",
+      "payment_blocker": "Unknown — run with LLM enabled.",
+      "free_substitute_risk": "Unknown.",
+      "market_size_reality_check": "Unknown.",
+      "hardest_assumption": "Unknown.",
+      "devil_rationale": "Deterministic fallback.",
+      "preflight_dominant_solution": {
+        "score": "CLEAR",
+        "competitor_name": "unknown",
+        "threat_level": "MEDIUM",
+        "note": "Could not run preflight without LLM."
+      },
+      "preflight_precedent_failure": {
+        "score": "NO_KNOWN_FAILURE",
+        "example": "none",
+        "learning": "Unknown."
+      },
+      "preflight_regulatory_kill": {
+        "score": "NO_BLOCKER",
+        "regulation": "unknown",
+        "mitigation": "n/a"
+      },
+      "preflight_summary": "Preflight ran without LLM — treat as unverified.",
+      "deal_signals": {
+        "hiring": "unknown",
+        "funding": "unknown",
+        "product": "unknown",
+        "market": "unknown",
+        "tech": "unknown",
+        "momentum": "STABLE"
+      },
+      "source": "triple_agent_classification"
+    },
+    "stage1_research": {
+      "idea": "App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+      "market": "Unknown market inferred from founder-provided idea",
+      "solutions": [
+        {
+          "id": "S01",
+          "name": "Manual workaround",
+          "category": "Spreadsheet, notes, or ad hoc process",
+          "observed_positioning": "Cheap and flexible, but slow and inconsistent."
+        },
+        {
+          "id": "S02",
+          "name": "Generic horizontal SaaS",
+          "category": "Broad workflow software",
+          "observed_positioning": "Easy to adopt, but weak on domain-specific outcomes."
+        },
+        {
+          "id": "S03",
+          "name": "Incumbent enterprise platform",
+          "category": "Large vendor suite",
+          "observed_positioning": "Trusted by buyers, but expensive and slow to implement."
+        },
+        {
+          "id": "S04",
+          "name": "Internal build",
+          "category": "Company-owned custom tooling",
+          "observed_positioning": "Fits local process, but competes with engineering priorities."
+        },
+        {
+          "id": "S05",
+          "name": "Consulting or agency service",
+          "category": "Human-led service provider",
+          "observed_positioning": "High-touch expertise, but margins and scale are limited."
+        },
+        {
+          "id": "S06",
+          "name": "Open-source project",
+          "category": "Community-maintained tool",
+          "observed_positioning": "Low software cost, but support and reliability vary."
+        },
+        {
+          "id": "S07",
+          "name": "AI wrapper",
+          "category": "Thin LLM interface",
+          "observed_positioning": "Fast to build, but easy to copy if workflow depth is missing."
+        },
+        {
+          "id": "S08",
+          "name": "Marketplace or network",
+          "category": "Connects supply and demand",
+          "observed_positioning": "Useful when liquidity exists, hard to start from zero."
+        },
+        {
+          "id": "S09",
+          "name": "Mobile-first app",
+          "category": "Lightweight point solution",
+          "observed_positioning": "Good distribution surface, often too shallow for serious workflows."
+        },
+        {
+          "id": "S10",
+          "name": "No-code automation",
+          "category": "Zapier/Airtable/Notion-style stack",
+          "observed_positioning": "Good for prototypes, brittle for core operations."
+        },
+        {
+          "id": "S11",
+          "name": "Legacy desktop software",
+          "category": "Installed tool or old vertical app",
+          "observed_positioning": "Embedded in workflows, poor UX and integrations."
+        },
+        {
+          "id": "S12",
+          "name": "Data dashboard",
+          "category": "BI/reporting layer",
+          "observed_positioning": "Makes status visible, but may not drive action."
+        },
+        {
+          "id": "S13",
+          "name": "Community and content",
+          "category": "Newsletter, course, forum, or templates",
+          "observed_positioning": "Can validate demand, but may not be software defensible."
+        },
+        {
+          "id": "S14",
+          "name": "API infrastructure",
+          "category": "Developer-facing primitives",
+          "observed_positioning": "Scales well if developers are the buyer, indirect otherwise."
+        },
+        {
+          "id": "S15",
+          "name": "Status quo",
+          "category": "Doing nothing",
+          "observed_positioning": "Always a competitor when pain is tolerable or budget is unclear."
+        }
+      ],
+      "research_summary": "Fallback mode cannot perform live market research, so it maps the idea against the common alternative categories every startup must beat: manual work, internal builds, incumbents, consultants, generic SaaS, open-source, and doing nothing. Use live LLM mode or add external research artifacts for named competitors.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    "stage2_gaps": {
+      "research_source": "deterministic_fallback",
+      "gaps": [
+        {
+          "id": "G1",
+          "title": "Narrow painful workflow",
+          "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+          "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+          "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+          "priority": 1,
+          "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+        },
+        {
+          "id": "G2",
+          "title": "Buyer-visible outcome",
+          "pain": "Users may like the product, but the buyer needs a measurable business result.",
+          "why_now": "Founders can now instrument usage, cost, and time saved from the first prototype.",
+          "evidence_needed": "Ask who owns the budget and what metric would justify payment this month.",
+          "priority": 2,
+          "risk": "Without a buyer metric, adoption can stall at free-user enthusiasm."
+        },
+        {
+          "id": "G3",
+          "title": "Distribution wedge",
+          "pain": "A useful product still fails if reaching users is too slow or expensive.",
+          "why_now": "Communities, outbound, integrations, and content can reveal a repeatable first channel.",
+          "evidence_needed": "Run 3 small acquisition tests and measure replies, demos, or waitlist conversion.",
+          "priority": 3,
+          "risk": "A channel that works once may not repeat without founder-led effort."
+        },
+        {
+          "id": "G4",
+          "title": "Trust and switching friction",
+          "pain": "Users keep existing tools unless the new workflow is clearly safer, faster, or cheaper.",
+          "why_now": "Agentic workflows can generate strong first drafts, but users need proof and control.",
+          "evidence_needed": "Ask users what would make them trust the product with a real task.",
+          "priority": 4,
+          "risk": "Trust gaps can turn an impressive demo into a non-critical side tool."
+        },
+        {
+          "id": "G5",
+          "title": "Defensible workflow data",
+          "pain": "A generic AI interface is easy to copy unless usage creates proprietary process insight.",
+          "why_now": "Every interaction can teach the system where users hesitate, correct, or approve.",
+          "evidence_needed": "Define what unique data the product captures after 30 days of usage.",
+          "priority": 5,
+          "risk": "If no proprietary learning loop exists, incumbents can clone the surface area."
+        }
+      ],
+      "recommended_gap_id": "G1",
+      "checkpoint_instruction": "Choose one gap with --gap-id G1, or run --auto to select the recommended gap.",
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    "stage2b_iterations": {
+      "iterations": [
+        {
+          "id": "I1",
+          "angle": "ORIGINAL",
+          "idea_refined": "[ORIGINAL] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+          "target_customer": "To be defined through user interviews.",
+          "core_problem": "To be validated through behavioral interviews.",
+          "solution_hook": "To be determined after problem validation.",
+          "why_this_angle": "Refine and sharpen the founder's original idea. Keep the same customer and problem but make the one-liner crisper, the pain more behavioral, and the wedge narrower.",
+          "quick_score": {
+            "problem_acuity": 5,
+            "market_size": 5,
+            "founder_feasibility": 5,
+            "total": 15
+          },
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "id": "I2",
+          "angle": "PIVOT_B2B",
+          "idea_refined": "[PIVOT_B2B] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+          "target_customer": "To be defined through user interviews.",
+          "core_problem": "To be validated through behavioral interviews.",
+          "solution_hook": "To be determined after problem validation.",
+          "why_this_angle": "Reframe the same core problem for an institutional or B2B buyer: a university, employer, government agency, trade association, or distributor who has budget and urgency. The end user may be the same but the buyer and pricing model should change.",
+          "quick_score": {
+            "problem_acuity": 5,
+            "market_size": 5,
+            "founder_feasibility": 5,
+            "total": 15
+          },
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "id": "I3",
+          "angle": "PIVOT_WEDGE",
+          "idea_refined": "[PIVOT_WEDGE] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+          "target_customer": "To be defined through user interviews.",
+          "core_problem": "To be validated through behavioral interviews.",
+          "solution_hook": "To be determined after problem validation.",
+          "why_this_angle": "Find the narrowest, sharpest slice of the problem that one specific micro-segment suffers most acutely right now. Ignore scale — optimize for fastest evidence of willingness to pay from 10 real users in the next 30 days.",
+          "quick_score": {
+            "problem_acuity": 5,
+            "market_size": 5,
+            "founder_feasibility": 5,
+            "total": 15
+          },
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        }
+      ],
+      "recommended_iteration_id": "I1",
+      "recommended_one_liner": "",
+      "source": "parallel_iteration"
+    },
+    "stage3_validations": [
+      {
+        "idea": "[ORIGINAL] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+        "selected_gap": {
+          "id": "G1",
+          "title": "Narrow painful workflow",
+          "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+          "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+          "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+          "priority": 1,
+          "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 5,
+            "note": "Unknown until founder proves access or insight."
+          },
+          {
+            "criterion": "Market size",
+            "score": 5,
+            "note": "Estimate TAM/SAM/SOM with external evidence."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 6,
+            "note": "Strong if gap maps to urgent time, money, or risk."
+          },
+          {
+            "criterion": "Competition",
+            "score": 6,
+            "note": "Alternatives exist; wedge must be sharper."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 5,
+            "note": "Unknown until founder states years-long commitment."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 6,
+            "note": "AI/regulation/cost shifts may enable now."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 5,
+            "note": "Find adjacent companies proving willingness to pay."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 5,
+            "note": "Validate domain depth for compounding insight."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 6,
+            "note": "Software scales; sales/data access may constrain."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 6,
+            "note": "Promising if segment has repeated painful workflows."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 0.25,
+            "score": 5,
+            "weighted": 1.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Market",
+            "weight": 0.2,
+            "score": 5,
+            "weighted": 1.0,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Product",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 0.1,
+            "score": 5,
+            "weighted": 0.5,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 0.08,
+            "score": 5,
+            "weighted": 0.4,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 0.05,
+            "score": 5,
+            "weighted": 0.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 0.02,
+            "score": 5,
+            "weighted": 0.1,
+            "rationale": "Fallback — requires LLM for real assessment."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 5.0,
+          "verdict": "DECLINE",
+          "reason": "Weighted score 5.0 below threshold; weak: ",
+          "weak_dims": [],
+          "disqualifying_dims": [],
+          "investor_lenses": {
+            "sequoia": "WATCH",
+            "yc": "WATCH",
+            "tiger_global": "WATCH",
+            "risk_mgmt": "ELEVATED"
+          },
+          "source": "deterministic_vc_calcs"
+        },
+        "go_no_go": "GO_WITH_CONSTRAINTS",
+        "decision": "Proceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.",
+        "next_experiments": [
+          "Interview 5 target users about the last time they experienced this problem.",
+          "Ask what they use today, cost, and what happens if they do nothing.",
+          "Run a concierge test for the smallest paid outcome."
+        ],
+        "kill_criteria": [
+          "Users cannot recall a recent painful instance.",
+          "No budget owner or urgent operational metric identified.",
+          "Workflow only mildly better than current workaround."
+        ],
+        "source": "deterministic_fallback",
+        "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}",
+        "_iteration_id": "I1",
+        "_iteration_angle": "ORIGINAL",
+        "_iteration_one_liner": ""
+      },
+      {
+        "idea": "[PIVOT_B2B] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+        "selected_gap": {
+          "id": "G1",
+          "title": "Narrow painful workflow",
+          "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+          "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+          "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+          "priority": 1,
+          "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 5,
+            "note": "Unknown until founder proves access or insight."
+          },
+          {
+            "criterion": "Market size",
+            "score": 5,
+            "note": "Estimate TAM/SAM/SOM with external evidence."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 6,
+            "note": "Strong if gap maps to urgent time, money, or risk."
+          },
+          {
+            "criterion": "Competition",
+            "score": 6,
+            "note": "Alternatives exist; wedge must be sharper."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 5,
+            "note": "Unknown until founder states years-long commitment."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 6,
+            "note": "AI/regulation/cost shifts may enable now."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 5,
+            "note": "Find adjacent companies proving willingness to pay."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 5,
+            "note": "Validate domain depth for compounding insight."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 6,
+            "note": "Software scales; sales/data access may constrain."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 6,
+            "note": "Promising if segment has repeated painful workflows."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 0.25,
+            "score": 5,
+            "weighted": 1.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Market",
+            "weight": 0.2,
+            "score": 5,
+            "weighted": 1.0,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Product",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 0.1,
+            "score": 5,
+            "weighted": 0.5,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 0.08,
+            "score": 5,
+            "weighted": 0.4,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 0.05,
+            "score": 5,
+            "weighted": 0.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 0.02,
+            "score": 5,
+            "weighted": 0.1,
+            "rationale": "Fallback — requires LLM for real assessment."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 5.0,
+          "verdict": "CONDITIONAL_PASS"
+        },
+        "go_no_go": "GO_WITH_CONSTRAINTS",
+        "decision": "Proceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.",
+        "next_experiments": [
+          "Interview 5 target users about the last time they experienced this problem.",
+          "Ask what they use today, cost, and what happens if they do nothing.",
+          "Run a concierge test for the smallest paid outcome."
+        ],
+        "kill_criteria": [
+          "Users cannot recall a recent painful instance.",
+          "No budget owner or urgent operational metric identified.",
+          "Workflow only mildly better than current workaround."
+        ],
+        "source": "deterministic_fallback",
+        "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}",
+        "_iteration_id": "I2",
+        "_iteration_angle": "PIVOT_B2B",
+        "_iteration_one_liner": ""
+      },
+      {
+        "idea": "[PIVOT_WEDGE] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+        "selected_gap": {
+          "id": "G1",
+          "title": "Narrow painful workflow",
+          "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+          "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+          "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+          "priority": 1,
+          "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 5,
+            "note": "Unknown until founder proves access or insight."
+          },
+          {
+            "criterion": "Market size",
+            "score": 5,
+            "note": "Estimate TAM/SAM/SOM with external evidence."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 6,
+            "note": "Strong if gap maps to urgent time, money, or risk."
+          },
+          {
+            "criterion": "Competition",
+            "score": 6,
+            "note": "Alternatives exist; wedge must be sharper."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 5,
+            "note": "Unknown until founder states years-long commitment."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 6,
+            "note": "AI/regulation/cost shifts may enable now."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 5,
+            "note": "Find adjacent companies proving willingness to pay."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 5,
+            "note": "Validate domain depth for compounding insight."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 6,
+            "note": "Software scales; sales/data access may constrain."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 6,
+            "note": "Promising if segment has repeated painful workflows."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 7,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 6,
+            "note": "Provisional; replace with customer evidence."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 0.25,
+            "score": 5,
+            "weighted": 1.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Market",
+            "weight": 0.2,
+            "score": 5,
+            "weighted": 1.0,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Product",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 0.15,
+            "score": 5,
+            "weighted": 0.75,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 0.1,
+            "score": 5,
+            "weighted": 0.5,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 0.08,
+            "score": 5,
+            "weighted": 0.4,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 0.05,
+            "score": 5,
+            "weighted": 0.25,
+            "rationale": "Fallback — requires LLM for real assessment."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 0.02,
+            "score": 5,
+            "weighted": 0.1,
+            "rationale": "Fallback — requires LLM for real assessment."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 5.0,
+          "verdict": "CONDITIONAL_PASS"
+        },
+        "go_no_go": "GO_WITH_CONSTRAINTS",
+        "decision": "Proceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.",
+        "next_experiments": [
+          "Interview 5 target users about the last time they experienced this problem.",
+          "Ask what they use today, cost, and what happens if they do nothing.",
+          "Run a concierge test for the smallest paid outcome."
+        ],
+        "kill_criteria": [
+          "Users cannot recall a recent painful instance.",
+          "No budget owner or urgent operational metric identified.",
+          "Workflow only mildly better than current workaround."
+        ],
+        "source": "deterministic_fallback",
+        "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}",
+        "_iteration_id": "I3",
+        "_iteration_angle": "PIVOT_WEDGE",
+        "_iteration_one_liner": ""
+      }
+    ],
+    "stage3_winner_iteration": {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "[ORIGINAL] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+      "target_customer": "To be defined through user interviews.",
+      "core_problem": "To be validated through behavioral interviews.",
+      "solution_hook": "To be determined after problem validation.",
+      "why_this_angle": "Refine and sharpen the founder's original idea. Keep the same customer and problem but make the one-liner crisper, the pain more behavioral, and the wedge narrower.",
+      "quick_score": {
+        "problem_acuity": 5,
+        "market_size": 5,
+        "founder_feasibility": 5,
+        "total": 15
+      },
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    "stage3_validation": {
+      "idea": "[ORIGINAL] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+      "selected_gap": {
+        "id": "G1",
+        "title": "Narrow painful workflow",
+        "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+        "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+        "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+        "priority": 1,
+        "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+      },
+      "friedman_scores": [
+        {
+          "criterion": "Founder-market fit",
+          "score": 5,
+          "note": "Unknown until founder proves access or insight."
+        },
+        {
+          "criterion": "Market size",
+          "score": 5,
+          "note": "Estimate TAM/SAM/SOM with external evidence."
+        },
+        {
+          "criterion": "Problem acuity",
+          "score": 6,
+          "note": "Strong if gap maps to urgent time, money, or risk."
+        },
+        {
+          "criterion": "Competition",
+          "score": 6,
+          "note": "Alternatives exist; wedge must be sharper."
+        },
+        {
+          "criterion": "Personal pull",
+          "score": 5,
+          "note": "Unknown until founder states years-long commitment."
+        },
+        {
+          "criterion": "Recently possible or necessary",
+          "score": 6,
+          "note": "AI/regulation/cost shifts may enable now."
+        },
+        {
+          "criterion": "Successful proxies",
+          "score": 5,
+          "note": "Find adjacent companies proving willingness to pay."
+        },
+        {
+          "criterion": "Years-long commitment",
+          "score": 5,
+          "note": "Validate domain depth for compounding insight."
+        },
+        {
+          "criterion": "Scalability",
+          "score": 6,
+          "note": "Software scales; sales/data access may constrain."
+        },
+        {
+          "criterion": "Good idea space",
+          "score": 6,
+          "note": "Promising if segment has repeated painful workflows."
+        }
+      ],
+      "yc_rule_scores": [
+        {
+          "criterion": "Do not wait for the perfect idea",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Burn the boats",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Go deep into customer workflow",
+          "score": 7,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Build at the edge of AI",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Sell outcomes, not tools",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Choose ambitious scope",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Treat failure as structured data",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Pick low-trust, high-expertise markets",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "The process is the product",
+          "score": 7,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Avoid early-demand trap",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Price per unit or result",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Obsess over COGS",
+          "score": 7,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Do not bolt AI onto legacy",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        },
+        {
+          "criterion": "Cover domain, model, and operations fluency",
+          "score": 6,
+          "note": "Provisional; replace with customer evidence."
+        }
+      ],
+      "vc_rubric_scores": [
+        {
+          "dimension": "Team",
+          "weight": 0.25,
+          "score": 5,
+          "weighted": 1.25,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Market",
+          "weight": 0.2,
+          "score": 5,
+          "weighted": 1.0,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Product",
+          "weight": 0.15,
+          "score": 5,
+          "weighted": 0.75,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Traction",
+          "weight": 0.15,
+          "score": 5,
+          "weighted": 0.75,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Business Model",
+          "weight": 0.1,
+          "score": 5,
+          "weighted": 0.5,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Competition",
+          "weight": 0.08,
+          "score": 5,
+          "weighted": 0.4,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Financials",
+          "weight": 0.05,
+          "score": 5,
+          "weighted": 0.25,
+          "rationale": "Fallback — requires LLM for real assessment."
+        },
+        {
+          "dimension": "Risk Profile",
+          "weight": 0.02,
+          "score": 5,
+          "weighted": 0.1,
+          "rationale": "Fallback — requires LLM for real assessment."
+        }
+      ],
+      "vc_verdict": {
+        "composite_score": 5.0,
+        "verdict": "DECLINE",
+        "reason": "Weighted score 5.0 below threshold; weak: ",
+        "weak_dims": [],
+        "disqualifying_dims": [],
+        "investor_lenses": {
+          "sequoia": "WATCH",
+          "yc": "WATCH",
+          "tiger_global": "WATCH",
+          "risk_mgmt": "ELEVATED"
+        },
+        "source": "deterministic_vc_calcs"
+      },
+      "go_no_go": "GO_WITH_CONSTRAINTS",
+      "decision": "Proceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.",
+      "next_experiments": [
+        "Interview 5 target users about the last time they experienced this problem.",
+        "Ask what they use today, cost, and what happens if they do nothing.",
+        "Run a concierge test for the smallest paid outcome."
+      ],
+      "kill_criteria": [
+        "Users cannot recall a recent painful instance.",
+        "No budget owner or urgent operational metric identified.",
+        "Workflow only mildly better than current workaround."
+      ],
+      "source": "deterministic_fallback",
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}",
+      "_iteration_id": "I1",
+      "_iteration_angle": "ORIGINAL",
+      "_iteration_one_liner": ""
+    },
+    "stage3b_simulation": {
+      "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+      "idea": "[ORIGINAL] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+      "selected_gap": {
+        "id": "G1",
+        "title": "Narrow painful workflow",
+        "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+        "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+        "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+        "priority": 1,
+        "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+      },
+      "personas": [
+        {
+          "id": "P1",
+          "role": "End user (target customer)",
+          "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+          "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+          "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+        },
+        {
+          "id": "P2",
+          "role": "Economic buyer with budget",
+          "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+          "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+          "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+        },
+        {
+          "id": "P3",
+          "role": "Operations / implementation owner",
+          "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+          "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+          "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+        },
+        {
+          "id": "P4",
+          "role": "Incumbent competitor or free substitute",
+          "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+          "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+          "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+        },
+        {
+          "id": "P5",
+          "role": "YC / LATAM VC partner",
+          "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+          "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+          "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+        },
+        {
+          "id": "P6",
+          "role": "Technical builder / CTO",
+          "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+          "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+          "default_objection": "The demo works, but production edge cases and data access will break it."
+        },
+        {
+          "id": "P7",
+          "role": "Peruvian SME buyer (informal sector)",
+          "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+          "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+          "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+        },
+        {
+          "id": "P8",
+          "role": "Peru institutional / public buyer (government or university)",
+          "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+          "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+          "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+        },
+        {
+          "id": "P9",
+          "role": "Peruvian Series A investor (local VC or family office)",
+          "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+          "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+          "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+        },
+        {
+          "id": "P10",
+          "role": "AI adoption skeptic (conservative professional in Peru)",
+          "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+          "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+          "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+        }
+      ],
+      "persona_results": [
+        {
+          "persona_id": "P1",
+          "role": "End user (target customer)",
+          "reaction": "From the End user (target customer) view, the idea is interesting only if it proves the product saves meaningful time or reduces a real stress in a repeated task.",
+          "concern": "This sounds useful, but I already have a workaround that's good enough.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P10",
+          "role": "AI adoption skeptic (conservative professional in Peru)",
+          "reaction": "From the AI adoption skeptic (conservative professional in Peru) view, the idea is interesting only if it proves the ai outputs are accurate, explainable, and i can verify them before acting.",
+          "concern": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P2",
+          "role": "Economic buyer with budget",
+          "reaction": "From the Economic buyer with budget view, the idea is interesting only if it proves the product clearly pays for itself this quarter or protects a critical metric i own.",
+          "concern": "Who approves this purchase and why would they prioritize it over other line items?",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P3",
+          "role": "Operations / implementation owner",
+          "reaction": "From the Operations / implementation owner view, the idea is interesting only if it proves the workflow fits existing operations without creating extra coordination cost.",
+          "concern": "This adds another tool my team has to learn, maintain, and debug.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P4",
+          "role": "Incumbent competitor or free substitute",
+          "reaction": "From the Incumbent competitor or free substitute view, the idea is interesting only if it proves the startup has a wedge incumbents cannot or choose not to copy quickly.",
+          "concern": "We can add this feature in one sprint, or bundle it with our existing platform.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P5",
+          "role": "YC / LATAM VC partner",
+          "reaction": "From the YC / LATAM VC partner view, the idea is interesting only if it proves the idea has a sharp initial wedge and a defensible path to $10m arr.",
+          "concern": "This is a feature, not a company. Or the market is too small for VC returns.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P6",
+          "role": "Technical builder / CTO",
+          "reaction": "From the Technical builder / CTO view, the idea is interesting only if it proves the system can be built cheaply, reliably, and improves with usage data.",
+          "concern": "The demo works, but production edge cases and data access will break it.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P7",
+          "role": "Peruvian SME buyer (informal sector)",
+          "reaction": "From the Peruvian SME buyer (informal sector) view, the idea is interesting only if it proves the product solves a real cost or risk i cannot solve with whatsapp + excel today.",
+          "concern": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P8",
+          "role": "Peru institutional / public buyer (government or university)",
+          "reaction": "From the Peru institutional / public buyer (government or university) view, the idea is interesting only if it proves the product fits within an existing budget code and avoids a new procurement process.",
+          "concern": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado.",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "persona_id": "P9",
+          "role": "Peruvian Series A investor (local VC or family office)",
+          "reaction": "From the Peruvian Series A investor (local VC or family office) view, the idea is interesting only if it proves the idea can reach $1m arr in peru and attract a magma/wayra/international co-investor.",
+          "concern": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?",
+          "evidence_request": "Show a real recent example from the target customer segment.",
+          "score": 0.5,
+          "score_rationale": "Fallback used — no LLM available.",
+          "source": "deterministic_fallback",
+          "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        }
+      ],
+      "aggregate_score": 0.5,
+      "gate_passed": false,
+      "gate_threshold": 0.6,
+      "consensus": {
+        "aggregate_score": 0.5,
+        "gate_passed": false,
+        "gate_threshold": 0.6,
+        "top_concerns": [
+          "This sounds useful, but I already have a workaround that's good enough.",
+          "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?",
+          "Who approves this purchase and why would they prioritize it over other line items?"
+        ],
+        "top_evidence_requests": [
+          "Show a real recent example from the target customer segment.",
+          "Show a real recent example from the target customer segment.",
+          "Show a real recent example from the target customer segment."
+        ],
+        "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+        "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+        "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+        "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+        "decision_pressure": "GO_WITH_CONSTRAINTS"
+      },
+      "recommended_interventions": [
+        "Narrow the customer segment until the end user and buyer are obvious.",
+        "Run interviews around recent behavior, not opinions about the idea.",
+        "Prototype the outcome manually before building a scalable product.",
+        "Track what data or workflow insight compounds with each use."
+      ],
+      "source": "parallel_simulation"
+    },
+    "stage3c_dossier": {
+      "source": "deterministic_fallback",
+      "one_liner": "We help a specific customer segment solve 'Narrow painful workflow' through a focused software/AI workflow.",
+      "problem": {
+        "who_suffers": "Define one specific user and one economic buyer. Avoid broad labels like 'everyone' or 'companies'.",
+        "pain_level": "Quantify hours lost, money lost, risk, errors, or missed revenue per month.",
+        "current_workaround": "Identify the real competitor: spreadsheet, WhatsApp, email, manual labor, incumbent, or doing nothing.",
+        "evidence_needed": "At least 5 interviews, screenshots, public data, or workflow artifacts."
+      },
+      "solution_insight": {
+        "solution": "A narrow workflow that produces an outcome the buyer already values.",
+        "insight": "The likely insight is not 'AI can do it'; it is that a repeated expert workflow can be compressed and standardized.",
+        "non_stack_note": "This dossier intentionally avoids frontend/backend stack because the correct stack changes by idea."
+      },
+      "why_now": [
+        "LLMs and agents can now execute and explain multi-step workflows cheaply.",
+        "Distribution through communities, outbound, and self-serve demos is faster for solo founders.",
+        "Users are more willing to try AI-native tools when the workflow is narrow and auditable."
+      ],
+      "market": {
+        "recommended_focus": "Start where the founder has fastest access to users and evidence; compare Peru, LATAM, and USA before committing.",
+        "regions": [
+          {
+            "region": "Peru",
+            "validity": "Potentially strong for problems with local regulation, Spanish workflows, public data, or underserved SMEs.",
+            "tam": "Estimate from national population, firms, households, sector output, or public expenditure.",
+            "sam": "Start with reachable cities, industries, institutions, or customer segments where the founder can sell.",
+            "som_12_months": "Use a bottom-up estimate: reachable leads x conversion rate x annual contract value.",
+            "recommended_sources": [
+              "INEI microdata and surveys",
+              "MEF budget data",
+              "BCRP statistics",
+              "sector associations",
+              "local interviews"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "venture_threshold": "BELOW_$500M",
+            "source": "deterministic_tam_calc"
+          },
+          {
+            "region": "LATAM",
+            "validity": "Attractive if the problem repeats across Spanish-speaking markets and does not require heavy country-by-country integration.",
+            "tam": "Estimate from regional sector size, number of firms, workers, students, patients, transactions, or institutions.",
+            "sam": "Prioritize countries with similar language, regulation, distribution, and payment behavior.",
+            "som_12_months": "Estimate expansion only after proving one repeatable channel in the first country.",
+            "recommended_sources": [
+              "World Bank",
+              "IDB",
+              "ECLAC/CEPAL",
+              "national statistics offices",
+              "industry reports"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "venture_threshold": "BELOW_$500M",
+            "source": "deterministic_tam_calc"
+          },
+          {
+            "region": "USA",
+            "validity": "Useful benchmark for market size and competitor density; attractive if willingness to pay is higher and distribution is reachable.",
+            "tam": "Estimate from US sector spend, number of businesses, paid seats, transactions, or workflow volume.",
+            "sam": "Narrow to a buyer segment the founder can actually reach through outbound, communities, or integrations.",
+            "som_12_months": "Use a conservative founder-led sales or self-serve acquisition model.",
+            "recommended_sources": [
+              "US Census",
+              "BLS",
+              "World Bank",
+              "Statista or industry reports",
+              "academic papers"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "venture_threshold": "BELOW_$500M",
+            "source": "deterministic_tam_calc"
+          }
+        ],
+        "source_strategy": [
+          "Use INEI microdata for Peru when the market depends on households, employment, education, health, agriculture, firms, or municipalities.",
+          "Use MEF/BCRP for public budgets, macro indicators, credit, sector output, and Peru-specific economic framing.",
+          "Use World Bank/CEPAL/IDB for LATAM comparables.",
+          "Use papers and industry reports when the market is technical, clinical, educational, or scientific.",
+          "Use bottom-up SOM for the first 12 months; do not rely only on top-down TAM."
+        ]
+      },
+      "competition_moat": {
+        "alternatives_to_compare": [
+          "doing nothing",
+          "spreadsheet/manual workflow",
+          "horizontal SaaS",
+          "incumbent platform",
+          "AI assistant"
+        ],
+        "moat_candidates": [
+          "proprietary workflow data",
+          "distribution/community",
+          "integrations",
+          "trust/brand",
+          "regulatory or local-domain expertise"
+        ],
+        "weak_moat_warning": "If Claude/OpenAI can solve the job with a prompt, the startup needs a workflow, data, distribution, or compliance layer."
+      },
+      "business_model_pricing": {
+        "model_options": [
+          "monthly SaaS",
+          "usage-based",
+          "transaction fee",
+          "marketplace take rate",
+          "paid pilot",
+          "enterprise license"
+        ],
+        "pricing_rule": "Use no more than 3 plans and tie price to a buyer-visible outcome.",
+        "contribution_margin": "Estimate tokens/API calls, storage, human review, support, and acquisition cost per customer."
+      },
+      "go_to_market": {
+        "first_10": "Founder-led outreach to people with the exact painful workflow.",
+        "first_100": "Repeat the channel that produced the first paid or high-intent users.",
+        "first_1000": "Add scalable distribution: partnerships, integrations, content, community, marketplace, or PLG."
+      },
+      "traction_signals": [
+        "5+ interviews with recent pain stories",
+        "waitlist with qualified users",
+        "letters of intent or paid pilots",
+        "prototype usage by real users",
+        "before/after workflow evidence"
+      ],
+      "roadmap": {
+        "3_months": "Validate the wedge, ship concierge/prototype workflow, close first paying or high-intent users.",
+        "6_months": "Productize repeated steps, measure retention, build first repeatable acquisition channel.",
+        "12_months": "Expand to adjacent workflow or geography after proving retention and willingness to pay."
+      },
+      "risks_mitigations": [
+        {
+          "risk": "Market risk: users like the idea but do not have urgent pain.",
+          "mitigation": "Interview around recent behavior and require evidence of money/time/risk."
+        },
+        {
+          "risk": "AI substitution risk: Claude, OpenAI, or another foundation-model tool absorbs the feature.",
+          "mitigation": "Own workflow data, distribution, integrations, evaluation harnesses, and domain trust beyond the prompt."
+        },
+        {
+          "risk": "Execution risk: solo founder overbuilds before validation.",
+          "mitigation": "Run concierge tests and kill criteria before building broad product surface area."
+        }
+      ],
+      "the_ask": {
+        "amount": "Define a specific amount or resource ask only after the first validation sprint.",
+        "use_of_funds": [
+          "customer discovery",
+          "prototype",
+          "data acquisition",
+          "distribution experiments"
+        ],
+        "milestone": "Unlock proof that one segment has repeated pain and will pay for the outcome."
+      },
+      "product_demo_architecture": {
+        "demo_url": "TODO: deploy a public demo (Streamlit, Vercel, Railway, or Hugging Face Spaces)",
+        "demo_credentials": "TODO: add test user credentials once demo is live",
+        "main_flow_screenshots": [
+          "1. Landing / onboarding screen",
+          "2. Core input form or conversation entry",
+          "3. AI processing / loading state",
+          "4. Result / output screen",
+          "5. Export or share action",
+          "6. Settings or profile (optional)"
+        ],
+        "architecture_diagram": "Frontend (web/mobile) → API layer (FastAPI / Flask) → Orchestration (agent loop) → LLM API + domain data sources → Database (Postgres / SQLite) → Output / report",
+        "repo_structure": [
+          "frontend/  — UI (React / Streamlit / Vue)",
+          "backend/   — API + agent logic",
+          "ai/        — prompts, agents, pipelines",
+          "data/      — seed data, validation sets",
+          "notebooks/ — exploration and analysis",
+          "docs/      — architecture diagram, pitch assets"
+        ],
+        "ai_models_used": [
+          "deepseek-chat — fast, cheap inference for classification and structured extraction",
+          "deepseek-reasoner — multi-step reasoning for validation and scoring"
+        ]
+      },
+      "scorecard": [
+        {
+          "dimension": "problem_validation",
+          "points": 8,
+          "max_points": 15,
+          "note": "Promising only after 5 concrete user interviews prove recent painful behavior."
+        },
+        {
+          "dimension": "solution_insight",
+          "points": 6,
+          "max_points": 10,
+          "note": "Insight needs sharper wording around what existing alternatives miss."
+        },
+        {
+          "dimension": "market_quality",
+          "points": 7,
+          "max_points": 15,
+          "note": "Market sizing is not yet evidenced; compare Peru, LATAM, and USA before choosing focus."
+        },
+        {
+          "dimension": "competition_moat",
+          "points": 5,
+          "max_points": 10,
+          "note": "Moat is weak until workflow data, distribution, or community compounds."
+        },
+        {
+          "dimension": "business_model_pricing",
+          "points": 6,
+          "max_points": 10,
+          "note": "Pricing needs a concrete buyer metric and contribution margin assumptions."
+        },
+        {
+          "dimension": "go_to_market",
+          "points": 6,
+          "max_points": 10,
+          "note": "First 10 users can be founder-led; first 100 and 1,000 need a repeatable channel."
+        },
+        {
+          "dimension": "traction_or_evidence",
+          "points": 3,
+          "max_points": 10,
+          "note": "No traction provided in the input; require interviews, waitlist, pilots, or usage."
+        },
+        {
+          "dimension": "execution_roadmap",
+          "points": 7,
+          "max_points": 10,
+          "note": "A 3/6/12 month roadmap is feasible if the first wedge is narrow."
+        },
+        {
+          "dimension": "risk_control",
+          "points": 6,
+          "max_points": 10,
+          "note": "AI-platform substitution and weak demand are the main risks to control."
+        }
+      ],
+      "total_score": 54,
+      "max_score": 100,
+      "rating": "Needs sharper validation",
+      "external_research_hooks": {
+        "inei_microdatos": "Useful for Peru-specific TAM/SAM evidence from INEI surveys and variable search.",
+        "paperdl": "Useful for finding academic papers when the idea needs scientific, health, education, or technical evidence."
+      },
+      "pressure_test_scorecard": {
+        "pain_intensity": 3,
+        "buyer_clarity": 2,
+        "urgency": 3,
+        "differentiation": 2,
+        "speed_to_validate": 4,
+        "founder_advantage": 2,
+        "total": 16
+      },
+      "fatal_flaws": [
+        {
+          "risk": "Market risk: users like the idea but don't have urgent pain.",
+          "severity": "HIGH",
+          "why_it_matters": "No urgency = no switching from free alternatives.",
+          "fast_test": "5 interviews asking about last time this pain cost them time or money."
+        },
+        {
+          "risk": "Payment blocker: buyer can't pay via SaaS subscription given Peru's informal economy.",
+          "severity": "HIGH",
+          "why_it_matters": "No recurring billing = no SaaS business model.",
+          "fast_test": "Ask 3 target buyers if they have a credit card or Yape for business payments."
+        },
+        {
+          "risk": "Free substitute absorbs 80% of use case before product ships.",
+          "severity": "MEDIUM",
+          "why_it_matters": "WhatsApp + Excel + Google Forms are entrenched and free.",
+          "fast_test": "Map every step of the workflow to existing free tools; identify the gap."
+        }
+      ],
+      "first_10_customers": [
+        {
+          "action": "Send 20 WhatsApp voice messages to target buyers with a 2-sentence problem statement.",
+          "channel": "WhatsApp",
+          "target_persona": "Decision-maker in the target segment",
+          "how_to_reach": "Use LinkedIn to find names, then WhatsApp via shared group or mutual contact."
+        },
+        {
+          "action": "Run a 30-min Zoom demo for 5 warm contacts who already have this pain.",
+          "channel": "LinkedIn",
+          "target_persona": "Operators who currently use the manual workaround",
+          "how_to_reach": "Search LinkedIn for job title + pain keyword, send a connection note referencing the exact problem."
+        },
+        {
+          "action": "Attend one industry event or WhatsApp group where target buyers gather.",
+          "channel": "community",
+          "target_persona": "Any buyer who attends sector events or online communities",
+          "how_to_reach": "Join the WhatsApp group, post a pain-question (not a pitch), DM respondents."
+        }
+      ],
+      "mvp_2_week_test": {
+        "build": "A single-workflow prototype: one input, one output — no dashboard, no settings.",
+        "cut": "Authentication, billing, multi-user, reporting, and any feature beyond the core workflow.",
+        "test_hypothesis": "If 3 of 5 demo users complete the workflow without help and ask 'when can I use this?', demand is real.",
+        "success_signal": "At least 1 user offers to pay or signs a letter of intent within 2 weeks."
+      },
+      "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    "stage4_report": {
+      "path": "E:\\github\\hw7_ds\\ai\\validation_agents\\outputs\\app-de-salud-personal-para-peru--337c0e6d5a\\report.md",
+      "markdown": "# Startup Idea Validation Report\n\nGenerated: 2026-06-21T15:43:30.895065+00:00\n\n## Original Idea\nApp de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.\n\n---\n\n## Stage 0 — Idea Classification (Pit Check)\n\n**Type:** VITAMIN | **Vertical:** Other | **Customer:** B2C | **Severity:** RECURRING\n\n**Verdict:** ⚠ WARN | **Devil's advocate:** ⚠ WEAK | **Freemium:** ~ MAYBE\n\nDeterministic fallback.\n\n**Green flags (painkiller signals):**\n  (none)\n\n**Red flags (devil's advocate):**\n  - Could not run devil's advocate without LLM.\n\n**Payment blocker:** Unknown — run with LLM enabled.\n\n**Free substitute risk:** Unknown.\n\n**Market size reality check:** Unknown.\n\n**Hardest unvalidated assumption:** Unknown.\n\n**Freemium rationale:** Cannot assess without LLM.\n\n**Suggested pivot:** \n\n---\n\n## Stage 2B — Idea Iterations (3 angles)\n\nRecommended: **I1** — \n\n| ID | Angle | One-Liner | Acuity | Market | Feasibility | Total |\n|---|---|---|---:|---:|---:|---:|\n| I1 ★ | ORIGINAL |  | 5 | 5 | 5 | 15 |\n| I2 | PIVOT_B2B |  | 5 | 5 | 5 | 15 |\n| I3 | PIVOT_WEDGE |  | 5 | 5 | 5 | 15 |\n\n### I1 — ORIGINAL ★ WINNER\n**Target:** To be defined through user interviews.\n**Problem:** To be validated through behavioral interviews.\n**Hook:** To be determined after problem validation.\n**Why this angle:** Refine and sharpen the founder's original idea. Keep the same customer and problem but make the one-liner crisper, the pain more behavioral, and the wedge narrower.\n\n### I2 — PIVOT_B2B\n**Target:** To be defined through user interviews.\n**Problem:** To be validated through behavioral interviews.\n**Hook:** To be determined after problem validation.\n**Why this angle:** Reframe the same core problem for an institutional or B2B buyer: a university, employer, government agency, trade association, or distributor who has budget and urgency. The end user may be the same but the buyer and pricing model should change.\n\n### I3 — PIVOT_WEDGE\n**Target:** To be defined through user interviews.\n**Problem:** To be validated through behavioral interviews.\n**Hook:** To be determined after problem validation.\n**Why this angle:** Find the narrowest, sharpest slice of the problem that one specific micro-segment suffers most acutely right now. Ignore scale — optimize for fastest evidence of willingness to pay from 10 real users in the next 30 days.\n\n---\n\n## Stage 3 — YC Validation (parallel, all iterations)\n\n| Iteration | Angle | Decision |\n|---|---|---|\n| I1 | ORIGINAL | GO_WITH_CONSTRAINTS |\n| I2 | PIVOT_B2B | GO_WITH_CONSTRAINTS |\n| I3 | PIVOT_WEDGE | GO_WITH_CONSTRAINTS |\n\n**Winner: I1 — ORIGINAL**\n\n> [ORIGINAL] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.\n\nDecision: **GO_WITH_CONSTRAINTS**\n\nProceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.\n\n### Friedman Questions\n| Criterion | Score | Note |\n|---|---:|---|\n| Founder-market fit | 5 | Unknown until founder proves access or insight. |\n| Market size | 5 | Estimate TAM/SAM/SOM with external evidence. |\n| Problem acuity | 6 | Strong if gap maps to urgent time, money, or risk. |\n| Competition | 6 | Alternatives exist; wedge must be sharper. |\n| Personal pull | 5 | Unknown until founder states years-long commitment. |\n| Recently possible or necessary | 6 | AI/regulation/cost shifts may enable now. |\n| Successful proxies | 5 | Find adjacent companies proving willingness to pay. |\n| Years-long commitment | 5 | Validate domain depth for compounding insight. |\n| Scalability | 6 | Software scales; sales/data access may constrain. |\n| Good idea space | 6 | Promising if segment has repeated painful workflows. |\n\n### YC Rules\n| Criterion | Score | Note |\n|---|---:|---|\n| Do not wait for the perfect idea | 6 | Provisional; replace with customer evidence. |\n| Burn the boats | 6 | Provisional; replace with customer evidence. |\n| Go deep into customer workflow | 7 | Provisional; replace with customer evidence. |\n| Build at the edge of AI | 6 | Provisional; replace with customer evidence. |\n| Sell outcomes, not tools | 6 | Provisional; replace with customer evidence. |\n| Choose ambitious scope | 6 | Provisional; replace with customer evidence. |\n| Treat failure as structured data | 6 | Provisional; replace with customer evidence. |\n| Pick low-trust, high-expertise markets | 6 | Provisional; replace with customer evidence. |\n| The process is the product | 7 | Provisional; replace with customer evidence. |\n| Avoid early-demand trap | 6 | Provisional; replace with customer evidence. |\n| Price per unit or result | 6 | Provisional; replace with customer evidence. |\n| Obsess over COGS | 7 | Provisional; replace with customer evidence. |\n| Do not bolt AI onto legacy | 6 | Provisional; replace with customer evidence. |\n| Cover domain, model, and operations fluency | 6 | Provisional; replace with customer evidence. |\n\n### VC Hard-Screening Rubric (venture-capital-intelligence)\n| Dimension | Weight | Score | Weighted | Rationale |\n|---|---:|---:|---:|---|\n| Team | 25% | 5 | 1.25 | Fallback — requires LLM for real assessment. |\n| Market | 20% | 5 | 1.0 | Fallback — requires LLM for real assessment. |\n| Product | 15% | 5 | 0.75 | Fallback — requires LLM for real assessment. |\n| Traction | 15% | 5 | 0.75 | Fallback — requires LLM for real assessment. |\n| Business Model | 10% | 5 | 0.5 | Fallback — requires LLM for real assessment. |\n| Competition | 8% | 5 | 0.4 | Fallback — requires LLM for real assessment. |\n| Financials | 5% | 5 | 0.25 | Fallback — requires LLM for real assessment. |\n| Risk Profile | 2% | 5 | 0.1 | Fallback — requires LLM for real assessment. |\n\n**VC Verdict:** DECLINE — composite=5.0 / 10\n\n---\n\n## Overall Score (Stage 3C)\n**54/100 — Needs sharper validation**\n\n| Dimension | Points | Max | Note |\n|---|---:|---:|---|\n| problem_validation | 8 | 15 | Promising only after 5 concrete user interviews prove recent painful behavior. |\n| solution_insight | 6 | 10 | Insight needs sharper wording around what existing alternatives miss. |\n| market_quality | 7 | 15 | Market sizing is not yet evidenced; compare Peru, LATAM, and USA before choosing focus. |\n| competition_moat | 5 | 10 | Moat is weak until workflow data, distribution, or community compounds. |\n| business_model_pricing | 6 | 10 | Pricing needs a concrete buyer metric and contribution margin assumptions. |\n| go_to_market | 6 | 10 | First 10 users can be founder-led; first 100 and 1,000 need a repeatable channel. |\n| traction_or_evidence | 3 | 10 | No traction provided in the input; require interviews, waitlist, pilots, or usage. |\n| execution_roadmap | 7 | 10 | A 3/6/12 month roadmap is feasible if the first wedge is narrow. |\n| risk_control | 6 | 10 | AI-platform substitution and weak demand are the main risks to control. |\n\n---\n\n## YC Dossier\n\n### One-Liner\nWe help a specific customer segment solve 'Narrow painful workflow' through a focused software/AI workflow.\n\n### Problem\n- Who Suffers: Define one specific user and one economic buyer. Avoid broad labels like 'everyone' or 'companies'.\n- Pain Level: Quantify hours lost, money lost, risk, errors, or missed revenue per month.\n- Current Workaround: Identify the real competitor: spreadsheet, WhatsApp, email, manual labor, incumbent, or doing nothing.\n- Evidence Needed: At least 5 interviews, screenshots, public data, or workflow artifacts.\n\n### Solution & Insight\n- Solution: A narrow workflow that produces an outcome the buyer already values.\n- Insight: The likely insight is not 'AI can do it'; it is that a repeated expert workflow can be compressed and standardized.\n- Non Stack Note: This dossier intentionally avoids frontend/backend stack because the correct stack changes by idea.\n\n### Why Now\n- LLMs and agents can now execute and explain multi-step workflows cheaply.\n- Distribution through communities, outbound, and self-serve demos is faster for solo founders.\n- Users are more willing to try AI-native tools when the workflow is narrow and auditable.\n\n### Market — Peru / LATAM / USA\nRecommended focus: Start where the founder has fastest access to users and evidence; compare Peru, LATAM, and USA before committing.\n\n- **Peru**: Potentially strong for problems with local regulation, Spanish workflows, public data, or underserved SMEs. | TAM: Estimate from national population, firms, households, sector output, or public expenditure. | SAM: Start with reachable cities, industries, institutions, or customer segments where the founder can sell. | SOM 12m: Use a bottom-up estimate: reachable leads x conversion rate x annual contract value. | Sources: INEI microdata and surveys, MEF budget data, BCRP statistics, sector associations, local interviews\n- **LATAM**: Attractive if the problem repeats across Spanish-speaking markets and does not require heavy country-by-country integration. | TAM: Estimate from regional sector size, number of firms, workers, students, patients, transactions, or institutions. | SAM: Prioritize countries with similar language, regulation, distribution, and payment behavior. | SOM 12m: Estimate expansion only after proving one repeatable channel in the first country. | Sources: World Bank, IDB, ECLAC/CEPAL, national statistics offices, industry reports\n- **USA**: Useful benchmark for market size and competitor density; attractive if willingness to pay is higher and distribution is reachable. | TAM: Estimate from US sector spend, number of businesses, paid seats, transactions, or workflow volume. | SAM: Narrow to a buyer segment the founder can actually reach through outbound, communities, or integrations. | SOM 12m: Use a conservative founder-led sales or self-serve acquisition model. | Sources: US Census, BLS, World Bank, Statista or industry reports, academic papers\n\nSource strategy:\n- Use INEI microdata for Peru when the market depends on households, employment, education, health, agriculture, firms, or municipalities.\n- Use MEF/BCRP for public budgets, macro indicators, credit, sector output, and Peru-specific economic framing.\n- Use World Bank/CEPAL/IDB for LATAM comparables.\n- Use papers and industry reports when the market is technical, clinical, educational, or scientific.\n- Use bottom-up SOM for the first 12 months; do not rely only on top-down TAM.\n\n### Competition & Moat\n- Alternatives To Compare: doing nothing; spreadsheet/manual workflow; horizontal SaaS; incumbent platform; AI assistant\n- Moat Candidates: proprietary workflow data; distribution/community; integrations; trust/brand; regulatory or local-domain expertise\n- Weak Moat Warning: If Claude/OpenAI can solve the job with a prompt, the startup needs a workflow, data, distribution, or compliance layer.\n\n### Business Model & Pricing\n- Model Options: monthly SaaS; usage-based; transaction fee; marketplace take rate; paid pilot; enterprise license\n- Pricing Rule: Use no more than 3 plans and tie price to a buyer-visible outcome.\n- Contribution Margin: Estimate tokens/API calls, storage, human review, support, and acquisition cost per customer.\n\n### Go-To-Market\n- First 10: Founder-led outreach to people with the exact painful workflow.\n- First 100: Repeat the channel that produced the first paid or high-intent users.\n- First 1000: Add scalable distribution: partnerships, integrations, content, community, marketplace, or PLG.\n\n### Traction / Early Signals\n- 5+ interviews with recent pain stories\n- waitlist with qualified users\n- letters of intent or paid pilots\n- prototype usage by real users\n- before/after workflow evidence\n\n### Roadmap\n- 3 Months: Validate the wedge, ship concierge/prototype workflow, close first paying or high-intent users.\n- 6 Months: Productize repeated steps, measure retention, build first repeatable acquisition channel.\n- 12 Months: Expand to adjacent workflow or geography after proving retention and willingness to pay.\n\n### Risks & Mitigation\n- Risk: Market risk: users like the idea but do not have urgent pain.; Mitigation: Interview around recent behavior and require evidence of money/time/risk.\n- Risk: AI substitution risk: Claude, OpenAI, or another foundation-model tool absorbs the feature.; Mitigation: Own workflow data, distribution, integrations, evaluation harnesses, and domain trust beyond the prompt.\n- Risk: Execution risk: solo founder overbuilds before validation.; Mitigation: Run concierge tests and kill criteria before building broad product surface area.\n\n### The Ask\n- Amount: Define a specific amount or resource ask only after the first validation sprint.\n- Use Of Funds: customer discovery; prototype; data acquisition; distribution experiments\n- Milestone: Unlock proof that one segment has repeated pain and will pay for the outcome.\n\n### Product — Demo & Architecture\n- Demo Url: TODO: deploy a public demo (Streamlit, Vercel, Railway, or Hugging Face Spaces)\n- Demo Credentials: TODO: add test user credentials once demo is live\n- Main Flow Screenshots: 1. Landing / onboarding screen; 2. Core input form or conversation entry; 3. AI processing / loading state; 4. Result / output screen; 5. Export or share action; 6. Settings or profile (optional)\n- Architecture Diagram: Frontend (web/mobile) → API layer (FastAPI / Flask) → Orchestration (agent loop) → LLM API + domain data sources → Database (Postgres / SQLite) → Output / report\n- Repo Structure: frontend/  — UI (React / Streamlit / Vue); backend/   — API + agent logic; ai/        — prompts, agents, pipelines; data/      — seed data, validation sets; notebooks/ — exploration and analysis; docs/      — architecture diagram, pitch assets\n- Ai Models Used: deepseek-chat — fast, cheap inference for classification and structured extraction; deepseek-reasoner — multi-step reasoning for validation and scoring\n\n### External Research Hooks\n- Inei Microdatos: Useful for Peru-specific TAM/SAM evidence from INEI surveys and variable search.\n- Paperdl: Useful for finding academic papers when the idea needs scientific, health, education, or technical evidence.\n\n---\n\n## Stage 1 — Current Alternatives\nFallback mode cannot perform live market research, so it maps the idea against the common alternative categories every startup must beat: manual work, internal builds, incumbents, consultants, generic SaaS, open-source, and doing nothing. Use live LLM mode or add external research artifacts for named competitors.\n\n- S01: Manual workaround (Spreadsheet, notes, or ad hoc process) — Cheap and flexible, but slow and inconsistent.\n- S02: Generic horizontal SaaS (Broad workflow software) — Easy to adopt, but weak on domain-specific outcomes.\n- S03: Incumbent enterprise platform (Large vendor suite) — Trusted by buyers, but expensive and slow to implement.\n- S04: Internal build (Company-owned custom tooling) — Fits local process, but competes with engineering priorities.\n- S05: Consulting or agency service (Human-led service provider) — High-touch expertise, but margins and scale are limited.\n- S06: Open-source project (Community-maintained tool) — Low software cost, but support and reliability vary.\n- S07: AI wrapper (Thin LLM interface) — Fast to build, but easy to copy if workflow depth is missing.\n- S08: Marketplace or network (Connects supply and demand) — Useful when liquidity exists, hard to start from zero.\n- S09: Mobile-first app (Lightweight point solution) — Good distribution surface, often too shallow for serious workflows.\n- S10: No-code automation (Zapier/Airtable/Notion-style stack) — Good for prototypes, brittle for core operations.\n- S11: Legacy desktop software (Installed tool or old vertical app) — Embedded in workflows, poor UX and integrations.\n- S12: Data dashboard (BI/reporting layer) — Makes status visible, but may not drive action.\n- S13: Community and content (Newsletter, course, forum, or templates) — Can validate demand, but may not be software defensible.\n- S14: API infrastructure (Developer-facing primitives) — Scales well if developers are the buyer, indirect otherwise.\n- S15: Status quo (Doing nothing) — Always a competitor when pain is tolerable or budget is unclear.\n\n### Competitor Signal Scores (deal-sourcing-signals taxonomy)\n_No competitor signal data._\n\n## Stage 2 — Market Gaps\nRecommended gap: G1\n\n- G1: Narrow painful workflow | Pain: The idea needs one urgent job-to-be-done, not a broad feature set. | Evidence: Interview 5 target users and capture the exact task they already spend time or money on.\n- G2: Buyer-visible outcome | Pain: Users may like the product, but the buyer needs a measurable business result. | Evidence: Ask who owns the budget and what metric would justify payment this month.\n- G3: Distribution wedge | Pain: A useful product still fails if reaching users is too slow or expensive. | Evidence: Run 3 small acquisition tests and measure replies, demos, or waitlist conversion.\n- G4: Trust and switching friction | Pain: Users keep existing tools unless the new workflow is clearly safer, faster, or cheaper. | Evidence: Ask users what would make them trust the product with a real task.\n- G5: Defensible workflow data | Pain: A generic AI interface is easy to copy unless usage creates proprietary process insight. | Evidence: Define what unique data the product captures after 30 days of usage.\n\n## Selected Gap\n**G1: Narrow painful workflow**\n\nPain: The idea needs one urgent job-to-be-done, not a broad feature set.\n\nWhy now: AI and modern software can compress expert work, but only if the workflow is specific.\n\nRisk: If the workflow is vague, the product becomes a solution looking for a problem.\n\n---\n\n## Stage 3B — Stakeholder Simulation\nMiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.\n\n### Personas\n- P1: End user (target customer) | Lens: Daily workflow pain, speed, usability, trust. Would I use this weekly? | Success: The product saves meaningful time or reduces a real stress in a repeated task.\n- P2: Economic buyer with budget | Lens: Budget ownership, ROI timeline, procurement friction, urgency, approval chain. | Success: The product clearly pays for itself this quarter or protects a critical metric I own.\n- P3: Operations / implementation owner | Lens: Integration complexity, change management, support load, reliability, rollout risk. | Success: The workflow fits existing operations without creating extra coordination cost.\n- P4: Incumbent competitor or free substitute | Lens: How does the status quo, a free tool, or a large vendor defend the account? | Success: The startup has a wedge incumbents cannot or choose not to copy quickly.\n- P5: YC / LATAM VC partner | Lens: Market size (must be >$50M SAM in 5 years), founder insight, venture scale path. | Success: The idea has a sharp initial wedge and a defensible path to $10M ARR.\n- P6: Technical builder / CTO | Lens: Data access, model quality, COGS, failure modes, defensibility, learning loop. | Success: The system can be built cheaply, reliably, and improves with usage data.\n- P7: Peruvian SME buyer (informal sector) | Lens: Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot? | Success: The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.\n- P8: Peru institutional / public buyer (government or university) | Lens: UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card. | Success: The product fits within an existing budget code and avoids a new procurement process.\n- P9: Peruvian Series A investor (local VC or family office) | Lens: Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1. | Success: The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.\n- P10: AI adoption skeptic (conservative professional in Peru) | Lens: Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial). | Success: The AI outputs are accurate, explainable, and I can verify them before acting.\n\n### Persona Scores (parallel simulation)\nAggregate: 0.5 / gate=0.6 — WARN\n\n- **P1 End user (target customer)** score=0.5 | From the End user (target customer) view, the idea is interesting only if it proves the product saves meaningful time or reduces a real stress in a repeated task. | Concern: This sounds useful, but I already have a workaround that's good enough. | Need: Show a real recent example from the target customer segment.\n- **P10 AI adoption skeptic (conservative professional in Peru)** score=0.5 | From the AI adoption skeptic (conservative professional in Peru) view, the idea is interesting only if it proves the ai outputs are accurate, explainable, and i can verify them before acting. | Concern: No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca? | Need: Show a real recent example from the target customer segment.\n- **P2 Economic buyer with budget** score=0.5 | From the Economic buyer with budget view, the idea is interesting only if it proves the product clearly pays for itself this quarter or protects a critical metric i own. | Concern: Who approves this purchase and why would they prioritize it over other line items? | Need: Show a real recent example from the target customer segment.\n- **P3 Operations / implementation owner** score=0.5 | From the Operations / implementation owner view, the idea is interesting only if it proves the workflow fits existing operations without creating extra coordination cost. | Concern: This adds another tool my team has to learn, maintain, and debug. | Need: Show a real recent example from the target customer segment.\n- **P4 Incumbent competitor or free substitute** score=0.5 | From the Incumbent competitor or free substitute view, the idea is interesting only if it proves the startup has a wedge incumbents cannot or choose not to copy quickly. | Concern: We can add this feature in one sprint, or bundle it with our existing platform. | Need: Show a real recent example from the target customer segment.\n- **P5 YC / LATAM VC partner** score=0.5 | From the YC / LATAM VC partner view, the idea is interesting only if it proves the idea has a sharp initial wedge and a defensible path to $10m arr. | Concern: This is a feature, not a company. Or the market is too small for VC returns. | Need: Show a real recent example from the target customer segment.\n- **P6 Technical builder / CTO** score=0.5 | From the Technical builder / CTO view, the idea is interesting only if it proves the system can be built cheaply, reliably, and improves with usage data. | Concern: The demo works, but production edge cases and data access will break it. | Need: Show a real recent example from the target customer segment.\n- **P7 Peruvian SME buyer (informal sector)** score=0.5 | From the Peruvian SME buyer (informal sector) view, the idea is interesting only if it proves the product solves a real cost or risk i cannot solve with whatsapp + excel today. | Concern: ¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel? | Need: Show a real recent example from the target customer segment.\n- **P8 Peru institutional / public buyer (government or university)** score=0.5 | From the Peru institutional / public buyer (government or university) view, the idea is interesting only if it proves the product fits within an existing budget code and avoids a new procurement process. | Concern: El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado. | Need: Show a real recent example from the target customer segment.\n- **P9 Peruvian Series A investor (local VC or family office)** score=0.5 | From the Peruvian Series A investor (local VC or family office) view, the idea is interesting only if it proves the idea can reach $1m arr in peru and attract a magma/wayra/international co-investor. | Concern: El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses? | Need: Show a real recent example from the target customer segment.\n\n\n\n### Simulation Consensus\n- Strongest signal: Proceed only if target users describe a recent, repeated, expensive problem in their own words.\n- Weakest assumption: Simulation scores are LLM estimates; live interviews must confirm.\n- Adoption path: Start with a narrow concierge workflow, then productize the repeated steps.\n- Pricing test: Ask for a small paid pilot tied to the buyer's success metric.\n- Decision pressure: GO_WITH_CONSTRAINTS\n\n### Recommended Interventions\n- Narrow the customer segment until the end user and buyer are obvious.\n- Run interviews around recent behavior, not opinions about the idea.\n- Prototype the outcome manually before building a scalable product.\n- Track what data or workflow insight compounds with each use.\n\n---\n\n## Next Experiments\n- Interview 5 target users about the last time they experienced this problem.\n- Ask what they use today, cost, and what happens if they do nothing.\n- Run a concierge test for the smallest paid outcome.\n\n## Kill Criteria\n- Users cannot recall a recent painful instance.\n- No budget owner or urgent operational metric identified.\n- Workflow only mildly better than current workaround.\n"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-06-21T15:43:24.589555+00:00",
+      "stage": "created",
+      "message": "Pipeline state initialized."
+    },
+    {
+      "at": "2026-06-21T15:43:26.326895+00:00",
+      "stage": "stage0_classify",
+      "message": "Artifact 'stage0_classify' updated."
+    },
+    {
+      "at": "2026-06-21T15:43:27.075033+00:00",
+      "stage": "stage1_research",
+      "message": "Artifact 'stage1_research' updated."
+    },
+    {
+      "at": "2026-06-21T15:43:27.808389+00:00",
+      "stage": "stage2_gaps",
+      "message": "Artifact 'stage2_gaps' updated."
+    },
+    {
+      "at": "2026-06-21T15:43:28.561034+00:00",
+      "stage": "stage2b_iterations",
+      "message": "Artifact 'stage2b_iterations' updated."
+    },
+    {
+      "at": "2026-06-21T15:43:29.341565+00:00",
+      "stage": "stage3_validations",
+      "message": "Artifact 'stage3_validations' updated."
+    },
+    {
+      "at": "2026-06-21T15:43:29.345259+00:00",
+      "stage": "stage3_winner_iteration",
+      "message": "Artifact 'stage3_winner_iteration' updated."
+    },
+    {
+      "at": "2026-06-21T15:43:29.346770+00:00",
+      "stage": "stage3_validation",
+      "message": "Artifact 'stage3_validation' updated."
+    },
+    {
+      "at": "2026-06-21T15:43:30.132143+00:00",
+      "stage": "stage3b_simulation",
+      "message": "Artifact 'stage3b_simulation' updated."
+    },
+    {
+      "at": "2026-06-21T15:43:30.890015+00:00",
+      "stage": "stage3c_dossier",
+      "message": "Artifact 'stage3c_dossier' updated."
+    },
+    {
+      "at": "2026-06-21T15:43:30.896100+00:00",
+      "stage": "stage4_report",
+      "message": "Artifact 'stage4_report' updated."
+    },
+    {
+      "at": "2026-06-21T15:43:30.900179+00:00",
+      "stage": "complete",
+      "message": "Report written to E:\\github\\hw7_ds\\ai\\validation_agents\\outputs\\app-de-salud-personal-para-peru--337c0e6d5a\\report.md"
+    }
+  ]
+}

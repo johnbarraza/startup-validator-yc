@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "StudyPet pivots into a razor-sharp wedge for first-year pre-med students struggling with Organic Chemistry. The product ingests a professor's dense syllabus PDF and uses AI to auto-generate a personalized daily study plan, breaking down intimidating topics into bite-sized, emotionally rewarding tasks. Each completed task feeds a virtual pet, visually reflecting the student's consistency and progress. The emotional hook directly combats procrastination by making skipped study sessions feel like neglecting a dependent creature, leveraging guilt and nurturing instincts to sustain daily habits during a make-or-break semester.",
+  "selected_gap": {
+    "id": "gap_emotional_gamification",
+    "title": "Lack of Emotional Engagement in Study Apps",
+    "pain": "Students find existing study tools boring and impersonal, leading to low daily usage and habit drop-off. They crave a fun, caring relationship with their study aid to sustain motivation over a semester.",
+    "why_now": "Smartphone natives expect app experiences to be delightful and gamified. The success of virtual pets (e.g., Tamagotchi) and habit games (Habitica) shows demand for emotional bonding, but no major study tool has integrated a nurturing pet/garden metaphor tied to real academic tasks.",
+    "evidence_needed": "A/B test comparing a basic flashcard app with a pet/garden version; measure daily active usage, session length, and user surveys on emotional connection.",
+    "priority": 1,
+    "risk": "Gamification could be perceived as childish by some students; requires ongoing content updates to keep the pet/garden engaging."
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "As a pre-med student drowning in Orgo, the idea of a guilt-tripping pet is intriguing but also scary—it might motivate me or make me avoid the app when I fall behind.",
+      "concern": "The guilt mechanic could backfire: if I miss a day, I might avoid the app entirely, worsening my procrastination.",
+      "evidence_request": "Show me a trial comparing daily usage and exam scores between this app and a standard planner; I need proof it doesn't just add stress.",
+      "score": 0.6,
+      "score_rationale": "It targets a real pain (Orgo inconsistency) but risks increased avoidance; I'd try it but need evidence of actual habit improvement.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "The idea is clever but impractical here. Peruvian pre-med students barely trust AI for simple tasks, let alone for generating study plans that could determine their future. The emotional gamification feels shallow when the core output—daily study plans—must be flawless and verifiable.",
+      "concern": "AI-generated study plans for organic chemistry may contain errors or mis-prioritize topics, leading to student failure and distrust in the tool—especially in a high-stakes, make-or-break semester.",
+      "evidence_request": "A small study with Peruvian pre-med students showing that the AI's study plans produce exam scores equal to or better than human-designed plans, with a clear explanation of how the model ensures accuracy.",
+      "score": 0.2,
+      "score_rationale": "Given the low AI adoption and high stakes, the risk of inaccurate outputs outweighs the emotional engagement benefit, so I remain highly skeptical.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "The emotional gamification hook is clever, but as a budget owner, I need to see a clear ROI within one semester. For pre-med students, failing organic chemistry is a critical metric, but I'm not convinced a virtual pet will drive enough engagement to measurably improve pass rates compared to simpler alternatives.",
+      "concern": "The product's reliance on sustained emotional engagement may not translate into academic outcomes quickly enough to justify the upfront cost, especially since first-year students have limited budgets and universities need proof of efficacy before procurement.",
+      "evidence_request": "I need a pilot study with a small cohort of pre-med students showing that the app leads to a statistically significant increase in exam scores or course pass rates within a single semester, along with a clear pricing model that demonstrates a cost per passing student that is lower than tutoring alternatives.",
+      "score": 0.2,
+      "score_rationale": "The idea targets a high-stakes problem but lacks quantitative evidence that the gamification drives academic results within a short enough timeframe to satisfy a budget owner's ROI requirements.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "The idea is clever but operationally risky. Integrating with varied syllabus PDFs and maintaining the virtual pet feature will likely increase support load and require custom hand-holding for each professor, which doesn't scale easily.",
+      "concern": "The product depends on accurate AI parsing of diverse, non-standardized syllabus PDFs—any parsing errors will generate user frustration and support tickets, undermining reliability and increasing coordination cost.",
+      "evidence_request": "Show a demo with 95%+ accuracy on a random sample of 100 real organic chemistry syllabuses from different universities, plus an estimate of expected support ticket volume per 1,000 users for parsing-related issues.",
+      "score": 0.3,
+      "score_rationale": "High support load and integration fragility from syllabus variability outweigh the emotional engagement benefits from an operations perspective.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "As a free tool like Anki or a major study app, I see the emotional gamification as a low barrier feature that we could rapidly clone. However, the niche focus on O-Chem and syllabus parsing is interesting but not defensible.",
+      "concern": "The virtual pet mechanic is a superficial layer on top of study planning; incumbents can integrate similar reward systems without needing the pet metaphor, making the wedge thin.",
+      "evidence_request": "Show a significant reduction in dropout rates (e.g., >30% better than existing tools) specifically for O-Chem students, not just engagement metrics.",
+      "score": 0.3,
+      "score_rationale": "The emotional gamification is easily copied by incumbents, and the niche O-Chem focus doesn't provide a durable moat against large platforms with resources to add similar features quickly.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "The emotional gamification angle is a clever hook for combating procrastination in a high-stakes course like Organic Chemistry, but the wedge is too narrow—first-year pre-meds are a tiny subset of the total addressable market, and the product lacks a clear path to expand beyond this single subject. The YC decline highlights real gaps in team and traction that make the venture-scale potential questionable.",
+      "concern": "The target market is too small: roughly 50,000 US pre-meds take Organic Chemistry annually, yielding a SAM under $50M even with high pricing, so the idea fails your $50M SAM threshold in 5 years.",
+      "evidence_request": "Show me a bottom-up TAM/SAM calculation that proves the market for 'personalized AI study plans with emotional gamification' exceeds $50M in 5 years, including expansion to other pre-med courses and non-pre-med students.",
+      "score": 0.2,
+      "score_rationale": "The sharp wedge is present but the market size is too small to meet the $50M SAM threshold, and the path to $10M ARR is unclear without a proven expansion strategy beyond organic chemistry.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "The idea hinges on reliable PDF parsing and AI-generated study plans, which is technically challenging and expensive at scale. The virtual pet aspect adds variable rendering costs and potential user churn if the pet fails to engage.",
+      "concern": "Robustly parsing messy, handwritten, or scanned syllabus PDFs with high accuracy across thousands of professors is a major unsolved data access problem, leading to unreliable plan generation.",
+      "evidence_request": "A live demo processing 50 diverse O-Chem syllabi (scanned, table-heavy, etc.) with >95% entity extraction accuracy and <2 second latency, showing generated plans are coherent and actionable.",
+      "score": 0.3,
+      "score_rationale": "Technical risk is high due to data access and model quality uncertainties, and COGS could undermine margins without clear defensibility.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "This is completely irrelevant to my reality. I run a small business with cash flow problems, no time for fancy apps, and everything runs on WhatsApp and Excel. A virtual pet for organic chemistry doesn't solve any cost or risk I face.",
+      "concern": "This product targets a completely different audience and problem. It offers zero value to informal sector SMEs like mine.",
+      "evidence_request": "Show me how this tool can help me manage supplier payments, inventory, or customer debt collection via Yape or Plin, with WhatsApp integration.",
+      "score": 0.0,
+      "score_rationale": "The idea fails to address any of my core needs or pain points as an informal sector SME buyer.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "The emotionally gamified study plan for organic chemistry is interesting, but as a public buyer, I see no way to purchase this. Our budgets are allocated for textbooks, lab equipment, or large-scale software licenses, not individual student apps. This does not fit any existing budget code and would require a new procurement process, which is impossible without MINEDU approval.",
+      "concern": "The product targets individual pre-med students, but our procurement is for institutional use. There is no budget code for 'virtual pet study apps,' and a new procurement would take 6-18 months with uncertain approval.",
+      "evidence_request": "Provide a case study showing improved pass rates in organic chemistry at a public Latin American university, and specify exactly which MINEDU budget code (e.g., 'material educativo' or 'software') would cover a yearly site license for all students.",
+      "score": 0.1,
+      "score_rationale": "The product lacks alignment with existing procurement categories and the bureaucratic reality of zero discretionary budget, making it effectively unpurchasable despite potential pedagogical value.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "Interesting emotional hook, but the market is too niche for Peru. Pre-med organic chemistry students are a tiny segment, and local education tech adoption is low. Without clear expansion to broader LATAM or a larger user base, I see no path to $1M ARR here.",
+      "concern": "The addressable market in Peru is minuscule—only a few hundred pre-med students per year—making it impossible to reach $1M ARR locally or attract international co-investors.",
+      "evidence_request": "Show traction or pilot results in a larger market like the US or LATAM (e.g., 10,000+ users with 30% DAU), or a credible partnership with a top-tier Peruvian university to validate demand.",
+      "score": 0.2,
+      "score_rationale": "The idea lacks local market size and early traction, making it unlikely to meet the $1M ARR threshold or secure international co-investment.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.24,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.24,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "The guilt mechanic could backfire: if I miss a day, I might avoid the app entirely, worsening my procrastination.",
+      "AI-generated study plans for organic chemistry may contain errors or mis-prioritize topics, leading to student failure and distrust in the tool—especially in a high-stakes, make-or-break semester.",
+      "The product's reliance on sustained emotional engagement may not translate into academic outcomes quickly enough to justify the upfront cost, especially since first-year students have limited budgets and universities need proof of efficacy before procurement."
+    ],
+    "top_evidence_requests": [
+      "Show me a trial comparing daily usage and exam scores between this app and a standard planner; I need proof it doesn't just add stress.",
+      "A small study with Peruvian pre-med students showing that the AI's study plans produce exam scores equal to or better than human-designed plans, with a clear explanation of how the model ensures accuracy.",
+      "I need a pilot study with a small cohort of pre-med students showing that the app leads to a statistically significant increase in exam scores or course pass rates within a single semester, along with a clear pricing model that demonstrates a cost per passing student that is lower than tutoring alternatives."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "no-go"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

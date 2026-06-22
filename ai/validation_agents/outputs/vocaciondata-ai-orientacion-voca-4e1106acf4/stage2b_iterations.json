@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "VocacionData AI is a conversational agent that helps Peruvian high school graduates and their families make career decisions with confidence. In a single 10-minute chat, students share their interests, preferred location, and budget, and the AI cross-references real-time labor market data (salaries, job openings, growth trends) with granular university program details (admission scores, costs, registration data) to generate a ranked list of career paths with estimated ROI. Unlike static psychometric tests or disconnected data portals, VocacionData simulates an expert counselor conversation that adapts to each user's trade-offs (money vs. passion, proximity vs. prestige), uncovering high-potential careers they hadn't considered and flagging popular but saturated options. The outcome: students skip months of confusion and avoid the most common regret—choosing a degree that leaves them unemployed or underpaid.",
+      "one_liner": "We give Peruvian high school graduates a 10-minute AI chat that combines their interests with real job market data and university options to reveal the highest-ROI career paths before they commit.",
+      "target_customer": "A 17-year-old high school graduate in Arequipa deciding between law, engineering, and administration, with parents worried about tuition debt but no access to a private counselor.",
+      "core_problem": "They spend weeks consulting relatives, scrolling university brochures, and taking generic 'career quizzes' that recommend broad fields like 'engineering' without salary specifics, only to enroll in saturated programs and face years of unemployment or underemployment, often dropping out with debt.",
+      "solution_hook": "A single AI conversation that merges psychometric-style interest profiling with scraped job portal salary data, university enrollment statistics, and regional demand forecasts—so every recommendation is personalized and data-backed, not generic.",
+      "why_this_angle": "By framing the solution as a unified conversation rather than a database or test, it replaces the fragmented, stressful process of career research with a trusted advisor. This angle drills into the exact moment of decision paralysis, when families are most willing to pay to avoid costly mistakes, and the behavioral pain (fear, confusion, family pressure) makes the wedge irresistibly sticky.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 7,
+        "founder_feasibility": 10,
+        "total": 26
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "VocacionData AI becomes an enterprise SaaS platform sold to Peruvian universities, enabling their career services departments to offer personalized, AI-driven vocational guidance at scale. The platform ingests real-time labor market data (salaries, demand, location) and university-specific outcomes (graduation rates, alumni employment) to power a conversational agent that helps students choose majors and career paths with evidence. Universities use it to reduce dropout rates, improve graduate employability, and strengthen their market reputation, while gaining insights into student preferences and labor alignment.",
+      "one_liner": "We provide universities with an AI-powered career guidance platform that uses real labor market data to help students make informed major and career decisions.",
+      "target_customer": "Director of Career Services at a mid-sized private university in Lima, Peru, responsible for student employability and counseling operations.",
+      "core_problem": "Career counselors are overwhelmed and can only offer generic, outdated advice to a fraction of students. Students frequently choose majors misaligned with market demand, leading to high dropout rates, extended graduation times, and unemployment. Every semester, this results in lost tuition revenue, dissatisfied alumni, and a damaged institutional brand.",
+      "solution_hook": "A conversational AI embedded in the student portal that cross-references individual interests with real-time local labor data and university program outcomes to deliver tailored career recommendations, risk assessments, and market insights—replacing static psychometrics with dynamic, actionable guidance.",
+      "why_this_angle": "Universities have a direct financial incentive to improve student retention and employability metrics, which drive enrollment and rankings. They hold dedicated budgets for student success tools, and this solution replaces costly human counseling with scalable, data-driven efficiency, offering a clear ROI. The B2B model provides recurring annual contracts and a built-in distribution channel through the university’s existing student base.",
+      "quick_score": {
+        "problem_acuity": 8,
+        "market_size": 6,
+        "founder_feasibility": 8,
+        "total": 22
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "Un servicio de reporte vocacional conversacional hiperenfocado en padres de clase media de Lima Metropolitana que están por decidir en qué carrera universitaria privada invertir para sus hijos que egresan del colegio este año. Un agente de IA cruza los intereses del joven con datos laborales reales (empleabilidad, salarios, deserción) específicamente de las universidades y carreras que están considerando, y entrega en 24 horas un reporte personalizado con comparativas y proyección de retorno de inversión. Se vende como una consulta única para una decisión concreta, apuntando al dolor financiero y la urgencia de la matrícula.",
+      "one_liner": "Damos a padres limeños un reporte vocacional con datos reales de empleabilidad y ROI para carreras universitarias privadas, para que inviertan con certeza.",
+      "target_customer": "Padre de familia, 45 años, profesional, con un hijo de 17 años que postula a universidades privadas en Lima, activo en grupos de WhatsApp de padres del colegio.",
+      "core_problem": "Cada año, durante la etapa de admisión, este padre invierte decenas de horas buscando información fragmentada, pregunta a conocidos y recibe marketing universitario sin datos objetivos. Vive con ansiedad el riesgo de gastar más de 80,000 soles en una carrera que no le dé empleo a su hijo, y la incertidumbre genera conflictos familiares. No existe una herramienta que le cruce lo que estudiará su hijo con lo que realmente demanda el mercado laboral por universidad.",
+      "solution_hook": "A diferencia de tests vocacionales tradicionales o portales de datos genéricos, nuestro reporte combina una conversación inicial con el joven para capturar sus intereses y los cruza con microdatos laborales por universidad y carrera, entregando una predicción de empleabilidad y sueldo esperado al egreso, con un costo fijo y en formato listo para decidir.",
+      "why_this_angle": "Al estrechar el segmento a padres en pleno proceso de decisión de inversión, el dolor es urgente y cuantificable, lo que maximiza la disposición a pagar. Validar en 30 días es factible porque están concentrados en comunidades digitales donde se puede ofrecer el reporte como un producto puntual y medir la tracción real.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 4,
+        "founder_feasibility": 9,
+        "total": 22
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "We give Peruvian high school graduates a 10-minute AI chat that combines their interests with real job market data and university options to reveal the highest-ROI career paths before they commit.",
+  "source": "parallel_iteration"
+}

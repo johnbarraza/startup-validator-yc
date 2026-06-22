@@ -1,0 +1,62 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": "g1",
+      "title": "Manejo contable 100% automático para microempresas",
+      "pain": 9,
+      "why_now": "SUNAT obliga a facturación electrónica y PDT, y el segmento microempresarial paga entre S/200-500/mes a contadores humanos o incurre en multas. No existe un servicio gestionado de extremo a extremo a bajo costo.",
+      "evidence_needed": "Disposición a pagar S/80/mes, viabilidad de integración con APIs SUNAT en producción, precisión del sistema en un piloto con 30 empresas.",
+      "priority": 9,
+      "risk": "Competidores SaaS con recursos (Alegra, QuickBooks) podrían replicar el modelo gestionado; cambios normativos repentinos; errores automáticos con impacto fiscal si la tasa de fallo no es cercana a cero."
+    },
+    {
+      "id": "g2",
+      "title": "Solución ultrabarata para nanonegocios (ventas < S/100k/año)",
+      "pain": 8,
+      "why_now": "SUNAT intensifica fiscalización de pequeños contribuyentes y los obliga a facturar electrónicamente. Actualmente este segmento no puede pagar ni S/150 y opta por incumplir o delegar mal.",
+      "evidence_needed": "Tamaño real del segmento (número de microempresas con ventas menores a S/100k), sensibilidad al precio (S/50-80 vs S/80-120), canales de adquisición eficientes (ej. asociaciones de bodegueros, ferias).",
+      "priority": 7,
+      "risk": "Alta sensibilidad al precio – incluso S/80 puede ser demasiado; SUNAT podría lanzar herramientas gratuitas más completas (ej. declaración asistida); competencia informal."
+    },
+    {
+      "id": "g3",
+      "title": "Categorización automática de gastos con reglas tributarias peruanas",
+      "pain": 7,
+      "why_now": "La mayoría de las soluciones requiere que el usuario elija cuentas contables manualmente. Los contadores cometen hasta un 15% de errores en categorización según estudios informales. Modelos de IA recientes permiten automatizarlo si se entrenan con datos locales.",
+      "evidence_needed": "Precisión de categorización comparada con un contador senior; disponibilidad de un dataset anonimizado de comprobantes con categorías validadas; contexto legal para hacer reclasificaciones automáticas sin riesgo de revisión.",
+      "priority": 8,
+      "risk": "Inversión inicial elevada en entrenamiento y validación; heterogeneidad de comprobantes (formatos no estructurados); responsabilidad legal si la categorización automática causa una determinación incorrecta de impuestos."
+    },
+    {
+      "id": "g4",
+      "title": "Generación y presentación automática del PDT sin intervención manual",
+      "pain": 8,
+      "why_now": "El PDT (Declaración Determinativa) es el mayor dolor de cabeza mensual para el microempresario; incluso los contadores dedican horas a armarlo. Las APIs de SUNAT ya permiten automatizar libros electrónicos, pero ningún actor del mercado ofrece un PDT 100% auto-generado y enviado.",
+      "evidence_needed": "Viabilidad técnica de replicar la lógica del PDT en un sistema automatizado; homologación con SUNAT (consultas vinculantes); pruebas de extremo a extremo con declaraciones pasadas validadas por contadores.",
+      "priority": 9,
+      "risk": "Dependencia total de las APIs de SUNAT (disponibilidad, cambios de versión); cambios en el diseño del PDT que requieran rediseño rápido; responsabilidad solidaria si el sistema presenta una declaración incorrecta y no se detecta a tiempo."
+    },
+    {
+      "id": "g5",
+      "title": "Blindaje proactivo contra fiscalizaciones SUNAT para microempresas",
+      "pain": 9,
+      "why_now": "Con la digitalización total, SUNAT cruza datos en tiempo real y las probabilidades de fiscalización a microempresas aumentan. El mercado carece de un servicio que combine compliance preventivo con representación legal ligera a bajo costo.",
+      "evidence_needed": "Viabilidad legal de ofrecer representación masiva mediante alianzas con estudios boutique; disposición a pagar un adicional (ej. S/20-30/mes) por un seguro de auditoría; procesos para automatizar alertas de riesgo fiscal.",
+      "priority": 6,
+      "risk": "La representación ante SUNAT requiere abogados habilitados, lo que puede no escalar; costos ocultos altos en caso de fiscalizaciones reales; el producto puede ser percibido como innecesario hasta que ocurre una auditoría."
+    },
+    {
+      "id": "g6",
+      "title": "Onboarding sin fricción para empresarios no contables con interfaz conversacional",
+      "pain": 8,
+      "why_now": "El mayor freno para adoptar software contable es el miedo a la jerga y la complejidad. Con la madurez de chatbots y procesamiento de lenguaje natural, se puede ofrecer una experiencia donde el dueño no vea cuentas contables, solo hable en lenguaje natural. Ningún competidor ha implementado esto de forma madura en Perú.",
+      "evidence_needed": "Test de usabilidad con al menos 20 dueños de microempresas (tienda, restaurante, oficio) midiendo tiempo hasta primera declaración correcta, satisfacción y errores comparados con un contador humano; contraste de interfaz conversacional vs formularios tradicionales.",
+      "priority": 8,
+      "risk": "Si el chatbot no entiende giros específicos o consultas complejas puede generar frustración; requiere inversión en NLP y datos locales; puede ser copiado rápidamente por competidores que ya tienen base de usuarios."
+    }
+  ],
+  "recommended_gap_id": "g1",
+  "checkpoint_instruction": "Validar el gap g1 lanzando un piloto controlado con 30 microempresas de diferentes giros (bodega, restaurant, peluquería, consultoría) ofreciendo el servicio a S/80/mes durante 2 meses. Medir: tasa de conversión de oferta a prueba, NPS luego del primer ciclo de declaración PDT, precisión de categorización automática vs contador SENIOR (gold standard), y disposición a continuar pagando. Paralelamente, entrevistar a 5 contadores independientes que atienden este segmento para mapear los 10 errores más frecuentes que ven en sus clientes y afinar la lógica de automatización.",
+  "source": "llm"
+}

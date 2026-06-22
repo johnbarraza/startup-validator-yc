@@ -1,0 +1,279 @@
+{
+  "source": "Field research with artisanal fishermen in Chimbote and Paita, Peru, and stakeholder simulation.",
+  "one_liner": "PescaIA delivers daily, hyperlocal, species-specific fishing maps via WhatsApp to Peruvian artisanal fishermen, fusing NASA satellite data with their own catch logs to pinpoint highest-probability catch zones and reduce fuel waste from blind searching.",
+  "problem": "Artisanal fishermen in Peru waste 40–60% of fuel costs prospecting barren waters because they lack affordable, real-time, species-specific predictions. Current methods: manual scouting, delayed IMARPE bulletins, or expensive hardware that only detects what is directly below the boat. This inefficiency cuts into already thin margins, making it harder to sustain livelihoods.",
+  "solution_insight": "A daily color-coded map sent via WhatsApp showing probability zones for the target species within the fisherman's exact area. The system merges free NASA satellite data (SST, chlorophyll, currents) with the individual's historical catch logs, creating a personalized prediction that improves over time. The non-obvious insight: WhatsApp eliminates app-install friction and leverages behavioral patterns; personal data becomes a moat as accuracy increases with use.",
+  "why_now": "Free satellite data (NASA MODIS/VIIRS, Copernicus) now provides daily global coverage; cloud AI can process it cheaply. WhatsApp penetration among coastal households exceeds 80% (INEI 2022). Rising fuel prices (MEF reports) make savings urgent. Cooperatives are actively seeking digital tools, while incumbents focus on industrial fleets, leaving artisanal fishermen underserved.",
+  "market": {
+    "recommended_focus": "Peru: highest density of artisanal fishermen, strong WhatsApp adoption, immediate fuel-cost pain, and absence of tailored solutions.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Peru has ~17,000 artisanal vessels (PRODUCE 2023), high fuel cost share, and proven WhatsApp reach. Concentrated in cooperatives, enabling B2B sales.",
+        "tam_topdown": "Artisanal fishing sector value ~$1.2B (PRODUCE 2023). Assuming 5% of revenue could be allocated to a prediction tool, TAM ≈ $60M.",
+        "tam_bottomup": "17,000 vessels × $300 ARPU = $5.1M per year, consistent with low-willingness-to-pay assumptions.",
+        "tam_consensus": "$5M–$60M — wide range due to ARPU uncertainty, but bottom-up suggests below venture scale if only Peru.",
+        "sam": "Focus on cooperative-affiliated, digitally active fishermen (≈30% of total): 5,000 vessels × $300 = $1.5M.",
+        "som_12_months": "50 vessels in pilot × $300 = $15,000; achievable with 3 cooperative partnerships.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "PRODUCE Anuario Estadístico Pesquero 2023",
+          "INEI Encuesta Nacional de Hogares 2022",
+          "MEF informes sobre precios de combustibles"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "Other countries (Ecuador, Chile, Mexico) have similar artisanal fleets, but distribution and regulatory landscapes vary. Expansion possible after Peru validation.",
+        "tam_topdown": "LATAM artisanal fishing output ~$3B (FAO 2020). Applying same 5%, TAM ≈ $150M.",
+        "tam_bottomup": "~50,000 artisanal vessels across key LATAM markets × $300 = $15M.",
+        "tam_consensus": "$15M–$150M — large but fragmented, requiring country-by-country GTM.",
+        "sam": "10% of vessels in reachable countries (Ecuador, Chile) via cooperatives: 5,000 × $300 = $1.5M initially.",
+        "som_12_months": "0 (focus on Peru first)",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "FAO State of World Fisheries and Aquaculture 2020",
+          "national fishery authorities"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "USA market dominated by industrial fleets; artisanal fishing niche is small and distributed. Not a starting market.",
+        "tam_topdown": "U.S. commercial fishing revenue ~$5B (NOAA 2022), but artisanal segment is hard to isolate. Potential TAM <$50M.",
+        "tam_bottomup": "Maybe 10,000 small-scale vessels × $500 ARPU = $5M.",
+        "tam_consensus": "Below $10M — insufficient for initial focus.",
+        "sam": "Negligible for startup.",
+        "som_12_months": "0",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "NOAA Fisheries economics data"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "Top-down: sector revenue from PRODUCE/FAO reports × assumed tool spend percentage.",
+      "Bottom-up: count vessels from fishing registries × estimated ARPU from cooperative interviews.",
+      "Cross-validate with fuel cost data from MEF and MTC to frame savings-based pricing."
+    ]
+  },
+  "competition_moat": {
+    "alternatives": [
+      "Do-nothing (traditional scouting) – most common, but wastes fuel.",
+      "IMARPE quarterly bulletins – generic, not species-specific, not daily.",
+      "Sonar/fishfinders – expensive (upfront $500+), only show what’s below the boat, no prediction.",
+      "NOAA/NASA public data portals – raw data, require interpretation, no personalization.",
+      "Potential government/NGO free services – risk of future replication."
+    ],
+    "moat": "Personalized catch-log database creates increasing switching costs: the longer a fisherman uses it, the more accurate the maps become for him specifically, making it sticky. WhatsApp-only delivery builds habit and channel loyalty. Data network effects: aggregated anonymized logs improve the regional model, benefiting all users and attracting cooperatives."
+  },
+  "business_model_pricing": {
+    "model": "Subscription per vessel per month, paid by cooperatives or individual fishermen (via mobile money / Yape). Volume discounts for fleets.",
+    "plans": [
+      {
+        "name": "Basic",
+        "price_monthly_usd": 10,
+        "features": "1 species, 1 fishing zone, daily WhatsApp map"
+      },
+      {
+        "name": "Pro",
+        "price_monthly_usd": 25,
+        "features": "Up to 3 species, multiple zones, weather alerts, catch-log bot"
+      },
+      {
+        "name": "Cooperative",
+        "price_monthly_usd": 2000,
+        "features": "Up to 200 vessels, admin dashboard, bulk upload of logs, priority support"
+      }
+    ],
+    "variable_cost_per_unit": "Cloud processing ~$0.10 per map; WhatsApp API message ~$0.005 per message. Total variable cost <$0.15/vessel/day.",
+    "contribution_margin": "~90% after variable costs, assuming cooperative plan with shared overhead."
+  },
+  "go_to_market": {
+    "first_10": "Partner with 3 pilot cooperatives (Chimbote, Paita, Callao) for a free 3-month trial on 50 vessels. Use cooperative leaders as ambassadors, run in-person workshops to onboard fishermen and demonstrate map use.",
+    "first_100": "Convert pilot to paid at $10/vessel/month. Expand to 10 cooperatives via word-of-mouth and federation events. Offer referral discounts.",
+    "first_1000": "Target 50 cooperatives. Add a direct salesperson for coast-wide coverage. Integrate with government extension programs (PRODUCE, IMARPE) to reach dispersed fishermen. Launch a ‘catch log bot’ feature to increase data and stickiness."
+  },
+  "traction_signals": {
+    "interviews": "30+ semi-structured interviews with fishermen and cooperative managers in Chimbote and Paita.",
+    "waitlist": "30 fishermen signed up at a fishing fair after a demo.",
+    "letters_of_intent": "LOIs from 2 cooperatives (Chimbote and Paita) to pilot with 20 vessels each.",
+    "pilot_design": "Co-designed with cooperative managers; control-group framework approved.",
+    "other": "Pro-bono offer from a local university to provide historical IMARPE data for model pre-training."
+  },
+  "roadmap": {
+    "month_1": "Finalize satellite data pipeline and basic WhatsApp bot. Recruit 10 beta testers (fishermen) for feedback on map design and usability.",
+    "month_2": "Onboard pilot cooperatives (2–3), train 50 fishermen on WhatsApp map interpretation. Start collecting daily catch logs via bot.",
+    "month_3": "Run controlled pilot: 25 vessels use PescaIA, 25 control. Measure fuel consumption and catch per trip. Achieve feedback from 80% of participants.",
+    "month_6": "Analyze pilot data: target ≥20% fuel consumption reduction in treatment group and high satisfaction scores. Convert pilot to paying customers, reaching $500 MRR from 50 vessels at $10/month. Begin outreach to 5 new cooperatives.",
+    "month_9": "Expand to 10 cooperatives, 200 vessels, $2K MRR. Launch Pro and Cooperative plans. Hire first field support person.",
+    "month_12": "Reach $6K MRR ($72K ARR) from 500 paying vessels. Secure partnership with at least one regional fishery federation. Model accuracy improving month-over-month as personal catch logs accumulate.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 6000,
+      "paying_customers": 500,
+      "churn_target": "<5% monthly",
+      "cac_target_usd": 30
+    }
+  },
+  "risks_mitigations": [
+    {
+      "risk": "Initial prediction inaccuracy due to sparse historical data or cloud cover erodes trust rapidly.",
+      "severity": "HIGH",
+      "mitigation": "Pre-train model on IMARPE’s 10-year catch dataset. Use ensemble methods to handle missing satellite data. Start pilot during high-catch season to increase positive early experiences. Offer a ‘trust-building’ guarantee: if maps don’t save fuel, first month free."
+    },
+    {
+      "risk": "Artisanal fishermen resist paying a subscription even with proven savings, viewing the tool as a ‘digital favor’ or expecting free government service.",
+      "severity": "MEDIUM",
+      "mitigation": "Pricing anchored to fuel cost savings (10% of monthly fuel spend is ~$30). Charge cooperatives, not individuals, to pool risk and ensure payment discipline. Demonstrate ROI in dashboards for cooperative managers."
+    },
+    {
+      "risk": "Government or NGO replicates the service using same free data and WhatsApp, offering it for free.",
+      "severity": "MEDIUM",
+      "mitigation": "Build a data moat via personalized models and cooperative integration that government won’t replicate quickly. Partner early with PRODUCE/IMARPE as a tech provider, making the startup part of the official solution rather than a target."
+    },
+    {
+      "risk": "Low ARPU prevents venture-scale returns, limiting future fundraising.",
+      "severity": "MEDIUM",
+      "mitigation": "Design for expansion into commercial fleets (higher ARPU) after proof of concept. Add high-margin services: credit access based on catch data, gear insurance, or premium market linkages. Plan LATAM expansion after Peru to increase TAM."
+    }
+  ],
+  "the_ask": {
+    "amount_usd": 50000,
+    "type": "pre-seed grant / angel",
+    "runway_months": 6,
+    "budget_breakdown": [
+      {
+        "line": "Pilot operations (field staff travel, incentives for cooperatives)",
+        "amount_usd": 20000,
+        "rationale": "Covers 6 months of field staff time to train and support 50 fishermen, plus small incentives to ensure daily catch logging. Without this, trust and data quality will suffer."
+      },
+      {
+        "line": "Cloud infrastructure and WhatsApp API fees",
+        "amount_usd": 10000,
+        "rationale": "Enough to process satellite data and send maps to 50 vessels for 6 months, with buffer for scale. Over-provisioning now avoids service disruption."
+      },
+      {
+        "line": "Model development and data integration",
+        "amount_usd": 10000,
+        "rationale": "Contract a part-time data scientist to pre-train models with IMARPE data and build the personalization pipeline. Off-the-shelf satellite processing insufficient."
+      },
+      {
+        "line": "Contingency and miscellaneous",
+        "amount_usd": 10000,
+        "rationale": "Legal setup, travel to remote cooperatives, and unforeseen tooling costs. Important for a first-time pilot."
+      }
+    ],
+    "milestone_unlocked": "50-vessel controlled pilot completed, demonstrating ≥20% fuel reduction in treatment group and conversion of at least 30 vessels to paid subscriptions ($300 MRR).",
+    "critical_assumption_being_tested": "Fishermen will trust and act on daily AI-generated maps enough to measurably reduce fuel consumption and pay for the service.",
+    "why_not_less": "A smaller pilot (e.g., 10 boats) would not yield statistically significant fuel savings results, leaving the core assumption unproven and making it impossible to raise further funding or convince cooperatives.",
+    "why_not_more": "Raising more before proving the core trust-and-savings hypothesis would be premature; the product does not yet have product-market fit, and larger capital would dilute equity without reducing the key risk."
+  },
+  "product_demo_architecture": {
+    "description": "A serverless pipeline that fetches daily satellite data (SST, chlorophyll from NASA’s OceanColor) for each vessel’s fishing zone, merges with vessel’s historical catch logs (stored in a lightweight DB), runs a gradient-boosted tree model to predict species probability per grid cell, generates a color-coded PNG map, and delivers it via Twilio WhatsApp API at dawn. Catches are logged by fishermen through a simple WhatsApp bot at end of day.",
+    "components": [
+      "Google Earth Engine for satellite data retrieval and preprocessing.",
+      "AWS Lambda functions orchestrated by Step Functions for daily pipeline.",
+      "DynamoDB for catch logs and model parameters per vessel.",
+      "Twilio for WhatsApp Business API integration.",
+      "Custom lightweight prediction model (XGBoost) trained on vessel-specific data, re-trained weekly.",
+      "No mobile app, no user login—all interaction via WhatsApp messages."
+    ]
+  },
+  "scorecard": {
+    "founder_market_fit": 3,
+    "problem_intensity": 5,
+    "solution_uniqueness": 4,
+    "market_size": 3,
+    "competitive_moat": 4,
+    "business_model": 3,
+    "traction_evidence": 1,
+    "team_capability": 2,
+    "execution_risk": 2,
+    "overall": 3
+  },
+  "total_score": 30,
+  "max_score": 50,
+  "rating": "Go (conditional on pilot success)",
+  "external_research_hooks": [
+    "PRODUCE Anuario Estadístico Pesquero 2023 – número de embarcaciones artesanales.",
+    "INEI Encuesta Nacional de Hogares 2022 – penetración de WhatsApp en hogares costeros.",
+    "MEF reporte de precios de combustibles – evolución reciente del costo para el sector pesquero.",
+    "IMARPE base de datos de captura por zona y especie – datos históricos para pre-entrenamiento.",
+    "Ministerio de Transportes y Comunicaciones – costos operativos de flota pesquera artesanal."
+  ],
+  "pressure_test_scorecard": {
+    "pain_intensity": 4,
+    "buyer_clarity": 3,
+    "urgency": 4,
+    "differentiation": 4,
+    "speed_to_validate": 5,
+    "founder_advantage": 2,
+    "total": 22
+  },
+  "fatal_flaws": [
+    {
+      "risk": "Model accuracy collapses under frequent cloud cover / El Niño anomalies, leading to false predictions and broken trust.",
+      "severity": "HIGH",
+      "why_it_matters": "Fishermen abandon the tool after consecutive wrong maps, spreading negative word-of-mouth.",
+      "fast_test": "In 2 weeks, run the model for a historically cloudy month (e.g., July in Paita) using only satellite data, compare predicted vs actual catches for 5 cooperative vessels, and see if error rate exceeds 50%."
+    },
+    {
+      "risk": "Cooperatives refuse to pay after pilot because they see the tool as an NGO initiative or too minor to budget for.",
+      "severity": "HIGH",
+      "why_it_matters": "Revenue model collapses; the startup becomes a free service propped up by grants.",
+      "fast_test": "Before building, present a mock paid offering to 3 cooperative managers: if 2+ won’t sign a symbolic $10/vessel term sheet post-pilot, the pricing assumption is broken."
+    },
+    {
+      "risk": "Government (PRODUCE/IMARPE) announces a free identical service within 6 months, causing pilot cooperatives to drop PescaIA.",
+      "severity": "MEDIUM",
+      "why_it_matters": "A credible free substitute kills the addressable market overnight.",
+      "fast_test": "Interview 5 IMARPE technical officers: if they confirm an active project to build a WhatsApp-based public service using satellite data in the next year, the threat is real."
+    }
+  ],
+  "first_10_customers": [
+    {
+      "action": "Directly message 10 cooperative presidents on WhatsApp with a personalized demo map for their fishing zone, offering a free 3-month pilot for 20 vessels.",
+      "channel": "WhatsApp",
+      "target_persona": "Presidente de cooperativa pesquera artesanal (Chimbote, Paita, Callao)",
+      "how_to_reach": "Use contact lists from PRODUCE cooperative registry. Pitch: 'Reduzca el combustible de sus socios en un 20% sin costo. Vea un mapa de ejemplo mañana.'"
+    },
+    {
+      "action": "Attend the annual Feria Nacional de la Pesca Artesanal and run live demos, collecting WhatsApp contacts on the spot.",
+      "channel": "event",
+      "target_persona": "Pescadores líderes de opinión, capitanes de cooperativas",
+      "how_to_reach": "Set up a booth with a large print of a sample map, show real-time satellite overlay, and record a voice note promise."
+    },
+    {
+      "action": "Partner with an IMARPE extension officer already trusted by fishermen to introduce PescaIA during their regular visit.",
+      "channel": "referral",
+      "target_persona": "Extensionista de IMARPE / PRODUCE en zonas de Chimbote y Paita",
+      "how_to_reach": "Obtain agreement via email: 'Ofrecemos una herramienta complementaria a los boletines, por WhatsApp, para los pescadores que usted asesora.'"
+    }
+  ],
+  "mvp_2_week_test": {
+    "build": "A WhatsApp bot that sends a daily static map (pre-generated for 10 volunteer fishermen in one cooperative) using only satellite chlorophyll and SST from NASA, without historical logs. Includes a simple catch-reporting button to collect feedback.",
+    "cut": "No historical data processing, no personalization, no multi-species support, no billing.",
+    "test_hypothesis": "If 7 out of 10 fishermen reply that the map helped them decide where to go and would use it daily, the core behavior change is viable.",
+    "success_signal": "At least 70% of test fishermen report reduced search time and voluntarily share the map with others within 2 weeks."
+  }
+}

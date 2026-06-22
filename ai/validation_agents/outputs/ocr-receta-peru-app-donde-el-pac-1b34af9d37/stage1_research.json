@@ -1,0 +1,165 @@
+{
+  "idea": "OCR-Receta Peru: app donde el paciente fotografía su receta médica, el sistema extrae los medicamentos vía OCR y muestra el genérico equivalente más barato en farmacia cercana por GPS, con modelo de negocio B2B donde farmacias pagan comisión por cada cliente derivado.",
+  "market": "Pacientes peruanos con recetas médicas que buscan precios accesibles de medicamentos genéricos, y farmacias (cadenas grandes e independientes) que desean atraer tráfico pagando por derivación.",
+  "solutions": [
+    {
+      "id": "sol_1",
+      "name": "Inkafarma App",
+      "category": "Farmacia de cadena",
+      "observed_positioning": "App con búsqueda de medicamentos, cupones y geolocalización de sucursales propias; fuerte lealtad de marca."
+    },
+    {
+      "id": "sol_2",
+      "name": "Mifarma App",
+      "category": "Farmacia de cadena",
+      "observed_positioning": "Similar a Inkafarma, con integración de delivery a domicilio; pertenece al mismo grupo económico."
+    },
+    {
+      "id": "sol_3",
+      "name": "RecetaFácil (startup peruana)",
+      "category": "Agregador de precios con OCR",
+      "observed_positioning": "App que escanea recetas y compara precios de genéricos en farmacias afiliadas; enfocada en ahorro."
+    },
+    {
+      "id": "sol_4",
+      "name": "Tu Farma Online",
+      "category": "Marketplace de farmacias",
+      "observed_positioning": "Plataforma web que lista productos de múltiples farmacias; permite comparación limitada de precios, sin OCR."
+    },
+    {
+      "id": "sol_5",
+      "name": "EsSalud Digital",
+      "category": "App de seguro social",
+      "observed_positioning": "Agendamiento de citas y entrega de medicamentos en farmacias de la red; no compara precios de genéricos."
+    },
+    {
+      "id": "sol_6",
+      "name": "Búsqueda manual en Google",
+      "category": "Workaround digital",
+      "observed_positioning": "Pacientes buscan el medicamento, opción genérica y llaman a farmacias; ineficiente pero gratuito."
+    },
+    {
+      "id": "sol_7",
+      "name": "Botica cerca con consulta verbal",
+      "category": "Workaround presencial",
+      "observed_positioning": "Preguntar en la farmacia más cercana por el genérico; dependiente del criterio del dependiente."
+    },
+    {
+      "id": "sol_8",
+      "name": "GoodRx (potencial expansión)",
+      "category": "Agregador global de precios",
+      "observed_positioning": "Líder en EE.UU. con cupones y comparación de precios; no opera en Perú pero podría ser una amenaza futura."
+    },
+    {
+      "id": "sol_9",
+      "name": "Lista de precios del MINSA",
+      "category": "Iniciativa gubernamental",
+      "observed_positioning": "Página web con precios de referencia de medicamentos genéricos; poco conocida y difícil de usar móvil."
+    },
+    {
+      "id": "sol_10",
+      "name": "Plataformas de e-commerce (MercadoLibre/Linio)",
+      "category": "Comercio electrónico general",
+      "observed_positioning": "Venta de medicamentos sin receta y algunos OTC; no validan receta ni orientan a genéricos."
+    },
+    {
+      "id": "sol_11",
+      "name": "Farmacia Universal App",
+      "category": "Cadena de farmacias",
+      "observed_positioning": "App con promociones y ubicación de tiendas; enfoque en autoservicio, no en asesoría de genéricos."
+    },
+    {
+      "id": "sol_12",
+      "name": "Doc24 (telemedicina)",
+      "category": "Plataforma de salud",
+      "observed_positioning": "Consultas virtuales, pueden recetar medicamentos; deriva a farmacias aliadas pero sin comparación abierta."
+    },
+    {
+      "id": "sol_13",
+      "name": "No hacer nada (do‑nothing)",
+      "category": "Inacción",
+      "observed_positioning": "Comprar exactamente la marca de la receta al precio que diga la farmacia, sin buscar alternativas más baratas."
+    },
+    {
+      "id": "sol_14",
+      "name": "Seguros privados (Rímac, Pacífico) App",
+      "category": "App de aseguradora",
+      "observed_positioning": "Red de farmacias con reembolsos; útil solo para asegurados, no compara precios de genéricos."
+    },
+    {
+      "id": "sol_15",
+      "name": "RecetApp (startup chilena)",
+      "category": "Agregador regional con OCR",
+      "observed_positioning": "Opera en Chile con OCR de recetas y comparación de precios; potencial entrada a Perú."
+    }
+  ],
+  "research_summary": "El mercado peruano de comparación de precios de medicamentos genéricos está fragmentado. Las cadenas grandes dominan con apps propias pero no priorizan el ahorro en genéricos. Existen pocos agregadores independientes y el uso de OCR para recetas es incipiente. La amenaza principal proviene de la propia inercia del paciente (do‑nothing) y de posibles expansiones de startups regionales o gigantes globales como GoodRx.",
+  "competitor_signals": [
+    {
+      "competitor": "Inkafarma",
+      "hiring_score": 7,
+      "funding_score": 8,
+      "product_score": 6,
+      "team_score": 7,
+      "market_score": 9,
+      "tech_score": 5,
+      "overall_score": 71.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Fuerte presencia de mercado, respaldo financiero sólido (grupo FEMSA), pero su producto no está enfocado en OCR ni en la sustitución inteligente por genéricos; representa más una barrera de tráfico que un competidor directo hoy."
+    },
+    {
+      "competitor": "Mifarma",
+      "hiring_score": 7,
+      "funding_score": 8,
+      "product_score": 6,
+      "team_score": 7,
+      "market_score": 9,
+      "tech_score": 5,
+      "overall_score": 71.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Misma dinámica que Inkafarma (pertenecen al mismo grupo); posee entrega a domicilio y lealtad de clientes, pero carece de funcionalidad de OCR para genéricos. Competidor por captura de usuarios, no por innovación en la propuesta de valor."
+    },
+    {
+      "competitor": "RecetaFácil",
+      "hiring_score": 4,
+      "funding_score": 3,
+      "product_score": 7,
+      "team_score": 5,
+      "market_score": 5,
+      "tech_score": 8,
+      "overall_score": 48.0,
+      "classification": "ENGAGE",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Startup peruana que combina OCR con comparación de precios; producto innovador pero tracción limitada y recursos escasos. Alto riesgo de ejecución; si escala rápido podría ser una amenaza, pero hoy es más un aliado potencial."
+    },
+    {
+      "competitor": "Tu Farma Online",
+      "hiring_score": 3,
+      "funding_score": 2,
+      "product_score": 5,
+      "team_score": 4,
+      "market_score": 4,
+      "tech_score": 4,
+      "overall_score": 34.5,
+      "classification": "MONITOR",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Marketplace de farmacias con una interfaz web poco moderna; sin OCR ni geolocalización avanzada. Baja tracción y señales débiles de crecimiento."
+    },
+    {
+      "competitor": "EsSalud Digital",
+      "hiring_score": 2,
+      "funding_score": 5,
+      "product_score": 3,
+      "team_score": 3,
+      "market_score": 6,
+      "tech_score": 2,
+      "overall_score": 35.0,
+      "classification": "MONITOR",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Aplicación del seguro social con acceso a medicamentos de red; no compara precios de genéricos fuera del sistema. Baja agilidad estatal, pero su base cautiva de 11 millones de asegurados la hace relevante solo si moderniza sus funcionalidades."
+    }
+  ],
+  "source": "llm"
+}

@@ -1,0 +1,71 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": "gap1",
+      "title": "Voice-to-Retention Correlation Analytics",
+      "pain": "Creators manually review retention graphs but cannot link drops to specific speech patterns, missing actionable insights to improve pacing, pauses, and delivery.",
+      "why_now": "AI transcription and speech analysis are mature, YouTube API provides second-by-second retention data, enabling direct correlation for the first time.",
+      "evidence_needed": "Prototype that overlays pacing, filler words, and silence patterns on retention curves for 50 videos; measure user-reported time saved and retention lift in A/B tests.",
+      "priority": 1,
+      "risk": "High – Descript or YouTube Studio could quickly integrate similar correlation features if they invest in R&D."
+    },
+    {
+      "id": "gap2",
+      "title": "Pre-Publish Retention Prediction",
+      "pain": "Creators invest hours in editing only to discover drop-offs after publishing; no tool simulates retention impact of narrative choices before upload.",
+      "why_now": "Advancements in ML enable prediction from audio features and scene composition; YouTube’s pre-publish environment allows draft analysis.",
+      "evidence_needed": "Train a model on 1,000+ videos with retention data, validate prediction accuracy on unseen drafts, and test whether creators adjust content based on predictions.",
+      "priority": 2,
+      "risk": "Medium – Requires large training dataset and model reliability; YouTube might build a similar recommendation engine into Studio."
+    },
+    {
+      "id": "gap3",
+      "title": "Narrative Structure Diagnostics",
+      "pain": "Amateur creators lack storytelling skills, causing flat retention; they need pinpointed feedback on openings, tension arcs, and resolutions.",
+      "why_now": "NLP can segment videos into story beats, and generative AI can suggest structural improvements; creators are increasingly seeking storytelling help.",
+      "evidence_needed": "Manual annotation of narrative arcs in 30 videos, then automate detection; test whether AI-suggested structural changes improve retention in creator trials.",
+      "priority": 3,
+      "risk": "Medium – Complex narrative understanding may require human-in-the-loop; adoption depends on perceived relevance across niches."
+    },
+    {
+      "id": "gap4",
+      "title": "Competitor Speech Benchmarking",
+      "pain": "Creators cannot easily compare their vocal delivery (pace, energy, filler words) to top performers in their niche, missing tactical optimization levers.",
+      "why_now": "Public YouTube videos can be transcribed and analyzed at scale; no tool aggregates speech metrics for competitive insights alongside view performance.",
+      "evidence_needed": "Analyze 200 videos across 5 niches, compute speech pattern distributions, and validate that creators who align with top patterns see retention gains.",
+      "priority": 4,
+      "risk": "Low – Scrubbing public data is legally grey but common; defensible if built on proprietary metrics; low tech barrier could invite copycats."
+    },
+    {
+      "id": "gap5",
+      "title": "Integrated Real-Time Feedback for Recorded Content",
+      "pain": "Creators record long takes and later discover pacing issues, requiring costly re-shoots; existing speech coaches focus on live settings, not asynchronous feedback during editing.",
+      "why_now": "Browser-based editing and API streams can inject real-time analytics without leaving the workflow; Descript’s popular transcription editor validates the demand for in-tool feedback.",
+      "evidence_needed": "Build a browser extension that analyzes uploaded raw footage and highlights pacing problems; measure re-recording time saved and user satisfaction.",
+      "priority": 5,
+      "risk": "Medium – Requires partnerships with editing platforms or building own; Descript could add this natively, leveraging their user base."
+    },
+    {
+      "id": "gap6",
+      "title": "One-Click Storytelling Templates",
+      "pain": "Novice creators don’t know how to structure videos; they need proven narrative blueprints they can adapt quickly without learning complex theory.",
+      "why_now": "Generative AI can produce script outlines and pacing suggestions from a topic; no tool currently combines speech analysis with template-driven editing.",
+      "evidence_needed": "Create 10 high-performing narrative templates and measure the improvement in retention for creators who adopt them vs. their previous videos.",
+      "priority": 6,
+      "risk": "Low – Easy to validate with mockups; risk of genericizing content may turn off advanced creators; copycat templates could emerge quickly."
+    },
+    {
+      "id": "gap7",
+      "title": "Audio-Feature Retention Segments",
+      "pain": "Creators don’t know if retention drops due to background music, silence, volume changes, or voice energy; they need segmented analysis by audio layer.",
+      "why_now": "Machine learning can classify audio segments by features (music, speech, silence) and correlate each with retention; YouTube’s retention graph is ready for multi-dimensional analysis.",
+      "evidence_needed": "Demonstrate that certain audio patterns (e.g., long silences) consistently cause drops; validate that creators can fix them and see improvement.",
+      "priority": 7,
+      "risk": "Low – Technically straightforward using existing audio APIs; but data interpretation may be noisy without large sample sizes."
+    }
+  ],
+  "recommended_gap_id": "gap1",
+  "checkpoint_instruction": "To validate gap1, build a prototype that processes 20 publicly available YouTube videos, transcribes speech, extracts pacing/pause/filler metrics per second, and overlays them on YouTube's public retention graph. Interview 10 creators to assess whether the correlation helps them identify drop‑off causes faster than manual inspection. Success metric: at least 8 out of 10 report a 30% time saving in diagnosing retention issues.",
+  "source": "llm"
+}

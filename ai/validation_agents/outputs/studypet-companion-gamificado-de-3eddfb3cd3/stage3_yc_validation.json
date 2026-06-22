@@ -1,0 +1,231 @@
+{
+  "idea": "StudyPet",
+  "selected_gap": {
+    "id": "gap_emotional_gamification",
+    "title": "Lack of Emotional Engagement in Study Apps",
+    "pain": "Students find existing study tools boring and impersonal, leading to low daily usage and habit drop-off. They crave a fun, caring relationship with their study aid to sustain motivation over a semester.",
+    "why_now": "Smartphone natives expect app experiences to be delightful and gamified. The success of virtual pets (e.g., Tamagotchi) and habit games (Habitica) shows demand for emotional bonding, but no major study tool has integrated a nurturing pet/garden metaphor tied to real academic tasks.",
+    "evidence_needed": "A/B test comparing a basic flashcard app with a pet/garden version; measure daily active usage, session length, and user surveys on emotional connection.",
+    "priority": 1,
+    "risk": "Gamification could be perceived as childish by some students; requires ongoing content updates to keep the pet/garden engaging."
+  },
+  "friedman_scores": [
+    {
+      "criterion": "Founder-market fit",
+      "score": 5,
+      "note": "No specific founder info provided; assumes average fit with pre-med organic chem pain."
+    },
+    {
+      "criterion": "Market size",
+      "score": 5,
+      "note": "Niche of pre-med organic chem students; TAM likely under $100M, not massive."
+    },
+    {
+      "criterion": "Problem acuity",
+      "score": 9,
+      "note": "Organic chemistry is a notorious gatekeeper course with high failure rates."
+    },
+    {
+      "criterion": "Competition",
+      "score": 5,
+      "note": "Many study apps exist (Anki, Quizlet) but none with emotional pet mechanic."
+    },
+    {
+      "criterion": "Personal pull",
+      "score": 7,
+      "note": "Likely founder experienced the pain, but not confirmed."
+    },
+    {
+      "criterion": "Recently possible or necessary",
+      "score": 8,
+      "note": "AI makes personalized plans feasible; virtual pet trend is proven."
+    },
+    {
+      "criterion": "Successful proxies",
+      "score": 7,
+      "note": "Habitica and Tamagotchi show gamification drives engagement."
+    },
+    {
+      "criterion": "Years-long commitment",
+      "score": 6,
+      "note": "Potential to expand to other subjects, but initial narrow focus requires sustained effort."
+    },
+    {
+      "criterion": "Scalability",
+      "score": 7,
+      "note": "Software product can scale, but content updates for different courses need resources."
+    },
+    {
+      "criterion": "Good idea space",
+      "score": 7,
+      "note": "EdTech with emotional engagement is a novel and interesting space."
+    }
+  ],
+  "yc_rule_scores": [
+    {
+      "criterion": "Do not wait for the perfect idea",
+      "score": 8,
+      "note": "Idea is concrete and addresses a clear pain point."
+    },
+    {
+      "criterion": "Burn the boats",
+      "score": 7,
+      "note": "Single focus on StudyPet is plausible if founder is committed."
+    },
+    {
+      "criterion": "Go deep into customer workflow",
+      "score": 6,
+      "note": "Understanding student study habits is critical, but depth may be limited initially."
+    },
+    {
+      "criterion": "Build at the edge of AI",
+      "score": 8,
+      "note": "Uses AI to parse syllabus and generate personalized plans, leveraging latest models."
+    },
+    {
+      "criterion": "Sell outcomes, not tools",
+      "score": 7,
+      "note": "Value proposition is acing Organic Chemistry, not just a planner."
+    },
+    {
+      "criterion": "Choose ambitious scope",
+      "score": 6,
+      "note": "Could expand to other courses, but starting narrow is wise."
+    },
+    {
+      "criterion": "Treat failure as structured data",
+      "score": 5,
+      "note": "Usage data can inform improvements, but not explicitly designed for learning."
+    },
+    {
+      "criterion": "Pick low-trust, high-expertise markets",
+      "score": 6,
+      "note": "Education market demands expertise and trust; virtual pet might undermine credibility."
+    },
+    {
+      "criterion": "The process is the product",
+      "score": 7,
+      "note": "The study plan generation process is core, but emotional engagement is also key."
+    },
+    {
+      "criterion": "Avoid early-demand trap",
+      "score": 5,
+      "note": "Risk of building before validating demand; waitlist needed."
+    },
+    {
+      "criterion": "Price per unit or result",
+      "score": 6,
+      "note": "Could charge per course or subscription; outcome-based pricing is challenging."
+    },
+    {
+      "criterion": "Obsess over COGS",
+      "score": 6,
+      "note": "AI compute costs can be high; need to manage margins."
+    },
+    {
+      "criterion": "Do not bolt AI onto legacy",
+      "score": 8,
+      "note": "AI-native design, not adding AI to an existing non-AI product."
+    },
+    {
+      "criterion": "Cover domain, model, and operations fluency",
+      "score": 5,
+      "note": "Requires deep organic chemistry domain knowledge and AI expertise."
+    }
+  ],
+  "vc_rubric_scores": [
+    {
+      "dimension": "Team",
+      "weight": 0.25,
+      "score": 5,
+      "weighted": 1.25,
+      "rationale": "No specific team background provided; assumes average team without unique insight into pre-med or edtech."
+    },
+    {
+      "dimension": "Market",
+      "weight": 0.2,
+      "score": 4,
+      "weighted": 0.8,
+      "rationale": "TAM likely under $1B; niche of pre-med organic chem students, limited scalability without expansion."
+    },
+    {
+      "dimension": "Product",
+      "weight": 0.15,
+      "score": 6,
+      "weighted": 0.9,
+      "rationale": "Virtual pet + AI study plan is novel but has low defensibility; easily replicated by incumbents."
+    },
+    {
+      "dimension": "Traction",
+      "weight": 0.15,
+      "score": 1,
+      "weighted": 0.15,
+      "rationale": "No evidence of user validation, waitlist, or pilot; pure idea stage."
+    },
+    {
+      "dimension": "Business Model",
+      "weight": 0.1,
+      "score": 5,
+      "weighted": 0.5,
+      "rationale": "Subscription plausible, but LTV:CAC and margins unproven; student price sensitivity is high."
+    },
+    {
+      "dimension": "Competition",
+      "weight": 0.08,
+      "score": 4,
+      "weighted": 0.32,
+      "rationale": "Weak vs funded incumbents like Quizlet, Anki, Khan Academy; pet feature is a feature, not a moat."
+    },
+    {
+      "dimension": "Financials",
+      "weight": 0.05,
+      "score": 3,
+      "weighted": 0.15,
+      "rationale": "No financial projections; burn rate and runway unknown."
+    },
+    {
+      "dimension": "Risk Profile",
+      "weight": 0.02,
+      "score": 6,
+      "weighted": 0.12,
+      "rationale": "Failure mode: students see pet as childish or distracting; low stickiness."
+    }
+  ],
+  "vc_verdict": {
+    "composite_score": 4.19,
+    "verdict": "DECLINE",
+    "reason": "Disqualifying score on: traction",
+    "weak_dims": [
+      "traction",
+      "financials"
+    ],
+    "disqualifying_dims": [
+      "traction"
+    ],
+    "investor_lenses": {
+      "sequoia": "WATCH",
+      "yc": "FAIL",
+      "tiger_global": "FAIL",
+      "risk_mgmt": "ELEVATED"
+    },
+    "source": "deterministic_vc_calcs"
+  },
+  "go_no_go": "no-go",
+  "decision": "DECLINE. The VC composite score is below 5.0, indicating significant gaps in team, market, traction, and business model. The emotional gamification angle is interesting but insufficient to overcome these weaknesses. Without strong founder-market fit or early traction, the idea does not pass the hard-screening rubric.",
+  "next_experiments": [
+    "Conduct 20+ interviews with pre-med organic chemistry students to validate problem acuity and willingness to pay.",
+    "Build a minimal prototype (e.g., Google Calendar integration with pet) and A/B test vs. standard planner for engagement.",
+    "Create a landing page with waitlist to gauge demand and collect email signups.",
+    "Run a pre-seed survey to estimate TAM and willingness to pay for premium features."
+  ],
+  "kill_criteria": [
+    "If <30% of interviewed students express strong pain and intent to use",
+    "If A/B test shows no significant increase in daily active usage over baseline",
+    "If waitlist fails to reach 100 signups within 2 weeks of targeted outreach",
+    "If any major competitor (e.g., Anki, Quizlet) announces a similar feature"
+  ],
+  "source": "llm",
+  "_iteration_id": "I3",
+  "_iteration_angle": "PIVOT_WEDGE",
+  "_iteration_one_liner": "We help pre-med students survive Organic Chemistry by turning their syllabus into a daily pet-nurturing study routine using AI."
+}

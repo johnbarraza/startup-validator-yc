@@ -1,0 +1,649 @@
+[
+  {
+    "idea": "PlagaNet is a mobile app that gives Peruvian potato and corn farmers instant, offline pest diagnosis from a photo, using computer vision trained on local data. It addresses the costly habit of guesswork or delayed expert visits by providing actionable recommendations in seconds, even without connectivity. The freemium model offers free basic diagnosis, with premium features for monitoring and advice, while a B2G module enables Agrorural to track pest outbreaks across regions by aggregating anonymized farmer data.",
+    "selected_gap": {
+      "id": "gap-01",
+      "title": "Localized, Offline-First AI Pest Diagnosis for Potato and Corn",
+      "pain": "HIGH",
+      "why_now": "Smartphone use among smallholders is rising, but internet connectivity remains unreliable in rural Peru. Existing AI apps require online access and lack models specifically trained on Peruvian pests and diseases, leading to misdiagnosis.",
+      "evidence_needed": "Farmer willingness to adopt, diagnostic accuracy compared to field agronomists, offline model performance on local device hardware.",
+      "priority": 1,
+      "risk": "MEDIUM"
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No specific founder background provided; assume some agri/tech expertise but unclear."
+      },
+      {
+        "criterion": "Market size",
+        "score": 4,
+        "note": "Peruvian potato/corn smallholder market is niche; TAM likely <$100M."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "High pain: guesswork leads to crop losses, delayed expert visits costly."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Low direct competition; existing apps require internet, lack local models."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unclear if founders have deep personal connection to farming."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Rising smartphone adoption + offline AI models enable this now."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar apps like Plantix exist for other regions, but not for Peru."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Agriculture domain requires long cycles; team seems prepared."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "B2G module offers scaling via data aggregation, but farmer-side growth is slow."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Agri-tech is underserved, especially for smallholders in developing countries."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Gap is well-defined and prioritized."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 6,
+        "note": "Unclear if team is fully committed to this single idea."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 7,
+        "note": "Offline-first and local pests address real workflow constraints."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "On-device inference is an edge AI approach."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Value proposition is reduced losses, not just a diagnosis tool."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "B2G outbreak tracking adds ambition beyond simple app."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "Diagnostic errors can be feedback loops, but not explicit."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Farmers need trusted advice; expertise in local pests is critical."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "Diagnosis workflow is the product, but not deeply differentiated."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "Freemium may attract many users but monetization unclear."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 6,
+        "note": "Freemium + premium subscription, but not strictly per-outcome."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 8,
+        "note": "Offline model reduces cloud costs significantly."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 6,
+        "note": "New app, not integrated with existing systems; moderate risk."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 5,
+        "note": "Requires agronomy + ML expertise; unclear if team has both."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No information on founder background; insufficient evidence of unique positioning."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "TAM is limited to Peruvian potato/corn farmers; likely below $1B."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Offline AI with local data creates a defensible moat, but model accuracy unproven."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of pilot, interviews, or user adoption."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 4,
+        "weighted": 0.4,
+        "rationale": "Freemium and B2G plausible but unit economics unclear; LTV:CAC unknown."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Competitors require internet; local data advantage but brand trust is low."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "Pre-revenue, no financial projections; burn rate unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Moderate technical and adoption risks; failure mode is low farmer engagement."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.28,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO-GO",
+    "decision": "Decline investment at this stage due to insufficient traction, small market, and lack of team details.",
+    "next_experiments": [
+      "Conduct in-field interviews with 50+ smallholder farmers to validate willingness to pay and pain intensity.",
+      "Build a prototype and test diagnostic accuracy against agronomist assessments on at least 500 samples.",
+      "Develop a simple landing page with waitlist sign-up to gauge demand."
+    ],
+    "kill_criteria": [
+      "Diagnostic accuracy below 70% compared to field experts.",
+      "Less than 10% of farmers express intent to pay for premium features.",
+      "No interest from Agrorural or similar B2G partner after initial outreach."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "We help Peruvian potato and corn farmers prevent crop loss by providing instant, offline AI pest diagnosis from a photo, using computer vision tailored to local pests."
+  },
+  {
+    "idea": "PlagaNet for B2B is an offline-first pest diagnosis and monitoring platform that agricultural cooperatives and input distributors purchase to empower their member farmers with instant AI-powered identification of potato and corn pests using smartphone photos. The platform integrates a centralized dashboard that aggregates real-time pest outbreak data from all member fields, enabling the buyer to provide proactive, localized support, optimize input distribution, and reduce crop loss across their network. The buyer pays a per-member or per-hectare subscription fee, turning the service into a value-add that strengthens loyalty and improves supply chain quality.",
+    "selected_gap": {
+      "id": "gap-01",
+      "title": "Localized, Offline-First AI Pest Diagnosis for Potato and Corn",
+      "pain": "HIGH",
+      "why_now": "Smartphone use among smallholders is rising, but internet connectivity remains unreliable in rural Peru. Existing AI apps require online access and lack models specifically trained on Peruvian pests and diseases, leading to misdiagnosis.",
+      "evidence_needed": "Farmer willingness to adopt, diagnostic accuracy compared to field agronomists, offline model performance on local device hardware.",
+      "priority": 1,
+      "risk": "MEDIUM"
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 4,
+        "note": "No specific founder background provided; assumed generic."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "TAM likely <$1B; Peru potato/corn agriculture is significant but niche."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "High pain due to crop loss and misdiagnosis; farmers need reliable pest identification."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Some existing online apps, but offline and localization present an opportunity."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unknown founder passion/connection to agriculture."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Recent advances in offline AI and smartphone penetration make this feasible."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar platforms exist in other crops/regions, but not identical."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Agriculture is a long-cycle industry; sustained effort required."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software platform can scale to other crops and regions."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "B2B agtech with offline AI is a promising niche."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "The idea is specific and action-oriented."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 6,
+        "note": "Assumed focus on one idea; no evidence of splitting efforts."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Targets cooperatives/distributors; deeper workflow integration needed."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Offline AI on smartphones is edge computing."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Sells reduced crop loss and proactive support."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Potential to expand beyond potato/corn to other crops."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "Not explicit in the idea description."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Agriculture in Peru requires trust; expertise in local pests is key."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "Dashboard aggregates outbreak data, creating a valuable feedback loop."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 7,
+        "note": "Subscription model aligns with recurring value."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 8,
+        "note": "Per-hectare or per-member pricing ties to outcomes."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 8,
+        "note": "Offline model runs on device, low incremental cost."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 9,
+        "note": "Built from the ground up as an AI-native solution."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Needs agronomy expertise, model training, and deployment operations."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No founder background provided; unclear why this team is uniquely positioned."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 5,
+        "weighted": 1.0,
+        "rationale": "TAM likely below $1B; Peru's potato/corn market is significant but not massive."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Offline-first and localized AI creates defensible moat with proprietary data."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of pilots, LOIs, or user adoption provided."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "Subscription model promising, but LTV:CAC >3x unproven."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Few offline-focused competitors; online incumbents can adapt."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "Burn rate and runway unknown; assumed reasonable."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 6,
+        "weighted": 0.12,
+        "rationale": "Key risks: low farmer adoption, model accuracy, and cooperatives' willingness to pay."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.8,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO_GO",
+    "decision": "DECLINE",
+    "next_experiments": [
+      "Conduct 30 farmer interviews to validate willingness to adopt and pain intensity.",
+      "Test offline model accuracy on low-end smartphones with local pest images.",
+      "Obtain letters of intent from 3 cooperatives/distributors to gauge demand."
+    ],
+    "kill_criteria": [
+      "Model accuracy below 80% on field tests.",
+      "Less than 50% of farmers willing to use the app after demo.",
+      "No cooperative willing to pay per-hectare subscription within 3 months."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We give agricultural cooperatives in Peru an offline AI pest diagnosis tool for their farmers, paired with a dashboard that tracks outbreaks in real time."
+  },
+  {
+    "idea": "PlagaNet: offline-first AI potato pest diagnosis for smallholder farmers in Mantaro Valley, Peru.",
+    "selected_gap": {
+      "id": "gap-01",
+      "title": "Localized, Offline-First AI Pest Diagnosis for Potato and Corn",
+      "pain": "HIGH",
+      "why_now": "Smartphone use among smallholders is rising, but internet connectivity remains unreliable in rural Peru. Existing AI apps require online access and lack models specifically trained on Peruvian pests and diseases, leading to misdiagnosis.",
+      "evidence_needed": "Farmer willingness to adopt, diagnostic accuracy compared to field agronomists, offline model performance on local device hardware.",
+      "priority": 1,
+      "risk": "MEDIUM"
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "No explicit founder background provided, but the idea shows deep understanding of farmer pain point."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "Initial focus on Mantaro Valley is small, but scalable to other regions/crops. TAM not yet quantified."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "20-50% crop loss due to misdiagnosis is acute and financially devastating."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Existing solutions require internet and lack local specificity; offline-first is a key differentiator."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Not evident from description; assumed moderate founder passion."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Offline AI models on Android phones are now feasible; connectivity gap makes it urgent."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 5,
+        "note": "Similar apps exist in other crops/regions but no direct analog proven in this context."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 6,
+        "note": "Agriculture startups often require long cycles; commitment implied but not explicit."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "Model can be retrained for other crops and regions, but distribution to smallholders is challenging."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "AI in agriculture is an attractive, underserved space with high impact potential."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Founder is moving forward with a focused, actionable idea rather than over-analyzing."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Assumed focus on this single idea; no mention of distractions."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Hyper-local focus shows some depth, but more evidence needed on farmer daily routines."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Offline, on-device AI is edge computing; leverages latest model compression techniques."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Outcome is reduced crop loss; treatment recommendations align with outcome selling."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 5,
+        "note": "Initial scope is narrow (single valley, potato); ambition to expand is implied but not central."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "Not addressed in description; assumed founder will iterate based on feedback."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 6,
+        "note": "Farmers are skeptical of new tech; domain expertise is required to build trust."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 5,
+        "note": "Not clear how workflow integration creates stickiness."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Testing with farmers during blight season is good, but need to avoid overbuilding before validation."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 4,
+        "note": "Pricing model not defined; needs to be tied to value delivered."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "Offline model reduces data costs, but app distribution and support costs need attention."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "New app built for smartphones, not retrofitting existing tools."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Team likely has agricultural domain knowledge and AI expertise to operate locally."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No founder background provided; assumed average, but domain knowledge is plausible."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "Initial TAM is small (Mantaro Valley), but global smallholder market is large; timing is right due to smartphone adoption."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Offline-first, localized AI model creates defensible moat via proprietary data and user trust."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No evidence of pilots, interviews, or waitlists; pure concept stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 4,
+        "weighted": 0.4,
+        "rationale": "No pricing defined; likely low willingness to pay among smallholders unless subsidized."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Generic AI apps and agronomists are incumbents; offline/local focus is a clear differentiator."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "Burn rate and runway not provided; assumed lean but risky."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 6,
+        "weighted": 0.12,
+        "rationale": "Key risk is farmer adoption and model accuracy; medium overall due to offline capability."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.2,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Must demonstrate farmer willingness to pay (e.g., pre-orders or LOIs), achieve >90% diagnostic accuracy vs. agronomists in field tests, and show a clear path to pricing that covers COGS."
+    },
+    "go_no_go": "CONDITIONAL_PASS",
+    "decision": "Proceed with validation experiments but do not scale before meeting conditions. Focus on farmer interviews and pilot in Mantaro Valley.",
+    "next_experiments": [
+      "Conduct 50 farmer interviews to assess willingness to pay and gather pest images.",
+      "Build prototype and test offline model accuracy on low-end Android phones with 100 images.",
+      "Run a 2-week field pilot with 10 farmers during blight season, measuring adoption and satisfaction.",
+      "Develop a pricing model (e.g., per diagnosis, subscription, or bundled with inputs) and test price sensitivity."
+    ],
+    "kill_criteria": [
+      "Less than 30% of farmers express willingness to pay after free trial.",
+      "Model accuracy falls below 85% compared to agronomist diagnosis in field conditions.",
+      "Cannot achieve offline inference under 5 seconds on target devices.",
+      "No repeat usage within first month of pilot (i.e., not solving a real need)."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We give potato farmers in the Peruvian highlands an offline AI tool to diagnose late blight instantly on their phones, preventing crop losses."
+  }
+]

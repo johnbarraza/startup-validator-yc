@@ -1,0 +1,662 @@
+[
+  {
+    "idea": "EPS Admin AI automates medical authorizations for Peruvian EPS (health insurers) using localized AI trained on Peruvian clinical guidelines, extracting patient history from legacy systems, and providing explainable recommendations, reducing response time from minutes to seconds.",
+    "selected_gap": {
+      "id": "g-1",
+      "title": "Localized AI for Peruvian Medical Context",
+      "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+      "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+      "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+      "priority": "High",
+      "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 7,
+        "note": "Assumed domain expertise, but no specific founder background provided."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "Peruvian EPS market is limited; potential for expansion across Latin America but not yet validated."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Long wait times and high error rates create significant pain for doctors, patients, and insurers."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Manual processes dominate; global AI solutions lack localization. Advantage likely but competitive response possible."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unclear if the founder personally experiences this pain; no evidence given."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Advances in LLMs and NLP make automating complex medical reasoning feasible now."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 7,
+        "note": "Similar prior auth automation has succeeded in US healthcare; localized version could replicate."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 6,
+        "note": "Implied by startup context, but no explicit commitment stated."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software can scale, but requires integration per EPS and adaptation per country."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Healthcare administrative automation is a large, underserved market with clear ROI."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is well-defined and ready to execute."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Single focus assumed, but not explicit."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 9,
+        "note": "The solution deeply integrates into the authorization workflow, understanding legacy systems and medical guidelines."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Uses AI for decision-making and explainability; can improve with model advances."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 9,
+        "note": "Pricing per authorization aligns incentives with faster approvals and reduced manual work."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 8,
+        "note": "Starts with high-complexity procedures but aims to cover all authorizations."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "Not explicitly mentioned; assumed that rejected cases provide learning."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Healthcare is high-expertise, trust is critical; localized AI can build trust."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "The AI recommendation process is core; well-designed workflow."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Need to validate actual demand before scaling; no evidence of waitlist yet."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 9,
+        "note": "Per-authorization pricing is clear and outcome-aligned."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "Variable costs include API calls and human review; need optimization."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "Integrates with legacy systems but builds a new AI layer; not just bolted on."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Covers domain (medical guidelines), model (AI), and operations (human-in-the-loop)."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 6,
+        "weighted": 1.5,
+        "rationale": "No specific team info; assumed healthcare domain expertise but unproven."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "Peruvian TAM <$1B, but potential to expand across Latin America, making market large over time."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 8,
+        "weighted": 1.2,
+        "rationale": "Defensible moat from localized data and clinical guidelines; explainable AI adds trust."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No pilots, LOIs, or user evidence; pure idea stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 7,
+        "weighted": 0.7,
+        "rationale": "Per-authorization pricing aligns incentives; potential for high gross margins but LTV:CAC unknown."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 7,
+        "weighted": 0.56,
+        "rationale": "Global players lack localization; manual alternatives are slow; competitive edge but replicable."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 6,
+        "weighted": 0.3,
+        "rationale": "No financial details; reasonable to assume moderate burn rate for an early-stage startup."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Key risks: regulatory changes, data access, competitor data gathering, adoption inertia."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 6.06,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": [
+        "Secure pilot with one EPS (e.g., Rimac) to demonstrate accuracy on historical cases.",
+        "Conduct interviews with 5+ medical directors validating pain and willingness to switch.",
+        "Show roadmap for achieving regulatory compliance (e.g., DIGEMID certification).",
+        "Provide detailed unit economics per authorization, including cost of AI inference and human audit."
+      ]
+    },
+    "go_no_go": "Conditional go",
+    "decision": "Proceed with validation, focusing on pilot and evidence collection",
+    "next_experiments": [
+      "Run accuracy test on 500 historical cases from a partner EPS, measuring approval rate alignment.",
+      "Interview 10 medical directors at Peruvian EPS to quantify error rates and willingness to adopt.",
+      "Build a demo that processes real-time requests with manual audit comparison.",
+      "Develop a cost model for per-authorization pricing with break-even analysis."
+    ],
+    "kill_criteria": [
+      "Accuracy below 80% vs human auditors on high-complexity cases.",
+      "No EPS willing to sign a pilot within 3 months.",
+      "Regulatory requirement for human-in-loop on all cases, eliminating value proposition.",
+      "Cost per authorization exceeds 50% of manual processing cost."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "Reemplazamos la revisión manual de autorizaciones médicas en EPS peruanas con IA que decide en segundos usando guías locales, y cobramos solo por resultado."
+  },
+  {
+    "idea": "Instead of selling to EPS, we target large Peruvian employers who provide private health plans to their workforce. These employers currently bear the hidden costs of slow manual prior authorizations: employee frustration, delayed treatments, absenteeism, and lack of transparency. Our AI solution integrates with their existing health plan administration (TPA or self-insured setup) to instantly process pre-authorizations using Peruvian clinical guidelines and employee history, delivering approvals or denials with explanations in seconds. The employer pays an annual per-employee fee, gaining a dashboard with ROI tracking, cost savings, and employee satisfaction metrics. Only edge cases are escalated to human auditors. This shifts the buyer from health insurance companies to HR departments managing benefits, aligning with their urgency to improve employee wellness and control escalating healthcare costs while offering a localized, transparent alternative to manual processes.",
+    "selected_gap": {
+      "id": "g-1",
+      "title": "Localized AI for Peruvian Medical Context",
+      "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+      "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+      "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+      "priority": "High",
+      "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No information on founder background; assumed average."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "Peru has a significant number of large employers, but TAM not quantified."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Manual prior authorization causes significant pain in cost and employee satisfaction."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Cohere Health is a competitor but lacks local adaptation; manual processes are current default."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Founder motivation not specified."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 7,
+        "note": "AI advances and digitization of guidelines make this timely."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar AI prior auth solutions exist in other markets."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "Not indicated; assumed uncertain."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "SaaS model with per-employee fee scales well."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Healthcare admin is a large, growing market."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "Idea is specific and actionable."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 6,
+        "note": "Not clear that they are focusing solely on this."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "They address pain points of HR departments and integrate with existing admin."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "Using AI for decision automation with local data."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "They sell cost savings and satisfaction metrics."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Targeting large employers is ambitious."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No mention of learning from failures."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Healthcare is high-expertise; trust is critical."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "Integration into workflow makes process central."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Risk of overcommitting before validation."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 8,
+        "note": "Annual per-employee fee aligns with unit pricing."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 5,
+        "note": "Cost structure not addressed."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 6,
+        "note": "Integration with existing admin could be legacy, but platform-agnostic."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Local guidelines and medical knowledge are covered."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No founder background provided; assume average."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "TAM likely hundreds of millions but not proven; timing is good."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Localized AI creates defensibility through data and domain expertise."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of customers, pilots, or revenue."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "Per-employee fee is sensible, but LTV/CAC and margins unknown."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Cohere Health is a threat but local adaptation is a moat."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 4,
+        "weighted": 0.2,
+        "rationale": "No financial details; burn rate and runway unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Regulatory and data privacy risks are moderate."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.18,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": [
+        "Obtain evidence of founder-market fit (e.g., prior experience in Peruvian healthcare, AI, or enterprise sales).",
+        "Validate with at least 5 interviews with HR directors of large Peruvian employers showing willingness to pay.",
+        "Run a pilot with one employer to demonstrate accuracy on historical cases and collect ROI metrics."
+      ]
+    },
+    "go_no_go": "CONDITIONAL",
+    "decision": "Proceed with next experiments; do not scale investment until conditions met.",
+    "next_experiments": [
+      "Conduct 20 customer discovery interviews with HR and benefits managers at large Peruvian employers to validate pain and willingness to pay.",
+      "Build a prototype using synthetic data and test against historical prior auth cases (sample from public sources or partner).",
+      "Assess regulatory requirements for AI in medical decisions in Peru (e.g., DIGEMID, data privacy)."
+    ],
+    "kill_criteria": [
+      "Less than 60% of interview respondents rate the problem as 'critical' or 'major'.",
+      "Prototype accuracy below 80% on local guidelines compliance.",
+      "No employer agrees to a paid pilot within 3 months of prototype completion.",
+      "Regulatory barrier that requires costly certification beyond seed funding."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We help large employers in Peru slash prior authorization wait times from days to seconds using localized AI, charging per employee per year."
+  },
+  {
+    "idea": "We replace the human audit team that processes oncology prior authorizations at Rimac EPS (Peru) using an AI trained exclusively on Rimac's oncology clinical guidelines, local drug protocols, and historical approval patterns.",
+    "selected_gap": {
+      "id": "g-1",
+      "title": "Localized AI for Peruvian Medical Context",
+      "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+      "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+      "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+      "priority": "High",
+      "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No info on founder background; assumed average fit, but domain expertise is critical."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "TAM large globally; initial SOM is small but expandable to other payers and regions."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Delays in cancer treatment are severe; manual process creates high pain."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Incumbents like Cohere Health lack local adaptation; advantage exists temporarily."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Not evident; founder's personal connection to problem is unclear."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "AI advances and local data availability make it possible; manual overload makes it necessary."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Cohere Health and similar AI in prior auth show model works, but not in Peru."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Healthcare sales cycles are long; need multi-year commitment to succeed."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software scalable, but requires customization per payer; can expand to other authorization types."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Prior authorization is a well-known pain point; AI-driven automation is a strong value proposition."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 9,
+        "note": "Actionable; already targeting a specific customer and use case."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focused on one idea, but could be at risk of spreading if multiple pilots launched."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Deep integration with Rimac's audit process and historical data."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "Uses AI for decision making; moat is local data, not cutting-edge models."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 9,
+        "note": "Pricing per authorization aligns with outcome (faster approvals, reduced backlog)."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Aims to replace entire audit team, but initially limited to one client and one type."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "If fails, can learn about local nuances; but not explicit in plan."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Healthcare prior auth requires high trust and expertise; local adaptation builds trust."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "The AI workflow becomes part of the audit process; embedding is key."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Has a concrete customer (Rimac) which is good; but must avoid over-customization."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 8,
+        "note": "Per authorization pricing is clear and aligned with value."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "AI inference cost is low; but data acquisition and training may have upfront costs."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Replacing human team, not augmenting; AI is the core process."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Requires expertise in oncology, local guidelines, and AI; team needs all three."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "Unknown founder background; insufficient evidence of unique positioning."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 8,
+        "weighted": 1.6,
+        "rationale": "TAM > $1B; growing demand for prior auth automation; timing right due to manual overload."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Moat from localized data and training, but replicable if competitors invest."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No tangible traction; still in idea stage, needs pilot or LOI."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "LTV:CAC unknown; high initial CAC; margins potentially good, but unproven."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "Incumbents like Cohere Health exist but lack localization; advantage is temporary."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No financial data; assumed seed stage with minimal runway."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Regulatory risk, accuracy risk, and reliance on single customer early on."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.43,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Milestones required: (1) Demonstrate founding team with deep healthcare and AI expertise; (2) Secure Letter of Intent (LOI) or pilot commitment from Rimac; (3) Achieve >90% accuracy on historical prior auth cases in a proof-of-concept."
+    },
+    "go_no_go": "CONDITIONAL_GO",
+    "decision": "Proceed with caution, prioritize validation of team expertise and customer commitment. Allocate minimal resources for a proof-of-concept with Rimac.",
+    "next_experiments": [
+      "Build prototype AI model using Rimac's historical data and test accuracy on a held-out set.",
+      "Conduct in-depth interviews with Rimac's audit team and medical directors to refine requirements.",
+      "Obtain a non-binding LOI from Rimac for a pilot program.",
+      "Assess competitive landscape: contact other Peruvian payers to gauge interest."
+    ],
+    "kill_criteria": [
+      "Inability to achieve >90% accuracy on historical prior auth decisions.",
+      "Rimac declines to participate in a pilot or provides negative feedback.",
+      "Founder team lacks relevant healthcare and AI expertise.",
+      "Regulatory changes require algorithm certification that is cost-prohibitive.",
+      "Competitor (e.g., Cohere Health) announces localized Peru solution first."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We automate Rimac EPS's oncology prior authorizations with AI that understands their exact guidelines, delivering instant decisions and billing per case."
+  }
+]

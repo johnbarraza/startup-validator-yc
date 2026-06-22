@@ -1,0 +1,56 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "HealthTech",
+  "customer_type": "B2B2C",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "evidence present",
+  "pit_signals_detected": [
+    "B2C engagement is a massive hurdle: users must manually log diet, medical appointments, and pharmacy receipts daily. Given low digital literacy and informal economy, most will abandon after a week, mirroring the 90% attrition seen in health tracking apps globally.",
+    "Monetization depends on selling aggregated insights to EPS/MINSA, but these buyers face 6-18 month procurement cycles, limited budgets for 'population health analytics', and often prefer government-collected data. Without a large user base (chicken-and-egg), insights lack statistical significance.",
+    "ML-based risk alerts require high-quality, labeled health data that doesn't exist in Peru. Building accurate models is expensive and talent-scarce. Moreover, false positives/negatives could cause regulatory liability.",
+    "Price comparison for medicines requires real-time partnerships with thousands of dispersed pharmacies (including informal ones). Most pharmacies lack digital inventories, making aggregation infeasible at launch."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (spreadsheets, paper records)",
+    "Spending already happens on imperfect solutions (EPS use legacy data systems)",
+    "Recurring pain: chronic disease management is ongoing",
+    "Measurable cost: healthcare costs from chronic diseases"
+  ],
+  "classification_rationale": "The startup addresses a real, structural problem of chronic disease management in Peru. EPS and MINSA have budgets for health data analytics, and the consumer app provides a unique data collection channel. The B2B monetization path aligns with Peru's economic realities where consumer willingness to pay is low but institutional budgets exist.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "YES",
+  "freemium_rationale": "A free consumer app is essential to collect the data needed for B2B insights. Without a free tier, user acquisition would be limited, reducing data value. The B2B customers will pay for the aggregated insights, subsidizing the free tier.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "EPS and MINSA have no budget line for 'population health insights from a consumer app' and require long, bureaucratic procurement cycles. Consumers (B2C) cannot pay due to low WTP (S/50-200/month is unaffordable for 70% informal workers).",
+  "free_substitute_risk": "Google Sheets (manual health logging), WhatsApp groups (medication price sharing), and MINSA's free SMS health alerts cover 80% of the pain without effort.",
+  "market_size_reality_check": "Realistic paying market: top 5% of Lima's affluent (≈200K people) might pay S/20/month, yielding ~$6K MRR. B2B: 10-20 EPS with 12-month sales cycles, each paying S/500-2000/month for insights, adding <$10K MRR. Total <$200K ARR in year 1 – far below venture scale.",
+  "hardest_assumption": "That users will consistently and accurately log diet, appointments, and receipts over months to generate actionable population health insights.",
+  "devil_rationale": "The idea combines multiple high-risk elements: low B2C engagement, slow expensive B2B sales, data acquisition hurdles, and a chicken-and-egg monetization model. Peru's structural realities make it unlikely to achieve the revenue required for venture returns without a massive pivot.",
+  "preflight_dominant_solution": {
+    "score": "CLEAR",
+    "competitor_name": "none found",
+    "threat_level": "LOW",
+    "note": "No single app in Peru combines all features (diet tracking, appointment logs, pharmacy receipts, ML risk alerts, drug price comparison, and B2B aggregate insights) under one platform."
+  },
+  "preflight_precedent_failure": {
+    "score": "NO_KNOWN_FAILURE",
+    "example": "none",
+    "learning": "No notable startup has publicly failed with this exact integrated model, but individual features have been tried by apps like Doctoralia (appointments) and FarmaEnLinea (price compare) without full integration."
+  },
+  "preflight_regulatory_kill": {
+    "score": "SOFT_BLOCKER",
+    "regulation": "Peru's Ley de Protección de Datos Personales (Law 29733) and MINSA regulations for health data handling and medical device classification of ML-based risk alerts.",
+    "mitigation": "Implement strong data anonymization, obtain explicit user consent, and classify ML alerts as non-diagnostic decision support to avoid medical device regulation. Engage a local data privacy consultant."
+  },
+  "preflight_summary": "Proceed cautiously: no dominant competitor and no known failures, but regulatory hurdles (data privacy, health data compliance) require careful planning and local expertise.",
+  "deal_signals": {
+    "hiring": "Watch for increased hiring of data scientists and health informatics specialists in Peru's health tech startups.",
+    "funding": "Recent funding rounds for Peruvian health tech (e.g., RunaHealth, Doctoralia) indicate growing investor interest; check for larger rounds in LATAM digital health.",
+    "product": "Monitor launches of integrated health platforms by MINSA or EPS (e.g., 'Sistema de Información en Salud') that could validate or compete.",
+    "market": "Growing digital health adoption post-COVID, rising chronic disease prevalence in Peru, and government push for digital transformation in healthcare.",
+    "tech": "Advances in ML for preventive health and cloud infrastructure in LATAM are enabling real-time risk scoring and data aggregation.",
+    "momentum": "ACCELERATING"
+  },
+  "source": "triple_agent_classification"
+}

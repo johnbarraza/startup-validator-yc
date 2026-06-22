@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "PlagaNet is a mobile app that gives Peruvian potato and corn farmers instant, offline pest diagnosis from a photo, using computer vision trained on local data. It addresses the costly habit of guesswork or delayed expert visits by providing actionable recommendations in seconds, even without connectivity. The freemium model offers free basic diagnosis, with premium features for monitoring and advice, while a B2G module enables Agrorural to track pest outbreaks across regions by aggregating anonymized farmer data.",
+  "selected_gap": {
+    "id": "gap-01",
+    "title": "Localized, Offline-First AI Pest Diagnosis for Potato and Corn",
+    "pain": "HIGH",
+    "why_now": "Smartphone use among smallholders is rising, but internet connectivity remains unreliable in rural Peru. Existing AI apps require online access and lack models specifically trained on Peruvian pests and diseases, leading to misdiagnosis.",
+    "evidence_needed": "Farmer willingness to adopt, diagnostic accuracy compared to field agronomists, offline model performance on local device hardware.",
+    "priority": 1,
+    "risk": "MEDIUM"
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "I like the idea of instant diagnosis without needing the internet, because I often have to wait days for an expert. But I've been burned by apps that don't work in the field, so I'm cautious.",
+      "concern": "I need to trust that the app can correctly identify diseases on my low-quality phone in poor lighting, or I'll just go back to guessing.",
+      "evidence_request": "Show me a live demo on a cheap phone in a real field, with a comparison to what the agronomist says for at least 100 cases.",
+      "score": 0.4,
+      "score_rationale": "The offline capability solves a real pain, but I need solid proof of accuracy on local devices before I'd rely on it weekly.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "I'm deeply skeptical: asking a farmer to trust a black-box AI diagnosis without connectivity is risky—one wrong call could wipe out a season's harvest. Without proven accuracy and a way to verify the recommendation locally, this is just guesswork dressed up in an app.",
+      "concern": "How can a farmer with no internet verify the AI's diagnosis when a mistake means total crop loss? You're asking them to trust an opaque algorithm over their own experience.",
+      "evidence_request": "Show me a blinded field trial comparing PlagaNet's diagnostic accuracy against a certified agronomist across 500+ cases, with detailed false positive and negative rates for each major pest.",
+      "score": 0.2,
+      "score_rationale": "Despite addressing a real pain point, the lack of verifiability and explainability in a high-stakes agricultural context makes this a non-starter for a skeptical professional like me.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "From a budget-ownership perspective, PlagaNet's B2G module targets Agrorural, which could reduce pest-related crop losses—a critical metric I track. However, the freemium model and reliance on farmer adoption introduce uncertainty, and government procurement friction means ROI must be immediate and proven.",
+      "concern": "The product lacks evidence that it will pay for itself within one quarter; government contracts require clear, rapid ROI to justify the lengthy approval process.",
+      "evidence_request": "A pilot with Agrorural showing at least a 20% reduction in crop loss or $X in savings within a single growing season.",
+      "score": 0.3,
+      "score_rationale": "Despite addressing a real pain point, the long procurement cycle and unproven quarter-level ROI make this a low priority for my budget.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "This offline-first approach is operationally heavy: deploying a reliable computer vision model on diverse low-end smartphones in remote areas is a support nightmare, especially when farmers expect near-perfect diagnosis to avoid crop loss.",
+      "concern": "The risk of misdiagnosis on low-cost devices is high, and false recommendations could destroy trust and trigger a flood of support requests that we cannot handle without a massive field support team.",
+      "evidence_request": "I need results from a field trial testing the offline model on at least 200 common low-end devices across varying light and pest conditions, with accuracy metrics against agronomist diagnoses and a documented support escalation plan.",
+      "score": 0.2,
+      "score_rationale": "The operational overhead of ensuring diagnostic reliability and managing farmer support in disconnected areas without centralized control makes this a high-risk implementation that I wouldn't back without solid field evidence.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "As a large agtech vendor, I see this as a niche play for a small market. We already have global pest models that work online; offline capability is costly to develop for a tiny user base. The startup's localized offline model is interesting but not a threat to our broader business.",
+      "concern": "The total addressable market of Peruvian potato and corn farmers is too small to justify the R&D investment required to build a competitive offline AI solution, making it unattractive for incumbents to copy.",
+      "evidence_request": "Show evidence of at least 1,000 active users with measurable reduction in crop loss, proving that the solution scales beyond pilot farms.",
+      "score": 0.3,
+      "score_rationale": "Score is low because the market size is small and the startup's offline-first approach is hard to copy but not a priority for incumbents, limiting potential impact.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "The offline-first approach addresses a genuine pain point for Peruvian farmers, but the total addressable market for potato and corn pest diagnosis in Peru is likely under $10M ARR, far below our $50M SAM threshold. Without clear team expertise or a path to scale beyond these crops, the venture lacks the venture-scale trajectory we require.",
+      "concern": "The market is too small: even optimistic penetration of 200k farmers at $10/mo yields only ~$24M ARR, and that assumes high adoption, which is unproven. This is well below the $50M SAM needed to justify a VC investment.",
+      "evidence_request": "A bottom-up TAM analysis showing at least $50M SAM in 5 years, with a credible path to $10M ARR—perhaps by expanding to other crops or neighboring countries—and evidence of founder-market fit (e.g., existing agronomy or AI expertise).",
+      "score": 0.2,
+      "score_rationale": "The market size appears insufficient for venture returns, and the lack of team details and traction makes this a high-risk, low-reward proposition.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "The offline-first approach is smart for connectivity constraints, but building a reliable pest diagnosis model for Peruvian crops requires a substantial labeled dataset that is expensive to collect. Without clear path to data acquisition and validation on real farmer images, this will likely suffer from low accuracy and fail to gain trust.",
+      "concern": "The single sharpest objection is the lack of high-quality, diverse, and locally validated training data, which is critical for model performance and makes the product's core value proposition fragile.",
+      "evidence_request": "Show a pilot with at least 500 farmer-taken photos with ground truth from agronomists, achieving >90% top-3 accuracy and running under 2 seconds on a mid-range Android phone.",
+      "score": 0.3,
+      "score_rationale": "High technical risk from data acquisition and model generalization, with limited evidence of feasibility in the proposed market.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "A pest diagnosis app sounds good in theory, but I've been burned by tech that doesn't work offline on my cheap phone. I use WhatsApp and Excel because they're simple and free. If this app needs internet or forces me to share data with the government, I'm out.",
+      "concern": "How do I know it's accurate for my specific crops and pests without needing internet? And if it shares my data with Agrorural, they might use it to fine me or regulate my farming. I want nothing to do with that.",
+      "evidence_request": "Show me a live demo on a low-end Android phone, fully offline, diagnosing a real Peruvian pest with at least 90% accuracy vs. a local expert. Also confirm I can pay for premium via Yape only, no credit cards or recurring subscriptions.",
+      "score": 0.3,
+      "score_rationale": "The idea addresses a real cost, but distrust of data sharing with government, lack of offline trust, and payment friction keep me skeptical without concrete proof.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "As a public buyer, I see potential in the B2G module for tracking pest outbreaks, but the freemium model targeting individual farmers doesn't fit my procurement framework. I need a product that can be acquired under an existing budget code, not a consumer app.",
+      "concern": "The product lacks a clear path to government procurement; the B2G module is not pre-approved under any existing OSCE category or MINAGRI budget code.",
+      "evidence_request": "Show that the B2G module has been approved as a service under an existing budget code (e.g., 'Servicios de Información Agropecuaria') or that similar products have been procured via OSCE's Catálogo Electrónico.",
+      "score": 0.3,
+      "score_rationale": "Low score because the institutional procurement pathway is undefined and the primary product is consumer-focused, not designed for public sector acquisition cycles.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "PlagaNet addresses a real pain point for smallholder farmers, but I'm skeptical about the revenue potential and path to Series A. The local market is tiny—Peru has only ~250k potato/corn smallholders, and converting them to paying users is uncertain. Without a clear path to $1M ARR and international co-investor interest, this is too early for me.",
+      "concern": "The TAM is too small to reach $1M ARR in Peru without charging significant amounts, which farmers are unlikely to pay. Freemium models in agriculture have low conversion rates, and B2G sales cycles with Agrorural are long and unpredictable.",
+      "evidence_request": "Show me at least 1,000 active users with 10% conversion to premium (100 paid users @ $10/month = $12k ARR) and a letter of intent from Agrorural for a pilot contract.",
+      "score": 0.2,
+      "score_rationale": "While the offline AI tech is impressive for LATAM, the tiny local market, poor monetization potential, and lack of traction make it unlikely to hit $1M ARR or attract international co-investors.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.27,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.27,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "I need to trust that the app can correctly identify diseases on my low-quality phone in poor lighting, or I'll just go back to guessing.",
+      "How can a farmer with no internet verify the AI's diagnosis when a mistake means total crop loss? You're asking them to trust an opaque algorithm over their own experience.",
+      "The product lacks evidence that it will pay for itself within one quarter; government contracts require clear, rapid ROI to justify the lengthy approval process."
+    ],
+    "top_evidence_requests": [
+      "Show me a live demo on a cheap phone in a real field, with a comparison to what the agronomist says for at least 100 cases.",
+      "Show me a blinded field trial comparing PlagaNet's diagnostic accuracy against a certified agronomist across 500+ cases, with detailed false positive and negative rates for each major pest.",
+      "A pilot with Agrorural showing at least a 20% reduction in crop loss or $X in savings within a single growing season."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "NO-GO"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

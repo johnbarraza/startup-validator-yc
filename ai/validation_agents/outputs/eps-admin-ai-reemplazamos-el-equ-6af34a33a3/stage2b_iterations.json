@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "EPS Admin AI automatiza el proceso de autorizaciones médicas en las EPS peruanas, comenzando por Rimac, Pacifico y Sanitas. Nuestra IA lee la solicitud del médico tratante, extrae el historial del afiliado de los sistemas legacy, interpreta las guías clínicas locales (que son distintas a las de otros países) y emite una recomendación inmediata de aprobación o rechazo con justificación explicable. Los auditores humanos solo intervienen en el 5-10% de casos que la IA marca como dudosos, eliminando horas de revisión manual y reduciendo el tiempo de respuesta de 30-120 minutos a segundos. El modelo de negocio es puro: cobramos por cada autorización procesada, alineando incentivos y demostrando ROI inmediato. Empezamos con procedimientos de alta complejidad (como cirugías y medicamentos oncológicos) donde el costo del error y la demora es más crítico. La diferenciación local es clave: entrenamos el modelo con datos peruanos, adaptándonos al español médico local, a los códigos de diagnóstico peruanos y a las coberturas específicas de cada EPS, algo que los gigantes globales no ofrecen.",
+      "one_liner": "Reemplazamos la revisión manual de autorizaciones médicas en EPS peruanas con IA que decide en segundos usando guías locales, y cobramos solo por resultado.",
+      "target_customer": "Médico Auditor de EPS peruanas (específicamente en Rimac, Pacifico o Sanitas) que pasa 4-6 horas al día revisando manualmente solicitudes de autorización en múltiples sistemas.",
+      "core_problem": "Cada autorización toma entre 30 y 120 minutos de lectura y análisis manual. El auditor debe entrar a 3-5 sistemas distintos (historial clínico, guías de la EPS, normativas) copiar y pegar información, interpretar guías ambiguas y tomar decisiones de alto impacto con información fragmentada. Esto genera un cuello de botella de 200-500 solicitudes diarias por EPS, retrasos que irritan a pacientes y médicos, y costos operativos innecesarios (un auditor gana S/ 5,000-8,000 mensuales por procesar ~20 casos/día). El error humano por fatiga o inconsistencia puede causar autorizaciones indebidas o rechazos que terminan en quejas y sobrecostos legales.",
+      "solution_hook": "IA entrenada exclusivamente con datos médicos peruanos, capaz de leer las guías clínicas locales (ej. guías de práctica clínica del Minsa adaptadas por cada EPS) y operar dentro de los sistemas legacy sin reemplazarlos, mediante integraciones ligeras (APIs o automatización de interfaz).",
+      "why_this_angle": "Al enfocar la propuesta en la profunda necesidad de localización peruana —no solo idioma sino procesos clínicos y regulatorios únicos— nos diferenciamos radicalmente de soluciones genéricas en inglés o portugués. Construimos un foso temprano que los competidores globales no pueden replicar sin invertir años en adaptación. El nicho permite validar rápido con un EPS, probar el outcome-based pricing y luego expandir con el mismo ADN a otros países andinos.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 8,
+        "total": 23
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "Instead of selling to EPS, we target large Peruvian employers who provide private health plans to their workforce. These employers currently bear the hidden costs of slow manual prior authorizations: employee frustration, delayed treatments, absenteeism, and lack of transparency. Our AI solution integrates with their existing health plan administration (TPA or self-insured setup) to instantly process pre-authorizations using Peruvian clinical guidelines and employee history, delivering approvals or denials with explanations in seconds. The employer pays an annual per-employee fee, gaining a dashboard with ROI tracking, cost savings, and employee satisfaction metrics. Only edge cases are escalated to human auditors. This shifts the buyer from health insurance companies to HR departments managing benefits, aligning with their urgency to improve employee wellness and control escalating healthcare costs while offering a localized, transparent alternative to manual processes.",
+      "one_liner": "We help large employers in Peru slash prior authorization wait times from days to seconds using localized AI, charging per employee per year.",
+      "target_customer": "HR Director or Benefits Manager of a Peruvian company with 5,000+ employees, e.g., a mining conglomerate, responsible for negotiating health insurance contracts and employee wellness.",
+      "core_problem": "Every month, hundreds of employees face 2-5 day waits for routine pre-authorizations due to overwhelmed manual review teams at the EPS. This causes employee dissatisfaction, health deterioration, and indirect costs like absenteeism and turnover. The employer has no direct control and sees rising premiums without transparency into inefficiencies.",
+      "solution_hook": "Unlike generic AI authorization tools designed for US/EU markets, ours is built specifically for the Peruvian medical context, understands local clinical guidelines and Spanish medical terminology, and offers a per-employee pricing with clear ROI dashboards, making it a plug-and-play employee benefit upgrade rather than IT software.",
+      "why_this_angle": "Selling to employers taps a more immediate budget—employee benefits—with a clear pain point (employee complaints, cost overruns) and a shorter sales cycle than selling to entrenched EPS institutions. The performance-based pricing per employee de-risks the purchase and aligns incentives. This framing also opens a B2B2C channel through employer-provided health apps.",
+      "quick_score": {
+        "problem_acuity": 8,
+        "market_size": 7,
+        "founder_feasibility": 7,
+        "total": 22
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "We replace the human audit team that processes oncology prior authorizations at Rimac EPS (Peru) using an AI trained exclusively on Rimac's oncology clinical guidelines, local drug protocols, and historical approval patterns. The AI instantly recommends approve/reject with a justified rationale, reducing manual review from hours to seconds. Human auditors only review 5% of cases flagged as ambiguous. We charge per authorization processed, eliminating upfront software costs and proving immediate ROI through reduced backlogs, faster patient treatment, and lower legal risk.",
+      "one_liner": "We automate Rimac EPS's oncology prior authorizations with AI that understands their exact guidelines, delivering instant decisions and billing per case.",
+      "target_customer": "Gerente de Auditoría Médica at Rimac EPS, overseeing the team of audit doctors who manually review cancer treatment requests.",
+      "core_problem": "Each oncology prior authorization request at Rimac takes 30-120 minutes of manual review by an audit doctor checking patient history, internal clinical guidelines, and national drug formularies. The team faces a mounting backlog, causing delays in urgent cancer treatments that lead to patient complaints, potential lawsuits, and reputational damage. Audit doctors are burned out and error-prone under the pressure.",
+      "solution_hook": "Unlike generic AI tools, our model is fine-tuned on Rimac's proprietary oncology protocols and Peruvian drug regulations, making its decisions immediately auditable and compliant. The outcome-based pricing (pay only per processed authorization) removes financial risk and aligns with their operational budget.",
+      "why_this_angle": "By hyper-focusing on one EPS and one critical specialty where pain is most acute (life-threatening delays), we can validate willingness to pay in 30 days with a pilot involving just 10 audit doctors. The narrow wedge demonstrates deep localization, builds trust through auditable decisions, and offers an ROI that is impossible to ignore, paving the way for expansion to other specialties and EPS.",
+      "quick_score": {
+        "problem_acuity": 10,
+        "market_size": 3,
+        "founder_feasibility": 9,
+        "total": 22
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "Reemplazamos la revisión manual de autorizaciones médicas en EPS peruanas con IA que decide en segundos usando guías locales, y cobramos solo por resultado.",
+  "source": "parallel_iteration"
+}

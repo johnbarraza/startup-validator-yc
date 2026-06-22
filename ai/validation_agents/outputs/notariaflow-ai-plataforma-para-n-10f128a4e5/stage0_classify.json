@@ -1,0 +1,35 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "LegalTech",
+  "customer_type": "B2B",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "Evidence present: notaries manually handle document extraction and validation, which is time-consuming and error-prone; regulatory compliance mandates accuracy; many notaries already pay for office tools and clerical staff.",
+  "pit_signals_detected": [
+    "Market size too small: Peru has ~1,000-2,000 notaries. Even at $200/month max, TAM is <$5M/year — far below venture scale.",
+    "Low willingness to pay: Notaries are small businesses (often individual practitioners) with thin margins; typical SaaS budget is S/50-200/month. High AI subscription will likely be rejected.",
+    "Free/workaround already exists: Word templates, OCR scanning via smartphone, and manual validation are 'good enough' for low-volume notaries. Switching cost=time, but most notaries are time-rich and cash-poor.",
+    "No regulatory mandate to digitize: SUNARP does not require digital submissions from small notaries; paper is still accepted. Without enforcement, adoption is optional and slow.",
+    "AI accuracy risk: Legal documents require near-100% accuracy. AI errors in extraction/validation create liability — notaries will hesitate to trust black-box AI without costly guarantees."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual data entry, spreadsheets, assistants)",
+    "Spending already happens on imperfect solutions (office supplies, temporary staff)",
+    "Regulatory / compliance forcing function with real enforcement (notarial acts require precision)",
+    "Recurring pain: daily drafting and review",
+    "Measurable cost: lost hours, error correction costs, compliance risk",
+    "B2B: buyer has a budget line for operational expenses",
+    "Users search actively for solutions (notaries seek efficiency tools)"
+  ],
+  "classification_rationale": "NotariaFlow AI addresses a clear structural pain in Peruvian notaries: manual document processing that is both recurring and compliance-critical. Notaries are formal professionals with revenues from fees, so they can pay for a solution that saves time and reduces errors. The problem is urgent and actively solved with workarounds, meeting painkiller criteria.",
+  "proceed_recommendation": "ABORT",
+  "suggested_pivot": "",
+  "freemium_recommendation": "MAYBE",
+  "freemium_rationale": "Freemium could accelerate adoption among smaller notaries with limited budgets, but given the structural pain and existing spending, a paid tier from the start may be viable. A free tier with limited documents could serve as a lead gen tool, but risk of low conversion. Given Peru's price sensitivity, a low-cost paid plan might be better than freemium.",
+  "devil_verdict": "FATAL",
+  "payment_blocker": "Notaries have irregular cash flow and low average transaction value; they are unlikely to commit to a recurring subscription of $100+/month when manual workaround is free and familiar.",
+  "free_substitute_risk": "Google Docs/Word templates + smartphone camera for OCR copy-paste + WhatsApp for review. This covers 80% of the workflow at zero cost.",
+  "market_size_reality_check": "Realistic SAM in Peru: ~1,500 active small notaries × max $100/month × 12 months = $1.8M/year ARR. Too small for institutional venture investment.",
+  "hardest_assumption": "That small notaries will pay for AI automation instead of continuing with manual processes they already tolerate.",
+  "devil_rationale": "The idea is technically plausible but structurally doomed in Peru: the target market is tiny, low-budget, and satisfied with free workarounds. Without a mandate or larger adjacent market (e.g., Mexico), it cannot escape micro-SaaS trap. VC return expectations cannot be met.",
+  "source": "dual_agent_classification"
+}

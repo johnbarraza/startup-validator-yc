@@ -1,0 +1,62 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": "G1",
+      "title": "Incident detection tailored to Peruvian serenazgo contexts",
+      "pain": "High",
+      "why_now": "Municipalities increase security budgets but generic analytics miss local crime patterns, causing operator fatigue and slow response.",
+      "evidence_needed": "Interview serenazgo operators at 3 municipalities to catalog undetected incident types; prototype a detection model on sample footage and compare to manual monitoring.",
+      "priority": "High",
+      "risk": "Competitors may adapt with localized models; requires continuous data collection."
+    },
+    {
+      "id": "G2",
+      "title": "Software-only AI overlay that works with existing camera infrastructure",
+      "pain": "High",
+      "why_now": "PIM budgets favor opex over capex; municipalities have large deployed bases of basic cameras they cannot replace.",
+      "evidence_needed": "Test compatibility with top 3 camera models in Peru (Hikvision, Dahua, generic RTSP) and measure integration effort; survey procurement officers on opex vs capex preference.",
+      "priority": "High",
+      "risk": "Camera vendors may improve edge lock-in or restrict API access; requires robust video ingestion."
+    },
+    {
+      "id": "G3",
+      "title": "Simple, operator-friendly interface for non-technical serenazgo staff",
+      "pain": "Medium",
+      "why_now": "High cognitive load leads to missed incidents; growing awareness of human-factors in control rooms.",
+      "evidence_needed": "Run usability tests with 5 operators comparing existing interfaces; measure alert response time and error rate.",
+      "priority": "Medium",
+      "risk": "UX is easy to copy; not a standalone moat."
+    },
+    {
+      "id": "G4",
+      "title": "End-to-end integration with municipal dispatching and incident management",
+      "pain": "Medium-High",
+      "why_now": "Fragmented response processes delay action; municipalities seek unified command solutions.",
+      "evidence_needed": "Map current incident response workflow in one municipality; quantify time loss from detection to dispatch.",
+      "priority": "Medium",
+      "risk": "Requires partnerships with dispatch system vendors; internal resistance to change."
+    },
+    {
+      "id": "G5",
+      "title": "Annual license model aligned with PIM budget structure",
+      "pain": "Medium",
+      "why_now": "Municipal procurement processes are slow and capex-heavy; SaaS matches operational spending cycles.",
+      "evidence_needed": "Analyze PIM execution reports for security camera projects; interview finance officers about willingness to pay annually.",
+      "priority": "Medium",
+      "risk": "SaaS alone is not a strong differentiator; competitors may adopt it."
+    },
+    {
+      "id": "G6",
+      "title": "Local language, documentation, and in-country technical support",
+      "pain": "Medium",
+      "why_now": "Municipalities demand quick issue resolution; distrust of foreign-only support.",
+      "evidence_needed": "Interview municipal IT staff about support pain points; measure downtime costs and response times of current vendors.",
+      "priority": "Low-Medium",
+      "risk": "Local integrators could replicate support structures; not a tech moat."
+    }
+  ],
+  "recommended_gap_id": "G1",
+  "checkpoint_instruction": "Validate pain and urgency of tailored incident detection by conducting on-site observations and interviews with serenazgo operators in two municipalities, and running a pilot of a prototype detection model on their camera feeds.",
+  "source": "llm"
+}

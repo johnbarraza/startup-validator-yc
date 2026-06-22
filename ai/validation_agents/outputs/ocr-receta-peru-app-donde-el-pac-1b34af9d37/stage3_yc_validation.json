@@ -1,0 +1,226 @@
+{
+  "idea": "A B2B platform for Peruvian health insurers, self-insured employers, and government health programs that aggregates real-time generic drug prices and availability across all pharmacy types. When an insured member or employee scans a prescription via OCR, the system instantly identifies the cheapest generic equivalent at a nearby pharmacy, steering the patient there for pickup. The institution pays a per-covered-life or per-transaction fee, cutting prescription benefit costs by up to 40% through redirected adherence, while the end user enjoys lower prices without sacrificing convenience.",
+  "selected_gap": {
+    "id": "gap_1",
+    "title": "Real-time generic price & availability aggregation across all pharmacy types",
+    "pain": "Patients waste time manually calling or visiting multiple pharmacies to compare generic prices, often settling for higher prices due to lack of real-time, consolidated information. No existing solution combines OCR-based prescription scanning with live inventory and pricing from both chains and independent pharmacies.",
+    "why_now": "Smartphone adoption in Peru is high, and the success of GoodRx abroad validates the model. Local attempts (RecetaFácil) show early traction but lack scale, leaving a wide gap for a better-executed aggregator.",
+    "evidence_needed": "Survey 100 prescription holders on current price-comparison behaviors and willingness to switch. Build an MVP with 3 pharmacy partners to test real-time data integration feasibility and user satisfaction.",
+    "priority": "High",
+    "risk": "Pharmacy partners may not provide accurate real-time data; scaling partnerships across many independents is resource-intensive; large chains may block integration."
+  },
+  "friedman_scores": [
+    {
+      "criterion": "Founder-market fit",
+      "score": 6,
+      "note": "No specific founder background provided; assumes healthcare/pharma domain knowledge needed. Without evidence of deep industry ties or prior experience, this is a moderate risk."
+    },
+    {
+      "criterion": "Market size",
+      "score": 8,
+      "note": "Peru's healthcare spending is significant; generic drug market is large and growing. TAM likely >$1B, but need precise figures."
+    },
+    {
+      "criterion": "Problem acuity",
+      "score": 9,
+      "note": "Patients actively suffer from high drug costs and inconvenience; insurers want cost reduction. Pain is clear and urgent."
+    },
+    {
+      "criterion": "Competition",
+      "score": 5,
+      "note": "Local attempts (RecetaFácil) exist but lack scale; GoodRx is US-only. However, pharmacy chains may resist, and independent pharmacies may lack tech capabilities."
+    },
+    {
+      "criterion": "Personal pull",
+      "score": 7,
+      "note": "Founder likely has personal experience or strong interest; B2B model aligns with institutional buyers. But more evidence needed."
+    },
+    {
+      "criterion": "Recently possible or necessary",
+      "score": 8,
+      "note": "High smartphone penetration, OCR technology, and real-time API capabilities make this feasible now. GoodRx success validates demand."
+    },
+    {
+      "criterion": "Successful proxies",
+      "score": 8,
+      "note": "GoodRx is a direct proxy in a different market; similar models in other verticals (e.g., travel aggregators) show this model works."
+    },
+    {
+      "criterion": "Years-long commitment",
+      "score": 6,
+      "note": "Healthcare partnerships and pharmacy integrations take time; founder needs multi-year commitment. Unclear if that exists."
+    },
+    {
+      "criterion": "Scalability",
+      "score": 7,
+      "note": "Platform model scales well across Peru and potentially other LatAm countries. But dependency on pharmacy partnerships could slow expansion."
+    },
+    {
+      "criterion": "Good idea space",
+      "score": 8,
+      "note": "Addresses a real pain with a clear value proposition. Good balance of B2B revenue and consumer benefit."
+    }
+  ],
+  "yc_rule_scores": [
+    {
+      "criterion": "Do not wait for the perfect idea",
+      "score": 8,
+      "note": "Idea is actionable; MVP with 3 pharmacies can start immediately. Founder should not over-optimize."
+    },
+    {
+      "criterion": "Burn the boats",
+      "score": 5,
+      "note": "Unclear if founder is fully committed to this single idea. Need to avoid splitting focus."
+    },
+    {
+      "criterion": "Go deep into customer workflow",
+      "score": 7,
+      "note": "OCR-based prescription scanning integrates into patient and insurer workflows. But need to fully understand pharmacy and insurer back-end processes."
+    },
+    {
+      "criterion": "Build at the edge of AI",
+      "score": 6,
+      "note": "OCR is a standard AI application; real-time aggregation is more API integration than cutting-edge AI. Could leverage AI for price prediction, but not core."
+    },
+    {
+      "criterion": "Sell outcomes, not tools",
+      "score": 9,
+      "note": "Clear outcome: reduce prescription costs by 40%. B2B pricing tied to savings aligns perfectly."
+    },
+    {
+      "criterion": "Choose ambitious scope",
+      "score": 7,
+      "note": "Aggregating all pharmacy types in Peru is ambitious, but starting with major chains and independents is sensible."
+    },
+    {
+      "criterion": "Treat failure as structured data",
+      "score": 5,
+      "note": "No evidence of structured experimentation yet. Founder should plan for systematic A/B testing of partnership models."
+    },
+    {
+      "criterion": "Pick low-trust, high-expertise markets",
+      "score": 8,
+      "note": "Healthcare is low-trust; expertise in pharma supply chain and insurance is critical. This fits."
+    },
+    {
+      "criterion": "The process is the product",
+      "score": 6,
+      "note": "Operational excellence in data aggregation and partner management is key, but not yet proven."
+    },
+    {
+      "criterion": "Avoid early-demand trap",
+      "score": 7,
+      "note": "Per-transaction or per-covered-life pricing aligns with usage; avoid upfront commitments until value is proven."
+    },
+    {
+      "criterion": "Price per unit or result",
+      "score": 9,
+      "note": "Per-covered-life or per-transaction fee directly ties to value. Excellent alignment."
+    },
+    {
+      "criterion": "Obsess over COGS",
+      "score": 6,
+      "note": "Variable costs include API fees, support, and pharmacy incentives. Need to ensure margins >60% as SaaS-like."
+    },
+    {
+      "criterion": "Do not bolt AI onto legacy",
+      "score": 7,
+      "note": "OCR and real-time aggregation are new; not bolting AI onto legacy systems. But reliance on existing pharmacy systems may be a challenge."
+    },
+    {
+      "criterion": "Cover domain, model, and operations fluency",
+      "score": 6,
+      "note": "Requires deep domain knowledge in pharma, insurance, and logistics. Unclear if team has it all."
+    }
+  ],
+  "vc_rubric_scores": [
+    {
+      "dimension": "Team",
+      "weight": 0.25,
+      "score": 6,
+      "weighted": 1.5,
+      "rationale": "No specific team info; but domain expertise in Peruvian healthcare and pharmacy is critical. Without it, execution risk is high."
+    },
+    {
+      "dimension": "Market",
+      "weight": 0.2,
+      "score": 8,
+      "weighted": 1.6,
+      "rationale": "TAM likely >$1B (Peru healthcare spend), growing with chronic diseases and generic adoption. Timing is right due to digital transformation."
+    },
+    {
+      "dimension": "Product",
+      "weight": 0.15,
+      "score": 7,
+      "weighted": 1.05,
+      "rationale": "Defensible moat comes from real-time data integration across many pharmacies and OCR workflow. But scalable partnerships are hard to replicate."
+    },
+    {
+      "dimension": "Traction",
+      "weight": 0.15,
+      "score": 3,
+      "weighted": 0.45,
+      "rationale": "No tangible traction yet; only evidence needed is survey and MVP. Pre-revenue with no letters of intent or pilots."
+    },
+    {
+      "dimension": "Business Model",
+      "weight": 0.1,
+      "score": 8,
+      "weighted": 0.8,
+      "rationale": "Per-covered-life or per-transaction fees provide recurring revenue; potential for high margins if variable costs are low. LTV:CAC likely >3x if cost-effective acquisition."
+    },
+    {
+      "dimension": "Competition",
+      "weight": 0.08,
+      "score": 5,
+      "weighted": 0.4,
+      "rationale": "Local players like RecetaFácil exist; large chains may build in-house; GoodRx could expand. Need clear differentiation and faster execution."
+    },
+    {
+      "dimension": "Financials",
+      "weight": 0.05,
+      "score": 4,
+      "weighted": 0.2,
+      "rationale": "Burn rate unknown; likely need significant funds for partnerships and technology. Assuming 18+ months runway if funding secured."
+    },
+    {
+      "dimension": "Risk Profile",
+      "weight": 0.02,
+      "score": 4,
+      "weighted": 0.08,
+      "rationale": "Major risks: pharmacy partner data accuracy, scaling independents, regulatory (drug pricing transparency in Peru). High execution risk."
+    }
+  ],
+  "vc_verdict": {
+    "composite_score": 6.08,
+    "verdict": "CONDITIONAL_PASS",
+    "reason": "Needs improvement on: traction",
+    "weak_dims": [
+      "traction"
+    ],
+    "disqualifying_dims": [],
+    "investor_lenses": {
+      "sequoia": "PASS",
+      "yc": "FAIL",
+      "tiger_global": "WATCH",
+      "risk_mgmt": "CRITICAL"
+    },
+    "source": "deterministic_vc_calcs"
+  },
+  "go_no_go": "CONDITIONAL_GO",
+  "decision": "Proceed with validation experiments but require founder to prove partnership traction and domain knowledge before committing full resources.",
+  "next_experiments": [
+    "Conduct 100+ surveys with prescription holders and 20+ interviews with insurance procurement managers.",
+    "Build a prototype with 1-2 pharmacy partners to test real-time data integration and OCR accuracy.",
+    "Run a pilot with one self-insured employer to measure cost savings and user adoption."
+  ],
+  "kill_criteria": [
+    "No pharmacy partner willing to share real-time pricing data after 3 months of outreach.",
+    "Insurers express no willingness to pay per-covered-life fees, only one-time discounts.",
+    "Survey shows >60% of prescription holders unwilling to switch pharmacy for generics."
+  ],
+  "source": "llm",
+  "_iteration_id": "I2",
+  "_iteration_angle": "PIVOT_B2B",
+  "_iteration_one_liner": "We help Peruvian health insurers and self-insured employers slash prescription spending by up to 40% by instantly converting patient prescriptions into the cheapest available generic equivalent at a nearby pharmacy, via OCR and real-time price aggregation."
+}

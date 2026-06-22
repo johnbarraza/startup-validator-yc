@@ -1,0 +1,165 @@
+{
+  "idea": "MineAssist-PdM: plataforma de mantenimiento predictivo explicable para activos críticos mineros que clasifica fallas de vibración y genera recomendaciones operativas en lenguaje natural para equipos de mantenimiento.",
+  "market": "Global mining predictive maintenance market estimated at $3.2B in 2025, growing at 15% CAGR, driven by need to reduce unplanned downtime in critical assets like mills, crushers, and haul trucks.",
+  "solutions": [
+    {
+      "id": "sol1",
+      "name": "GE Digital APM",
+      "category": "Incumbent Industrial IoT Platform",
+      "observed_positioning": "Predix-based asset performance management with mining-specific modules; strong install base, slow to add NLP explainability."
+    },
+    {
+      "id": "sol2",
+      "name": "Siemens MindSphere PdM Apps",
+      "category": "Incumbent Industrial IoT Platform",
+      "observed_positioning": "Industrial IoT platform with predictive maintenance applications; broad integration, but mining requires customization."
+    },
+    {
+      "id": "sol3",
+      "name": "ABB Ability Asset Performance Management",
+      "category": "Incumbent Industrial IoT Platform",
+      "observed_positioning": "Mining and minerals focus; combines APM with domain expertise, but explainability is limited to dashboards."
+    },
+    {
+      "id": "sol4",
+      "name": "Uptake",
+      "category": "Pure-play Predictive Maintenance AI",
+      "observed_positioning": "Industrial AI platform with heavy equipment OEM partnerships (e.g., Caterpillar); data science-driven, less mining-specific NLP."
+    },
+    {
+      "id": "sol5",
+      "name": "Augury",
+      "category": "Pure-play Predictive Maintenance AI",
+      "observed_positioning": "Machine health solutions with AI-driven vibration/ultrasound diagnosis and actionable natural-language recommendations; strong product-market fit in industrial, expanding to mining."
+    },
+    {
+      "id": "sol6",
+      "name": "SparkCognition",
+      "category": "Pure-play Predictive Maintenance AI",
+      "observed_positioning": "AI for heavy industry, including SparkPredict for PdM; strong on model interpretability, but NLP layer still evolving."
+    },
+    {
+      "id": "sol7",
+      "name": "Fluke Accelix",
+      "category": "Condition Monitoring & PdM Suite",
+      "observed_positioning": "Integrated platform from a trusted test equipment brand; condition monitoring focus with basic analytics, less advanced explainability."
+    },
+    {
+      "id": "sol8",
+      "name": "Bently Nevada System 1 (Baker Hughes)",
+      "category": "Vibration Analysis Specialist",
+      "observed_positioning": "Dominant vibration monitoring hardware + software in mining; diagnostic recommendations based on rule engines, not generative NLP."
+    },
+    {
+      "id": "sol9",
+      "name": "SKF @ptitude Analyst",
+      "category": "Vibration Analysis Specialist",
+      "observed_positioning": "Vibration analysis software tied to SKF rotating machinery expertise; strong engineering base, limited AI explainability."
+    },
+    {
+      "id": "sol10",
+      "name": "Falkonry",
+      "category": "Explainable AI for Industry",
+      "observed_positioning": "Operational AI platform that explains time-series patterns; could be applied to mining vibration, but lacks pre-built mining models."
+    },
+    {
+      "id": "sol11",
+      "name": "SAP Predictive Maintenance and Service",
+      "category": "CMMS with PdM Module",
+      "observed_positioning": "Integrated with SAP ERP; used in mining for work-order management, but PdM relies on external sensor integration."
+    },
+    {
+      "id": "sol12",
+      "name": "IBM Maximo with Watson IoT",
+      "category": "CMMS with PdM Module",
+      "observed_positioning": "Enterprise asset management with AI add-ons; strong in MRO, but custom mining vibration models need development."
+    },
+    {
+      "id": "sol13",
+      "name": "Manual Vibration Analysis + Spreadsheets",
+      "category": "Workaround",
+      "observed_positioning": "Technicians use portable analyzers and Excel to track vibration data; low cost, high effort, no real-time explainability."
+    },
+    {
+      "id": "sol14",
+      "name": "Run-to-Failure Maintenance",
+      "category": "Do-Nothing",
+      "observed_positioning": "Reactive maintenance approach still prevalent in many mining operations; high cost of unplanned downtime is accepted."
+    },
+    {
+      "id": "sol15",
+      "name": "Immersive Technologies",
+      "category": "Mining-Specific Training & Advisor",
+      "observed_positioning": "Mining equipment simulators with performance analytics; could evolve into maintenance advisory, but currently focused on operator training."
+    }
+  ],
+  "research_summary": "The mining predictive maintenance market is crowded with both incumbent industrial giants and AI-native startups. Many competitors offer vibration-based diagnostics, but few provide truly explainable natural-language recommendations tailored to mining workflows. The threat from pure-play PdM startups with strong NLP capabilities (e.g., Augury) is high, while incumbents are slower to adopt explainability features.",
+  "competitor_signals": [
+    {
+      "competitor": "Augury",
+      "hiring_score": 8,
+      "funding_score": 9,
+      "product_score": 9,
+      "team_score": 8,
+      "market_score": 8,
+      "tech_score": 8,
+      "overall_score": 84.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Heavily funded pure-play PdM with strong NLP outputs; direct threat to explainable recommendation."
+    },
+    {
+      "competitor": "Uptake",
+      "hiring_score": 7,
+      "funding_score": 8,
+      "product_score": 7,
+      "team_score": 7,
+      "market_score": 8,
+      "tech_score": 8,
+      "overall_score": 74.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Broad industrial AI platform with heavy equipment OEM ties; may lack mining-specific vibration explainability."
+    },
+    {
+      "competitor": "GE Digital",
+      "hiring_score": 5,
+      "funding_score": 6,
+      "product_score": 6,
+      "team_score": 6,
+      "market_score": 8,
+      "tech_score": 7,
+      "overall_score": 60.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Incumbent APM with deep mining install base; slow to adopt explainable AI, but updates could close gap."
+    },
+    {
+      "competitor": "SparkCognition",
+      "hiring_score": 7,
+      "funding_score": 7,
+      "product_score": 7,
+      "team_score": 8,
+      "market_score": 8,
+      "tech_score": 9,
+      "overall_score": 73.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Cutting-edge AI applied to heavy industry; well-funded and technically sophisticated, explainability features evolving."
+    },
+    {
+      "competitor": "Bently Nevada (Baker Hughes)",
+      "hiring_score": 5,
+      "funding_score": 6,
+      "product_score": 6,
+      "team_score": 6,
+      "market_score": 8,
+      "tech_score": 6,
+      "overall_score": 59.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Dominant vibration hardware provider; software evolves slowly, but trusted in mining for decades."
+    }
+  ],
+  "source": "llm"
+}

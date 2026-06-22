@@ -1,0 +1,235 @@
+{
+  "research_source": {
+    "idea": "SaludApp Peru: patient uploads prescription photo, OCR extracts data, shows cheapest generic equivalent in nearby pharmacies with real crowdsourced prices, tracks adherence, B2B model selling adherence data to insurers and leads to pharmacies.",
+    "market": "Peruvian pharmacy retail market worth ~$2B, high out-of-pocket spending, low digital health penetration, fragmented pharmacy chains and independent outlets, growing mobile usage.",
+    "solutions": [
+      {
+        "id": "1",
+        "name": "Status Quo / Manual Search",
+        "category": "Status Quo",
+        "observed_positioning": "Patients ask at local pharmacies or call several; accept prices without systematic comparison; no adherence tracking."
+      },
+      {
+        "id": "2",
+        "name": "Inkafarma App",
+        "category": "Pharmacy Chain App",
+        "observed_positioning": "Largest chain, own app with loyalty points, online ordering, and delivery; shows only its own prices, no cross-chain comparison, no adherence features."
+      },
+      {
+        "id": "3",
+        "name": "Mifarma App",
+        "category": "Pharmacy Chain App",
+        "observed_positioning": "Second largest chain, app with e-commerce and promotions; limited to their inventory and prices; no health data integration."
+      },
+      {
+        "id": "4",
+        "name": "Boticas Arcangel App",
+        "category": "Pharmacy Chain App",
+        "observed_positioning": "Growing chain with price-focused positioning; app offers deals and delivery but no adherence or comparative tools."
+      },
+      {
+        "id": "5",
+        "name": "Farmacias Peruanas App",
+        "category": "Pharmacy Chain App",
+        "observed_positioning": "Mid-size chain, basic app for ordering; no price comparison or adherence features."
+      },
+      {
+        "id": "6",
+        "name": "Rappi Farma",
+        "category": "Delivery Platform",
+        "observed_positioning": "Multi-category delivery app with pharmacy section; shows prices from affiliated pharmacies, convenient for comparison within its network, but no adherence or health data analytics."
+      },
+      {
+        "id": "7",
+        "name": "OPM-DIGEMID",
+        "category": "Official Price Reference",
+        "observed_positioning": "Government price observatory; publishes maximum declared prices, no geographical availability, no real-time updates, not user-friendly."
+      },
+      {
+        "id": "8",
+        "name": "Farmagangas",
+        "category": "Price Comparison Website",
+        "observed_positioning": "Peruvian website aggregating pharmacy promotions manually; lacks mobile app, OCR, adherence tracking, or real-time data."
+      },
+      {
+        "id": "9",
+        "name": "Minsa Receta Digital",
+        "category": "E-Prescription Platform",
+        "observed_positioning": "Government digital prescription system, low adoption; could become standard but currently no price or adherence features."
+      },
+      {
+        "id": "10",
+        "name": "Tarjeta Oh! / Club de Beneficios",
+        "category": "Loyalty Discount Program",
+        "observed_positioning": "Loyalty cards offering fixed discounts at partner chains; no price comparison or health tracking."
+      },
+      {
+        "id": "11",
+        "name": "Farmacias Independientes",
+        "category": "Informal Sector",
+        "observed_positioning": "Small independent pharmacies with variable pricing; no digital presence, manual transactions."
+      },
+      {
+        "id": "12",
+        "name": "WhatsApp Groups / Redes Sociales",
+        "category": "Crowdsourced Advice",
+        "observed_positioning": "Communities sharing recommendations on where to buy cheap medicine; no structured data, unreliable."
+      },
+      {
+        "id": "13",
+        "name": "Doctoralia / Teleconsultation",
+        "category": "Digital Health Platform",
+        "observed_positioning": "Online doctor appointments and e-prescriptions; no price comparison or adherence follow-up."
+      },
+      {
+        "id": "14",
+        "name": "Apps EPS (Rímac, Pacífico)",
+        "category": "Insurer App",
+        "observed_positioning": "Insurance apps showing coverage and provider networks; no real-time pharmacy pricing or adherence monitoring."
+      },
+      {
+        "id": "15",
+        "name": "Google Maps / Search",
+        "category": "Search Engine",
+        "observed_positioning": "Used to find nearby pharmacies and call for prices; manual, time-consuming, no price history or adherence."
+      }
+    ],
+    "research_summary": "The market lacks an integrated solution combining real-time geo-specific drug price comparison, adherence tracking, and B2B data monetization. Current alternatives are either single-chain apps (Inkafarma, Mifarma), delivery platforms with limited pharmacy scope (Rappi), government reference lists (OPM-DIGEMID), or rudimentary promotion websites (Farmagangas). No competitor leverages OCR for prescription ingestion, crowdsourced price confirmation, or longitudinal health data. Major threats are well-funded chains that could copy features and Rappi's expansive logistics network. Government platforms pose a long-term regulatory risk if made mandatory.",
+    "competitor_signals": [
+      {
+        "competitor": "Inkafarma",
+        "hiring_score": 7,
+        "funding_score": 9,
+        "product_score": 6,
+        "team_score": 8,
+        "market_score": 7,
+        "tech_score": 6,
+        "overall_score": 74.0,
+        "classification": "MOVE_FAST",
+        "sentiment": "POSITIVE",
+        "sourcing_brief": "Largest pharmacy chain in Peru, backed by Intercorp, strong digital presence with over 1M app downloads, high customer loyalty, potential to add competitive features."
+      },
+      {
+        "competitor": "Mifarma",
+        "hiring_score": 6,
+        "funding_score": 8,
+        "product_score": 5,
+        "team_score": 7,
+        "market_score": 7,
+        "tech_score": 5,
+        "overall_score": 65.0,
+        "classification": "MOVE_FAST",
+        "sentiment": "NEUTRAL",
+        "sourcing_brief": "Second largest chain, owned by Quicorp, app with basic e-commerce, strong offline presence, could invest in digital."
+      },
+      {
+        "competitor": "Rappi",
+        "hiring_score": 9,
+        "funding_score": 10,
+        "product_score": 8,
+        "team_score": 9,
+        "market_score": 8,
+        "tech_score": 9,
+        "overall_score": 89.5,
+        "classification": "MOVE_FAST",
+        "sentiment": "POSITIVE",
+        "sourcing_brief": "Multi-billion dollar unicorn with presence across Latin America, including Peru. Aggressive expansion in pharmacy delivery and digital services; could easily add price comparison."
+      },
+      {
+        "competitor": "Farmagangas",
+        "hiring_score": 3,
+        "funding_score": 2,
+        "product_score": 4,
+        "team_score": 3,
+        "market_score": 4,
+        "tech_score": 3,
+        "overall_score": 30.5,
+        "classification": "MONITOR",
+        "sentiment": "NEGATIVE",
+        "sourcing_brief": "Peruvian website that compares pharmacy prices manually, low traffic, no mobile app, limited to promotional offers, no health data angle."
+      },
+      {
+        "competitor": "OPM-DIGEMID",
+        "hiring_score": 2,
+        "funding_score": 3,
+        "product_score": 3,
+        "team_score": 2,
+        "market_score": 7,
+        "tech_score": 2,
+        "overall_score": 29.5,
+        "classification": "MONITOR",
+        "sentiment": "NEUTRAL",
+        "sourcing_brief": "Official drug price observatory by DIGEMID, publishes maximum prices but lacks real-time data, geographic availability, or user-friendly interface. Potential to become mandatory reference."
+      }
+    ],
+    "source": "llm"
+  },
+  "gaps": [
+    {
+      "id": "g1",
+      "title": "Real-time cross-pharmacy price comparison for generic drugs",
+      "pain": "Patients face high out-of-pocket drug costs and spend significant time calling or visiting multiple pharmacies to find the lowest price, with no way to systematically compare prices across chains and independents.",
+      "why_now": "Mobile usage is growing rapidly, out-of-pocket health spending is high, and no integrated solution exists despite widespread demand.",
+      "evidence_needed": "Landing page sign-ups, patient willingness to switch pharmacies based on price in interviews, pharmacist openness to sharing prices.",
+      "priority": "high",
+      "risk": "medium"
+    },
+    {
+      "id": "g2",
+      "title": "Automated prescription digitization via OCR",
+      "pain": "Patients must manually search drug names, often misspelling or confusing them, leading to errors and wasted time, especially those with low digital literacy.",
+      "why_now": "OCR technology is mature and accessible via smartphones, yet no Peruvian pharmacy tool uses it to simplify prescription handling.",
+      "evidence_needed": "Usability tests with sample prescriptions, accuracy rates on different handwriting and formats, user preference vs. manual typing.",
+      "priority": "high",
+      "risk": "low"
+    },
+    {
+      "id": "g3",
+      "title": "Generic substitution guidance and savings calculation",
+      "pain": "Many patients are unaware of cheaper generic equivalents and continue buying expensive branded drugs, missing out on significant savings.",
+      "why_now": "Government promotes generic use, high inflation makes affordability critical, and no tool currently highlights generic alternatives with price differences.",
+      "evidence_needed": "A/B test showing generic savings in prototype, patient surveys on willingness to switch, pharmacy cooperation on generic availability.",
+      "priority": "high",
+      "risk": "low"
+    },
+    {
+      "id": "g4",
+      "title": "Medication adherence tracking and reminders",
+      "pain": "Poor medication adherence leads to health complications, hospitalizations, and increased healthcare costs, especially for chronic disease patients who lack any digital support system.",
+      "why_now": "Chronic diseases like diabetes and hypertension are rising in Peru, smartphone penetration enables reminders, and no existing consumer app addresses adherence locally.",
+      "evidence_needed": "Survey of adherence challenges, pilot usage data on reminder effectiveness, correlation between app usage and refill rates.",
+      "priority": "high",
+      "risk": "medium"
+    },
+    {
+      "id": "g5",
+      "title": "Crowdsourced real-time pharmacy price and inventory data",
+      "pain": "Small independent pharmacies, which often have the lowest prices, remain invisible digitally; patients rely on word-of-mouth or costly manual checks.",
+      "why_now": "Gig economy and messaging group norms make crowdsourcing feasible; no competitor leverages it for pharmacy data.",
+      "evidence_needed": "Test user willingness to submit price updates, incentive models (e.g., points), data accuracy over time, fraud resistance mechanisms.",
+      "priority": "medium",
+      "risk": "high"
+    },
+    {
+      "id": "g6",
+      "title": "B2B monetization of anonymized patient adherence and price data",
+      "pain": "Insurers and pharmaceutical companies lack real-world patient behavior data in Peru to design better plans, incentives, or market strategies, missing cost-saving opportunities.",
+      "why_now": "Data-driven healthcare is growing; insurers face pressure to control costs; no local aggregator provides adherence and pricing insights.",
+      "evidence_needed": "Letters of intent from insurers, data privacy compliance plan, willingness of patients to share anonymized data, pricing model acceptance.",
+      "priority": "medium",
+      "risk": "high"
+    },
+    {
+      "id": "g7",
+      "title": "Digital health profile for medication history across providers",
+      "pain": "Patients lack a consolidated record of prescribed medications, leading to fragmented care, duplicate prescriptions, and adverse interactions, particularly for those without insurance or regular doctors.",
+      "why_now": "Digital identity initiatives and smartphone adoption make it possible; no user-owned health profile exists in Peru.",
+      "evidence_needed": "Prototype testing with patients, willingness to input drug history manually, interest from providers to view such profiles.",
+      "priority": "medium",
+      "risk": "low"
+    }
+  ],
+  "recommended_gap_id": "g1",
+  "checkpoint_instruction": "Build a simple landing page that allows users to search for a drug and view mock price comparisons from nearby pharmacies (chain and independent). Drive traffic via targeted social media ads. Measure sign-up requests and conduct 20 structured phone interviews with patients to understand their price comparison habits, pain points, and willingness to switch pharmacies based on price. Validate willingness to pay for a premium version that includes adherence features.",
+  "source": "llm"
+}

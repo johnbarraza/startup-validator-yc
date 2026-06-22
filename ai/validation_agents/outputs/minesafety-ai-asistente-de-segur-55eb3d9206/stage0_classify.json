@@ -1,0 +1,32 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "Other",
+  "customer_type": "B2B",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "Mining contractors in Peru have thin margins and often operate informally, making it unlikely they will pay S/500-2000/month for a specialized AI tool when free spreadsheets/workarounds exist.",
+    "Adoption requires changing field behavior of HSE personnel who are accustomed to paper-based checklists and WhatsApp voice notes; behavior change is notoriously slow in mining safety culture.",
+    "The regulatory mandate (OSINERGMIN) does not mandate use of AI tools; compliance can be achieved with simpler, cheaper methods, so there is no forcing function for purchase.",
+    "Large mining companies already use enterprise safety software (e.g., SAP EHS) or have custom solutions; selling to them involves long procurement cycles (6-12 months) and requires integration with existing systems, increasing risk."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (paper checklists, manual transcription)",
+    "Spending already happens on imperfect solutions (HSE software or manual labor)",
+    "Regulatory / compliance forcing function with real enforcement (OSINERGMIN)",
+    "Recurring pain: weekly or more often (daily safety checks)",
+    "Measurable cost: lost hours, revenue, or compliance risk (accident costs, fines)"
+  ],
+  "classification_rationale": "Mining safety is a severe, regulated issue in Peru. Companies manually manage checklists and reports, causing inefficiencies and risks. AI digitization and prioritization directly reduce incidents and costs. The industry has budgets and regulatory pressure, making this a clear painkiller with strong willingness to pay.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "MAYBE",
+  "freemium_rationale": "A free tier could attract small contractors with limited budgets, lowering adoption barriers in a low-digitalization market. However, larger mining firms with established HSE budgets may not require freemium; sales-led demos may suffice. A limited free plan could accelerate word-of-mouth but risks slow conversion if value not immediately clear.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "The long procurement cycles and bureaucracy in mining companies, combined with the lack of recurring credit card billing infrastructure in Peru (B2B payments via bank transfer), create high friction for subscription collection.",
+  "free_substitute_risk": "A Google Sheet + WhatsApp group or a simple form builder (e.g., JotForm, Typeform) can replicate 80% of the checklist and reporting functionality for free, eliminating the need for AI transcription and classification.",
+  "market_size_reality_check": "Assuming 500 mining contractors in Peru paying S/1,000/month gives ~$1.6M annual revenue; even including large mining companies, TAM for Peru is <$5M, requiring immediate regional expansion to Chile/Brazil where competition is higher and localization needed.",
+  "hardest_assumption": "That mining contractors perceive the AI features (transcription, severity classification) as valuable enough to pay and change their workflow, given that existing manual methods are considered adequate by most.",
+  "devil_rationale": "This idea addresses a real pain in mining safety, but the market in Peru is small, buyers are cost-conscious and bureaucratic, and free alternatives cover most needs. Scaling to other LATAM countries is capital-intensive and faces local competition. The startup may achieve a lifestyle business but is unlikely to reach venture scale without a strong founder with deep mining industry connections and a clear path to high-margin enterprise sales.",
+  "source": "dual_agent_classification"
+}

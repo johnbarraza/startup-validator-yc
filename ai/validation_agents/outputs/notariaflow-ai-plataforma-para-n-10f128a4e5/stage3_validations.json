@@ -1,0 +1,651 @@
+[
+  {
+    "idea": "NotariaFlow AI: AI copilot for small/medium notary firms to accelerate document preparation with reviewable extraction and automated drafts.",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "Revisable AI Notarial Extraction",
+      "pain": "Notaries fear AI errors that can have legal consequences; they spend excessive time manually verifying AI output, negating efficiency gains.",
+      "why_now": "AI/NLP advanced enough for high-accuracy extraction, but trust remains a barrier; no competitor offers an explainable, reviewable AI layer tailored to notarial acts.",
+      "evidence_needed": "Build prototype with highlighted extracted fields, confidence scores, and an editing interface; conduct user tests with 5 notaries, measure verification time reduction and trust scores.",
+      "priority": "high",
+      "risk": "Direct competitor LexNotari could add explainability features quickly; regulatory uncertainty about AI usage in legally binding documents."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "Assumed domain knowledge but no explicit founder background provided."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "Niche vertical; TAM uncertain but likely in hundreds of millions, not billions."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "High pain: manual work and fear of errors are costly and time-consuming."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Some legal tech exists; gap indicates differentiation but incumbents could pivot."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "No evidence of founder's personal connection to notarial pain."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 9,
+        "note": "AI/NLP advances enable high-accuracy extraction and explainability."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 7,
+        "note": "Legal AI success stories (e.g., Harvey) but notary-specific is new."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Building trust and regulatory navigation require long-term focus."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software product can scale, but localization to jurisdictions limits it."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Vertical AI with clear workflow integration and trust barrier is promising."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Actionable gap with clear evidence-needed steps."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Single focus on notarial AI, but no sign of all-in commitment yet."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 9,
+        "note": "Integrated into daily notarial process with reviewable editor."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Uses specialized OCR and LLMs; moat from domain-specific training."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Outcome-oriented (reduced errors, time saved) but pricing not defined."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 8,
+        "note": "Aims to automate entire document preparation from scan to draft."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "Not explicitly mentioned; could improve with systematic learning from errors."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 9,
+        "note": "Notaries are high-expertise and initially distrustful of AI; perfect fit."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 8,
+        "note": "Review workflow is core; product is the validated extraction process."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Risk of demand only if prototype proves trust; need rigorous validation."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Could price per document or per verified act, aligning with value."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "AI inference costs matter but manageable; not obsessing yet."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "New interface, not an add-on to existing notarial software."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Unclear if team covers notarial law, NLP, and deployment expertise."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 6,
+        "weighted": 1.5,
+        "rationale": "Assumed domain knowledge but no concrete evidence of unique expertise."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "TAM likely >$1B globally with growing AI adoption in legal."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 8,
+        "weighted": 1.2,
+        "rationale": "Defensible moat from domain-specific training data and trust-oriented workflow."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No prototype or user tests yet; only a defined gap."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "SaaS likely but pricing and unit economics not defined."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Differentiated but incumbents like LexNotari could add explainability."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No financial details; early stage with reasonable burn if lean."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Regulatory uncertainty and trust barriers are significant risks."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.71,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": [
+        "Build a working prototype with explainability features and test with 5 notaries, achieving >30% reduction in verification time.",
+        "Secure initial feedback showing trust scores above 3.5/5.",
+        "Define clear unit economics (e.g., price per document) and validate willingness to pay."
+      ]
+    },
+    "go_no_go": "CONDITIONAL_GO",
+    "decision": "Proceed with building the prototype and conducting user tests as specified in the gap evidence. Reassess after achieving milestones.",
+    "next_experiments": [
+      "Develop a minimum viable prototype with OCR and LLM extraction, highlighting fields and confidence scores.",
+      "Conduct user tests with 5 notaries, measuring verification time and trust scores.",
+      "Interview 20 notaries to validate pain intensity and willingness to pay.",
+      "Analyze competitors (e.g., LexNotari) for feature gaps and potential responses."
+    ],
+    "kill_criteria": [
+      "After user tests, verification time reduction is less than 20% or average trust score is below 3/5.",
+      "No notary expresses willingness to pay >$50/month after prototype demo.",
+      "A major incumbent launches a similar explainable feature within 6 months."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "Automatizamos la extracción y validación de datos para borradores notariales con IA revisable, ahorrando horas de trabajo manual y eliminando errores en firmas pequeñas y medianas."
+  },
+  {
+    "idea": "NotariaFlow Enterprise: a SaaS platform for large law firms, corporate legal departments, and government property registries that automates the extraction, validation, and drafting of notarial deeds, certificates, and contracts from scanned documents. It uses domain-specific, revisable AI to reduce manual processing from hours to minutes, enabling teams to handle 5x more cases with fewer errors and full audit trails.",
+    "selected_gap": "Revisable AI Notarial Extraction",
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No founder information provided; assume average alignment with legal domain."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "Large law firms, corporate legal departments, government registries represent a substantial addressable market."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Notaries fear AI errors and spend significant time verifying outputs; pain is acute and costly."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Incumbent LexNotari could add explainability; manual processes are default but slow."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "No personal story provided; assumed moderate motivation."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Advances in NLP and AI accuracy now enable high-quality extraction; trust remains a barrier."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Other vertical AI document processing companies have found traction (e.g., in legal eDiscovery)."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Legal/notarial domain requires long-term relationship building and trust."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "SaaS model scales, but enterprise sales cycles may slow adoption."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "AI + legal document processing is a promising vertical with clear value proposition."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "The idea is specific and actionable; ready to test with prototype."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Assuming single-minded focus on this idea, not multiple parallel experiments."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 7,
+        "note": "Evidence needed indicates deep workflow understanding is planned through user tests."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Revisable AI with confidence scores and edit interface pushes current capability."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Reducing verification time and error rates is outcome-focused."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 8,
+        "note": "Automating notarial deeds in regulated, high-stakes environment is ambitious."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "User tests will provide structured feedback on trust and efficiency."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 9,
+        "note": "Notaries require high expertise and are skeptical of AI; perfect for revisable AI."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "Audit trails and workflow management add process value beyond extraction."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 7,
+        "note": "Validating with notaries before scaling avoids building unwanted features."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Per-deed or per-case pricing aligns with value delivered."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "Variable costs for AI compute need monitoring; margin assumptions untested."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "Built as native platform, not add-on to existing software."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Requires legal domain expertise, model fine-tuning, and operational workflow understanding."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No specific founder background provided; cannot assess unique domain or AI expertise."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "TAM likely exceeds $1B given large law firms, corporate legal, and government registries. Growing with digitization of legal processes."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Revisable AI with confidence scores and audit trail creates defensibility through data moat and trust."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No existing traction; only planned user tests with 5 notaries. Early stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "SaaS pricing per deed/case likely yields >60% margins, but LTV:CAC unknown."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "LexNotari could add explainability; manual processes remain strong alternative. Moat is not yet proven."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No financial details; assume moderate burn rate and need for 18+ months runway."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Regulatory uncertainty around AI in legally binding documents is a key risk; also trust barrier."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.48,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": [
+        "Demonstrate founder-market fit through domain expertise or prior legal tech success.",
+        "Achieve early traction: signed pilot with at least one law firm or registry, showing measurable reduction in verification time (e.g., >50%).",
+        "Prove product defensibility through user trust scores and willingness to pay pre-launch."
+      ]
+    },
+    "go_no_go": "conditional",
+    "decision": "Proceed with building prototype and conducting user tests with 5 notaries to validate trust and verification time reduction. Seek LOIs from potential pilots.",
+    "next_experiments": [
+      "Build a clickable prototype with highlighted extracted fields, confidence scores, and an editing interface.",
+      "Conduct user tests with 5 notaries; measure verification time reduction and trust scores.",
+      "Interview 20 legal professionals to refine pricing and identify key workflow integrations.",
+      "Map regulatory landscape for AI use in notarial acts across target jurisdictions."
+    ],
+    "kill_criteria": [
+      "If a direct competitor like LexNotari releases a comparable revisable AI feature within 6 months.",
+      "If regulatory bodies explicitly prohibit AI-assisted notarial deed drafting.",
+      "If user tests show no significant reduction in verification time (<30%) or low trust scores (<3/5)."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We automate notarial document processing for institutional legal teams using revisable AI, slashing turnaround and compliance risk."
+  },
+  {
+    "idea": "NotariaFlow AI, en su versión cuña, se enfoca exclusivamente en notarios de la Zona Metropolitana de Guadalajara que manejan más de 30 escrituras de compraventa de inmuebles al mes. Para ellos, ofrecemos un extractor de datos con IA óptica (OCR) entrenado específicamente en el formato y léxico de las escrituras notariales mexicanas, que convierte automáticamente el escaneo de una escritura en los campos requeridos para el aviso de compraventa ante el Registro Público de la Propiedad. La IA marca segmentos de baja confianza para revisión humana en una interfaz simple, garantizando que el notario mantenga el control y responsabilidad legal. Validaremos la disposición de pago ofreciendo las primeras 50 extracciones gratuitas a 10 notarías en los próximos 30 días.",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "Revisable AI Notarial Extraction",
+      "pain": "Notaries fear AI errors that can have legal consequences; they spend excessive time manually verifying AI output, negating efficiency gains.",
+      "why_now": "AI/NLP advanced enough for high-accuracy extraction, but trust remains a barrier; no competitor offers an explainable, reviewable AI layer tailored to notarial acts.",
+      "evidence_needed": "Build prototype with highlighted extracted fields, confidence scores, and an editing interface; conduct user tests with 5 notaries, measure verification time reduction and trust scores.",
+      "priority": "high",
+      "risk": "Direct competitor LexNotari could add explainability features quickly; regulatory uncertainty about AI usage in legally binding documents."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 3,
+        "note": "No information provided about founder's background; assumes lack of direct notary or legal tech experience."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "Initial TAM limited to Guadalajara notaries with high volume; potential to expand nationally but unproven."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 7,
+        "note": "Notaries face real pain: time-consuming manual data entry and verification; fear of errors is acute."
+      },
+      {
+        "criterion": "Competition",
+        "score": 5,
+        "note": "Manual process is default; LexNotari exists but lacks explainability; moderate competitive threat."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 3,
+        "note": "No personal story or obsession evident; idea appears derived from market observation rather than personal experience."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 6,
+        "note": "AI OCR advances make it possible, but regulatory acceptance is not yet fully here."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 4,
+        "note": "Few successful legal AI extraction tools; none specifically for Mexican notaries."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 6,
+        "note": "Building a legal tech business requires long-term commitment; plausible but not demonstrated."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 5,
+        "note": "Potentially scalable to other notarial acts and regions, but highly dependent on customization per jurisdiction."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Legal tech for notaries is an underserved niche with clear need, but crowded with low-tech alternatives."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Immediate validation with 10 notaries and free trials shows willingness to iterate."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Single focus on this idea, but potential for distraction if other ideas are pursued."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Understanding of notary workflow is plausible but not deeply evidenced from description."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "Using AI OCR with confidence scoring and human-in-the-loop is leveraging current AI capabilities."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 5,
+        "note": "Currently selling per extraction (unit pricing) rather than outcome; could shift to outcome-based."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 5,
+        "note": "Initial scope is narrow; ambition is limited to one city and one deed type."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 3,
+        "note": "No mention of learning from failures; validation plan is basic."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Notaries are high-expertise and naturally skeptical of AI; perfect fit for this rule."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "The review interface is part of the product, but not fully integrated into the process."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 7,
+        "note": "Free trials help validate real demand before building a full product."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Per extraction pricing is clear and tied to value, though not result-based."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 4,
+        "note": "No mention of compute or operational costs; assumed not yet optimized."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 6,
+        "note": "Built for specific workflow, but still an add-on to existing notary processes."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 5,
+        "note": "Domain knowledge is critical; model and operations fluency not yet demonstrated."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 3,
+        "weighted": 0.75,
+        "rationale": "No founder background provided; lack of demonstrated domain expertise or startup track record."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 5,
+        "weighted": 1.0,
+        "rationale": "TAM is small initially (Guadalajara high-volume notaries) but could expand; growth potential unclear."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 4,
+        "weighted": 0.6,
+        "rationale": "Defensible moat is weak; OCR trained on specific format can be replicated; review interface is standard."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No paying customers; only plan to offer free trials; zero evidence of market pull."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 4,
+        "weighted": 0.4,
+        "rationale": "Per extraction pricing is simple but margins and LTV:CAC unknown; likely low contribution margin."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Incumbent manual process is strong; LexNotari could add similar features; no durable advantage."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial details; burn rate and runway unknown; risky."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Regulatory uncertainty, trust issues, and competition are significant; failure likely if not adopted quickly."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 3.6,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Based on the VC rubric composite score of 3.6, the idea does not meet the threshold for investment. The lack of team information, no traction, and weak defensibility are critical flaws. However, the problem is real and the selected gap is well-articulated. Consider pivoting with a stronger founder or more evidence before proceeding.",
+    "next_experiments": [
+      "Conduct in-depth interviews with 10 notaries to validate pain and willingness to pay.",
+      "Build a simple prototype and test with 5 notaries; measure time savings and trust scores.",
+      "Explore regulatory landscape for AI in notarial acts in Mexico.",
+      "Identify potential co-founders with legal or notary experience."
+    ],
+    "kill_criteria": [
+      "Fewer than 3 of 10 notaries express strong interest after interviews.",
+      "Prototype fails to reduce verification time by at least 30% in tests.",
+      "Regulatory body issues guidance against AI use in deeds.",
+      "LexNotari releases comparable explainability feature before launch."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "Extraemos automáticamente los datos de escrituras de compraventa para notarios de Guadalajara usando IA revisable, reduciendo horas de transcripción manual a minutos."
+  }
+]

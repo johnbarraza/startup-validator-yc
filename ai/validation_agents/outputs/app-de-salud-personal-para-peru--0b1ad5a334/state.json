@@ -1,0 +1,68 @@
+{
+  "idea": "App de salud personal para Peru donde el usuario es dueño de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas médicas, (3) detección temprana de riesgo de enfermedades crónicas (diabetes T2, hipertensión, anemia) usando modelos de ML sobre datos de dieta + síntomas + historial de citas, (4) comparador de precios de medicamentos por ubicación geográfica, (5) el usuario sube su receta médica y su boleta de compra de farmacia → el sistema extrae medicamento, precio y ubicación para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetización B2B: farmacias, clínicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis. Resuelve el problema de que en Peru no existe open health ni datos de salud accesibles para el ciudadano.",
+  "current_stage": "stage0_classify",
+  "selected_gap_id": null,
+  "strategy_approved": false,
+  "artifacts": {
+    "stage0_classify": {
+      "problem_type": "VITAMIN",
+      "vertical": "Other",
+      "customer_type": "B2C",
+      "problem_severity": "RECURRING",
+      "pain_evidence": "No LLM — assume VITAMIN.",
+      "pit_signals_detected": [
+        "Could not run devil's advocate without LLM."
+      ],
+      "painkiller_signals_detected": [],
+      "classification_rationale": "Deterministic fallback.",
+      "proceed_recommendation": "WARN",
+      "suggested_pivot": "",
+      "freemium_recommendation": "MAYBE",
+      "freemium_rationale": "Cannot assess without LLM.",
+      "devil_verdict": "WEAK",
+      "payment_blocker": "Unknown — run with LLM enabled.",
+      "free_substitute_risk": "Unknown.",
+      "market_size_reality_check": "Unknown.",
+      "hardest_assumption": "Unknown.",
+      "devil_rationale": "Deterministic fallback.",
+      "preflight_dominant_solution": {
+        "score": "CLEAR",
+        "competitor_name": "unknown",
+        "threat_level": "MEDIUM",
+        "note": "Could not run preflight without LLM."
+      },
+      "preflight_precedent_failure": {
+        "score": "NO_KNOWN_FAILURE",
+        "example": "none",
+        "learning": "Unknown."
+      },
+      "preflight_regulatory_kill": {
+        "score": "NO_BLOCKER",
+        "regulation": "unknown",
+        "mitigation": "n/a"
+      },
+      "preflight_summary": "Preflight ran without LLM — treat as unverified.",
+      "deal_signals": {
+        "hiring": "unknown",
+        "funding": "unknown",
+        "product": "unknown",
+        "market": "unknown",
+        "tech": "unknown",
+        "momentum": "STABLE"
+      },
+      "source": "triple_agent_classification"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-06-21T15:08:27.846118+00:00",
+      "stage": "created",
+      "message": "Pipeline state initialized."
+    },
+    {
+      "at": "2026-06-21T15:08:29.208689+00:00",
+      "stage": "stage0_classify",
+      "message": "Artifact 'stage0_classify' updated."
+    }
+  ]
+}

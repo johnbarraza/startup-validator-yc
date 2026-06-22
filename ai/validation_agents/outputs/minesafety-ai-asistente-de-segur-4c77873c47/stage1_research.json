@@ -1,0 +1,165 @@
+{
+  "idea": "MineSafety AI: asistente de seguridad para contratistas y equipos HSE mineros que digitaliza checklists, transcribe reportes de campo, clasifica severidad y prioriza riesgos operativos antes de incidentes.",
+  "market": "Global mining safety software market, TAM estimated at $12B driven by regulatory pressure and high incident costs. SAM for Latin American mining contractors reaches $800M, with SOM of $15M in first 12 months targeting mid-tier copper/gold operations.",
+  "solutions": [
+    {
+      "id": "sol-01",
+      "name": "Manual / Paper & Spreadsheets",
+      "category": "Do-Nothing / Workaround",
+      "observed_positioning": "Traditional pen-and-paper checklists, Excel logs, and email reports; still prevalent in many mines, especially smaller contractors. Zero digitization, no real-time analytics."
+    },
+    {
+      "id": "sol-02",
+      "name": "SafetyCulture (iAuditor)",
+      "category": "EHS Platform",
+      "observed_positioning": "Mobile-first inspection and checklist app for any industry; used by some mining contractors but lacks mining-specific severity classification and risk prioritization AI."
+    },
+    {
+      "id": "sol-03",
+      "name": "Intelex",
+      "category": "EHS Platform",
+      "observed_positioning": "Enterprise EHS management software for large corporations; offers incident management, audits, and compliance. Strong in oil & gas, but mining module less advanced."
+    },
+    {
+      "id": "sol-04",
+      "name": "Hexagon Mining",
+      "category": "Mining Operational Tech",
+      "observed_positioning": "Integrated mining solutions including safety modules (collision avoidance, fatigue detection) within broader operations platform. Hardware/software combo with AI in some modules, but not a pure safety checklist/transcription tool."
+    },
+    {
+      "id": "sol-05",
+      "name": "Modular Mining (DISPAATCH)",
+      "category": "Mining Operational Tech",
+      "observed_positioning": "Fleet management system with safety alerts and proximity detection for mining trucks and equipment. Focuses on equipment-level safety, not comprehensive HSE workflows."
+    },
+    {
+      "id": "sol-06",
+      "name": "MineARC Systems",
+      "category": "Mining Safety Equipment",
+      "observed_positioning": "Safe refuge chambers and monitoring; expanding into digital safety management for underground mines, but core is hardware, not AI-driven risk classification."
+    },
+    {
+      "id": "sol-07",
+      "name": "Voxel",
+      "category": "AI Safety Analytics",
+      "observed_positioning": "AI-powered computer vision that detects unsafe acts and conditions in real-time from cameras; risk scoring and analytics. Strong in warehousing, now targeting mining as adjacency."
+    },
+    {
+      "id": "sol-08",
+      "name": "Intenseye",
+      "category": "AI Safety Analytics",
+      "observed_positioning": "Computer vision EHS platform that integrates with existing cameras to identify workplace hazards and generate insights. Privacy-preserving, used in manufacturing, expanding to mining."
+    },
+    {
+      "id": "sol-09",
+      "name": "Donesafe",
+      "category": "EHS Platform",
+      "observed_positioning": "Modern cloud EHS platform with mobile apps, incident management, and compliance; configurable for mining but no native field report transcription or AI severity classification."
+    },
+    {
+      "id": "sol-10",
+      "name": "Cority",
+      "category": "EHS Platform",
+      "observed_positioning": "Comprehensive environmental, health, safety, and quality software for large enterprises; used in mining among other industries. Recent addition of AI analytics, but not mining-vertical."
+    },
+    {
+      "id": "sol-11",
+      "name": "Rapid Global",
+      "category": "Contractor Safety Management",
+      "observed_positioning": "Specialized in contractor management and site access control for high-risk industries like mining; includes inductions, permits, checklists. Strong in Australia, lacks AI transcription."
+    },
+    {
+      "id": "sol-12",
+      "name": "TapRooT",
+      "category": "Root Cause Analysis",
+      "observed_positioning": "System for incident investigation and root cause analysis; not real-time but complements risk management by analyzing past incidents. No field checklist or transcription."
+    },
+    {
+      "id": "sol-13",
+      "name": "Jira / ServiceNow",
+      "category": "General Workflow",
+      "observed_positioning": "Generic ticketing and workflow tools that can be adapted for safety reporting but lack mining-specific features, AI severity classification, or voice transcription."
+    },
+    {
+      "id": "sol-14",
+      "name": "Caterpillar MineStar",
+      "category": "Mining Operational Tech",
+      "observed_positioning": "Cat's mine operation technology suite with safety features like object detection and fatigue monitoring for equipment operators. Not focused on contractor HSE workflows or checklists."
+    },
+    {
+      "id": "sol-15",
+      "name": "EcoOnline",
+      "category": "EHS Platform",
+      "observed_positioning": "SaaS EHS platform with chemical safety, incident reporting, and risk assessment; used across industries including mining. No AI-based transcription or vertical mining intelligence."
+    }
+  ],
+  "research_summary": "The competitive landscape is fragmented with a mix of manual processes, general EHS platforms, mining-specific operational tech, and emerging AI safety analytics. SafetyCulture and Intelex dominate general EHS but lack mining vertical AI. Hexagon and Modular Mining offer safety features within broader mining tech stacks but not as a standalone contractor safety assistant. Voxel and Intenseye are rapidly advancing AI-driven risk detection via computer vision, posing a direct threat if they extend into mining checklists and voice transcription. The startup's moat lies in domain-specific AI trained on mining field reports, integration with contractor workflows, and a focus on Latin American mining contractors—an underserved segment. Competitive pressure from well-funded AI safety startups mandates fast execution and deep customer embedding.",
+  "competitor_signals": [
+    {
+      "competitor": "SafetyCulture (iAuditor)",
+      "hiring_score": 8,
+      "funding_score": 9,
+      "product_score": 8,
+      "team_score": 7,
+      "market_score": 9,
+      "tech_score": 6,
+      "overall_score": 81.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Private company; last raise $95M Series C in 2021 at $1.6B valuation (Blackbird, Index). Strong product-market fit in industrial inspections, but lacking AI-driven severity classification and transcription. Expanding GTM could bring them into mining."
+    },
+    {
+      "competitor": "Intelex",
+      "hiring_score": 5,
+      "funding_score": 8,
+      "product_score": 6,
+      "team_score": 6,
+      "market_score": 7,
+      "tech_score": 5,
+      "overall_score": 63.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Acquired by Fortive in 2019 for $570M; part of a larger conglomerate. Serves 1,000+ enterprise clients but product innovation is incremental. Mobile and AI capabilities lagging startups."
+    },
+    {
+      "competitor": "Voxel",
+      "hiring_score": 9,
+      "funding_score": 8,
+      "product_score": 9,
+      "team_score": 8,
+      "market_score": 9,
+      "tech_score": 9,
+      "overall_score": 86.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Raised $30M Series A in 2023 led by a16z and Eclipse. Rapidly scaling ML and go-to-market teams. Real-time video AI for workplace safety gaining traction in warehousing, with pilots in mining. High risk of becoming a platform player."
+    },
+    {
+      "competitor": "Intenseye",
+      "hiring_score": 8,
+      "funding_score": 8,
+      "product_score": 8,
+      "team_score": 7,
+      "market_score": 8,
+      "tech_score": 8,
+      "overall_score": 78.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Raised $25M Series A in 2022 from Insight Partners. AI-first computer vision for EHS, processing 20B+ images daily. Strong in manufacturing, but actively exploring mining. Could replicate features if they pivot."
+    },
+    {
+      "competitor": "Hexagon Mining",
+      "hiring_score": 5,
+      "funding_score": 7,
+      "product_score": 7,
+      "team_score": 8,
+      "market_score": 7,
+      "tech_score": 7,
+      "overall_score": 66.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Division of Hexagon AB (public $30B market cap). Deep mining domain expertise with established customer base. Safety modules are part of larger suite, but not AI-native; likely to add AI features slowly."
+    }
+  ],
+  "source": "llm"
+}

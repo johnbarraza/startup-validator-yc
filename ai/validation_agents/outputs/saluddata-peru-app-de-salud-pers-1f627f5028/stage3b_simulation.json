@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "SaludData Peru becomes a B2B data pipeline provider: an OCR API specialized in Peruvian pharmacy receipts (boletas) that automatically extracts medication names, dosages, patient IDs, and dates, structuring them into a normalized format for direct integration with EPS, clinic, or pharmacy chain systems. The platform aggregates real-time, anonymized medication usage patterns and adherence analytics, feeding risk models for chronic disease management. The buyer is the head of data or operations at a pharmacy chain or an EPS, who currently wastes thousands of dollars monthly on manual data entry and lacks visibility into patient medication behavior outside their walls.",
+  "selected_gap": {
+    "id": "GAP-02",
+    "title": "Digitalización automatizada de boletas de farmacia peruanas",
+    "pain": "Alta",
+    "why_now": "La madurez del OCR y la ubicuidad de smartphones con cámara permiten capturar datos de comprobantes locales, eliminando la tediosa entrada manual sin competencia en el mercado.",
+    "evidence_needed": "Test de precisión con 100 boletas de cadenas como MiFarma e InkaFarma; medición de tiempo ahorrado vs registro manual; encuesta de satisfacción con 50 usuarios.",
+    "rank": 1,
+    "risk": "Bajo"
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "This could save my team hours of manual data entry from pharmacy receipts, which is a huge pain point. However, I'm skeptical about OCR accuracy on the diverse formats of Peruvian boletas, and integration with our legacy systems might be a nightmare.",
+      "concern": "OCR accuracy on low-quality or varied-format Peruvian receipts could be too low to replace manual review, negating time savings.",
+      "evidence_request": "Show me a test on 100 real boletas from MiFarma and InkaFarma with at least 95% accuracy on medication names and dosages.",
+      "score": 0.6,
+      "score_rationale": "The idea addresses a real pain point, but I need proof of high OCR accuracy on local receipts to trust it enough for weekly use.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "The pain of manual data entry from pharmacy receipts is real, but OCR for Peruvian boletas—often crumpled, poorly printed, or handwritten—is a high-risk bet. Without near-perfect accuracy and explainable outputs, no EPS or pharmacy chain will trust this for medication tracking or adherence analytics.",
+      "concern": "A single OCR error could misidentify a medication or dose, leading to incorrect patient risk models and potential medical liability—unacceptable for high-stakes health decisions.",
+      "evidence_request": "A blind accuracy test on 500 diverse real boletas (including handwritten, faded, and mobile-captured) from chains like MiFarma and InkaFarma, with per-field error rates and a clear explainability layer showing how each extraction was derived.",
+      "score": 0.35,
+      "score_rationale": "The idea addresses a real inefficiency, but the risk of inaccurate AI outputs for medication data without verifiable, auditable results keeps me far from convinced.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "The idea hits a real pain point—manual data entry costs are bleeding money monthly. However, I need assurance that the OCR accuracy is high enough to avoid hidden correction costs and that integration won't stall for months. The ROI timeline must be clearly within this quarter.",
+      "concern": "If OCR accuracy drops below 95% on real-world receipts, the time and cost for manual verification could negate the savings, delaying payback beyond my budget cycle.",
+      "evidence_request": "A live demo integrating with a pharmacy chain's system, showing >95% accuracy on a statistically significant sample (at least 500 receipts) and a documented time saving of at least 80% versus manual entry.",
+      "score": 0.3,
+      "score_rationale": "The potential ROI is strong, but procurement friction and accuracy risk lower my confidence; I need concrete evidence to move beyond neutral.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "The idea tackles a clear pain point, but the real-world variability of pharmacy receipts (faded prints, unusual formats, partial occlusions) introduces significant OCR accuracy risk. Integrating with diverse EPS and clinic systems will require heavy customization and ongoing support, potentially offsetting the savings from reduced manual entry.",
+      "concern": "OCR accuracy on low-quality or non-standard receipts could lead to frequent errors, forcing manual corrections that erode time savings and create new workflows for exception handling.",
+      "evidence_request": "A pilot with one pharmacy chain showing end-to-end integration, including error rates per 1000 receipts, average correction time per error, and net time savings compared to current manual entry process.",
+      "score": 0.6,
+      "score_rationale": "The operational risk from OCR errors and integration complexity prevents a higher score until proven reliable in real conditions.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "As an incumbent pharmacy chain or EPS, I could easily build this OCR capability internally using existing engineering resources or adapt a generic OCR tool. The startup's narrow focus on Peruvian boletas is a thin moat that I can replicate quickly, especially since I already own the data and workflows.",
+      "concern": "The startup's main risk is that large pharmacy chains or EPS providers will view this as a simple internal project rather than a critical third-party service, eliminating the need for a dedicated vendor.",
+      "evidence_request": "A signed letter of intent or pilot agreement from a top-3 pharmacy chain (e.g., MiFarma, InkaFarma) that explicitly states they cannot build this internally and commit to a multi-month contract.",
+      "score": 0.3,
+      "score_rationale": "The barrier to replication is low for incumbents with existing engineering teams, making the startup's position fragile.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "The OCR API for Peruvian pharmacy receipts addresses a clear pain point—manual data entry is costly and opaque. The focus on adherence analytics for chronic disease management could unlock value for EPS, but the market may be too small if adoption is limited to a few chains. The conditional YC validation suggests early promise, but I need to see concrete traction to believe in a $10M+ ARR path.",
+      "concern": "The business relies heavily on pharmacy chain partnerships to access receipts; if chains build their own OCR or lock out third parties, the wedge vanishes.",
+      "evidence_request": "A signed letter of intent or pilot commitment from at least one major pharmacy chain (e.g., InkaFarma or MiFarma) or a large EPS to use the API for at least 6 months.",
+      "score": 0.5,
+      "score_rationale": "The idea has a clear initial wedge and plausible market size, but the go-to-market risk and dependence on partnerships keep the score neutral until stronger validation appears.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "Promising niche but heavily dependent on OCR accuracy across highly variable Peruvian pharmacy receipts and maintaining low COGS for a B2B API. The learning loop from aggregated prescriptions could create defensibility, but data access agreements with pharmacies/EPS are a major hurdle.",
+      "concern": "OCR model quality will likely degrade on real-world receipts (wrinkled, low-light, inconsistent layouts) without a massive, continuously labeled dataset, making the pipeline unreliable at scale.",
+      "evidence_request": "Show a blind test on at least 500 diverse boletas from 5 different chains with accuracy >95% for medication names and patient IDs, and a plan to handle edge cases (handwriting, stamps).",
+      "score": 0.55,
+      "score_rationale": "High potential value but high technical risk in OCR accuracy and data acquisition, with unclear defensibility beyond first-mover advantage.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "This sounds like a tool for big chains and formal companies, not for my small bodega. I don't deal with EPS or pharmacy chains, and I manage inventory with WhatsApp and a notebook. Why would I pay for an OCR API when I can take a photo and type the data myself?",
+      "concern": "The product is irrelevant to my daily cash-flow reality – I operate informally, don't track patient data, and have zero incentive to digitize boletas beyond what a simple photo does.",
+      "evidence_request": "Show me how this API saves me time or money versus my current method: taking a photo of the boleta and sending it via WhatsApp to my supplier. If I can't pay with Yape or Plin, I'm out.",
+      "score": 0.1,
+      "score_rationale": "The solution targets formal B2B clients with structured data needs, while my informal SME operates on cash, trust, and minimal tech – it solves a problem I don't have.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "This product targets private EPS and pharmacy chains, not government entities. Our procurement cycles are 6-18 months with zero discretionary budget, and we only buy items under existing budget codes. Without alignment to a public health program or MINEDU/PRODUCE initiative, it's irrelevant to us.",
+      "concern": "The product lacks a clear fit within any existing government budget code (e.g., for digital health systems) and would require a new, lengthy procurement process with MINEDU or PRODUCE approval, which is unlikely to succeed.",
+      "evidence_request": "Provide a case study showing integration with a public health program like SIS (Seguro Integral de Salud) or a regional health authority (DIRESA) to track medication adherence or prevent fraud, and demonstrate how it maps to an existing budget code such as 'Servicios de digitalización y procesamiento de datos'.",
+      "score": 0.2,
+      "score_rationale": "The product is designed for B2B private sector clients, and as a government buyer, I see no path to procurement under current constraints, resulting in a low conviction score.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "This is a clever niche that addresses a painful manual process in a regulated industry. However, the Peruvian market is small and adoption by pharmacy chains or EPS may be slow due to legacy systems and data privacy concerns.",
+      "concern": "The path to $1M ARR in Peru is unclear given the limited number of large pharmacy chains and the potential for long sales cycles with EPS buyers.",
+      "evidence_request": "A signed pilot contract with a top pharmacy chain (e.g., MiFarma) or an EPS confirming willingness to pay, along with a validated OCR accuracy rate of >95% on a diverse sample of receipts.",
+      "score": 0.55,
+      "score_rationale": "The idea has strong problem validation but faces significant scaling challenges in Peru that could deter international co-investors.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.405,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.405,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "OCR accuracy on low-quality or varied-format Peruvian receipts could be too low to replace manual review, negating time savings.",
+      "A single OCR error could misidentify a medication or dose, leading to incorrect patient risk models and potential medical liability—unacceptable for high-stakes health decisions.",
+      "If OCR accuracy drops below 95% on real-world receipts, the time and cost for manual verification could negate the savings, delaying payback beyond my budget cycle."
+    ],
+    "top_evidence_requests": [
+      "Show me a test on 100 real boletas from MiFarma and InkaFarma with at least 95% accuracy on medication names and dosages.",
+      "A blind accuracy test on 500 diverse real boletas (including handwritten, faded, and mobile-captured) from chains like MiFarma and InkaFarma, with per-field error rates and a clear explainability layer showing how each extraction was derived.",
+      "A live demo integrating with a pharmacy chain's system, showing >95% accuracy on a statistically significant sample (at least 500 receipts) and a documented time saving of at least 80% versus manual entry."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "CONDITIONAL"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

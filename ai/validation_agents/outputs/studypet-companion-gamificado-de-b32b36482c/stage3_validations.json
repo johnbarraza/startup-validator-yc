@@ -1,0 +1,647 @@
+[
+  {
+    "idea": "StudyPet",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "AI-Powered Personalized Study Companion",
+      "pain": "Students struggle with generic study tools that don't adapt to their learning style, schedule, or emotional state, leading to low motivation and burnout. Current virtual pets lack personalization.",
+      "why_now": "AI/ML tech is mature and affordable; students expect tailored experiences (TikTok, Spotify). Competitors like Duolingo use AI for language, but no one applies conversational AI and reinforcement learning to general study habits.",
+      "evidence_needed": "User interviews confirming frustration with one-size-fits-all apps; prototype A/B test showing AI adaptation improves session length/frequency.",
+      "priority": "high",
+      "risk": "medium"
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No specific founder background provided; assume moderate fit."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "Niche but sizable, TAM potentially billions if expand beyond ADHD."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "ADHD students suffer intensely from lack of structure; current tools generic."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Few direct competitors; generic apps exist but not personalized."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unknown personal connection."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "AI personalization is now feasible and affordable."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Some proxies but not exact."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "No evidence of commitment."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "Scalable code, but customer acquisition may limit."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Timely and important space."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 6,
+        "note": "Idea is defined, but might need refinement through customer feedback."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Seems focused, but unclear if founder has multiple irons."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 5,
+        "note": "Not yet deep; requires more workflow immersion."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Leverages AI for adaptation."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Outcome-focused: improved study habits."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 8,
+        "note": "Ambitious to change behavior long-term."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "Implicit, but not explicit in description."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 6,
+        "note": "Market is distrustful of generic solutions."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 8,
+        "note": "Personalization process is core product."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "Risk of assuming demand; need evidence."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 5,
+        "note": "Not defined; likely subscription model."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "AI costs need management."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 9,
+        "note": "Native AI product, not bolt-on."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 5,
+        "note": "Requires multidisciplinary fluency, not clear if founder has it."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No evidence of unique expertise in ADHD, AI, or education; risk of execution."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "Market is sizable but niche; growth possible but not guaranteed."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Personalized models get better with data, creating switching costs; pet attachment adds stickiness."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No users, waitlist, or revenue; only idea stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 4,
+        "weighted": 0.4,
+        "rationale": "Model not defined; acquisition costs for students may be high."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Indirect competition but no direct personalized AI pet with ADHD focus; risk that incumbents add AI."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 2,
+        "weighted": 0.1,
+        "rationale": "No financials; burn rate unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Moderate risk; user acquisition and retention are key challenges."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.63,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO_GO",
+    "decision": "The idea has merit but lacks evidence of team capability and traction. Without a strong founder with domain expertise, it's unlikely to get funded. Recommend pursuing customer discovery and building a prototype.",
+    "next_experiments": [
+      "Conduct user interviews with 20 ADHD college students to validate pain and willingness to pay.",
+      "Build a minimal prototype (e.g., simple timer with pet animation) to test engagement and retention.",
+      "A/B test personalization features (e.g., adaptive break intervals) against a control to measure study session improvement."
+    ],
+    "kill_criteria": [
+      "If no strong positive response from target users after 20 interviews (e.g., less than 50% express interest in paying).",
+      "If cost of AI inference per user exceeds expected LTV (e.g., $0.50/month vs. $5/month subscription).",
+      "If students are unwilling to pay for a study companion app (e.g., only free alternatives considered acceptable)."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "We help procrastinating students build consistent study habits using an AI-powered virtual pet that adapts to their focus patterns."
+  },
+  {
+    "idea": "A B2B platform that licenses an AI-powered virtual study pet to universities, integrating with the LMS to provide each student a personalized companion that adapts to their learning patterns, nudges them with study reminders, emotional support, and micro-learning sessions, while giving administrators real-time dashboards on engagement and early dropout risk indicators. The university pays per enrolled student per term, aiming to reduce freshman attrition and improve academic outcomes.",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "AI-Powered Personalized Study Companion",
+      "pain": "Students struggle with generic study tools that don't adapt to their learning style, schedule, or emotional state, leading to low motivation and burnout. Current virtual pets lack personalization.",
+      "why_now": "AI/ML tech is mature and affordable; students expect tailored experiences (TikTok, Spotify). Competitors like Duolingo use AI for language, but no one applies conversational AI and reinforcement learning to general study habits.",
+      "evidence_needed": "User interviews confirming frustration with one-size-fits-all apps; prototype A/B test showing AI adaptation improves session length/frequency.",
+      "priority": "high",
+      "risk": "medium"
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 3,
+        "note": "No specific founder expertise or background in education or AI provided."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "TAM likely in hundreds of millions; large but fragmented among thousands of universities."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 6,
+        "note": "Students express frustration, but not a critical pain point for most."
+      },
+      {
+        "criterion": "Competition",
+        "score": 5,
+        "note": "Moderate; many study tools and gamified apps exist, but not exactly this combo."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 3,
+        "note": "Unknown founder motivation; lacks personal story."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "AI maturity makes personalization feasible; post-pandemic digital expectations align."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 7,
+        "note": "Duolingo, Khan Academy, and personalized learning platforms show precedent."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "No signal of long-term commitment from founder."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 8,
+        "note": "Cloud-based SaaS can scale globally with low marginal cost."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Edtech is interesting but crowded; differentiation is key."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "Idea is specific enough to start testing."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 5,
+        "note": "No evidence of single-minded commitment."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "LMS integration is good but deeper workflow understanding needed."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "AI personalization is at the edge but not novel."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Pitching reduced attrition and improved outcomes is strong."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 8,
+        "note": "Reducing dropout rates is audacious."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 4,
+        "note": "No indication of learning from failures."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 5,
+        "note": "Education is high expertise but not low-trust; sales cycles are long."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "AI adaptation is process-like, but not fully embodied."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "No data on demand; risk of building without validation."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 8,
+        "note": "Per enrolled student per term aligns with unit pricing."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "AI compute cost is a factor, but manageable at scale."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Native AI integration, not bolted-on."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 4,
+        "note": "Lacks education domain expertise and operational fluency."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 3,
+        "weighted": 0.75,
+        "rationale": "No team background or track record provided; weak founder-market fit."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "TAM potential but not clearly >$1B; moderate growth in edtech."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 5,
+        "weighted": 0.75,
+        "rationale": "Moat unclear; personalization can be replicated with similar AI."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 1,
+        "weighted": 0.15,
+        "rationale": "No evidence of customer interest, pilots, or revenue."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "SaaS model but LTV:CAC unknown; margins likely high if scalable."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Existing edtech players and AI study tools; differentiation not proven."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial data; high burn rate risk without revenue."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Long sales cycles in universities; execution risk high."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 3.9,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": false,
+    "decision": "DECLINE",
+    "next_experiments": [
+      "Conduct 20+ interviews with university administrators and students to validate pain and willingness to pay.",
+      "Build a minimal prototype (single course) and A/B test AI personalization vs generic reminders.",
+      "Secure a letter of intent (LOI) from at least one university before building full product."
+    ],
+    "kill_criteria": [
+      "If fewer than 50% of interviewees express strong interest or pain intensity below 7/10.",
+      "If no university agrees to pilot within 3 months.",
+      "If AI personalization does not show >20% improvement in engagement metrics in prototype test."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We help universities slash dropout rates by giving every student an AI study pet that learns with them and alerts advisors early."
+  },
+  {
+    "idea": "StudyPet for Med Students: An AI-powered virtual pet that lives in your study app, learns your patterns, senses when you're burning out via typed notes or pauses, and nudges you with personalized encouragement and adaptive flashcards. It focuses solely on medical students during their dedicated USMLE Step 1 study period (a 6-8 week sprint where every day counts). The pet grows with study streaks, but its primary value is emotional support and smart prioritization of weak topics.",
+    "selected_gap": {
+      "id": "gap1",
+      "title": "AI-Powered Personalized Study Companion",
+      "pain": "Students struggle with generic study tools that don't adapt to their learning style, schedule, or emotional state, leading to low motivation and burnout. Current virtual pets lack personalization.",
+      "why_now": "AI/ML tech is mature and affordable; students expect tailored experiences (TikTok, Spotify). Competitors like Duolingo use AI for language, but no one applies conversational AI and reinforcement learning to general study habits.",
+      "evidence_needed": "User interviews confirming frustration with one-size-fits-all apps; prototype A/B test showing AI adaptation improves session length/frequency.",
+      "priority": "high",
+      "risk": "medium"
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 4,
+        "note": "No evidence the founder is a med student or deeply embedded in medical test prep. Without personal experience, credibility and insight into daily struggles are low."
+      },
+      {
+        "criterion": "Market size",
+        "score": 3,
+        "note": "USMLE Step 1 is about 20k-30k annual test-takers in US. Even with international, TAM likely under $50M. Too small for venture-scale."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Burnout and motivation are acute during Step 1 prep. Students report high stress and study fatigue regularly."
+      },
+      {
+        "criterion": "Competition",
+        "score": 5,
+        "note": "Many flashcard apps (Anki, Quizlet), tutoring platforms, and wellness apps exist, but none combine emotional support with adaptive learning. However, switching costs are low."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 4,
+        "note": "If the founder didn't experience this personally, the emotional connection to the problem may be weak. Assumed average founder without specific story."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 7,
+        "note": "AI/ML for personalization and sentiment analysis is now affordable and accessible. However, real-time burnout detection from typed notes is still challenging."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Duolingo's gamification and AI-driven language learning prove adaptive learning works. Virtual pet games like Tamagotchi show engagement, but education+pet combo unproven."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "Founder must be willing to iterate for years in a niche market. Potential to expand to other exam prep (MCAT, boards) but still limited."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 5,
+        "note": "Software product with low marginal cost, but the addressable market is narrow. Could expand beyond USMLE, but that requires pivoting from initial focus."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Interesting combination of emotional support and adaptive learning, but crowded edtech space. Novelty may attract early adopters but long-term viability uncertain."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "Idea is specific and actionable for a narrow user group. Founder can start building immediately without perfect data."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 3,
+        "note": "No indication of full commitment. Without founder dedication to only this idea, signal is weak."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 4,
+        "note": "Founder likely hasn't shadowed med students daily. Understanding of workflow seems superficial from description."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 6,
+        "note": "Uses AI for personalization and burnout detection, which is current edge. But differentiation depends on proprietary data, not just model use."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 5,
+        "note": "Could sell 'higher Step 1 scores' or 'less burnout' but currently positioned as a tool. Outcome messaging is missing."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 5,
+        "note": "Ambitious to combine pet, emotional support, and adaptive flashcards, but scope is narrow (only Step 1). Could be ambitious within niche."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 4,
+        "note": "No evidence of systematic experimentation mindset. Need to show iterative learning from user feedback."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Medical students value trusted recommendations from peers and experts. New app requires building trust, but market is high-expertise."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 5,
+        "note": "The study process improvement is central, but product is still an app. Could be stronger by embedding into existing workflow."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Risk is overbuilding before validation. Must test MVP with actual students before full feature set."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 3,
+        "note": "No pricing model implied. Likely subscription, but not outcome-based. Missed opportunity."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 5,
+        "note": "AI API costs could scale. Need to monitor and optimize inference costs."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 6,
+        "note": "Built from scratch as AI-native, not adding AI to existing non-AI product. Good."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 4,
+        "note": "Founder needs fluency in medical education, ML, and user engagement operations. Unclear if all covered."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No founding team details provided. Assumed solo founder without deep domain expertise in medical education or AI. Likely not uniquely positioned."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "TAM is limited (~$50M for USMLE prep). Growth is flat to slight decline. Timing is good for AI but market is small."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 5,
+        "weighted": 0.75,
+        "rationale": "Virtual pet combined with adaptive flashcards is novel but not deeply defensible. Moat may come from user data and engagement, but easily copied by larger players."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 1,
+        "weighted": 0.15,
+        "rationale": "No evidence of user interviews, waitlist, or prototype. Zero traction at this stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 4,
+        "weighted": 0.4,
+        "rationale": "Likely subscription (~$10-20/mo). LTV:CAC likely >3x if CAC is low (organic), but margins are high (software). However, no concrete model."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 3,
+        "weighted": 0.24,
+        "rationale": "Competes with entrenched tools like Anki, UWorld, and general wellness apps. Incumbents have brand and distribution. Hard to win."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial data. Assuming bootstrapped, burn rate minimal, but no revenue yet. Runway unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Main risk: market too small, user acquisition costly, and low switching costs. Also technical risk in accurately detecting burnout."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 3.59,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": ""
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Based on the VC rubric composite of 3.59 (well below 5.0), this idea fails the hard-screening. The market is too small, the team appears unprepared, and traction is absent. While the problem is real, the venture is not investable at this stage without significant de-risking.",
+    "next_experiments": [
+      "Conduct 20+ user interviews with med students actively studying for Step 1 to validate pain and willingness to pay.",
+      "Build a no-code MVP (e.g., landing page + manual pet interactions) to measure interest and engagement.",
+      "A/B test adaptive flashcard prioritization vs standard Anki to quantify improvement in study efficiency."
+    ],
+    "kill_criteria": [
+      "After 20 interviews, fewer than 50% express strong frustration with current study tools.",
+      "Landing page sign-ups < 100 in one month with minimal ad spend.",
+      "No measurable increase in study session length or frequency in prototype A/B test."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "An empathetic AI study pet that keeps burned-out medical students on track during high-stakes exam prep."
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "research_source": "Research JSON provided for ClimaAgro Peru",
+  "gaps": [
+    {
+      "id": "gap_1",
+      "title": "Personalized, hyper-local climate alerts via WhatsApp",
+      "pain": "Small farmers depend on generic forecasts or informal word-of-mouth, leading to poor decisions and crop losses. No existing service delivers actionable, parcel-specific advice through an accessible, low-tech channel like WhatsApp.",
+      "why_now": "WhatsApp penetration in rural Peru exceeds 80%; El Niño intensifies climate volatility; insurers and cooperatives seek tools to reduce loss ratios and improve farmer engagement.",
+      "evidence_needed": "Pilot with 500 farmers to measure reduction in crop loss versus control group; message open rates and action compliance data.",
+      "priority": "High",
+      "risk": "Low"
+    },
+    {
+      "id": "gap_2",
+      "title": "Integrated insurance-alert system for proactive risk mitigation",
+      "pain": "Agricultural insurers lack direct, real-time communication with farmers to prevent claims. Farmers miss preemptive actions, increasing claim rates and premiums, while insurers face high loss ratios.",
+      "why_now": "Insurers like La Positiva and Rímac are exploring insurtech partnerships; rising climate risk makes prevention a clear economic incentive.",
+      "evidence_needed": "Loss ratio data from an insurer pilot; correlation between alert-driven actions and reduced claims.",
+      "priority": "High",
+      "risk": "Medium"
+    },
+    {
+      "id": "gap_3",
+      "title": "Hyper-local agronomic recommendation engine",
+      "pain": "Farmers receive generic weather warnings without specific, crop-tailored actions (e.g., cover beans, harvest potatoes early). This gap leaves even informed farmers uncertain about concrete steps.",
+      "why_now": "Advances in satellite data and crop modeling enable parcel-level recommendations; cooperatives want value-added services for members.",
+      "evidence_needed": "A/B test comparing standard alert vs actionable recommendation on farmer adoption and crop outcomes.",
+      "priority": "Medium",
+      "risk": "Low"
+    },
+    {
+      "id": "gap_4",
+      "title": "Scalable B2B distribution channel for smallholder services",
+      "pain": "Reaching 2.2 million dispersed small farmers individually is cost-prohibitive. No platform efficiently aggregates cooperative and insurer networks to deliver and monetize digital agricultural services.",
+      "why_now": "Cooperatives are digitizing membership management; insurers need efficient portfolio communications; a B2B model can unlock rapid, low-cost adoption.",
+      "evidence_needed": "Signed letters of intent from 5+ cooperatives and 1 insurer; cost-per-farmer metrics compared to direct-to-consumer alternatives.",
+      "priority": "Medium",
+      "risk": "Medium"
+    },
+    {
+      "id": "gap_5",
+      "title": "Trusted, scientifically validated alerts vs. informal WhatsApp groups",
+      "pain": "Farmers often rely on peer-to-peer WhatsApp groups sharing unverified rumors, causing panic or inaction. Government alerts are perceived as inaccurate or irrelevant, leaving a trust vacuum.",
+      "why_now": "Misinformation during climate extremes can worsen losses; a credible, branded alert service can become the definitive source, building long-term trust.",
+      "evidence_needed": "Net Promoter Score survey comparing trust in ClimaAgro vs. SENAMHI and informal groups among target farmers.",
+      "priority": "Medium",
+      "risk": "Low"
+    },
+    {
+      "id": "gap_6",
+      "title": "Affordable climate intelligence for smallholder-centric organizations",
+      "pain": "Platforms like aWhere and Tomorrow.io are priced for large enterprises, leaving cooperatives and small agribusinesses without cost-effective, actionable climate analytics tailored to smallholders.",
+      "why_now": "Climate adaptation funding is increasing; smallholder-focused organizations need affordable tools to manage risk and access donor or government support.",
+      "evidence_needed": "Pricing willingness survey among 20 cooperatives; competitor price benchmarking to define a viable subscription tier.",
+      "priority": "Low",
+      "risk": "Medium"
+    }
+  ],
+  "recommended_gap_id": "gap_1",
+  "checkpoint_instruction": "Validate the recommended gap by conducting 10 in-depth interviews with cooperative managers and insured farmers within 4 weeks to quantify pain intensity, current coping mechanisms, and willingness to adopt a WhatsApp-based alert system.",
+  "source": "llm"
+}

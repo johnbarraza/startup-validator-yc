@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "PescaIA sends a simple, color-coded map each dawn via WhatsApp directly to Peruvian artisanal fishermen’s phones, pinpointing the highest-probability catch zones for their target species within their specific fishing area. The prediction fuses free NASA satellite data (sea surface temperature, chlorophyll, currents) with the individual fisherman’s own historical catch logs, so the map becomes more accurate over time. No app install, no internet beyond basic messaging: the map is a hyperlocal, daily decision tool that replaces the guesswork and fuel waste of blind searching, directly addressing the 40-60% of fuel costs that normally go to prospecting barren waters.",
+  "selected_gap": {
+    "id": "GAP-1",
+    "title": "Daily hyperlocal predictive fishing maps via accessible channel",
+    "pain": "Artisanal fishermen waste 40–60% of fuel costs searching for fish, relying on traditional methods, generic quarterly bulletins, or expensive reactive hardware. No existing solution delivers daily, species‑specific predictions tailored to their exact fishing zones through a low‑barrier channel like WhatsApp.",
+    "why_now": "Free satellite data (NASA, Copernicus) + cheap cloud computing enable scalable processing. WhatsApp penetration is high among fishing communities, and cooperatives seek fuel savings amid rising prices. Competitors are either industrial‑focused or lack predictive features.",
+    "evidence_needed": "Pilot with 50 vessels from 3 cooperatives: measure fuel consumption reduction and catch rate change vs control group; interview cooperative managers on willingness to pay per vessel per year.",
+    "priority": "high",
+    "risk": "Initial prediction inaccuracy could damage trust; government might eventually offer a free alternative; regulatory closures may limit actual fishing zones."
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "As a fisherman who spends hours searching and wasting fuel, a daily map on WhatsApp sounds helpful—but I've seen too many gadgets fail. I need to see it actually predict where fish are before I trust it.",
+      "concern": "If the predictions are wrong for the first few weeks, I'll lose confidence and go back to old methods, wasting the effort to learn the system.",
+      "evidence_request": "I want a trial where at least 10 boats from my cooperative use it for a month and show me their fuel savings compared to the previous month.",
+      "score": 0.5,
+      "score_rationale": "The product directly addresses my biggest cost—fuel—but without proven accuracy from real fishermen like me, I won't change my routine.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "Relying on AI-generated maps to decide where to fish every day is risky—what if the prediction is wrong and a fisherman wastes fuel or misses a lucrative zone? I need to see proof that this system consistently beats the fishermen's own intuition before I'd trust it.",
+      "concern": "If the initial prediction accuracy is low (e.g., due to sparse historical data or satellite noise), fishermen will lose trust quickly, and word-of-mouth in the community will kill adoption before it starts.",
+      "evidence_request": "I need a controlled pilot where at least 30 vessels use the maps for one full season, with catch per unit effort (CPUE) and fuel consumption data compared to a control group, and independent verification of the predictions against actual catches.",
+      "score": 0.4,
+      "score_rationale": "The concept has merit (fuel savings are compelling), but the distrust of AI for daily operational decisions and the high risk of early errors keep my confidence low without rigorous pilot evidence.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "The idea directly targets a major cost driver for artisanal fishermen—fuel—and uses a low-friction channel. However, as an economic buyer, I need to see hard evidence that the fuel savings reliably exceed the subscription cost within a quarter, otherwise the expense won't pass my approval.",
+      "concern": "Prediction accuracy could be poor initially, leading to minimal fuel savings and broken trust, making the product a wasted expense that doesn't protect my critical metric (fuel budget).",
+      "evidence_request": "I need to see pilot results from at least 50 vessels over one month showing a statistically significant fuel reduction of at least 10% compared to a control group, with clear calculation of net savings after the cost of the service.",
+      "score": 0.4,
+      "score_rationale": "The potential is clear, but without proven in-field ROI within a quarter, the risk of procurement is too high for my budget ownership.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "The idea cleverly uses an existing channel (WhatsApp) to minimize integration friction, but I'm worried about the operational burden of maintaining prediction accuracy and handling support when maps don't match reality – fishermen will call or message when they get a bad day. The reliance on satellite data also means potential data gaps and constant monitoring needed to ensure timely delivery each dawn.",
+      "concern": "The biggest risk is the support load and trust erosion if the maps are often inaccurate due to satellite data gaps or model errors, leading to high churn and negative word-of-mouth that could kill the pilot.",
+      "evidence_request": "I need to see pilot results showing that after initial onboarding, support requests (calls/messages) remain below 5% of daily active users, and that predictions improve over time with user catch logs.",
+      "score": 0.6,
+      "score_rationale": "The WhatsApp-based delivery reduces rollout complexity, but operational costs for data validation and user support are high enough to keep me from being fully convinced until I see low-touch maintenance in practice.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "As a large fishing tech vendor, I see PescaIA's channel simplicity as a threat, but our existing industrial clients expect high-accuracy hardware and pay premium prices. The artisanal segment is low-margin, so we won't rush to copy unless this pilot shows massive uptake.",
+      "concern": "Government or NGO could easily replicate the same free satellite data and broadcast via WhatsApp or radio at no cost, nullifying the startup's value proposition before scale.",
+      "evidence_request": "Show that after 6 months of pilot, at least 60% of fishermen are willing to pay a monthly fee (e.g., $5-10) rather than use a free government alternative.",
+      "score": 0.4,
+      "score_rationale": "The reliance on free public data and a simple channel makes it easily replicable by well-funded incumbents or free substitutes, limiting defensibility unless deep user-generated data moat forms quickly.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "The idea leverages a clever distribution channel (WhatsApp) and free satellite data to address a real pain point for artisanal fishermen. However, the market size concerns me: while the pain is acute, the individual willingness to pay is likely very low, and scaling to $10M ARR may require thousands of users or higher-value industrial customers. The founder insight is solid, but the unit economics need validation.",
+      "concern": "Artisanal fishermen typically have low margins and may resist paying a meaningful subscription fee, making it difficult to achieve venture-scale ARR without expanding to larger commercial fleets or adding additional value streams.",
+      "evidence_request": "Show me a pilot with at least 50 vessels that demonstrates a clear reduction in fuel costs (e.g., 20%+ savings) and a willingness among cooperative leaders to pay at least $10 per vessel per month, backing a credible path to $10M ARR within 5 years.",
+      "score": 0.55,
+      "score_rationale": "The initial wedge is sharp (daily predictions via WhatsApp), but the market size and path to defensible $10M ARR remain unproven due to low willingness to pay among the target segment.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "The idea cleverly leverages free satellite data and WhatsApp to reach fishermen with low technical barriers. The learning loop from individual catch logs could improve model quality, but I worry about data sparsity per user and the challenge of fusing heterogeneous data sources into accurate daily forecasts.",
+      "concern": "Model accuracy will be poor initially for each individual fisherman due to sparse historical catch data, risking loss of trust that is hard to regain.",
+      "evidence_request": "Results from the pilot showing a statistically significant improvement in catch rate and reduction in fuel consumption compared to a control group, with granular per-vessel metrics over at least two seasons.",
+      "score": 0.65,
+      "score_rationale": "The technical approach is sound and cost-effective, but the high risk of early prediction inaccuracy and low defensibility against a government-backed alternative keep me below strong conviction.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "The idea tackles a real pain—fuel waste—and using WhatsApp is smart. But I'm skeptical: my fishermen trust their instincts and each other, not a bot. Will they pay via Yape/Plin for something that might not work?",
+      "concern": "Trust: prediction errors early on will kill adoption, because rumors spread fast in the community and they'll dismiss the tool as unreliable.",
+      "evidence_request": "Show a pilot with 30+ boats from 3 cooperatives where fuel consumption drops at least 15% and catch per unit effort rises 10%, published via WhatsApp-validated results.",
+      "score": 0.6,
+      "score_rationale": "Strong problem fit and channel, but high trust barrier and uncertain willingness to pay via Yape/Plin for a bot service with unproven accuracy.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "The idea is compelling but faces a fundamental procurement challenge: it doesn't map to any existing budget code under MINEDU or PRODUCE, and launching a new procurement process would take 6–18 months. Without a pre-approved line item, we cannot move forward.",
+      "concern": "The solution doesn't fit any current budget line, and a new procurement cycle (6-18 months) with MINEDU/PRODUCE approval is required, risking that the service becomes obsolete before approval.",
+      "evidence_request": "Provide a signed letter of intent or co-funding commitment from a regional government or PRODUCE district office confirming this service can be acquired under an existing program code (e.g., 'Apoyo a la pesca artesanal').",
+      "score": 0.3,
+      "score_rationale": "While pilot evidence is promising, the lack of an existing budget code and the lengthy procurement cycle make an institutional purchase unfeasible within the next 1-2 years.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "Interesting niche but I worry the total addressable market in Peru is too small and fragmented to reach $1M ARR quickly, and willingness to pay among artisanal fishermen is unproven. Without clear expansion to other LATAM countries, I don't see a path to attract international co-investors.",
+      "concern": "Even with a successful pilot, can this business achieve $1M ARR in Peru given the limited number of artisanal fishermen and low perceived value of a prediction tool?",
+      "evidence_request": "Show me a pilot with at least 50 vessels from 3 cooperatives demonstrating a 20%+ reduction in fuel costs and a 15%+ increase in catch rate, plus a stated willingness to pay at least $200/year per vessel for the service.",
+      "score": 0.3,
+      "score_rationale": "The idea is compelling but too risky for a Peruvian VC needing a clear path to $1M ARR and international co-investor interest; pilot evidence is crucial but not yet available.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.47,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.47,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "If the predictions are wrong for the first few weeks, I'll lose confidence and go back to old methods, wasting the effort to learn the system.",
+      "If the initial prediction accuracy is low (e.g., due to sparse historical data or satellite noise), fishermen will lose trust quickly, and word-of-mouth in the community will kill adoption before it starts.",
+      "Prediction accuracy could be poor initially, leading to minimal fuel savings and broken trust, making the product a wasted expense that doesn't protect my critical metric (fuel budget)."
+    ],
+    "top_evidence_requests": [
+      "I want a trial where at least 10 boats from my cooperative use it for a month and show me their fuel savings compared to the previous month.",
+      "I need a controlled pilot where at least 30 vessels use the maps for one full season, with catch per unit effort (CPUE) and fuel consumption data compared to a control group, and independent verification of the predictions against actual catches.",
+      "I need to see pilot results from at least 50 vessels over one month showing a statistically significant fuel reduction of at least 10% compared to a control group, with clear calculation of net savings after the cost of the service."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "Go (conditional on pilot success)"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

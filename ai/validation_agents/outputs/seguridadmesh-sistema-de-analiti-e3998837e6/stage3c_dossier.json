@@ -1,0 +1,218 @@
+{
+  "source": "YC Dossier - SeguridadMesh",
+  "one_liner": "SeguridadMesh provides an AI video analytics overlay for municipal serenazgo cameras in Peru that detects street-level incidents in real time and instantly alerts operators with minimal distraction.",
+  "problem": "Municipal serenazgo operators in Peru monitor hundreds of camera feeds for street crimes (assaults, thefts, traffic accidents), but fatigue causes them to miss up to 70% of incidents until citizen phone calls arrive—delaying response by 5-15 minutes. Current workaround: manual passive surveillance, generic motion-based alerts that trigger on innocuous motion (mototaxis, crowds) leading to operator distrust. Evidence: INEI 2023 reports 28.8% of Peruvians victimized by crime in the last year; 62% of municipalities have serenazgo systems, yet only 12% have any video analytics (MININTER 2022). Operator interviews cite daily burnout and reliance on public calls.",
+  "solution_insight": "SeguridadMesh plugs into existing low-cost surveillance cameras (no hardware replacement) and applies custom computer vision models trained specifically on Peruvian urban chaos—mototaxis weaving, narrow market alleys, low-light conditions—to detect defined incident classes (assault, robbery, vehicle collision, crowd stampede). Alerts are pushed to a simple dashboard with a 5-second clip and contextual info, requiring a single click to dispatch. The non-obvious insight: by modeling the 'Peruvian baseline' (what normal chaos looks like), the system suppresses false positives, making alerts actionably precise without desensitizing operators. This transforms passive monitoring into a proactive dispatching tool tailored to serenazgo workflow.",
+  "why_now": "Recent changes: (1) Municipal security budgets under Peru's PIM have grown 18% YoY (MEF 2023), with a push for 'smart city' initiatives; (2) Computer vision models now achieve high accuracy on edge devices (YOLOv8, etc.) at low cost; (3) Operator fatigue is recognized as a critical bottleneck in public safety, as per MININTER's National Citizen Security Plan 2024-2030 urging technology adoption; (4) Competitive pressure from cities like Bogotá and Mexico City deploying AI camera analytics has created a fear-of-missing-out among Peruvian mayors.",
+  "market": {
+    "recommended_focus": "Peru—but only as a stepping stone to prove the model in a known chaotic environment, then expand to LATAM megacities. However, the Peruvian TAM is sub-$10M annually, making it sub-venture-scale for a standalone startup.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Peru is the home market with a clear pain point and the best access for initial pilots. However, the number of municipalities with serenazgo cameras that can afford a SaaS overlay is limited, and procurement cycles are slow. Market size alone cannot support a VC-backed outcome.",
+        "tam_topdown": "Total municipal spending on 'Orden Público y Seguridad' in Peru: ~$500M/year (MEF PIM 2023). Addressable fraction for video analytics software: 1-3% (aligns with typical software share of security tech). Thus TAM = $5M-$15M. Using midpoint: $10M.",
+        "tam_bottomup": "Approximately 300 municipalities have serenazgo camera networks with >20 cameras (MININTER 2022). Average annual license fee per municipality: $25,000 (based on comparable niche GovTech deals). TAM = 300 × $25k = $7.5M. Validate against top-down: overlaps with $5M-$15M range.",
+        "tam_consensus": "$5M-$10M — well below the $50M threshold for venture scale. Even optimistic expansions within Peru (adding national police, private security) add at most $3M.",
+        "sam": "SAM = TAM × 20% (municipalities with proactive mayors and existing IT infrastructure). ~$1M-$2M.",
+        "som_12_months": "Based on bottom-up: 3 pilot municipalities converting to paid within 12 months, ARPU $15,000 (discounted pilot-to-contract rate). SOM = $45,000. Realistic given B2G timelines.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "MEF - Consulta Amigable de Gasto (seleccionar categoría 'Orden Público y Seguridad' por municipalidad)",
+          "INEI - Encuesta Nacional de Programas Presupuestales (ENAPRES) para datos de victimización",
+          "MININTER - Observatorio Nacional de Seguridad Ciudadana: informe anual de serenazgo y cámaras"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "LATAM megacities (Mexico City, São Paulo, Bogotá) share similar visual chaos and underfunded municipal guard systems. TAM is larger but fragmented by country, language, and procurement laws.",
+        "tam_topdown": "LATAM municipal security spending: ~$15B (Statista 2023, crime prevention segment). Addressable analytics software fraction: 0.5-1% = $75M-$150M.",
+        "tam_bottomup": "Target 150 major cities/police forces with >100 cameras each, ARPU $100,000/year (enterprise deals). TAM = $15M.",
+        "tam_consensus": "$15M-$150M depending on scope. Still borderline for a unicorn, but could support a $100M+ exit if executed well.",
+        "sam": "SAM = TAM × 10% (early adopter cities with political alignment) = $1.5M-$15M.",
+        "som_12_months": "Only after Peru success; likely $0 in first 12 months, but with LOIs maybe $200K.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "Statista - Public Safety Spending in Latin America",
+          "Country-level police/municipal guard budgets"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "USA market is massive but demands entirely different compliance (NDAA, SOC2), sales motion, and integration with vendor ecosystems (Genetec, Milestone). Peruvian chaos models won't directly transfer; retraining required.",
+        "tam_topdown": "US video surveillance market: $8.6B (Omdia 2023). Analytics software share: $1.5B. Addressable for municipal safety: $300M.",
+        "tam_bottomup": "50,000 US law enforcement agencies, 20% with >10 cameras, ARPU $50,000 = $500M.",
+        "tam_consensus": "$300M-$500M — attractive but entry requires significant adaptation and go-to-market investment.",
+        "sam": "SAM = $30M-$50M (niche focus on cities with high crime and legacy VMS).",
+        "som_12_months": "$0; entry not feasible within 12 months without a US-based partner.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "Omdia - Video Surveillance & Analytics Market Report",
+          "US DOJ Bureau of Justice Statistics"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "For Peru TAM top-down: extract municipal 'Seguridad' budgets from MEF's SIAF portal using 'Consulta Amigable' and filter by function 'Orden Público y Seguridad'. Multiply by 2% as software analytics share.",
+      "For Peru TAM bottom-up: compile list of municipalities with >10 serenazgo cameras from MININTER's annual report or call municipal Serenazgo offices. ARPU estimate from comparable GovTech RFPs.",
+      "LATAM: start with Statista or World Bank municipal expenditure data, then narrow to public safety line items.",
+      "USA: use public security spending by state/local governments and Omdia/IHS Markit reports."
+    ]
+  },
+  "competition_moat": "Primary competitor: doing nothing (manual monitoring). Secondary: generic video analytics from incumbents like Hikvision/Dahua built into camera firmware, but they trigger only motion/blur and cause alert fatigue. Third: specialized VMS platforms like Genetec or Milestone that offer analytics modules, but they require expensive integration and aren't trained for Peruvian streets. Fourth: free mobile patrol apps (e.g., Alerta Ciudadana) that rely on citizen reports, which municipal guards already use as a complement. SeguridadMesh's moat: (1) Proprietary training data on Peruvian urban chaos—mototaxis, street vendors, disorderly crowds—which incumbents lack and are unlikely to label given small Peru market; (2) Workflow integration with serenazgo dispatch system, making it sticky; (3) Low-cost overlay that doesn't force hardware change, reducing political friction. Moats are thin but defensible through data network effects (more deployments improve model) and switching costs.",
+  "business_model_pricing": "Annual B2G license, priced per camera per year, with tiered plans aligned to municipality budget codes (PIM). Three plans:\n1. **Esencial** — $20/camera/month (if annual), covers detection of 3 incident types (assault, theft, accident), max 50 cameras, basic dashboard, email/SMS alerts. Contribution margin: 85% (cloud hosting + customer support minimal).\n2. **Profesional** — $35/camera/month, adds 10 incident types, integration with dispatch radios, priority support, monthly report for Mayors. Contribution margin: 80%.\n3. **Enterprise** — custom pricing for >200 cameras, includes on-premise edge appliance for low-bandwidth, custom incident classes, SLA. Contribution margin: 75%.\nVariable costs: cloud compute per camera ($5-10/month), labeling teams for model updates.",
+  "go_to_market": {
+    "first_10": "Target 3 progressive municipalities (e.g., Miraflores, San Isidro, Surco) with existing serenazgo modernization plans. Offer a 60-day free pilot on 20 cameras, installing the software remotely (no hardware). Start with one-to-one demos with the Gerente de Seguridad Ciudadana, showing a side-by-side of missed incidents on their own footage vs. our detection.",
+    "first_100": "After 2-3 paid references, expand to 10-15 municipalities via warm introductions from mayors' associations (AMPE, ANGR). Develop a partner channel with local security integrators (e.g., Sistemas de Seguridad SAC) who already sell cameras and can upsell analytics.",
+    "first_1000": "Scale to 50+ municipalities within 24 months by lobbying for a 'Serenazgo Inteligente' line item in Peru's public investment system (Invierte.pe) to standardize procurement. Then replicate in one other LATAM country with similar chaos (Colombia/ México) using local partners."
+  },
+  "traction_signals": "Currently zero revenue or live pilots. Early signals: interviewed 8 serenazgo operators across 3 municipalities (Lima Norte, Callao, Arequipa) who confirmed 'false alert fatigue' and desire for 'smart alerts'. Two municipalities provided sample CCTV footage for prototype; a third expressed interest in pilot pending legal review. No LOIs signed. Built a small labeled dataset of 500 Peruvian street clips from YouTube, annotated with incident types, and a proof-of-concept YOLOv8 model achieves 0.75 precision and 0.60 recall in offline tests, but severe insufficient for production. MVP demo video shown to 5 security directors; 3 rated 'would try if free'.",
+  "roadmap": {
+    "month_1": "Complete labeling of 5,000 frames from 3 municipalities; train V2 model targeting 0.85 precision and 0.70 recall. Start free pilot with 1 municipality (10 cameras) observing operator behavior.",
+    "month_2": "Iterate model based on pilot feedback; reduce false positives by 50%. Build integration plug-in for 2 common VMS platforms used in Peru (GeoVision, Hikvision).",
+    "month_3": "End first pilot with documented case study (time to detection reduced). Secure 2 more pilot agreements. Begin Invierte.pe documentation for public investment.",
+    "month_6": "Convert first pilot to paying Esencial plan ($12K ARR). Achieve 2 more paid contracts totaling $50K ARR. Model precision >0.90, recall >0.80. Team of 2 FTEs (CPO/CTO).",
+    "month_9": "Expand to 5 municipalities; pilot in 1 Colombian city. Launch edge appliance for low-bandwidth areas. ARR $120K.",
+    "month_12": "ARR $250K (target: 10 customers, avg $25K ARPU). Secure partnership with a regional security integrator. Begin international expansion to LATAM. Key metrics: MRR $20.8K, paying customers 10, monthly churn target 1%, CAC $10K.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 20800,
+      "paying_customers": 10,
+      "churn_target": "1% monthly",
+      "cac_target_usd": 10000
+    }
+  },
+  "risks_mitigations": {
+    "market_risk": "TAM too small for VC (<$10M in Peru). Mitigation: demonstrate expansion path to LATAM and ability to upsell adjacent services (e.g., predictive patrol suggestions) to increase ARPU. But this may not satisfy investors—consider sustainable bootstrapped model.",
+    "technical_risk": "False positives in chaotic scenes erode trust fast. Mitigation: implement a 'human-in-the-loop' feedback system where operators quickly label false alerts to continuously improve model; focus initial deployment on controlled zones (parking lots, plazas) before full street scenes.",
+    "execution_risk": "B2G sales cycles 6-18 months, making ARR growth slow. Mitigation: use pilots to demonstrate citizen satisfaction improvements (through surveys) to create political urgency; target municipal elections (2026) to align with mayor's promises.",
+    "regulatory_risk": "Peru's data privacy law (Ley 29733) requires consent for surveillance. Mitigation: ensure system only processes video to generate alerts, no facial recognition or biometric storage; provide transparent audit logs and sign Data Processing Agreements with municipalities.",
+    "AI_substitution_risk": "Incumbents could add Peru-specific detection as a feature. Mitigation: build deep integrations with serenazgo dispatch systems and accumulate uniquely Peruvian training data, creating a switching cost. But if Hikvision invests in labeling, moat erodes."
+  },
+  "the_ask": {
+    "amount_usd": 50000,
+    "type": "pre-seed grant / angel",
+    "runway_months": 6,
+    "budget_breakdown": [
+      {
+        "line": "Labeling 20,000 street scenes ($1/scene via local annotators)",
+        "amount_usd": 20000,
+        "rationale": "Building a proprietary dataset of Peruvian chaos is the only moat; $1/scene is standard for bounding-box annotation in Peru using university students."
+      },
+      {
+        "line": "Cloud compute and edge device for pilot (3 municipalities, 30 cameras)",
+        "amount_usd": 15000,
+        "rationale": "Includes GPU instances for model training and edge appliance to ensure low-latency at one municipal center."
+      },
+      {
+        "line": "Stipends for 2 part-time operators to collect feedback during pilot",
+        "amount_usd": 10000,
+        "rationale": "Operators need to dedicate 2 hours/day to compare manual vs AI alerts; covers their time and incentivizes honest input."
+      },
+      {
+        "line": "Legal fees for public procurement documentation (Invierte.pe)",
+        "amount_usd": 5000,
+        "rationale": "Navigating public contracting requires a specialized lawyer to draft terms of reference; cheaper than a full-time hire."
+      }
+    ],
+    "milestone_unlocked": "Complete two 60-day pilots with at least 85% operator acceptance rate (measured by clicks on AI alerts) and convert 1 municipality to a paid $15K/year contract, demonstrating purchase intent.",
+    "critical_assumption_being_tested": "Operators will trust AI alerts that target Peruvian-specific incidents with minimal false positives in real-world street conditions, leading to faster response times and willingness to pay.",
+    "why_not_less": "Bootstrapping with $10K would force skipping labeling, resulting in a generic model that fails in Peru, thus killing the core differentiation. Public procurement requires upfront legal investment to avoid years of rejection.",
+    "why_not_more": "Raising $200K before proving operator trust would be premature; the risk of false positives destroying the product remains high, and more money would not accelerate the labeling process or change municipal timelines. Only operator time and real footage can validate."
+  },
+  "product_demo_architecture": "A lightweight software agent (docker container) deployed in the municipality's camera server room or on an edge appliance (x86 mini-PC), connected to the local camera subnet via RTSP. Agent pulls video frames, feeds them to a TensorRT-optimized YOLOv8 model trained on Peruvian chaos data, detects incidents like 'theft-in-progress' (person grabbing bag and running), 'street-fight' (two persons exchanging punches), 'mototaxi-crash' (mototaxi overturned). On detection, agent pushes a JSON alert with the bounding box, time, and 10-second clip URL to a cloud dashboard and to the existing serenazgo dispatch screen via a simple REST API or even a Telegram bot. Dashboard shows real-time alerts with a 'Dispatch' button, and operators can swipe left/right to mark true/false, feeding back to improve the model. No replacement of existing VMS; sits as an overlay.",
+  "scorecard": {
+    "team_and_execution": 3,
+    "market_size_and_growth": 2,
+    "technology_differentiation": 6,
+    "business_model_and_pricing": 4,
+    "go_to_market_and_traction": 2,
+    "regulatory_and_political_risk": 3,
+    "total_score": 20,
+    "max_score": 100
+  },
+  "total_score": 20,
+  "max_score": 100,
+  "rating": "NO_GO",
+  "external_research_hooks": [
+    "INEI - Encuesta Nacional de Programas Presupuestales 2023: módulo de seguridad ciudadana para tasas de victimización por distrito",
+    "MEF - Consulta Amigable de Gasto 2023: función 14 'Orden Público y Seguridad' desglosada por municipalidad para presupuesto de serenazgo y cámaras",
+    "MININTER - Observatorio Nacional de Seguridad Ciudadana: informe 2022 sobre número de cámaras de serenazgo operativas por departamento",
+    "MEF - Anexo del Presupuesto Institucional de Apertura 2024: códigos de inversión para proyectos de video vigilancia",
+    "AMPE - Asociación de Municipalidades del Perú: encuesta informal a alcaldes sobre necesidades de tecnología en seguridad"
+  ],
+  "pressure_test_scorecard": {
+    "pain_intensity": 4,
+    "buyer_clarity": 2,
+    "urgency": 2,
+    "differentiation": 3,
+    "speed_to_validate": 2,
+    "founder_advantage": 1,
+    "total": 14
+  },
+  "fatal_flaws": [
+    {
+      "risk": "Total addressable market in Peru is <$10M annually, too small to generate venture-scale returns even with 50% market share.",
+      "severity": "HIGH",
+      "why_it_matters": "VCs require at least a $1B market to target a unicorn outcome; this market cannot support a $100M revenue company without improbable international expansion.",
+      "fast_test": "Speak with 3 municipal security budget holders to confirm max willingness to pay per camera; if average is <$15/camera/month, the TAM collapses further."
+    },
+    {
+      "risk": "False positives in chaotic Peruvian street scenes will cause operator desensitization and rejection of the system within the first week of deployment.",
+      "severity": "HIGH",
+      "why_it_matters": "If trust is lost initially, no municipality will renew, and word-of-mouth will kill any future pilots. The product's core value prop (reducing missed incidents) hinges entirely on alert precision.",
+      "fast_test": "Within 2 weeks, label 1,000 images from actual municipal feeds and train a YOLO model; then run on 24 hours of continuous footage and measure false alert rate. If >5 false per hour, the product is unusable."
+    },
+    {
+      "risk": "B2G procurement in Peru averages 12-18 months from pilot to paid contract, causing a cash flow crisis before reaching $250K ARR.",
+      "severity": "MEDIUM",
+      "why_it_matters": "Even with a perfect product, municipalities cannot buy quickly due to budget cycles and tendering rules; a startup with only $50K runway will die before first revenue.",
+      "fast_test": "Contact the procurement office of a friendly municipality and ask for the exact steps and timeline to buy a SaaS tool; if it's >6 months, financing must account for this."
+    }
+  ],
+  "first_10_customers": [
+    {
+      "action": "Run a side-by-side test with the Serenazgo of Miraflores: for one week, let the current team log incidents via manual watch and citizen calls, while our system silently detects from the same cameras. Then present a report showing missed events.",
+      "channel": "cold-call -> in-person meeting",
+      "target_persona": "Gerente de Seguridad Ciudadana of a Lima top-tier district (Miraflores, San Isidro, San Borja)",
+      "how_to_reach": "Call main municipal switchboard, ask for security office, request a 15-min meeting to show 'missed incident' data; use mayoral election manifestos to frame as aligning with crime reduction promises."
+    },
+    {
+      "action": "Offer a free 30-day pilot to the Municipality of Arequipa (Cercado) using their existing 40 cameras in the Plaza de Armas, targeting tourist-area thefts. Provide a dedicated on-site support person for the first week to build trust.",
+      "channel": "LinkedIn -> referral from local university",
+      "target_persona": "Alcalde Provincial or Jefe de la Oficina de Seguridad Ciudadana of a mid-sized city",
+      "how_to_reach": "Connect with the municipal liaison at Universidad Nacional de San Agustín who coordinates smart city projects; ask to be introduced to the security council."
+    },
+    {
+      "action": "Pitch to the Mayor's association (AMPE) in a 5-minute lightning talk, showing a real-time demo on a laptop with chaotic street video from a member municipality. Secure 3 pilot agreements from the audience.",
+      "channel": "event (AMPE annual conference)",
+      "target_persona": "Mayors of districts with >50,000 inhabitants and existing serenazgo system",
+      "how_to_reach": "Register for the next AMPE summit (usually May) as a tech exhibitor; prepare a hard-hitting demo contrasting 'today's missed incidents' vs 'AI detection'. Offer a post-summit follow-up pack to interested mayors."
+    }
+  ],
+  "mvp_2_week_test": {
+    "build": "A minimum detection model on 5 incident types (theft, assault, accident, crowd rush, fight) using 500 YouTube clips of Peruvian street fights/crime, deployed as a local Python script that reads a folder of video files and outputs a simple log of alerts with timestamps.",
+    "cut": "No integration with live cameras, no dashboard, no filtering by zone, no multi-camera sync, no operator feedback UI. Just a batch processing proof that the model can distinguish between normal Peruvian chaos and actionable incidents.",
+    "test_hypothesis": "If the model outputs an alert log that, when manually reviewed by a former serenazgo operator, has less than 2 false alerts per hour of busy street footage and detects at least 60% of hand-labeled incidents, then the core technical risk is addressable.",
+    "success_signal": "Operator review scoring the alert log as 'useful' with >70% true positive rate and self-reported willingness to use the system in their daily monitoring."
+  }
+}

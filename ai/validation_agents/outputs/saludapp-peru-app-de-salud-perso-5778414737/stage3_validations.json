@@ -1,0 +1,639 @@
+[
+  {
+    "idea": "SaludApp Peru es una plataforma de gestión de medicación que convierte una boleta de farmacia en un plan digital de adherencia.",
+    "selected_gap": {
+      "id": "gap_1",
+      "title": "Integrated medication management system tailored to Peru",
+      "pain": "Patients with chronic conditions must juggle multiple disconnected tools to manage medications, never getting a unified view of adherence, local pricing, and health risk.",
+      "why_now": "Smartphone penetration in Peru is high, WhatsApp is ubiquitous, and no existing solution combines OCR of local receipts, automated reminders, price transparency, and validated risk scoring.",
+      "evidence_needed": "Customer discovery with 20–30 chronic patients to confirm prescription complexity and willingness to adopt a single app; technical feasibility test for OCR on diverse Peruvian pharmacy receipt formats.",
+      "priority": "high",
+      "risk": "Execution risk: integrating multiple novel components while ensuring simplicity. Competition from well-funded global apps or local insurers could emerge if they localize."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "Founder likely has local Peruvian context but no specific expertise demonstrated."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "Peru's chronic disease market is sizable but TAM likely under $1B; growing."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Medication adherence is a high-pain problem for patients and insurers."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "No direct local competitor, but global apps like Medisafe or CareZone exist."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unclear if founder has personal stake; assumed moderate."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 7,
+        "note": "OCR and AI advances make receipt parsing viable; WhatsApp ubiquity is recent."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar adherence platforms in other countries have gained traction."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Healthcare requires long-term engagement; founder likely committed."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "B2B2C model can scale across EPS and regions."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Healthcare adherence is a large, underserved space."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Started with a specific, feasible concept; ready to iterate."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focused on one idea; not diversifying."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Uses receipts and WhatsApp but needs deeper workflow immersion."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 6,
+        "note": "Uses OCR and vision AI but not cutting-edge; moat is data, not AI."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Selling adherence improvement to EPS; outcome-based."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 8,
+        "note": "Aims to become the first longitudinal medication data repository in Peru."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No evidence of systematic learning from setbacks."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Healthcare in Peru requires trust; high expertise needed."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 5,
+        "note": "Unclear if internal processes drive value."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Must validate demand before building full platform."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "B2B pricing likely per patient per month; aligns with outcomes."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "Low variable costs (API calls); manageable."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "Built from scratch for modern stack; no legacy integration."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Needs to demonstrate domain expertise and operational execution."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "Founder background not provided; average team assumed."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "TAM likely under $1B; niche in Peru, though growing."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Defensible data repository moat but early stage."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No customers, pilots, or waitlist mentioned."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "B2B SaaS model feasible; margins likely >60% but unproven."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "Indirect competition from global apps, but no local direct threat yet."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 4,
+        "weighted": 0.2,
+        "rationale": "No financial data; burn rate unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Execution risk high; integration complexity."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.7,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Do not invest; premature for VC. Idea needs traction and clearer founder-market fit.",
+    "next_experiments": [
+      "Conduct 20-30 customer interviews with chronic patients and EPS managers.",
+      "Build a simple MVP with manual entry to test adherence tracking before OCR.",
+      "Validate OCR on 50+ real Peruvian pharmacy receipts."
+    ],
+    "kill_criteria": [
+      "No confirmed pilot interest from at least 2 EPS within 3 months.",
+      "OCR accuracy below 80% on diverse receipts.",
+      "Negative feedback from patients on WhatsApp reminder fatigue."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "Transformamos boletas de farmacia en adherencia médica para pacientes crónicos peruanos, usando WhatsApp como recordatorio y datos para que las EPS reduzcan costos."
+  },
+  {
+    "idea": "SaludApp Empresas: white-label medication management platform for Peruvian employers",
+    "selected_gap": "Integrated medication management system tailored to Peru",
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "Founder background not provided; assumed healthcare/pharma experience in Peru but unconfirmed."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "Peru has ~30M population, high chronic disease burden, and growing employer health spending; TAM in Peru likely $100M+ but below $1B."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Chronic patients juggle multiple tools; pain is real but not life-threatening, so willingness to pay may be moderate."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "No direct local competitor combining OCR, reminders, and risk scores; global apps lack localization; insurers may enter."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "No evidence of founder's personal stake beyond idea; motivation unclear."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Smartphone penetration, WhatsApp ubiquity, and OCR advances make this timely."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar models exist in other countries (e.g., HealthPrize) but not in Peru; indirect proof."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "B2B healthcare requires long cycles; assumed commitment but not demonstrated."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "B2B SaaS can scale across employers, but sales cycle is long and pharmacy integration is country-specific."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Healthcare IT for emerging markets is underfunded; data moat is plausible."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Validated by identifying a concrete gap and starting with customer discovery."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Presumed focus on this idea; no evidence of side projects."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Integration with pharmacy receipts, WhatsApp, and employer dashboards shows workflow understanding."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "Uses OCR and risk scoring, but not cutting-edge AI; moat comes from data, not model."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Sells adherence improvement and cost savings; dashboard shows ROI for employers."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Combines multiple features (OCR, reminders, pricing, risk) but is focused on one market."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "Customer discovery with 20–30 patients is a good start, but no mention of iterative learning."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Healthcare is low-trust; employers need reliable data; expertise is key."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 5,
+        "note": "Product is the platform itself; internal processes like OCR curation are not highlighted."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Early customer discovery is promising, but no pre-sales or LOIs mentioned."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "B2B subscription likely per employee; could move to outcome-based pricing later."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "OCR processing has variable costs; ideal to optimize but not detailed."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "Building new platform, not augmenting legacy systems; good."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Needs both healthcare domain and tech operations; assumed team has mix."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 6,
+        "weighted": 1.5,
+        "rationale": "No founder details; assume relevant background but unproven in this exact space."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "TAM in Peru <$1B but growing with chronic disease prevalence; timing is good."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Data moat from pharmacy ecosystem integration is defensible; OCR and risk scores are solid features."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No evidence of users, revenue, or pilot; only customer discovery planned."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "SaaS to employers likely works; LTV:CAC TBD; margins could be good if OCR costs managed."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "No direct local competitor but risk from global apps or local insurers; moat is medium."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 4,
+        "weighted": 0.2,
+        "rationale": "No financial data; burn rate unknown; likely pre-seed with limited runway."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Main failure mode: execution complexity and slow employer sales cycles."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.78,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Achieve 5 employer pilots with 100+ employees each within 6 months; demonstrate OCR accuracy >90% on local receipts."
+    },
+    "go_no_go": "CONDITIONAL_GO",
+    "decision": "Proceed with further validation, focusing on employer pilots and OCR fine-tuning.",
+    "next_experiments": [
+      "Conduct 20-30 in-depth interviews with HR managers of mid-sized Peruvian firms to confirm willingness to pay.",
+      "Build a minimal OCR prototype with 500 local pharmacy receipts to test accuracy.",
+      "Launch a landing page with waitlist for employers to gauge interest."
+    ],
+    "kill_criteria": [
+      "Less than 10 employer sign-ups for pilot within 3 months.",
+      "OCR accuracy below 80% after dedicated tuning effort.",
+      "HR managers indicate preference for existing manual processes over any digital tool."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We help Peruvian employers reduce healthcare costs by boosting employee medication adherence through a localized app with OCR, WhatsApp nudges, and crowdsourced pharmacy pricing, all in one platform."
+  },
+  {
+    "idea": "Manual medication adherence service for Peruvian insurer targeting high-cost diabetics",
+    "selected_gap": {
+      "id": "gap_1",
+      "title": "Integrated medication management system tailored to Peru",
+      "pain": "Patients with chronic conditions must juggle multiple disconnected tools (paper notes, WhatsApp groups, pharmacy apps) to manage medications, never getting a unified view of adherence, local pricing, and health risk.",
+      "why_now": "Smartphone penetration in Peru is high, WhatsApp is ubiquitous, and no existing solution combines OCR of local receipts, automated reminders, price transparency, and validated risk scoring.",
+      "evidence_needed": "Customer discovery with 20–30 chronic patients to confirm prescription complexity and willingness to adopt a single app; technical feasibility test for OCR on diverse Peruvian pharmacy receipt formats.",
+      "priority": "high",
+      "risk": "Execution risk: integrating multiple novel components (OCR, crowdsourcing, risk score) while ensuring simplicity. Competition from well-funded global apps or local insurers could emerge if they localize."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 4,
+        "note": "No evidence of founder expertise in insurance or healthcare; generic team assumption."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "TAM initially limited to high-cost diabetic patients in one insurer; potential to expand but unproven."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Non-adherence leads to costly hospitalizations; pain is acute for insurer and patient."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Many generic reminder apps but few tailored to Peruvian insurers; manual service is different but easily copied."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 4,
+        "note": "No personal story or deep connection to the problem evident."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 7,
+        "note": "High smartphone and WhatsApp penetration in Peru makes this feasible now; value-based care trends support it."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 7,
+        "note": "Similar adherence programs globally have shown ROI evidence."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "Pilot suggests short-term focus; commitment to long-term transformation unclear."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 4,
+        "note": "Manual service is labor-intensive; automated app may scale but not yet built."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Healthcare adherence is a large need, but many entrants; this wedge is narrow."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Starting with a simple manual pilot aligns with this rule."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focus on one idea (adherence for insurer) is good, but could still pivot."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Deep understanding of insurer's cost drivers but not yet of patient daily workflow."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 3,
+        "note": "No AI used currently; plan to use AI later is speculative."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Positions as reducing hospitalizations, not just sending reminders."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 6,
+        "note": "Wedge is small but aim to transform insurer cost structure is ambitious."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 7,
+        "note": "30-day pilot designed to generate clear data on adherence and cost impact."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Insurance is low-trust; domain expertise needed to convince."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "Manual process is value but replication may be hard without automation."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "No paying customer yet; risk of building without verified demand."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Could charge per patient per month or per cost saved."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 5,
+        "note": "Manual labor is high; COGS reduction plan not detailed."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 6,
+        "note": "Starting manual, not bolting AI; but future plan may bolt."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Insurance domain knowledge needed; team fluency unverified."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No standout founder-market fit; generic team assumed."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 5,
+        "weighted": 1.0,
+        "rationale": "TAM is narrow initially; growth potential exists but unproven."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 4,
+        "weighted": 0.6,
+        "rationale": "No defensible moat; manual service is easily replicated."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No customers, no pilot results; only a plan."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 4,
+        "weighted": 0.4,
+        "rationale": "LTV:CAC unknown; margins likely low due to manual labor."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "Many alternatives; differentiation is niche and temporary."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "Low burn rate assumed, but no financial projections."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Key risk: insurer may not adopt or see cost reduction in 30 days."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.18,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": ""
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Do not proceed with current plan; need stronger founder, clearer traction, or larger TAM.",
+    "next_experiments": [
+      "Interview 10+ Peruvian insurance executives to validate willingness to pay for adherence outcomes.",
+      "Run a no-cost pilot with 3-5 patients using manual reminders to gather preliminary adherence data.",
+      "Assess whether founder has any healthcare or insurance network to leverage."
+    ],
+    "kill_criteria": [
+      "No insurer agrees to even a free pilot within 3 months.",
+      "Pilot shows no adherence improvement or cost reduction signal within 30 days.",
+      "Founder cannot secure intros to decision-makers at Peruvian insurers."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We reduce hospital costs for Peruvian insurers by ensuring diabetic patients take their meds through personalized WhatsApp reminders."
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": "gap-01",
+      "title": "Localized, Offline-First AI Pest Diagnosis for Potato and Corn",
+      "pain": "HIGH",
+      "why_now": "Smartphone use among smallholders is rising, but internet connectivity remains unreliable in rural Peru. Existing AI apps require online access and lack models specifically trained on Peruvian pests and diseases, leading to misdiagnosis.",
+      "evidence_needed": "Farmer willingness to adopt, diagnostic accuracy compared to field agronomists, offline model performance on local device hardware.",
+      "priority": 1,
+      "risk": "MEDIUM"
+    },
+    {
+      "id": "gap-02",
+      "title": "Digital Backbone for National Phytosanitary Surveillance",
+      "pain": "HIGH",
+      "why_now": "SENASA relies on paper-based, manual inspections that delay outbreak response. The Peruvian government is pushing digital transformation and has funds for agtech modernization post-COVID.",
+      "evidence_needed": "SENASA's procurement process, data integration requirements, willingness to co-create and pay for a digital platform.",
+      "priority": 2,
+      "risk": "HIGH"
+    },
+    {
+      "id": "gap-03",
+      "title": "WhatsApp-Integrated Expert Pest Advisory for Farmers",
+      "pain": "HIGH",
+      "why_now": "Over 90% of Peruvian smallholders use WhatsApp to share pest photos, but advice lacks expert validation. An AI-assisted bot can provide instant, reliable guidance within this familiar channel.",
+      "evidence_needed": "Users' trust in bot advice, accuracy of AI vs. human experts via WhatsApp, conversion to paid services or data-sharing incentives.",
+      "priority": 3,
+      "risk": "MEDIUM"
+    },
+    {
+      "id": "gap-04",
+      "title": "Integrated Pest Outbreak Prediction with Field Validation",
+      "pain": "HIGH",
+      "why_now": "Climate change is altering pest dynamics, making historical weather-based alerts insufficient. Combining on-ground farmer reports with satellite/weather data can enable actionable early warnings.",
+      "evidence_needed": "Correlation between weather patterns and pest incidence in Peruvian microclimates, farmer engagement in reporting, prediction accuracy metrics.",
+      "priority": 4,
+      "risk": "HIGH"
+    },
+    {
+      "id": "gap-05",
+      "title": "AI-Powered Last-Mile Extension Service with Input Linkage",
+      "pain": "HIGH",
+      "why_now": "Government extension visits are sparse, and private agronomists are unaffordable for smallholders. An app that diagnoses, recommends treatment, and links to local input retailers can fill this gap.",
+      "evidence_needed": "Willingness to follow AI recommendations, effectiveness of recommendations, retailer partnership feasibility, monetization model.",
+      "priority": 5,
+      "risk": "MEDIUM"
+    },
+    {
+      "id": "gap-06",
+      "title": "Indigenous Language Interface for Agricultural Tools",
+      "pain": "MEDIUM",
+      "why_now": "A significant portion of Andean farmers speak Quechua or Aymara as their first language, yet no pest management tool offers interfaces in these languages. Inclusion can drive adoption and meet government social equity goals.",
+      "evidence_needed": "Language preference surveys, UI/UX testing in native languages, impact on user comprehension and retention.",
+      "priority": 6,
+      "risk": "LOW"
+    }
+  ],
+  "recommended_gap_id": "gap-01",
+  "checkpoint_instruction": "Validate Gap 1 by deploying a prototype offline-capable mobile app with an initial computer vision model trained on publicly available Peruvian potato/corn pest images to 50 farmers in the Cusco region. Measure diagnostic accuracy against manual scouting, user feedback on usability, and interest in a freemium model. Simultaneously, initiate introductory meetings with SENASA officials to explore interest in a digital surveillance pilot.",
+  "source": "llm"
+}

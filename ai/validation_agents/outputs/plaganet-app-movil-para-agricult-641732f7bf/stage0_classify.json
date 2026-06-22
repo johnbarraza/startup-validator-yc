@@ -1,0 +1,56 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "AgriTech",
+  "customer_type": "B2G",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "Target users (smallholder farmers) have extremely low WTP; freemium conversion unlikely when free alternatives like WhatsApp expert groups exist.",
+    "B2G sales cycle to Agrorural/Midagri is 6-18 months with rigid budgets; procurement likely delayed or canceled due to political changes or budget reallocation.",
+    "Government may prefer a free tool (e.g., existing extension service, FAO app) or an open-source alternative, reducing willingness to pay for a specialized app.",
+    "AI pest detection accuracy in real field conditions (variable lighting, camera quality, pest stages) may be insufficient for reliable government surveillance, leading to rejection."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual scouting, expert consultations)",
+    "Spending already happens on imperfect solutions (pesticides, expert fees)",
+    "Recurring pain: weekly or more often during growing season",
+    "Measurable cost: lost yield and revenue due to pest damage"
+  ],
+  "classification_rationale": "Pest detection is a recurring, urgent problem for Peruvian farmers and a national priority for government agencies. Current workarounds are inefficient, and both farmers and government actively seek solutions, making this a clear painkiller.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "YES",
+  "freemium_rationale": "Freemium lowers adoption barrier for cash-constrained farmers, driving usage and data collection that strengthens the B2G value proposition for national surveillance. Government contracts provide sustainable revenue while free tier builds trust and scale.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "Government procurement budget is allocated annually with long cycles; even if approved, payment can be delayed 6+ months and requires complex invoicing via CCI bank transfers, with no guarantee of renewal.",
+  "free_substitute_risk": "Farmers already use WhatsApp groups and local extension agents for pest identification; Google Lens provides basic recognition for free. Government can deploy a simple survey via existing channels instead of paying for an app.",
+  "market_size_reality_check": "Realistic paying market: <5,000 medium-to-large farmers willing to pay $5-15/month (max $900k ARR) + one-off B2G contract <$100k/year. Total addressable market in Peru <$2M, too small for venture scale without regional expansion.",
+  "hardest_assumption": "That Agrorural/Midagri will prioritize and budget for an AI pest surveillance tool over other pressing needs (e.g., irrigation, subsidies) and that farmers will adopt the app consistently rather than sticking to existing informal networks.",
+  "devil_rationale": "The idea has merit but faces structural barriers: low farmer WTP, long and uncertain government procurement, and strong free substitutes. Without a clear path to rapid adoption or a larger regional market, it is unlikely to generate venture-scale returns.",
+  "preflight_dominant_solution": {
+    "score": "CROWDED",
+    "competitor_name": "Plantix",
+    "threat_level": "MEDIUM",
+    "note": "Plantix is a well-funded global app for crop disease detection; though not targeting Peru exclusively, it is a strong incumbent."
+  },
+  "preflight_precedent_failure": {
+    "score": "NO_KNOWN_FAILURE",
+    "example": "none",
+    "learning": "No publicly known failure of this exact model; however, many agri-tech apps have struggled with farmer adoption and monetization in emerging markets."
+  },
+  "preflight_regulatory_kill": {
+    "score": "NO_BLOCKER",
+    "regulation": "None specific to pest detection app; government procurement rules apply for B2G sales.",
+    "mitigation": "Navigate through standard public procurement processes; no fatal regulatory barrier."
+  },
+  "preflight_summary": "Proceed with caution: no fatal blockers but crowded space with global competitor Plantix; differentiation through B2G focus and localization is key.",
+  "deal_signals": {
+    "hiring": "Demand for AI engineers and agronomists with field experience in Latin America.",
+    "funding": "Growing venture capital interest in agri-tech for emerging markets, e.g., recent rounds for Klima (Mexico) and Agrofy (Argentina).",
+    "product": "Watch for launches of localized pest detection apps or partnerships with government agencies in Peru.",
+    "market": "Rising food security concerns and government digitalization push in agriculture.",
+    "tech": "Advances in lightweight computer vision models running on low-end smartphones.",
+    "momentum": "ACCELERATING"
+  },
+  "source": "triple_agent_classification"
+}

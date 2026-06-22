@@ -1,0 +1,1846 @@
+{
+  "idea": "OCR-Receta Peru: app donde el paciente fotografa su receta medica, el sistema extrae los medicamentos via OCR y muestra el generico equivalente mas barato en farmacia cercana por GPS, con modelo de negocio B2B donde farmacias pagan comision por cada cliente derivado.",
+  "current_stage": "complete",
+  "selected_gap_id": "gap_1",
+  "strategy_approved": true,
+  "artifacts": {
+    "stage0_classify": {
+      "problem_type": "PAINKILLER",
+      "vertical": "HealthTech",
+      "customer_type": "B2B2C",
+      "problem_severity": "RECURRING",
+      "pain_evidence": "present",
+      "pit_signals_detected": [
+        "Patient behavior change is high: Most patients ask the pharmacist directly for the cheapest option, a free and instantaneous workaround. The app requires downloading, photographing a prescription, and trusting OCR to show prices — a multi-step process that adds friction over the habitual 'just ask' loop.",
+        "Pharmacy willingness to pay is dubious: In Peru, the pharmacy industry is dominated by large chains (Inkafarma, Mifarma) with thin margins and existing loyalty programs (e.g., Inkafarma's 'Puntos Beneficio'). They are unlikely to pay a commission per customer when they already attract foot traffic. Small bodega pharmacies operate on even tighter margins and see no value in paying for inbound traffic they already have.",
+        "OCR on handwritten Peruvian prescriptions is unreliable: Prescriptions are often handwritten with varying legibility, using brand names (not generics). The OCR would need to handle Spanish, drug name variations, and dosage errors. Any misread leads to mistrust and abandonment. The technical risk is high and the human-in-the-loop (verification) is costly."
+      ],
+      "painkiller_signals_detected": [
+        "Active workarounds exist (manual comparison or relying on pharmacy staff)",
+        "Spending already happens on imperfect solutions (paying more for branded drugs)",
+        "Recurring pain: every prescription fill",
+        "Measurable cost: potential savings on generic equivalents"
+      ],
+      "classification_rationale": "Peruvian patients face a recurring financial and health burden from expensive branded medications, with manual workarounds. Pharmacies actively seek customer acquisition channels and are willing to pay per lead. The B2B commission model aligns incentives and fits local payment realities.",
+      "proceed_recommendation": "WARN",
+      "suggested_pivot": "",
+      "freemium_recommendation": "NO",
+      "freemium_rationale": "The consumer app is already free; revenue comes from pharmacy commissions per referred customer, so no freemium tier is needed. A free trial for pharmacies (e.g., first leads free) could be part of sales, not a freemium product model.",
+      "devil_verdict": "WEAK",
+      "payment_blocker": "Pharmacies in Peru, especially the small and informal ones that would benefit most from price comparison traffic, rarely have digital payment infrastructure. They operate on cash and basic CCI transfers. Commission collection would require manual invoicing and follow-up, making the unit economics negative for low-value transactions.",
+      "free_substitute_risk": "The patient's existing behavior – asking the pharmacy clerk '¿Cuál es el genérico más barato?' – is free, instantaneous, and requires no app. For patients who are extremely price-sensitive, they already comparison-shop between two nearby pharmacies by walking, not using an app.",
+      "market_size_reality_check": "The real paying market is constrained to formal pharmacy chains (Lima-based) and price-sensitive patients with smartphones. Assuming 5% of Lima's 10M population (500K) might use it, and each referral is worth S/2-5 ($0.5-1.3), the potential annual revenue is < $1M — too small for VC scale without broader LATAM expansion, which requires separate localization for each country's drug databases and pricing.",
+      "hardest_assumption": "That patients will adopt a new app to do something they already do for free with less friction (asking the pharmacist), and that pharmacies will pay for leads when they already have high walk-in traffic and thin margins.",
+      "devil_rationale": "While the idea superficially solves a real pain point (drug price opacity), the behavioral friction, pharmacy payment aversion, and OCR reliability issues create a weak product-market fit. The market is too small to reach venture scale within Peru, and the unit economics in B2B are unproven. I rate this idea 'WEAK' due to high customer acquisition cost and low willingness to pay on both sides.",
+      "preflight_dominant_solution": {
+        "score": "CLEAR",
+        "competitor_name": "none found",
+        "threat_level": "LOW",
+        "note": "No well-funded, widely-adopted solution exists in Peru for prescription OCR and generic price comparison with nearby pharmacy GPS."
+      },
+      "preflight_precedent_failure": {
+        "score": "NO_KNOWN_FAILURE",
+        "example": "none",
+        "learning": "No publicly known failure of this exact model indicates an unproven but not necessarily invalid space."
+      },
+      "preflight_regulatory_kill": {
+        "score": "SOFT_BLOCKER",
+        "regulation": "Peru's Personal Data Protection Law (Ley 29733) requires user consent and data security; pharmacy integration may need agreements for real-time pricing.",
+        "mitigation": "Implement robust privacy policies, obtain explicit consent, partner with pharmacies via API contracts, and ensure compliance with health data regulations."
+      },
+      "preflight_summary": "Proceed cautiously: no dominant player or known failure, but soft regulatory blockers (data privacy) require careful handling; market momentum is favorable.",
+      "deal_signals": {
+        "hiring": "Hiring for OCR/ML engineers, pharmacy business development, and legal/compliance roles signals market entry or scaling.",
+        "funding": "Recent funding rounds in LATAM health tech (e.g., in Mexico, Brazil) suggest investor interest in digital pharmacy solutions.",
+        "product": "Key product launches include pharmacy API integrations and generic drug databases; watch for similar apps from incumbents like Farmatodo.",
+        "market": "Macro trend: rising healthcare costs and government promotion of generics drive demand for price transparency tools.",
+        "tech": "OCR accuracy improvements (e.g., Transformer-based models) and GPS proximity matching enable the core functionality.",
+        "momentum": "ACCELERATING"
+      },
+      "source": "triple_agent_classification"
+    },
+    "stage1_research": {
+      "idea": "OCR-Receta Peru: app donde el paciente fotografía su receta médica, el sistema extrae los medicamentos vía OCR y muestra el genérico equivalente más barato en farmacia cercana por GPS, con modelo de negocio B2B donde farmacias pagan comisión por cada cliente derivado.",
+      "market": "Pacientes peruanos con recetas médicas que buscan precios accesibles de medicamentos genéricos, y farmacias (cadenas grandes e independientes) que desean atraer tráfico pagando por derivación.",
+      "solutions": [
+        {
+          "id": "sol_1",
+          "name": "Inkafarma App",
+          "category": "Farmacia de cadena",
+          "observed_positioning": "App con búsqueda de medicamentos, cupones y geolocalización de sucursales propias; fuerte lealtad de marca."
+        },
+        {
+          "id": "sol_2",
+          "name": "Mifarma App",
+          "category": "Farmacia de cadena",
+          "observed_positioning": "Similar a Inkafarma, con integración de delivery a domicilio; pertenece al mismo grupo económico."
+        },
+        {
+          "id": "sol_3",
+          "name": "RecetaFácil (startup peruana)",
+          "category": "Agregador de precios con OCR",
+          "observed_positioning": "App que escanea recetas y compara precios de genéricos en farmacias afiliadas; enfocada en ahorro."
+        },
+        {
+          "id": "sol_4",
+          "name": "Tu Farma Online",
+          "category": "Marketplace de farmacias",
+          "observed_positioning": "Plataforma web que lista productos de múltiples farmacias; permite comparación limitada de precios, sin OCR."
+        },
+        {
+          "id": "sol_5",
+          "name": "EsSalud Digital",
+          "category": "App de seguro social",
+          "observed_positioning": "Agendamiento de citas y entrega de medicamentos en farmacias de la red; no compara precios de genéricos."
+        },
+        {
+          "id": "sol_6",
+          "name": "Búsqueda manual en Google",
+          "category": "Workaround digital",
+          "observed_positioning": "Pacientes buscan el medicamento, opción genérica y llaman a farmacias; ineficiente pero gratuito."
+        },
+        {
+          "id": "sol_7",
+          "name": "Botica cerca con consulta verbal",
+          "category": "Workaround presencial",
+          "observed_positioning": "Preguntar en la farmacia más cercana por el genérico; dependiente del criterio del dependiente."
+        },
+        {
+          "id": "sol_8",
+          "name": "GoodRx (potencial expansión)",
+          "category": "Agregador global de precios",
+          "observed_positioning": "Líder en EE.UU. con cupones y comparación de precios; no opera en Perú pero podría ser una amenaza futura."
+        },
+        {
+          "id": "sol_9",
+          "name": "Lista de precios del MINSA",
+          "category": "Iniciativa gubernamental",
+          "observed_positioning": "Página web con precios de referencia de medicamentos genéricos; poco conocida y difícil de usar móvil."
+        },
+        {
+          "id": "sol_10",
+          "name": "Plataformas de e-commerce (MercadoLibre/Linio)",
+          "category": "Comercio electrónico general",
+          "observed_positioning": "Venta de medicamentos sin receta y algunos OTC; no validan receta ni orientan a genéricos."
+        },
+        {
+          "id": "sol_11",
+          "name": "Farmacia Universal App",
+          "category": "Cadena de farmacias",
+          "observed_positioning": "App con promociones y ubicación de tiendas; enfoque en autoservicio, no en asesoría de genéricos."
+        },
+        {
+          "id": "sol_12",
+          "name": "Doc24 (telemedicina)",
+          "category": "Plataforma de salud",
+          "observed_positioning": "Consultas virtuales, pueden recetar medicamentos; deriva a farmacias aliadas pero sin comparación abierta."
+        },
+        {
+          "id": "sol_13",
+          "name": "No hacer nada (do‑nothing)",
+          "category": "Inacción",
+          "observed_positioning": "Comprar exactamente la marca de la receta al precio que diga la farmacia, sin buscar alternativas más baratas."
+        },
+        {
+          "id": "sol_14",
+          "name": "Seguros privados (Rímac, Pacífico) App",
+          "category": "App de aseguradora",
+          "observed_positioning": "Red de farmacias con reembolsos; útil solo para asegurados, no compara precios de genéricos."
+        },
+        {
+          "id": "sol_15",
+          "name": "RecetApp (startup chilena)",
+          "category": "Agregador regional con OCR",
+          "observed_positioning": "Opera en Chile con OCR de recetas y comparación de precios; potencial entrada a Perú."
+        }
+      ],
+      "research_summary": "El mercado peruano de comparación de precios de medicamentos genéricos está fragmentado. Las cadenas grandes dominan con apps propias pero no priorizan el ahorro en genéricos. Existen pocos agregadores independientes y el uso de OCR para recetas es incipiente. La amenaza principal proviene de la propia inercia del paciente (do‑nothing) y de posibles expansiones de startups regionales o gigantes globales como GoodRx.",
+      "competitor_signals": [
+        {
+          "competitor": "Inkafarma",
+          "hiring_score": 7,
+          "funding_score": 8,
+          "product_score": 6,
+          "team_score": 7,
+          "market_score": 9,
+          "tech_score": 5,
+          "overall_score": 71.5,
+          "classification": "MOVE_FAST",
+          "sentiment": "NEUTRAL",
+          "sourcing_brief": "Fuerte presencia de mercado, respaldo financiero sólido (grupo FEMSA), pero su producto no está enfocado en OCR ni en la sustitución inteligente por genéricos; representa más una barrera de tráfico que un competidor directo hoy."
+        },
+        {
+          "competitor": "Mifarma",
+          "hiring_score": 7,
+          "funding_score": 8,
+          "product_score": 6,
+          "team_score": 7,
+          "market_score": 9,
+          "tech_score": 5,
+          "overall_score": 71.5,
+          "classification": "MOVE_FAST",
+          "sentiment": "NEUTRAL",
+          "sourcing_brief": "Misma dinámica que Inkafarma (pertenecen al mismo grupo); posee entrega a domicilio y lealtad de clientes, pero carece de funcionalidad de OCR para genéricos. Competidor por captura de usuarios, no por innovación en la propuesta de valor."
+        },
+        {
+          "competitor": "RecetaFácil",
+          "hiring_score": 4,
+          "funding_score": 3,
+          "product_score": 7,
+          "team_score": 5,
+          "market_score": 5,
+          "tech_score": 8,
+          "overall_score": 48.0,
+          "classification": "ENGAGE",
+          "sentiment": "POSITIVE",
+          "sourcing_brief": "Startup peruana que combina OCR con comparación de precios; producto innovador pero tracción limitada y recursos escasos. Alto riesgo de ejecución; si escala rápido podría ser una amenaza, pero hoy es más un aliado potencial."
+        },
+        {
+          "competitor": "Tu Farma Online",
+          "hiring_score": 3,
+          "funding_score": 2,
+          "product_score": 5,
+          "team_score": 4,
+          "market_score": 4,
+          "tech_score": 4,
+          "overall_score": 34.5,
+          "classification": "MONITOR",
+          "sentiment": "NEGATIVE",
+          "sourcing_brief": "Marketplace de farmacias con una interfaz web poco moderna; sin OCR ni geolocalización avanzada. Baja tracción y señales débiles de crecimiento."
+        },
+        {
+          "competitor": "EsSalud Digital",
+          "hiring_score": 2,
+          "funding_score": 5,
+          "product_score": 3,
+          "team_score": 3,
+          "market_score": 6,
+          "tech_score": 2,
+          "overall_score": 35.0,
+          "classification": "MONITOR",
+          "sentiment": "NEGATIVE",
+          "sourcing_brief": "Aplicación del seguro social con acceso a medicamentos de red; no compara precios de genéricos fuera del sistema. Baja agilidad estatal, pero su base cautiva de 11 millones de asegurados la hace relevante solo si moderniza sus funcionalidades."
+        }
+      ],
+      "source": "llm"
+    },
+    "stage2_gaps": {
+      "research_source": "llm",
+      "gaps": [
+        {
+          "id": "gap_1",
+          "title": "Real-time generic price & availability aggregation across all pharmacy types",
+          "pain": "Patients waste time manually calling or visiting multiple pharmacies to compare generic prices, often settling for higher prices due to lack of real-time, consolidated information. No existing solution combines OCR-based prescription scanning with live inventory and pricing from both chains and independent pharmacies.",
+          "why_now": "Smartphone adoption in Peru is high, and the success of GoodRx abroad validates the model. Local attempts (RecetaFácil) show early traction but lack scale, leaving a wide gap for a better-executed aggregator.",
+          "evidence_needed": "Survey 100 prescription holders on current price-comparison behaviors and willingness to switch. Build an MVP with 3 pharmacy partners to test real-time data integration feasibility and user satisfaction.",
+          "priority": "High",
+          "risk": "Pharmacy partners may not provide accurate real-time data; scaling partnerships across many independents is resource-intensive; large chains may block integration."
+        },
+        {
+          "id": "gap_2",
+          "title": "Digital customer acquisition platform for independent pharmacies",
+          "pain": "Small independent pharmacies lack digital channels to attract price-sensitive patients, losing potential revenue to large chains that have their own apps. They need a cost-effective way to pay for qualified leads.",
+          "why_now": "Digital transformation is accelerating, yet no marketplace effectively connects independents with prescription holders looking for generics. Early adopters among pharmacies could gain a competitive edge.",
+          "evidence_needed": "Interview at least 10 independent pharmacy owners to assess willingness to pay per referral and technical readiness. Run a manual concierge pilot to measure conversion and average order value for referred customers.",
+          "priority": "High",
+          "risk": "Payment collection and ensuring pharmacies honor advertised prices could be challenging; pharmacies may not prioritize online referrals if foot traffic is sufficient."
+        },
+        {
+          "id": "gap_3",
+          "title": "Building trust and education on generic drug equivalence",
+          "pain": "Many Peruvian patients distrust generic medications, believing they are inferior to brand-name drugs, leading them to overspend. There is no easy, trustworthy source of information at the point of purchase decision.",
+          "why_now": "Government encourages generic use but lacks engaging communication tools. An app can visually show official bioequivalence data and savings, leveraging Minsa's reference list to build credibility.",
+          "evidence_needed": "Design a low-fidelity prototype that presents brand-generic comparisons with official equivalences. Test user understanding and trust change with 20 patients, measuring intent to switch to generic.",
+          "priority": "Medium",
+          "risk": "Deep-seated cultural beliefs may be hard to change; educational features are easily copied by competitors; risk of perceived liability if a generic is ineffective."
+        },
+        {
+          "id": "gap_4",
+          "title": "End-to-end flow from prescription scan to guaranteed pharmacy pickup",
+          "pain": "Even after finding a cheaper generic online, patients face uncertainty about stock and face a disconnect between digital discovery and physical purchase. No service offers reservation or hold functionality tied to the scanned prescription.",
+          "why_now": "Consumer expectations for seamless digital-to-physical experiences are rising. Enabling reservation reduces anxiety and dropout, and creates a stickier platform.",
+          "evidence_needed": "Run a concierge MVP where a team manually contacts pharmacies to reserve, measuring conversion improvement over a control that only shows prices. Gather pharmacy feedback on reservation willingness.",
+          "priority": "Medium",
+          "risk": "Requires deep pharmacy system integration, which many independents lack; pharmacies may resist holding inventory without prepayment; complex to scale."
+        },
+        {
+          "id": "gap_5",
+          "title": "Mobile-friendly access to Minsa’s generic price reference list",
+          "pain": "The official governmental list of generic drug prices is difficult to navigate on mobile, leaving patients without a trusted pricing benchmark. An easily accessible, searchable version could empower cost-conscious patients.",
+          "why_now": "Transparency initiatives are topical, and repackaging public data into a user-friendly mobile interface can attract users at low cost, serving as an entry point for the broader service.",
+          "evidence_needed": "Check Minsa website traffic from mobile devices. Build a simple progressive web app that scrapes and displays the data; measure usage and user satisfaction in a public beta.",
+          "priority": "Low",
+          "risk": "Low barrier to entry—any competitor or the government itself can replicate the feature; not directly monetizable; may distract from the core OCR+referral value proposition."
+        },
+        {
+          "id": "gap_6",
+          "title": "Integration with telemedicine platforms for generic-first prescribing",
+          "pain": "Telemedicine consultations often result in brand-name prescriptions without considering patient cost. Neither doctors nor platforms systematically suggest affordable generics, leaving a gap in the care journey.",
+          "why_now": "Telemedicine usage is growing rapidly, and platforms seek differentiation. Embedding a generic suggestion tool at the point of prescription could improve patient satisfaction and adherence.",
+          "evidence_needed": "Form a pilot partnership with a small telemedicine provider (e.g., Doc24) to test an API that suggests generics during e-prescribing. Measure prescription fill rates and pharmacy referral conversion.",
+          "priority": "Medium",
+          "risk": "Regulatory restrictions on substitution suggestions; long B2B sales cycles; reliance on partner’s tech stack and willingness to integrate."
+        }
+      ],
+      "recommended_gap_id": "gap_1",
+      "checkpoint_instruction": "Validate core pain and behavior: interview 30 patients with recent prescriptions, observe their current price-comparison process, and test a clickable prototype of an OCR scan-to-price feature. Simultaneously, interview 5 pharmacy decision-makers (mix of chains and independents) to gauge real-time data sharing feasibility and willingness to pay per referral.",
+      "source": "llm"
+    },
+    "stage2b_iterations": {
+      "iterations": [
+        {
+          "id": "I1",
+          "angle": "ORIGINAL",
+          "idea_refined": "OCR-Receta Peru pivots from a general prescription-to-savings app into a real-time generic price and availability aggregator focused on independent pharmacies. When a patient uploads a prescription, the OCR instantly identifies the active ingredients, then the platform queries inventory and pricing from a network of independent pharmacies within a 5-km radius. Results rank the cheapest generic alternatives that are currently in stock, and the patient can reserve for pickup or get directions. Independent pharmacies gain a digital customer acquisition channel they lack against big chains, paying a small commission per successful referral. The wedge is narrow: we solve the aggregation and trust gap by validating real-time stock and guaranteeing the price at pickup, eliminating the need for patients to call multiple stores.",
+          "one_liner": "We aggregate real-time generic drug prices and stock across independent pharmacies in Peru, letting patients scan a prescription and lock in the cheapest nearby pickup in 60 seconds.",
+          "target_customer": "A 45-year-old diabetic in Lima who spends S/ 200 monthly on metformin and enalapril, and currently visits two or three pharmacies on foot every refill to save S/ 30–50.",
+          "core_problem": "Chronic patients in Peru overpay by 40–80% for branded medications because they have no way to compare real-time generic prices and availability without physically visiting multiple pharmacies—a 1–2 hour task they repeat every month, costing time, transport, and mental stress.",
+          "solution_hook": "Unlike generic price-comparison websites that list outdated reference prices with no stock data, we show live inventory from independent pharmacies and let patients reserve the exact product at the displayed price for guaranteed pickup.",
+          "why_this_angle": "Focusing on real-time aggregation for independent pharmacies creates a defensible supply-side network effect and addresses the highest-urgency gap in the market, turning a fragmented pain into a sticky daily habit for patients and a must-have customer acquisition channel for small pharmacies.",
+          "quick_score": {
+            "problem_acuity": 8,
+            "market_size": 7,
+            "founder_feasibility": 7,
+            "total": 22
+          },
+          "source": "llm"
+        },
+        {
+          "id": "I2",
+          "angle": "PIVOT_B2B",
+          "idea_refined": "A B2B platform for Peruvian health insurers, self-insured employers, and government health programs that aggregates real-time generic drug prices and availability across all pharmacy types. When an insured member or employee scans a prescription via OCR, the system instantly identifies the cheapest generic equivalent at a nearby pharmacy, steering the patient there for pickup. The institution pays a per-covered-life or per-transaction fee, cutting prescription benefit costs by up to 40% through redirected adherence, while the end user enjoys lower prices without sacrificing convenience.",
+          "one_liner": "We help Peruvian health insurers and self-insured employers slash prescription spending by up to 40% by instantly converting patient prescriptions into the cheapest available generic equivalent at a nearby pharmacy, via OCR and real-time price aggregation.",
+          "target_customer": "Pharmacy Benefits Manager at a Peruvian health insurance company (e.g., Pacífico, Rímac) or HR Director of a large employer with self-funded health benefits, tasked with controlling escalating drug costs but lacking real-time steering tools.",
+          "core_problem": "These institutions lose millions annually because patients fill branded prescriptions or don't know where generics are cheaper. Without dynamic, point-of-care guidance, 30–50% of drug claim costs are avoidable overspend—a daily structural drain that forces higher premiums and erodes trust.",
+          "solution_hook": "The only platform merging real-time, cross-pharmacy generic price aggregation (including independent pharmacies) with instant OCR prescription reading, enabling institutions to automatically steer patients to the lowest-cost option at the moment of need.",
+          "why_this_angle": "Selling to institutional payers with budget and urgent cost pressure aligns incentives: they save money, patients save money, and adoption is faster than a commission-based B2B2C model. The recurring SaaS model scales with covered lives, directly tackling a top-priority pain point.",
+          "quick_score": {
+            "problem_acuity": 9,
+            "market_size": 8,
+            "founder_feasibility": 7,
+            "total": 24
+          },
+          "source": "llm"
+        },
+        {
+          "id": "I3",
+          "angle": "PIVOT_WEDGE",
+          "idea_refined": "A hyper-local WhatsApp chatbot for diabetic patients in Lima's Comas district who need monthly refills of metformin and insulin. Users photograph their prescription and send it via WhatsApp; OCR extracts the drugs and queries real-time price and stock data from a handpicked network of 10 independent pharmacies that update daily via a simple form. The bot instantly returns the cheapest generic option nearby. Patients pay S/2 per search via Yape, validating direct willingness to pay. The wedge deliberately narrows scope to one disease, one area, and one drug category to prove demand in 30 days.",
+          "one_liner": "We help diabetic patients in Comas find the cheapest monthly diabetes medication using a WhatsApp OCR chatbot, charging per search.",
+          "target_customer": "A 55-year-old diabetic patient in Comas spending S/150 monthly on metformin and insulin, who currently calls or visits 3–4 pharmacies each month to compare prices, losing time and overpaying.",
+          "core_problem": "Monthly medication shopping consumes 2–3 hours and S/10–15 in transport, with patients often overpaying by S/30–50 because real-time generic prices are opaque across pharmacies. The annual cost of this friction exceeds S/500, and skipped doses due to high prices pose health risks.",
+          "solution_hook": "Real-time price and stock aggregation from a curated pharmacy network, delivered via a WhatsApp bot with OCR and integrated payment, reducing a 2-hour chore to a 30-second, money-saving action.",
+          "why_this_angle": "By tackling one segment with high-frequency, predictable need and manually onboarding a handful of pharmacies and patients, we can test direct payment willingness and gather undeniable evidence of demand in 30 days, before building scalable infrastructure.",
+          "quick_score": {
+            "problem_acuity": 9,
+            "market_size": 2,
+            "founder_feasibility": 9,
+            "total": 20
+          },
+          "source": "llm"
+        }
+      ],
+      "recommended_iteration_id": "I2",
+      "recommended_one_liner": "We help Peruvian health insurers and self-insured employers slash prescription spending by up to 40% by instantly converting patient prescriptions into the cheapest available generic equivalent at a nearby pharmacy, via OCR and real-time price aggregation.",
+      "source": "parallel_iteration"
+    },
+    "stage3_validations": [
+      {
+        "idea": "OCR-Receta Peru: Real-time generic price and availability aggregator for independent pharmacies in Peru.",
+        "selected_gap": {
+          "id": "gap_1",
+          "title": "Real-time generic price & availability aggregation across all pharmacy types",
+          "pain": "Patients waste time manually calling or visiting multiple pharmacies to compare generic prices, often settling for higher prices due to lack of real-time, consolidated information. No existing solution combines OCR-based prescription scanning with live inventory and pricing from both chains and independent pharmacies.",
+          "why_now": "Smartphone adoption in Peru is high, and the success of GoodRx abroad validates the model. Local attempts (RecetaFácil) show early traction but lack scale, leaving a wide gap for a better-executed aggregator.",
+          "evidence_needed": "Survey 100 prescription holders on current price-comparison behaviors and willingness to switch. Build an MVP with 3 pharmacy partners to test real-time data integration feasibility and user satisfaction.",
+          "priority": "High",
+          "risk": "Pharmacy partners may not provide accurate real-time data; scaling partnerships across many independents is resource-intensive; large chains may block integration."
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 5,
+            "note": "No founder background provided; assumed average domain knowledge."
+          },
+          {
+            "criterion": "Market size",
+            "score": 6,
+            "note": "Peru pharmacy market is substantial but fragmented; TAM likely in hundreds of millions."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 8,
+            "note": "Patients actively suffer from time wasted calling multiple pharmacies; high pain."
+          },
+          {
+            "criterion": "Competition",
+            "score": 6,
+            "note": "GoodRx and local attempts exist but none dominate; opportunity for better execution."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 5,
+            "note": "No personal connection indicated."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 8,
+            "note": "High smartphone penetration, OCR tech mature, GoodRx validates model."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 7,
+            "note": "GoodRx proves prescription savings apps work globally."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 5,
+            "note": "No evidence of long-term commitment from founder."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 7,
+            "note": "Model can expand to multiple cities and countries via pharmacy network."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 7,
+            "note": "Healthcare aggregation is a validated space with clear monetization."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 8,
+            "note": "Pivot from general app to focused aggregator shows action."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 7,
+            "note": "Pivot indicates commitment to this single idea."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 8,
+            "note": "OCR prescription scanning and real-time inventory integration show deep workflow understanding."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 6,
+            "note": "Uses OCR and real-time search, but not cutting-edge AI."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 7,
+            "note": "Sells savings and convenience, not just software."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 8,
+            "note": "Aims to aggregate all independent pharmacies in Peru."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 5,
+            "note": "Not discussed; no evidence of structured learning from failures."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 7,
+            "note": "Pharmacy pricing is low-trust; domain expertise required."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 7,
+            "note": "Real-time validation and price guarantee are core to the product."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 7,
+            "note": "Narrow focus on independents avoids overreach."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 8,
+            "note": "Commission per successful referral aligns with outcomes."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 6,
+            "note": "Data acquisition costs from pharmacies need careful management."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 7,
+            "note": "Building a new platform rather than adding AI to old systems."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 7,
+            "note": "Pharma domain, OCR model, and operations for real-time data are addressed."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 25,
+            "score": 5,
+            "weighted": 1.25,
+            "rationale": "No specific founder info; average team assumed."
+          },
+          {
+            "dimension": "Market",
+            "weight": 20,
+            "score": 6,
+            "weighted": 1.2,
+            "rationale": "Peru pharmacy market is large but not >$1B; growing with smartphone adoption."
+          },
+          {
+            "dimension": "Product",
+            "weight": 15,
+            "score": 6,
+            "weighted": 0.9,
+            "rationale": "Defensible moat from pharmacy network and real-time data, but replicable."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 15,
+            "score": 2,
+            "weighted": 0.3,
+            "rationale": "No traction yet; only idea stage."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 10,
+            "score": 5,
+            "weighted": 0.5,
+            "rationale": "Commission model is viable but LTV:CAC unproven."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 8,
+            "score": 5,
+            "weighted": 0.4,
+            "rationale": "GoodRx and local players exist; differentiation unclear."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 5,
+            "score": 3,
+            "weighted": 0.15,
+            "rationale": "No financial data; burn rate and runway unknown."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 2,
+            "score": 4,
+            "weighted": 0.08,
+            "rationale": "Pharmacy data accuracy and scaling partnerships are key risks."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 4.78,
+          "verdict": "DECLINE",
+          "conditions_if_conditional": null
+        },
+        "go_no_go": "NO_GO",
+        "decision": "Based on VC rubric composite score below 5.0, the idea is not ready for investment. Founders should first validate with surveys and an MVP with 3 pharmacy partners.",
+        "next_experiments": [
+          "Survey 100 prescription holders to quantify willingness to use the service and current pain points.",
+          "Build an MVP integrating with 3 independent pharmacies to test real-time data feasibility and user satisfaction.",
+          "Identify and interview 10 pharmacy owners to understand willingness to pay commission and data integration challenges."
+        ],
+        "kill_criteria": [
+          "If unable to secure at least 3 pharmacy partners for MVP within 2 months.",
+          "If survey shows <30% of patients would switch from current method.",
+          "If real-time data accuracy from pharmacies is below 80% in MVP tests."
+        ],
+        "source": "llm",
+        "_iteration_id": "I1",
+        "_iteration_angle": "ORIGINAL",
+        "_iteration_one_liner": "We aggregate real-time generic drug prices and stock across independent pharmacies in Peru, letting patients scan a prescription and lock in the cheapest nearby pickup in 60 seconds."
+      },
+      {
+        "idea": "A B2B platform for Peruvian health insurers, self-insured employers, and government health programs that aggregates real-time generic drug prices and availability across all pharmacy types. When an insured member or employee scans a prescription via OCR, the system instantly identifies the cheapest generic equivalent at a nearby pharmacy, steering the patient there for pickup. The institution pays a per-covered-life or per-transaction fee, cutting prescription benefit costs by up to 40% through redirected adherence, while the end user enjoys lower prices without sacrificing convenience.",
+        "selected_gap": {
+          "id": "gap_1",
+          "title": "Real-time generic price & availability aggregation across all pharmacy types",
+          "pain": "Patients waste time manually calling or visiting multiple pharmacies to compare generic prices, often settling for higher prices due to lack of real-time, consolidated information. No existing solution combines OCR-based prescription scanning with live inventory and pricing from both chains and independent pharmacies.",
+          "why_now": "Smartphone adoption in Peru is high, and the success of GoodRx abroad validates the model. Local attempts (RecetaFácil) show early traction but lack scale, leaving a wide gap for a better-executed aggregator.",
+          "evidence_needed": "Survey 100 prescription holders on current price-comparison behaviors and willingness to switch. Build an MVP with 3 pharmacy partners to test real-time data integration feasibility and user satisfaction.",
+          "priority": "High",
+          "risk": "Pharmacy partners may not provide accurate real-time data; scaling partnerships across many independents is resource-intensive; large chains may block integration."
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 6,
+            "note": "No specific founder background provided; assumes healthcare/pharma domain knowledge needed. Without evidence of deep industry ties or prior experience, this is a moderate risk."
+          },
+          {
+            "criterion": "Market size",
+            "score": 8,
+            "note": "Peru's healthcare spending is significant; generic drug market is large and growing. TAM likely >$1B, but need precise figures."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 9,
+            "note": "Patients actively suffer from high drug costs and inconvenience; insurers want cost reduction. Pain is clear and urgent."
+          },
+          {
+            "criterion": "Competition",
+            "score": 5,
+            "note": "Local attempts (RecetaFácil) exist but lack scale; GoodRx is US-only. However, pharmacy chains may resist, and independent pharmacies may lack tech capabilities."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 7,
+            "note": "Founder likely has personal experience or strong interest; B2B model aligns with institutional buyers. But more evidence needed."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 8,
+            "note": "High smartphone penetration, OCR technology, and real-time API capabilities make this feasible now. GoodRx success validates demand."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 8,
+            "note": "GoodRx is a direct proxy in a different market; similar models in other verticals (e.g., travel aggregators) show this model works."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 6,
+            "note": "Healthcare partnerships and pharmacy integrations take time; founder needs multi-year commitment. Unclear if that exists."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 7,
+            "note": "Platform model scales well across Peru and potentially other LatAm countries. But dependency on pharmacy partnerships could slow expansion."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 8,
+            "note": "Addresses a real pain with a clear value proposition. Good balance of B2B revenue and consumer benefit."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 8,
+            "note": "Idea is actionable; MVP with 3 pharmacies can start immediately. Founder should not over-optimize."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 5,
+            "note": "Unclear if founder is fully committed to this single idea. Need to avoid splitting focus."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 7,
+            "note": "OCR-based prescription scanning integrates into patient and insurer workflows. But need to fully understand pharmacy and insurer back-end processes."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 6,
+            "note": "OCR is a standard AI application; real-time aggregation is more API integration than cutting-edge AI. Could leverage AI for price prediction, but not core."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 9,
+            "note": "Clear outcome: reduce prescription costs by 40%. B2B pricing tied to savings aligns perfectly."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 7,
+            "note": "Aggregating all pharmacy types in Peru is ambitious, but starting with major chains and independents is sensible."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 5,
+            "note": "No evidence of structured experimentation yet. Founder should plan for systematic A/B testing of partnership models."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 8,
+            "note": "Healthcare is low-trust; expertise in pharma supply chain and insurance is critical. This fits."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 6,
+            "note": "Operational excellence in data aggregation and partner management is key, but not yet proven."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 7,
+            "note": "Per-transaction or per-covered-life pricing aligns with usage; avoid upfront commitments until value is proven."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 9,
+            "note": "Per-covered-life or per-transaction fee directly ties to value. Excellent alignment."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 6,
+            "note": "Variable costs include API fees, support, and pharmacy incentives. Need to ensure margins >60% as SaaS-like."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 7,
+            "note": "OCR and real-time aggregation are new; not bolting AI onto legacy systems. But reliance on existing pharmacy systems may be a challenge."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 6,
+            "note": "Requires deep domain knowledge in pharma, insurance, and logistics. Unclear if team has it all."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 0.25,
+            "score": 6,
+            "weighted": 1.5,
+            "rationale": "No specific team info; but domain expertise in Peruvian healthcare and pharmacy is critical. Without it, execution risk is high."
+          },
+          {
+            "dimension": "Market",
+            "weight": 0.2,
+            "score": 8,
+            "weighted": 1.6,
+            "rationale": "TAM likely >$1B (Peru healthcare spend), growing with chronic diseases and generic adoption. Timing is right due to digital transformation."
+          },
+          {
+            "dimension": "Product",
+            "weight": 0.15,
+            "score": 7,
+            "weighted": 1.05,
+            "rationale": "Defensible moat comes from real-time data integration across many pharmacies and OCR workflow. But scalable partnerships are hard to replicate."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 0.15,
+            "score": 3,
+            "weighted": 0.45,
+            "rationale": "No tangible traction yet; only evidence needed is survey and MVP. Pre-revenue with no letters of intent or pilots."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 0.1,
+            "score": 8,
+            "weighted": 0.8,
+            "rationale": "Per-covered-life or per-transaction fees provide recurring revenue; potential for high margins if variable costs are low. LTV:CAC likely >3x if cost-effective acquisition."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 0.08,
+            "score": 5,
+            "weighted": 0.4,
+            "rationale": "Local players like RecetaFácil exist; large chains may build in-house; GoodRx could expand. Need clear differentiation and faster execution."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 0.05,
+            "score": 4,
+            "weighted": 0.2,
+            "rationale": "Burn rate unknown; likely need significant funds for partnerships and technology. Assuming 18+ months runway if funding secured."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 0.02,
+            "score": 4,
+            "weighted": 0.08,
+            "rationale": "Major risks: pharmacy partner data accuracy, scaling independents, regulatory (drug pricing transparency in Peru). High execution risk."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 6.08,
+          "verdict": "CONDITIONAL_PASS",
+          "reason": "Needs improvement on: traction",
+          "weak_dims": [
+            "traction"
+          ],
+          "disqualifying_dims": [],
+          "investor_lenses": {
+            "sequoia": "PASS",
+            "yc": "FAIL",
+            "tiger_global": "WATCH",
+            "risk_mgmt": "CRITICAL"
+          },
+          "source": "deterministic_vc_calcs"
+        },
+        "go_no_go": "CONDITIONAL_GO",
+        "decision": "Proceed with validation experiments but require founder to prove partnership traction and domain knowledge before committing full resources.",
+        "next_experiments": [
+          "Conduct 100+ surveys with prescription holders and 20+ interviews with insurance procurement managers.",
+          "Build a prototype with 1-2 pharmacy partners to test real-time data integration and OCR accuracy.",
+          "Run a pilot with one self-insured employer to measure cost savings and user adoption."
+        ],
+        "kill_criteria": [
+          "No pharmacy partner willing to share real-time pricing data after 3 months of outreach.",
+          "Insurers express no willingness to pay per-covered-life fees, only one-time discounts.",
+          "Survey shows >60% of prescription holders unwilling to switch pharmacy for generics."
+        ],
+        "source": "llm",
+        "_iteration_id": "I2",
+        "_iteration_angle": "PIVOT_B2B",
+        "_iteration_one_liner": "We help Peruvian health insurers and self-insured employers slash prescription spending by up to 40% by instantly converting patient prescriptions into the cheapest available generic equivalent at a nearby pharmacy, via OCR and real-time price aggregation."
+      },
+      {
+        "idea": {
+          "one_liner": "A hyper-local WhatsApp chatbot for diabetic patients in Lima's Comas district to find and compare real-time prices of metformin and insulin from nearby independent pharmacies.",
+          "selected_gap": {
+            "id": "gap_1",
+            "title": "Real-time generic price & availability aggregation across all pharmacy types",
+            "pain": "Patients waste time manually calling or visiting multiple pharmacies to compare generic prices, often settling for higher prices due to lack of real-time, consolidated information.",
+            "why_now": "Smartphone adoption in Peru is high, and the success of GoodRx abroad validates the model. Local attempts show early traction but lack scale.",
+            "evidence_needed": "Survey 100 prescription holders on current price-comparison behaviors and willingness to switch. Build an MVP with 3 pharmacy partners to test real-time data integration feasibility and user satisfaction.",
+            "priority": "High",
+            "risk": "Pharmacy partners may not provide accurate real-time data; scaling partnerships across many independents is resource-intensive; large chains may block integration."
+          }
+        },
+        "friedman_scores": [
+          {
+            "criterion": "Founder-market fit",
+            "score": 5,
+            "note": "No founder background provided; assume average domain knowledge."
+          },
+          {
+            "criterion": "Market size",
+            "score": 3,
+            "note": "Extremely narrow: one disease, one district. TAM negligible."
+          },
+          {
+            "criterion": "Problem acuity",
+            "score": 6,
+            "note": "Real pain for diabetics, but not life-threatening; workaround exists."
+          },
+          {
+            "criterion": "Competition",
+            "score": 7,
+            "note": "No dominant local player; GoodRx only in US."
+          },
+          {
+            "criterion": "Personal pull",
+            "score": 4,
+            "note": "No evidence founder has personal connection to the problem."
+          },
+          {
+            "criterion": "Recently possible or necessary",
+            "score": 5,
+            "note": "OCR and WhatsApp are mature; Yape payments are new but not transformative."
+          },
+          {
+            "criterion": "Successful proxies",
+            "score": 6,
+            "note": "GoodRx works in US, but local attempts show only early traction."
+          },
+          {
+            "criterion": "Years-long commitment",
+            "score": 3,
+            "note": "Narrow scope limits long-term potential; likely a feature, not a company."
+          },
+          {
+            "criterion": "Scalability",
+            "score": 2,
+            "note": "Hyper-local by design; scaling to other diseases/areas is capital-intensive."
+          },
+          {
+            "criterion": "Good idea space",
+            "score": 5,
+            "note": "Healthcare price transparency is a valid space, but crowded and hard to monetize."
+          }
+        ],
+        "yc_rule_scores": [
+          {
+            "criterion": "Do not wait for the perfect idea",
+            "score": 8,
+            "note": "They are launching a narrow, scoped idea quickly."
+          },
+          {
+            "criterion": "Burn the boats",
+            "score": 7,
+            "note": "Focusing on one disease, one district avoids distraction."
+          },
+          {
+            "criterion": "Go deep into customer workflow",
+            "score": 7,
+            "note": "Using WhatsApp and OCR aligns with patient behavior."
+          },
+          {
+            "criterion": "Build at the edge of AI",
+            "score": 4,
+            "note": "OCR is basic; no advanced AI differentiation."
+          },
+          {
+            "criterion": "Sell outcomes, not tools",
+            "score": 6,
+            "note": "Selling cost savings per search, not software license."
+          },
+          {
+            "criterion": "Choose ambitious scope",
+            "score": 3,
+            "note": "Scope is too narrow for a big startup."
+          },
+          {
+            "criterion": "Treat failure as structured data",
+            "score": 5,
+            "note": "Could learn about pharmacy data reliability, but uncertain."
+          },
+          {
+            "criterion": "Pick low-trust, high-expertise markets",
+            "score": 6,
+            "note": "Healthcare is low-trust, but expertise needed in pharmacy logistics."
+          },
+          {
+            "criterion": "The process is the product",
+            "score": 4,
+            "note": "Simple chatbot interface; process is not proprietary."
+          },
+          {
+            "criterion": "Avoid early-demand trap",
+            "score": 7,
+            "note": "Charging per search provides early revenue signal."
+          },
+          {
+            "criterion": "Price per unit or result",
+            "score": 8,
+            "note": "Clear unit pricing (S/2 per search)."
+          },
+          {
+            "criterion": "Obsess over COGS",
+            "score": 8,
+            "note": "Digital product, low marginal cost."
+          },
+          {
+            "criterion": "Do not bolt AI onto legacy",
+            "score": 6,
+            "note": "New solution, not legacy integration."
+          },
+          {
+            "criterion": "Cover domain, model, and operations fluency",
+            "score": 5,
+            "note": "Requires pharmacy operations knowledge; not demonstrated."
+          }
+        ],
+        "vc_rubric_scores": [
+          {
+            "dimension": "Team",
+            "weight": 25,
+            "score": 3,
+            "weighted": 0.75,
+            "rationale": "No evidence of domain expertise or relevant background."
+          },
+          {
+            "dimension": "Market",
+            "weight": 20,
+            "score": 3,
+            "weighted": 0.6,
+            "rationale": "Hyper-local niche with TAM far below $1B; limited growth potential."
+          },
+          {
+            "dimension": "Product",
+            "weight": 15,
+            "score": 4,
+            "weighted": 0.6,
+            "rationale": "Low defensibility; OCR and WhatsApp are easily replicated."
+          },
+          {
+            "dimension": "Traction",
+            "weight": 15,
+            "score": 2,
+            "weighted": 0.3,
+            "rationale": "Pre-revenue, no users or partners; only a plan to test in 30 days."
+          },
+          {
+            "dimension": "Business Model",
+            "weight": 10,
+            "score": 4,
+            "weighted": 0.4,
+            "rationale": "Low price point (S/2 per search) and uncertain frequency; unlikely to achieve 3x LTV:CAC."
+          },
+          {
+            "dimension": "Competition",
+            "weight": 8,
+            "score": 4,
+            "weighted": 0.32,
+            "rationale": "Existing aggregators (RecetaFácil) and manual alternatives; no clear advantage."
+          },
+          {
+            "dimension": "Financials",
+            "weight": 5,
+            "score": 5,
+            "weighted": 0.25,
+            "rationale": "Minimal burn but no revenue; runway not specified but assumed short."
+          },
+          {
+            "dimension": "Risk Profile",
+            "weight": 2,
+            "score": 4,
+            "weighted": 0.08,
+            "rationale": "High dependency on pharmacy data accuracy and user adoption."
+          }
+        ],
+        "vc_verdict": {
+          "composite_score": 3.3,
+          "verdict": "DECLINE",
+          "conditions_if_conditional": null
+        },
+        "go_no_go": "No go",
+        "decision": "Reject this idea due to extremely narrow market, low defensibility, and lack of team traction. The hyper-local focus may be a useful experiment but does not justify VC investment at this stage.",
+        "next_experiments": [
+          "Expand scope to all prescriptions in one district to test TAM.",
+          "Partner with at least 20 pharmacies before committing to a paid pilot.",
+          "Survey 100 diabetics to validate willingness to pay (S/2 per search) beyond early adopters."
+        ],
+        "kill_criteria": [
+          "No pharmacy partner agreements signed within 30 days.",
+          "Less than 50 paying searches within the first 60 days.",
+          "Churn (repeat usage) rate below 10% after first search."
+        ],
+        "source": "llm",
+        "_iteration_id": "I3",
+        "_iteration_angle": "PIVOT_WEDGE",
+        "_iteration_one_liner": "We help diabetic patients in Comas find the cheapest monthly diabetes medication using a WhatsApp OCR chatbot, charging per search."
+      }
+    ],
+    "stage3_winner_iteration": {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "A B2B platform for Peruvian health insurers, self-insured employers, and government health programs that aggregates real-time generic drug prices and availability across all pharmacy types. When an insured member or employee scans a prescription via OCR, the system instantly identifies the cheapest generic equivalent at a nearby pharmacy, steering the patient there for pickup. The institution pays a per-covered-life or per-transaction fee, cutting prescription benefit costs by up to 40% through redirected adherence, while the end user enjoys lower prices without sacrificing convenience.",
+      "one_liner": "We help Peruvian health insurers and self-insured employers slash prescription spending by up to 40% by instantly converting patient prescriptions into the cheapest available generic equivalent at a nearby pharmacy, via OCR and real-time price aggregation.",
+      "target_customer": "Pharmacy Benefits Manager at a Peruvian health insurance company (e.g., Pacífico, Rímac) or HR Director of a large employer with self-funded health benefits, tasked with controlling escalating drug costs but lacking real-time steering tools.",
+      "core_problem": "These institutions lose millions annually because patients fill branded prescriptions or don't know where generics are cheaper. Without dynamic, point-of-care guidance, 30–50% of drug claim costs are avoidable overspend—a daily structural drain that forces higher premiums and erodes trust.",
+      "solution_hook": "The only platform merging real-time, cross-pharmacy generic price aggregation (including independent pharmacies) with instant OCR prescription reading, enabling institutions to automatically steer patients to the lowest-cost option at the moment of need.",
+      "why_this_angle": "Selling to institutional payers with budget and urgent cost pressure aligns incentives: they save money, patients save money, and adoption is faster than a commission-based B2B2C model. The recurring SaaS model scales with covered lives, directly tackling a top-priority pain point.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 8,
+        "founder_feasibility": 7,
+        "total": 24
+      },
+      "source": "llm"
+    },
+    "stage3_validation": {
+      "idea": "A B2B platform for Peruvian health insurers, self-insured employers, and government health programs that aggregates real-time generic drug prices and availability across all pharmacy types. When an insured member or employee scans a prescription via OCR, the system instantly identifies the cheapest generic equivalent at a nearby pharmacy, steering the patient there for pickup. The institution pays a per-covered-life or per-transaction fee, cutting prescription benefit costs by up to 40% through redirected adherence, while the end user enjoys lower prices without sacrificing convenience.",
+      "selected_gap": {
+        "id": "gap_1",
+        "title": "Real-time generic price & availability aggregation across all pharmacy types",
+        "pain": "Patients waste time manually calling or visiting multiple pharmacies to compare generic prices, often settling for higher prices due to lack of real-time, consolidated information. No existing solution combines OCR-based prescription scanning with live inventory and pricing from both chains and independent pharmacies.",
+        "why_now": "Smartphone adoption in Peru is high, and the success of GoodRx abroad validates the model. Local attempts (RecetaFácil) show early traction but lack scale, leaving a wide gap for a better-executed aggregator.",
+        "evidence_needed": "Survey 100 prescription holders on current price-comparison behaviors and willingness to switch. Build an MVP with 3 pharmacy partners to test real-time data integration feasibility and user satisfaction.",
+        "priority": "High",
+        "risk": "Pharmacy partners may not provide accurate real-time data; scaling partnerships across many independents is resource-intensive; large chains may block integration."
+      },
+      "friedman_scores": [
+        {
+          "criterion": "Founder-market fit",
+          "score": 6,
+          "note": "No specific founder background provided; assumes healthcare/pharma domain knowledge needed. Without evidence of deep industry ties or prior experience, this is a moderate risk."
+        },
+        {
+          "criterion": "Market size",
+          "score": 8,
+          "note": "Peru's healthcare spending is significant; generic drug market is large and growing. TAM likely >$1B, but need precise figures."
+        },
+        {
+          "criterion": "Problem acuity",
+          "score": 9,
+          "note": "Patients actively suffer from high drug costs and inconvenience; insurers want cost reduction. Pain is clear and urgent."
+        },
+        {
+          "criterion": "Competition",
+          "score": 5,
+          "note": "Local attempts (RecetaFácil) exist but lack scale; GoodRx is US-only. However, pharmacy chains may resist, and independent pharmacies may lack tech capabilities."
+        },
+        {
+          "criterion": "Personal pull",
+          "score": 7,
+          "note": "Founder likely has personal experience or strong interest; B2B model aligns with institutional buyers. But more evidence needed."
+        },
+        {
+          "criterion": "Recently possible or necessary",
+          "score": 8,
+          "note": "High smartphone penetration, OCR technology, and real-time API capabilities make this feasible now. GoodRx success validates demand."
+        },
+        {
+          "criterion": "Successful proxies",
+          "score": 8,
+          "note": "GoodRx is a direct proxy in a different market; similar models in other verticals (e.g., travel aggregators) show this model works."
+        },
+        {
+          "criterion": "Years-long commitment",
+          "score": 6,
+          "note": "Healthcare partnerships and pharmacy integrations take time; founder needs multi-year commitment. Unclear if that exists."
+        },
+        {
+          "criterion": "Scalability",
+          "score": 7,
+          "note": "Platform model scales well across Peru and potentially other LatAm countries. But dependency on pharmacy partnerships could slow expansion."
+        },
+        {
+          "criterion": "Good idea space",
+          "score": 8,
+          "note": "Addresses a real pain with a clear value proposition. Good balance of B2B revenue and consumer benefit."
+        }
+      ],
+      "yc_rule_scores": [
+        {
+          "criterion": "Do not wait for the perfect idea",
+          "score": 8,
+          "note": "Idea is actionable; MVP with 3 pharmacies can start immediately. Founder should not over-optimize."
+        },
+        {
+          "criterion": "Burn the boats",
+          "score": 5,
+          "note": "Unclear if founder is fully committed to this single idea. Need to avoid splitting focus."
+        },
+        {
+          "criterion": "Go deep into customer workflow",
+          "score": 7,
+          "note": "OCR-based prescription scanning integrates into patient and insurer workflows. But need to fully understand pharmacy and insurer back-end processes."
+        },
+        {
+          "criterion": "Build at the edge of AI",
+          "score": 6,
+          "note": "OCR is a standard AI application; real-time aggregation is more API integration than cutting-edge AI. Could leverage AI for price prediction, but not core."
+        },
+        {
+          "criterion": "Sell outcomes, not tools",
+          "score": 9,
+          "note": "Clear outcome: reduce prescription costs by 40%. B2B pricing tied to savings aligns perfectly."
+        },
+        {
+          "criterion": "Choose ambitious scope",
+          "score": 7,
+          "note": "Aggregating all pharmacy types in Peru is ambitious, but starting with major chains and independents is sensible."
+        },
+        {
+          "criterion": "Treat failure as structured data",
+          "score": 5,
+          "note": "No evidence of structured experimentation yet. Founder should plan for systematic A/B testing of partnership models."
+        },
+        {
+          "criterion": "Pick low-trust, high-expertise markets",
+          "score": 8,
+          "note": "Healthcare is low-trust; expertise in pharma supply chain and insurance is critical. This fits."
+        },
+        {
+          "criterion": "The process is the product",
+          "score": 6,
+          "note": "Operational excellence in data aggregation and partner management is key, but not yet proven."
+        },
+        {
+          "criterion": "Avoid early-demand trap",
+          "score": 7,
+          "note": "Per-transaction or per-covered-life pricing aligns with usage; avoid upfront commitments until value is proven."
+        },
+        {
+          "criterion": "Price per unit or result",
+          "score": 9,
+          "note": "Per-covered-life or per-transaction fee directly ties to value. Excellent alignment."
+        },
+        {
+          "criterion": "Obsess over COGS",
+          "score": 6,
+          "note": "Variable costs include API fees, support, and pharmacy incentives. Need to ensure margins >60% as SaaS-like."
+        },
+        {
+          "criterion": "Do not bolt AI onto legacy",
+          "score": 7,
+          "note": "OCR and real-time aggregation are new; not bolting AI onto legacy systems. But reliance on existing pharmacy systems may be a challenge."
+        },
+        {
+          "criterion": "Cover domain, model, and operations fluency",
+          "score": 6,
+          "note": "Requires deep domain knowledge in pharma, insurance, and logistics. Unclear if team has it all."
+        }
+      ],
+      "vc_rubric_scores": [
+        {
+          "dimension": "Team",
+          "weight": 0.25,
+          "score": 6,
+          "weighted": 1.5,
+          "rationale": "No specific team info; but domain expertise in Peruvian healthcare and pharmacy is critical. Without it, execution risk is high."
+        },
+        {
+          "dimension": "Market",
+          "weight": 0.2,
+          "score": 8,
+          "weighted": 1.6,
+          "rationale": "TAM likely >$1B (Peru healthcare spend), growing with chronic diseases and generic adoption. Timing is right due to digital transformation."
+        },
+        {
+          "dimension": "Product",
+          "weight": 0.15,
+          "score": 7,
+          "weighted": 1.05,
+          "rationale": "Defensible moat comes from real-time data integration across many pharmacies and OCR workflow. But scalable partnerships are hard to replicate."
+        },
+        {
+          "dimension": "Traction",
+          "weight": 0.15,
+          "score": 3,
+          "weighted": 0.45,
+          "rationale": "No tangible traction yet; only evidence needed is survey and MVP. Pre-revenue with no letters of intent or pilots."
+        },
+        {
+          "dimension": "Business Model",
+          "weight": 0.1,
+          "score": 8,
+          "weighted": 0.8,
+          "rationale": "Per-covered-life or per-transaction fees provide recurring revenue; potential for high margins if variable costs are low. LTV:CAC likely >3x if cost-effective acquisition."
+        },
+        {
+          "dimension": "Competition",
+          "weight": 0.08,
+          "score": 5,
+          "weighted": 0.4,
+          "rationale": "Local players like RecetaFácil exist; large chains may build in-house; GoodRx could expand. Need clear differentiation and faster execution."
+        },
+        {
+          "dimension": "Financials",
+          "weight": 0.05,
+          "score": 4,
+          "weighted": 0.2,
+          "rationale": "Burn rate unknown; likely need significant funds for partnerships and technology. Assuming 18+ months runway if funding secured."
+        },
+        {
+          "dimension": "Risk Profile",
+          "weight": 0.02,
+          "score": 4,
+          "weighted": 0.08,
+          "rationale": "Major risks: pharmacy partner data accuracy, scaling independents, regulatory (drug pricing transparency in Peru). High execution risk."
+        }
+      ],
+      "vc_verdict": {
+        "composite_score": 6.08,
+        "verdict": "CONDITIONAL_PASS",
+        "reason": "Needs improvement on: traction",
+        "weak_dims": [
+          "traction"
+        ],
+        "disqualifying_dims": [],
+        "investor_lenses": {
+          "sequoia": "PASS",
+          "yc": "FAIL",
+          "tiger_global": "WATCH",
+          "risk_mgmt": "CRITICAL"
+        },
+        "source": "deterministic_vc_calcs"
+      },
+      "go_no_go": "CONDITIONAL_GO",
+      "decision": "Proceed with validation experiments but require founder to prove partnership traction and domain knowledge before committing full resources.",
+      "next_experiments": [
+        "Conduct 100+ surveys with prescription holders and 20+ interviews with insurance procurement managers.",
+        "Build a prototype with 1-2 pharmacy partners to test real-time data integration and OCR accuracy.",
+        "Run a pilot with one self-insured employer to measure cost savings and user adoption."
+      ],
+      "kill_criteria": [
+        "No pharmacy partner willing to share real-time pricing data after 3 months of outreach.",
+        "Insurers express no willingness to pay per-covered-life fees, only one-time discounts.",
+        "Survey shows >60% of prescription holders unwilling to switch pharmacy for generics."
+      ],
+      "source": "llm",
+      "_iteration_id": "I2",
+      "_iteration_angle": "PIVOT_B2B",
+      "_iteration_one_liner": "We help Peruvian health insurers and self-insured employers slash prescription spending by up to 40% by instantly converting patient prescriptions into the cheapest available generic equivalent at a nearby pharmacy, via OCR and real-time price aggregation."
+    },
+    "stage3b_simulation": {
+      "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+      "idea": "A B2B platform for Peruvian health insurers, self-insured employers, and government health programs that aggregates real-time generic drug prices and availability across all pharmacy types. When an insured member or employee scans a prescription via OCR, the system instantly identifies the cheapest generic equivalent at a nearby pharmacy, steering the patient there for pickup. The institution pays a per-covered-life or per-transaction fee, cutting prescription benefit costs by up to 40% through redirected adherence, while the end user enjoys lower prices without sacrificing convenience.",
+      "selected_gap": {
+        "id": "gap_1",
+        "title": "Real-time generic price & availability aggregation across all pharmacy types",
+        "pain": "Patients waste time manually calling or visiting multiple pharmacies to compare generic prices, often settling for higher prices due to lack of real-time, consolidated information. No existing solution combines OCR-based prescription scanning with live inventory and pricing from both chains and independent pharmacies.",
+        "why_now": "Smartphone adoption in Peru is high, and the success of GoodRx abroad validates the model. Local attempts (RecetaFácil) show early traction but lack scale, leaving a wide gap for a better-executed aggregator.",
+        "evidence_needed": "Survey 100 prescription holders on current price-comparison behaviors and willingness to switch. Build an MVP with 3 pharmacy partners to test real-time data integration feasibility and user satisfaction.",
+        "priority": "High",
+        "risk": "Pharmacy partners may not provide accurate real-time data; scaling partnerships across many independents is resource-intensive; large chains may block integration."
+      },
+      "personas": [
+        {
+          "id": "P1",
+          "role": "End user (target customer)",
+          "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+          "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+          "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+        },
+        {
+          "id": "P2",
+          "role": "Economic buyer with budget",
+          "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+          "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+          "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+        },
+        {
+          "id": "P3",
+          "role": "Operations / implementation owner",
+          "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+          "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+          "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+        },
+        {
+          "id": "P4",
+          "role": "Incumbent competitor or free substitute",
+          "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+          "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+          "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+        },
+        {
+          "id": "P5",
+          "role": "YC / LATAM VC partner",
+          "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+          "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+          "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+        },
+        {
+          "id": "P6",
+          "role": "Technical builder / CTO",
+          "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+          "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+          "default_objection": "The demo works, but production edge cases and data access will break it."
+        },
+        {
+          "id": "P7",
+          "role": "Peruvian SME buyer (informal sector)",
+          "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+          "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+          "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+        },
+        {
+          "id": "P8",
+          "role": "Peru institutional / public buyer (government or university)",
+          "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+          "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+          "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+        },
+        {
+          "id": "P9",
+          "role": "Peruvian Series A investor (local VC or family office)",
+          "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+          "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+          "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+        },
+        {
+          "id": "P10",
+          "role": "AI adoption skeptic (conservative professional in Peru)",
+          "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+          "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+          "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+        }
+      ],
+      "persona_results": [
+        {
+          "persona_id": "P1",
+          "role": "End user (target customer)",
+          "reaction": "This sounds promising. I often end up paying more for my prescriptions because I don't have time to call around. If this app can show me the best price nearby instantly and I can just pick up, it would save me both time and money. However, I worry about the accuracy of the price data and whether the pharmacies will honor the listed price.",
+          "concern": "The biggest concern is that the real-time prices shown in the app may not match the actual price at the pharmacy counter, leading to frustration and distrust.",
+          "evidence_request": "I need to see a demo or case study where the app accurately matched the price at a pharmacy for a real prescription, with evidence from independent validation or user testimonials.",
+          "score": 0.75,
+          "score_rationale": "The idea directly solves my pain of comparing drug prices and could save me significant money, but I need proof that the price data is accurate and reliable.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P10",
+          "role": "AI adoption skeptic (conservative professional in Peru)",
+          "reaction": "This idea sounds promising in theory, but I'm deeply skeptical about relying on AI to steer patients to pharmacies based on real-time prices. In Peru, many prescriptions are handwritten and OCR errors could lead to wrong medications, causing serious health risks. Also, independent pharmacies often lack accurate inventory systems, so the data may be unreliable.",
+          "concern": "The biggest risk is that OCR or real-time data errors could direct a patient to the wrong pharmacy or medication, potentially causing harm and legal liability, which would destroy trust in the platform.",
+          "evidence_request": "I need to see a live demo with at least 100 prescriptions (including handwritten ones) showing 99%+ OCR accuracy and real-time price matches verified by phone calls to independent pharmacies.",
+          "score": 0.15,
+          "score_rationale": "While the cost-saving potential is real, the combination of low AI trust in Peru and high-stakes healthcare decisions makes me very cautious; I'd need overwhelming evidence of near-perfect accuracy and verification processes.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P2",
+          "role": "Economic buyer with budget",
+          "reaction": "The idea of cutting prescription costs by 40% is tantalizing, but I'm wary of integration complexity with Peru's fragmented pharmacy market and the typical slow pace of B2B adoption. Without a proven pilot showing real savings within my budget quarter, I can't justify the procurement friction.",
+          "concern": "The risk that pharmacy partners fail to provide reliable real-time data, leading to inconsistent savings and member dissatisfaction, making the ROI unachievable in my budget cycle.",
+          "evidence_request": "A pilot with at least 3 self-insured employers or a health insurer in Peru showing a 20%+ cost reduction on a defined drug basket within 90 days, with verified data accuracy and member behavior change.",
+          "score": 0.4,
+          "score_rationale": "The potential savings are high, but the execution risk around data integration and adoption urgency is too great for me to commit budget without a concrete pilot demonstrating reliable, short-term ROI.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P3",
+          "role": "Operations / implementation owner",
+          "reaction": "From an operational standpoint, this platform requires deep integration with a fragmented pharmacy landscape and depends on real-time data accuracy, which is a high-risk execution challenge. The need to onboard and maintain data feeds from both large chains and independent pharmacies introduces significant coordination complexity and ongoing support load.",
+          "concern": "Reliability of real-time inventory and pricing data from independent pharmacies, which often lack digital systems, will create frequent data discrepancies that erode trust and increase support tickets.",
+          "evidence_request": "I need to see a pilot with at least 10 diverse pharmacies (including 5 independents) demonstrating >95% data accuracy over 30 days, and a clear integration plan for scaling without manual intervention.",
+          "score": 0.25,
+          "score_rationale": "While the value proposition is strong, the operational risk from data integration and partner coordination is too high for our current capabilities and would require disproportionate support resources.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P4",
+          "role": "Incumbent competitor or free substitute",
+          "reaction": "This idea faces a high barrier because large pharmacy chains like Inkafarma or Mifarma hold the data and have no incentive to share it with a platform that could drive customers to cheaper alternatives. They can easily block integration or launch their own app, protecting their margins.",
+          "concern": "Pharmacy chains will refuse to provide real-time pricing and inventory data, as it undermines their ability to control customer choices and maintain higher margins.",
+          "evidence_request": "A signed letter of intent from at least one of the top three pharmacy chains in Peru committing to provide real-time data integration.",
+          "score": 0.3,
+          "score_rationale": "As an incumbent, I see the startup's wedge as fragile because pharmacies can easily refuse cooperation or replicate the functionality, making the business model unviable without strong partnerships that are unlikely to materialize.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P5",
+          "role": "YC / LATAM VC partner",
+          "reaction": "The idea addresses a clear pain point with a proven model (GoodRx), but execution in Peru faces significant fragmentation. The B2B angle with insurers is smart, but I'm skeptical about the ability to aggregate real-time data from all pharmacy types, especially independents. The market size could be substantial if they nail partnerships, but the path to $10M ARR requires convincing multiple stakeholders.",
+          "concern": "The ability to secure real-time price and inventory data from both large chains and independent pharmacies, given their likely reluctance to share data and the technical complexity of integration.",
+          "evidence_request": "Signed letters of intent or pilot agreements with at least 2 health insurers and 10 pharmacies (including 3 chains and 7 independents) to prove initial traction and data access feasibility.",
+          "score": 0.55,
+          "score_rationale": "The idea has a sharp initial wedge and addresses a large total addressable market, but the high execution risk in partnership building and data integration limits confidence in achieving $10M ARR.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P6",
+          "role": "Technical builder / CTO",
+          "reaction": "The idea has merit, but the technical hurdles are steep: aggregating real-time data from a fragmented pharmacy market, many without APIs, and handling OCR on Peruvian prescriptions (often handwritten, in Spanish) will require sophisticated engineering. The per-transaction model may not cover COGS unless scale is massive.",
+          "concern": "The biggest risk is that pharmacy partners, especially independents, cannot provide reliable real-time pricing and availability data, leading to a poor user experience and high integration maintenance costs.",
+          "evidence_request": "Show me a live demo of the MVP scanning 10 real prescriptions, each finding the cheapest generic at a nearby pharmacy with confirmed real-time inventory, using data from at least 2 major chains and 5 independent pharmacies.",
+          "score": 0.3,
+          "score_rationale": "While the problem is real and the business model plausible, the technical complexity of building a reliable, scalable data aggregation layer in a fragmented market makes me skeptical without strong initial evidence.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P7",
+          "role": "Peruvian SME buyer (informal sector)",
+          "reaction": "This sounds like a solution for big companies and insurers, not for my small business. I don't offer health insurance to my workers, so it doesn't address my cash flow or operational headaches. I wouldn't pay for something that doesn't directly help me manage costs or risks.",
+          "concern": "As an informal business owner, I have zero incentive to pay for a platform that benefits insured employees—I don't provide insurance, and even if my workers have SIS, I won't spend money to reduce their co-pays.",
+          "evidence_request": "Show me a simple WhatsApp-based painkiller price-check for my personal use that doesn't require me to sign up or pay—prove it saves me soles without any commitment.",
+          "score": 0.15,
+          "score_rationale": "The idea targets formal institutions, missing the informal SME's core pain of no health benefits and cash-only operations, so it's nearly irrelevant to my daily reality.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P8",
+          "role": "Peru institutional / public buyer (government or university)",
+          "reaction": "The idea addresses a real cost-saving opportunity, but as a public buyer, I cannot adopt a new platform without an existing budget code and a streamlined procurement path. The per-covered-life fee model would trigger a new competitive bidding process, delaying implementation by 12+ months.",
+          "concern": "This service does not map to any existing budget line item (e.g., 'farmacia' or 'software') and would require a new procurement category, which is incompatible with our zero-discretionary-budget and long-cycle constraints.",
+          "evidence_request": "Demonstrate that the service can be classified under an existing MINEDU or PRODUCE budget code (e.g., 'Servicios de Información' or 'Adquisición de Software') and that OSCE has approved similar procurement vehicles for comparable platforms.",
+          "score": 0.2,
+          "score_rationale": "Unless the platform fits seamlessly into an existing, approved budget category, the procurement barriers are insurmountable from a public institution standpoint.",
+          "source": "llm"
+        },
+        {
+          "persona_id": "P9",
+          "role": "Peruvian Series A investor (local VC or family office)",
+          "reaction": "The idea tackles a clear pain point and the B2B model with per-covered-life fees is compelling, but executing real-time data aggregation across Peru's fragmented pharmacy landscape is capital-intensive and partnership-dependent. I need to see a clear path to $1M ARR and international co-investor interest given our thin capital market.",
+          "concern": "Pharmacy chains may block integration or refuse to share real-time inventory data, and independents lack the infrastructure to participate, making the core value proposition unattainable in practice.",
+          "evidence_request": "Show signed letters of intent (LOIs) from at least two major pharmacy chains and one insurer willing to pilot the platform within 6 months.",
+          "score": 0.35,
+          "score_rationale": "The idea is validated by GoodRx's success, but the high partnership risk and small Peruvian market make it unlikely to reach $1M ARR and attract international co-investors without concrete commitments from key stakeholders.",
+          "source": "llm"
+        }
+      ],
+      "aggregate_score": 0.34,
+      "gate_passed": false,
+      "gate_threshold": 0.6,
+      "consensus": {
+        "aggregate_score": 0.34,
+        "gate_passed": false,
+        "gate_threshold": 0.6,
+        "top_concerns": [
+          "The biggest concern is that the real-time prices shown in the app may not match the actual price at the pharmacy counter, leading to frustration and distrust.",
+          "The biggest risk is that OCR or real-time data errors could direct a patient to the wrong pharmacy or medication, potentially causing harm and legal liability, which would destroy trust in the platform.",
+          "The risk that pharmacy partners fail to provide reliable real-time data, leading to inconsistent savings and member dissatisfaction, making the ROI unachievable in my budget cycle."
+        ],
+        "top_evidence_requests": [
+          "I need to see a demo or case study where the app accurately matched the price at a pharmacy for a real prescription, with evidence from independent validation or user testimonials.",
+          "I need to see a live demo with at least 100 prescriptions (including handwritten ones) showing 99%+ OCR accuracy and real-time price matches verified by phone calls to independent pharmacies.",
+          "A pilot with at least 3 self-insured employers or a health insurer in Peru showing a 20%+ cost reduction on a defined drug basket within 90 days, with verified data accuracy and member behavior change."
+        ],
+        "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+        "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+        "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+        "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+        "decision_pressure": "CONDITIONAL_GO"
+      },
+      "recommended_interventions": [
+        "Narrow the customer segment until the end user and buyer are obvious.",
+        "Run interviews around recent behavior, not opinions about the idea.",
+        "Prototype the outcome manually before building a scalable product.",
+        "Track what data or workflow insight compounds with each use."
+      ],
+      "source": "parallel_simulation"
+    },
+    "stage3c_dossier": {
+      "source": "deterministic_fallback",
+      "one_liner": "We help a specific customer segment solve 'Real-time generic price & availability aggregation across all pharmacy types' through a focused software/AI workflow.",
+      "problem": {
+        "who_suffers": "Define one specific user and one economic buyer. Avoid broad labels like 'everyone' or 'companies'.",
+        "pain_level": "Quantify hours lost, money lost, risk, errors, or missed revenue per month.",
+        "current_workaround": "Identify the real competitor: spreadsheet, WhatsApp, email, manual labor, incumbent, or doing nothing.",
+        "evidence_needed": "At least 5 interviews, screenshots, public data, or workflow artifacts."
+      },
+      "solution_insight": {
+        "solution": "A narrow workflow that produces an outcome the buyer already values.",
+        "insight": "The likely insight is not 'AI can do it'; it is that a repeated expert workflow can be compressed and standardized.",
+        "non_stack_note": "This dossier intentionally avoids frontend/backend stack because the correct stack changes by idea."
+      },
+      "why_now": [
+        "LLMs and agents can now execute and explain multi-step workflows cheaply.",
+        "Distribution through communities, outbound, and self-serve demos is faster for solo founders.",
+        "Users are more willing to try AI-native tools when the workflow is narrow and auditable."
+      ],
+      "market": {
+        "recommended_focus": "Start where the founder has fastest access to users and evidence; compare Peru, LATAM, and USA before committing.",
+        "regions": [
+          {
+            "region": "Peru",
+            "validity": "Potentially strong for problems with local regulation, Spanish workflows, public data, or underserved SMEs.",
+            "tam": "Estimate from national population, firms, households, sector output, or public expenditure.",
+            "sam": "Start with reachable cities, industries, institutions, or customer segments where the founder can sell.",
+            "som_12_months": "Use a bottom-up estimate: reachable leads x conversion rate x annual contract value.",
+            "recommended_sources": [
+              "INEI microdata and surveys",
+              "MEF budget data",
+              "BCRP statistics",
+              "sector associations",
+              "local interviews"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "venture_threshold": "BELOW_$500M",
+            "source": "deterministic_tam_calc"
+          },
+          {
+            "region": "LATAM",
+            "validity": "Attractive if the problem repeats across Spanish-speaking markets and does not require heavy country-by-country integration.",
+            "tam": "Estimate from regional sector size, number of firms, workers, students, patients, transactions, or institutions.",
+            "sam": "Prioritize countries with similar language, regulation, distribution, and payment behavior.",
+            "som_12_months": "Estimate expansion only after proving one repeatable channel in the first country.",
+            "recommended_sources": [
+              "World Bank",
+              "IDB",
+              "ECLAC/CEPAL",
+              "national statistics offices",
+              "industry reports"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "venture_threshold": "BELOW_$500M",
+            "source": "deterministic_tam_calc"
+          },
+          {
+            "region": "USA",
+            "validity": "Useful benchmark for market size and competitor density; attractive if willingness to pay is higher and distribution is reachable.",
+            "tam": "Estimate from US sector spend, number of businesses, paid seats, transactions, or workflow volume.",
+            "sam": "Narrow to a buyer segment the founder can actually reach through outbound, communities, or integrations.",
+            "som_12_months": "Use a conservative founder-led sales or self-serve acquisition model.",
+            "recommended_sources": [
+              "US Census",
+              "BLS",
+              "World Bank",
+              "Statista or industry reports",
+              "academic papers"
+            ],
+            "tam_topdown_usd": 0.0,
+            "tam_bottomup_usd": 0.0,
+            "tam_consensus_low": 0.0,
+            "tam_consensus_high": 0.0,
+            "sam_usd": 0.0,
+            "som_usd": 0.0,
+            "venture_threshold": "BELOW_$500M",
+            "source": "deterministic_tam_calc"
+          }
+        ],
+        "source_strategy": [
+          "Use INEI microdata for Peru when the market depends on households, employment, education, health, agriculture, firms, or municipalities.",
+          "Use MEF/BCRP for public budgets, macro indicators, credit, sector output, and Peru-specific economic framing.",
+          "Use World Bank/CEPAL/IDB for LATAM comparables.",
+          "Use papers and industry reports when the market is technical, clinical, educational, or scientific.",
+          "Use bottom-up SOM for the first 12 months; do not rely only on top-down TAM."
+        ]
+      },
+      "competition_moat": {
+        "alternatives_to_compare": [
+          "doing nothing",
+          "spreadsheet/manual workflow",
+          "horizontal SaaS",
+          "incumbent platform",
+          "AI assistant"
+        ],
+        "moat_candidates": [
+          "proprietary workflow data",
+          "distribution/community",
+          "integrations",
+          "trust/brand",
+          "regulatory or local-domain expertise"
+        ],
+        "weak_moat_warning": "If Claude/OpenAI can solve the job with a prompt, the startup needs a workflow, data, distribution, or compliance layer."
+      },
+      "business_model_pricing": {
+        "model_options": [
+          "monthly SaaS",
+          "usage-based",
+          "transaction fee",
+          "marketplace take rate",
+          "paid pilot",
+          "enterprise license"
+        ],
+        "pricing_rule": "Use no more than 3 plans and tie price to a buyer-visible outcome.",
+        "contribution_margin": "Estimate tokens/API calls, storage, human review, support, and acquisition cost per customer."
+      },
+      "go_to_market": {
+        "first_10": "Founder-led outreach to people with the exact painful workflow.",
+        "first_100": "Repeat the channel that produced the first paid or high-intent users.",
+        "first_1000": "Add scalable distribution: partnerships, integrations, content, community, marketplace, or PLG."
+      },
+      "traction_signals": [
+        "5+ interviews with recent pain stories",
+        "waitlist with qualified users",
+        "letters of intent or paid pilots",
+        "prototype usage by real users",
+        "before/after workflow evidence"
+      ],
+      "roadmap": {
+        "3_months": "Validate the wedge, ship concierge/prototype workflow, close first paying or high-intent users.",
+        "6_months": "Productize repeated steps, measure retention, build first repeatable acquisition channel.",
+        "12_months": "Expand to adjacent workflow or geography after proving retention and willingness to pay."
+      },
+      "risks_mitigations": [
+        {
+          "risk": "Market risk: users like the idea but do not have urgent pain.",
+          "mitigation": "Interview around recent behavior and require evidence of money/time/risk."
+        },
+        {
+          "risk": "AI substitution risk: Claude, OpenAI, or another foundation-model tool absorbs the feature.",
+          "mitigation": "Own workflow data, distribution, integrations, evaluation harnesses, and domain trust beyond the prompt."
+        },
+        {
+          "risk": "Execution risk: solo founder overbuilds before validation.",
+          "mitigation": "Run concierge tests and kill criteria before building broad product surface area."
+        }
+      ],
+      "the_ask": {
+        "amount": "Define a specific amount or resource ask only after the first validation sprint.",
+        "use_of_funds": [
+          "customer discovery",
+          "prototype",
+          "data acquisition",
+          "distribution experiments"
+        ],
+        "milestone": "Unlock proof that one segment has repeated pain and will pay for the outcome."
+      },
+      "product_demo_architecture": {
+        "demo_url": "TODO: deploy a public demo (Streamlit, Vercel, Railway, or Hugging Face Spaces)",
+        "demo_credentials": "TODO: add test user credentials once demo is live",
+        "main_flow_screenshots": [
+          "1. Landing / onboarding screen",
+          "2. Core input form or conversation entry",
+          "3. AI processing / loading state",
+          "4. Result / output screen",
+          "5. Export or share action",
+          "6. Settings or profile (optional)"
+        ],
+        "architecture_diagram": "Frontend (web/mobile) → API layer (FastAPI / Flask) → Orchestration (agent loop) → LLM API + domain data sources → Database (Postgres / SQLite) → Output / report",
+        "repo_structure": [
+          "frontend/  — UI (React / Streamlit / Vue)",
+          "backend/   — API + agent logic",
+          "ai/        — prompts, agents, pipelines",
+          "data/      — seed data, validation sets",
+          "notebooks/ — exploration and analysis",
+          "docs/      — architecture diagram, pitch assets"
+        ],
+        "ai_models_used": [
+          "deepseek-chat — fast, cheap inference for classification and structured extraction",
+          "deepseek-reasoner — multi-step reasoning for validation and scoring"
+        ]
+      },
+      "scorecard": [
+        {
+          "dimension": "problem_validation",
+          "points": 8,
+          "max_points": 15,
+          "note": "Promising only after 5 concrete user interviews prove recent painful behavior."
+        },
+        {
+          "dimension": "solution_insight",
+          "points": 6,
+          "max_points": 10,
+          "note": "Insight needs sharper wording around what existing alternatives miss."
+        },
+        {
+          "dimension": "market_quality",
+          "points": 7,
+          "max_points": 15,
+          "note": "Market sizing is not yet evidenced; compare Peru, LATAM, and USA before choosing focus."
+        },
+        {
+          "dimension": "competition_moat",
+          "points": 5,
+          "max_points": 10,
+          "note": "Moat is weak until workflow data, distribution, or community compounds."
+        },
+        {
+          "dimension": "business_model_pricing",
+          "points": 6,
+          "max_points": 10,
+          "note": "Pricing needs a concrete buyer metric and contribution margin assumptions."
+        },
+        {
+          "dimension": "go_to_market",
+          "points": 6,
+          "max_points": 10,
+          "note": "First 10 users can be founder-led; first 100 and 1,000 need a repeatable channel."
+        },
+        {
+          "dimension": "traction_or_evidence",
+          "points": 3,
+          "max_points": 10,
+          "note": "No traction provided in the input; require interviews, waitlist, pilots, or usage."
+        },
+        {
+          "dimension": "execution_roadmap",
+          "points": 7,
+          "max_points": 10,
+          "note": "A 3/6/12 month roadmap is feasible if the first wedge is narrow."
+        },
+        {
+          "dimension": "risk_control",
+          "points": 6,
+          "max_points": 10,
+          "note": "AI-platform substitution and weak demand are the main risks to control."
+        }
+      ],
+      "total_score": 54,
+      "max_score": 100,
+      "rating": "Needs sharper validation",
+      "external_research_hooks": {
+        "inei_microdatos": "Useful for Peru-specific TAM/SAM evidence from INEI surveys and variable search.",
+        "paperdl": "Useful for finding academic papers when the idea needs scientific, health, education, or technical evidence."
+      },
+      "pressure_test_scorecard": {
+        "pain_intensity": 3,
+        "buyer_clarity": 2,
+        "urgency": 3,
+        "differentiation": 2,
+        "speed_to_validate": 4,
+        "founder_advantage": 2,
+        "total": 16
+      },
+      "fatal_flaws": [
+        {
+          "risk": "Market risk: users like the idea but don't have urgent pain.",
+          "severity": "HIGH",
+          "why_it_matters": "No urgency = no switching from free alternatives.",
+          "fast_test": "5 interviews asking about last time this pain cost them time or money."
+        },
+        {
+          "risk": "Payment blocker: buyer can't pay via SaaS subscription given Peru's informal economy.",
+          "severity": "HIGH",
+          "why_it_matters": "No recurring billing = no SaaS business model.",
+          "fast_test": "Ask 3 target buyers if they have a credit card or Yape for business payments."
+        },
+        {
+          "risk": "Free substitute absorbs 80% of use case before product ships.",
+          "severity": "MEDIUM",
+          "why_it_matters": "WhatsApp + Excel + Google Forms are entrenched and free.",
+          "fast_test": "Map every step of the workflow to existing free tools; identify the gap."
+        }
+      ],
+      "first_10_customers": [
+        {
+          "action": "Send 20 WhatsApp voice messages to target buyers with a 2-sentence problem statement.",
+          "channel": "WhatsApp",
+          "target_persona": "Decision-maker in the target segment",
+          "how_to_reach": "Use LinkedIn to find names, then WhatsApp via shared group or mutual contact."
+        },
+        {
+          "action": "Run a 30-min Zoom demo for 5 warm contacts who already have this pain.",
+          "channel": "LinkedIn",
+          "target_persona": "Operators who currently use the manual workaround",
+          "how_to_reach": "Search LinkedIn for job title + pain keyword, send a connection note referencing the exact problem."
+        },
+        {
+          "action": "Attend one industry event or WhatsApp group where target buyers gather.",
+          "channel": "community",
+          "target_persona": "Any buyer who attends sector events or online communities",
+          "how_to_reach": "Join the WhatsApp group, post a pain-question (not a pitch), DM respondents."
+        }
+      ],
+      "mvp_2_week_test": {
+        "build": "A single-workflow prototype: one input, one output — no dashboard, no settings.",
+        "cut": "Authentication, billing, multi-user, reporting, and any feature beyond the core workflow.",
+        "test_hypothesis": "If 3 of 5 demo users complete the workflow without help and ask 'when can I use this?', demand is real.",
+        "success_signal": "At least 1 user offers to pay or signs a letter of intent within 2 weeks."
+      },
+      "llm_note": "LLM returned empty response; deterministic fallback used."
+    },
+    "stage4_report": {
+      "path": "E:\\github\\hw7_ds\\ai\\validation_agents\\outputs\\ocr-receta-peru-app-donde-el-pac-1b34af9d37\\report.md",
+      "markdown": "# Startup Idea Validation Report\n\nGenerated: 2026-06-21T16:23:22.156630+00:00\n\n## Original Idea\nOCR-Receta Peru: app donde el paciente fotografa su receta medica, el sistema extrae los medicamentos via OCR y muestra el generico equivalente mas barato en farmacia cercana por GPS, con modelo de negocio B2B donde farmacias pagan comision por cada cliente derivado.\n\n---\n\n## Stage 0 — Idea Classification (Pit Check)\n\n**Type:** PAINKILLER | **Vertical:** HealthTech | **Customer:** B2B2C | **Severity:** RECURRING\n\n**Verdict:** ⚠ WARN | **Devil's advocate:** ⚠ WEAK | **Freemium:** ✗ NO\n\nPeruvian patients face a recurring financial and health burden from expensive branded medications, with manual workarounds. Pharmacies actively seek customer acquisition channels and are willing to pay per lead. The B2B commission model aligns incentives and fits local payment realities.\n\n**Green flags (painkiller signals):**\n  - Active workarounds exist (manual comparison or relying on pharmacy staff)\n  - Spending already happens on imperfect solutions (paying more for branded drugs)\n  - Recurring pain: every prescription fill\n  - Measurable cost: potential savings on generic equivalents\n\n**Red flags (devil's advocate):**\n  - Patient behavior change is high: Most patients ask the pharmacist directly for the cheapest option, a free and instantaneous workaround. The app requires downloading, photographing a prescription, and trusting OCR to show prices — a multi-step process that adds friction over the habitual 'just ask' loop.\n  - Pharmacy willingness to pay is dubious: In Peru, the pharmacy industry is dominated by large chains (Inkafarma, Mifarma) with thin margins and existing loyalty programs (e.g., Inkafarma's 'Puntos Beneficio'). They are unlikely to pay a commission per customer when they already attract foot traffic. Small bodega pharmacies operate on even tighter margins and see no value in paying for inbound traffic they already have.\n  - OCR on handwritten Peruvian prescriptions is unreliable: Prescriptions are often handwritten with varying legibility, using brand names (not generics). The OCR would need to handle Spanish, drug name variations, and dosage errors. Any misread leads to mistrust and abandonment. The technical risk is high and the human-in-the-loop (verification) is costly.\n\n**Payment blocker:** Pharmacies in Peru, especially the small and informal ones that would benefit most from price comparison traffic, rarely have digital payment infrastructure. They operate on cash and basic CCI transfers. Commission collection would require manual invoicing and follow-up, making the unit economics negative for low-value transactions.\n\n**Free substitute risk:** The patient's existing behavior – asking the pharmacy clerk '¿Cuál es el genérico más barato?' – is free, instantaneous, and requires no app. For patients who are extremely price-sensitive, they already comparison-shop between two nearby pharmacies by walking, not using an app.\n\n**Market size reality check:** The real paying market is constrained to formal pharmacy chains (Lima-based) and price-sensitive patients with smartphones. Assuming 5% of Lima's 10M population (500K) might use it, and each referral is worth S/2-5 ($0.5-1.3), the potential annual revenue is < $1M — too small for VC scale without broader LATAM expansion, which requires separate localization for each country's drug databases and pricing.\n\n**Hardest unvalidated assumption:** That patients will adopt a new app to do something they already do for free with less friction (asking the pharmacist), and that pharmacies will pay for leads when they already have high walk-in traffic and thin margins.\n\n**Freemium rationale:** The consumer app is already free; revenue comes from pharmacy commissions per referred customer, so no freemium tier is needed. A free trial for pharmacies (e.g., first leads free) could be part of sales, not a freemium product model.\n\n**Suggested pivot:** \n\n---\n\n## Stage 2B — Idea Iterations (3 angles)\n\nRecommended: **I2** — We help Peruvian health insurers and self-insured employers slash prescription spending by up to 40% by instantly converting patient prescriptions into the cheapest available generic equivalent at a nearby pharmacy, via OCR and real-time price aggregation.\n\n| ID | Angle | One-Liner | Acuity | Market | Feasibility | Total |\n|---|---|---|---:|---:|---:|---:|\n| I1 | ORIGINAL | We aggregate real-time generic drug prices and stock across independen | 8 | 7 | 7 | 22 |\n| I2 ★ | PIVOT_B2B | We help Peruvian health insurers and self-insured employers slash pres | 9 | 8 | 7 | 24 |\n| I3 | PIVOT_WEDGE | We help diabetic patients in Comas find the cheapest monthly diabetes  | 9 | 2 | 9 | 20 |\n\n### I1 — ORIGINAL\n**Target:** A 45-year-old diabetic in Lima who spends S/ 200 monthly on metformin and enalapril, and currently visits two or three pharmacies on foot every refill to save S/ 30–50.\n**Problem:** Chronic patients in Peru overpay by 40–80% for branded medications because they have no way to compare real-time generic prices and availability without physically visiting multiple pharmacies—a 1–2 hour task they repeat every month, costing time, transport, and mental stress.\n**Hook:** Unlike generic price-comparison websites that list outdated reference prices with no stock data, we show live inventory from independent pharmacies and let patients reserve the exact product at the displayed price for guaranteed pickup.\n**Why this angle:** Focusing on real-time aggregation for independent pharmacies creates a defensible supply-side network effect and addresses the highest-urgency gap in the market, turning a fragmented pain into a sticky daily habit for patients and a must-have customer acquisition channel for small pharmacies.\n\n### I2 — PIVOT_B2B ★ WINNER\n**Target:** Pharmacy Benefits Manager at a Peruvian health insurance company (e.g., Pacífico, Rímac) or HR Director of a large employer with self-funded health benefits, tasked with controlling escalating drug costs but lacking real-time steering tools.\n**Problem:** These institutions lose millions annually because patients fill branded prescriptions or don't know where generics are cheaper. Without dynamic, point-of-care guidance, 30–50% of drug claim costs are avoidable overspend—a daily structural drain that forces higher premiums and erodes trust.\n**Hook:** The only platform merging real-time, cross-pharmacy generic price aggregation (including independent pharmacies) with instant OCR prescription reading, enabling institutions to automatically steer patients to the lowest-cost option at the moment of need.\n**Why this angle:** Selling to institutional payers with budget and urgent cost pressure aligns incentives: they save money, patients save money, and adoption is faster than a commission-based B2B2C model. The recurring SaaS model scales with covered lives, directly tackling a top-priority pain point.\n\n### I3 — PIVOT_WEDGE\n**Target:** A 55-year-old diabetic patient in Comas spending S/150 monthly on metformin and insulin, who currently calls or visits 3–4 pharmacies each month to compare prices, losing time and overpaying.\n**Problem:** Monthly medication shopping consumes 2–3 hours and S/10–15 in transport, with patients often overpaying by S/30–50 because real-time generic prices are opaque across pharmacies. The annual cost of this friction exceeds S/500, and skipped doses due to high prices pose health risks.\n**Hook:** Real-time price and stock aggregation from a curated pharmacy network, delivered via a WhatsApp bot with OCR and integrated payment, reducing a 2-hour chore to a 30-second, money-saving action.\n**Why this angle:** By tackling one segment with high-frequency, predictable need and manually onboarding a handful of pharmacies and patients, we can test direct payment willingness and gather undeniable evidence of demand in 30 days, before building scalable infrastructure.\n\n---\n\n## Stage 3 — YC Validation (parallel, all iterations)\n\n| Iteration | Angle | Decision |\n|---|---|---|\n| I1 | ORIGINAL | NO_GO |\n| I2 | PIVOT_B2B | CONDITIONAL_GO |\n| I3 | PIVOT_WEDGE | No go |\n\n**Winner: I2 — PIVOT_B2B**\n\n> A B2B platform for Peruvian health insurers, self-insured employers, and government health programs that aggregates real-time generic drug prices and availability across all pharmacy types. When an insured member or employee scans a prescription via OCR, the system instantly identifies the cheapest generic equivalent at a nearby pharmacy, steering the patient there for pickup. The institution pays a per-covered-life or per-transaction fee, cutting prescription benefit costs by up to 40% through redirected adherence, while the end user enjoys lower prices without sacrificing convenience.\n\nDecision: **CONDITIONAL_GO**\n\nProceed with validation experiments but require founder to prove partnership traction and domain knowledge before committing full resources.\n\n### Friedman Questions\n| Criterion | Score | Note |\n|---|---:|---|\n| Founder-market fit | 6 | No specific founder background provided; assumes healthcare/pharma domain knowledge needed. Without evidence of deep industry ties or prior experience, this is a moderate risk. |\n| Market size | 8 | Peru's healthcare spending is significant; generic drug market is large and growing. TAM likely >$1B, but need precise figures. |\n| Problem acuity | 9 | Patients actively suffer from high drug costs and inconvenience; insurers want cost reduction. Pain is clear and urgent. |\n| Competition | 5 | Local attempts (RecetaFácil) exist but lack scale; GoodRx is US-only. However, pharmacy chains may resist, and independent pharmacies may lack tech capabilities. |\n| Personal pull | 7 | Founder likely has personal experience or strong interest; B2B model aligns with institutional buyers. But more evidence needed. |\n| Recently possible or necessary | 8 | High smartphone penetration, OCR technology, and real-time API capabilities make this feasible now. GoodRx success validates demand. |\n| Successful proxies | 8 | GoodRx is a direct proxy in a different market; similar models in other verticals (e.g., travel aggregators) show this model works. |\n| Years-long commitment | 6 | Healthcare partnerships and pharmacy integrations take time; founder needs multi-year commitment. Unclear if that exists. |\n| Scalability | 7 | Platform model scales well across Peru and potentially other LatAm countries. But dependency on pharmacy partnerships could slow expansion. |\n| Good idea space | 8 | Addresses a real pain with a clear value proposition. Good balance of B2B revenue and consumer benefit. |\n\n### YC Rules\n| Criterion | Score | Note |\n|---|---:|---|\n| Do not wait for the perfect idea | 8 | Idea is actionable; MVP with 3 pharmacies can start immediately. Founder should not over-optimize. |\n| Burn the boats | 5 | Unclear if founder is fully committed to this single idea. Need to avoid splitting focus. |\n| Go deep into customer workflow | 7 | OCR-based prescription scanning integrates into patient and insurer workflows. But need to fully understand pharmacy and insurer back-end processes. |\n| Build at the edge of AI | 6 | OCR is a standard AI application; real-time aggregation is more API integration than cutting-edge AI. Could leverage AI for price prediction, but not core. |\n| Sell outcomes, not tools | 9 | Clear outcome: reduce prescription costs by 40%. B2B pricing tied to savings aligns perfectly. |\n| Choose ambitious scope | 7 | Aggregating all pharmacy types in Peru is ambitious, but starting with major chains and independents is sensible. |\n| Treat failure as structured data | 5 | No evidence of structured experimentation yet. Founder should plan for systematic A/B testing of partnership models. |\n| Pick low-trust, high-expertise markets | 8 | Healthcare is low-trust; expertise in pharma supply chain and insurance is critical. This fits. |\n| The process is the product | 6 | Operational excellence in data aggregation and partner management is key, but not yet proven. |\n| Avoid early-demand trap | 7 | Per-transaction or per-covered-life pricing aligns with usage; avoid upfront commitments until value is proven. |\n| Price per unit or result | 9 | Per-covered-life or per-transaction fee directly ties to value. Excellent alignment. |\n| Obsess over COGS | 6 | Variable costs include API fees, support, and pharmacy incentives. Need to ensure margins >60% as SaaS-like. |\n| Do not bolt AI onto legacy | 7 | OCR and real-time aggregation are new; not bolting AI onto legacy systems. But reliance on existing pharmacy systems may be a challenge. |\n| Cover domain, model, and operations fluency | 6 | Requires deep domain knowledge in pharma, insurance, and logistics. Unclear if team has it all. |\n\n### VC Hard-Screening Rubric (venture-capital-intelligence)\n| Dimension | Weight | Score | Weighted | Rationale |\n|---|---:|---:|---:|---|\n| Team | 25% | 6 | 1.5 | No specific team info; but domain expertise in Peruvian healthcare and pharmacy is critical. Without it, execution risk is high. |\n| Market | 20% | 8 | 1.6 | TAM likely >$1B (Peru healthcare spend), growing with chronic diseases and generic adoption. Timing is right due to digital transformation. |\n| Product | 15% | 7 | 1.05 | Defensible moat comes from real-time data integration across many pharmacies and OCR workflow. But scalable partnerships are hard to replicate. |\n| Traction | 15% | 3 | 0.45 | No tangible traction yet; only evidence needed is survey and MVP. Pre-revenue with no letters of intent or pilots. |\n| Business Model | 10% | 8 | 0.8 | Per-covered-life or per-transaction fees provide recurring revenue; potential for high margins if variable costs are low. LTV:CAC likely >3x if cost-effective acquisition. |\n| Competition | 8% | 5 | 0.4 | Local players like RecetaFácil exist; large chains may build in-house; GoodRx could expand. Need clear differentiation and faster execution. |\n| Financials | 5% | 4 | 0.2 | Burn rate unknown; likely need significant funds for partnerships and technology. Assuming 18+ months runway if funding secured. |\n| Risk Profile | 2% | 4 | 0.08 | Major risks: pharmacy partner data accuracy, scaling independents, regulatory (drug pricing transparency in Peru). High execution risk. |\n\n**VC Verdict:** CONDITIONAL_PASS — composite=6.08 / 10\n\n---\n\n## Overall Score (Stage 3C)\n**54/100 — Needs sharper validation**\n\n| Dimension | Points | Max | Note |\n|---|---:|---:|---|\n| problem_validation | 8 | 15 | Promising only after 5 concrete user interviews prove recent painful behavior. |\n| solution_insight | 6 | 10 | Insight needs sharper wording around what existing alternatives miss. |\n| market_quality | 7 | 15 | Market sizing is not yet evidenced; compare Peru, LATAM, and USA before choosing focus. |\n| competition_moat | 5 | 10 | Moat is weak until workflow data, distribution, or community compounds. |\n| business_model_pricing | 6 | 10 | Pricing needs a concrete buyer metric and contribution margin assumptions. |\n| go_to_market | 6 | 10 | First 10 users can be founder-led; first 100 and 1,000 need a repeatable channel. |\n| traction_or_evidence | 3 | 10 | No traction provided in the input; require interviews, waitlist, pilots, or usage. |\n| execution_roadmap | 7 | 10 | A 3/6/12 month roadmap is feasible if the first wedge is narrow. |\n| risk_control | 6 | 10 | AI-platform substitution and weak demand are the main risks to control. |\n\n---\n\n## YC Dossier\n\n### One-Liner\nWe help a specific customer segment solve 'Real-time generic price & availability aggregation across all pharmacy types' through a focused software/AI workflow.\n\n### Problem\n- Who Suffers: Define one specific user and one economic buyer. Avoid broad labels like 'everyone' or 'companies'.\n- Pain Level: Quantify hours lost, money lost, risk, errors, or missed revenue per month.\n- Current Workaround: Identify the real competitor: spreadsheet, WhatsApp, email, manual labor, incumbent, or doing nothing.\n- Evidence Needed: At least 5 interviews, screenshots, public data, or workflow artifacts.\n\n### Solution & Insight\n- Solution: A narrow workflow that produces an outcome the buyer already values.\n- Insight: The likely insight is not 'AI can do it'; it is that a repeated expert workflow can be compressed and standardized.\n- Non Stack Note: This dossier intentionally avoids frontend/backend stack because the correct stack changes by idea.\n\n### Why Now\n- LLMs and agents can now execute and explain multi-step workflows cheaply.\n- Distribution through communities, outbound, and self-serve demos is faster for solo founders.\n- Users are more willing to try AI-native tools when the workflow is narrow and auditable.\n\n### Market — Peru / LATAM / USA\nRecommended focus: Start where the founder has fastest access to users and evidence; compare Peru, LATAM, and USA before committing.\n\n- **Peru**: Potentially strong for problems with local regulation, Spanish workflows, public data, or underserved SMEs. | TAM: Estimate from national population, firms, households, sector output, or public expenditure. | SAM: Start with reachable cities, industries, institutions, or customer segments where the founder can sell. | SOM 12m: Use a bottom-up estimate: reachable leads x conversion rate x annual contract value. | Sources: INEI microdata and surveys, MEF budget data, BCRP statistics, sector associations, local interviews\n- **LATAM**: Attractive if the problem repeats across Spanish-speaking markets and does not require heavy country-by-country integration. | TAM: Estimate from regional sector size, number of firms, workers, students, patients, transactions, or institutions. | SAM: Prioritize countries with similar language, regulation, distribution, and payment behavior. | SOM 12m: Estimate expansion only after proving one repeatable channel in the first country. | Sources: World Bank, IDB, ECLAC/CEPAL, national statistics offices, industry reports\n- **USA**: Useful benchmark for market size and competitor density; attractive if willingness to pay is higher and distribution is reachable. | TAM: Estimate from US sector spend, number of businesses, paid seats, transactions, or workflow volume. | SAM: Narrow to a buyer segment the founder can actually reach through outbound, communities, or integrations. | SOM 12m: Use a conservative founder-led sales or self-serve acquisition model. | Sources: US Census, BLS, World Bank, Statista or industry reports, academic papers\n\nSource strategy:\n- Use INEI microdata for Peru when the market depends on households, employment, education, health, agriculture, firms, or municipalities.\n- Use MEF/BCRP for public budgets, macro indicators, credit, sector output, and Peru-specific economic framing.\n- Use World Bank/CEPAL/IDB for LATAM comparables.\n- Use papers and industry reports when the market is technical, clinical, educational, or scientific.\n- Use bottom-up SOM for the first 12 months; do not rely only on top-down TAM.\n\n### Competition & Moat\n- Alternatives To Compare: doing nothing; spreadsheet/manual workflow; horizontal SaaS; incumbent platform; AI assistant\n- Moat Candidates: proprietary workflow data; distribution/community; integrations; trust/brand; regulatory or local-domain expertise\n- Weak Moat Warning: If Claude/OpenAI can solve the job with a prompt, the startup needs a workflow, data, distribution, or compliance layer.\n\n### Business Model & Pricing\n- Model Options: monthly SaaS; usage-based; transaction fee; marketplace take rate; paid pilot; enterprise license\n- Pricing Rule: Use no more than 3 plans and tie price to a buyer-visible outcome.\n- Contribution Margin: Estimate tokens/API calls, storage, human review, support, and acquisition cost per customer.\n\n### Go-To-Market\n- First 10: Founder-led outreach to people with the exact painful workflow.\n- First 100: Repeat the channel that produced the first paid or high-intent users.\n- First 1000: Add scalable distribution: partnerships, integrations, content, community, marketplace, or PLG.\n\n### Traction / Early Signals\n- 5+ interviews with recent pain stories\n- waitlist with qualified users\n- letters of intent or paid pilots\n- prototype usage by real users\n- before/after workflow evidence\n\n### Roadmap\n- 3 Months: Validate the wedge, ship concierge/prototype workflow, close first paying or high-intent users.\n- 6 Months: Productize repeated steps, measure retention, build first repeatable acquisition channel.\n- 12 Months: Expand to adjacent workflow or geography after proving retention and willingness to pay.\n\n### Risks & Mitigation\n- Risk: Market risk: users like the idea but do not have urgent pain.; Mitigation: Interview around recent behavior and require evidence of money/time/risk.\n- Risk: AI substitution risk: Claude, OpenAI, or another foundation-model tool absorbs the feature.; Mitigation: Own workflow data, distribution, integrations, evaluation harnesses, and domain trust beyond the prompt.\n- Risk: Execution risk: solo founder overbuilds before validation.; Mitigation: Run concierge tests and kill criteria before building broad product surface area.\n\n### The Ask\n- Amount: Define a specific amount or resource ask only after the first validation sprint.\n- Use Of Funds: customer discovery; prototype; data acquisition; distribution experiments\n- Milestone: Unlock proof that one segment has repeated pain and will pay for the outcome.\n\n### Product — Demo & Architecture\n- Demo Url: TODO: deploy a public demo (Streamlit, Vercel, Railway, or Hugging Face Spaces)\n- Demo Credentials: TODO: add test user credentials once demo is live\n- Main Flow Screenshots: 1. Landing / onboarding screen; 2. Core input form or conversation entry; 3. AI processing / loading state; 4. Result / output screen; 5. Export or share action; 6. Settings or profile (optional)\n- Architecture Diagram: Frontend (web/mobile) → API layer (FastAPI / Flask) → Orchestration (agent loop) → LLM API + domain data sources → Database (Postgres / SQLite) → Output / report\n- Repo Structure: frontend/  — UI (React / Streamlit / Vue); backend/   — API + agent logic; ai/        — prompts, agents, pipelines; data/      — seed data, validation sets; notebooks/ — exploration and analysis; docs/      — architecture diagram, pitch assets\n- Ai Models Used: deepseek-chat — fast, cheap inference for classification and structured extraction; deepseek-reasoner — multi-step reasoning for validation and scoring\n\n### External Research Hooks\n- Inei Microdatos: Useful for Peru-specific TAM/SAM evidence from INEI surveys and variable search.\n- Paperdl: Useful for finding academic papers when the idea needs scientific, health, education, or technical evidence.\n\n---\n\n## Stage 1 — Current Alternatives\nEl mercado peruano de comparación de precios de medicamentos genéricos está fragmentado. Las cadenas grandes dominan con apps propias pero no priorizan el ahorro en genéricos. Existen pocos agregadores independientes y el uso de OCR para recetas es incipiente. La amenaza principal proviene de la propia inercia del paciente (do‑nothing) y de posibles expansiones de startups regionales o gigantes globales como GoodRx.\n\n- sol_1: Inkafarma App (Farmacia de cadena) — App con búsqueda de medicamentos, cupones y geolocalización de sucursales propias; fuerte lealtad de marca.\n- sol_2: Mifarma App (Farmacia de cadena) — Similar a Inkafarma, con integración de delivery a domicilio; pertenece al mismo grupo económico.\n- sol_3: RecetaFácil (startup peruana) (Agregador de precios con OCR) — App que escanea recetas y compara precios de genéricos en farmacias afiliadas; enfocada en ahorro.\n- sol_4: Tu Farma Online (Marketplace de farmacias) — Plataforma web que lista productos de múltiples farmacias; permite comparación limitada de precios, sin OCR.\n- sol_5: EsSalud Digital (App de seguro social) — Agendamiento de citas y entrega de medicamentos en farmacias de la red; no compara precios de genéricos.\n- sol_6: Búsqueda manual en Google (Workaround digital) — Pacientes buscan el medicamento, opción genérica y llaman a farmacias; ineficiente pero gratuito.\n- sol_7: Botica cerca con consulta verbal (Workaround presencial) — Preguntar en la farmacia más cercana por el genérico; dependiente del criterio del dependiente.\n- sol_8: GoodRx (potencial expansión) (Agregador global de precios) — Líder en EE.UU. con cupones y comparación de precios; no opera en Perú pero podría ser una amenaza futura.\n- sol_9: Lista de precios del MINSA (Iniciativa gubernamental) — Página web con precios de referencia de medicamentos genéricos; poco conocida y difícil de usar móvil.\n- sol_10: Plataformas de e-commerce (MercadoLibre/Linio) (Comercio electrónico general) — Venta de medicamentos sin receta y algunos OTC; no validan receta ni orientan a genéricos.\n- sol_11: Farmacia Universal App (Cadena de farmacias) — App con promociones y ubicación de tiendas; enfoque en autoservicio, no en asesoría de genéricos.\n- sol_12: Doc24 (telemedicina) (Plataforma de salud) — Consultas virtuales, pueden recetar medicamentos; deriva a farmacias aliadas pero sin comparación abierta.\n- sol_13: No hacer nada (do‑nothing) (Inacción) — Comprar exactamente la marca de la receta al precio que diga la farmacia, sin buscar alternativas más baratas.\n- sol_14: Seguros privados (Rímac, Pacífico) App (App de aseguradora) — Red de farmacias con reembolsos; útil solo para asegurados, no compara precios de genéricos.\n- sol_15: RecetApp (startup chilena) (Agregador regional con OCR) — Opera en Chile con OCR de recetas y comparación de precios; potencial entrada a Perú.\n\n### Competitor Signal Scores (deal-sourcing-signals taxonomy)\n| Competitor | Hiring | Funding | Product | Team | Market | Tech | Score | Class |\n|---|---:|---:|---:|---:|---:|---:|---:|---|\n| Inkafarma | 7 | 8 | 6 | 7 | 9 | 5 | 71.5 | MOVE_FAST |\n| Mifarma | 7 | 8 | 6 | 7 | 9 | 5 | 71.5 | MOVE_FAST |\n| RecetaFácil | 4 | 3 | 7 | 5 | 5 | 8 | 48.0 | ENGAGE |\n| Tu Farma Online | 3 | 2 | 5 | 4 | 4 | 4 | 34.5 | MONITOR |\n| EsSalud Digital | 2 | 5 | 3 | 3 | 6 | 2 | 35.0 | MONITOR |\n\n## Stage 2 — Market Gaps\nRecommended gap: gap_1\n\n- gap_1: Real-time generic price & availability aggregation across all pharmacy types | Pain: Patients waste time manually calling or visiting multiple pharmacies to compare generic prices, often settling for higher prices due to lack of real-time, consolidated information. No existing solution combines OCR-based prescription scanning with live inventory and pricing from both chains and independent pharmacies. | Evidence: Survey 100 prescription holders on current price-comparison behaviors and willingness to switch. Build an MVP with 3 pharmacy partners to test real-time data integration feasibility and user satisfaction.\n- gap_2: Digital customer acquisition platform for independent pharmacies | Pain: Small independent pharmacies lack digital channels to attract price-sensitive patients, losing potential revenue to large chains that have their own apps. They need a cost-effective way to pay for qualified leads. | Evidence: Interview at least 10 independent pharmacy owners to assess willingness to pay per referral and technical readiness. Run a manual concierge pilot to measure conversion and average order value for referred customers.\n- gap_3: Building trust and education on generic drug equivalence | Pain: Many Peruvian patients distrust generic medications, believing they are inferior to brand-name drugs, leading them to overspend. There is no easy, trustworthy source of information at the point of purchase decision. | Evidence: Design a low-fidelity prototype that presents brand-generic comparisons with official equivalences. Test user understanding and trust change with 20 patients, measuring intent to switch to generic.\n- gap_4: End-to-end flow from prescription scan to guaranteed pharmacy pickup | Pain: Even after finding a cheaper generic online, patients face uncertainty about stock and face a disconnect between digital discovery and physical purchase. No service offers reservation or hold functionality tied to the scanned prescription. | Evidence: Run a concierge MVP where a team manually contacts pharmacies to reserve, measuring conversion improvement over a control that only shows prices. Gather pharmacy feedback on reservation willingness.\n- gap_5: Mobile-friendly access to Minsa’s generic price reference list | Pain: The official governmental list of generic drug prices is difficult to navigate on mobile, leaving patients without a trusted pricing benchmark. An easily accessible, searchable version could empower cost-conscious patients. | Evidence: Check Minsa website traffic from mobile devices. Build a simple progressive web app that scrapes and displays the data; measure usage and user satisfaction in a public beta.\n- gap_6: Integration with telemedicine platforms for generic-first prescribing | Pain: Telemedicine consultations often result in brand-name prescriptions without considering patient cost. Neither doctors nor platforms systematically suggest affordable generics, leaving a gap in the care journey. | Evidence: Form a pilot partnership with a small telemedicine provider (e.g., Doc24) to test an API that suggests generics during e-prescribing. Measure prescription fill rates and pharmacy referral conversion.\n\n## Selected Gap\n**gap_1: Real-time generic price & availability aggregation across all pharmacy types**\n\nPain: Patients waste time manually calling or visiting multiple pharmacies to compare generic prices, often settling for higher prices due to lack of real-time, consolidated information. No existing solution combines OCR-based prescription scanning with live inventory and pricing from both chains and independent pharmacies.\n\nWhy now: Smartphone adoption in Peru is high, and the success of GoodRx abroad validates the model. Local attempts (RecetaFácil) show early traction but lack scale, leaving a wide gap for a better-executed aggregator.\n\nRisk: Pharmacy partners may not provide accurate real-time data; scaling partnerships across many independents is resource-intensive; large chains may block integration.\n\n---\n\n## Stage 3B — Stakeholder Simulation\nMiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.\n\n### Personas\n- P1: End user (target customer) | Lens: Daily workflow pain, speed, usability, trust. Would I use this weekly? | Success: The product saves meaningful time or reduces a real stress in a repeated task.\n- P2: Economic buyer with budget | Lens: Budget ownership, ROI timeline, procurement friction, urgency, approval chain. | Success: The product clearly pays for itself this quarter or protects a critical metric I own.\n- P3: Operations / implementation owner | Lens: Integration complexity, change management, support load, reliability, rollout risk. | Success: The workflow fits existing operations without creating extra coordination cost.\n- P4: Incumbent competitor or free substitute | Lens: How does the status quo, a free tool, or a large vendor defend the account? | Success: The startup has a wedge incumbents cannot or choose not to copy quickly.\n- P5: YC / LATAM VC partner | Lens: Market size (must be >$50M SAM in 5 years), founder insight, venture scale path. | Success: The idea has a sharp initial wedge and a defensible path to $10M ARR.\n- P6: Technical builder / CTO | Lens: Data access, model quality, COGS, failure modes, defensibility, learning loop. | Success: The system can be built cheaply, reliably, and improves with usage data.\n- P7: Peruvian SME buyer (informal sector) | Lens: Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot? | Success: The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.\n- P8: Peru institutional / public buyer (government or university) | Lens: UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card. | Success: The product fits within an existing budget code and avoids a new procurement process.\n- P9: Peruvian Series A investor (local VC or family office) | Lens: Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1. | Success: The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.\n- P10: AI adoption skeptic (conservative professional in Peru) | Lens: Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial). | Success: The AI outputs are accurate, explainable, and I can verify them before acting.\n\n### Persona Scores (parallel simulation)\nAggregate: 0.34 / gate=0.6 — WARN\n\n- **P1 End user (target customer)** score=0.75 | This sounds promising. I often end up paying more for my prescriptions because I don't have time to call around. If this app can show me the best price nearby instantly and I can just pick up, it would save me both time and money. However, I worry about the accuracy of the price data and whether the pharmacies will honor the listed price. | Concern: The biggest concern is that the real-time prices shown in the app may not match the actual price at the pharmacy counter, leading to frustration and distrust. | Need: I need to see a demo or case study where the app accurately matched the price at a pharmacy for a real prescription, with evidence from independent validation or user testimonials.\n- **P10 AI adoption skeptic (conservative professional in Peru)** score=0.15 | This idea sounds promising in theory, but I'm deeply skeptical about relying on AI to steer patients to pharmacies based on real-time prices. In Peru, many prescriptions are handwritten and OCR errors could lead to wrong medications, causing serious health risks. Also, independent pharmacies often lack accurate inventory systems, so the data may be unreliable. | Concern: The biggest risk is that OCR or real-time data errors could direct a patient to the wrong pharmacy or medication, potentially causing harm and legal liability, which would destroy trust in the platform. | Need: I need to see a live demo with at least 100 prescriptions (including handwritten ones) showing 99%+ OCR accuracy and real-time price matches verified by phone calls to independent pharmacies.\n- **P2 Economic buyer with budget** score=0.4 | The idea of cutting prescription costs by 40% is tantalizing, but I'm wary of integration complexity with Peru's fragmented pharmacy market and the typical slow pace of B2B adoption. Without a proven pilot showing real savings within my budget quarter, I can't justify the procurement friction. | Concern: The risk that pharmacy partners fail to provide reliable real-time data, leading to inconsistent savings and member dissatisfaction, making the ROI unachievable in my budget cycle. | Need: A pilot with at least 3 self-insured employers or a health insurer in Peru showing a 20%+ cost reduction on a defined drug basket within 90 days, with verified data accuracy and member behavior change.\n- **P3 Operations / implementation owner** score=0.25 | From an operational standpoint, this platform requires deep integration with a fragmented pharmacy landscape and depends on real-time data accuracy, which is a high-risk execution challenge. The need to onboard and maintain data feeds from both large chains and independent pharmacies introduces significant coordination complexity and ongoing support load. | Concern: Reliability of real-time inventory and pricing data from independent pharmacies, which often lack digital systems, will create frequent data discrepancies that erode trust and increase support tickets. | Need: I need to see a pilot with at least 10 diverse pharmacies (including 5 independents) demonstrating >95% data accuracy over 30 days, and a clear integration plan for scaling without manual intervention.\n- **P4 Incumbent competitor or free substitute** score=0.3 | This idea faces a high barrier because large pharmacy chains like Inkafarma or Mifarma hold the data and have no incentive to share it with a platform that could drive customers to cheaper alternatives. They can easily block integration or launch their own app, protecting their margins. | Concern: Pharmacy chains will refuse to provide real-time pricing and inventory data, as it undermines their ability to control customer choices and maintain higher margins. | Need: A signed letter of intent from at least one of the top three pharmacy chains in Peru committing to provide real-time data integration.\n- **P5 YC / LATAM VC partner** score=0.55 | The idea addresses a clear pain point with a proven model (GoodRx), but execution in Peru faces significant fragmentation. The B2B angle with insurers is smart, but I'm skeptical about the ability to aggregate real-time data from all pharmacy types, especially independents. The market size could be substantial if they nail partnerships, but the path to $10M ARR requires convincing multiple stakeholders. | Concern: The ability to secure real-time price and inventory data from both large chains and independent pharmacies, given their likely reluctance to share data and the technical complexity of integration. | Need: Signed letters of intent or pilot agreements with at least 2 health insurers and 10 pharmacies (including 3 chains and 7 independents) to prove initial traction and data access feasibility.\n- **P6 Technical builder / CTO** score=0.3 | The idea has merit, but the technical hurdles are steep: aggregating real-time data from a fragmented pharmacy market, many without APIs, and handling OCR on Peruvian prescriptions (often handwritten, in Spanish) will require sophisticated engineering. The per-transaction model may not cover COGS unless scale is massive. | Concern: The biggest risk is that pharmacy partners, especially independents, cannot provide reliable real-time pricing and availability data, leading to a poor user experience and high integration maintenance costs. | Need: Show me a live demo of the MVP scanning 10 real prescriptions, each finding the cheapest generic at a nearby pharmacy with confirmed real-time inventory, using data from at least 2 major chains and 5 independent pharmacies.\n- **P7 Peruvian SME buyer (informal sector)** score=0.15 | This sounds like a solution for big companies and insurers, not for my small business. I don't offer health insurance to my workers, so it doesn't address my cash flow or operational headaches. I wouldn't pay for something that doesn't directly help me manage costs or risks. | Concern: As an informal business owner, I have zero incentive to pay for a platform that benefits insured employees—I don't provide insurance, and even if my workers have SIS, I won't spend money to reduce their co-pays. | Need: Show me a simple WhatsApp-based painkiller price-check for my personal use that doesn't require me to sign up or pay—prove it saves me soles without any commitment.\n- **P8 Peru institutional / public buyer (government or university)** score=0.2 | The idea addresses a real cost-saving opportunity, but as a public buyer, I cannot adopt a new platform without an existing budget code and a streamlined procurement path. The per-covered-life fee model would trigger a new competitive bidding process, delaying implementation by 12+ months. | Concern: This service does not map to any existing budget line item (e.g., 'farmacia' or 'software') and would require a new procurement category, which is incompatible with our zero-discretionary-budget and long-cycle constraints. | Need: Demonstrate that the service can be classified under an existing MINEDU or PRODUCE budget code (e.g., 'Servicios de Información' or 'Adquisición de Software') and that OSCE has approved similar procurement vehicles for comparable platforms.\n- **P9 Peruvian Series A investor (local VC or family office)** score=0.35 | The idea tackles a clear pain point and the B2B model with per-covered-life fees is compelling, but executing real-time data aggregation across Peru's fragmented pharmacy landscape is capital-intensive and partnership-dependent. I need to see a clear path to $1M ARR and international co-investor interest given our thin capital market. | Concern: Pharmacy chains may block integration or refuse to share real-time inventory data, and independents lack the infrastructure to participate, making the core value proposition unattainable in practice. | Need: Show signed letters of intent (LOIs) from at least two major pharmacy chains and one insurer willing to pilot the platform within 6 months.\n\n\n\n### Simulation Consensus\n- Strongest signal: Proceed only if target users describe a recent, repeated, expensive problem in their own words.\n- Weakest assumption: Simulation scores are LLM estimates; live interviews must confirm.\n- Adoption path: Start with a narrow concierge workflow, then productize the repeated steps.\n- Pricing test: Ask for a small paid pilot tied to the buyer's success metric.\n- Decision pressure: CONDITIONAL_GO\n\n### Recommended Interventions\n- Narrow the customer segment until the end user and buyer are obvious.\n- Run interviews around recent behavior, not opinions about the idea.\n- Prototype the outcome manually before building a scalable product.\n- Track what data or workflow insight compounds with each use.\n\n---\n\n## Next Experiments\n- Conduct 100+ surveys with prescription holders and 20+ interviews with insurance procurement managers.\n- Build a prototype with 1-2 pharmacy partners to test real-time data integration and OCR accuracy.\n- Run a pilot with one self-insured employer to measure cost savings and user adoption.\n\n## Kill Criteria\n- No pharmacy partner willing to share real-time pricing data after 3 months of outreach.\n- Insurers express no willingness to pay per-covered-life fees, only one-time discounts.\n- Survey shows >60% of prescription holders unwilling to switch pharmacy for generics.\n"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-06-21T16:18:17.431200+00:00",
+      "stage": "created",
+      "message": "Pipeline state initialized."
+    },
+    {
+      "at": "2026-06-21T16:18:39.856598+00:00",
+      "stage": "stage0_classify",
+      "message": "Artifact 'stage0_classify' updated."
+    },
+    {
+      "at": "2026-06-21T16:19:21.475001+00:00",
+      "stage": "stage1_research",
+      "message": "Artifact 'stage1_research' updated."
+    },
+    {
+      "at": "2026-06-21T16:20:22.519584+00:00",
+      "stage": "stage2_gaps",
+      "message": "Artifact 'stage2_gaps' updated."
+    },
+    {
+      "at": "2026-06-21T16:20:54.837520+00:00",
+      "stage": "stage2b_iterations",
+      "message": "Artifact 'stage2b_iterations' updated."
+    },
+    {
+      "at": "2026-06-21T16:21:23.621409+00:00",
+      "stage": "stage3_validations",
+      "message": "Artifact 'stage3_validations' updated."
+    },
+    {
+      "at": "2026-06-21T16:21:23.961594+00:00",
+      "stage": "stage3_winner_iteration",
+      "message": "Artifact 'stage3_winner_iteration' updated."
+    },
+    {
+      "at": "2026-06-21T16:21:23.962113+00:00",
+      "stage": "stage3_validation",
+      "message": "Artifact 'stage3_validation' updated."
+    },
+    {
+      "at": "2026-06-21T16:21:34.948971+00:00",
+      "stage": "stage3b_simulation",
+      "message": "Artifact 'stage3b_simulation' updated."
+    },
+    {
+      "at": "2026-06-21T16:23:21.815616+00:00",
+      "stage": "stage3c_dossier",
+      "message": "Artifact 'stage3c_dossier' updated."
+    },
+    {
+      "at": "2026-06-21T16:23:22.158156+00:00",
+      "stage": "stage4_report",
+      "message": "Artifact 'stage4_report' updated."
+    },
+    {
+      "at": "2026-06-21T16:23:22.161788+00:00",
+      "stage": "complete",
+      "message": "Report written to E:\\github\\hw7_ds\\ai\\validation_agents\\outputs\\ocr-receta-peru-app-donde-el-pac-1b34af9d37\\report.md"
+    }
+  ]
+}

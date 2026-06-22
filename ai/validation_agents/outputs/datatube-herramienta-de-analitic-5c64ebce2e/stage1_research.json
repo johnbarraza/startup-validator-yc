@@ -1,0 +1,165 @@
+{
+  "idea": "DataTube: herramienta de analitica para creadores de YouTube que usa transcripcion y analisis de voz/contenido para detectar ritmo, pausas y estructura narrativa que afectan la retencion de audiencia.",
+  "market": "YouTube creator analytics and content optimization tools, with an estimated TAM of $1.5B given 2M+ active creators monetizing and seeking to improve audience retention and revenue.",
+  "solutions": [
+    {
+      "id": "s1",
+      "name": "YouTube Studio",
+      "category": "Native Analytics",
+      "observed_positioning": "Free, built-in analytics with retention graphs, traffic sources, and basic audience insights."
+    },
+    {
+      "id": "s2",
+      "name": "TubeBuddy",
+      "category": "YouTube SEO & Analytics",
+      "observed_positioning": "Browser extension for keyword research, A/B testing, tag suggestions, and competitor tracking."
+    },
+    {
+      "id": "s3",
+      "name": "VidIQ",
+      "category": "YouTube SEO & Analytics",
+      "observed_positioning": "AI-powered channel audit, keyword research, video score, and trend alerts for creators."
+    },
+    {
+      "id": "s4",
+      "name": "Morningfame",
+      "category": "YouTube Analytics",
+      "observed_positioning": "Analytics dashboard with growth scorecards and actionable insights (inactive/acquired?)."
+    },
+    {
+      "id": "s5",
+      "name": "Social Blade",
+      "category": "Public Statistics",
+      "observed_positioning": "Social media statistics tracker showing subscriber counts, views, and estimated rankings."
+    },
+    {
+      "id": "s6",
+      "name": "Tubular Labs",
+      "category": "Enterprise Video Analytics",
+      "observed_positioning": "Social video analytics for brands and agencies, measuring reach, engagement, and demographics."
+    },
+    {
+      "id": "s7",
+      "name": "ChannelMeter",
+      "category": "Influencer Analytics",
+      "observed_positioning": "Enterprise platform for influencer strategy, audience insights, and cross-platform analytics."
+    },
+    {
+      "id": "s8",
+      "name": "Vidooly",
+      "category": "Video Marketing Platform",
+      "observed_positioning": "Analytics suite for YouTube and OTT, including deep competitor tracking and content optimization."
+    },
+    {
+      "id": "s9",
+      "name": "ViralStat",
+      "category": "Cross-Platform Video Analytics",
+      "observed_positioning": "Social video intelligence for tracking trends, competitors, and content performance across platforms."
+    },
+    {
+      "id": "s10",
+      "name": "Descript",
+      "category": "Transcription & Editing",
+      "observed_positioning": "All-in-one video/podcast editor with AI transcription, filler word removal, and overdub."
+    },
+    {
+      "id": "s11",
+      "name": "Orai",
+      "category": "Speech Coaching",
+      "observed_positioning": "AI speech coach app that analyzes pace, filler words, conciseness, and confidence."
+    },
+    {
+      "id": "s12",
+      "name": "Yoodli",
+      "category": "Speech Coaching",
+      "observed_positioning": "AI communication coach for presentations and interviews, providing real-time feedback on pacing, eye contact, and filler words."
+    },
+    {
+      "id": "s13",
+      "name": "Speeko",
+      "category": "Speech Coaching",
+      "observed_positioning": "Public speaking mastery app with AI feedback on articulation, pace, and tone."
+    },
+    {
+      "id": "s14",
+      "name": "Manual/Spreadsheet Analysis",
+      "category": "Do-Nothing/Workaround",
+      "observed_positioning": "Creators manually review retention graphs and note drops, guessing at narrative causes; often combined with self-annotation."
+    },
+    {
+      "id": "s15",
+      "name": "Content Coach/Consultant",
+      "category": "Human Service",
+      "observed_positioning": "Hiring editing or storytelling consultants who manually assess video flow, pacing, and engagement hooks."
+    }
+  ],
+  "research_summary": "The YouTube creator analytics market is dominated by SEO-driven tools (TubeBuddy, VidIQ) and native platform data (YouTube Studio), which offer keyword optimization and basic retention metrics but lack deep content analysis linking speech patterns to engagement. AI speech coaching apps (Yoodli, Orai) analyze pacing and filler words but do not connect these to YouTube retention outcomes. Transcription tools like Descript possess the underlying technology and could expand into analytics. No competitor currently offers an integrated solution that directly correlates vocal rhythm, pausing, and narrative structure with audience drop-off points, representing a clear whitespace for DataTube.",
+  "competitor_signals": [
+    {
+      "competitor": "YouTube Studio",
+      "hiring_score": 8,
+      "funding_score": 10,
+      "product_score": 8,
+      "team_score": 9,
+      "market_score": 10,
+      "tech_score": 9,
+      "overall_score": 89.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Native analytics with massive data; Google’s continuous AI integration could quickly add narrative-pacing insights, instant distribution to 2B+ users."
+    },
+    {
+      "competitor": "TubeBuddy",
+      "hiring_score": 5,
+      "funding_score": 4,
+      "product_score": 6,
+      "team_score": 5,
+      "market_score": 6,
+      "tech_score": 5,
+      "overall_score": 50.5,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Large creator user base and SEO-first approach; lacks sophisticated AI for content analysis but could partner or build light features."
+    },
+    {
+      "competitor": "VidIQ",
+      "hiring_score": 6,
+      "funding_score": 5,
+      "product_score": 6,
+      "team_score": 5,
+      "market_score": 6,
+      "tech_score": 5,
+      "overall_score": 55.5,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Similar to TubeBuddy with AI-driven recommendations; potential to add voice/narrative analysis if they ramp up R&D."
+    },
+    {
+      "competitor": "Descript",
+      "hiring_score": 7,
+      "funding_score": 7,
+      "product_score": 7,
+      "team_score": 7,
+      "market_score": 7,
+      "tech_score": 8,
+      "overall_score": 70.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Transcription-native editor; filler-word removal and AI features indicate capability to surface pacing issues, making it a strong adjacent threat."
+    },
+    {
+      "competitor": "Yoodli",
+      "hiring_score": 4,
+      "funding_score": 4,
+      "product_score": 6,
+      "team_score": 6,
+      "market_score": 5,
+      "tech_score": 6,
+      "overall_score": 49.0,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "AI speech coach for real-time feedback; relevant tech stack but different go-to-market; could pivot to creator analytics with API integration."
+    }
+  ],
+  "source": "llm"
+}

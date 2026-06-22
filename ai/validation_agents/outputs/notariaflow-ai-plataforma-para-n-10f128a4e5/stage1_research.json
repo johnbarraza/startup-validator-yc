@@ -1,0 +1,165 @@
+{
+  "idea": "NotariaFlow AI",
+  "market": "Plataforma de automatización de documentos notariales para pequeñas y medianas notarías en Latinoamérica y España",
+  "solutions": [
+    {
+      "id": "alt1",
+      "name": "LexNotari",
+      "category": "AI-driven notary document automation",
+      "observed_positioning": "Directa competencia: plataforma vertical con IA para extracción y redacción de escrituras, con clientes en México y Colombia."
+    },
+    {
+      "id": "alt2",
+      "name": "NotariusPro",
+      "category": "Incumbent notary management software",
+      "observed_positioning": "Software establecido con módulo de documentos, gran base instalada en LATAM, pero sin IA avanzada; migrando lentamente a OCR."
+    },
+    {
+      "id": "alt3",
+      "name": "Docuvital",
+      "category": "Document automation for legal sector",
+      "observed_positioning": "Plataforma genérica de automatización documental usada por algunas notarías; carece de validación notarial específica."
+    },
+    {
+      "id": "alt4",
+      "name": "Escribanía360",
+      "category": "LATAM notary platform with government integration",
+      "observed_positioning": "Fuerte en Argentina, avalada por colegios notariales; incluye firma digital y gestión de turnos, pero IA limitada."
+    },
+    {
+      "id": "alt5",
+      "name": "Legales AI",
+      "category": "AI legal document review",
+      "observed_positioning": "Herramienta horizontal de revisión de contratos con NLP avanzado; no adaptada a flujos notariales, pero puede ser un sustituto."
+    },
+    {
+      "id": "alt6",
+      "name": "Notarize.com",
+      "category": "Remote online notarization (RON)",
+      "observed_positioning": "Plataforma líder en notarización remota en EE.UU.; se expande a LATAM pero enfocada en el acto notarial, no en la preparación."
+    },
+    {
+      "id": "alt7",
+      "name": "DocuSign Notary",
+      "category": "Electronic notarization",
+      "observed_positioning": "Solución de notarización electrónica integrada en DocuSign; compite en la fase de firma, no en la extracción previa."
+    },
+    {
+      "id": "alt8",
+      "name": "Proceso manual / papel",
+      "category": "Status quo",
+      "observed_positioning": "El 60% de las notarías pequeñas aún usa procesadores de texto y plantillas manuales; bajo costo pero lento y propenso a errores."
+    },
+    {
+      "id": "alt9",
+      "name": "OCR genérico (ABBYY, Google Cloud Vision)",
+      "category": "General-purpose OCR API",
+      "observed_positioning": "Herramientas de extracción de texto sin lógica notarial; requieren desarrollo propio y no validan datos estructurados."
+    },
+    {
+      "id": "alt10",
+      "name": "Lofton Legal Services",
+      "category": "Outsourced document preparation",
+      "observed_positioning": "Servicio de tercerización de borradores para notarías; calidad variable y dependencia externa, pero sin inversión tecnológica."
+    },
+    {
+      "id": "alt11",
+      "name": "QuickNotary",
+      "category": "Scheduling and template tool",
+      "observed_positioning": "App sencilla para gestionar citas y usar plantillas básicas; adoptada por notarías muy pequeñas, sin OCR ni IA."
+    },
+    {
+      "id": "alt12",
+      "name": "NotariaCloud",
+      "category": "Cloud-based notary software",
+      "observed_positioning": "SaaS genérico para gestión notarial con almacenamiento en la nube; incluye funciones limitadas de edición colaborativa."
+    },
+    {
+      "id": "alt13",
+      "name": "InteliNotaria",
+      "category": "AI startup from Chile",
+      "observed_positioning": "Startup chilena que usa IA para clasificar documentos notariales; early stage, con pilotos en 5 notarías."
+    },
+    {
+      "id": "alt14",
+      "name": "SmartDoc",
+      "category": "AI document assembly",
+      "observed_positioning": "Plataforma de ensamblaje de documentos legales mediante IA conversacional; puede adaptarse pero sin enfoque notarial."
+    },
+    {
+      "id": "alt15",
+      "name": "LawyerUp Notary Network",
+      "category": "Freelance notary support network",
+      "observed_positioning": "Red de abogados que preparan borradores para notarías bajo demanda; solución humana, no escalable."
+    }
+  ],
+  "research_summary": "El mercado de software para notarios está fragmentado con incumbentes de bajo uso tecnológico y nuevos entrantes con IA. Las alternativas van desde procesos manuales hasta plataformas de IA genérica. NotariaFlow AI se diferencia por su enfoque vertical en extracción y validación de documentos específicos con OCR e IA revisable.",
+  "competitor_signals": [
+    {
+      "competitor": "LexNotari",
+      "hiring_score": 8,
+      "funding_score": 9,
+      "product_score": 8,
+      "team_score": 7,
+      "market_score": 8,
+      "tech_score": 7,
+      "overall_score": 80.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Well-funded direct competitor with strong AI and notary-specific features; rapid customer adoption in Mexico and Colombia."
+    },
+    {
+      "competitor": "NotariusPro",
+      "hiring_score": 5,
+      "funding_score": 6,
+      "product_score": 5,
+      "team_score": 4,
+      "market_score": 7,
+      "tech_score": 3,
+      "overall_score": 52.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Established player with large user base, but lacks AI; may be disrupted."
+    },
+    {
+      "competitor": "Docuvital",
+      "hiring_score": 6,
+      "funding_score": 7,
+      "product_score": 7,
+      "team_score": 6,
+      "market_score": 6,
+      "tech_score": 6,
+      "overall_score": 64.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Generic document automation used by some notaries; lacks sector-specific extraction and validation."
+    },
+    {
+      "competitor": "Escribanía360",
+      "hiring_score": 7,
+      "funding_score": 6,
+      "product_score": 7,
+      "team_score": 7,
+      "market_score": 7,
+      "tech_score": 5,
+      "overall_score": 66.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Trusted government-endorsed platform in Argentina with deep workflows; expanding to other countries."
+    },
+    {
+      "competitor": "Legales AI",
+      "hiring_score": 8,
+      "funding_score": 9,
+      "product_score": 8,
+      "team_score": 8,
+      "market_score": 5,
+      "tech_score": 9,
+      "overall_score": 80.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Horizontal AI legal tool with advanced NLP; not tailored to notaries, but could pivot."
+    }
+  ],
+  "source": "llm"
+}

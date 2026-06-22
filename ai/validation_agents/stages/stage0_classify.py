@@ -239,13 +239,134 @@ YC context: {context[:1500]}
     )
 
 
+def _run_preflight(
+    client: LLMClient,
+    config: ValidationConfig,
+    idea: str,
+) -> dict[str, Any]:
+    """Pass 3: Pre-flight 3-check (from startup-skill) + deal-signal taxonomy (from vc-intelligence).
+
+    3 fast sanity checks before investing pipeline time:
+      1. Dominant solution — is there already a well-funded winner?
+      2. Precedent failure — has a startup tried this and publicly failed?
+      3. Regulatory kill — obvious legal/compliance blocker?
+
+    Plus deal-signal scan (Hiring / Funding / Product / Team / Market / Tech)
+    based on what the LLM knows about the space.
+    """
+    return client.json_completion(
+        model=config.classifier_model,
+        temperature=0.2,
+        system_prompt=(
+            "You are a startup pre-flight analyst. Run fast sanity checks to surface "
+            "instant-kill signals before the team invests validation time. "
+            "Be specific and honest. Return only valid JSON."
+        ),
+        user_prompt=f"""Run a 3-point pre-flight check on this startup idea.
+
+IDEA: {idea}
+
+PRE-FLIGHT CHECK 1 — DOMINANT SOLUTION:
+Is there already a well-funded, widely-adopted solution to this EXACT problem?
+Name it. If multiple, name the strongest one.
+Score: CLEAR (no dominant player) / CROWDED (strong incumbent exists) / WINNER_TAKES_ALL (monopoly)
+
+PRE-FLIGHT CHECK 2 — PRECEDENT FAILURE:
+Has a notable startup tried this exact idea and publicly failed or pivoted away?
+If yes: name it, the year, and the key failure reason in one sentence.
+Score: NO_KNOWN_FAILURE / KNOWN_FAILURE / MULTIPLE_FAILURES
+
+PRE-FLIGHT CHECK 3 — REGULATORY KILL:
+Is there an obvious legal, licensing, or compliance reason this idea CANNOT exist
+or would be extremely hard to launch in Peru/LATAM without special permits?
+Score: NO_BLOCKER / SOFT_BLOCKER (manageable with effort) / HARD_KILL (fatal)
+
+DEAL-SIGNAL SCAN (from vc-intelligence taxonomy — Hiring/Funding/Product/Team/Market/Tech):
+Based on the category this idea is in, identify which signals a founder should
+watch to know if the space is heating up or cooling down.
+
+Return JSON:
+{{
+  "preflight_dominant_solution": {{
+    "score": "CLEAR|CROWDED|WINNER_TAKES_ALL",
+    "competitor_name": "<name or 'none found'>",
+    "threat_level": "LOW|MEDIUM|HIGH",
+    "note": "<one sentence>"
+  }},
+  "preflight_precedent_failure": {{
+    "score": "NO_KNOWN_FAILURE|KNOWN_FAILURE|MULTIPLE_FAILURES",
+    "example": "<company name + year + key failure reason, or 'none'>",
+    "learning": "<what the failure reveals about the space>"
+  }},
+  "preflight_regulatory_kill": {{
+    "score": "NO_BLOCKER|SOFT_BLOCKER|HARD_KILL",
+    "regulation": "<specific law or requirement if any>",
+    "mitigation": "<how to handle it, or 'n/a'>"
+  }},
+  "deal_signals": {{
+    "hiring": "<what hiring patterns in the space indicate>",
+    "funding": "<recent funding activity in this category, if known>",
+    "product": "<key product launches or milestones to watch>",
+    "market": "<macro trend or market signal driving this space>",
+    "tech": "<technology shift enabling or threatening this idea>",
+    "momentum": "ACCELERATING|STABLE|DECLINING"
+  }},
+  "preflight_summary": "<1 sentence: proceed / caution / kill and why>"
+}}
+""",
+        fallback=lambda: {
+            "preflight_dominant_solution": {
+                "score": "CLEAR",
+                "competitor_name": "unknown",
+                "threat_level": "MEDIUM",
+                "note": "Could not run preflight without LLM.",
+            },
+            "preflight_precedent_failure": {
+                "score": "NO_KNOWN_FAILURE",
+                "example": "none",
+                "learning": "Unknown.",
+            },
+            "preflight_regulatory_kill": {
+                "score": "NO_BLOCKER",
+                "regulation": "unknown",
+                "mitigation": "n/a",
+            },
+            "deal_signals": {
+                "hiring": "unknown",
+                "funding": "unknown",
+                "product": "unknown",
+                "market": "unknown",
+                "tech": "unknown",
+                "momentum": "STABLE",
+            },
+            "preflight_summary": "Preflight ran without LLM — treat as unverified.",
+            "source": "deterministic_fallback",
+        },
+    )
+
+
+_PREFLIGHT_FALLBACK: dict[str, Any] = {
+    "preflight_dominant_solution": {"score": "CLEAR", "competitor_name": "unknown", "threat_level": "MEDIUM", "note": "No LLM."},
+    "preflight_precedent_failure": {"score": "NO_KNOWN_FAILURE", "example": "none", "learning": "Unknown."},
+    "preflight_regulatory_kill": {"score": "NO_BLOCKER", "regulation": "unknown", "mitigation": "n/a"},
+    "deal_signals": {"hiring": "unknown", "funding": "unknown", "product": "unknown", "market": "unknown", "tech": "unknown", "momentum": "STABLE"},
+    "preflight_summary": "Preflight unavailable without LLM.",
+}
+
+
 def _merge_results(
     classifier: dict[str, Any],
     devil: dict[str, Any],
+    preflight: dict[str, Any],
 ) -> dict[str, Any]:
-    """Merge optimistic classifier + devil's advocate into final verdict."""
+    """Merge classifier + devil's advocate + preflight into final verdict."""
     devil_verdict = devil.get("devil_verdict", "WEAK")
     classifier_rec = classifier.get("proceed_recommendation", "WARN")
+
+    # Hard kill from preflight overrides everything
+    reg_kill = preflight.get("preflight_regulatory_kill", {}).get("score", "NO_BLOCKER")
+    if reg_kill == "HARD_KILL":
+        devil_verdict = "FATAL"
 
     # Stricter verdict wins when devil finds FATAL issues
     if devil_verdict == "FATAL":
@@ -255,7 +376,6 @@ def _merge_results(
     else:
         final_rec = classifier_rec
 
-    # Combine pit signals from both agents
     pit_signals = list(dict.fromkeys(
         devil.get("pit_signals_detected", []) +
         classifier.get("pit_signals_detected", [])
@@ -281,7 +401,14 @@ def _merge_results(
         "market_size_reality_check": devil.get("market_size_reality_check", ""),
         "hardest_assumption": devil.get("hardest_assumption", ""),
         "devil_rationale": devil.get("devil_rationale", ""),
-        "source": "dual_agent_classification",
+        # Pre-flight checks (startup-skill pattern)
+        "preflight_dominant_solution": preflight.get("preflight_dominant_solution", {}),
+        "preflight_precedent_failure": preflight.get("preflight_precedent_failure", {}),
+        "preflight_regulatory_kill": preflight.get("preflight_regulatory_kill", {}),
+        "preflight_summary": preflight.get("preflight_summary", ""),
+        # Deal-signal taxonomy (vc-intelligence pattern)
+        "deal_signals": preflight.get("deal_signals", {}),
+        "source": "triple_agent_classification",
     }
 
 
@@ -305,6 +432,7 @@ def _fallback_classify(idea: str) -> dict[str, Any]:
         "market_size_reality_check": "Unknown.",
         "hardest_assumption": "Unknown.",
         "devil_rationale": "Fallback — no LLM.",
+        **_PREFLIGHT_FALLBACK,
         "source": "deterministic_fallback",
     }
 
@@ -318,10 +446,12 @@ def run_stage0_classify(
     if not client.enabled:
         return _fallback_classify(idea)
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         f_classifier = executor.submit(_run_classifier, client, config, idea, context)
         f_devil = executor.submit(_run_devil_advocate, client, config, idea, context)
+        f_preflight = executor.submit(_run_preflight, client, config, idea)
         classifier = f_classifier.result()
         devil = f_devil.result()
+        preflight = f_preflight.result()
 
-    return _merge_results(classifier, devil)
+    return _merge_results(classifier, devil, preflight)

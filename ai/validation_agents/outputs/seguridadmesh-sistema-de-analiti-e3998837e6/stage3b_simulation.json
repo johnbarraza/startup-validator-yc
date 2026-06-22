@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "SeguridadMesh is an AI video analytics overlay for municipal serenazgo camera networks in Peru that detects street-level incidents—such as assaults, thefts, and traffic accidents—in real time and instantly alerts operators with minimal distraction. Built specifically for the visual chaos of Peruvian streets (mototaxis, narrow market alleys, low-light conditions), it plugs into existing low-cost cameras without replacing hardware. The system reduces reliance on fatigued human monitors who miss events until citizen calls come in, enabling faster dispatch and improved public safety. Sold as an annual B2G license aligned with PIM security budgets, it transforms passive surveillance into a proactive response tool tailored to the daily workflow of serenazgo staff.",
+  "selected_gap": {
+    "id": "G1",
+    "title": "Incident detection tailored to Peruvian serenazgo contexts",
+    "pain": "High",
+    "why_now": "Municipalities increase security budgets but generic analytics miss local crime patterns, causing operator fatigue and slow response.",
+    "evidence_needed": "Interview serenazgo operators at 3 municipalities to catalog undetected incident types; prototype a detection model on sample footage and compare to manual monitoring.",
+    "priority": "High",
+    "risk": "Competitors may adapt with localized models; requires continuous data collection."
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "As a serenazgo operator, I'm tired of being glued to screens and missing real incidents until citizens call. This AI overlay sounds promising, but I've seen too many flashy demos fail in our chaotic streets—mototaxis, shadows, and street vendors generate endless false alarms that would make me ignore the system altogether.",
+      "concern": "False positives will erode trust fast. If the AI flags every weaving mototaxi or crowd surge as an incident, operators will tune it out, defeating its purpose and making us slower than before.",
+      "evidence_request": "Show me a live demo on raw footage from three different municipalities with precision and recall stats above 95%, plus operator feedback after a week of use.",
+      "score": 0.3,
+      "score_rationale": "The validation gap around operator fatigue is real, but the risk of high false positive rates in Peru's visual chaos makes me doubt it would save time or reduce stress without extensive tuning and proven reliability.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "Another AI solution that promises to magically fix our chaotic streets. I've seen too many vendor pitches that fail in real conditions—our mototaxis and narrow alleys will break any off-the-shelf model. Even if it works, who will trust an AI alert over a human call?",
+      "concern": "False positives or missed detections in low-light, crowded Peruvian streets could lead to operator distrust and wasted dispatches, undermining the entire system.",
+      "evidence_request": "Show me a blinded test on actual serenazgo footage from 3 municipalities with precision >90% and false alarm rate <5%, validated by independent operators.",
+      "score": 0.15,
+      "score_rationale": "B2G sales cycle is long, trust in AI is extremely low in Peru (under 10%), and the technical risk on local footage is unproven, so I'm highly skeptical.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "The concept addresses a real operational pain, but municipal sales cycles are notoriously slow, and proving ROI within a single quarter is a steep ask. I'm wary of budget overruns from integration and training costs.",
+      "concern": "B2G procurement friction will delay any revenue generation, making it nearly impossible to show a positive ROI within the required quarter.",
+      "evidence_request": "A signed letter of intent from a municipality with a 3-month pilot that shows a measurable reduction in response time or false alerts, backed by a clear cost-benefit analysis.",
+      "score": 0.3,
+      "score_rationale": "High potential impact is offset by the inevitable multi-quarter procurement cycle and lack of immediate, guaranteed ROI.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "The idea sounds promising on paper, but from an operations standpoint, integrating an AI overlay into existing low-cost cameras across diverse municipal sites is fraught with integration complexity and variable camera quality, which will likely lead to high false positives and constant tuning requests.",
+      "concern": "The sharpest risk is that the AI's detection accuracy in chaotic, low-light Peruvian streets will be poor out of the box, generating a flood of false alerts that desensitize operators and increase support load, negating any potential time savings.",
+      "evidence_request": "I need to see a proven prototype with precision and recall metrics on real, non-curated footage from at least three different municipalities, demonstrating that the system reduces operator distraction rather than increasing it.",
+      "score": 0.3,
+      "score_rationale": "The high change management and support load required to deploy and maintain a localized AI system across heterogeneous camera networks with unreliable performance makes the operational risk too high for a B2G sale.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "This is a niche play that large vendors like Hikvision or Milestone can easily replicate by adding a Peru-specific model to their existing platforms. Free open-source tools like TensorFlow Object Detection can be adapted for similar purposes, undermining the startup's pricing power.",
+      "concern": "Incumbents already have the infrastructure and customer relationships; they can add a local detection module as a feature update, eliminating SeguridadMesh's wedge.",
+      "evidence_request": "Show me a contract or exclusive data partnership with a Peruvian municipality that prevents incumbents from accessing similar footage for model training.",
+      "score": 0.2,
+      "score_rationale": "The startup relies on a thin layer of localization that incumbents can quickly copy, and the B2G sales cycle gives them time to react.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "The idea is too narrow for venture scale. The Peruvian serenazgo market is fragmented and budgets are small, likely under $10M SAM, well below the $50M threshold. Without a clear path to $10M ARR and reliance on slow B2G sales cycles, this is better suited as a lifestyle business.",
+      "concern": "The total addressable market for serenazgo video analytics in Peru is likely under $10M annually, far too small for a venture-backed startup.",
+      "evidence_request": "Show me signed contracts or pilot commitments from at least 3 municipalities totaling $500K in annual recurring revenue.",
+      "score": 0.15,
+      "score_rationale": "The market is too small and B2G sales cycles are too slow to reach venture-scale returns.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "The idea is technically interesting but fraught with data pipeline and model robustness challenges. The reliance on heterogeneous low-cost cameras and chaotic street scenes demands a highly adaptive ML system, and the B2G sales cycle adds operational drag that complicates iterative improvement.",
+      "concern": "Data quality and consistency from existing low-cost cameras are the single biggest risk; without reliable, labeled footage representative of Peruvian streets, the model will fail in production, and collecting such data is expensive and slow.",
+      "evidence_request": "A working prototype tested on live or near-live footage from at least one municipal serenazgo network, with demonstrated precision and recall metrics for the target incidents (assaults, thefts, accidents) across varied lighting and density conditions.",
+      "score": 0.25,
+      "score_rationale": "The technical challenges around data acquisition, model generalization, and COGS are significant and unproven, outweighing the potential defensibility from a tight data loop.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "This product has nothing to do with my business. I run a small shop, not a city surveillance system. Why would I care about municipal camera analytics? It doesn't help me avoid fines, manage my workers, or increase my daily sales.",
+      "concern": "Complete irrelevance to informal SME operations. No direct benefit to my cash flow, costs, or risks.",
+      "evidence_request": "Show me how this product saves me 1 sol per transaction or reduces my risk of being robbed at my corner store. Otherwise it's not for me.",
+      "score": 0.0,
+      "score_rationale": "The product addresses a completely different buyer segment (municipalities) and solves no problem I face as an informal sector SME.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "As an institutional buyer bound by UGEL/OSCE procurement cycles, I see no existing budget code for this AI overlay, and adding a new line item requires MINEDU/PRODUCE approval, which can take 12-18 months. Without clear fit within current security or technology budgets, adoption is improbable.",
+      "concern": "The product does not align with any standard procurement category we currently use; municipalities use different budget codes than education institutions, so even if it works, we cannot buy it without a new competitive tender.",
+      "evidence_request": "Show me a signed letter from a municipality that already has an approved budget code (e.g., 'Adquisición de Servicios de Vigilancia') that explicitly includes this software, proving it can be procured without a new process.",
+      "score": 0.2,
+      "score_rationale": "Despite potential utility, the procurement complexity and lack of existing budget code make it nearly impossible to purchase within our institutional constraints.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "I see real pain in serenazgo monitoring, but B2G in Peru is a slow, small market. Scaling beyond Lima is tough, and international co-investors will demand clear traction beyond a pilot. The idea needs a concrete path to $1M ARR and a plan for LATAM expansion.",
+      "concern": "The dependency on municipal budgets (PIM) and long sales cycles will likely prevent you from reaching $1M ARR in a timeframe attractive to international co-investors.",
+      "evidence_request": "Show me a signed pilot or LOI from a key municipality (e.g., Miraflores) with a clear annual license fee, plus a 3-year unit economics model demonstrating how you hit $1M ARR across multiple municipalities.",
+      "score": 0.2,
+      "score_rationale": "The B2G risk and limited TAM make it very hard to reach the $1M ARR and international co-investor threshold required for a Series A.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.205,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.205,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "False positives will erode trust fast. If the AI flags every weaving mototaxi or crowd surge as an incident, operators will tune it out, defeating its purpose and making us slower than before.",
+      "False positives or missed detections in low-light, crowded Peruvian streets could lead to operator distrust and wasted dispatches, undermining the entire system.",
+      "B2G procurement friction will delay any revenue generation, making it nearly impossible to show a positive ROI within the required quarter."
+    ],
+    "top_evidence_requests": [
+      "Show me a live demo on raw footage from three different municipalities with precision and recall stats above 95%, plus operator feedback after a week of use.",
+      "Show me a blinded test on actual serenazgo footage from 3 municipalities with precision >90% and false alarm rate <5%, validated by independent operators.",
+      "A signed letter of intent from a municipality with a 3-month pilot that shows a measurable reduction in response time or false alerts, backed by a clear cost-benefit analysis."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "NO_GO"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

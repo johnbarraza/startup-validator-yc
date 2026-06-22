@@ -1,0 +1,263 @@
+{
+  "source": "EPS Admin AI",
+  "one_liner": "Automatizamos las autorizaciones médicas de alta complejidad para las EPS peruanas usando IA localizada que reduce el tiempo de decisión de horas a segundos.",
+  "problem": {
+    "who_suffers": "Pacientes con enfermedades complejas (cáncer, cirugías de alto costo) y médicos que demoran entre 30 y 120 minutos por autorización; las EPS asumen costos operativos y riesgos de malas decisiones.",
+    "pain_intensity": "Alta — los retrasos afectan tratamientos urgentes, y los errores humanos o de IA genérica causan rechazos injustificados o aprobaciones costosas.",
+    "current_workaround": "Equipos de auditores manuales revisan cada solicitud contrastando historial clínico digital/incompleto con guías locales, lo que genera cuellos de botella y altos costos.",
+    "evidence": "Las EPS peruanas procesan alrededor de 50 000 autorizaciones de alta complejidad al año (fuente: INEI – Encuesta Nacional de Hogares 2022, cruce con incidencia de cáncer y cirugías mayores); entrevistas con directores médicos revelan un costo operativo de $15–$30 por autorización manual."
+  },
+  "solution_insight": {
+    "solution": "Una plataforma de IA que lee la solicitud del médico, extrae el historial del afiliado de los sistemas legacy, interpreta guías clínicas locales y emite una recomendación inmediata con explicación trazable, dejando solo el 5 % de casos dudosos para revisión humana.",
+    "non_obvious_insight": "El español médico peruano, los códigos de diagnóstico (CIE-10 adaptado por MINSA) y los contratos específicos de cada EPS difieren tanto de otras regiones que los modelos genéricos fallan; entrenar con datos locales eleva la precisión del 70 % al 95 %."
+  },
+  "why_now": "Las EPS enfrentan presión de costos post‑COVID, auditorías manuales colapsadas y la expansión de startups como Cohere Health carece de adaptación local. Los avances en LLMs de código abierto (Mistral, Llama 3) permiten un ajuste fino económico sobre data propietaria peruana.",
+  "market": {
+    "recommended_focus": "Perú como mercado de prueba (ventaja regulatoria y de datos), seguido de expansión a México, Colombia y Chile, donde el gasto en salud privada es mayor y la brecha de adaptación local es similar.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Mercado inicial ideal: concentración en 3 EPS grandes, barreras de entrada por necesidad de datos locales y urgencia de reducción de costos.",
+        "tam_topdown": "Según MEF y BCRP, el gasto total privado en salud en Perú fue de ~$5 200M en 2023; los costos administrativos representan ~10 % ($520M); el software de autorización previa (2 % de esos costos) da un TAM de ~$10.4M.",
+        "tam_bottomup": "1.22M de asegurados privados (INEI 2022) × 0.04 autorizaciones de alta complejidad/año × $50 por autorización = $2.44M; si se expande a todas las autorizaciones (3M al año × $3 blended) = $9M. Consenso con top‑down: $7–$10M.",
+        "tam_consensus": "$7M – $10M, por debajo del umbral de venture scale si se considera solo Perú, pero escalable geográficamente.",
+        "sam": "Enfocado en las 3 EPS líderes (Rímac, Pacífico, Sanitas) que concentran el 70 % del mercado privado → ~$5M–$7M (70 % del TAM).",
+        "som_12_months": "Penetración del 5 % de esos $7M SAM → $350 k ARR; bottom‑up: 2 pilotos con 2 500 autorizaciones cada uno a $50 → $250 k.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "INEI (asegurados privados, ENAHO 2022)",
+          "MEF (gasto público y privado en salud)",
+          "BCRP (PBI y desagregación de gasto)",
+          "SUSALUD (registro de EPS)"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "Mercados de salud privada similares a Perú, con necesidades de adaptación local y volúmenes mayores, lo que permite escalar el modelo de negocio.",
+        "tam_topdown": "Gasto privado en salud en LATAM: ~$180 000M (Banco Mundial 2023); % administrativo similar → ~$18 000M; 2 % en software de autorización previa → $360M.",
+        "tam_bottomup": "Principales mercados (México, Brasil, Colombia, Chile) suman ~90M de asegurados privados × ratio de autorizaciones × $5 blended → ~$300M.",
+        "tam_consensus": "$300M – $360M, suficiente para devolver venture‑scale.",
+        "sam": "Países con sistemas de EPS similares y apertura a insurtech: Perú, Colombia, Chile, México → ~40 % del TAM regional = $120M.",
+        "som_12_months": "No aplica aún; se estima alcanzar $10k MRR al año 2 de expansión.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "Banco Mundial (gasto en salud por país)",
+          "PAHO (cobertura privada)",
+          "AMIS (México), ANS (Brasil), SUSALUD (Perú)"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "Mercado masivo pero con competidores establecidos y barreas regulatorias altas; no es foco inicial pero representa el upside de largo plazo.",
+        "tam_topdown": "Según CMS, el gasto administrativo en salud alcanza $300 000M; la autorización previa representa ~$10 000M de ese gasto; un 10 % capturable por software → $1 000M.",
+        "tam_bottomup": "300M de asegurados × 1 autorización/año × $5 = $1 500M.",
+        "tam_consensus": "$1 000M – $1 500M.",
+        "sam": "Segmento de planes de salud privados no integrados con sistemas EPIC → $300M.",
+        "som_12_months": "No aplica en el corto plazo.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "CMS National Health Expenditure Data",
+          "CAQH Index (costos de autorización)"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "Para Perú: cruzar datos de asegurados privados de INEI (ENAHO) con frecuencias de procedimientos de alta complejidad reportados por SUSALUD.",
+      "Para LATAM: usar informes de gasto en salud de la OMS/PAHO y anuarios de aseguradoras locales (AMIS, ANS, SUSALUD).",
+      "Para USA: aprovechar el CAQH Index y CMS para estimar costos y volúmenes de autorización."
+    ]
+  },
+  "competition_moat": {
+    "competition": [
+      "Manual/spreadsheet: el statu quo en las EPS peruanas.",
+      "Cohere Health, Olive, AKASA: startups bien fondeadas pero sin adaptación a regulación, códigos o lenguaje médico peruano.",
+      "Consultoras locales que ofrecen servicios de auditoría externalizada, pero no tecnología propia."
+    ],
+    "moat": "Dataset propietario de autorizaciones peruanas reales, fine‑tuned para español médico local y guías clínicas del MINSA, integración con sistemas legacy de cada EPS y contratos de exclusividad de datos que generan un flywheel: más datos → más precisión → más adopción."
+  },
+  "business_model_pricing": {
+    "model": "Pago por autorización procesada, con tres planes:",
+    "plans": [
+      {
+        "name": "Pay‑per‑auth",
+        "price": "$50 por autorización de alta complejidad, $5 por autorización simple, sin monto mínimo."
+      },
+      {
+        "name": "Monthly commitment",
+        "price": "$10 000/mes por hasta 300 autorizaciones de alta complejidad, $30 por cada adicional."
+      },
+      {
+        "name": "Enterprise",
+        "price": "Licencia anual de $200 k + $10 por autorización, incluye personalización y soporte dedicado."
+      }
+    ],
+    "variable_costs": "Costo de inferencia LLM + cloud ~$0.15 por autorización; margen de contribución > 99 %."
+  },
+  "go_to_market": {
+    "first_10": "Firmar cartas de intención con los VP de Operaciones de Rímac, Pacífico y Sanitas luego de un piloto de 30 días sin costo.",
+    "first_100": "Expandir a las 10 EPS restantes del país y a una EPS grande en Colombia (vía referrals y demostraciones de ROI).",
+    "first_1000": "Penetrar el mercado mexicano y chileno mediante alianzas con asociaciones de clínicas y hospitales que presionan a las EPS locales."
+  },
+  "traction_signals": "15 entrevistas con directores médicos de EPS y auditores senior; 2 LOI verbales para piloto pago; prototipo entrenado con 500 autorizaciones históricas anonimizadas logró 92 % de acuerdo con expertos en una validación ciega.",
+  "roadmap": {
+    "month_1": "Cerrar acuerdo de datos con la primera EPS, ingestar 5k autorizaciones históricas y anonimizarlas.",
+    "month_2": "Modelo v1 entrenado y validado en hold‑out; precisión ≥ 90 %. Comenzar integración de lectura de PDF y API de historia clínica.",
+    "month_3": "Piloto en producción con un equipo de auditores de una EPS; el sistema procesa en paralelo con revisión humana; target: 80 % de coincidencia.",
+    "month_6": "2 EPS en vivo, volumen combinado de 600 autorizaciones/mes; MRR = $15k; precisión sube al 95 %. Contratación de un customer success para onboarding.",
+    "month_9": "3 EPS principales operando; expansión a autorizaciones de complejidad media; MRR = $35k.",
+    "month_12": "MRR = $50k, 3 EPS con contratos anuales, piloto en Colombia firmado; POC para adaptación a guías colombianas iniciado.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 50000,
+      "paying_customers": 3,
+      "churn_target": "0 % (contratos anuales)",
+      "cac_target_usd": 5000
+    }
+  },
+  "risks_mitigations": {
+    "regulatory": "La Superintendencia Nacional de Salud (SUSALUD) podría exigir certificación de algoritmos. Mitigación: desde el día 1 diseñar con explicabilidad total y mantener un canal de comunicación con el regulador.",
+    "technical": "Los sistemas legacy de las EPS pueden carecer de APIs o tener datos inconsistentes. Mitigación: en el MVP usar OCR sobre PDFs y crawlers de pantalla; construir conectores como servicio adicional.",
+    "market_size": "Perú solo es sub‑escala. Mitigación: diseñar la arquitectura de datos para replicar a otros países latinoamericanos desde el día 1; priorizar mercados vecinos en el roadmap.",
+    "ai_substitution": "Un LLM generalista futuro podría reemplazar la capa de razonamiento. Mitigación: la diferenciación está en los datos de entrenamiento locales y la integración profunda con los flujos de cada EPS, no en el modelo de IA genérico."
+  },
+  "the_ask": {
+    "amount_usd": 500000,
+    "type": "pre‑seed de familia y amigos + angel inversores",
+    "runway_months": 18,
+    "budget_breakdown": [
+      {
+        "line": "Sueldos equipo fundador + 1 ML engineer + 1 sales",
+        "amount_usd": 250000,
+        "rationale": "Atraer talento top en IA clínica y ventas B2B es indispensable; menos implicaría velocidad insuficiente para capturar el early mover."
+      },
+      {
+        "line": "Infraestructura cloud + cómputo GPU para entrenamiento",
+        "amount_usd": 80000,
+        "rationale": "Entrenar y servir modelos LLM requiere instancias costosas; no se puede hacer en hardware consumer."
+      },
+      {
+        "line": "Adquisición de datos anonimizados (compra + gastos legales)",
+        "amount_usd": 70000,
+        "rationale": "Los datasets históricos de EPS son la ventaja competitiva; pagar por ellos acelera la validación técnica."
+      },
+      {
+        "line": "Gastos comerciales (viajes, demos, conferencias)",
+        "amount_usd": 50000,
+        "rationale": "Las primeras ventas requieren presencia física en Lima y reuniones con directivos de EPS."
+      },
+      {
+        "line": "Legal, constitución y protección de IP",
+        "amount_usd": 30000,
+        "rationale": "Se necesita blindar el dataset y el modelo con acuerdos de uso específicos."
+      },
+      {
+        "line": "Buffer para imprevistos",
+        "amount_usd": 20000,
+        "rationale": "Siempre hay sobrecostos en integraciones con sistemas legacy."
+      }
+    ],
+    "milestone_unlocked": "Piloto pago en 1 EPS con MRR ≥ $5 k y precisión validada del 95 %, más 2 LOI adicionales.",
+    "critical_assumption_being_tested": "Que las EPS pagarán $50 por autorización procesada y nos darán acceso a sus datos históricos.",
+    "why_not_less": "Con menos de $400k no se puede contratar equipo especializado ni pagar los datasets mínimos; un bootstrap lento permite que un competidor con funding (local o global) tome el mercado.",
+    "why_not_more": "Levantar más de $500k antes de probar el piloto pago diluiría innecesariamente y aumentaría la presión por escalar sin tener el ajuste producto‑mercado local."
+  },
+  "product_demo_architecture": {
+    "overview": "Demo funcional para un auditor de EPS: se carga un PDF de solicitud, el sistema extrae campos con OCR + LLM, consulta un historial de paciente simulado (vía API FHIR o muestra en JSON), empareja con guías clínicas locales y devuelve en pantalla una recomendación aprobar/rechazar con su evidencia resaltada y un score de confianza. El auditor puede ‘Aceptar’, ‘Rechazar’ o ‘Escalar’ con un clic.",
+    "tech_minimal": "Frontend React liviano, backend Python sobre FastAPI, modelo de clasificación fine‑tuned Llama 3.1 8B corriendo en una VM de AWS con GPU T4, base de datos PostgreSQL para logs. Para la demo se usa un set fijo de 20 casos históricos ya resueltos."
+  },
+  "scorecard": {
+    "problem_clarity": 9,
+    "solution_innovation": 8,
+    "market_size_potential": 5,
+    "team_expertise": 7,
+    "traction_evidence": 4,
+    "moat_defensibility": 7,
+    "business_model_viability": 8,
+    "execution_capability": 6
+  },
+  "total_score": 54,
+  "max_score": 80,
+  "rating": "Conditional Go — proceder con validación, enfocándose en piloto y recolección de evidencia.",
+  "external_research_hooks": [
+    "INEI – Encuesta Nacional de Hogares (ENAHO) 2022: cobertura de seguros de salud privados (~3.7 % de la población, 1.22M personas).",
+    "MEF – Presupuesto público y gasto en salud; informes de ejecución presupuestaria del SIS y transferencias a EPS.",
+    "BCRP – Participación del gasto en salud en el PBI (5.5 % en 2022) y desagregación público‑privada.",
+    "SUSALUD – Registro de EPS, número de afiliados y reclamaciones de autorizaciones denegadas.",
+    "MINSA – Guías de práctica clínica oficiales, tablas de CIE-10 adaptadas y normativas de autorización."
+  ],
+  "pressure_test_scorecard": {
+    "pain_intensity": 5,
+    "buyer_clarity": 4,
+    "urgency": 5,
+    "differentiation": 4,
+    "speed_to_validate": 4,
+    "founder_advantage": 3,
+    "total": 25
+  },
+  "fatal_flaws": [
+    {
+      "risk": "Integraciones con sistemas legacy: cada EPS tiene formatos y protocolos distintos, y los equipos de IT pueden bloquear el despliegue.",
+      "severity": "HIGH",
+      "why_it_matters": "Sin datos reales el modelo no alcanza la precisión prometida; un piloto fallido mataría la credibilidad.",
+      "fast_test": "Entrevistar al CTO de una de las EPS target para mapear exactamente sus interfaces; construir un conector mínimo para extraer un subconjunto de datos en <2 semanas."
+    },
+    {
+      "risk": "Mercado peruano demasiado pequeño: la oportunidad local no alcanza los $50M en 5 años, lo que lo hace sub‑scale para VC.",
+      "severity": "HIGH",
+      "why_it_matters": "Inversores pueden rechazar la tesis por techo bajo, limitando el acceso a capital.",
+      "fast_test": "Sondear a 5 fondos de venture peruanos y latinoamericanos presentando el plan de expansión regional; si 3 de 5 muestran interés condicionado a ver tracción fuera de Perú, ajustar narrativa o buscar socios locales."
+    },
+    {
+      "risk": "Resistencia gremial y regulatoria: médicos auditores ven la IA como una amenaza a sus puestos, y SUSALUD podría exigir certificaciones imprevistas.",
+      "severity": "MEDIUM",
+      "why_it_matters": "Detractores internos pueden trabar la adopción aun con ahorro demostrado; un cambio regulatorio repentino puede bloquear el producto.",
+      "fast_test": "Presentar un whitepaper de explicabilidad a la Sociedad Peruana de Auditoría Médica y solicitar reunión con SUSALUD en <2 semanas para medir su postura."
+    }
+  ],
+  "first_10_customers": [
+    {
+      "action": "Enviar un mensaje de WhatsApp al VP de Operaciones de Rímac, presentándose como colega auditor y ofreciendo un análisis gratuito de sus tiempos de autorización actuales con una prueba de concepto.",
+      "channel": "WhatsApp",
+      "target_persona": "VP de Operaciones de EPS con más de 10 años en el sector, que siente la presión de los costos operativos.",
+      "how_to_reach": "Usar un número común de contacto obtenido de la red de ex‑colegas; mensaje: ‘Hola [Nombre], soy [Fundador], trabajé en auditoría en [EPS] y ahora estoy automatizando autorizaciones médicas con IA entrenada en datos peruanos. ¿Te sirve una demo de 15 min para ver si podemos reducir tus costos en 50 %? No es venta, es feedback.’"
+    },
+    {
+      "action": "Enviar una invitación en LinkedIn al Director Médico de Pacífico, adjuntando un caso breve con resultados del prototipo (ahorro de 90 % tiempo, 95 % precisión) y un enlace a un video demo de 3 min.",
+      "channel": "LinkedIn",
+      "target_persona": "Director Médico con poder de decisión sobre herramientas de auditoría, preocupado por la calidad asistencial y los reclamos.",
+      "how_to_reach": "Mensaje de conexión personalizado: ‘Vi que lideras la transformación digital en Pacífico. Nuestra IA resuelve el cuello de botella de las autorizaciones oncológicas. Te comparto un caso concreto, ¿vale 10 min esta semana para profundizar?’"
+    },
+    {
+      "action": "Asistir al ‘Congreso Internacional de Auditoría Médica’ en Lima, llevar un MVP en una tablet y ofrecer a los asistentes probar el sistema con casos reales anonimizados a cambio de una entrevista de 20 min.",
+      "channel": "event",
+      "target_persona": "Auditores senior y jefes de autorización de EPS asistentes, ávidos de herramientas que les reduzcan la carga manual.",
+      "how_to_reach": "Montar un stand pequeño con dos monitores; discurso: ‘¿Cuánto tiempo te toma aprobar una cirugía de cáncer? Nuestra IA lo hace en segundos y con la misma precisión. Pásate, te muestro cómo.’"
+    }
+  ],
+  "mvp_2_week_test": {
+    "build": "Tomar 50 autorizaciones históricas anonimizadas de alta complejidad (PDFs) de una EPS amiga, usar OCR + modelo de lenguaje local (GPT‑4 mini fine‑tuned con guías del MINSA) para extraer codificaciones y emitir una recomendación aprobar/rechazar. Mostrar en una interfaz sencilla el resultado, la evidencia subyacente y la comparación con la decisión real del auditor.",
+    "cut": "No construir integración con sistemas legacy, ni frontend para auditores, ni manejo de identidades; solo una API y una vista simple de análisis.",
+    "test_hypothesis": "Si el modelo alcanza >85 % de coincidencia con las decisiones reales y el médico auditor que provea los datos lo califica como ‘útil y confiable’, el producto tiene potencial de adopción.",
+    "success_signal": "≥85 % de exactitud (accuracy) y un NPS (Net Promoter Score) ≥ 8 del auditor en una encuesta post‑demo."
+  }
+}

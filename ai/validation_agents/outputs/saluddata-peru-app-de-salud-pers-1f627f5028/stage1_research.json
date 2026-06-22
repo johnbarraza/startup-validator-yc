@@ -1,0 +1,165 @@
+{
+  "idea": "SaludData Peru: app de salud personal donde el usuario peruano es dueno de su propia data — registra dieta, citas medicas y boletas de farmacia — y recibe alertas de riesgo de enfermedades cronicas, con monetizacion B2B hacia EPS y farmacias.",
+  "market": "Peru's digital health market, focusing on chronic disease prevention and personal health records. TAM: $200M (total healthcare IT spending in Peru, growth at 10% CAGR), SAM: $50M (individual health data management and preventive analytics), SOM: $1.2M in first 12 months targeting Lima's EPS-affiliated patients. Sources: Peru Ministry of Health reports, IDC Latin America healthcare IT estimates.",
+  "solutions": [
+    {
+      "id": "alt-01",
+      "name": "No hacer nada / Memoria",
+      "category": "Inacción",
+      "observed_positioning": "Los usuarios no llevan registro, confían en recordatorios mentales y visitas médicas esporádicas."
+    },
+    {
+      "id": "alt-02",
+      "name": "Cuaderno físico",
+      "category": "Manual",
+      "observed_positioning": "Registro en papel de citas, medicamentos y dieta, sin análisis."
+    },
+    {
+      "id": "alt-03",
+      "name": "Excel / Google Sheets",
+      "category": "Hoja de cálculo",
+      "observed_positioning": "Usuarios avanzados crean planillas propias, sin alertas ni integración."
+    },
+    {
+      "id": "alt-04",
+      "name": "Apple Health",
+      "category": "Plataforma global",
+      "observed_positioning": "Agregador de datos de salud desde dispositivos y apps, con foco en fitness y bienestar general; no adaptado al sistema de salud peruano."
+    },
+    {
+      "id": "alt-05",
+      "name": "Google Fit",
+      "category": "Plataforma global",
+      "observed_positioning": "Seguimiento de actividad física básica, integración con Android; sin registros médicos ni OCR local."
+    },
+    {
+      "id": "alt-06",
+      "name": "MyFitnessPal",
+      "category": "Dieta y nutrición",
+      "observed_positioning": "App líder en registro de alimentos y conteo de calorías, base de datos global, pero sin enfoque en enfermedades crónicas ni integración médica peruana."
+    },
+    {
+      "id": "alt-07",
+      "name": "Medisafe",
+      "category": "Gestión de medicamentos",
+      "observed_positioning": "Recordatorios de medicación y seguimiento, sin análisis de riesgo ni integración con farmacias locales."
+    },
+    {
+      "id": "alt-08",
+      "name": "Glucose Buddy",
+      "category": "Manejo de diabetes",
+      "observed_positioning": "Registro de glucosa, comida y actividad; específico para diabetes, sin cubrir hipertensión ni anemia."
+    },
+    {
+      "id": "alt-09",
+      "name": "Blood Pressure Companion",
+      "category": "Manejo de hipertensión",
+      "observed_positioning": "Registro manual de presión arterial, con gráficos básicos; monolítico."
+    },
+    {
+      "id": "alt-10",
+      "name": "Farmaprecio",
+      "category": "Comparador de precios farmacéuticos",
+      "observed_positioning": "Web/app peruana para comparar precios de medicamentos por cadena; no ofrece gestión de salud integral."
+    },
+    {
+      "id": "alt-11",
+      "name": "Mi Farmacia (InkaFarma/Mifarma)",
+      "category": "App de farmacia",
+      "observed_positioning": "Pedidos y delivery de medicamentos, con sección de bienestar; no hay historial médico."
+    },
+    {
+      "id": "alt-12",
+      "name": "Portal del Asegurado EPS (Rímac/Pacífico)",
+      "category": "Portal EPS",
+      "observed_positioning": "EPS como Rímac y Pacífico ofrecen apps para citas, resultados de laboratorio y autorizaciones, pero el usuario no controla la data ni hay alertas predictivas."
+    },
+    {
+      "id": "alt-13",
+      "name": "Doctoralia Perú",
+      "category": "Agendamiento de citas",
+      "observed_positioning": "Plataforma para buscar y reservar citas médicas online, sin seguimiento post-consulta."
+    },
+    {
+      "id": "alt-14",
+      "name": "WhatsApp groups / Telegram bots",
+      "category": "Redes sociales / mensajería",
+      "observed_positioning": "Recordatorios manuales o bots rudimentarios para medicación y citas; sin analítica."
+    },
+    {
+      "id": "alt-15",
+      "name": "CRON-O-Meter",
+      "category": "Dieta avanzada",
+      "observed_positioning": "Registro de micronutrientes y alimentos, base científica, pero sin componente médico peruano."
+    }
+  ],
+  "research_summary": "El ecosistema de salud digital en Perú está fragmentado entre plataformas globales no localizadas (Apple Health, Google Fit, MyFitnessPal), apps de EPS con funcionalidades transaccionales (citas, resultados) sin empoderamiento del usuario, y herramientas de farmacias centradas en ventas. No existe un competidor integrado que combine propiedad de datos personales, OCR de boletas peruanas, comparador de precios dinámico y alertas de riesgo de enfermedades crónicas. Las mayores amenazas son el eventual despliegue por los gigantes tecnológicos de funcionalidades hiperlocales (si deciden invertir) y la inercia de los portales de EPS ya instalados en la vida del paciente. La ventana de oportunidad reside en la lentitud regulatoria y la escasa digitalización de los actores locales.",
+  "competitor_signals": [
+    {
+      "competitor": "Apple Health",
+      "hiring_score": 8,
+      "funding_score": 10,
+      "product_score": 9,
+      "team_score": 10,
+      "market_score": 9,
+      "tech_score": 9,
+      "overall_score": 91.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Apple continúa expandiendo HealthKit y contratando ingenieros de salud. Su base instalada global y recursos ilimitados le permitirían añadir funciones de OCR y localización peruana si identificara demanda suficiente, aunque no es una prioridad actual."
+    },
+    {
+      "competitor": "Google Fit",
+      "hiring_score": 7,
+      "funding_score": 10,
+      "product_score": 7,
+      "team_score": 9,
+      "market_score": 8,
+      "tech_score": 8,
+      "overall_score": 82.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Google Fit aprovecha la dominancia de Android en Perú pero su oferta de salud sigue siendo superficial. El poder de Google en IA y posible integración con Google Health Studies podrían representar una amenaza a mediano plazo."
+    },
+    {
+      "competitor": "MyFitnessPal",
+      "hiring_score": 6,
+      "funding_score": 7,
+      "product_score": 8,
+      "team_score": 7,
+      "market_score": 7,
+      "tech_score": 7,
+      "overall_score": 69.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "MyFitnessPal tiene la base de datos de alimentos más amplia y una base de usuarios leales, pero su foco es la pérdida de peso y el conteo de calorías. Carece de modelos predictivos de enfermedades y no se integra con el ecosistema de salud peruano."
+    },
+    {
+      "competitor": "Medisafe",
+      "hiring_score": 5,
+      "funding_score": 6,
+      "product_score": 7,
+      "team_score": 6,
+      "market_score": 6,
+      "tech_score": 6,
+      "overall_score": 59.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Medisafe es líder en recordatorios de medicación, pero no ha expandido hacia análisis de crónicos ni integración con farmacias. Su financiación reciente es modesta y su presencia en Perú es mínima."
+    },
+    {
+      "competitor": "Portal del Asegurado EPS (Rímac/Pacífico)",
+      "hiring_score": 4,
+      "funding_score": 6,
+      "product_score": 5,
+      "team_score": 4,
+      "market_score": 7,
+      "tech_score": 3,
+      "overall_score": 49.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Los portales de las EPS tienen una base cautiva de pacientes, pero su desarrollo digital es lento y rara vez centrado en el usuario. Las funcionalidades se limitan a transacciones, sin prevención ni propiedad de datos. Representan un riesgo si decidieran modernizarse agresivamente, pero su inercia organizacional lo hace poco probable en el corto plazo."
+    }
+  ],
+  "source": "llm"
+}

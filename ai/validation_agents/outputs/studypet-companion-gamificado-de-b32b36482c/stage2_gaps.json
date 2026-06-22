@@ -1,0 +1,80 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": "gap1",
+      "title": "AI-Powered Personalized Study Companion",
+      "pain": "Students struggle with generic study tools that don't adapt to their learning style, schedule, or emotional state, leading to low motivation and burnout. Current virtual pets lack personalization.",
+      "why_now": "AI/ML tech is mature and affordable; students expect tailored experiences (TikTok, Spotify). Competitors like Duolingo use AI for language, but no one applies conversational AI and reinforcement learning to general study habits.",
+      "evidence_needed": "User interviews confirming frustration with one-size-fits-all apps; prototype A/B test showing AI adaptation improves session length/frequency.",
+      "priority": "high",
+      "risk": "medium"
+    },
+    {
+      "id": "gap2",
+      "title": "Integrated Study Ecosystem with Virtual Pet",
+      "pain": "Juggling multiple apps (timer, flashcards, notes, planner) fragments the study experience and reduces the pet's contextual relevance. Users want one central companion that tracks all study activities.",
+      "why_now": "Super apps are rising (WeChat); Gen Z prefers consolidated tools. No competitor combines all core study functions with a persistent virtual pet.",
+      "evidence_needed": "Survey on tool fragmentation pain; MVP with timer+flashcards+pet to measure engagement vs single-tool apps.",
+      "priority": "high",
+      "risk": "medium"
+    },
+    {
+      "id": "gap3",
+      "title": "Emotional Wellness Pet for Study Balance",
+      "pain": "Academic pressure causes anxiety, and students lack fun, supportive tools that address mental health within study workflows. Existing apps separate wellness and productivity.",
+      "why_now": "Student mental health crisis; wellness apps like Calm are popular; gamified wellness is underexplored. The pet can offer breathing exercises, positive affirmations, and break reminders tailored to stress levels.",
+      "evidence_needed": "Pilot with university counseling centers; measure impact on self-reported stress and study consistency.",
+      "priority": "high",
+      "risk": "medium"
+    },
+    {
+      "id": "gap4",
+      "title": "Social Co-Studying with Virtual Pets",
+      "pain": "Studying is often solitary; accountability with friends is motivating but current tools lack immersive social interaction. Forest adds social trees, but no pet play or co-op study quests.",
+      "why_now": "Multiplayer gaming trends (Among Us, Roblox) show Gen Z values social play. Edtech lacks real-time social gamified experiences.",
+      "evidence_needed": "Build a minimal \"study with friends and walk pets together\" feature; track session frequency in groups vs solo.",
+      "priority": "medium",
+      "risk": "medium"
+    },
+    {
+      "id": "gap5",
+      "title": "Parent/Guardian-Controlled Pet Growth",
+      "pain": "Parents and teachers want to encourage study habits but lack engaging, non-intrusive tools. Current parental control apps are punitive; reward systems are ad-hoc.",
+      "why_now": "Remote/hybrid learning increased need for home study support; gamified education tools for young learners (K-8) are booming.",
+      "evidence_needed": "Interviews with parents/teachers; pilot in a classroom or homeschool group; measure adherence to study plans.",
+      "priority": "medium",
+      "risk": "low"
+    },
+    {
+      "id": "gap6",
+      "title": "Cross-Device Seamless Study Companion",
+      "pain": "Students switch devices (phone for quick sessions, laptop for deep work) and lose continuity with their pet. No app syncs pet state and study progress across all platforms smoothly.",
+      "why_now": "Increasing device diversity (Chromebooks, iPads, phones); cloud sync is standard but not implemented in niche pet apps.",
+      "evidence_needed": "Check reviews of Study Bunny/Forest for sync complaints; prototype a web+mobile version and test user churn.",
+      "priority": "medium",
+      "risk": "low"
+    },
+    {
+      "id": "gap7",
+      "title": "Curriculum-Aligned AI Content Generation",
+      "pain": "Creating study materials (flashcards, summaries) is time-consuming. Existing tools rely on user-generated content or static libraries; none auto-generate from a student's actual coursework using AI and tie it to the pet's care.",
+      "why_now": "Generative AI (GPT, etc.) enables on-the-fly creation; students upload syllabus or notes and get personalized quizzes that earn pet rewards.",
+      "evidence_needed": "Test with a small group: upload a textbook chapter, generate flashcards, track study time and exam scores.",
+      "priority": "high",
+      "risk": "high"
+    },
+    {
+      "id": "gap8",
+      "title": "Narrative-Driven Pet Evolution Based on Real-World Exams",
+      "pain": "Simple reward streaks become boring. Students desire a deeper narrative where their pet's growth reflects real academic milestones (acing a test, completing a course). Current pets have superficial evolution.",
+      "why_now": "Gamification is maturing; games like Pokemon use emotional attachment through evolution. Edtech lacks long-term narrative hooks.",
+      "evidence_needed": "Design a prototype with pet evolution stages tied to GPA or test scores; measure retention over a semester vs control.",
+      "priority": "medium",
+      "risk": "medium"
+    }
+  ],
+  "recommended_gap_id": "gap1",
+  "checkpoint_instruction": "Build a prototype that uses a simple AI model (e.g., GPT-based) to adapt study session recommendations and pet interactions based on user behavior logs. Validate with a 2-week user trial.",
+  "source": "llm"
+}

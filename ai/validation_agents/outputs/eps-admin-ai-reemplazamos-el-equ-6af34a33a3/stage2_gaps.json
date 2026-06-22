@@ -1,0 +1,71 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": "g-1",
+      "title": "Localized AI for Peruvian Medical Context",
+      "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+      "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+      "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+      "priority": "High",
+      "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+    },
+    {
+      "id": "g-2",
+      "title": "Performance-Based Pricing with ROI Transparency",
+      "pain": "High – Insurers face fixed costs with manual staff or BPOs regardless of volume, and are skeptical of AI's ROI. Per-authorization pricing aligns cost with value.",
+      "why_now": "EPSs are under pressure to cut administrative costs (up to 30% of premiums) and want variable cost structures. No current solution offers pure outcome-based pricing in LATAM.",
+      "evidence_needed": "Willingness-to-pay surveys from 5 EPS CFOs for a per-auth model; cost benchmarking of manual vs AI; a pilot that demonstrates cost savings.",
+      "priority": "High",
+      "risk": "Pricing can be copied, but bundling with locally trained AI creates a temporary moat; some insurers may prefer annual licensing."
+    },
+    {
+      "id": "g-3",
+      "title": "Seamless Integration with Legacy Systems",
+      "pain": "High – EPSs run on aging IT infrastructures, making heavy integrations a multi-year project that stalls automation. A lightweight API-first approach can bypass this bottleneck.",
+      "why_now": "AuthFast and global players often require deep integration; internal initiatives are slow. A plug-and-play solution can demonstrate value in weeks, not months.",
+      "evidence_needed": "Technical feasibility study with 2–3 common EPS claim platforms; prototype integration that processes mock requests in real-time from a test EHR.",
+      "priority": "High",
+      "risk": "Legacy system idiosyncrasies may still require custom work; large incumbents with consulting arms (Accenture) could replicate the integration layer eventually."
+    },
+    {
+      "id": "g-4",
+      "title": "Explainable & Auditable AI Decisions",
+      "pain": "High – Insurers face medico-legal risks if they deny care without clear justification. Existing AI tools often lack transparency, making them unsafe for Peruvian regulators.",
+      "why_now": "Regulators (MINSA) increasingly demand documented reasoning for prior auth decisions. A solution that automatically generates evidence-backed audit trails can reduce liability and speed adoption.",
+      "evidence_needed": "Review of regulatory requirements for authorization justifications; comparative analysis of explainability features in competitor tools; mock audit trail demonstration to legal teams.",
+      "priority": "Medium-High",
+      "risk": "Building a comprehensive clinical knowledge graph is resource-intensive; over-explaining could clutter communication; competitors can add explainability layers."
+    },
+    {
+      "id": "g-5",
+      "title": "Ultra-Fast Authorization for Patient Satisfaction",
+      "pain": "Medium-High – Long waits (days) cause patient suffering and drop-off in care. Instant decisions could be a major differentiator for insurer NPS.",
+      "why_now": "Telehealth growth increases demand for quick auth; competitors' speeds vary, but none guarantee <5 minutes end-to-end in the Peruvian context.",
+      "evidence_needed": "Time-motion study of current manual process; benchmark of AI vs manual on latency; pilot with a small insurer measuring patient satisfaction improvements.",
+      "priority": "Medium",
+      "risk": "Speed alone may not justify switching if accuracy is compromised; better integration can also reduce time."
+    },
+    {
+      "id": "g-6",
+      "title": "Continuous Learning from Peruvian Data",
+      "pain": "Medium – Initial AI accuracy may be lower without local data, but a model that improves over time will widen the moat.",
+      "why_now": "Data is siloed in each EPS. A shared learning model (federated) or even single-insurer adaptation can create a self-reinforcing advantage.",
+      "evidence_needed": "Data-sharing agreements to test model improvement over 6 months; technical plan for privacy-preserving fine-tuning; initial accuracy baseline.",
+      "priority": "Medium",
+      "risk": "Requires sustained data access, which may be denied by insurers; competitors could negotiate for similar data."
+    },
+    {
+      "id": "g-7",
+      "title": "Hybrid Human-AI Escalation for Complex Cases",
+      "pain": "Medium – High-risk or rare cases still need human judgment, but routing them intelligently reduces cost while maintaining quality.",
+      "why_now": "Pure AI solutions may over-automate and cause costly errors. A hybrid model that combines AI for routine approvals and escalates nuanced cases to a physician network can optimize both accuracy and cost.",
+      "evidence_needed": "Analysis of what percentage of cases are truly complex; mock pilot with AI recommending escalation; partnership interest from on-call physician services.",
+      "priority": "Medium",
+      "risk": "Human element reintroduces cost and slower turnaround; managing physician network is operationally complex."
+    }
+  ],
+  "recommended_gap_id": "g-1",
+  "checkpoint_instruction": "Validate the existence of a sufficient corpus of Peru-specific clinical guidelines and historical authorization records that can be used to train and test the AI. Also, confirm that EPSs are willing to share de-identified data for model development under a BAA.",
+  "source": "llm"
+}

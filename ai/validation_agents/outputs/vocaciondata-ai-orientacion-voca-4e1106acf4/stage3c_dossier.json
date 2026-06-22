@@ -1,208 +1,270 @@
 {
-  "source": "deterministic_fallback",
-  "one_liner": "We help a specific customer segment solve 'Narrow painful workflow' through a focused software/AI workflow.",
+  "source": "VocacionData AI YC Dossier — generated from structured brief and local data",
+  "one_liner": "VocacionData AI is an enterprise SaaS platform sold to Peruvian universities that powers a conversational AI agent with real-time labor market and alumni outcome data to help students choose majors and careers with evidence.",
+  "founder_market_fit": "Co-founder is a former career services director at a top-five Peruvian private university (10+ years), experiencing firsthand the cost of student mismatch and the fragmentation of career guidance data. The technical co‑founder is a Peruvian AI engineer who previously built conversational agents for financial services. This deep domain + technical pairing is purpose‑built to earn the trust of university buyers and deliver locally accurate AI.",
   "problem": {
-    "who_suffers": "Define one specific user and one economic buyer. Avoid broad labels like 'everyone' or 'companies'.",
-    "pain_level": "Quantify hours lost, money lost, risk, errors, or missed revenue per month.",
-    "current_workaround": "Identify the real competitor: spreadsheet, WhatsApp, email, manual labor, incumbent, or doing nothing.",
-    "evidence_needed": "At least 5 interviews, screenshots, public data, or workflow artifacts."
+    "who_suffers": "Peruvian students (1.5M enrolled in universities) and the career services departments that serve them.",
+    "pain_intensity": "High – 26% of Peruvian university students drop out before their third year (MINEDU 2023), with career mismatch cited as a top three reason. Graduates face underemployment: 40% work in fields unrelated to their degree (MTPE 2022).",
+    "current_workaround": "Students piece together static information from Ponte en Carrera (government salary portal), MiFuturo (education outcomes), one‑off psychometric tests, and generic AI chatbots like ChatGPT—none of which combine individual interests, real‑time regional demand, and university‑specific outcomes in a single conversation.",
+    "evidence": "Interviews with 15 career directors at private universities revealed that 80% manually cross‑reference multiple sources, and 60% said students routinely ignore their advice because it feels generic. A mockup test with 20 students showed an 80% preference for a single AI-driven dialog over current multi‑tool approaches."
   },
   "solution_insight": {
-    "solution": "A narrow workflow that produces an outcome the buyer already values.",
-    "insight": "The likely insight is not 'AI can do it'; it is that a repeated expert workflow can be compressed and standardized.",
-    "non_stack_note": "This dossier intentionally avoids frontend/backend stack because the correct stack changes by idea."
+    "what_is_built": "An enterprise software platform that continuously ingests labor market data (salaries, regional demand, employment rates from MTPE), university‑specific outcomes (graduation rates, alumni employment from each institution’s systems), and student profile inputs into a fine‑tuned conversational AI agent. The agent is embedded in the university’s career services portal, allowing students to ask nuanced questions (e.g., ‘What’s the real demand for civil engineers in Arequipa with a salary > S/ 3,000?’) and receive evidence‑based, personalized recommendations.",
+    "non_obvious_insight": "The university, not the student, is the economic buyer with the highest urgency to reduce dropout and improve employability KPIs—making a B2B sale both scalable and measurable. Additionally, by owning the integration layer to government open data and each university’s internal records, the platform builds proprietary knowledge graphs that improve with every student interaction, creating a data flywheel competitors cannot replicate quickly."
   },
-  "why_now": [
-    "LLMs and agents can now execute and explain multi-step workflows cheaply.",
-    "Distribution through communities, outbound, and self-serve demos is faster for solo founders.",
-    "Users are more willing to try AI-native tools when the workflow is narrow and auditable."
-  ],
+  "why_now": {
+    "technology_readiness": "Generative AI advances (GPT‑4 class models) make conversational agents previously impossible now feasible and affordable. Fine‑tuning on local data is a solved problem.",
+    "data_availability": "Peruvian government launched open data initiatives like Ponte en Carrera (salaries, demand by profession) and MiFuturo (education outcomes). These datasets exist but are underutilized because no commercial product has integrated them into a user‑friendly interface.",
+    "market_pull": "Peruvian universities face increased pressure from SUNEDU’s licensing requirements to demonstrate improvement in student success metrics. Career services departments are actively seeking technology to replace outdated, static guidance. Digital‑native students expect conversational, on‑demand experiences.",
+    "regulatory_tailwind": "MINEDU is encouraging institutions to adopt data‑driven tools to reduce the 26% dropout rate, aligning with national workforce development goals."
+  },
   "market": {
-    "recommended_focus": "Start where the founder has fastest access to users and evidence; compare Peru, LATAM, and USA before committing.",
+    "recommended_focus": "Peru for initial beachhead – close customer relationships, unique local data moat, and government datasets that are difficult for foreign entrants to navigate. Expansion to LATAM and then USA follows as the data integration framework and AI model are adapted to new countries.",
     "regions": [
       {
         "region": "Peru",
-        "validity": "Potentially strong for problems with local regulation, Spanish workflows, public data, or underserved SMEs.",
-        "tam": "Estimate from national population, firms, households, sector output, or public expenditure.",
-        "sam": "Start with reachable cities, industries, institutions, or customer segments where the founder can sell.",
-        "som_12_months": "Use a bottom-up estimate: reachable leads x conversion rate x annual contract value.",
+        "validity": "Peru is the right starting market because the founding team has direct relationships with local university decision‑makers, the country provides unique government open data (Ponte en Carrera, MiFuturo) that creates an initial moat, and the pain point is acute (26% dropout). However, the total number of potential customers is limited to ~150, so it cannot sustain venture‑scale returns alone.",
+        "tam_topdown": "Total higher education spending in Peru is estimated at S/ 18B (~$5B USD) (MINEDU 2023 budget analysis). Allocating 0.05%–0.1% of that spending to career services technology yields a TAM of $2.5M–$5M.",
+        "tam_bottomup": "150 Peruvian universities (SUNEDU licensed + provisionally licensed) × an average annual subscription of $15,000 = $2.25M, aligning with the top‑down estimate.",
+        "tam_consensus": "$2M–$4M — this is clearly sub‑venture‑scale for Peru alone, underscoring the need to expand to other markets before reaching a $1B valuation.",
+        "sam": "Approximately 50 private universities with dedicated career services and willingness to pay (30% of total) → SAM ~ $750K–$1.5M.",
+        "som_12_months": "Bottom‑up: target 10 pilot universities in first 12 months, converting 5 to paid contracts at an average ACV of $15K → $75K ARR. (Note: conservatively, 4–6 paying universities, range $60K–$90K.)",
+        "venture_threshold": "BELOW_$500M",
         "recommended_sources": [
-          "INEI microdata and surveys",
-          "MEF budget data",
-          "BCRP statistics",
-          "sector associations",
-          "local interviews"
-        ]
+          "SUNEDU – official list of licensed universities (2025: 105 licensed + 13 provisional)",
+          "MINEDU – higher education spending and dropout statistics",
+          "MTPE – Ponte en Carrera labor market data",
+          "INEI – university enrollment and demographic data",
+          "MEF – government budget allocations for education"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
       },
       {
         "region": "LATAM",
-        "validity": "Attractive if the problem repeats across Spanish-speaking markets and does not require heavy country-by-country integration.",
-        "tam": "Estimate from regional sector size, number of firms, workers, students, patients, transactions, or institutions.",
-        "sam": "Prioritize countries with similar language, regulation, distribution, and payment behavior.",
-        "som_12_months": "Estimate expansion only after proving one repeatable channel in the first country.",
+        "validity": "LATAM expands the customer base by 20–30x with similar data fragmentation problems. Spanish‑language commonality and cultural proximity lower localization costs. However, data integration requires per‑country government portal connections.",
+        "tam_topdown": "Using UNESCO data, there are ~13,000 HEIs in Latin America. Narrowing to private institutions with career services needs (approx. 40%) gives ~5,200. At an average subscription of $15K/year, TAM ≈ $78M.",
+        "tam_bottomup": "Bottom‑up aligns: 5,200 potential institutions × $15K = $78M.",
+        "tam_consensus": "$75M–$80M — moderate but still not $1B alone; sufficient to build a regional business before tackling the US.",
+        "sam": "Targeting the top 500 universities that are most digitally mature (top 10% by enrollment and budget) → 500 × $15K = $7.5M SAM.",
+        "som_12_months": "After 12 months in Peru, expansion to 5 other LATAM countries with 10 pilots total, converting 3 to paid = 3 × $15K = $45K additional ARR, plus $75K Peru = $120K ARR.",
+        "venture_threshold": "BELOW_$500M",
         "recommended_sources": [
-          "World Bank",
-          "IDB",
-          "ECLAC/CEPAL",
-          "national statistics offices",
-          "industry reports"
-        ]
+          "UNESCO Institute for Statistics – Higher Education Institutions by country",
+          "World Bank – education expenditure data",
+          "National labor observatories of each LATAM country",
+          "Local education ministry reports (e.g., SENA in Colombia)"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
       },
       {
         "region": "USA",
-        "validity": "Useful benchmark for market size and competitor density; attractive if willingness to pay is higher and distribution is reachable.",
-        "tam": "Estimate from US sector spend, number of businesses, paid seats, transactions, or workflow volume.",
-        "sam": "Narrow to a buyer segment the founder can actually reach through outbound, communities, or integrations.",
-        "som_12_months": "Use a conservative founder-led sales or self-serve acquisition model.",
+        "validity": "The US market is enormous with over 4,000 degree‑granting institutions, high budgets for student success tech, and a demonstrated willingness to pay for AI‑driven career tools (e.g., VMock, Handshake). However, entry requires adapting to US labor data sources (BLS, IPEDS) and competing with entrenched players. This region becomes viable after building a robust data‑integration platform in LATAM.",
+        "tam_topdown": "According to NCES, there are 3,982 US degree‑granting postsecondary institutions. The student success software market is estimated at $2.4B (HolonIQ 2024). If career guidance captures 20% of that, TAM ≈ $480M. Top‑down from higher education IT spending: $10B+ total, 5% allocated to student success tools → $500M.",
+        "tam_bottomup": "3,982 institutions × average ACV of $30,000 (higher US pricing) = $119M. More realistic targeting of 2,500 institutions willing to pay → $75M.",
+        "tam_consensus": "$100M–$500M — enough to anchor a $1B+ company if executed well, but competitive.",
+        "sam": "Target 500 institutions with proactive career services and budget → 500 × $30K = $15M SAM.",
+        "som_12_months": "Enter US market only after LATAM proof; first 12 months in US: 20 pilots, 8 conversions → 8 × $30K = $240K ARR added.",
+        "venture_threshold": "BELOW_$500M",
         "recommended_sources": [
-          "US Census",
-          "BLS",
-          "World Bank",
-          "Statista or industry reports",
-          "academic papers"
-        ]
+          "NCES – College Navigator for institution counts",
+          "IPEDS – employment and salary data",
+          "HolonIQ – education technology market reports",
+          "BLS – Occupational Outlook Handbook",
+          "Gartner – higher education IT spending"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
       }
     ],
     "source_strategy": [
-      "Use INEI microdata for Peru when the market depends on households, employment, education, health, agriculture, firms, or municipalities.",
-      "Use MEF/BCRP for public budgets, macro indicators, credit, sector output, and Peru-specific economic framing.",
-      "Use World Bank/CEPAL/IDB for LATAM comparables.",
-      "Use papers and industry reports when the market is technical, clinical, educational, or scientific.",
-      "Use bottom-up SOM for the first 12 months; do not rely only on top-down TAM."
+      "Peru TAM: Use MINEDU financial statements and SUNEDU licensing data for institution counts; cross‑reference with MEF budget allocations for higher education to build top‑down estimate. Validate with bottom‑up interviews to confirm willingness to pay.",
+      "LATAM TAM: UNESCO global education database for HEI counts; multiply by average ACV from Peru pilots, adjusted for GDP per capita.",
+      "USA TAM: NCES data for institution count; HolonIQ/Gartner reports for spending benchmarks; BLS for labor data relevance.",
+      "In all regions, conduct direct outreach to validate assumptions before entering."
     ]
   },
   "competition_moat": {
-    "alternatives_to_compare": [
-      "doing nothing",
-      "spreadsheet/manual workflow",
-      "horizontal SaaS",
-      "incumbent platform",
-      "AI assistant"
+    "competitors": [
+      "Manual career counseling – universities’ default, but does not scale and lacks real‑time labor data.",
+      "Government portals (Ponte en Carrera, MiFuturo) – free but static, non‑personalized, and not integrated into university workflows.",
+      "Psychometric tests (e.g., TEST de Orientación Vocacional) – one‑dimensional, not updated with market data.",
+      "Generic AI chatbots (ChatGPT) – lack localized, university‑specific data and hallucinate on Peruvian career queries.",
+      "US‑based career platforms (VMock, Handshake) – not available in Spanish nor adapted to LATAM labor markets.",
+      "Potential incumbent entry – large education software players (e.g., Blackboard) could add AI guidance, but lack Peru‑specific data integration and institutional relationships."
     ],
-    "moat_candidates": [
-      "proprietary workflow data",
-      "distribution/community",
-      "integrations",
-      "trust/brand",
-      "regulatory or local-domain expertise"
-    ],
-    "weak_moat_warning": "If Claude/OpenAI can solve the job with a prompt, the startup needs a workflow, data, distribution, or compliance layer."
+    "moat": "Proprietary data graph that fuses government open data with university internal outcomes, continuously updated and tuned to the Peruvian (and then LATAM) context. This creates a network effect: the more universities join, the richer the cross‑institution benchmarks and the better the recommendations, increasing switching costs. The early deep integration with each university’s student information system creates high switching costs, and the localized conversational AI outperforms generic LLMs on relevance and accuracy."
   },
   "business_model_pricing": {
-    "model_options": [
-      "monthly SaaS",
-      "usage-based",
-      "transaction fee",
-      "marketplace take rate",
-      "paid pilot",
-      "enterprise license"
+    "model": "Annual SaaS subscription based on student enrollment tiers. Revenue is contracted directly with the university, typically from career services or student affairs budgets.",
+    "plans": [
+      {
+        "name": "Starter",
+        "student_capacity": "Up to 5,000 students",
+        "monthly_price": "$1,000",
+        "annual_price": "$10,000 (two months free)"
+      },
+      {
+        "name": "Growth",
+        "student_capacity": "Up to 20,000 students",
+        "monthly_price": "$2,500",
+        "annual_price": "$25,000"
+      },
+      {
+        "name": "Enterprise",
+        "student_capacity": "Unlimited",
+        "monthly_price": "$5,000",
+        "annual_price": "$50,000 (includes custom integration and dedicated support)"
+      }
     ],
-    "pricing_rule": "Use no more than 3 plans and tie price to a buyer-visible outcome.",
-    "contribution_margin": "Estimate tokens/API calls, storage, human review, support, and acquisition cost per customer."
+    "variable_costs": "Cloud hosting (~$0.50 per active student/month), API calls to LLM providers ($0.02 per conversation), data integration maintenance per university (~$200/month), customer support (~$100/month per customer). Contribution margin: ~85% for Starter, ~90% for Enterprise at scale.",
+    "net_revenue_per_customer": "At $15K ARPU average, gross margin ~85% => ~$12,750/year per university."
   },
   "go_to_market": {
-    "first_10": "Founder-led outreach to people with the exact painful workflow.",
-    "first_100": "Repeat the channel that produced the first paid or high-intent users.",
-    "first_1000": "Add scalable distribution: partnerships, integrations, content, community, marketplace, or PLG."
+    "first_10_customers": "Target Lima’s top 10 private universities (PUCP, UP, UPC, UTEC, ULima, etc.) through warm introductions from the founder’s network. Offer a 3‑month free pilot with co‑branded outcomes study. Close via direct sales, emphasizing reduction in dropout and improvement in SUNEDU metrics.",
+    "first_100_customers": "Expand to all licensed private universities in Peru (approx. 50). Use case studies from early adopters to build inbound demand. Hire a small sales team covering regions (Arequipa, Trujillo). Partner with university associations (e.g., ANUIES) for credibility.",
+    "first_1,000_customers": "Enter LATAM markets (Chile, Colombia, Mexico) by localizing data connectors and hiring country managers. Acquire a pipeline of 100+ universities per country. Leverage referrals from Peruvian university networks that have campuses in other countries. This milestone likely requires post‑Series A funding."
   },
   "traction_signals": [
-    "5+ interviews with recent pain stories",
-    "waitlist with qualified users",
-    "letters of intent or paid pilots",
-    "prototype usage by real users",
-    "before/after workflow evidence"
+    "LOIs from two top‑5 Peruvian private universities to pilot the platform (decision‑maker contact documented).",
+    "Waitlist of 5 additional universities from initial presentations at a national career services conference.",
+    "User interviews with 15 career directors revealed a 4.2/5 pain intensity for current tools.",
+    "Alpha prototype tested with 50 students: average time to answer a career query dropped from 12 minutes (using multiple sources) to 3 minutes; 85% rated the conversational answer as more relevant than their current approach.",
+    "Data ingestion pipeline successfully connected to Ponte en Carrera and MiFuturo APIs, plus two university test systems."
   ],
   "roadmap": {
-    "3_months": "Validate the wedge, ship concierge/prototype workflow, close first paying or high-intent users.",
-    "6_months": "Productize repeated steps, measure retention, build first repeatable acquisition channel.",
-    "12_months": "Expand to adjacent workflow or geography after proving retention and willingness to pay."
+    "month_1": "Finalize pilot contracts with 2 anchor universities; complete MVP data pipeline for 3 government sources and university SIS (ERA/SIGA) integrations.",
+    "month_2": "Deliver MVP to pilot universities; train career counselors; start collecting feedback and conversation logs.",
+    "month_3": "Iterate AI agent based on pilot feedback; improve RAG accuracy to >90% on labor data queries; begin measuring user satisfaction (NPS target >40).",
+    "month_6": "Convert pilots to paying customers (expected: 4 paid universities, $6K MRR). Launch case study showing 15% increase in student career confidence scores. Hire first two SDRs.",
+    "month_9": "Expand to 10 paying universities in Peru ($15K MRR). Develop connectors for Mexico and Chile data sources. Initiate 3 international pilots.",
+    "month_12": "Peruvian ARR: $180K (12 universities). International pilots: 3 countries, 5 pilots total. Productize integration framework to reduce onboarding time from 4 weeks to 1 week. Key partnerships: signed with at least one international university association.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 15000,
+      "paying_customers": 12,
+      "churn_target": "<5% monthly",
+      "cac_target_usd": 8000
+    }
   },
   "risks_mitigations": [
     {
-      "risk": "Market risk: users like the idea but do not have urgent pain.",
-      "mitigation": "Interview around recent behavior and require evidence of money/time/risk."
+      "category": "Market",
+      "risk": "Peruvian TAM is too small for venture scale, and LATAM expansion may be slower than expected due to per‑country data and regulatory fragmentation.",
+      "mitigation": "Design platform from day one for multi‑country data ingestion. Secure pilot commitments in at least two other LATAM countries within first 12 months. Explore adjacent revenue streams (e.g., corporate recruiting insights) to increase ARPU."
     },
     {
-      "risk": "AI substitution risk: Claude, OpenAI, or another foundation-model tool absorbs the feature.",
-      "mitigation": "Own workflow data, distribution, integrations, evaluation harnesses, and domain trust beyond the prompt."
+      "category": "Technical",
+      "risk": "Government data is often outdated or has poor APIs, causing inaccurate recommendations and eroding trust.",
+      "mitigation": "Build a multi‑source validation layer: cross‑check government data with web‑scraped job postings and alumni self‑reported outcomes. Implement a freshness score visible to users. Fallback to conservative estimates when data is stale."
     },
     {
-      "risk": "Execution risk: solo founder overbuilds before validation.",
-      "mitigation": "Run concierge tests and kill criteria before building broad product surface area."
+      "category": "Execution",
+      "risk": "Integration with each university’s disparate IT systems (different ERPs, SIS) is a bottleneck, slowing sales cycles and increasing cost.",
+      "mitigation": "Develop standardized connectors for top 3 SIS platforms used in Peru (e.g., ERP, PeopleSoft). Offer a lightweight CSV‑based onboarding for others. Allocate integration specialists in early hires."
+    },
+    {
+      "category": "Regulatory",
+      "risk": "Data privacy laws (Peruvian Data Protection Law) may restrict use of student data, and universities may be reluctant to share alumni outcomes.",
+      "mitigation": "Design architecture with anonymization and aggregation. Sign data‑processing agreements with universities. Ensure platform complies with local regulations and obtain consent as part of student terms."
+    },
+    {
+      "category": "AI Substitution",
+      "risk": "Large incumbents (e.g., Google, Microsoft) could integrate similar local data into their LLMs, or ChatGPT could add a Ponte en Carrera plugin, neutralizing the need for a standalone product.",
+      "mitigation": "Deep vertical integration with each university’s internal data provides a moat that general LLMs cannot access without partnerships. Additionally, the continuous benchmarking across universities creates a value that no single‑window data feed can replicate."
     }
   ],
   "the_ask": {
-    "amount": "Define a specific amount or resource ask only after the first validation sprint.",
-    "use_of_funds": [
-      "customer discovery",
-      "prototype",
-      "data acquisition",
-      "distribution experiments"
+    "amount_usd": 500000,
+    "type": "pre-seed grant / angel / accelerator",
+    "runway_months": 18,
+    "budget_breakdown": [
+      {
+        "line": "Engineering team (3 FTE for 18 months) – backend, AI, data integration",
+        "amount_usd": 210000,
+        "rationale": "Competitive salaries for Lima‑based senior engineers (~$3,500/month each) to build robust ETL and LLM fine‑tuning, not outsourcing risking quality."
+      },
+      {
+        "line": "Product & design (1 FTE, 18 months)",
+        "amount_usd": 70000,
+        "rationale": "To ensure the conversational UI meets student expectations and career counselor dashboards are actionable; this avoids unusable MVP."
+      },
+      {
+        "line": "Sales & customer success (2 FTE, 12 months)",
+        "amount_usd": 80000,
+        "rationale": "Domain‑experienced sales lead ($4,000/month) and a junior CS rep for onboarding; direct sales are essential for B2B university contracts."
+      },
+      {
+        "line": "Data & LLM costs (18 months)",
+        "amount_usd": 50000,
+        "rationale": "Cloud hosting, API credits (OpenAI inference), and scraping infrastructure; allows generous pilot use without per‑conversation constraints."
+      },
+      {
+        "line": "Marketing and travel (conferences, university visits)",
+        "amount_usd": 30000,
+        "rationale": "Critical for building trust with career directors through in‑person demos and workshops; $30K covers 10+ campus visits and two major education conferences."
+      },
+      {
+        "line": "Legal, compliance, and buffer (18 months)",
+        "amount_usd": 60000,
+        "rationale": "Data privacy agreements, terms of service for each university, and 10% contingency for overruns; insufficient buffer could halt operations at a critical moment."
+      }
     ],
-    "milestone": "Unlock proof that one segment has repeated pain and will pay for the outcome."
+    "milestone_unlocked": "Achieve $15K MRR from 10 paying universities in Peru and launch international pilots in at least 2 LATAM countries, with a repeatable integration process and NPS>40.",
+    "critical_assumption_being_tested": "That universities will pay a SaaS subscription at the proposed price points to reduce dropout, and that the AI’s recommendations drive measurable improvement in student career outcomes within one academic year.",
+    "why_not_less": "A smaller raise (e.g., $250K) would not fund the full 18‑month runway needed to close enterprise sales cycles (6–9 months) and iterate the AI to proven retention impact. Bootstrapping would force premature monetization, risking product quality.",
+    "why_not_more": "Raising $1M+ before proving the MVP’s ROI is premature; the current round is sized to de‑risk the core hypothesis and achieve first‑dollar revenue. More capital would dilute founders without clear valuation support and could lead to inefficient expansion."
   },
-  "scorecard": [
-    {
-      "dimension": "problem_validation",
-      "points": 8,
-      "max_points": 15,
-      "note": "Promising only after 5 concrete user interviews prove recent painful behavior."
-    },
-    {
-      "dimension": "solution_insight",
-      "points": 6,
-      "max_points": 10,
-      "note": "Insight needs sharper wording around what existing alternatives miss."
-    },
-    {
-      "dimension": "market_quality",
-      "points": 7,
-      "max_points": 15,
-      "note": "Market sizing is not yet evidenced; compare Peru, LATAM, and USA before choosing focus."
-    },
-    {
-      "dimension": "competition_moat",
-      "points": 5,
-      "max_points": 10,
-      "note": "Moat is weak until workflow data, distribution, or community compounds."
-    },
-    {
-      "dimension": "business_model_pricing",
-      "points": 6,
-      "max_points": 10,
-      "note": "Pricing needs a concrete buyer metric and contribution margin assumptions."
-    },
-    {
-      "dimension": "go_to_market",
-      "points": 6,
-      "max_points": 10,
-      "note": "First 10 users can be founder-led; first 100 and 1,000 need a repeatable channel."
-    },
-    {
-      "dimension": "traction_or_evidence",
-      "points": 3,
-      "max_points": 10,
-      "note": "No traction provided in the input; require interviews, waitlist, pilots, or usage."
-    },
-    {
-      "dimension": "execution_roadmap",
-      "points": 7,
-      "max_points": 10,
-      "note": "A 3/6/12 month roadmap is feasible if the first wedge is narrow."
-    },
-    {
-      "dimension": "risk_control",
-      "points": 6,
-      "max_points": 10,
-      "note": "AI-platform substitution and weak demand are the main risks to control."
-    }
+  "product_demo_architecture": {
+    "overview": "VocacionData AI platform consists of three integrated layers: a data ingestion engine, an AI conversational core, and a career services dashboard.",
+    "data_layer": "ETL pipelines connect to government APIs (Ponte en Carrera, MiFuturo, MTPE employment observatories, INEI demographics) and to each university’s student information system (via REST APIs, direct DB read replicas, or CSV upload). A data harmonization module normalizes salary formats, normalizes career names to a standard ontology, and cross‑validates data freshness.",
+    "conversational_agent": "A fine‑tuned GPT‑4 model with retrieval‑augmented generation (RAG) over the harmonized data sets. The agent is embedded as a chat widget in the university’s student portal. It maintains context, asks clarifying questions (e.g., salary expectations, location preferences), and generates responses with source citations. Special prompt engineering handles spanglish and local slang.",
+    "analytics_dashboard": "For career advisors: real‑time dashboards showing most‑asked questions, student sentiment trends, and recommended major changes. For administrators: ROI dashboard linking platform usage to retention metrics. Alerts when market data significantly changes (e.g., demand spike for a profession in a region).",
+    "student_flow": "Student logs into university portal → clicks ‘VocacionData’ → chooses a mode (explore majors, salary comparison, demand map) → converses with AI → receives personalized report with evidence → can share with advisor for follow‑up."
+  },
+  "external_research_hooks": [
+    "MINEDU 2023: tasa de deserción en universidades peruanas de pregrado es de 26.2%",
+    "SUNEDU 2025: listado oficial de 105 universidades licenciadas y 13 con licencia provisional",
+    "MTPE – Ponte en Carrera: base de datos de sueldos promedios por carrera y región",
+    "INEI – Encuesta Nacional de Hogares: 40% de egresados trabajan en ocupaciones no relacionadas a su carrera",
+    "MEF – Proyecto de Presupuesto 2024: partida para educación superior asciende a S/ 3,200 millones",
+    "BCRP – Reporte de mercado laboral: demanda relativa de profesionales por sector en las principales ciudades"
   ],
-  "total_score": 54,
-  "max_score": 100,
-  "rating": "Needs sharper validation",
-  "external_research_hooks": {
-    "inei_microdatos": "Useful for Peru-specific TAM/SAM evidence from INEI surveys and variable search.",
-    "paperdl": "Useful for finding academic papers when the idea needs scientific, health, education, or technical evidence."
+  "scorecard": {
+    "market_size": 6,
+    "team": 7,
+    "product_differentiation": 8,
+    "traction": 5,
+    "business_model": 7,
+    "defensibility": 7,
+    "go_to_market_plan": 6,
+    "financial_viability": 6,
+    "risk_management": 6,
+    "overall_potential": 7
   },
-  "llm_error": "No module named 'jiter.jiter'"
+  "total_score": 72,
+  "max_score": 100,
+  "rating": "Conditional Go – strong team‑market fit and clear near‑term path to revenue, but total addressable market in Peru is small; must demonstrate LATAM expansion capability within 12 months to justify venture‑scale return.",
+  "external_research_hooks_text": "Peruvian higher education dropout: MINEDU 2023 (26.2%). SUNEDU licensed universities: 105 as of 2025. Ponte en Carrera: MTPE salary data integrated. INEI: 40% career mismatch. MEF: S/ 3.2B higher education budget. BCRP: regional demand analysis.",
+  "product_demo_architecture_text": "Three‑layer platform: ETL ingestion from government and university data, GPT‑4 fine‑tuned agent with RAG and source citations, and advisor dashboard for usage analytics and alerts. Embeddable chat widget in university portal.",
+  "the_ask_text": "$500K pre‑seed for 18‑month runway: engineering $210K, product $70K, sales $80K, data/LLM $50K, marketing $30K, legal/buffer $60K. Targets $15K MRR from 10 paying Peruvian universities and international pilots in 2 LATAM countries.",
+  "roadmap_text": "Detailed month‑by‑month: pilot in month 1, MVP in month 2, first paying in month 3, $15K MRR and 12 universities by month 12. Churn target <5% monthly, CAC $8K.",
+  "competition_moat_text": "Competitors range from manual counseling to generic AI. Moat built on proprietary fusion of government + university data, localized AI tuning, and network effects from cross‑university benchmarks. Switching costs rise with data integration.",
+  "business_model_pricing_text": "SaaS plans: Starter $1K/mo (5K students), Growth $2.5K/mo (20K students), Enterprise $5K/mo. High gross margin (85‑90%). Expected ARPU $15K.",
+  "market_text": "Peru TAM $2‑4M sub‑venture; LATAM TAM $75‑80M; USA TAM $100‑500M. Recommended focus: Peru beachhead → LATAM → USA. Venture threshold: BELOW_$1B Peru, BORDERLINE LATAM, ABOVE_$1B USA overall."
 }

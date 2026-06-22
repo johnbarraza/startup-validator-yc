@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "gap-01",
+      "idea_refined": "MineSafety AI gives Latin American mining contractors an offline-first mobile tool that lets field supervisors speak their safety observations in Spanish or Portuguese and instantly turns voice into structured digital reports. Using AI trained on mining-specific terms and local dialects, it eliminates the daily grind of manual typing and note transcription, so hazards get documented and escalated before they cause incidents.",
+      "one_liner": "We turn voice into structured safety reports for Latin American mining contractors, using AI that understands Spanish/Portuguese mining field language.",
+      "target_customer": "HSE field supervisor at a Latin American mining contractor company",
+      "core_problem": "After each safety inspection, HSE supervisors spend 45 minutes transcribing handwritten notes or voice memos into their EHS system, often in remote areas with poor connectivity. This manual process delays risk identification and leads to incomplete data, costing contractors time and increasing the chance of missed hazards.",
+      "solution_hook": "Instant, accurate, offline voice transcription built for mining jargon and noisy environments, with automatic severity flagging.",
+      "why_this_angle": "This narrows the product to a vital daily task that's a proven frustration, making adoption immediate. It builds a data moat for future predictive analytics, while the laser focus on language and offline capability creates a defensible wedge in an underserved market.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 7,
+        "founder_feasibility": 10,
+        "total": 26
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "MineSafety Enterprise is an AI-powered safety intelligence platform designed for corporate HSE departments of large mining companies. It digitizes the entire field safety reporting workflow by enabling workers to verbally report hazards, near-misses, and incidents in Spanish or Portuguese via a mobile app. The AI transcribes, classifies severity, and instantly routes issues to the responsible supervisor. A centralized dashboard provides risk scoring and trend analysis across all mine sites, helping HSE leaders identify systemic risks before they lead to costly incidents. The platform ensures compliance with Latin American mining regulations and reduces manual data entry, cutting report turnaround from days to minutes.",
+      "one_liner": "We enable mining companies to turn every field safety observation into an actionable risk insight using AI voice transcription in Spanish and Portuguese, preventing incidents before they happen.",
+      "target_customer": "Gerente de Seguridad y Salud Ocupacional (HSE Manager) at a multi-site mining company in Chile, managing safety for thousands of contractors and employees.",
+      "core_problem": "Every day, field supervisors and contractors at remote mining sites verbally report safety hazards to radio operators or scribble notes, which then get manually typed into EHS systems hours or days later. Critical information is lost, misclassified, or never acted upon, leading to an average of 3 near-misses per site per week that go unaddressed. Each incident that results in injury costs the company an average of $50,000 in fines, medical expenses, and downtime, not to mention reputational damage.",
+      "solution_hook": "Unlike generic EHS software, MineSafety Enterprise is purpose-built for the mining industry with AI models that understand mining-specific terminology in Spanish and Portuguese, even in noisy underground or open-pit environments, enabling real-time voice capture and automatic severity triage.",
+      "why_this_angle": "Shifting the buyer from individual contractors to corporate HSE departments taps into a larger budget earmarked for digital transformation and safety compliance. Institutional buyers are under pressure to reduce accident rates and can mandate usage across all contractors, ensuring widespread adoption and recurring revenue. The voice-to-text gap is particularly acute in Latin America, where literacy barriers and harsh environments make traditional text input impractical.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 7,
+        "total": 22
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "A mobile tool for Spanish-speaking mining safety supervisors that captures voice field reports, transcribes them with AI trained on mining and safety terminology, and auto-generates completed checklists and risk flags—all while working offline in the depths of a mine. No typing, no connectivity needed: the inspector dictates observations during rounds, and the app produces near-instant digital reports, eliminating hours of manual transcription and ensuring faster risk communication.",
+      "one_liner": "We provide offline voice-to-structured-report AI for Spanish-speaking mine safety inspectors, turning spoken observations into formatted checklists instantly.",
+      "target_customer": "Jefe de Seguridad en Mina at a remote Chilean copper mine, responsible for daily field inspections and contractor safety oversight.",
+      "core_problem": "Every day, after walking the mine, the Jefe de Seguridad spends 1–2 hours manually typing up handwritten or voice-recorded field notes into safety reports. These notes are filled with mining-specific jargon, making generic transcription tools useless. The delay means critical hazards might not be escalated until the next morning, increasing the risk of incidents. The process is painful, error-prone, and eats into time that could be spent on proactive safety measures.",
+      "solution_hook": "Offline-first AI that understands mining vernacular in Spanish and instantly converts raw voice memos into structured, digital inspection reports—even without internet. It's not just transcription; it's a safety copilot that automates checklist completion and flags severity in real time.",
+      "why_this_angle": "This wedge focuses on the single most time-consuming and friction-filled task for a highly motivated user—the field inspector. By solving the immediate transcription pain with a solution that works where mines actually operate (offline, in Spanish), we can demonstrate clear time savings and risk reduction within days. A small group of 10 supervisors will see immediate value and are likely to pay quickly, providing strong validation without building a full platform.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 4,
+        "founder_feasibility": 9,
+        "total": 22
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "We turn voice into structured safety reports for Latin American mining contractors, using AI that understands Spanish/Portuguese mining field language.",
+  "source": "parallel_iteration"
+}

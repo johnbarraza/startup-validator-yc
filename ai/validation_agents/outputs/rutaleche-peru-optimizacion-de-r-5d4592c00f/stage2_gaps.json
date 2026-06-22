@@ -1,0 +1,62 @@
+{
+  "research_source": "competitive_research_analysis",
+  "gaps": [
+    {
+      "id": 1,
+      "title": "Peru-Specific ML-Based Milk Collection Optimization",
+      "pain": "Generic route optimizers ignore local regulations, road conditions, and spoilage risks unique to Peru, causing inefficiencies and milk waste.",
+      "why_now": "Rising milk demand and fuel costs make optimization critical; no local solution yet, and Agil’s Chile model proves demand.",
+      "evidence_needed": "Pilot with one cooperative comparing optimized vs. manual routes to measure fuel savings and spoilage reduction.",
+      "priority": 1,
+      "risk": "Agil may enter Peru and leverage Chile experience; global competitors could add local features."
+    },
+    {
+      "id": 2,
+      "title": "Affordable Solution for Small Cooperatives",
+      "pain": "Small cooperatives cannot afford global tools like Route4Me, forcing them to rely on manual methods that waste time and fuel.",
+      "why_now": "Fuel price hikes intensify pain; regulatory traceability requirements pressure modernization, but budgets remain tight.",
+      "evidence_needed": "Willingness-to-pay survey and free pilot to demonstrate ROI and adoption willingness.",
+      "priority": 2,
+      "risk": "Competitors can drop prices or offer freemium; hard to monetize sustainably if target segment is extremely price-sensitive."
+    },
+    {
+      "id": 3,
+      "title": "Offline-First Mobile App for Remote Milk Collection",
+      "pain": "Rural areas lack reliable internet, making real-time optimization useless and forcing drivers to rely on paper and memory, leading to delays and errors.",
+      "why_now": "Smartphone penetration is high in rural Peru; offline sync technology is mature and can bridge the connectivity gap.",
+      "evidence_needed": "Test offline-capable MVP with drivers in remote regions and compare on-time collection and data accuracy against manual methods.",
+      "priority": 3,
+      "risk": "Infrastructure may improve faster than expected; offline sync adds development complexity and maintenance overhead."
+    },
+    {
+      "id": 4,
+      "title": "Integration with Local Farm Management Systems",
+      "pain": "Cooperatives use separate tools for farm data and logistics, causing double data entry, errors, and fragmented visibility.",
+      "why_now": "Local agtech adoption (e.g., Sismagro, Tambero) is growing, creating an opportunity to be the routing module they lack.",
+      "evidence_needed": "Partner with one platform to integrate API and measure reduction in manual data entry and improved planning time.",
+      "priority": 4,
+      "risk": "Dependency on third-party APIs and partnership delays; competitors could also integrate, reducing uniqueness."
+    },
+    {
+      "id": 5,
+      "title": "Predictive Routing Based on Milk Quality and Spoilage Risk",
+      "pain": "Variable milk quality leads to rejected loads and wasted trips; current routing does not account for spoilage risk or quality grades.",
+      "why_now": "Processors demand higher quality and traceability; ML models can now predict spoilage based on weather, distance, and historical data.",
+      "evidence_needed": "Build predictive model using historical data from a cooperative and measure reduction in rejected milk and spoilage losses.",
+      "priority": 5,
+      "risk": "Lack of quality data in small cooperatives; model may not generalize across regions; requires ongoing data collection."
+    },
+    {
+      "id": 6,
+      "title": "Real-Time Notifications and Dynamic Re-Routing",
+      "pain": "Farmers and drivers lack visibility into collection status, causing idle time and uncertainty when delays occur.",
+      "why_now": "Real-time tracking is becoming a basic expectation; even WhatsApp is used informally, indicating demand for structured notifications.",
+      "evidence_needed": "Implement basic tracking and alert MVP in a pilot and measure farmer/driver satisfaction and reduction in wait times.",
+      "priority": 6,
+      "risk": "Feature is easy to copy; may not justify a standalone product if not bundled with core optimization; battery/data concerns in remote areas."
+    }
+  ],
+  "recommended_gap_id": 3,
+  "checkpoint_instruction": "1. Map connectivity blackspots via field visits and driver interviews in 3 target cooperatives. 2. Build a lightweight offline-first mobile MVP with local route calculation and sync-on-connect. 3. Run a 2-week pilot measuring on-time collection, fuel usage, and driver feedback vs. baseline. 4. Validate willingness to pay at a subscription price point that covers operational costs.",
+  "source": "llm"
+}

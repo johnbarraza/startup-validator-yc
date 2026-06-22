@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "EPS Admin AI automatiza el proceso de autorizaciones médicas en las EPS peruanas, comenzando por Rimac, Pacifico y Sanitas. Nuestra IA lee la solicitud del médico tratante, extrae el historial del afiliado de los sistemas legacy, interpreta las guías clínicas locales (que son distintas a las de otros países) y emite una recomendación inmediata de aprobación o rechazo con justificación explicable. Los auditores humanos solo intervienen en el 5-10% de casos que la IA marca como dudosos, eliminando horas de revisión manual y reduciendo el tiempo de respuesta de 30-120 minutos a segundos. El modelo de negocio es puro: cobramos por cada autorización procesada, alineando incentivos y demostrando ROI inmediato. Empezamos con procedimientos de alta complejidad (como cirugías y medicamentos oncológicos) donde el costo del error y la demora es más crítico. La diferenciación local es clave: entrenamos el modelo con datos peruanos, adaptándonos al español médico local, a los códigos de diagnóstico peruanos y a las coberturas específicas de cada EPS, algo que los gigantes globales no ofrecen.",
+  "selected_gap": {
+    "id": "g-1",
+    "title": "Localized AI for Peruvian Medical Context",
+    "pain": "High – Foreign AI solutions often fail to account for local clinical guidelines, drug formularies, and Spanish medical jargon, leading to inaccurate decisions and increased manual overrides.",
+    "why_now": "Cohere Health is expanding but lacks deep local adaptation; manual teams are overwhelmed. Early mover can capture the market by delivering superior accuracy.",
+    "evidence_needed": "Accuracy tests on a sample of historical Peruvian prior auth cases; interviews with EPS medical directors quantifying error rates of generic AI; analysis of Peru-specific coding and guideline sources.",
+    "priority": "High",
+    "risk": "Competitors could quickly gather local data if they invest; regulatory shifts could require specific algorithm certifications."
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "As a medical auditor, reducing manual review from hours to seconds sounds great, but I'm worried about the AI misinterpreting nuanced clinical guidelines or missing critical patient history, which could put patients at risk and increase my liability.",
+      "concern": "If the AI makes a wrong recommendation on a high-complexity case like an oncology surgery, the delay or denial could harm the patient; I need to trust its decisions implicitly before reducing human oversight.",
+      "evidence_request": "Show me a blinded validation study comparing AI recommendations against a panel of expert auditors on at least 1,000 historical Peruvian prior auth cases, with false negative rate < 1%.",
+      "score": 0.3,
+      "score_rationale": "The promise is compelling, but trust is low without concrete local accuracy data, especially for high-stakes procedures.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "Interesting in theory, but in Peru, where AI adoption is below 10% and manual processes are the norm, trusting an algorithm with life-critical medical authorizations seems reckless. The idea targets a real bottleneck, but I'd need ironclad proof that it won't cause harm.",
+      "concern": "If the AI misinterprets a local guideline or makes a false rejection for a cancer medication, the patient suffers and the EPS faces lawsuits—undoable damage in our distrustful environment.",
+      "evidence_request": "Show me a pilot with Rimac or Pacifico where your AI processed 10,000 historical authorization cases with zero false rejections and 99.5% accuracy, with every decision fully explainable in Spanish and validated by a human auditor.",
+      "score": 0.3,
+      "score_rationale": "Score is low because the high-stakes medical domain amplifies trust barriers, and without flawless local validation, adoption is too risky for conservative decision-makers.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "The idea is compelling because it promises immediate ROI by reducing manual audit time and speeding up high-stakes authorizations. However, as a budget owner, I'm wary of the procurement friction with large EPS and the integration complexity with legacy systems, which could delay ROI beyond this quarter.",
+      "concern": "The single sharpest objection is procurement friction and integration risk: Rimac, Pacifico, and Sanitas are large, slow-moving organizations with complex legacy systems, and any integration delay could push ROI beyond the quarter I need to justify the budget.",
+      "evidence_request": "I need a concrete pilot agreement with one EPS (e.g., Rimac) showing a 30-day deployment, measurable reduction in manual review hours, and a clear ROI calculation per authorization that proves cost savings exceed your fee within the quarter.",
+      "score": 0.4,
+      "score_rationale": "The ROI potential is clear, but the high procurement friction and integration risk with large Peruvian EPS make it unlikely to deliver a measurable return within one quarter, which is required for my budget justification.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "The idea addresses a real pain point, but integrating with three different legacy systems across EPS is a massive operational challenge that could derail rollout. The promise of only 5-10% human intervention requires near-perfect accuracy in high-stakes oncology cases, which is hard to achieve and maintain.",
+      "concern": "Integration complexity with diverse legacy systems (each EPS likely uses different data formats, APIs, or even manual processes) will create significant coordination overhead and latency, risking the 'seconds' response time promise.",
+      "evidence_request": "A detailed integration plan with one EPS showing how the AI will connect to and extract data from their actual legacy system, including a demo with 100 real cases audited by their medical directors.",
+      "score": 0.6,
+      "score_rationale": "Score is moderate because while the localized AI has operational merit, the integration risk and reliability burden in critical medical decisions are high, requiring concrete evidence of feasible implementation.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "This is a smart niche play—local adaptation is a real barrier for global incumbents like us. However, EPSs are notoriously slow to change, and we already have relationships and contracts in place.",
+      "concern": "If EPSs perceive integration with legacy systems as too risky or costly, they may stick with current manual processes or existing vendors.",
+      "evidence_request": "Show a pilot result with one EPS that proves the system processes real requests in under 10 seconds with ≥95% accuracy, and that the EPS's internal stakeholders approve scaling.",
+      "score": 0.6,
+      "score_rationale": "Strong local differentiation but high adoption friction given incumbent relationships and legacy system inertia.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "The idea targets a clear, painful bottleneck in Peruvian healthcare with a localized AI solution, and the per-authorization pricing aligns incentives well. However, I worry that the total addressable market in Peru might be too small to reach $10M ARR within 5 years, and the sales cycles with large EPS could be long and unpredictable.",
+      "concern": "Market size: Peru's population is ~33M; even if high-complexity authorizations are numerous, the SAM may fall short of $50M in 5 years, making venture-scale returns difficult.",
+      "evidence_request": "A bottoms-up TAM/SAM analysis for high-complexity prior authorizations in Peru, plus a signed letter of intent or pilot commitment from at least one of the three targeted EPS.",
+      "score": 0.6,
+      "score_rationale": "Strong problem-solution fit and local differentiation, but insufficient proof of market size and sales traction to justify a higher score.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "The idea targets a real pain point, but as a CTO I see massive integration challenges with legacy systems and data quality issues. The COGS for building and maintaining custom integrations for each EPS could quickly erode margins.",
+      "concern": "Accessing and ingesting clean, structured historical authorization data from fragmented legacy systems is the single biggest risk; without it, model accuracy and reliability are unattainable.",
+      "evidence_request": "A working proof-of-concept that extracts structured data from at least one EPS legacy system (e.g., Rimac) for 1,000+ historical prior auth cases, complete with ground truth outcomes and error analysis.",
+      "score": 0.3,
+      "score_rationale": "High technical integration risk and uncertain data availability outweigh the model's potential, making a low score prudent until integration feasibility is proven.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "As a small business owner, I just want my employees' authorizations approved quickly without extra costs or hassle. This AI sounds like it's for big EPS companies, not for me—I already manage everything via WhatsApp and Excel, and I pay cash or Yape. If this means I'll face higher premiums or need to use a digital platform, I'm out.",
+      "concern": "Will this increase my costs or force me to interact with a bot instead of my usual WhatsApp contact? I don't trust digital systems for medical decisions.",
+      "evidence_request": "Show me that EPS using this won't raise my premiums or require me to change my simple cash-based payment and WhatsApp communication.",
+      "score": 0.3,
+      "score_rationale": "I see no direct improvement to my current workflow, and I fear hidden costs or forced digital adoption, so I'm not convinced.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "This startup targets private health insurers (EPS), not public institutions. Our procurement cycles and zero-discretionary budget constraints do not apply here.",
+      "concern": "No direct alignment with public sector needs or existing budget codes (e.g., for MINEDU or PRODUCE).",
+      "evidence_request": "A version of the product tailored for public health entities (e.g., MINSA, ESSALUD) that fits within an existing public procurement category.",
+      "score": 0.0,
+      "score_rationale": "The product addresses a private-sector pain point and offers no clear path for public-sector procurement, making it irrelevant under my evaluation criteria.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "The idea addresses a clear and painful bottleneck in Peru's healthcare system, and the local-first AI approach is a strong moat. However, as a local investor, I worry about the total addressable market: with only 3 major EPS players, can you realistically hit $1M ARR? And even if you do, the path to an international co-investor is unclear unless you prove replicability in other LATAM markets.",
+      "concern": "The unit economics and scalability: how many authorizations per month per EPS are needed to justify the cost, and can the model adapt to different countries' guidelines without massive retraining?",
+      "evidence_request": "Show me a pilot with one EPS that demonstrates <10% human override rate, at least 80% cost reduction in audit labor, and a clear unit cost per authorization that can be scaled to other LATAM insurers.",
+      "score": 0.65,
+      "score_rationale": "Strong product-market fit in a narrow segment, but the limited number of potential clients in Peru and the heavy localization required for expansion make the Series A path uncertain.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.405,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.405,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "If the AI makes a wrong recommendation on a high-complexity case like an oncology surgery, the delay or denial could harm the patient; I need to trust its decisions implicitly before reducing human oversight.",
+      "If the AI misinterprets a local guideline or makes a false rejection for a cancer medication, the patient suffers and the EPS faces lawsuits—undoable damage in our distrustful environment.",
+      "The single sharpest objection is procurement friction and integration risk: Rimac, Pacifico, and Sanitas are large, slow-moving organizations with complex legacy systems, and any integration delay could push ROI beyond the quarter I need to justify the budget."
+    ],
+    "top_evidence_requests": [
+      "Show me a blinded validation study comparing AI recommendations against a panel of expert auditors on at least 1,000 historical Peruvian prior auth cases, with false negative rate < 1%.",
+      "Show me a pilot with Rimac or Pacifico where your AI processed 10,000 historical authorization cases with zero false rejections and 99.5% accuracy, with every decision fully explainable in Spanish and validated by a human auditor.",
+      "I need a concrete pilot agreement with one EPS (e.g., Rimac) showing a 30-day deployment, measurable reduction in manual review hours, and a clear ROI calculation per authorization that proves cost savings exceed your fee within the quarter."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "Conditional go"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

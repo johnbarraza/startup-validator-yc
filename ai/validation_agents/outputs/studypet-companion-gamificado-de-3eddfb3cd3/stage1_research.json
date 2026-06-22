@@ -1,0 +1,165 @@
+{
+  "idea": "StudyPet: companion gamificado de estudio para universitarios que convierte silabos y lecturas PDF en calendario, quizzes, flashcards y progreso visual tipo mascota o jardin para sostener habitos de estudio.",
+  "market": "University students (18-24) struggling with procrastination and study organization; global TAM ~$100B in education technology, SAM for study tools and habit apps ~$10B, SOM in first 12 months targeting 5,000 students.",
+  "solutions": [
+    {
+      "id": "s1",
+      "name": "Quizlet",
+      "category": "Flashcard App",
+      "observed_positioning": "Dominant flashcard platform with 60M+ monthly users; recently added AI features (Q-Chat, Magic Notes) for auto-generated study sets."
+    },
+    {
+      "id": "s2",
+      "name": "Anki",
+      "category": "Flashcard App",
+      "observed_positioning": "Powerful open-source spaced repetition system (SRS) favored by medical/law students; highly customizable but steep learning curve and minimal gamification."
+    },
+    {
+      "id": "s3",
+      "name": "Brainscape",
+      "category": "Flashcard App",
+      "observed_positioning": "Adaptive flashcards using confidence-based repetition; focuses on learning science but lacks immersive gamification or content auto-generation."
+    },
+    {
+      "id": "s4",
+      "name": "StudySmarter",
+      "category": "Study Planner & Flashcards",
+      "observed_positioning": "AI-driven study planner with gamification, flashcards, and textbook solutions; popular in Europe, expanding to US; directly competes with StudyPet’s planning and quiz features."
+    },
+    {
+      "id": "s5",
+      "name": "Habitica",
+      "category": "Gamified Habit Tracker",
+      "observed_positioning": "RPG-style to-do list and habit tracker; strong gamification with avatars, quests, and parties; used by some students for study habits but lacks content integration."
+    },
+    {
+      "id": "s6",
+      "name": "Forest",
+      "category": "Focus Timer",
+      "observed_positioning": "Pomodoro-style focus app where users grow virtual trees; gamified focus, not content-based; used by students to avoid phone distractions."
+    },
+    {
+      "id": "s7",
+      "name": "Knowt",
+      "category": "AI Study Tool",
+      "observed_positioning": "AI-native flashcard platform that automatically converts notes, PDFs, and videos into flashcards and quizzes; growing rapidly among US college students."
+    },
+    {
+      "id": "s8",
+      "name": "Cramly",
+      "category": "AI Study Tool",
+      "observed_positioning": "AI-powered study assistant offering essay generation, practice questions, and content summarization; more focused on cheating prevention but emerging as a study aid."
+    },
+    {
+      "id": "s9",
+      "name": "Chegg",
+      "category": "Homework Help & Flashcards",
+      "observed_positioning": "Subscription service for textbook solutions, expert Q&A, and flashcards; heavily used but controversial for academic integrity issues; lacks habit gamification."
+    },
+    {
+      "id": "s10",
+      "name": "Course Hero",
+      "category": "Study Resources",
+      "observed_positioning": "Library of crowdsourced study materials, tutoring, and AI-powered homework help; focused on resource access rather than personal habit building."
+    },
+    {
+      "id": "s11",
+      "name": "Notion",
+      "category": "Notes & Organization",
+      "observed_positioning": "Flexible workspace used by students for note-taking, task management, and project planning; templates for student dashboards but no native gamification or content parsing."
+    },
+    {
+      "id": "s12",
+      "name": "Google Calendar",
+      "category": "Calendar / Manual Scheduling",
+      "observed_positioning": "Ubiquitous time-management tool; students manually block study time based on syllabi; lacks integration with learning content or gamification."
+    },
+    {
+      "id": "s13",
+      "name": "Physical Flashcards",
+      "category": "Manual Method",
+      "observed_positioning": "Pen-and-paper flashcards; low-cost but time-consuming to create, no spaced repetition automation, and zero engagement gamification."
+    },
+    {
+      "id": "s14",
+      "name": "Study Groups (In-person/Discord)",
+      "category": "Social Learning",
+      "observed_positioning": "Peer accountability through group study sessions on campus or online platforms like Discord; effective for motivation but lacks structured progress tracking."
+    },
+    {
+      "id": "s15",
+      "name": "Do-Nothing (Procrastination)",
+      "category": "Status Quo",
+      "observed_positioning": "Default behavior: students cram before exams without systematic habit; immediate pain but no tool adoption; StudyPet must overcome inertia."
+    }
+  ],
+  "research_summary": "The study companion market for university students is crowded, with incumbents focusing on flashcards and rote memorization (Quizlet, Anki) or general productivity (Habitica, Forest). Few products combine AI-driven content parsing from syllabi/PDFs with a deeply gamified progress system like a pet or garden. Direct competitors such as StudySmarter and Knowt are integrating AI, but rely on less emotionally engaging gamification. The top competitive threats come from well-funded AI-powered flashcard apps and study planners that could quickly add similar features. StudyPet's moat lies in its unique pet/garden emotional engagement layer tied to real academic tasks, which currently has no direct substitute. However, the barrier to entry for AI content parsing is lowering, making continuous innovation and user lock-in via data critical.",
+  "competitor_signals": [
+    {
+      "competitor": "Quizlet",
+      "hiring_score": 8,
+      "funding_score": 7,
+      "product_score": 8,
+      "team_score": 8,
+      "market_score": 8,
+      "tech_score": 7,
+      "overall_score": 77.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Dominant flashcard platform with over 60M monthly users; recent AI features (Q-Chat) driving engagement; however, limited gamification compared to StudyPet's pet/garden metaphor; high barrier to displace but must be tracked as a potential acquirer/partner."
+    },
+    {
+      "competitor": "StudySmarter",
+      "hiring_score": 7,
+      "funding_score": 7,
+      "product_score": 8,
+      "team_score": 7,
+      "market_score": 8,
+      "tech_score": 7,
+      "overall_score": 73.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "European ed-tech startup with strong gamification, AI study planner, and flashcards; directly overlaps with StudyPet’s feature set; growing user base, but no pet/garden metaphor; potential competitor in US market if they localize; monitor for fundraising rounds."
+    },
+    {
+      "competitor": "Habitica",
+      "hiring_score": 4,
+      "funding_score": 3,
+      "product_score": 7,
+      "team_score": 5,
+      "market_score": 6,
+      "tech_score": 5,
+      "overall_score": 47.5,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Open-source habit tracker with RPG elements; loyal niche following; not VC-backed; limited threat as it lacks study content parsing; serves as proof of concept for gamification efficacy but unlikely to pivot into full study companion."
+    },
+    {
+      "competitor": "Brainscape",
+      "hiring_score": 5,
+      "funding_score": 4,
+      "product_score": 7,
+      "team_score": 6,
+      "market_score": 7,
+      "tech_score": 6,
+      "overall_score": 55.5,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Adaptive flashcard platform based on cognitive science; lacks gamified progression and content auto-generation; may appeal to serious learners but lacks the emotional hook of StudyPet; stable but not a high-growth threat."
+    },
+    {
+      "competitor": "Knowt",
+      "hiring_score": 6,
+      "funding_score": 6,
+      "product_score": 8,
+      "team_score": 7,
+      "market_score": 7,
+      "tech_score": 8,
+      "overall_score": 67.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "AI-native flashcard app; automatically converts notes and PDFs into flashcards/quizzes; strong growth among US college students; potential acquisition target; high overlap with StudyPet’s core parsing feature; founder should monitor closely and consider differentiation."
+    }
+  ],
+  "source": "llm"
+}

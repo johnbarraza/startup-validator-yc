@@ -1,0 +1,165 @@
+{
+  "idea": "RutaLeche Peru",
+  "market": "Dairy milk collection route optimization in Peru",
+  "solutions": [
+    {
+      "id": 1,
+      "name": "Planificación manual (do-nothing)",
+      "category": "Manual/Do-Nothing",
+      "observed_positioning": "Current practice: no optimization, drivers decide routes daily"
+    },
+    {
+      "id": 2,
+      "name": "Hojas de cálculo Excel/Google Sheets",
+      "category": "Spreadsheets",
+      "observed_positioning": "Basic route planning using static spreadsheets"
+    },
+    {
+      "id": 3,
+      "name": "Route4Me",
+      "category": "Generic Route Optimizer",
+      "observed_positioning": "Global leader in route optimization, strong in LatAm"
+    },
+    {
+      "id": 4,
+      "name": "OptimoRoute",
+      "category": "Generic Route Optimizer",
+      "observed_positioning": "Multi-vehicle route planning, affordable for SMEs"
+    },
+    {
+      "id": 5,
+      "name": "Onfleet",
+      "category": "Logistics Platform",
+      "observed_positioning": "Last-mile delivery management with optimization"
+    },
+    {
+      "id": 6,
+      "name": "Routific",
+      "category": "Generic Route Optimizer",
+      "observed_positioning": "Cloud-based route optimization, focus on green logistics"
+    },
+    {
+      "id": 7,
+      "name": "Circuit for Teams",
+      "category": "Generic Route Optimizer",
+      "observed_positioning": "Simple route planner for delivery teams"
+    },
+    {
+      "id": 8,
+      "name": "WorkWave Route Manager",
+      "category": "Logistics Platform",
+      "observed_positioning": "Route planning for field services and deliveries"
+    },
+    {
+      "id": 9,
+      "name": "Tambero.com",
+      "category": "Agricultural Software",
+      "observed_positioning": "Farm management software with basic route planning for milk collection"
+    },
+    {
+      "id": 10,
+      "name": "Agil (Chile)",
+      "category": "Specialized Milk Collection",
+      "observed_positioning": "App for milk collection route optimization using ML, proven in Chile"
+    },
+    {
+      "id": 11,
+      "name": "Agroptima (España/LatAm)",
+      "category": "Agricultural Software",
+      "observed_positioning": "Farm management with some logistics modules"
+    },
+    {
+      "id": 12,
+      "name": "Sismagro (Perú)",
+      "category": "Agricultural Software",
+      "observed_positioning": "Peruvian agtech offering farm management, potential route add-on"
+    },
+    {
+      "id": 13,
+      "name": "MilkMoovement",
+      "category": "Specialized Milk Collection",
+      "observed_positioning": "Dairy supply chain management with route optimization, North America"
+    },
+    {
+      "id": 14,
+      "name": "Clicampo (Brasil)",
+      "category": "Agricultural Marketplace",
+      "observed_positioning": "Farm inputs marketplace, may expand to logistics"
+    },
+    {
+      "id": 15,
+      "name": "Soluciones a medida (consultoría local)",
+      "category": "Consulting/Custom",
+      "observed_positioning": "Custom development by local IT firms using OR-Tools"
+    }
+  ],
+  "research_summary": "RutaLeche Peru enters a market where milk collection route optimization is nascent but growing. Manual methods dominate among small cooperatives, while larger processors may use spreadsheets or generic tools. Competitors range from global generic route optimizers (Route4Me, OptimoRoute) to specialized dairy logistics (Agil, MilkMoovement). Agil's success in Chile provides a direct blueprint and threat. Local agtech options (Tambero, Sismagro) have built trust but lack advanced ML-based routing. Onfleet and Routific represent capable last-mile platforms that could pivot. Do-nothing inertia and cheap spreadsheet workarounds remain the toughest competitors in price-sensitive segments.",
+  "competitor_signals": [
+    {
+      "competitor": "Agil (Chile)",
+      "hiring_score": 7,
+      "funding_score": 6,
+      "product_score": 7,
+      "team_score": 6,
+      "market_score": 7,
+      "tech_score": 7,
+      "overall_score": 66.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Agil is the most direct threat, having proven the ML-based milk collection model in Chile. Recent hiring for Peru expansion and product updates indicate active growth."
+    },
+    {
+      "competitor": "Route4Me",
+      "hiring_score": 8,
+      "funding_score": 4,
+      "product_score": 9,
+      "team_score": 8,
+      "market_score": 8,
+      "tech_score": 8,
+      "overall_score": 72.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Route4Me dominates generic route optimization; its brand and depth of features could attract larger Peruvian dairy processors, but it lacks milk-specific workflows and local presence."
+    },
+    {
+      "competitor": "OptimoRoute",
+      "hiring_score": 6,
+      "funding_score": 5,
+      "product_score": 7,
+      "team_score": 5,
+      "market_score": 8,
+      "tech_score": 7,
+      "overall_score": 60.5,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "OptimoRoute offers affordable multi-vehicle planning, appealing to price-sensitive SMEs. It has a growing LatAm user base but no dairy-specific features, making it a weaker substitute."
+    },
+    {
+      "competitor": "Tambero.com",
+      "hiring_score": 5,
+      "funding_score": 4,
+      "product_score": 6,
+      "team_score": 6,
+      "market_score": 7,
+      "tech_score": 5,
+      "overall_score": 53.0,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Tambero offers an integrated dairy farm management platform with basic routing, leveraging an existing customer base in LatAm. Its lack of advanced ML and focus on farm-level (not collection) limits immediate threat."
+    },
+    {
+      "competitor": "Onfleet",
+      "hiring_score": 7,
+      "funding_score": 7,
+      "product_score": 8,
+      "team_score": 8,
+      "market_score": 9,
+      "tech_score": 8,
+      "overall_score": 76.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Onfleet's strong last-mile platform and AI capabilities could be adapted for milk collection, especially for larger processors seeking a modern logistics stack. Its funding and tech strengths make it a potential disruptor."
+    }
+  ],
+  "source": "llm"
+}

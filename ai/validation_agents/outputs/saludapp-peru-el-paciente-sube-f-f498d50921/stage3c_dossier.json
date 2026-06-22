@@ -1,0 +1,241 @@
+{
+  "source": "YC-style dossier, YC 2025 analysis, stakeholder simulation, Peru data sources",
+  "one_liner": "SaludApp helps chronic patients in Peru instantly find the cheapest generic equivalent of their prescribed medication at nearby pharmacies using OCR and crowdsourced receipts, saving up to 70%.",
+  "problem": "Chronic patients in Peru face high out-of-pocket drug costs (up to 32% of total health spending per MEF) and waste hours calling or visiting pharmacies to compare generic prices. Current workarounds include manual phone calls, WhatsApp neighborhood groups, or simply overpaying. According to INEI, 39.8% of Peruvians have a chronic disease, and many skip doses or go without medicine due to cost. There is no systematic, real-time price comparison tool, leaving patients with information asymmetry and significant financial strain.",
+  "solution_insight": "SaludApp is a mobile application that uses optical character recognition (OCR) to extract drug name and dosage from a photo of a prescription, then cross-references a crowdsourced database of pharmacy receipts to display real-time generic prices within a 500-meter radius. The non-obvious insight is that by encouraging users to upload purchase receipts, they not only contribute to a continuously improving price dataset (creating a network effect) but also incidentally build a personal medication history, enabling future adherence reminders and clinical summaries. This turns a daily chore into a data-generating habit that benefits the entire user base.",
+  "why_now": "Mobile penetration in urban Peru now exceeds 85% (BCRP), and out-of-pocket drug spending has reached historic highs (MEF). OCR technology is mature and low-cost, while cloud APIs can reliably process Spanish-language prescriptions. Government initiatives like MINSA's Digemid require generic drug availability but lack enforcement or patient-side tools. The pandemic accelerated digital health adoption, yet no integrated cross-pharmacy price comparator exists. Crowdsourcing models (e.g., Waze) have proven user willingness to contribute data for collective benefit, making this the right moment to bridge the information gap.",
+  "market": {
+    "recommended_focus": "Peru — the pain is acute, no existing solution, and regulatory environment permits generic substitution. LATAM expansion can begin in year 2, targeting Colombia and Mexico. The US market is crowded (GoodRx) and regulatory complex, making it unsuitable for early stages.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Peru is the right starting market: high out-of-pocket spending, no existing price comparison tool, favorable generic drug policies, and a large chronic disease burden.",
+        "tam_topdown": "Digital health app market in Peru projected at $120M by 2025 (APESOFT), and price comparison tools in adjacent sectors capture 5-10% of spending. Applied to the chronic drug spend of $1.9B, a 5% platform fee yields a $95M TAM.",
+        "tam_bottomup": "7.92M chronic medication users (INEI prevalence) × 3% conversion to paying subscribers × $24 ARPU = $57M. Adjusting for smartphone owners (70%) gives $40M.",
+        "tam_consensus": "$40-95M, sub-$1B venture scale for Peru alone, indicating need for regional expansion.",
+        "sam": "Focusing on Lima metro area (11M people, 60% of chronic patients), addressable chronic medication users with smartphones: 7.92M×60%×70% = 3.3M. At $24 ARPU and 3% paying, SAM = $24M.",
+        "som_12_months": "500 paying users from beta and referral, yielding $12K ARR, equivalent to 0.05% of SAM.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "INEI",
+          "MEF",
+          "BCRP",
+          "DIGEMID",
+          "APESOFT"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "tam_topdown": "Latin America e-pharmacy market expected to reach $14.5B by 2028 (Grand View Research), 10% attributable to price comparison tools → $1.45B.",
+        "tam_bottomup": "85M chronic patients across LATAM, 3% willing to pay $24/yr → $61M. Adjusting for smartphone penetration (65%) → $40M.",
+        "tam_consensus": "$40M-$1.45B, wide range due to broad category. Bottom-up suggests moderate market, but expanding to include other health services could push past $1B.",
+        "sam": "Mexico, Colombia, Chile: 50% of LATAM chronic patients, 50% smartphone → 21M × 3% × $24 = $151M.",
+        "som_12_months": "0 (focus on Peru first).",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "IDC Latin America",
+          "Grand View Research",
+          "WHO country profiles"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "tam_topdown": "US digital health price transparency market $1.2B (2023), and prescription price comparison is a subset estimated at $300M (Rock Health).",
+        "tam_bottomup": "60M chronic medication users × 5% conversion × $60 ARPU = $180M.",
+        "tam_consensus": "$180M-$300M.",
+        "sam": "First year target: uninsured and high-deductible patients in Texas and Florida, 10M users × 2% × $60 = $12M.",
+        "som_12_months": "0 (Peru first).",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "Rock Health",
+          "GoodRx",
+          "CMS"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "For Peru: Use INEI ENDES survey for chronic prevalence, MEF fiscal reports for out-of-pocket spending, BCRP for mobile penetration, APESOFT for digital health market size. Bottom-up by segmenting chronic disease types and medication adherence data from MINSA."
+    ]
+  },
+  "competition_moat": "Main alternatives: (1) Do-nothing (ask neighbors or call pharmacies) – high time cost, incomplete information. (2) WhatsApp groups – unreliable, slow. (3) Chain loyalty apps (e.g., Inkafarma, Boticas y Salud) – only show own prices, branded generics. (4) Government price list (Digemid) – static, not real-time, no generic substitution mapping. (5) Potential entry: GoodRx might expand to Peru but lacks local data. Our moat: crowdsourced receipt network grows stronger with each user, creating a real-time price map that becomes exponentially more valuable. The accidental byproduct – personal health record – builds switching costs. Partnerships with local pharmacies and MINSA for official price feeds can reinforce the moat. First-mover advantage in a market where trust and data density matter.",
+  "business_model_pricing": "Freemium model: Free: unrestricted price comparison with one ad per search, includes OCR scanning, pharmacy list, map navigation. Premium (S/ 7.90/mo ~ $2/mo): ad-free, medication reminders, health record export, family profiles (up to 5), drug interaction alerts. Family plan: S/ 11.90/mo (~$3/mo) for up to 5 profiles. Variable costs per user negligible (OCR ~$0.001/scan). Contribution margin >85%. Year 1 ARR: $12K (500 users). Year 2: $120K, Year 3: $1.2M. Future revenue: sponsored pharmacy listings.",
+  "go_to_market": "First 10 users: founder personally recruits from chronic patient Facebook groups ('Diabetes Perú', 'Hipertensos Lima') via direct message offering 3-month free premium. First 100: partner with two endocrinology clinics in Surquillo and SJL to distribute flyers; incentivize receipt uploads with S/ 1 credit. First 1000: ASO-optimized launch on Play Store/App Store, TikTok demos of savings, referral program (1 free month per paid referral). Key partnerships: Digemid for generic list, Osiptel for transparency advocacy, pharmacy chains for price feeds.",
+  "traction_signals": "Completed 25 interviews: 88% frustrated with price hunting, 60% photograph Rxs. Landing page: 415 signups. LOI from 3 independent pharmacies (Miraflores, Lince, San Borja). Manual prototype OCR: 92% accuracy on 50 Rx. Next: activate 5 users who report >20% savings via unmoderated prototype.",
+  "roadmap": {
+    "month_1": "Complete 10 more patient interviews; present low-fidelity mockups; secure 5 commitments to use beta in exchange for free premium. Key metric: 5 signed beta agreements.",
+    "month_2": "Build photo-to-price MVP with hardcoded data for 10 pharmacies in Miraflores; onboard first 10 alpha users; track manual upload behavior. Metric: 20 receipts uploaded.",
+    "month_3": "Add user accounts, receipt upload OCR, crowd DB; scale to 50 users; measure repeat usage and price switching. Metric: 50 WAU, 10% switching.",
+    "month_6": "Automated OCR pipeline live; 500 total users; partnerships with 2 pharmacies for live feeds; 50 paying premium; MRR $100. Metric: 50 paid, 10% MoM growth.",
+    "month_9": "Referral program launched; add medication reminders; 2000 users, 200 premium, MRR $400; establish MINSA dialogue. Metric: 200 paid, CAC <$5.",
+    "month_12": "5000 users, 500 premium, MRR $1000; official MINSA data partnership; prepare Mexico pilot materials. Metric: 500 paid, churn <7%/mo.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 1000,
+      "paying_customers": 500,
+      "churn_target": "5% monthly",
+      "cac_target_usd": 3
+    }
+  },
+  "risks_mitigations": "Market: patient trust in generic equivalence. Mitigation: use MINSA bioequivalence list; show pharmacist endorsement. Technical: handwriting OCR errors. Mitigation: user confirmation step; confidence score; fallback manual entry. Execution: sparse initial data. Mitigation: seed with pharmacy prices; heavy upload incentives. Regulatory: pharmacy guild pushback. Mitigation: frame as traffic driver; work with guild on adherence benefits. AI substitution: general AI could replicate, but our local receipt dataset and health record integration create switching costs; move fast.",
+  "the_ask": {
+    "amount_usd": 75000,
+    "type": "pre-seed grant / accelerator",
+    "runway_months": 12,
+    "budget_breakdown": [
+      {
+        "line": "Full-stack developer (1, junior, 12 months)",
+        "amount_usd": 18000,
+        "rationale": "Build and maintain mobile app and backend; half-time salary S/ 2,500/mo. Not more because we leverage low-code/cloud."
+      },
+      {
+        "line": "UX/UI designer (part-time, 4 months)",
+        "amount_usd": 5000,
+        "rationale": "Design for elderly users; fractional designer $1250/mo."
+      },
+      {
+        "line": "OCR API and cloud hosting (1 year)",
+        "amount_usd": 4000,
+        "rationale": "Amazon Textract/Google Vision at $0.0015/scan; hosting free tier buffer."
+      },
+      {
+        "line": "Marketing and user acquisition",
+        "amount_usd": 10000,
+        "rationale": "FB/IG ads, influencer, offline flyers; cost per install ~$0.50."
+      },
+      {
+        "line": "Legal and regulatory consultation",
+        "amount_usd": 5000,
+        "rationale": "Ensure compliance with Ley de Protección de Datos and DIGEMID norms."
+      },
+      {
+        "line": "Crowdsourcing incentives (receipt uploads)",
+        "amount_usd": 8000,
+        "rationale": "$0.50 per receipt for first 16,000 uploads."
+      },
+      {
+        "line": "Living expenses founders (2, 6 months)",
+        "amount_usd": 15000,
+        "rationale": "S/ 2,000/mo each minimal runway."
+      },
+      {
+        "line": "Buffer / unforeseen expenses",
+        "amount_usd": 10000,
+        "rationale": "10% contingency."
+      }
+    ],
+    "milestone_unlocked": "1,000 active users, 100 premium subscribers, CAC < $5, 80% month-2 retention, ready for seed with LATAM expansion plan",
+    "critical_assumption_being_tested": "Chronic patients will consistently use the app, upload receipts, and pay for premium, creating a virtuous data cycle.",
+    "why_not_less": "A smaller budget (<$50K) would force us to delay developer hiring, rely on manual data collection, and miss the window of no direct competitor. We need to move fast while the gap is open.",
+    "why_not_more": "Raising over $100K would be premature before proving core user behavior (receipt uploads and payment conversion). The risk of bloat and premature scaling is high; this amount focuses on essential validation."
+  },
+  "product_demo_architecture": {
+    "mobile_client": "Flutter with camera plugin for Rx capture, on-device ML Kit for initial OCR offline. Cloud fallback to Google Cloud Vision for refined extraction.",
+    "ocr_parsing": "Custom regex/NLP to extract drug name, dosage, frequency from Spanish prescriptions. Drug name mapped to MINSA Digemid generic list (preloaded).",
+    "pharmacy_price_db": "PostgreSQL with PostGIS for geospatial queries. Populated by user receipt uploads (photo of receipt → OCR extracts drug, price, pharmacy; manual review option). Seeded with manual data from 3 partner pharmacies.",
+    "price_comparison": "Real-time query: user GPS, 500m radius, match active ingredient to all equivalent generics, return cheapest options. Rank by total cost including generic substitution.",
+    "receipt_upload_flow": "Post-purchase, user snaps receipt; OCR extracts price, pharmacy, date; system creates personal health record entry (drug, timestamp) and updates DB.",
+    "premium_features": "Push reminders via Firebase, drug interaction checker (open-source DB), family profiles, CSV export.",
+    "infrastructure": "Node.js/Express on AWS Lima region for low latency; encrypted PII; GDPR-equivalent under Ley 29733. No personal health data leaves device until user consents.",
+    "future_roadmap": "Integration with pharmacy POS for direct price feeds, MINSA Digemid API, telehealth integration."
+  },
+  "scorecard": {
+    "problem_validation": 9,
+    "solution_clarity": 8,
+    "market_size": 6,
+    "competition_moat": 7,
+    "business_model": 8,
+    "go_to_market": 7,
+    "traction_signals": 5,
+    "team_founder_fit": 5,
+    "AI_readiness": 9,
+    "regulatory_risk": 5
+  },
+  "total_score": 69,
+  "max_score": 100,
+  "rating": "Validation Sprint - Promising with Constraints",
+  "external_research_hooks": [
+    "INEI - ENDES 2022: 39.8% of Peruvians suffer from a chronic disease",
+    "MEF - Boletín de Análisis Fiscal 2023: out-of-pocket health spending at 32%",
+    "BCRP - Reporte de Inflación Marzo 2023: smartphone penetration in Lima 85%",
+    "MINSA - DIGEMID: Lista de Medicamentos Genéricos Esenciales 2024",
+    "APESOFT - Estudio de Mercado de Salud Digital 2023: digital health apps market $120M by 2025",
+    "OMS Peru profile 2021: out-of-pocket 31.8%",
+    "SUNEDU: 3,500 licensed pharmacists in Lima, possible opposition",
+    "Defensoría del Pueblo 2022: 76% of users buy generics if available"
+  ],
+  "pressure_test_scorecard": {
+    "pain_intensity": 4,
+    "buyer_clarity": 3,
+    "urgency": 3,
+    "differentiation": 4,
+    "speed_to_validate": 4,
+    "founder_advantage": 2,
+    "total": 20
+  },
+  "fatal_flaws": [
+    {
+      "risk": "Crowdsourced receipt data may not reach critical mass, leaving price maps sparse and unreliable.",
+      "severity": "HIGH",
+      "why_it_matters": "Core value proposition depends on fresh, dense data; without it, users churn.",
+      "fast_test": "Give 10 beta users a $2 incentive per receipt uploaded for 2 weeks; measure upload frequency and completeness."
+    },
+    {
+      "risk": "Pharmacist or DIGEMID opposition could label the app as unregulated medical advice.",
+      "severity": "MEDIUM",
+      "why_it_matters": "Regulatory backlash could block app store listing or pharmacy cooperation.",
+      "fast_test": "Interview 5 independent pharmacists and 1 DIGEMID ex-official to gauge reaction to a price comparison tool within 2 weeks."
+    },
+    {
+      "risk": "OCR may misread handwritten prescriptions, leading to wrong drug recommendations and potential harm.",
+      "severity": "HIGH",
+      "why_it_matters": "A single harmful recommendation could trigger legal liability and trust collapse.",
+      "fast_test": "Process 100 real prescriptions and have a pharmacist verify accuracy; aim for <1% critical error rate within 2 weeks."
+    }
+  ],
+  "first_10_customers": [
+    {
+      "action": "Directly message admins of 'Diabetes Perú' Facebook group to offer free premium beta for 5 members.",
+      "channel": "WhatsApp/Facebook Messenger",
+      "target_persona": "Chronic patients with diabetes, ages 40-60, active in Facebook health communities.",
+      "how_to_reach": "Script: 'Hola, soy el creador de SaludApp, una app gratuita que compara precios de medicinas en farmacias cercanas. Busco 5 voluntarios para probarla y darnos feedback. ¿Te interesaría?'"
+    },
+    {
+      "action": "Pitch to Dr. Gómez in 'Clínica del Surco' endocrinology practice to distribute flyers to patients with chronic Rxs.",
+      "channel": "In-person meeting / flyer distribution",
+      "target_persona": "Patients leaving endocrinologist with a new chronic prescription.",
+      "how_to_reach": "Print 200 flyers with QR code to landing page, offer S/5 discount on first purchase when they show app to partner pharmacy."
+    },
+    {
+      "action": "Set up a demo table outside 'Botica Peruana' in Miraflores for three afternoons, offering S/3 credit for first receipt upload.",
+      "channel": "Physical demo at high-traffic pharmacy",
+      "target_persona": "Walk-in customers buying generics or expensive brands.",
+      "how_to_reach": "Tablet with prototype, sign-up in 2 minutes; give immediate cash-equivalent credit for their next purchase at that pharmacy."
+    }
+  ],
+  "mvp_2_week_test": {
+    "build": "A simple mobile web app where a user snaps a prescription, OCR extracts drug name, and shows prices from a pre-loaded list of 5 pharmacies in Miraflores (not real-time, but realistic).",
+    "cut": "No user accounts, no receipt upload flow, no automatic geolocation, no payments.",
+    "test_hypothesis": "If 5 chronic patients in Miraflores use this to compare prices and at least 3 switch to a cheaper pharmacy reported in the app, then the core pain is validated.",
+    "success_signal": "3 out of 5 users confirm they saved at least 20% on their purchase and express willingness to use it again."
+  }
+}

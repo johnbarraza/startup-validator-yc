@@ -1,14 +1,14 @@
 {
-  "inspiration": "MiroFish-style lightweight persona simulation: seed idea -> personas -> interaction rounds -> report signals.",
-  "idea": "VocacionData AI: orientacion vocacional basada en datos laborales reales para postulantes y estudiantes peruanos, usando un agente conversacional que cruza intereses, salarios, empleabilidad, oferta universitaria y ubicacion para reducir malas decisiones de carrera.",
+  "inspiration": "MiroFish-style parallel simulation: 6 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "VocacionData AI becomes an enterprise SaaS platform sold to Peruvian universities, enabling their career services departments to offer personalized, AI-driven vocational guidance at scale. The platform ingests real-time labor market data (salaries, demand, location) and university-specific outcomes (graduation rates, alumni employment) to power a conversational agent that helps students choose majors and career paths with evidence. Universities use it to reduce dropout rates, improve graduate employability, and strengthen their market reputation, while gaining insights into student preferences and labor alignment.",
   "selected_gap": {
-    "id": "G1",
-    "title": "Narrow painful workflow",
-    "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
-    "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
-    "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
-    "priority": 1,
-    "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+    "id": 1,
+    "title": "Unified Data-Driven Career Conversation",
+    "pain": "Peruvian students face fragmented, static data across government portals, psychometric tests, and generic AI. No single solution provides a conversational, personalized recommendation that integrates interests, salaries, universities, and regional demand, causing high career mismatch and dropout.",
+    "why_now": "Generative AI advances make conversational agents feasible. Datasets like Ponte en Carrera and MiFuturo are available but underutilized. Peruvian youth are digitally native and open to AI guidance, while government open data initiatives provide a reliable foundation.",
+    "evidence_needed": "User interviews to confirm frustration with current tools. Prototype engagement metrics (time on task, conversion). Benchmark against ChatGPT's accuracy on local career queries.",
+    "priority": "Critical (pain: very high, validation speed: medium, defensibility: high via data integration and vertical tuning)",
+    "risk": "ChatGPT may integrate local data via plugins. Government portals could add basic AI. Data licensing/accuracy risks."
   },
   "personas": [
     {
@@ -54,104 +54,90 @@
       "default_objection": "The demo may work, but edge cases and data access can break the product."
     }
   ],
-  "rounds": [
+  "persona_results": [
     {
-      "round": 1,
-      "focus": "Initial reaction",
-      "statements": [
-        {
-          "persona_id": "P1",
-          "claim": "From the End user view, the idea is interesting only if it proves the product saves time or reduces stress in a repeated task.",
-          "concern": "This sounds useful, but I already have a workaround.",
-          "evidence_request": "Show a real recent example from the target customer segment."
-        },
-        {
-          "persona_id": "P2",
-          "claim": "From the Economic buyer view, the idea is interesting only if it proves the product clearly pays for itself this quarter or protects a critical metric.",
-          "concern": "Who owns the budget, and why would we buy now?",
-          "evidence_request": "Show a real recent example from the target customer segment."
-        },
-        {
-          "persona_id": "P3",
-          "claim": "From the Operations owner view, the idea is interesting only if it proves the workflow fits existing operations without creating extra coordination cost.",
-          "concern": "This may add another tool my team has to maintain.",
-          "evidence_request": "Show a real recent example from the target customer segment."
-        },
-        {
-          "persona_id": "P4",
-          "claim": "From the Incumbent competitor view, the idea is interesting only if it proves the startup finds a wedge incumbents do not prioritize.",
-          "concern": "We can add this feature or bundle it with our existing platform.",
-          "evidence_request": "Show a real recent example from the target customer segment."
-        },
-        {
-          "persona_id": "P5",
-          "claim": "From the YC partner view, the idea is interesting only if it proves the idea has a sharp initial wedge and a path to a large market.",
-          "concern": "This may be a feature, not a company.",
-          "evidence_request": "Show a real recent example from the target customer segment."
-        },
-        {
-          "persona_id": "P6",
-          "claim": "From the Technical builder view, the idea is interesting only if it proves the system can be built cheaply, reliably, and with a learning loop.",
-          "concern": "The demo may work, but edge cases and data access can break the product.",
-          "evidence_request": "Show a real recent example from the target customer segment."
-        }
-      ]
+      "persona_id": "P1",
+      "role": "End user",
+      "reaction": "As a Peruvian student overwhelmed by scattered info on careers and salaries, a single conversational tool that pulls together personalized data sounds amazing. But I've been let down by generic AI before—it often gives vague advice that doesn't reflect local realities.",
+      "concern": "Without proof that the AI can handle nuanced, region-specific questions (e.g., 'What's the real demand for engineers in Arequipa vs. Lima?'), I'd worry it's just another chatbot that wastes my time with generic fluff.",
+      "evidence_request": "Show me a live demo where I input my interests and city, and the AI gives a concrete, data-backed recommendation (e.g., 'Based on salary trends and local hiring, Agronomy fits your profile; here's a top university and expected salary') that I can verify against known data.",
+      "score": 0.6,
+      "score_rationale": "The idea addresses a real pain point in my career decision process, but trust is low due to past experiences with generic tools; a convincing demo could raise my score significantly.",
+      "source": "llm"
     },
     {
-      "round": 2,
-      "focus": "YC stress test",
-      "statements": [
-        {
-          "persona_id": "P1",
-          "claim": "The selected gap must map to a task users already try to complete.",
-          "concern": "If users describe the problem abstractly, urgency is probably weak.",
-          "evidence_request": "Ask for the last 3 times this happened and what they did next."
-        },
-        {
-          "persona_id": "P2",
-          "claim": "Payment depends on a visible business metric, not enthusiasm.",
-          "concern": "A user can love the tool while the buyer refuses to pay.",
-          "evidence_request": "Identify the budget owner and a price anchor."
-        },
-        {
-          "persona_id": "P5",
-          "claim": "The wedge is acceptable if it compounds into a much larger workflow.",
-          "concern": "The current scope may be a narrow feature.",
-          "evidence_request": "Describe the expansion path after the first repeated use case."
-        }
-      ]
+      "persona_id": "P2",
+      "role": "Economic buyer",
+      "reaction": "The concept is compelling for addressing dropout and employability, which directly affect university revenue and reputation. However, without clear proof that it saves more money than it costs within a single academic term, I cannot justify the budget—especially given the procurement friction and need to replace existing ad-hoc tools.",
+      "concern": "Can you demonstrate that the platform will reduce dropout rates enough to cover its subscription cost within the first semester, given that most Peruvian universities have limited discretionary budgets and require immediate, measurable ROI?",
+      "evidence_request": "A pilot study at a comparable Peruvian university showing a statistically significant reduction in dropout rates (or increase in major retention) within one term, along with a detailed cost-benefit analysis accounting for implementation costs.",
+      "score": 0.4,
+      "score_rationale": "The idea addresses a critical pain point but lacks the immediate, quantified ROI needed to overcome budget constraints and procurement inertia in a price-sensitive market.",
+      "source": "llm"
     },
     {
-      "round": 3,
-      "focus": "Decision-grade experiments",
-      "statements": [
-        {
-          "persona_id": "P3",
-          "claim": "The next test should simulate delivery before building infrastructure.",
-          "concern": "Engineering too early hides weak demand signals.",
-          "evidence_request": "Run a concierge version with 3 users."
-        },
-        {
-          "persona_id": "P4",
-          "claim": "The startup needs a wedge incumbents ignore because it looks too small or too custom.",
-          "concern": "A generic AI layer is easy to copy.",
-          "evidence_request": "List what proprietary workflow data accumulates after 30 days."
-        },
-        {
-          "persona_id": "P6",
-          "claim": "The technical plan should optimize for low COGS and controlled output variance.",
-          "concern": "LLM quality variance can destroy trust in repeated workflows.",
-          "evidence_request": "Define fallback behavior, logging, and pass/fail checks."
-        }
-      ]
+      "persona_id": "P3",
+      "role": "Operations owner",
+      "reaction": "The platform's reliance on ingesting university-specific data like graduation rates and alumni employment creates heavy integration work, as each institution likely has fragmented systems. This will introduce significant support and maintenance overhead, and change management with career services staff could slow adoption.",
+      "concern": "Integration with each university's disparate data systems will be a major operational bottleneck, requiring custom ETL pipelines and ongoing support, resulting in high coordination costs that undermine scalability.",
+      "evidence_request": "A detailed integration plan or pilot results from at least one university showing the time, cost, and technical approach to ingest their data into the platform.",
+      "score": 0.3,
+      "score_rationale": "The operational complexity of data integration and process change in bureaucratic universities poses a high risk of cost overruns and low adoption, making me unconvinced of operational fit.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor",
+      "reaction": "While the idea addresses a real friction point, the market is too small and fragmented for a dedicated platform; we, as a larger edtech or HR provider, can easily absorb this feature into our existing suite once the startup validates demand. The startup's reliance on government open data also means the barrier to replication is low for any competitor with API access.",
+      "concern": "The startup's defensibility is weak: incumbents like us already have university relationships and can build a similar AI module within months, neutralizing their wedge before they gain scale.",
+      "evidence_request": "Show me signed multi-year contracts with at least three top Peruvian universities that include non-trivial upfront payments, proving that the value proposition is sticky enough to withstand incumbents' feature replication.",
+      "score": 0.2,
+      "score_rationale": "As an incumbent, I see this as a niche feature that we can easily copy once the startup validates the market, so the probability of long-term success is very low.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC partner",
+      "reaction": "The idea addresses a real pain point for students and universities, but the market—Peruvian universities—is small and fragmented. Enterprise sales cycles are notoriously long, and university budgets for career services tools are typically thin. The venture scalability is questionable given the limited total addressable market.",
+      "concern": "The total addressable market (Peruvian universities) is too small for venture-scale returns—likely fewer than 150 potential customers, each with limited budget and slow procurement processes.",
+      "evidence_request": "Evidence of signed contracts or letters of intent from at least 3 top-tier Peruvian universities demonstrating willingness to pay $50k+/year for this platform.",
+      "score": 0.4,
+      "score_rationale": "While the problem is real and the AI approach is defensible, the small, budget-constrained market makes it unlikely to reach the scale VCs require.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder",
+      "reaction": "The idea leverages real-time labor data and university outcomes to power a conversational agent, which is technically feasible with existing APIs and open datasets. However, the main challenge is building a reliable data pipeline that ingests, normalizes, and updates fragmented sources with minimal latency and cost.",
+      "concern": "Data quality and freshness across disparate sources (government portals, university records) could lead to inaccurate recommendations, eroding trust and increasing churn.",
+      "evidence_request": "A prototype that demonstrates end-to-end ingestion and normalization of at least two data sources (e.g., Ponte en Carrera and a university's alumni data) with measured accuracy, latency, and update frequency, plus a blind A/B test showing the AI matches or exceeds human advisor recommendations.",
+      "score": 0.6,
+      "score_rationale": "The technical foundation is plausible but unproven; data integration risks are high, and the cost to achieve reliable quality may be underestimated.",
+      "source": "llm"
     }
   ],
+  "aggregate_score": 0.417,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
   "consensus": {
+    "aggregate_score": 0.417,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "Without proof that the AI can handle nuanced, region-specific questions (e.g., 'What's the real demand for engineers in Arequipa vs. Lima?'), I'd worry it's just another chatbot that wastes my time with generic fluff.",
+      "Can you demonstrate that the platform will reduce dropout rates enough to cover its subscription cost within the first semester, given that most Peruvian universities have limited discretionary budgets and require immediate, measurable ROI?",
+      "Integration with each university's disparate data systems will be a major operational bottleneck, requiring custom ETL pipelines and ongoing support, resulting in high coordination costs that undermine scalability."
+    ],
+    "top_evidence_requests": [
+      "Show me a live demo where I input my interests and city, and the AI gives a concrete, data-backed recommendation (e.g., 'Based on salary trends and local hiring, Agronomy fits your profile; here's a top university and expected salary') that I can verify against known data.",
+      "A pilot study at a comparable Peruvian university showing a statistically significant reduction in dropout rates (or increase in major retention) within one term, along with a detailed cost-benefit analysis accounting for implementation costs.",
+      "A detailed integration plan or pilot results from at least one university showing the time, cost, and technical approach to ingest their data into the platform."
+    ],
     "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
-    "weakest_assumption": "The fallback simulation does not know the real market; live research or interviews must replace generic assumptions.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
     "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
     "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
-    "decision_pressure": "GO_WITH_CONSTRAINTS"
+    "decision_pressure": "Conditional Go"
   },
   "recommended_interventions": [
     "Narrow the customer segment until the end user and buyer are obvious.",
@@ -159,6 +145,5 @@
     "Prototype the outcome manually before building a scalable product.",
     "Track what data or workflow insight compounds with each use."
   ],
-  "source": "deterministic_fallback",
-  "llm_error": "No module named 'jiter.jiter'"
+  "source": "parallel_simulation"
 }

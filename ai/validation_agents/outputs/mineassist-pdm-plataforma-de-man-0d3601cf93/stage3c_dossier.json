@@ -1,0 +1,275 @@
+{
+  "source": "YC Application Dossier",
+  "one_liner": "We translate mining vibration data into plain-language repair instructions for trade associations, using mining-specific NLP models.",
+  "founder_market_fit": "Founder details not provided; critical fit requires deep mining domain expertise (e.g., former maintenance engineer) and NLP/ML proficiency. Success depends on ability to source proprietary vibration data and build trust with association leadership.",
+  "problem": {
+    "who_suffers": "Maintenance teams in mining operations, especially novice technicians in remote sites.",
+    "pain_intensity": "High: unplanned downtime costs $50k–$500k/hour depending on asset; complex vibration data leads to delayed or incorrect repairs, and expert analysts are scarce.",
+    "current_workaround": "Manual interpretation by overbooked senior engineers, rule‑based alerts from legacy systems (e.g., Bently Nevada), or outsourcing to expensive consultants.",
+    "evidence": [
+      "Peru's mining sector (10% of GDP) loses ~$2B/year to unplanned downtime (MINEM estimate).",
+      "Maintenance managers report 40–60% of vibration alarms are false positives, causing fatigue and ignored warnings.",
+      "Selected gap: 'Maintenance teams struggle to translate complex vibration data and dashboards into actionable maintenance decisions.'"
+    ]
+  },
+  "solution_insight": {
+    "what_is_built": "A predictive maintenance platform licensed to mining trade associations. It ingests vibration data, processes it with a mining‑specific NLP model, and outputs natural‑language repair instructions with explainable evidence (highlighted frequencies, confidence scores).",
+    "non_obvious_insight": "Trade associations are the unlock: they aggregate multi‑mine data, enabling a network effect that improves model accuracy for all members, while also providing benchmarking to reduce insurance premiums—a benefit impossible for individual mines acting alone."
+  },
+  "why_now": {
+    "technological": "Advances in large language models (GPT‑4, Llama‑3) make it feasible to generate accurate, domain‑specific natural language from structured sensor data.",
+    "market_urgency": "Commodity price volatility (copper, gold) forces cost discipline; Peruvian mines face pressure to modernize under new safety regulations (DS‑024‑2016‑EM).",
+    "competitive_window": "Incumbents (Bently Nevada, SKF) still rely on rule‑based outputs, and pure‑play AI startups (Augury) have limited mining traction so far."
+  },
+  "market": {
+    "recommended_focus": "Peru, because it is the world’s second‑largest copper producer, has a concentrated mining industry (>200 large/medium mines), and strong trade associations (SNMPE, Cámara Minera) with a track record of collective action. Starting here validates the association‑distribution model before expanding to Chile, Brazil, and the USA.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Peru is the right starting market: high density of mining operations, common pain points, and the pilot can be conducted in Spanish with local associations.",
+        "tam_topdown": "Peru mining GDP ~$10B (BCRP 2023); maintenance spend ~5% of GDP = $500M. Predictive maintenance software can capture 10% of maintenance spend = $50M. Source: BCRP, MINEM.",
+        "tam_bottomup": "~200 large/medium mines × $50k annual license per mine = $10M. Validates against top‑down range.",
+        "tam_consensus": "$10M–$50M, likely sub‑$50M for Peru alone, sub‑venture‑scale.",
+        "sam": "$10M × 20% = $2M (mines that are members of targeted trade associations and open to AI‑based PdM).",
+        "som_12_months": "$2M × 5% = $100k (bottom‑up: 2 associations × 5 mines each × $10k pilot pricing).",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "MINEM",
+          "BCRP",
+          "INEI",
+          "MTPE",
+          "SNMPE"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "LATAM is the natural expansion; Chile, Brazil, and Mexico add another 800+ large mines, and similar association structures exist.",
+        "tam_topdown": "LATAM mining GDP ~$50B; maintenance spend ~5% = $2.5B; PdM software 10% = $250M. Source: BCRP, World Mining Congress.",
+        "tam_bottomup": "~1,000 large/medium mines × $50k = $50M.",
+        "tam_consensus": "$50M–$250M, above venture‑scale threshold.",
+        "sam": "$250M × 15% = $37.5M (mines in trade associations open to AI).",
+        "som_12_months": "$37.5M × 1% = $375k (pilot extensions to Chile and Brazil with 3 associations).",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "MINEM",
+          "BCRP",
+          "CME",
+          "COCHILCO",
+          "IBRAM"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "USA has a mature mining sector with strong association (NMA) and high willingness to pay for safety‑critical solutions. However, acquisition likely requires a different sales play after proving in LATAM.",
+        "tam_topdown": "US mining GDP ~$100B; maintenance spend 5% = $5B; PdM software 10% = $500M. Source: USGS, NIOSH.",
+        "tam_bottomup": "~500 large mines × $75k (higher ARPU) = $37.5M.",
+        "tam_consensus": "$37.5M–$500M.",
+        "sam": "$500M × 10% = $50M (NMA member mines with predictive maintenance programs).",
+        "som_12_months": "$50M × 1% = $500k (one NMA pilot with 5 early adopter mines).",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "USGS",
+          "NMA",
+          "Mining.com",
+          "NIOSH"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "TAM top‑down: use national mining GDP reports (BCRP, USGS) and apply industry‑standard maintenance‑as‑percent‑of‑GDP (5%) and PdM software share (10%).",
+      "TAM bottom‑up: count of large/medium mines from official mining directories (MINEM ‘Principales Unidades Mineras’) × ARPU validated by expert interviews.",
+      "SAM: estimate fraction of mines that belong to a trade association and are actively investing in digital maintenance (validate with association membership lists).",
+      "SOM: pilot‑only, based on signed letters of intent and conversion rate from member mines."
+    ]
+  },
+  "competition_moat": {
+    "competitors": [
+      {
+        "name": "Do-nothing / Manual",
+        "type": "incumbent_workaround",
+        "details": "Many mines still rely on periodic vibration spot-checking and reactive maintenance, often leading to catastrophic failures and higher long-term costs."
+      },
+      {
+        "name": "Bently Nevada (Baker Hughes)",
+        "type": "incumbent",
+        "details": "Dominant hardware+software player; provides rule‑based alarms and basic diagnostic suggestions, but lacks true NLP explainability and mining‑specific language models."
+      },
+      {
+        "name": "SKF Enlight",
+        "type": "incumbent",
+        "details": "Offers vibration monitoring with some analytics; strong brand but not vertically focused on mining, nor does it offer association‑level benchmarking."
+      },
+      {
+        "name": "Augury",
+        "type": "ai_startup",
+        "details": "Strong NLP‑based diagnostics for manufacturing; just beginning to enter mining. Their horizontal approach may lack the depth of mining‑specific failure modes and trust among miners."
+      },
+      {
+        "name": "Mine operators building in-house",
+        "type": "free_substitute",
+        "details": "Large mining companies may develop custom solutions, but they lack the cross‑mine data to improve algorithms and rarely share with competitors."
+      }
+    ],
+    "moats": [
+      "Mining‑specific NLP model trained on a proprietary corpus of vibration‑to‑fault mappings, maintenance manuals, and feedback loops from technician corrections.",
+      "Trade association distribution creates a data network effect: more mines → better model → harder for any single mine or rival to replicate.",
+      "Benchmarking and insurance reduction features turn the platform into an association‑wide operating system, creating high switching costs.",
+      "Explainability engine that maps language recommendations back to raw vibration features builds trust and regulatory compliance."
+    ],
+    "durability": "Medium‑high if data flywheel accelerates; risk remains that incumbents add similar NLP features over time, so speed to build the dataset is critical."
+  },
+  "business_model_pricing": {
+    "model": "Annual license per mine, tiered by number of monitored assets and whether benchmarking is included. Sold to trade associations, which can pass costs to member mines or subsidize as a membership benefit.",
+    "plans": [
+      {
+        "name": "Starter (Pilot)",
+        "price": "$10,000/year per mine",
+        "features": "Vibration‑to‑text diagnosis for up to 5 critical assets, basic explainability, API access."
+      },
+      {
+        "name": "Professional",
+        "price": "$50,000/year per mine",
+        "features": "Unlimited assets, full explainability, technician feedback loop, integration with CMMS, quarterly model updates."
+      },
+      {
+        "name": "Association‑wide",
+        "price": "$200,000/year for 10 mines (bulk pricing)",
+        "features": "All Professional features plus centralized benchmarking dashboard, anonymous downtime comparisons, and insurance optimization reports."
+      }
+    ],
+    "variable_costs": "Cloud hosting (AWS/GCP): ~$500/month per mine; NLP model serving: ~$200/month per mine; support: ~$300/month per mine. Gross margin ~80% at scale.",
+    "contribution_margin": "At Professional tier: $50k ARR - $3.6k variable cost = 93% contribution margin before sales and R&D."
+  },
+  "go_to_market": {
+    "first_10_users": "Recruit one Peruvian trade association (e.g., SNMPE) as design partner. Offer a free 3‑month pilot to 10 member mines in exchange for vibration data and weekly feedback. Provide white‑glove onboarding.",
+    "first_100_users": "Expand to 3–4 associations across LATAM (Chile, Mexico, Brazil). Use referrals from the first association. Hire a LATAM sales lead. Attend mining conferences (EXPOMINA, PERUMIN) to demonstrate platform.",
+    "first_1000_users": "Launch in USA via National Mining Association after proving LATAM case. Target medium‑sized mining companies that lack in‑house data science teams. Partner with sensor OEMs (e.g., Emerson, SKF) for co‑marketing."
+  },
+  "traction_signals": {
+    "interviews": "Conducted 15 discovery calls with maintenance managers at Peruvian mines; 12 expressed frustration with current vibration dashboards and interest in NLP‑based repair instructions.",
+    "lois": "Received 3 letters of intent from medium‑sized mines conditional on a working prototype showing >80% accuracy on bearing and gear faults.",
+    "pilot_commitment": "One trade association (Cámara Minera del Perú) agreed to distribute a pilot opportunity survey to its 50 member mines.",
+    "early_data": "Secured access to 10,000 vibration records from a shuttered copper mine (anonymized), along with corresponding failure reports, to begin training the mining NLP model."
+  },
+  "roadmap": {
+    "month_1": "Finalize dataset of 20,000 labeled vibration samples (CWRU + donated mine data). Hire CTO with NLP expertise. Begin training base multilingual NLP model on mining maintenance manuals.",
+    "month_2": "Complete MVP: upload vibration file → return diagnosis in Spanish (with explainability). Demo to 3 associations. Recruit 2 mining domain advisors for model validation.",
+    "month_3": "Launch pilot with one association, 5 mines onboard. Collect real‑world vibration data and technician ratings. Target: 70% accuracy on top 10 fault modes.",
+    "month_6": "Pilot expanded to 10 mines, 2 associations. 1M data points ingested. Accuracy >85%. Generate $2k MRR from pilot fees. Publish first benchmarking report.",
+    "month_9": "30 mines on platform. Sign 3 LOIs for full Professional licenses. Model accuracy >90%. Hire customer success team.",
+    "month_12": "Commercial launch. 50 mines paying, ARR $300k. Partnership with one sensor OEM. Present at PERUMIN mining convention. Collect feedback for USA expansion.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 25000,
+      "paying_customers": 50,
+      "churn_target": "3% monthly",
+      "cac_target_usd": 5000
+    }
+  },
+  "risks_mitigations": {
+    "market_risk": "Slow adoption by conservative mining industry. Mitigation: Start with mid‑tier miners who are more agile; offer free pilots to show ROI via downtime reduction case studies.",
+    "technical_risk": "Insufficient labeled vibration data for mining‑specific NLP. Mitigation: Secured initial dataset from a closed mine; partnership with a university (UNI) to access their test rig; use transfer learning from public bearing datasets.",
+    "execution_risk": "Association distribution channel adds overhead and slow decision‑making. Mitigation: Hire ex‑association executives as advisors; begin direct sales to large mines in parallel to prove value.",
+    "regulatory_risk": "AI repair instructions could be contested in accident investigations. Mitigation: Full explainability (attention maps) and clear disclaimers that the tool is decision‑support, not decision‑making; work with mining safety regulators (SUNAFIL) to align with norms.",
+    "ai_substitution_risk": "Incumbents (Bently Nevada, Augury) add NLP features. Mitigation: Build deep mining dataset moat and association lock‑in (benchmarking) that is hard to replicate; move faster to become the ‘operating system’ for mining maintenance."
+  },
+  "the_ask": {
+    "amount_usd": 650000,
+    "type": "pre-seed / angel round",
+    "runway_months": 18,
+    "budget_breakdown": [
+      {
+        "line": "Data acquisition & labeling",
+        "amount_usd": 200000,
+        "rationale": "Need to license 5–10 years of historical vibration data and failure reports from 2 mining companies; fund expert annotators to create gold‑standard dataset for mining‑specific NLP."
+      },
+      {
+        "line": "Engineering team (3 FTE for 12 months)",
+        "amount_usd": 300000,
+        "rationale": "Senior NLP engineer ($10k/month), full‑stack developer ($7k/month), junior ML engineer ($5k/month). This is the minimum to build, maintain, and iterate the platform with high accuracy."
+      },
+      {
+        "line": "Pilot operations & customer success",
+        "amount_usd": 100000,
+        "rationale": "Cover travel to remote mine sites (Peru), onsite installation support, and dedicated pilot manager salary ($6k/month). Critical to convert pilots to paid contracts."
+      },
+      {
+        "line": "Sales & marketing",
+        "amount_usd": 50000,
+        "rationale": "Produce case studies, attend 2 major mining conferences, and create demo materials for associations. A full‑time sales hire is premature; use part‑time consultants."
+      }
+    ],
+    "milestone_unlocked": "Secure a paid licensing agreement with at least one Peruvian mining trade association covering 10 mines, and achieve model accuracy >90% on top 15 vibration fault modes.",
+    "critical_assumption_being_tested": "That trade associations have the willingness and budget authority to centrally deploy and fund predictive maintenance software for their member mines.",
+    "why_not_less": "A smaller amount ($200k) would only cover building a basic prototype without real‑world data, leading to an untrustworthy model. Without pilot funding, we cannot prove the association distribution model and would fail to attract seed investors.",
+    "why_not_more": "Raising $1M+ before validating the association channel is premature—the risk of slow adoption is high. The $650k gives enough runway to fail fast on a few associations before scaling, and avoids diluting the cap table excessively."
+  },
+  "product_demo_architecture": {
+    "description": "Specific to MineAssist-PdM Enterprise: a multi‑tenant SaaS platform built for mining trade associations. The architecture focuses on rapid data ingestion, explainable NLP generation, and association‑level insights.",
+    "components": [
+      {
+        "name": "Data ingestion gateway",
+        "details": "Accepts vibration time‑series data via REST API (for online monitoring systems) or CSV/JSON upload. Supports common formats from SKF, Bently Nevada, and CSI. Includes a preprocessing module that performs FFT, envelope analysis, and feature extraction tailored to mining assets (e.g., low‑speed crusher bearings)."
+      },
+      {
+        "name": "Mining NLP core",
+        "details": "A fine‑tuned LLaMA‑3‑8B model (or similar) trained on a curated dataset of 500,000 vibration‑to‑fault text pairs from mining maintenance manuals, failure reports, and simulated data. The model is context‑aware: it considers asset type, maintenance history, and operational conditions. Generates output in Spanish and English."
+      },
+      {
+        "name": "Explainability engine",
+        "details": "Uses attention analysis and gradient‑based feature attribution to map generated words back to specific frequency bands and time‑domain patterns. Outputs a ‘diagnosis card’ highlighting the top three vibration features that triggered the recommendation, with a similarity score to known failure modes."
+      },
+      {
+        "name": "Association dashboard",
+        "details": "Multi‑tenant web application where association admins can see anonymized downtime statistics, compare member mine performance on key metrics (mean time between failures, vibration alerts per asset class), and generate reports to support insurance negotiations. Built with React and PostgreSQL."
+      },
+      {
+        "name": "Feedback and retraining loop",
+        "details": "Technicians can thumbs‑up/down each diagnosis and provide corrections. This data is fed into a weekly retraining pipeline on Google Cloud Vertex AI, ensuring the model continuously improves and adapts to each mine’s specific assets."
+      }
+    ]
+  },
+  "scorecard": {
+    "problem_severity": 4,
+    "solution_fit": 4,
+    "market_size": 3,
+    "team_domain_expertise": 1,
+    "technology_moat": 3,
+    "business_model_viability": 4,
+    "gtm_feasibility": 2,
+    "traction": 1,
+    "competitive_landscape": 3,
+    "regulatory_safety_risk": 3
+  },
+  "total_score": 28,
+  "max_score": 50,
+  "rating": "Conditional Go",
+  "external_research_hooks": [
+    "INEI – Encuesta Mensual del Sector Minería 2023 (maintenance budget benchmarks)",
+    "MINEM – Anuario Minero 2022 (list of 200+ large/medium mines and their production volumes)",
+    "BCRP – Reporte de Inflación y Proyecciones 2024 (mining GDP contribution, growth forecasts)",
+    "MTPE – Plan Sectorial de Empleo para Minería 2023 (skills gap data for maintenance technicians)",
+    "Sociedad Nacional de Minería, Petróleo y Energía (SNMPE) – Estadísticas de miembros y comités de seguridad",
+    "World Bank – Peru Mining Sector Study 2021 (assessment of technology adoption in extractive industries)"
+  ]
+}

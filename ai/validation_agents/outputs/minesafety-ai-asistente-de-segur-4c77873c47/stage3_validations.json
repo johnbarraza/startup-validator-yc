@@ -1,0 +1,643 @@
+[
+  {
+    "idea": "MineSafety AI gives Latin American mining contractors an offline-first mobile tool that lets field supervisors speak their safety observations in Spanish or Portuguese and instantly turns voice into structured digital reports. Using AI trained on mining-specific terms and local dialects, it eliminates the daily grind of manual typing and note transcription, so hazards get documented and escalated before they cause incidents.",
+    "selected_gap": {
+      "id": "gap-01",
+      "title": "AI-Powered Voice-to-Text for Mining Field Reports in Spanish/Portuguese",
+      "pain": "Field workers waste hours writing reports manually; delays in hazard communication lead to incidents. Existing general transcription tools fail on mining jargon and accents.",
+      "why_now": "Advances in multilingual NLP and edge AI allow on-device processing; growing demand for hands-free reporting in hazardous environments.",
+      "evidence_needed": "5 pilot users transcribing actual field reports, accuracy >90% on mining terms, reduction in report creation time.",
+      "priority": "Critical",
+      "risk": "Competitors like Voxel may add voice; technical challenge in noisy mining environments."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No specific founder background provided; assumed average domain knowledge."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "Latin American mining safety software market is sizable but not massive; TAM likely <$1B."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Manual reporting causes real safety incidents; pain is high and recognized."
+      },
+      {
+        "criterion": "Competition",
+        "score": 5,
+        "note": "General transcription tools exist but lack mining specialization; competitors could add features."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unclear if founder has deep personal experience; assumed moderate."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Edge AI and multilingual NLP advances make on-device voice processing feasible now."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Voice-to-text in healthcare is precedent; mining is analogous but less proven."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "No evidence of long-term commitment; assumed standard."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software product can scale to multiple mines and languages; network effects possible."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Vertical AI for safety in mining is a focused, underserved niche."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is specific and actionable; founder should start validating quickly."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Presumably focused on this idea; no multiple projects mentioned."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Voice input eliminates manual typing; deeply integrates into reporting workflow."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "On-device processing for offline use leverages edge AI capabilities."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Could position as reducing incident rates rather than just transcription software."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Ambition to digitize safety workflow; could expand to full safety management."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "Not explicitly stated; would require intentional learning loops."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Mining safety is high-stakes; needed trust and domain expertise create moat."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "Reporting process is core; product should embed into daily routines."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Need to validate with real pilots before scaling; risk of fake demand."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 6,
+        "note": "Potential pricing per report or per mine; clarity needed."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "Offline-first reduces cloud costs; model training is fixed cost."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Building native AI tool from ground up; not retrofitting existing system."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Requires mining domain expertise + AI + deployment; team must cover all."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No strong founder background provided; without domain depth, team is average."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "TAM likely under $1B but growing; timing is right with AI advances."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Defensible moat from specialized vocab and offline; but competitors can catch up."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of customers, pilots, or revenue; early stage risk."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "Potential SaaS with high margins; LTV:CAC unclear; pricing model undefined."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "Incumbents like Voxel may add features; manual methods are default; differentiation needed."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No data on burn rate or runway; typical pre-seed risk."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Technical risk in noisy environments; adoption resistance in low-trust industry."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.78,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": false,
+    "decision": "Given low composite score (4.78) primarily due to lack of traction and team evidence, the idea is declined at this stage. Founders should first validate the problem with 5 pilots and collect usage data.",
+    "next_experiments": [
+      "Recruit 5 field supervisors from Latin American mines to test voice transcription in real conditions.",
+      "Measure accuracy >90% on mining terms and 50% reduction in report creation time.",
+      "Gather video testimonials of pain points and efficiency gains."
+    ],
+    "kill_criteria": [
+      "No pilot user willing to commit after 3 months of outreach.",
+      "Voice accuracy below 70% in noisy mine environments after optimization.",
+      "Competitors launch similar product with better traction within 6 months."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "gap-01",
+    "_iteration_one_liner": "We turn voice into structured safety reports for Latin American mining contractors, using AI that understands Spanish/Portuguese mining field language."
+  },
+  {
+    "idea": "MineSafety Enterprise is an AI-powered safety intelligence platform for corporate HSE departments of large mining companies. It enables workers to verbally report hazards in Spanish/Portuguese via a mobile app, using AI to transcribe, classify, and route issues, and provides a dashboard for risk analysis.",
+    "selected_gap": "gap-01: AI-Powered Voice-to-Text for Mining Field Reports in Spanish/Portuguese",
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "Founder background not provided, but domain focus suggests moderate alignment."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "Mining safety software TAM is large ($2B+ globally), Latin America segment viable."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Delays in hazard reporting cause accidents; workers waste time on manual reports."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Existing safety software lacks voice-specific mining jargon support in Spanish/Portuguese."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Not personally compelling to evaluator, but plausible for domain experts."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "NLP advances and edge AI enable accurate voice transcription in noisy environments."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Voice-to-text success in construction and healthcare; mining similar but niche."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Mining sales cycles are long, but safety is recurring need."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 8,
+        "note": "SaaS model can scale across mines and companies; network effects in data."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Safety tech is growing, but mining is underserved; vertical focus is good."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "Idea is specific and actionable; can iterate with pilots."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 8,
+        "note": "Focusing on one vertical avoids distraction."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Addresses field reporting workflow and integrates with existing HSE processes."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "Voice-to-text with domain-specific tuning improves per model advances."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 6,
+        "note": "Could sell 'reduced incident rate' but outcome attribution is complex."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 8,
+        "note": "Aim to be central safety platform for large mining companies."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "Not explicitly addressed; should plan to learn from pilot failures."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 6,
+        "note": "Mining safety is high-expertise, trust is earned through domain credibility."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "Workflow digitization itself adds value beyond AI."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Need to validate with real mines before building full product."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Could price per worker per month or per site; aligns with usage."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "Voice processing costs need optimization; on-device processing helps."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Platform digitizes from scratch, not adding AI to existing manual process."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Domain expertise in mining safety needed; unclear if team has it."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No information on founder background; critical gap for mining domain."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "Mining safety TAM >$1B, growing with regulatory pressure in LatAm."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 8,
+        "weighted": 1.2,
+        "rationale": "Defensible through domain-specific voice models and workflow data moat."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of pilots, users, or LOIs; pure concept."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "SaaS with potential high margins, but pricing model unvalidated."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Incumbents like Cority exist but lack voice and LatAm focus; risk from Voxel entering."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial data; early stage assumes burn rate unknown."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Technical risk in noisy environments; adoption risk due to long sales cycles."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.23,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Sign 2 paid pilot mines within 6 months; recruit a co-founder with mining HSE domain expertise; achieve >90% transcription accuracy on mining terminology in field tests."
+    },
+    "go_no_go": "CONDITIONAL_GO",
+    "decision": "Proceed with customer discovery and pilot development, but validate demand before building full platform.",
+    "next_experiments": [
+      "Interview 5 HSE managers at Latin American mining companies to assess priority and willingness to pay.",
+      "Collect sample field reports in Spanish/Portuguese to test transcription accuracy against existing tools.",
+      "Run a Wizard of Oz pilot with one mine using human transcriptions to validate workflow improvement."
+    ],
+    "kill_criteria": [
+      "After 20 interviews, less than 30% rank this as a top-3 priority for safety improvement.",
+      "Transcription accuracy on mining-specific terms falls below 85% in field recordings.",
+      "No mine agrees to a paid trial or LOI within 3 months of first contact."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We enable mining companies to turn every field safety observation into an actionable risk insight using AI voice transcription in Spanish and Portuguese, preventing incidents before they happen."
+  },
+  {
+    "idea": "A mobile tool for Spanish-speaking mining safety supervisors that captures voice field reports, transcribes them with AI trained on mining and safety terminology, and auto-generates completed checklists and risk flags—all while working offline in the depths of a mine.",
+    "selected_gap": {
+      "id": "gap-01",
+      "title": "AI-Powered Voice-to-Text for Mining Field Reports in Spanish/Portuguese",
+      "pain": "Field workers waste hours writing reports manually; delays in hazard communication lead to incidents. Existing general transcription tools fail on mining jargon and accents.",
+      "why_now": "Advances in multilingual NLP and edge AI allow on-device processing; growing demand for hands-free reporting in hazardous environments.",
+      "evidence_needed": "5 pilot users transcribing actual field reports, accuracy >90% on mining terms, reduction in report creation time.",
+      "priority": "Critical",
+      "risk": "Competitors like Voxel may add voice; technical challenge in noisy mining environments."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "Founder background not provided; assumed moderate domain exposure."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "Mining safety software is a sizable niche; Spanish-speaking segment adds specificity but still material."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Manual reporting is painful and delays hazard communication; high safety impact."
+      },
+      {
+        "criterion": "Competition",
+        "score": 5,
+        "note": "General transcription tools exist but don't handle mining jargon; specialized competitors like Voxel may enter."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "No evidence of founder's personal connection to mining safety."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Edge AI and multilingual NLP have advanced enough for on-device processing in noisy environments."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 7,
+        "note": "Voice-to-text works well in healthcare and legal; mining is analogous but more challenging."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "Founder commitment unknown; but idea requires long-term domain immersion."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software product can scale globally; offline capability reduces infrastructure barriers."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Mining safety is underserved, high-value, and ripe for AI disruption."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is well-defined and ready for customer validation."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focus on one idea is implied; no distraction from other projects mentioned."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 9,
+        "note": "Captures pain of manual reporting and integrates into inspection rounds."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 9,
+        "note": "On-device AI for offline operation is cutting-edge and domain-specific."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Can sell 'faster hazard communication' but needs to articulate clear ROI."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 8,
+        "note": "Aims to eliminate manual transcription entirely, not just incremental improvement."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No explicit plan for learning from failures; needs to be built into process."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Mining safety is high-expertise, low-trust; incumbents are slow to change."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "The reporting workflow itself becomes the product, but needs to be seamless."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Risk of building for a few users without broader validation."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Could price per report or per supervisor; aligns with usage."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 8,
+        "note": "On-device processing reduces cloud costs; COGS is low for software."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 9,
+        "note": "Native mobile solution, not a patch on existing systems."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 9,
+        "note": "Combines mining domain knowledge, specialized AI, and offline operations."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No information on founder background; average score due to uncertainty."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "Global mining safety market is $1B+; Spanish-speaking segment is a meaningful subset with high need."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 8,
+        "weighted": 1.2,
+        "rationale": "Offline AI with mining-specific vocabulary creates defensible moat; voice input is superior for dirty/hands-free environment."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No pilots or users yet; evidence needed per gap specification."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "Subscription per supervisor or per report; margins likely >60% but LTV:CAC not proven."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "General tools (Voxel, dictation) exist but don't specialize; funded incumbents could add voice quickly."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "Burn rate unknown; pre-revenue startup assumed, need to ensure 18+ month runway."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 6,
+        "weighted": 0.12,
+        "rationale": "Technical risk: noise in mines, accuracy; market risk: adoption in conservative industry."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.67,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": [
+        "Secure 5 pilot users transcribing real field reports with >90% accuracy on mining terms.",
+        "Demonstrate reduction in report creation time by at least 50% in pilot.",
+        "Obtain letters of intent or paid pilots from at least 2 mining companies within 6 months."
+      ]
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Proceed with caution. Idea has strong problem acuity and technical feasibility, but lacks founder-team evidence and traction. Conditional pass means accelerate validation before full commitment.",
+    "next_experiments": [
+      "Conduct 20 customer discovery interviews with mining safety supervisors in Peru/Chile to validate pain and willingness to pay.",
+      "Build a minimal prototype using off-the-shelf voice-to-text API and test with recorded mining reports to measure accuracy on jargon.",
+      "Run a 2-week field trial with one supervisor using a basic voice memo + manual transcription to estimate time savings."
+    ],
+    "kill_criteria": [
+      "Accuracy on mining terminology falls below 80% in noisy environment after custom tuning.",
+      "Less than 50% of interviewed supervisors rate the problem as 'top 3 priority'.",
+      "No mining company agrees to a pilot within 3 months of outreach."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We provide offline voice-to-structured-report AI for Spanish-speaking mine safety inspectors, turning spoken observations into formatted checklists instantly."
+  }
+]

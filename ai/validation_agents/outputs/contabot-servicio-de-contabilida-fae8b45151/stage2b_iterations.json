@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "ContaBot es un servicio de contabilidad tributaria automatizada para microempresas peruanas. Se conecta directamente a la API de SUNAT para obtener todas las facturas electrónicas de la empresa, categoriza automáticamente los gastos según normativa peruana, y elabora y presenta la declaración mensual del PDT 621 sin intervención manual, eliminando el estrés del cumplimiento y el riesgo de multas. A un precio fijo de S/80 al mes, resuelve el mayor dolor de los pequeños negocios que no pueden pagar S/200-500 por un contador tradicional.",
+      "one_liner": "ContaBot automatiza todo el proceso de declaración mensual ante SUNAT para dueños de microempresas, tomando las facturas desde la API oficial y presentando el PDT sin que toquen un papel.",
+      "target_customer": "Dueño de una bodega o peluquería en Lima que factura electrónicamente por obligación pero que odia lidiar con trámites tributarios.",
+      "core_problem": "Cada mes, antes del vencimiento del PDT, vive con ansiedad: no sabe cómo llenar el formulario, intenta seguir tutoriales confusos o paga a un contador que a veces olvida el plazo. Si no declara a tiempo, arriesga multas de hasta S/1,500 y posible cierre fiscal de su negocio. El tiempo perdido y el miedo constante afectan su operación diaria.",
+      "solution_hook": "El único servicio que no solo lee las facturas, sino que genera y presenta el PDT automáticamente conectándose a SUNAT, sin requerir que el dueño entienda contabilidad ni mueva un dedo cada mes.",
+      "why_this_angle": "Al concentrarse en el acto concreto de presentar el PDT (el peak del dolor mensual) y automatizarlo al 100%, la propuesta se vuelve ultra-específica, tangible y fácil de vender: 'olvídate de la SUNAT'. Se diferencia de los software que dejan la presentación como último paso manual.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 8,
+        "founder_feasibility": 10,
+        "total": 27
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "ContaBot pivots to an institutional model, offering its AI-powered accounting engine to Peruvian government agencies (e.g., SUNAT, Ministry of Production) and large trade associations. Instead of selling directly to microenterprises, ContaBot provides a white-label compliance-as-a-service platform that these organizations can deploy to thousands of micro and small businesses. The engine automatically ingests electronic invoices via SUNAT APIs, categorizes expenses per local tax rules, generates and files monthly PDT returns, and proactively flags audit risks. The buyer pays a bulk licensing or per-entity fee, eliminating end-user price sensitivity while aligning with formalization mandates.",
+      "one_liner": "We provide an AI-driven tax compliance platform for Peruvian institutions to automate accounting and filing for microenterprises at scale.",
+      "target_customer": "Director de Formalización Empresarial at the Ministry of Production of Peru, or Gerente de Servicios at the Lima Chamber of Commerce.",
+      "core_problem": "Millions of microenterprises in Peru operate informally or face constant fines and accountant fees, while government and trade groups lack a scalable, low-cost tool to enforce compliance and bring businesses into the formal economy. This leads to lost tax revenue, stunted economic growth, and political pressure on institutions to act.",
+      "solution_hook": "ContaBot integrates directly with SUNAT’s e-invoicing ecosystem to fully automate categorization, return generation, and filing with zero manual intervention, enabling institutional buyers to offer a turnkey, proactive compliance service at an order-of-magnitude lower cost than human accountants or legacy software.",
+      "why_this_angle": "Institutional buyers have budget, urgency, and a mandate to solve informality, enabling multi-year contracts and mass adoption without the high CAC of direct-to-microenterprise sales. A single deal can onboard thousands of users, driving revenue while fulfilling a national policy need, with software-like margins on the service.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 9,
+        "founder_feasibility": 6,
+        "total": 24
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "ContaBot se enfoca en bodegas limeñas que emiten más de 50 facturas electrónicas al mes. Estos negocios facturan montos pequeños (S/50k-100k/año), pero el propietario no tiene tiempo ni conocimiento contable. Actualmente pagan S/200-300 a un contador freelance que suele fallar en las presentaciones, resultando en multas de S/300-500. ContaBot automatiza completamente el proceso: extrae facturas del portal SUNAT, categoriza con IA entrenada en reglas tributarias peruanas, genera el PDT 621 y lo envía, sin intervención del usuario. El dueño solo paga S/79/mes y recibe confirmación de todo en regla. Validamos en 30 días ofreciendo a 10 bodegas una prueba gratuita y midiendo su disposición a pagar al final del mes.",
+      "one_liner": "Servicio contable 100% automático para bodegas que necesitan cumplir con SUNAT sin esfuerzo, por S/79/mes.",
+      "target_customer": "Dueño de bodega en Lima (p.ej., María de San Juan de Lurigancho) que factura electrónicamente más de 50 comprobantes al mes, con ventas anuales entre S/50k y S/100k, y ya ha recibido al menos una multa tributaria.",
+      "core_problem": "Cada mes, el bodeguero debe recopilar facturas de compra y venta, calcular IGV y renta, y presentar el PDT 621. Su contador actual cobra S/250 pero a menudo incumple plazos o comete errores, generando multas de S/300-500 que afectan su flujo de caja. El dueño no tiene tiempo de aprender contabilidad ni dinero para un mejor servicio; el incumplimiento le causa estrés y riesgo de fiscalización.",
+      "solution_hook": "Lectura automática de facturas desde SUNAT, categorización inteligente con reglas fiscales peruanas, y envío directo del PDT sin que el cliente tenga que mover un dedo — un servicio cerrado, no un software que requiera habilidad contable.",
+      "why_this_angle": "Al aterrizar en bodegas con facturación electrónica y multas recientes, se ataca el dolor más agudo con un segmento homogéneo fácil de reclutar y referenciar. Esto permite validar velocidad de pago en 30 días y ajustar la propuesta antes de expandir a otros giros.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 5,
+        "founder_feasibility": 10,
+        "total": 24
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "ContaBot automatiza todo el proceso de declaración mensual ante SUNAT para dueños de microempresas, tomando las facturas desde la API oficial y presentando el PDT sin que toquen un papel.",
+  "source": "parallel_iteration"
+}

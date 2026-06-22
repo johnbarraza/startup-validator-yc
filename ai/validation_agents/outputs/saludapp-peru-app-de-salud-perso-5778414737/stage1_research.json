@@ -1,0 +1,165 @@
+{
+  "idea": "SaludApp Peru: app de salud personal donde el paciente registra medicamentos vía OCR de boleta, recibe recordatorios por WhatsApp, ve mapa de farmacias con precios crowdsourced, y obtiene score de riesgo crónico. Arquitectura modular, comenzando con FINDRISC para diabetes T2.",
+  "market": "Salud digital en Perú, adherencia a medicamentos, descubrimiento de farmacias, prevención de enfermedades crónicas. TAM: 33M peruanos, SAM: ~15M con smartphone y alguna condición crónica o medicación recurrente, SOM 12 meses: 5,000 usuarios activos entre afiliados de EPS pilotos (Rimac, Pacífico) y usuarios orgánicos.",
+  "solutions": [
+    {
+      "id": "sol_1",
+      "name": "MiFarma App",
+      "category": "Farmacia/Cadena",
+      "observed_positioning": "App de la cadena de farmacias más grande del Perú; ofrece compra de medicamentos, precios oficiales, entregas, y posible programa de fidelidad. No tiene OCR, recordatorios por WhatsApp, ni score de riesgo."
+    },
+    {
+      "id": "sol_2",
+      "name": "Inkafarma App",
+      "category": "Farmacia/Cadena",
+      "observed_positioning": "Similar a MiFarma, app de la segunda cadena más grande; promociones y geolocalización de tiendas. Sin funcionalidades de adherencia o crowdsourcing de precios de otras cadenas."
+    },
+    {
+      "id": "sol_3",
+      "name": "Doctoralia Perú",
+      "category": "Telemedicina/Agendamiento",
+      "observed_positioning": "Plataforma líder en reserva de citas médicas y teleconsultas. No incluye gestión de medicamentos, precios de farmacias ni scores de riesgo."
+    },
+    {
+      "id": "sol_4",
+      "name": "Smart Doctor",
+      "category": "Telemedicina",
+      "observed_positioning": "App peruana de teleconsultas y recetas digitales. Enfoque en conectar pacientes con doctores, no en adherencia continua ni prevención."
+    },
+    {
+      "id": "sol_5",
+      "name": "Rimac Seguros App",
+      "category": "Seguros/App de afiliado",
+      "observed_positioning": "App para asegurados de Rimac EPS; acceso a citas, historial, y algunos recordatorios. Potencialmente podría incorporar adherencia, pero no tiene OCR, mapa de precios, ni riesgo crónico."
+    },
+    {
+      "id": "sol_6",
+      "name": "Pacífico Seguros App",
+      "category": "Seguros/App de afiliado",
+      "observed_positioning": "Similar a Rimac, enfocada en servicios administrativos. Sin datos longitudinales de medicamentos del paciente fuera del sistema de la EPS."
+    },
+    {
+      "id": "sol_7",
+      "name": "Medisafe",
+      "category": "Gestión de medicamentos (global)",
+      "observed_positioning": "App líder mundial en recordatorios de pastillas, con posible escaneo de etiquetas (no específico para boletas peruanas). No tiene mapa de farmacias con precios locales ni integración con WhatsApp."
+    },
+    {
+      "id": "sol_8",
+      "name": "MyTherapy",
+      "category": "Gestión de medicamentos (global)",
+      "observed_positioning": "App de recordatorio de medicamentos y seguimiento de salud, popular en Europa. Sin foco en Perú, ni farmacias locales, ni score de riesgo validado regionalmente."
+    },
+    {
+      "id": "sol_9",
+      "name": "CareClinic",
+      "category": "Gestión de condiciones crónicas",
+      "observed_positioning": "App para seguimiento de múltiples condiciones, diario de síntomas, efectos secundarios. Enfocada en el paciente individual, sin componente B2B para EPS ni farmacias."
+    },
+    {
+      "id": "sol_10",
+      "name": "Health2Sync",
+      "category": "Manejo de diabetes",
+      "observed_positioning": "Especializada en diabetes, sincronización con glucómetros. No cubre otras condiciones ni el flujo local de farmacias peruanas/crowdsourcing de precios."
+    },
+    {
+      "id": "sol_11",
+      "name": "GoodRx (conceptual en USA)",
+      "category": "Comparación de precios de medicamentos",
+      "observed_positioning": "Plataforma para comparar precios de medicamentos en farmacias de EE.UU. No opera en Perú; modelo no replicable directamente por diferencias en sistema de salud."
+    },
+    {
+      "id": "sol_12",
+      "name": "MINSA App (Mi Salud Digital)",
+      "category": "Gobierno/Salud pública",
+      "observed_positioning": "App oficial del Ministerio de Salud para acceso a información, citas en establecimientos públicos, y vacunas. No incluye adhesión a medicamentos, precios de farmacias privadas, ni OCR."
+    },
+    {
+      "id": "sol_13",
+      "name": "WhatsApp + Recordatorio manual (DIY)",
+      "category": "Mensajería/Solución manual",
+      "observed_positioning": "Uso de grupos de WhatsApp familiares o recordatorios manuales para adherencia. Es el ‘do-nothing’ digital: ubicuo, pero sin estructura, escalabilidad ni datos."
+    },
+    {
+      "id": "sol_14",
+      "name": "Agenda de papel / Libreta de medicamentos",
+      "category": "Solución analógica/Do-nothing",
+      "observed_positioning": "Método tradicional de anotar medicamentos y horarios. Sin alertas, precios de farmacias, ni prevención de riesgo. Aún común en adultos mayores."
+    },
+    {
+      "id": "sol_15",
+      "name": "Apple Health / Google Fit",
+      "category": "Plataforma de salud general",
+      "observed_positioning": "Agregadores de datos de salud sin especificidad local. No ofrecen OCR de boletas peruanas, mapa de farmacias, ni score de riesgo validado por OMS para población peruana."
+    }
+  ],
+  "research_summary": "No existe en el mercado peruano una solución integrada que combine OCR de boletas de farmacia, recordatorios vía WhatsApp, mapa de farmacias con precios crowdsourced y score de riesgo de enfermedades crónicas. Los sustitutos más cercanos son parciales: apps de cadenas de farmacias (MiFarma, Inkafarma) solo muestran precios propios; apps de recordatorios globales (Medisafe, MyTherapy) carecen de contexto local y datos de precios; los seguros (Rimac, Pacífico) tienen alcance limitado a sus afiliados y no hacen prevención proactiva basada en datos externos. La principal barrera para otros es la ausencia de datos longitudinales de salud de pacientes peruanos; SaludApp Perú tiene la oportunidad de construir ese activo único. La integración con WhatsApp como canal de recordatorios reduce drásticamente la fricción de adopción en un mercado donde esta plataforma es dominante. El modelo B2B con EPS y farmacias aprovecha la voluntad de pago por reducción de costos de no-adherencia y por exposición preferencial.",
+  "competitor_signals": [
+    {
+      "competitor": "MiFarma App",
+      "hiring_score": 5,
+      "funding_score": 7,
+      "product_score": 5,
+      "team_score": 6,
+      "market_score": 8,
+      "tech_score": 4,
+      "overall_score": 59.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "MiFarma pertenece al grupo Intercorp, con acceso a capital y data masiva de transacciones. Su app se enfoca en comercio electrónico, no en adherencia clínica. Podría añadir funcionalidades de recordatorio, pero carece del ADN tecnológico y la agilidad de una startup para construir el moat de datos de salud longitudinales. Se califica con potencial, pero no inminente."
+    },
+    {
+      "competitor": "Rimac Seguros App",
+      "hiring_score": 6,
+      "funding_score": 8,
+      "product_score": 4,
+      "team_score": 7,
+      "market_score": 9,
+      "tech_score": 3,
+      "overall_score": 64.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Rimac es la aseguradora líder en Perú, con gran base de afiliados y recursos para desarrollar soluciones de salud digital. Su app actual es básica en funcionalidades de adherencia. Si decidieran construir una herramienta similar, tendrían una ventaja de distribución inmediata; sin embargo, su incentivo principal es reducir costos, no crear una plataforma abierta de datos de pacientes más allá de su ecosistema. No hay señales de un desarrollo agresivo en este frente."
+    },
+    {
+      "competitor": "Medisafe",
+      "hiring_score": 7,
+      "funding_score": 8,
+      "product_score": 8,
+      "team_score": 7,
+      "market_score": 7,
+      "tech_score": 7,
+      "overall_score": 74.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Medisafe es un competidor global fuerte, con una base de usuarios significativa y múltiples rondas de financiación (última ronda Serie C de $30M en 2022). Su producto incluye escaneo de medicamentos, recordatorios y seguimiento. Sin embargo, no tiene integración con el sistema de salud peruano, ni datos locales de precios de farmacias. Su entrada al mercado peruano requeriría una localización significativa y alianzas. Es una amenaza si deciden expandirse agresivamente en LATAM."
+    },
+    {
+      "competitor": "Doctoralia Perú",
+      "hiring_score": 5,
+      "funding_score": 6,
+      "product_score": 6,
+      "team_score": 6,
+      "market_score": 8,
+      "tech_score": 5,
+      "overall_score": 59.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Doctoralia tiene una posición dominante en agendamiento de citas y telemedicina en Perú, con fuerte reconocimiento de marca. Podría complementar su oferta con recordatorios de medicación o integración con farmacias, pero su modelo de negocio está centrado en la intermediación médico-paciente, no en la gestión proactiva de la salud del paciente. No hay indicios de que estén construyendo un sistema de adherencia o datos longitudinales."
+    },
+    {
+      "competitor": "WhatsApp + Manual Tracking",
+      "hiring_score": 1,
+      "funding_score": 1,
+      "product_score": 2,
+      "team_score": 1,
+      "market_score": 10,
+      "tech_score": 1,
+      "overall_score": 21.0,
+      "classification": "MONITOR",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "El 'do-nothing' digital personificado. WhatsApp es omnipresente y los recordatorios manuales (propios o de familiares) son el status quo. La baja puntuación refleja que no es un competidor comercial, sino un hábito profundamente arraigado que SaludApp Perú debe superar con una propuesta de valor 10x mejor. Su fortaleza es la inercia del usuario; su debilidad es la falta de datos estructurados y escalabilidad."
+    }
+  ],
+  "source": "llm"
+}

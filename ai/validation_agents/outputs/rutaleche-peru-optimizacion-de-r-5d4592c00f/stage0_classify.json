@@ -1,0 +1,56 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "AgriTech",
+  "customer_type": "B2B",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "Low digital readiness of target buyers: Most dairy cooperatives and small processing plants in Peru operate with paper records, WhatsApp, and basic spreadsheets. Implementing an ML route optimization tool requires digitized pickup data, real-time tracking, and driver compliance, which is a huge leap from current practices.",
+    "Severe budget constraints and low WTP for SaaS: The typical mid-market B2B SaaS price point in Peru is S/500-2000/month (~$135-540). Milk collection route optimization may save fuel and reduce spoilage, but the absolute dollar savings for a small cooperative (many process <1000L/day) are small, making the subscription hard to justify. Informal economy means many farmers in cooperatives lack formal accounting, further squeezing budgets.",
+    "Sales cycle and decision-making complexity: The buyer is usually the cooperative manager or plant owner, but adoption requires buy-in from dozens of farmers (suppliers) and drivers. Convincing all stakeholders via face-to-face demos (the primary B2B sales channel in Peru) will be time-consuming and costly. Sales cycles of 6-12 months are typical for agricultural tech in Peru, killing startup runway."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual route planning, spreadsheets)",
+    "Spending already happens on imperfect solutions (fuel, product loss)",
+    "Recurring pain: daily/weekly milk collection",
+    "Measurable cost: fuel, product loss, time",
+    "B2B buyer has budget line for logistics"
+  ],
+  "classification_rationale": "The idea addresses a clear structural pain in dairy logistics: manual route optimization leads to waste and cost. The proven model in Chile increases confidence. Peruvian dairy cooperatives and processing plants have operating budgets for logistics, and the solution offers direct cost savings, making it a painkiller.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "MAYBE",
+  "freemium_rationale": "Given low digitalization and WTP constraints in Peru, a limited free tier (e.g., single route optimization) could build trust and demonstrate ROI. However, B2B enterprises typically require paid pilots; freemium may slow conversion if not structured as a trial for heavy users.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "Cooperatives and processing plants typically pay via bank transfers or cash, with net-30/60 invoicing. Credit card billing (required for frictionless SaaS recurring payments) is rare. Integration with local payment processors like Culqi adds friction and delays. The buyer may also demand a trial period before committing, further delaying revenue.",
+  "free_substitute_risk": "Drivers and cooperatives already use WhatsApp groups to coordinate routes, share location pins, and report delays. A shared Google Sheets or a simple GPS app (e.g., Waze, Maps) covers 80% of route inefficiency needs for free. Manual route planning by an experienced dispatcher is often considered 'good enough' given low labor costs.",
+  "market_size_reality_check": "The total addressable market is the number of dairy cooperatives and processing plants in Peru—estimated at ~200-300 formal entities, plus maybe 500 semi-formal small plants. Assuming 10% adoption in 3 years, and max ARPU of $200/month, the realistic SAM is ~$360K-720K/year in Peru alone. That is too small for venture-scale returns, especially with a Chile-born model that requires localization and regional expansion.",
+  "hardest_assumption": "That cooperatives and plants have reliable, digitized pickup data (volumes, locations, times) to train and run an ML model. In reality, this data is often handwritten, inconsistent, or nonexistent, requiring a significant upfront data digitization and integration effort that customers are unlikely to pay for.",
+  "devil_rationale": "While the pain of milk spoilage and fuel waste is real, the target market in Peru is too small, cash-strapped, and analog for a ML-based SaaS solution. The free workaround (WhatsApp + manual planning) is deeply entrenched, and the sales cycle is long and expensive. The startup would likely burn through seed capital before achieving meaningful traction, and the required behavioral change (from paper to AI) is a multi-year undertaking. Weak to fatal outlook unless the model pivots to a simpler, lower-tech offering for a larger market.",
+  "preflight_dominant_solution": {
+    "score": "CLEAR",
+    "competitor_name": "none found",
+    "threat_level": "LOW",
+    "note": "No widely-adopted specialized ML route optimization for milk collection exists in Peru; general logistics platforms lack dairy-specific features."
+  },
+  "preflight_precedent_failure": {
+    "score": "NO_KNOWN_FAILURE",
+    "example": "none",
+    "learning": "No notable failures in this exact niche; Agil's success in Chile suggests viability, but adapting to Peru's geography and cooperative dynamics is untested."
+  },
+  "preflight_regulatory_kill": {
+    "score": "NO_BLOCKER",
+    "regulation": "General food safety and data privacy laws apply but are manageable; no specific permit required for route optimization software.",
+    "mitigation": "Ensure compliance with SENASA (Peru's agricultural health service) regulations for dairy transport and Ley de Protección de Datos Personales for producer data."
+  },
+  "preflight_summary": "Proceed with caution: low competitive and regulatory risk, but need to validate cooperative adoption willingness and data integration challenges in Peru's fragmented dairy supply chain.",
+  "deal_signals": {
+    "hiring": "Hiring in agtech startups for ML engineers, logistics specialists, and field agents indicates market validation efforts.",
+    "funding": "Recent agtech funding rounds in Latin America (e.g., TerraCom, Frubana) show investor interest in supply chain efficiency.",
+    "product": "Watch for successful integrations with cooperatives' existing ERP or collection systems; product launches in similar verticals (coffee, grains).",
+    "market": "Rising fuel costs and dairy demand in Peru push cooperatives to seek cost-saving technologies; government support for agricultural digitalization is a tailwind.",
+    "tech": "Mobile penetration in rural Peru and affordable IoT sensors for temperature monitoring enable data-driven route optimization.",
+    "momentum": "ACCELERATING"
+  },
+  "source": "triple_agent_classification"
+}

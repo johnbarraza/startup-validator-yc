@@ -135,11 +135,38 @@ El repositorio está organizado para separar claramente la lógica del negocio, 
 
 ---
 
+## 🚀 Proyecto Derivado: SaludApp Peru
+
+El pipeline de validación de este repositorio fue usado para evaluar **16 ideas de startup** en un torneo estilo bracket. La idea ganadora — **SaludApp Peru** (score 80/100) — fue desarrollada como producto real:
+
+**➜ [github.com/JohnxBar/saludapp-peru](https://github.com/JohnxBar/saludapp-peru)**
+
+SaludApp salió directamente del workflow de agentes de validación YC de este repo. Incluye:
+- Bot de WhatsApp con Baileys (Node.js) + FastAPI backend
+- OCR de recetas médicas con Gemini Vision
+- Clasificador híbrido determinista + DeepSeek para intents
+- Modelo freemium con onboarding conversacional
+- Deploy Docker multi-servicio
+
+---
+
 ## 🤖 Declaración de Asistencia de IA
 
 De acuerdo a las pautas de honestidad académica del curso:
-* **Código Generado/Asistido:** Toda la arquitectura del backend en FastAPI, el frontend del dashboard en Streamlit con diseño CSS personalizado y el JSON del Jupyter Notebook de EDA fueron desarrollados con asistencia y copiloto del agente de inteligencia artificial **Antigravity**.
-* **Código de Autoría Propia:** El diseño de la arquitectura conceptual del PdM minero, la selección de features estadísticas de vibración (CWRU) y la estructuración del pitch Y Combinator.
+* **Código Generado/Asistido:** Toda la arquitectura del backend en FastAPI, el frontend del dashboard en Streamlit con diseño CSS personalizado, el pipeline de agentes de validación YC y el bot de WhatsApp fueron desarrollados con asistencia de **Claude Code (Anthropic)** como copiloto de ingeniería.
+* **Código de Autoría Propia:** El diseño de la arquitectura conceptual del PdM minero, la selección de features estadísticas de vibración (CWRU), la estructuración del pitch Y Combinator y la dirección estratégica del torneo de ideas.
+
+---
+
+## 🙏 Agradecimientos
+
+Este proyecto fue posible gracias a herramientas y repositorios open source:
+
+- **[WhiskeySockets/Baileys](https://github.com/WhiskeySockets/Baileys)** — gateway WebSocket para WhatsApp Web, corazón del bot
+- **[openclaw/openclaw](https://github.com/openclaw/openclaw)** — framework de agentes que inspiró la arquitectura de extensiones
+- **[GSD Skills / Claude Code](https://github.com/anthropics/claude-code)** — skills de planificación, debugging y code review usados a lo largo del desarrollo
+- **Y Combinator** — metodología de validación de startups, videos y RFS que guiaron el pipeline de evaluación de ideas
+- **DeepSeek / Google Gemini** — modelos de lenguaje usados para razonamiento, OCR y clasificación de intents
 
 ---
 

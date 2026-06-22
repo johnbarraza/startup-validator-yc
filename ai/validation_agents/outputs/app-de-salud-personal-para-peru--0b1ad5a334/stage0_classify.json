@@ -1,0 +1,48 @@
+{
+  "problem_type": "VITAMIN",
+  "vertical": "Other",
+  "customer_type": "B2C",
+  "problem_severity": "RECURRING",
+  "pain_evidence": "No LLM — assume VITAMIN.",
+  "pit_signals_detected": [
+    "Could not run devil's advocate without LLM."
+  ],
+  "painkiller_signals_detected": [],
+  "classification_rationale": "Deterministic fallback.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "MAYBE",
+  "freemium_rationale": "Cannot assess without LLM.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "Unknown — run with LLM enabled.",
+  "free_substitute_risk": "Unknown.",
+  "market_size_reality_check": "Unknown.",
+  "hardest_assumption": "Unknown.",
+  "devil_rationale": "Deterministic fallback.",
+  "preflight_dominant_solution": {
+    "score": "CLEAR",
+    "competitor_name": "unknown",
+    "threat_level": "MEDIUM",
+    "note": "Could not run preflight without LLM."
+  },
+  "preflight_precedent_failure": {
+    "score": "NO_KNOWN_FAILURE",
+    "example": "none",
+    "learning": "Unknown."
+  },
+  "preflight_regulatory_kill": {
+    "score": "NO_BLOCKER",
+    "regulation": "unknown",
+    "mitigation": "n/a"
+  },
+  "preflight_summary": "Preflight ran without LLM — treat as unverified.",
+  "deal_signals": {
+    "hiring": "unknown",
+    "funding": "unknown",
+    "product": "unknown",
+    "market": "unknown",
+    "tech": "unknown",
+    "momentum": "STABLE"
+  },
+  "source": "triple_agent_classification"
+}

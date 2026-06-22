@@ -1,0 +1,165 @@
+{
+  "idea": "AgroIntel LatAm: agente agricola por voz y mensajeria para pequenos productores y cooperativas que transcribe reportes, clasifica problemas de campo, geolocaliza alertas y ayuda a coordinar asistencia tecnica.",
+  "market": "Pequeños productores y cooperativas agrícolas en América Latina (México, Colombia, Perú, Brasil, etc.) con acceso limitado a internet de alta velocidad, baja alfabetización digital y dependencia de extensionistas y técnicos. Son ~15 millones de fincas de menos de 5 ha que representan más del 60% de la producción de alimentos de la región (FAO, 2022).",
+  "solutions": [
+    {
+      "id": 1,
+      "name": "Do-nothing (no formal system)",
+      "category": "Workaround",
+      "observed_positioning": "Confianza en conocimiento tradicional, familiares, vecinos y el boca a boca. Sin registro de problemas ni trazabilidad."
+    },
+    {
+      "id": 2,
+      "name": "Grupos de WhatsApp",
+      "category": "Workaround",
+      "observed_positioning": "Coordinación y consultas por texto y notas de voz en grupos de productores. Gratuito, universal, pero caótico y sin estructura."
+    },
+    {
+      "id": 3,
+      "name": "Líneas de atención telefónica gubernamentales",
+      "category": "Incumbent",
+      "observed_positioning": "Extensionismo público tradicional (e.g., SADER en México, INTA en Argentina). Llamadas a técnicos, horarios limitados, baja escalabilidad."
+    },
+    {
+      "id": 4,
+      "name": "Programas de radio agrícola",
+      "category": "Incumbent",
+      "observed_positioning": "Contenido pregrabado, segmentos de consultas al aire. Unidireccional, sin personalización ni seguimiento."
+    },
+    {
+      "id": 5,
+      "name": "Plantix (PEAT GmbH)",
+      "category": "Indirect Substitute",
+      "observed_positioning": "App móvil con reconocimiento de imágenes para enfermedades. Comunidad de expertos, pero requiere smartphone y conexión. No es voz-primero."
+    },
+    {
+      "id": 6,
+      "name": "Wefarm",
+      "category": "Direct Competitor",
+      "observed_positioning": "Plataforma SMS y AI para pequeños agricultores en África. Peer-to-peer y asesoría, enfoque en mensajería, pero no en LatAm."
+    },
+    {
+      "id": 7,
+      "name": "Agrio (Prospera)",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Monitoreo de cultivos con IA y satélites. Chat con agrónomos en la app, orientado a empresas agrícolas, no a pequeños productores."
+    },
+    {
+      "id": 8,
+      "name": "FarmChat (India)",
+      "category": "Direct Competitor",
+      "observed_positioning": "Asistente por voz y NLP en idiomas locales para agricultores. Pilotos en India, no presencia en LatAm."
+    },
+    {
+      "id": 9,
+      "name": "Auravant",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Plataforma digital de agricultura de precisión (mapas, IoT) para productores grandes en Argentina y Brasil. No soporta voz ni apunta a minifundistas."
+    },
+    {
+      "id": 10,
+      "name": "AgroSmart (Brasil)",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Plataforma de agricultura climáticamente inteligente. Monitoreo y recomendaciones basadas en datos, pero orientada a fincas medianas/grandes."
+    },
+    {
+      "id": 11,
+      "name": "Tambero",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Software de gestión ganadera (Argentina). Permite registros y seguimiento, pero no asistencia técnica por voz ni para agricultura en general."
+    },
+    {
+      "id": 12,
+      "name": "Digital Green",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Extensión agrícola basada en video y recientemente chatbot IA. Opera en India y África, no en LatAm."
+    },
+    {
+      "id": 13,
+      "name": "Hello Tractor",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Plataforma de compartición de tractores con IoT. Incluye asesoría mínima, pero el foco es maquinaria, no diagnóstico de campo."
+    },
+    {
+      "id": 14,
+      "name": "Farmforce",
+      "category": "Indirect Substitute",
+      "observed_positioning": "Gestión de pequeñas fincas y cadenas de suministro. Enfoque en trazabilidad y certificación, no en asistencia técnica por voz."
+    },
+    {
+      "id": 15,
+      "name": "Registros manuales en cooperativas",
+      "category": "Workaround",
+      "observed_positioning": "Libretas, planillas Excel, envío de reportes por foto a extensionistas. Desestructurado, lento y propenso a errores."
+    }
+  ],
+  "research_summary": "El mercado de asistencia técnica para pequeños productores en Latinoamérica sigue dominado por métodos tradicionales (voz-a-voz, WhatsApp, extensionismo público limitado). Existen competidores directos en mensajería agrícola solo fuera de la región (Wefarm en África, FarmChat en India). Los sustitutos indirectos con más tracción (Plantix, Auravant, AgroSmart) requieren smartphones, internet estable y alfabetización digital, dejando un vacío para una solución voz-primero y de bajo ancho de banda. La amenaza más inmediata es la inercia del status quo (WhatsApp + llamadas), pero la oportunidad radica en la falta de estructura, clasificación y coordinación de reportes. La diferenciación en geolocalización y coordinación de asistencia técnica es clave para desplazar los workarounds actuales.",
+  "competitor_signals": [
+    {
+      "competitor": "Plantix",
+      "hiring_score": 7,
+      "funding_score": 8,
+      "product_score": 8,
+      "team_score": 7,
+      "market_score": 6,
+      "tech_score": 8,
+      "overall_score": 74.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Plantix, desarrollado por PEAT GmbH, ha levantado Serie B de inversores como RTP Global. Cuenta con más de 10M de descargas, fuerte en detección de enfermedades por imagen. Aunque no es voz-primero ni tiene presencia relevante en LatAm, su tecnología de IA y comunidad de expertos son fácilmente adaptables. Señal positiva por crecimiento y capacidad de expansión."
+    },
+    {
+      "competitor": "Wefarm",
+      "hiring_score": 6,
+      "funding_score": 7,
+      "product_score": 7,
+      "team_score": 6,
+      "market_score": 5,
+      "tech_score": 6,
+      "overall_score": 63.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Wefarm opera en África con SMS y NLP en inglés y suajili. Ha recaudado ~$13M. Base de usuarios creciente pero retención cuestionable. Sin planes públicos de entrada a LatAm, aunque su modelo es directamente replicable. Señal neutral porque no ataca el mismo mercado geográfico, pero es un espejo de lo que podría funcionar."
+    },
+    {
+      "competitor": "WhatsApp (manual coordination)",
+      "hiring_score": 1,
+      "funding_score": 1,
+      "product_score": 3,
+      "team_score": 1,
+      "market_score": 10,
+      "tech_score": 1,
+      "overall_score": 23.0,
+      "classification": "MONITOR",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "WhatsApp es la herramienta de facto para comunicación entre productores y extensionistas. Preinstalado en teléfonos básicos, pero carece de estructura, clasificación y trazabilidad. Alto riesgo de competencia como workaround, pero poca capacidad de evolucionar a solución especializada. Señal negativa como empresa pero máximo peligro como sustituto."
+    },
+    {
+      "competitor": "Auravant",
+      "hiring_score": 5,
+      "funding_score": 5,
+      "product_score": 6,
+      "team_score": 5,
+      "market_score": 4,
+      "tech_score": 6,
+      "overall_score": 51.5,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Auravant ofrece plataforma de agricultura de precisión con mapas de NDVI y prescripciones. Con presencia en Argentina y Brasil, ha levantado rondas semilla y Serie A. No está diseñado para pequeños productores ni integra voz, pero posee relaciones con cooperativas que podrían facilitar un pivote. Señal neutral por posible evolución hacia segmentos de menor escala."
+    },
+    {
+      "competitor": "AgroSmart",
+      "hiring_score": 6,
+      "funding_score": 6,
+      "product_score": 7,
+      "team_score": 6,
+      "market_score": 7,
+      "tech_score": 7,
+      "overall_score": 63.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "AgroSmart (Brasil) es plataforma de agricultura climáticamente inteligente con IoT y datos agronómicos. Serie B levantada con inversores como SP Ventures. Aunque enfocada en fincas medianas/grandes, su expansión regional y capacidades de IA representan una amenaza indirecta si deciden bajar al segmento de pequeños productores con una capa de voz. Señal positiva por momentum de mercado."
+    }
+  ],
+  "source": "llm"
+}

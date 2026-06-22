@@ -1,0 +1,32 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "AgriTech",
+  "customer_type": "B2B",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "Target users have extremely low WTP: smallholders in Peru often live below $8.30/day; even S/50/month is prohibitive for most, making unit economics unsustainable without heavy subsidy.",
+    "High prevalence of free alternatives: WhatsApp voice notes, existing extension service phone lines, and paper-based records already solve 80% of the pain—changing user behavior to a paid app is very hard.",
+    "Sales complexity to cooperatives: cooperatives have diffuse decision-making, slow tribal adoption cycles, and often rely on government/NGO funding—sales cycle could exceed 12-18 months with low conversion.",
+    "Localization and AI talent gap: building reliable voice/transcription for Spanish and Quechua dialects, plus field problem classification, requires scarce ML talent in Peru; quality issues could destroy trust.",
+    "Market size in Peru is tiny for a VC-backable startup: real paying market might be <$1M ARR due to informality and low willingness to pay—does not support venture returns without immediate regional scale."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual spreadsheets, WhatsApp groups)",
+    "Spending already happens on imperfect solutions (consultants, extension agents)",
+    "Recurring pain: weekly or more often",
+    "Measurable cost: lost crop yield and revenue"
+  ],
+  "classification_rationale": "Small farmers in LatAm face constant field problems causing significant yield loss. Current manual reporting is inefficient and delays assistance. The AI agent automates and coordinates, solving a real, urgent problem. However, willingness to pay is low among individual farmers, but cooperatives and extension agencies may pay, making monetization uncertain.",
+  "proceed_recommendation": "ABORT",
+  "suggested_pivot": "",
+  "freemium_recommendation": "MAYBE",
+  "freemium_rationale": "A free tier for individual farmers can drive adoption and build data network effects. Upsell cooperatives on premium features (analytics, coordination). Given low WTP in the informal economy, freemium helps overcome adoption barriers.",
+  "devil_verdict": "FATAL",
+  "payment_blocker": "Cash-based informal economy: smallholders rarely have registered bank accounts or formal payment methods; cooperatives use slow bank transfers, and no one has a corporate credit card for SaaS billing.",
+  "free_substitute_risk": "WhatsApp voice notes + paper notebooks + occasional extension agent visits already cover core needs; a simple Google Forms template or a free chatbot could replicate transcription and classification.",
+  "market_size_reality_check": "In Peru, <5,000 cooperatives with any tech budget; assuming even S/100/month, total SAM is ~$6M/year, with likely actual paying customers under 500—SOM <$600K/year, far below venture scale.",
+  "hardest_assumption": "That smallholder farmers or cooperatives will pay for an AI assistant when they currently manage with free communication tools and have severe cash constraints.",
+  "devil_rationale": "AgroIntel LatAm targets a user base with negligible WTP in an informal economy where free workarounds dominate. Without a clear payer (e.g., government, large agribusiness) or a free-to-scale model, the idea cannot achieve sustainable revenue or venture-scale growth in Peru.",
+  "source": "dual_agent_classification"
+}

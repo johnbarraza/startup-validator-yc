@@ -1,0 +1,62 @@
+{
+  "research_source": "SaludApp Peru: app de salud personal donde el paciente registra medicamentos vía OCR de boleta, recibe recordatorios por WhatsApp, ve mapa de farmacias con precios crowdsourced, y obtiene score de riesgo crónico.",
+  "gaps": [
+    {
+      "id": "gap_1",
+      "title": "Integrated medication management system tailored to Peru",
+      "pain": "Patients with chronic conditions must juggle multiple disconnected tools (paper notes, WhatsApp groups, pharmacy apps) to manage medications, never getting a unified view of adherence, local pricing, and health risk.",
+      "why_now": "Smartphone penetration in Peru is high, WhatsApp is ubiquitous, and no existing solution combines OCR of local receipts, automated reminders, price transparency, and validated risk scoring.",
+      "evidence_needed": "Customer discovery with 20–30 chronic patients to confirm prescription complexity and willingness to adopt a single app; technical feasibility test for OCR on diverse Peruvian pharmacy receipt formats.",
+      "priority": "high",
+      "risk": "Execution risk: integrating multiple novel components (OCR, crowdsourcing, risk score) while ensuring simplicity. Competition from well-funded global apps or local insurers could emerge if they localize."
+    },
+    {
+      "id": "gap_2",
+      "title": "Real-time pharmacy price transparency via crowdsourcing",
+      "pain": "Patients paying out-of-pocket for chronic medications lack accessible, up-to-date prices across different chains and independent pharmacies, leading to unnecessary high costs.",
+      "why_now": "Economic pressure on household health spending is increasing; no platform aggregates prices across the fragmented Peruvian pharmacy landscape, and crowdsourcing has proven successful in other markets (e.g., GasBuddy).",
+      "evidence_needed": "Survey to measure how often patients compare prices and their willingness to contribute price data; a pilot with a small user group to validate data freshness and pharmacy coverage.",
+      "priority": "high",
+      "risk": "Low: technically straightforward, but relies on active user contributions; network effects require critical mass. Defensibility increases with user base and data partnerships."
+    },
+    {
+      "id": "gap_3",
+      "title": "Proactive chronic disease risk scoring integrated with daily adherence",
+      "pain": "Many Peruvians are unaware of their risk for type 2 diabetes and other chronic diseases, missing early prevention opportunities, while existing adherence apps do not provide personalized, validated risk assessments.",
+      "why_now": "Rising NCD burden in Peru; globally validated tools like FINDRISC are underutilized locally; linking risk scores to medication behavior can drive behavior change and insurer value.",
+      "evidence_needed": "Pilot study correlating app-calculated FINDRISC scores with medication adherence data over 3 months; validation interviews with clinicians on the perceived value of such scores.",
+      "priority": "medium",
+      "risk": "Scientific risk: risk scores must be validated for the Peruvian demographic and updated with local guidelines. Requires clinical integration to be credible."
+    },
+    {
+      "id": "gap_4",
+      "title": "B2B adherence platform for insurers and EPS",
+      "pain": "Insurers like Rimac and Pacífico lose significant money due to non-adherence among their insured populations but have no actionable tool to monitor or improve adherence outside of claims data.",
+      "why_now": "Value-based care models are gaining traction in Peru; insurers are actively seeking digital health solutions to reduce costs and differentiate their offerings.",
+      "evidence_needed": "Interviews with decision-makers at Peruvian EPS to quantify their cost of non-adherence and their interest in a data-driven adherence platform; a small pilot with an EPS to show engagement and health outcomes.",
+      "priority": "medium",
+      "risk": "High: long B2B sales cycles, stringent data privacy regulations, and the need to integrate with existing insurer systems. Defensibility once embedded is very high."
+    },
+    {
+      "id": "gap_5",
+      "title": "WhatsApp as a structured health intervention channel",
+      "pain": "Despite WhatsApp being the primary communication tool in Peru, no health app leverages it for automated, intelligent medication reminders, resulting in low engagement with standalone app notifications.",
+      "why_now": "WhatsApp Business API now allows scalable, automated messaging, and user behavior strongly favors messaging apps; this channel can drastically reduce adoption friction.",
+      "evidence_needed": "A/B test comparing adherence rates between users receiving WhatsApp reminders vs. those using only in-app notifications; qualitative feedback on user perception.",
+      "priority": "medium",
+      "risk": "Low technical risk but low defensibility—competitors can easily replicate WhatsApp integration. Advantage comes from combining with a richer data set (gap_1)."
+    },
+    {
+      "id": "gap_6",
+      "title": "Longitudinal medication and health data asset for Peru",
+      "pain": "Healthcare stakeholders (pharma, insurers, public health) lack a comprehensive, real-world dataset linking medication consumption, adherence patterns, and risk profiles for the Peruvian population.",
+      "why_now": "Real-world evidence is increasingly valued for drug launches and public health policy; no existing platform captures this granular, patient-generated data at scale in Peru.",
+      "evidence_needed": "Initial analysis of data collected from pilot users to demonstrate uniqueness and analytics potential; conversations with potential data buyers to gauge willingness to pay.",
+      "priority": "low",
+      "risk": "Very high: building a critical data mass takes years, requires strict privacy compliance, and faces indirect competition from EMR systems or insurer databases. Defensible once large enough."
+    }
+  ],
+  "recommended_gap_id": "gap_1",
+  "checkpoint_instruction": "Validate gap_1 by conducting 25 customer discovery interviews with chronic patients in Lima (diabetes, hypertension) to map their current medication management workflows, pain points, and willingness to use an integrated app. Simultaneously, build a technical prototype to test Peruvian pharmacy receipt OCR accuracy across 50 samples from MiFarma, Inkafarma, and independent pharmacies.",
+  "source": "llm"
+}

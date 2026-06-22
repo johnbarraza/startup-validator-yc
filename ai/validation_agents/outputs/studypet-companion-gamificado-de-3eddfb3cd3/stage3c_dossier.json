@@ -1,0 +1,169 @@
+{
+  "source": "YC Startup Dossier Builder",
+  "one_liner": "StudyPet empowers first‑year pre‑meds to conquer Organic Chemistry by ingesting their professor’s syllabus and generating a personalized, emotionally engaging study plan featuring a virtual pet that thrives on completed tasks.",
+  "problem": "Organic Chemistry is the top weed‑out course for pre‑meds, with failure rates up to 40% at many universities. Students struggle to structure their study time, leading to cramming, anxiety, and burnout. Existing study tools are impersonal, boring, and fail to sustain daily motivation. Current workarounds include static schedules, shared flashcards, and tutoring, but none provide a dynamic, emotionally supportive structure.",
+  "solution_insight": "StudyPet uses AI (GPT‑4 or equivalent) to parse any syllabus PDF and create a daily study plan broken into micro‑tasks. Each task completion feeds a virtual pet, creating an emotional bond. The insight: leveraging the guilt and care of neglecting a pet is a powerful motivator, proven in apps like Finch and Tamagotchi, but not yet applied to rigorous academic task management.",
+  "why_now": "1) LLMs now accurately parse semi‑structured documents; 2) Students are digital natives expecting gamified experiences; 3) Mental health crisis demands emotionally intelligent tools; 4) The success of habit apps like Finch (6M users) shows demand for nurturing‑based motivation, but none target high‑stakes exam prep.",
+  "market": {
+    "recommended_focus": "USA, the largest market for pre‑med students, but even this may be sub‑venture scale; Peru is not viable as a primary market due to tiny size (<1k potential customers).",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Peru is not a viable starting market because the number of first‑year students taking organic chemistry is extremely small (<30k), resulting in a TAM under $600k and an almost negligible SOM.",
+        "tam_topdown": "$600k – Estimation based on INEI/SUNEDU: ~348,000 total health sciences enrollees in 2022, of which ~70,000 are first‑year; ~30,000 are in programs requiring Organic Chemistry. ARPU $20/semester → 30,000 × $20 = $600k.",
+        "tam_bottomup": "$600k – 30,000 potential students × $20 per semester.",
+        "tam_consensus": "$500k–$600k, well below venture‑scale threshold of $50M.",
+        "sam": "$120k – Assuming 20% of TAM (6,000 students) are willing to pay for a digital study tool.",
+        "som_12_months": "$6k – 5% of SAM (300 students) converted in first year via campus experiments at private universities.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "INEI – Estadísticas de Educación Universitaria",
+          "SUNEDU – Matriculados por área de conocimiento"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "LATAM is a fragmented, low‑ARPU market with a total addressable base of ~150k medical students taking organic chemistry, yielding a TAM of $1.5M, which is still sub‑venture.",
+        "tam_topdown": "$1.5M – Across LATAM (Brazil, Mexico, Argentina, Colombia, Peru, Chile), ~500k medical students; ~30% take organic chemistry in first year = 150k. ARPU $10/semester → 150k × $10 = $1.5M.",
+        "tam_bottomup": "$1.5M – 150k students × $10/semester.",
+        "tam_consensus": "$1M–$1.5M, no path to $50M without bundling or expanding to other courses.",
+        "sam": "$300k – 20% of TAM (30k students) with disposable income and smartphone payment capability.",
+        "som_12_months": "$15k – 5% of SAM (1,500 students) via partnerships with private universities in Mexico City, São Paulo, and Lima.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "WHO Global Health Workforce statistics",
+          "IESALC matrícula por país",
+          "INEGI (México)",
+          "IBGE (Brasil)"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "USA is the most promising region due to high ARPU and homogeneous distribution, but the market size (~50k students) still yields a SAM below $1M, making venture scale challenging.",
+        "tam_topdown": "$3M – AAMC and NCES data put ~50,000 pre‑med students taking Organic Chemistry annually. ARPU $60/semester → $3M.",
+        "tam_bottomup": "$3M – 50,000 students × $60/semester.",
+        "tam_consensus": "$2.5M–$3M, far below the $50M SAM threshold required for a VC‑backed B2C company.",
+        "sam": "$600k – 20% of TAM (10k students) willing to pay for a dedicated, AI‑powered study tool with emotional gamification.",
+        "som_12_months": "$60k – 1,000 paying students acquired through university partnerships and TikTok campaigns in Year 1.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "AAMC – Table A‑16",
+          "NCES – Digest of Education Statistics",
+          "ACS – American Chemical Society enrollment data"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "Peru: Use INEI ‘Estadísticas de Educación Universitaria’ for total health sciences enrollment; SUNEDU for disaggregated matriculation by program to estimate organic chemistry cohorts.",
+      "LATAM: Compile medical school enrollment from government statistics (e.g., INEGI, IBGE, DANE, MINEDU) and apply the 30% organic chemistry rate from North American benchmarks.",
+      "USA: AAMC pre‑med questionnaire data + NCES IPEDS program completions to derive the 50k organic chemistry cohort. Validate via ACS committee reports on undergraduate organic chemistry enrollment."
+    ]
+  },
+  "competition_moat": "Direct competitors: Quizlet (flashcards, no planning), Notion/Google Docs (manual planning), Khan Academy (general content). Emotional competitors: Finch (generic habit pet), Habitica (RPG tasks). Moat: Proprietary AI parsing trained on diverse syllabus formats; deep integration with a specific, high‑stakes course; emotional pet mechanic that creates switching costs and daily habit loops. However, the moat is thin—incumbents could add pet features, and the market size limits defensibility.",
+  "business_model_pricing": "Freemium: free tier with 1 pet, basic AI plan generation; Premium: $19.99/semester for unlimited pets, advanced AI, offline access, pet cosmetics. Variable cost: ~$0.50/semester in AI API calls + cloud hosting; contribution margin ~97% on premium. Additional revenue: in‑app purchases for pet accessories ($0.99–$4.99).",
+  "go_to_market": "First 10 users: Pilot with 2–3 professors at target universities (USC, UT Austin, UCLA) who recommend StudyPet on syllabus day, offering a 2‑week free trial. First 100: Campus ambassador program – one student per university earns commission per sign‑up, driving word‑of‑mouth within pre‑med clubs. First 1,000: TikTok/Instagram campaigns showing pet evolutions and student success stories, targeting #premed and #ochem tags; organic content from beta users.",
+  "traction_signals": "• 50 student interviews conducted at Universidad de San Marcos (Peru) and UCLA; 80% expressed high interest. \n• 30 signed up for a beta waitlist from a landing page with no product. \n• Zero revenue; no MVP yet. \n• Validated that 4 out of 5 students currently use a combination of Notion + YouTube, indicating a gap for a unified, emotionally engaging tool.",
+  "roadmap": {
+    "month_1": "Build MVP: AI syllabus parser (GPT‑4 with validation layer), basic task generator, rudimentary pet with 2 evolutions. Test with 5 real syllabi.",
+    "month_2": "Closed beta with 20 students from pilot universities; measure task completion rate, pet interaction frequency, and NPS.",
+    "month_3": "Iterate based on feedback: add streak-based pet evolution, implement feedback loop for AI errors. Launch public beta on Product Hunt. Target: 200 beta users.",
+    "month_6": "Public launch on App Store/Play Store. Integrate in‑app purchases for pet accessories. Target: 500 registered users, 100 paying (20% conversion), $2k MRR (from semester passes).",
+    "month_9": "Partner with 10 universities to include StudyPet in their pre‑med orientation kits. Launch Android version (if started on iOS). Target: 1,500 users, 300 paying, $6k MRR.",
+    "month_12": "Expand beyond O‑Chem: pilot physics and general chemistry. Achieve 3,000 total users, 600 paying, extrapolated ARR $36k (assuming 2‑semester purchase cycle). Key metrics: MRR $3,000, 600 paying customers, monthly churn <5%, CAC $15 via referrals and organic.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 3000,
+      "paying_customers": 600,
+      "churn_target": "<5% monthly",
+      "cac_target_usd": 15
+    }
+  },
+  "risks_mitigations": {
+    "market": "The TAM is too small for venture scale. Mitigation: Use the O‑Chem wedge to prove retention and monetization, then rapidly expand to other high‑failure courses (Physics, Calculus, General Chemistry) and later to non‑STEM subjects. The broader market of US college students struggling with difficult courses is 10M+, a $2B+ TAM.",
+    "technical": "AI parsing of messy, scanned, or poorly formatted syllabi leads to incorrect study plans. Mitigation: Implement a double‑check loop: AI generates plan → ask user to confirm key dates/topics → crowdsource corrections to improve parser over time.",
+    "execution": "Guilt‑based mechanic may cause user drop‑off if they miss a day (negative spiral). Mitigation: Design positive reinforcement arcs (e.g., pet sends encouraging notifications, streak freeze tokens, ‘weekend recovery’ modes).",
+    "regulatory": "None for B2C education apps, but COPPA compliance required if targeting students under 13 (unlikely for college).",
+    "ai_substitution": "A generic AI assistant like ChatGPT could eventually replicate syllabus parsing and pet gamification. Mitigation: Build a dataset of 100k+ validated study plans and pet states to create a switching cost; focus on the emotional design IP and university partnerships."
+  },
+  "the_ask": {
+    "amount_usd": 50000,
+    "type": "pre‑seed convertible note / angel investment",
+    "runway_months": 8,
+    "budget_breakdown": [
+      {
+        "line": "Contract iOS developer (6 months)",
+        "amount_usd": 24000,
+        "rationale": "One experienced React Native dev to build MVP and launch on iOS. Avoiding a co‑founder at this stage keeps equity clean."
+      },
+      {
+        "line": "AI API credits and cloud hosting",
+        "amount_usd": 6000,
+        "rationale": "GPT‑4 API for parsing and plan generation for 10,000 syllabi/plans during beta. Serverless backend on Firebase to minimize DevOps."
+      },
+      {
+        "line": "User testing incentives & ambassador stipends",
+        "amount_usd": 8000,
+        "rationale": "$20 gift cards for 200 beta testers, plus $500/month for 4 campus ambassadors. Low‑cost way to get qualitative data and word‑of‑mouth."
+      },
+      {
+        "line": "Design & illustration (pet characters, UI)",
+        "amount_usd": 5000,
+        "rationale": "Freelance illustrator for 5‑6 pet evolutions; UI/UX designer for wireframes. A polished, emotionally appealing design is critical for the gamification hook."
+      },
+      {
+        "line": "Legal & admin (incorporation, terms, privacy)",
+        "amount_usd": 4000,
+        "rationale": "Delaware C‑Corp formation, standard T&Cs, COPPA‑lite privacy policy. Fixed cost, no equity given."
+      },
+      {
+        "line": "Buffer / unexpected",
+        "amount_usd": 3000,
+        "rationale": "10% contingency for app store rejections, extended server costs, or a pivot based on early feedback."
+      }
+    ],
+    "milestone_unlocked": "A shipped MVP on iOS with 100 beta users, a parsed‑syllabus accuracy ≥90%, and a net promoter score (NPS) ≥40. Demonstrated ability to acquire users organically (cost <$10 per sign‑up) and a ≥15% free‑to‑paid conversion rate on a semester pass basis.",
+    "critical_assumption_being_tested": "Students will pay $19.99/semester for an emotionally gamified study planner that is specific to their professor’s syllabus, and this emotional hook will sustain daily usage over a 15‑week semester.",
+    "why_not_less": "A $20k request would force us to build a web‑only MVP without polished art, severely diminishing the emotional hook. The pet mechanic requires high‑quality illustrations and smooth mobile interactions to avoid feeling cheap; an underfunded beta would yield false‑negative results on PMF.",
+    "why_not_more": "Raising $200k+ before proving paid conversion is premature. With more money, we would prematurely scale to multiple courses and platforms, diluting focus. The $50k forces extreme prioritization on the core O‑Chem experience and the critical assumption."
+  },
+  "product_demo_architecture": "A mobile app (React Native for iOS first, then Android) with a Node.js + Firebase backend. The app ingests a professor’s syllabus via PDF upload or camera scan; GPT‑4 API with fine‑tuned prompts extracts topics, dates, and exam schedules. A custom algorithm then creates a daily task list with spaced repetition. Each completed task earns ‘food’ or ‘gems’ for a 2D animated virtual pet (built with Lottie/Spine), which displays mood, hunger, and evolution stages. The pet’s health degrades slightly each day, and full neglect triggers a sad animation—but recovery is possible. Cloud sync stores task progress and pet state. Demo flow: user receives syllabus → uploads → sees a parsed summary → confirms/corrects → gets a 7‑day plan → first task ‘Read Chapter 1, pp 1‑20’ → task done → pet dances → evolves after 7‑day streak. Offline mode caches upcoming tasks.",
+  "scorecard": {
+    "Market Size & Scalability": 1.0,
+    "Problem & Pain Urgency": 2.0,
+    "Solution & Product Execution": 1.0,
+    "Team & Founder-Market Fit": 0.5,
+    "Traction & Validation": 0.0,
+    "Business Model & Monetization": 0.5
+  },
+  "total_score": 5.0,
+  "max_score": 10,
+  "rating": "DECLINE",
+  "external_research_hooks": [
+    "INEI (2022): Estadísticas de Educación Universitaria – total de matriculados en áreas de salud",
+    "SUNEDU: Reporte de matrícula por campos de conocimiento, 2022",
+    "MTPE: Observatorio Laboral – demanda de profesionales de medicina",
+    "AAMC: Table A‑16, MCAT and pre‑med enrollments",
+    "NCES: IPEDS completions, biological & biomedical sciences",
+    "NielsenIQ: Panorama de apps educativas en LATAM, 2023"
+  ]
+}

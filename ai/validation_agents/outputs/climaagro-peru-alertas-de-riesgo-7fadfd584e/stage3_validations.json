@@ -1,0 +1,645 @@
+[
+  {
+    "idea": "ClimaAgro Peru delivers hyper-local climate risk alerts straight to smallholder farmers via WhatsApp. Using a blend of satellite data (NASA CHIRPS, MODIS), local weather station data (SENAMHI), and proprietary models, we generate field-specific forecasts for frost, drought, and extreme rainfall 7–14 days in advance. Each alert includes a specific, actionable recommendation (e.g., 'Cover your potato crop with plastic sheeting by Thursday or risk 80% loss'). We sell this as a proactive risk mitigation tool to agricultural cooperatives and insurers, who pay us to protect their members and portfolios, while farmers receive the service for free.",
+    "selected_gap": {
+      "id": "gap_1",
+      "title": "Personalized, hyper-local climate alerts via WhatsApp",
+      "pain": "Small farmers depend on generic forecasts or informal word-of-mouth, leading to poor decisions and crop losses. No existing service delivers actionable, parcel-specific advice through an accessible, low-tech channel like WhatsApp.",
+      "why_now": "WhatsApp penetration in rural Peru exceeds 80%; El Niño intensifies climate volatility; insurers and cooperatives seek tools to reduce loss ratios and improve farmer engagement.",
+      "evidence_needed": "Pilot with 500 farmers to measure reduction in crop loss versus control group; message open rates and action compliance data.",
+      "priority": "High",
+      "risk": "Low"
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "No specific founder background provided, but focus on Peru agriculture suggests some domain knowledge; moderate fit."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "Peruvian smallholder agriculture TAM likely under $1B; regional expansion could grow, but initial market is modest."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Crop losses due to weather are severe and immediate for smallholders; high pain intensity."
+      },
+      {
+        "criterion": "Competition",
+        "score": 8,
+        "note": "Few if any services offer hyper-local, WhatsApp-based alerts with actionable advice; weak competition."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Founder passion not evident from description; average personal drive assumed."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "WhatsApp penetration and increased climate volatility make it timely; El Niño adds urgency."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar services exist in other regions (e.g., India's mKrishi), but none proven in Peru."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 6,
+        "note": "Agriculture startups require long cycles; no signal of exceptional persistence."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "WhatsApp-based delivery scales easily, but local model calibration requires effort per region."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Climate tech + agriculture is a growing sector with strong tailwinds."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Already moving to pilot; not overthinking perfection."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focused on one idea, but multiple could still be in play."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Understanding farmer workflow via WhatsApp, but cooperative/insurer workflow needs deeper exploration."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 6,
+        "note": "Uses satellite data and models, but AI integration not prominent; could improve with ML on alert efficacy."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 9,
+        "note": "Sells risk mitigation to cooperatives/insurers; outcome-focused pricing likely."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Ambitious to cover Peru and expand; not hyper-niche."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No evidence of systematic learning from failures yet."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 6,
+        "note": "Agriculture is high-expertise, but cooperatives may have trust issues with new tech."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 5,
+        "note": "Alert generation process is valuable, but not the core product; still tool-like."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 7,
+        "note": "Pilot approach mitigates false demand; need to ensure cooperatives pay."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Likely per-farmer subscription to cooperatives; outcome-based pricing possible."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "WhatsApp delivery cheap, but satellite data and model compute cost; needs optimization."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Building new solution, not retrofitting existing systems."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Domain (agri, climate) and model (proprietary) covered; operational fluency to be proven."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No specific founder details provided; assumed average team lacking proven track record in agritech."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 5,
+        "weighted": 1.0,
+        "rationale": "Peruvian smallholder TAM < $1B; growth potential exists but not immediately massive."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Proprietary model + WhatsApp delivery is defensible but replicable with similar data sources."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No traction yet; only a planned pilot with 500 farmers."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "B2B2C model to cooperatives/insurers; margins likely >60% but LTV:CAC unproven."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 8,
+        "weighted": 0.64,
+        "rationale": "Weak competition; no existing service combines hyper-local alerts with WhatsApp and actionable advice."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No financial data; assumes reasonable burn but needs funding for pilot."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Moderate execution risk: data reliability, farmer adoption, cooperative willingness to pay."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.19,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Must achieve: (1) Pilot with 500 farmers showing ≥15% reduction in crop loss vs. control, (2) ≥70% alert open rate and action compliance, (3) At least one cooperative or insurer LOI for paid pilot."
+    },
+    "go_no_go": "Conditional go",
+    "decision": "Proceed with pilot and gather evidence needed for conditional pass",
+    "next_experiments": [
+      "Develop pilot with 500 farmers across 2-3 regions, measuring crop loss reduction, message engagement, and action compliance.",
+      "Interview 10+ agricultural cooperatives and insurers to validate willingness to pay at target price (e.g., $1-2/farmer/season).",
+      "Build prototype alert system integrating CHIRPS, MODIS, and SENAMHI data with WhatsApp delivery."
+    ],
+    "kill_criteria": [
+      "Pilot shows <10% reduction in crop loss compared to control group.",
+      "Message open rates below 50% or action compliance below 30%.",
+      "No cooperative or insurer commits to paid pilot after seeing initial results."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "We give Peruvian smallholders life-saving weather alerts on WhatsApp so they never lose a harvest to a surprise frost again."
+  },
+  {
+    "idea": "ClimaAgro provides a B2B2C hyper-local climate alert system for agribusiness buyers sourcing from smallholder farmers in Peru.",
+    "selected_gap": {
+      "id": "gap_1",
+      "title": "Personalized, hyper-local climate alerts via WhatsApp",
+      "pain": "Small farmers depend on generic forecasts or informal word-of-mouth, leading to poor decisions and crop losses. No existing service delivers actionable, parcel-specific advice through an accessible, low-tech channel like WhatsApp.",
+      "why_now": "WhatsApp penetration in rural Peru exceeds 80%; El Niño intensifies climate volatility; insurers and cooperatives seek tools to reduce loss ratios and improve farmer engagement.",
+      "evidence_needed": "Pilot with 500 farmers to measure reduction in crop loss versus control group; message open rates and action compliance data.",
+      "priority": "High",
+      "risk": "Low"
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No founder background provided; assumed generalist team. Needs deep agri/climate domain expertise in Peru."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "B2B2C model addresses large agribusinesses; TAM of smallholder agriculture in Peru is potentially >$1B if including crop value at risk, but actual serviceable market may be smaller initially."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Extremely painful: crop losses from weather events destroy farmer income and disrupt supply chains; current workarounds are ineffective."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Some generic weather apps and government alerts exist, but hyper-local WhatsApp advice with actionable recommendations is a clear differentiator."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 6,
+        "note": "Founder likely has personal connection to agriculture or climate tech, but not evident from idea description alone."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "WhatsApp penetration, improved satellite data availability, and increasing climate volatility make this timely."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 7,
+        "note": "Similar B2B2C agri-insurance and advisory models exist in India (e.g., CropIn) and Africa; validates model but not direct competitors."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 8,
+        "note": "Requires long-term relationships with agribusinesses and farmers; founder would need to be committed for 5+ years."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "Scalable via WhatsApp and satellite data, but requires onboarding agribusinesses and farmer networks; per-customer acquisition may be heavy."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Climate tech for agriculture is a huge and underserved space; hyper-local actionable advice is a strong angle."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "Idea is well-defined and ready for testing; could start pilot with minimal product."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 6,
+        "note": "Not clear if founder is fully committed; one idea at a time is assumed."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 7,
+        "note": "The B2B2C model shows understanding of agribusiness procurement workflow, but depth could be improved."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 6,
+        "note": "Uses satellite data and models, but no proprietary AI; explainability and recommendations could leverage LLMs for personalization."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Positioned as 'protect supply chain', reduce volatility, improve loyalty – outcome-focused."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Targeting entire Peruvian smallholder agri supply chain is ambitious; but first step is feasible."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No mention of learning from failures; should have clear testable hypotheses."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Agriculture requires domain expertise; low trust between farmers and generic services; ClimaAgro can build trust via agribusiness partners."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "Advisory process is key; but product is also the alert system; need to ensure process integration."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 5,
+        "note": "Risk of building before real demand; evidence needed from pilot."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 8,
+        "note": "Subscription to agribusinesses based on number of farmers or alerts; aligns with outcome pricing."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "Satellite data costs are variable; WhatsApp is cheap; need to manage scaling costs."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "Solution is new, not legacy; uses modern data sources and distribution."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Team needs fluency in agronomy, climate science, and operations; not fully demonstrated."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No founder data given; assumed average team. Need domain expertise in Peruvian agriculture and climate data."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "TAM of smallholder agriculture in Peru is large (>$1B when including crop value and supply chain disruptions), but SOM is modest initially. Growing due to climate change."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Hyper-local actionable alerts via WhatsApp are novel and defensible via data integration and partner relationships. Moat is distribution and trust."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No evidence of pilot, LOIs, or revenue. Idea is pre-traction. Need pilot results to validate."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "Subscription model to agribusinesses is reasonable; LTV:CAC unknown, margins likely >60% if scalable. But unit economics unproven."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 6,
+        "weighted": 0.48,
+        "rationale": "Generic weather alerts and some agri-tech startups exist, but none focus on hyper-local WhatsApp advice for Peruvia smallholders. Need to out-execute."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 4,
+        "weighted": 0.2,
+        "rationale": "No financial data provided. Burn rate and runway unknown. High risk of undercapitalization pre-pilot."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 6,
+        "weighted": 0.12,
+        "rationale": "Main failure mode: low farmer adoption of advice or low willingness of agribusinesses to pay. Mitigated by low-cost channel and proven demand."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.55,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": [
+        "Secure a pilot with at least 500 farmers and one agribusiness partner within 3 months.",
+        "Demonstrate measurable reduction in crop loss (e.g., 20%+ vs control) and high message open rates (>80%).",
+        "Show early LOIs or subscription commitments from 2-3 agribusinesses."
+      ]
+    },
+    "go_no_go": "CONDITIONAL_GO",
+    "decision": "Proceed with caution. Validate through pilot before full build-out. Focus on closing one agribusiness partner and measuring impact.",
+    "next_experiments": [
+      "Conduct 20+ interviews with agribusiness buyers in Peru to validate willingness to pay and desired outcomes.",
+      "Launch a WhatsApp-based MVP for 50 farmers with manual curation of alerts to test engagement.",
+      "Run a controlled pilot with 500 farmers comparing crop loss between alert recipients and control group."
+    ],
+    "kill_criteria": [
+      "After 3 months, no agribusiness partner signs a pilot agreement or LOI.",
+      "Message open rates below 50% or action compliance below 20% in pilot.",
+      "Unit economics show LTV:CAC < 2x after pilot costing."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We deliver hyper-local, actionable climate alerts to smallholder farmers via WhatsApp, paid for by agribusiness buyers to de-risk their supply chains."
+  },
+  {
+    "idea": "ClimaAgro Wedge: FrostAlert for Andean Potato Farmers - hyper-local frost warnings via WhatsApp to smallholder potato farmers in Peru's Mantaro Valley with 7-day advance notice and actionable steps, charged at $5 seasonal subscription, validated by 10 prepaid farmers from existing WhatsApp groups.",
+    "selected_gap": "Personalized, hyper-local climate alerts via WhatsApp",
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 4,
+        "note": "No explicit founder background; reliance on existing WhatsApp groups shows some domain access but not deep insider knowledge."
+      },
+      {
+        "criterion": "Market size",
+        "score": 4,
+        "note": "Mantaro Valley potato farmers are a niche segment; TAM likely under $1B even including all Andean regions."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Frost causes major crop losses; farmers lack reliable hyper-local forecasts, making this a high-pain problem."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Generic weather apps exist but not tailored to potato frost or WhatsApp-delivered; informal networks are weak substitutes."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Founder's personal connection not described; moderate indirect pull via farmer networks."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "WhatsApp >80% penetration in rural Peru; increasing climate volatility due to El Niño creates urgency."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 5,
+        "note": "Similar agro-advisory services exist in India and Africa, but no direct comparable in Peru validated."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 6,
+        "note": "Founder shows intent but no track record; the model requires sustained seasonal engagement."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "WhatsApp scales but hyper-local weather models and actionable advice require regional customization; not instantly global."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Agri-tech for smallholders is an underserved market with potential for positive impact and recurring revenue."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Started with a narrow geography and concrete validation step via 10 farmers; pragmatic action."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focused on one idea but early stage; no evidence of distraction but also no extreme commitment yet."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Delivery via WhatsApp aligns with farmer communication habits; actionable steps integrate into daily routine."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 4,
+        "note": "No mention of AI; relies on weather models, not edge AI. Lacks self-improving loop."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Sells frost alerts with actions to avoid crop loss, but pricing is subscription not outcome-based yet."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 5,
+        "note": "Initially only Mantaro Valley; ambition grows with scale but current scope is limited."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "Evidence needed includes compliance data; implies learning from pilot, but not deeply embedded."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Agriculture requires domain expertise; farmers may distrust outsiders, but WhatsApp groups build trust."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "Process involves alert generation and delivery; clear workflow but not deeply proprietary yet."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 8,
+        "note": "10 prepaid farmers show genuine demand; avoided free pilots for paying users early."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Seasonal subscription per farmer; clear unit pricing, though not per outcome (e.g., per saved crop)."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 8,
+        "note": "WhatsApp delivery is near-zero marginal cost; data sources may be free or low-cost. Good margin potential."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 6,
+        "note": "Not bolting AI; simple rule-based alerts; could add AI later, but not a risk here."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 5,
+        "note": "Domain knowledge limited to initial observation; weather modeling and operational delivery need further development."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No details on founder background; recruiting from existing groups shows some network but not unique insight."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "TAM limited to Mantaro Valley potato farmers; even if expanded across Andes, likely under $1B, but growing due to climate urgency."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 5,
+        "weighted": 0.75,
+        "rationale": "Hyper-local alerts are valuable but easily copied; moat depends on proprietary weather models or data partnerships."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "Only 10 prepaid farmers; no pilot data on crop loss reduction, message open rates, or compliance."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 4,
+        "weighted": 0.4,
+        "rationale": "$5 seasonal subscription gives low LTV; customer acquisition cost minimal via existing groups, but LTV:CAC unclear. Margins >60% possible if fixed costs low."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "No direct funded competitor for hyper-local potato frost alerts; but generic weather apps and informal networks are free."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 6,
+        "weighted": 0.3,
+        "rationale": "Burn rate likely very low (founder time + WhatsApp costs); runway assumed >18 months if bootstrapped."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Failure mode: farmers don't find alerts accurate or actionable, or refuse to pay; low-tech mitigations exist."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.2,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": ""
+    },
+    "go_no_go": "NO GO",
+    "decision": "DECLINE",
+    "next_experiments": [
+      "Pilot with 500 farmers to measure crop loss reduction vs control group.",
+      "Track message open rates and action compliance (e.g., % who cover crops).",
+      "Interview farmers to validate willingness to pay and improve actionability.",
+      "Test scalability of hyper-local weather data collection (e.g., from public stations or low-cost sensors)."
+    ],
+    "kill_criteria": [
+      "Farmers show <50% action compliance for alerts.",
+      "Crop loss reduction is not statistically significant compared to non-users.",
+      "Customer acquisition cost exceeds $1 per farmer via existing channels.",
+      "Unable to achieve 80% message open rate after pilot phase."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We send 7-day advance frost alerts via WhatsApp to potato farmers in the Peruvian Andes, helping them save crops from sudden freezes."
+  }
+]

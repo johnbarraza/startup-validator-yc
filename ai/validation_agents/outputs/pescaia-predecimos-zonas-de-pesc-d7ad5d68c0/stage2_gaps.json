@@ -1,0 +1,80 @@
+{
+  "research_source": "PescaIA: daily predictive fishing zones via WhatsApp using free satellite data (SST, chlorophyll, currents) plus historical catches. Target: 60k artisanal fishermen in Peru wasting 40–60% fuel on unguided search. Revenue B2B from cooperatives and FONDEPES.",
+  "gaps": [
+    {
+      "id": "GAP-1",
+      "title": "Daily hyperlocal predictive fishing maps via accessible channel",
+      "pain": "Artisanal fishermen waste 40–60% of fuel costs searching for fish, relying on traditional methods, generic quarterly bulletins, or expensive reactive hardware. No existing solution delivers daily, species‑specific predictions tailored to their exact fishing zones through a low‑barrier channel like WhatsApp.",
+      "why_now": "Free satellite data (NASA, Copernicus) + cheap cloud computing enable scalable processing. WhatsApp penetration is high among fishing communities, and cooperatives seek fuel savings amid rising prices. Competitors are either industrial‑focused or lack predictive features.",
+      "evidence_needed": "Pilot with 50 vessels from 3 cooperatives: measure fuel consumption reduction and catch rate change vs control group; interview cooperative managers on willingness to pay per vessel per year.",
+      "priority": "high",
+      "risk": "Initial prediction inaccuracy could damage trust; government might eventually offer a free alternative; regulatory closures may limit actual fishing zones."
+    },
+    {
+      "id": "GAP-2",
+      "title": "Integration of fishermen's own historical catch data to personalize predictions",
+      "pain": "Fishermen's experiential knowledge and past catch locations are not systematically used. Current tools ignore individual/cooperative fishing patterns, missing the chance to merge traditional wisdom with satellite data for better accuracy.",
+      "why_now": "Cooperatives are beginning to digitize logbooks; machine learning can incorporate user‑contributed data to create a defensible data moat. Early movers can lock in unique training sets.",
+      "evidence_needed": "Digitize 6+ months of catch logs from 2 cooperatives; build ML model with/without historical data; compare prediction accuracy; survey data‑sharing willingness.",
+      "priority": "medium",
+      "risk": "Catch data may be noisy or incomplete; fishermen may resist sharing exact GPS locations; data ownership and privacy concerns could hinder adoption."
+    },
+    {
+      "id": "GAP-3",
+      "title": "Offline‑first delivery via SMS or voice for remote areas with no internet",
+      "pain": "Many fishing grounds lack reliable mobile data. Fishermen relying solely on WhatsApp miss predictions when offshore. No service offers both online and offline channels for daily hot‑spot maps.",
+      "why_now": "Feature phones still common; SMS and USSD are robust; telecom partnerships could offer zero‑rated data. Other apps assume full smartphone connectivity.",
+      "evidence_needed": "Map internet coverage in key fishing ports and offshore zones; test SMS‑based coordinate delivery with 20 fishermen; compare adoption and user satisfaction vs WhatsApp‑only.",
+      "priority": "medium",
+      "risk": "SMS costs may deter B2B buyers; WhatsApp suffices for most users; maintaining two channels dilutes development focus."
+    },
+    {
+      "id": "GAP-4",
+      "title": "Automated fuel‑savings quantification to demonstrate clear ROI for cooperatives",
+      "pain": "Cooperatives are reluctant to pay for a predictive service without proven savings. No existing tool automatically tracks and reports fuel consumption reduction per trip attributable to the predictions.",
+      "why_now": "Fuel prices are volatile; cooperatives must justify expenses to members. Simple GPS‑based trip‑logging can approximate savings and build a business case quickly.",
+      "evidence_needed": "Prototype a calculator that estimates fuel use from predicted vs actual routes; test with 5 cooperative managers; measure their payment willingness after reviewing projected savings.",
+      "priority": "high",
+      "risk": "Accurate fuel measurement may require vessel sensors; savings estimates could be challenged if not validated; fishermen may not log trips consistently."
+    },
+    {
+      "id": "GAP-5",
+      "title": "Multi‑species and multi‑gear prediction models",
+      "pain": "Artisanal fishermen target diverse species (anchovy, tuna, mahi‑mahi, etc.) with different gear (gillnets, longlines, purse seines). Generic predictions ignore species‑specific behaviour and gear effectiveness, leading to suboptimal catches.",
+      "why_now": "Satellite data can be interpreted per species; machine learning supports multi‑output models. Early specialization in key Peruvian species builds competitive differentiation.",
+      "evidence_needed": "Gather 3‑month species‑specific catch data for 3 target species; build preliminary models; compare catch rates with generic predictions; interview fishermen on relevance.",
+      "priority": "medium",
+      "risk": "Insufficient historical data per species; model complexity grows; fishermen may switch target species based on market, reducing predictability."
+    },
+    {
+      "id": "GAP-6",
+      "title": "Combined fishing location and market price intelligence",
+      "pain": "Fishermen lack real‑time information on which species command higher prices at different landing sites. They may catch high volume but low value. No service integrates predictive hot‑spots with dynamic market pricing to maximise revenue.",
+      "why_now": "Cooperatives collect daily price data; mobile money adoption is rising; linking prediction to economic return provides immediate tangible value beyond fuel savings.",
+      "evidence_needed": "Collect daily market prices at 3 landing sites; survey 30 fishermen on species selection criteria; prototype a tool that suggests species based on expected profit; gauge interest.",
+      "priority": "low",
+      "risk": "Price data may be incomplete or delayed; fishermen may not trust economic projections; adds complexity to the core value proposition."
+    },
+    {
+      "id": "GAP-7",
+      "title": "Compliance and sustainability layer (quotas, closed areas)",
+      "pain": "Fishermen risk fines for fishing in protected zones or exceeding quotas. No existing predictive tool incorporates official boundaries and sustainability alerts, forcing them to rely on memory or paper maps.",
+      "why_now": "Fisheries management is tightening in Peru; export markets demand traceability; integrating compliance into the daily map adds trust and opens government partnership opportunities.",
+      "evidence_needed": "Obtain official georeferenced closure data from IMARPE; overlay on prediction map; interview cooperative leaders about violation frequency and need for automated alerts; explore partnership interest.",
+      "priority": "low",
+      "risk": "Regulations change often; fishermen may perceive alerts as surveillance; feature creep could slow user adoption."
+    },
+    {
+      "id": "GAP-8",
+      "title": "Early warning system for oceanographic anomalies (e.g., El Niño shifts)",
+      "pain": "Major anomalies like El Niño drastically redistribute fish, causing weeks of failed catches. Fishermen receive no advance warning, leaving them stranded. No service alerts them to adjust target species or grounds before impact.",
+      "why_now": "Climate change increases anomaly frequency; satellite data enables early detection; providing actionable advice builds resilience and long‑term customer loyalty.",
+      "evidence_needed": "Analyse historical catch records during past El Niño events; develop anomaly detection algorithms; run a simulation with 10 experienced fishermen to test interpretation and actionability of alerts.",
+      "priority": "low",
+      "risk": "Low‑frequency events make validation long and risky; false alarms erode trust; technical complexity may delay launch."
+    }
+  ],
+  "recommended_gap_id": "GAP-1",
+  "checkpoint_instruction": "Validate pain and willingness‑to‑pay with 3 pilot cooperatives using a lightweight MVP of daily WhatsApp hot‑spot maps built with free satellite data and historical catch patterns. Measure fuel consumption change and catch rate vs baseline after 4 weeks.",
+  "source": "llm"
+}

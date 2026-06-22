@@ -1,0 +1,165 @@
+{
+  "idea": "ContaBot: servicio de contabilidad automática para microempresas y PYMES peruanas que deben cumplir con SUNAT (factura electrónica, declaraciones mensuales PDT, impuesto a la renta). Hoy pagan S/200-500/mes a un contador o lo hacen mal y reciben multas. ContaBot lee sus facturas electrónicas de SUNAT directamente via API, categoriza gastos, genera el PDT automáticamente y lo presenta ante SUNAT. Modelo: cobramos S/80/mes por empresa, hacemos el trabajo completo como servicio no como software.",
+  "market": "PYMES peruanas obligadas a facturación electrónica y declaraciones SUNAT (aprox. 200.000-500.000 empresas formales con ventas > S/100k/año). TAM: ~US$500M/año en servicios contables para microempresas. SAM: ~US$200M en gasto contable de microempresas que hoy contratan contador externo o fallan en cumplimiento. SOM (12 meses): ~US$60k con 500 empresas a S/80/mes.",
+  "solutions": [
+    {
+      "id": "s1",
+      "name": "Contador humano independiente",
+      "category": "External Accountant",
+      "observed_positioning": "Servicio personalizado a S/200-500/mes; confianza y experiencia, pero variable en calidad y sin automatización. Opción dominante en microempresas."
+    },
+    {
+      "id": "s2",
+      "name": "No hacer nada / incumplimiento",
+      "category": "Do-Nothing / Non-Compliance",
+      "observed_positioning": "Muchos microempresarios ignoran obligaciones o declaran con errores; alto riesgo de multas SUNAT (>S/1,500). Alternativa común por desconocimiento o costo."
+    },
+    {
+      "id": "s3",
+      "name": "Autogestión con Excel",
+      "category": "Manual Spreadsheets",
+      "observed_positioning": "Uso de plantillas propias o formatos bajados de SUNAT; requiere conocimiento contable y tiempo, propenso a errores."
+    },
+    {
+      "id": "s4",
+      "name": "Alegra",
+      "category": "Cloud Accounting Software",
+      "observed_positioning": "Plataforma SaaS con facturación electrónica, contabilidad básica y reportes; penetración en Perú. Plan desde ~S/39/mes pero requiere que el usuario categorice y entienda contabilidad."
+    },
+    {
+      "id": "s5",
+      "name": "Siigo",
+      "category": "Cloud Accounting Software",
+      "observed_positioning": "ERP contable con módulo de facturación, inventario y nómina; presencia en Perú vía alianzas. Enfocado a PYMEs con contador interno o externo."
+    },
+    {
+      "id": "s6",
+      "name": "ContaPyme",
+      "category": "Cloud Accounting Software",
+      "observed_positioning": "Software 100% peruano, especializado en PYMES; incluye PDT, libros electrónicos y facturación. Requiere aprendizaje y cierta dedicación de la empresa."
+    },
+    {
+      "id": "s7",
+      "name": "Nubox",
+      "category": "Cloud Accounting Software",
+      "observed_positioning": "Contabilidad simplificada chilena adaptada a Perú; plan PYME ~S/79/mes con facturación ilimitada. Buena UX pero aún requiere intervención humana para conciliaciones complejas."
+    },
+    {
+      "id": "s8",
+      "name": "QuickBooks + conector SUNAT",
+      "category": "Cloud Accounting Software",
+      "observed_positioning": "Marca global con partner local para integrar facturación electrónica; no cubre PDT automático ni presenta declaraciones sin pasos adicionales. Plan desde ~US$15/mes."
+    },
+    {
+      "id": "s9",
+      "name": "SAP Business One",
+      "category": "Enterprise ERP",
+      "observed_positioning": "ERP robusto con localización SUNAT; costoso (implementación >US$5,000) y orientado a medianas-grandes, no microempresas."
+    },
+    {
+      "id": "s10",
+      "name": "Odoo con módulo Perú",
+      "category": "Enterprise ERP",
+      "observed_positioning": "ERP open-source con partner local que adapta contabilidad; flexible pero requiere personalización y mantenimiento técnico, no apto para microempresas sin TI."
+    },
+    {
+      "id": "s11",
+      "name": "Zoho Books + integración SUNAT",
+      "category": "Cloud Accounting Software",
+      "observed_positioning": "Suite global con API abierta; terceros han creado puentes para facturación peruana. Poco conocido en Perú y sin PDT integrado de fábrica."
+    },
+    {
+      "id": "s12",
+      "name": "SmartConexa",
+      "category": "Peruvian Fintech",
+      "observed_positioning": "Plataforma peruana de facturación electrónica y gestión de comprobantes; integración con SUNAT pero no reemplaza al contador. Plan desde S/19/mes solo facturación."
+    },
+    {
+      "id": "s13",
+      "name": "Portal SUNAT (facturador gratuito)",
+      "category": "Free Government Tool",
+      "observed_positioning": "Emisión de facturas electrónicas sin costo; no ofrece contabilidad, categorización ni generación de PDT. Solución complementaria, siempre necesitará un contador."
+    },
+    {
+      "id": "s14",
+      "name": "BPO contable local (outsourcing)",
+      "category": "BPO Accounting Services",
+      "observed_positioning": "Empresas de servicios contables que asignan un contador al negocio; precios desde S/150/mes, proceso manual con algo de software. Suelen atender varias PYMES con un contador."
+    },
+    {
+      "id": "s15",
+      "name": "Contabilium (Latam)",
+      "category": "Cloud Accounting Software",
+      "observed_positioning": "Startup argentina con expansión a Perú; promete contabilidad automática pero aún necesita categorización manual del usuario. Plan desde ~US$20/mes."
+    }
+  ],
+  "research_summary": "El mercado peruano de microempresas está dominado por contadores humanos (frágiles, caros) y software local que requiere conocimientos contables. La facturación electrónica obligatoria abre oportunidades de automatización, pero ningún competidor ofrece un servicio gestionado de punta a punta a precio ultra bajo. Los sustitutos incluyen incumplimiento (alto riesgo) y BPOs tradicionales (aún más caras). ContaBot apunta al segmento insatisfecho de 200-500 S/ mes que busca cumplimiento sin esfuerzo.",
+  "competitor_signals": [
+    {
+      "competitor": "Alegra",
+      "hiring_score": 7,
+      "funding_score": 8,
+      "product_score": 8,
+      "team_score": 7,
+      "market_score": 8,
+      "tech_score": 6,
+      "overall_score": 75.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Ronda Serie B de ~US$25M en 2022 (Riverwood Capital), equipo >400 empleados, crecimiento en Perú gracias a facturación electrónica obligatoria. Fuerte en UX y soporte, pero no ofrece servicio gestionado: el cliente debe categorizar y entender contabilidad. Bajo riesgo de automatizar el rol del contador sin perder su modelo SaaS."
+    },
+    {
+      "competitor": "Siigo",
+      "hiring_score": 6,
+      "funding_score": 9,
+      "product_score": 7,
+      "team_score": 7,
+      "market_score": 7,
+      "tech_score": 5,
+      "overall_score": 71.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Adquirida por Accel-KKR en 2021 (monto no revelado, estimado >US$100M). Integra facturación, inventario y contabilidad, pero su enfoque sigue siendo PYMEs con contador interno. No hay movimiento hacia servicio AI-managed. Su presencia peruana es a través de distribuidores locales."
+    },
+    {
+      "competitor": "ContaPyme",
+      "hiring_score": 4,
+      "funding_score": 3,
+      "product_score": 6,
+      "team_score": 5,
+      "market_score": 6,
+      "tech_score": 4,
+      "overall_score": 45.0,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Empresa peruana sin rondas conocidas, probablemente autofinanciada. Buena adaptación local pero interfaz anticuada y sin IA. Dependencia de la recomendación contador-cliente. Si no innova, perderá frente a alternativas más automatizadas."
+    },
+    {
+      "competitor": "Nubox",
+      "hiring_score": 5,
+      "funding_score": 6,
+      "product_score": 7,
+      "team_score": 6,
+      "market_score": 5,
+      "tech_score": 5,
+      "overall_score": 58.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Chilena con presencia incipiente en Perú (adquirió ContaSimple en 2019). Ronda ~US$7M en 2018. Buena UX pero baja inversión en IA; riesgo de ser desplazada por jugadores más agresivos. Mercado peruano aún pequeño para ellos."
+    },
+    {
+      "competitor": "QuickBooks",
+      "hiring_score": 8,
+      "funding_score": 10,
+      "product_score": 6,
+      "team_score": 8,
+      "market_score": 5,
+      "tech_score": 8,
+      "overall_score": 78.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Intuit tiene recursos ilimitados pero la adaptación a SUNAT es débil (depende de partners locales). No han lanzado un servicio gestionado. Si decidieran invertir en Perú con IA, serían un rival temible. Hoy no priorizan ni entienden el microempresario peruano."
+    }
+  ],
+  "source": "llm"
+}

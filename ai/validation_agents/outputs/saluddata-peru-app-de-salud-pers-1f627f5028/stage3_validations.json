@@ -1,0 +1,637 @@
+[
+  {
+    "idea": "SaludData Peru se enfoca inicialmente en el talón de farmacia como puerta de entrada: los usuarios escanean sus boletas mediante OCR localizado que extrae medicamento, dosis, precio y farmacia, construyendo un historial digital de medicamentos. A partir de ahí, la app compara precios en farmacias cercanas y genera alertas de riesgos (interacciones, duplicidades) y recordatorios de reposición. Los datos agregados y anonimizados se monetizan con EPS y farmacias interesadas en patrones de adherencia y gasto real por zona, mientras el usuario accede gratis a su pasaporte de medicación.",
+    "selected_gap": {
+      "id": "GAP-02",
+      "title": "Digitalización automatizada de boletas de farmacia peruanas",
+      "pain": "Alta",
+      "why_now": "La madurez del OCR y la ubicuidad de smartphones con cámara permiten capturar datos de comprobantes locales, eliminando la tediosa entrada manual sin competencia en el mercado.",
+      "evidence_needed": "Test de precisión con 100 boletas de cadenas como MiFarma e InkaFarma; medición de tiempo ahorrado vs registro manual; encuesta de satisfacción con 50 usuarios.",
+      "rank": 1,
+      "risk": "Bajo"
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No se conoce la experiencia del fundador en salud digital o farmacia peruana."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "TAM del mercado farmacéutico peruano > $1B, pero depende de adopción digital."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Alto dolor: errores de medicación, falta de historial y comparación de precios."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Baja competencia en Perú; apps internacionales no adaptadas al mercado local."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Desconocido si el fundador tiene experiencia personal con el problema."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 9,
+        "note": "OCR maduro y smartphones ubicuos hacen posible la captura automatizada ahora."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Existen apps como GoodRx en EE.UU., pero no en Perú ni con foco en boletas."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Salud requiere relaciones a largo plazo con farmacias y aseguradoras."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software escalable, pero requiere integraciones locales y red de farmacias."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Intersección de healthtech y fintech con oportunidad de datos agregados."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Comienzan con OCR en boletas, validando con usuarios reales."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Se enfocan en una sola idea, aunque podría diversificarse."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 7,
+        "note": "Entienden el flujo de compra en farmacia, pero necesitan más profundidad."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 6,
+        "note": "OCR es AI pero no cutting-edge; alertas podrían usar ML básico."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Venden ahorro, seguridad y adherencia, no solo una app de escaneo."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Ambicioso pero acotado a Perú; podría expandirse a otros mercados."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No se mencionan mecanismos para aprender de fallos en el proceso."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Salud es un mercado de alta expertise y baja confianza, ideal para construir moat."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "La experiencia de escaneo y alertas es clave, pero no se detalla proceso."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Deben validar demanda antes de escalar; riesgo de construir sin demanda."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Monetizan datos agregados por resultado, no por usuario. Modelo alineado."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "OCR tiene costo de procesamiento, pero no se detalla optimización."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Construyen solución nueva, no parche sobre sistemas existentes."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Requiere expertise en farmacia peruana, modelo de datos y operaciones."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "Equipo no conocido; falta evidencia de experiencia en salud digital o farmacia peruana."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "TAM > $1B (mercado farmacéutico peruano ~$5B), creciendo con digitalización."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "OCR no es único, pero datos agregados y alertas crean valor; moat por red de farmacias."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "Sin tracción; solo idea conceptual sin prototipo ni usuarios."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "Freemium + monetización de datos; aún sin validar LTV/CAC."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 7,
+        "weighted": 0.56,
+        "rationale": "Pocos competidores directos en Perú; apps genéricas no atienden boletas locales."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No se conocen costos ni burn; asumimos gastos mínimos en etapa inicial."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Riesgos regulatorios (protección de datos) y adopción de farmacias; mitigables con anonimización."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.36,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Validar precisión OCR con 100 boletas reales, medir ahorro de tiempo vs manual, encuesta de satisfacción con 50 usuarios, y conseguir 10 farmacias interesadas en datos agregados."
+    },
+    "go_no_go": "conditional_proceed",
+    "decision": "conditional_pass",
+    "next_experiments": [
+      "Test de OCR con 100 boletas de MiFarma e InkaFarma, midiendo precisión de extracción de medicamento, dosis, precio y farmacia.",
+      "Medición de tiempo ahorrado vs registro manual en 20 usuarios.",
+      "Encuesta de satisfacción con 50 usuarios sobre utilidad percibida y disposición a compartir datos.",
+      "Entrevistas con 10 farmacias para evaluar interés en datos agregados de adherencia y gasto."
+    ],
+    "kill_criteria": [
+      "Precisión de OCR < 80% en campos clave.",
+      "Usuarios no perciben ahorro de tiempo significativo (>2 min por boleta).",
+      "Menos del 60% de usuarios dispuestos a compartir datos anónimos.",
+      "Ninguna farmacia expresa interés en pagar por datos agregados."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "We digitize Peruvian pharmacy receipts into a personal medication ledger, enabling price savings and health alerts, and sell anonymized adherence insights to insurers and pharmacies."
+  },
+  {
+    "idea": "SaludData Peru becomes a B2B data pipeline provider: an OCR API specialized in Peruvian pharmacy receipts (boletas) that automatically extracts medication names, dosages, patient IDs, and dates, structuring them into a normalized format for direct integration with EPS, clinic, or pharmacy chain systems. The platform aggregates real-time, anonymized medication usage patterns and adherence analytics, feeding risk models for chronic disease management. The buyer is the head of data or operations at a pharmacy chain or an EPS, who currently wastes thousands of dollars monthly on manual data entry and lacks visibility into patient medication behavior outside their walls.",
+    "selected_gap": "GAP-02: Digitalización automatizada de boletas de farmacia peruanas",
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No specific founder background provided; assumes general domain interest."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "TAM likely in tens of millions; not >$1B but niche."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "High pain: manual data entry costs thousands monthly."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "No direct competitor; generic OCR possible but weak on Peruvian formats."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unclear founder passion; could be high if founder has healthcare background."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "OCR maturity and smartphone ubiquity make it feasible now."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar receipt OCR startups exist globally but not in Peru."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Data pipeline business requires long-term dedication."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "Can scale to other document types but initial niche limits."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "B2B healthcare data is a growing space."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Idea is specific and actionable; go-to-market focused."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Suggests single-minded focus on this idea."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Targets integration with existing systems; reduces manual work."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "OCR + analytics; model improvements directly enhance product."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Focus on cost savings and adherence analytics, not just OCR."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Goal to become data pipeline for entire ecosystem, not just OCR."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "Implicit learning from validation experiments."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Peruvian healthcare has low trust; expertise in local regulations needed."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "Data normalization and integration process is core value."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 7,
+        "note": "Requires validation with real customers before scaling."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 8,
+        "note": "Could price per receipt processed or per report."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "OCR processing costs matter for margin."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Building new pipeline, not adding to old systems."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Need expertise in pharmacy workflows, OCR models, and ops."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 4,
+        "weighted": 1.0,
+        "rationale": "No evidence of founder expertise in Peruvian healthcare or OCR; assumes moderate fit."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 6,
+        "weighted": 1.2,
+        "rationale": "TAM likely $50-200M; growing due to digitization, but not >$1B."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Specialized OCR for local receipts creates defensibility through data and accuracy."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No existing traction; only proposed validation experiments."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 7,
+        "weighted": 0.7,
+        "rationale": "Potential for high margins (SaaS-like) if pricing per transaction; LTV:CAC unknown."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 7,
+        "weighted": 0.56,
+        "rationale": "No direct funded competitors; manual entry is primary alternative."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 4,
+        "weighted": 0.2,
+        "rationale": "No financial details; burn rate unclear; likely early stage with limited runway."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 8,
+        "weighted": 0.16,
+        "rationale": "Rated low risk; main failure mode is low adoption or accuracy issues."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.67,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": [
+        "Complete accuracy test on 100 boletas from MiFarma and InkaFarma achieving >90% for medication names.",
+        "Conduct survey of 50 pharmacy staff or EPS data managers showing >70% would use/pay for the solution.",
+        "Measure time saved vs manual entry (>50% reduction) to validate value proposition."
+      ]
+    },
+    "go_no_go": "CONDITIONAL",
+    "decision": "Proceed with validation experiments as outlined in conditions.",
+    "next_experiments": [
+      "Accuracy test: OCR processing of 100 real boletas from two major chains (MiFarma, InkaFarma).",
+      "Time savings measurement: Compare manual vs automated entry for 50 receipts.",
+      "Customer survey: Interview 50 pharmacy managers or EPS data heads on willingness to adopt."
+    ],
+    "kill_criteria": [
+      "OCR accuracy below 90% for medication names or dosages.",
+      "Less than 30% of surveyed decision-makers express intent to purchase within 6 months.",
+      "No reduction of at least 50% in manual entry time during testing."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We provide an OCR API trained on Peruvian pharmacy receipts that automates medication data extraction and delivers adherence analytics to pharmacies and insurers."
+  },
+  {
+    "idea": "A service that automatically digitizes Peruvian pharmacy receipts via OCR, creating a personal medication log for elderly patients with polypharmacy, sent via WhatsApp.",
+    "selected_gap": "GAP-02",
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No founder background provided; generic assumption."
+      },
+      {
+        "criterion": "Market size",
+        "score": 3,
+        "note": "Peruvian elderly polypharmacy niche; TAM likely under $100M."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Medication errors are life-critical; high pain for caregivers."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "No direct competitor for Peruvian pharmacy OCR, but generic OCR apps exist."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Not supported by founder story; assumed average."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "OCR maturity and smartphone ubiquity make it feasible now."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 5,
+        "note": "Expense receipt OCR exists, but medication-specific not proven."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 6,
+        "note": "Requires long-term trust and habit building."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 5,
+        "note": "Scalable to other geographies but each needs local receipt training."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Healthcare safety is a strong vertical; aligns with YC trends."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for perfect idea",
+        "score": 8,
+        "note": "Launching with WhatsApp MVP; iterating on real feedback."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Single focus on this idea, but unclear if distraction exists."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Deep understanding of caregiver pain and receipt management."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 6,
+        "note": "OCR is mature; not cutting-edge AI, but specialized."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Sells peace of mind and medication safety, not just a logging tool."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Could expand to full medication management platform."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "Not explicitly addressed in proposal."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Healthcare requires trust; domain expertise in pharmacy needed."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 6,
+        "note": "WhatsApp flow is simple, but product value is in accuracy."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Need to validate demand via tests before scaling."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Could price per receipt or monthly subscription."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "OCR API costs per image; need optimization."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "Building new, not retrofitting; WhatsApp native."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Pharmacy domain knowledge and OCR model required."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No founder background provided; average assumption."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "TAM likely under $1B; niche Peru elderly, but timing is reasonable."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Moat from specialized OCR model; but easily replicable."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No evidence yet; planned 50-user test."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "Subscription likely; LTV:CAC uncertain but low CAC via WhatsApp."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "No direct competitor, but generic OCR and manual logging are substitutes."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "Burn rate unknown; likely bootstrap initially."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 6,
+        "weighted": 0.12,
+        "rationale": "Failure mode: low adoption or OCR inaccuracy; risk is moderate."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.77,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "no-go",
+    "decision": "DECLINE",
+    "next_experiments": [
+      "Test OCR accuracy on 100 Peruvian pharmacy receipts (MiFarma, InkaFarma).",
+      "Survey 50 caregivers to validate willingness to adopt and price sensitivity.",
+      "Measure time saved vs manual entry to quantify value proposition."
+    ],
+    "kill_criteria": [
+      "OCR accuracy below 80% on handwritten receipts.",
+      "Less than 30% of surveyed caregivers express strong interest.",
+      "Unable to achieve positive unit economics at scale."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We digitize pharmacy receipts for Peruvian families managing elderly medications, using OCR on WhatsApp photos to prevent medical errors."
+  }
+]

@@ -1,0 +1,649 @@
+[
+  {
+    "idea": "PescaIA",
+    "selected_gap": {
+      "id": "GAP-1",
+      "title": "Daily hyperlocal predictive fishing maps via accessible channel",
+      "pain": "Artisanal fishermen waste 40–60% of fuel costs searching for fish, relying on traditional methods, generic quarterly bulletins, or expensive reactive hardware. No existing solution delivers daily, species‑specific predictions tailored to their exact fishing zones through a low‑barrier channel like WhatsApp.",
+      "why_now": "Free satellite data (NASA, Copernicus) + cheap cloud computing enable scalable processing. WhatsApp penetration is high among fishing communities, and cooperatives seek fuel savings amid rising prices. Competitors are either industrial‑focused or lack predictive features.",
+      "evidence_needed": "Pilot with 50 vessels from 3 cooperatives: measure fuel consumption reduction and catch rate change vs control group; interview cooperative managers on willingness to pay per vessel per year.",
+      "priority": "high",
+      "risk": "Initial prediction inaccuracy could damage trust; government might eventually offer a free alternative; regulatory closures may limit actual fishing zones."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "No founder background provided; assume moderate fit if founder has domain expertise, but unknown."
+      },
+      {
+        "criterion": "Market size",
+        "score": 6,
+        "note": "Tens of thousands of Peruvian artisanal fishermen; potential market in millions but limited by informal economy."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "Fuel waste is 40-60% of costs; problem is painful and quantifiable."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "No direct predictive competitor; indirect alternatives include local knowledge, generic bulletins, expensive hardware."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Unknown; assume moderate without information."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 9,
+        "note": "Free satellite data, WhatsApp penetration, rising fuel costs make it urgent and feasible."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Some comparable examples in agriculture but no exact proxy in fisheries prediction."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 8,
+        "note": "Founder likely committed to solving this problem based on YC context."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Potentially scalable across coastal Peru and Latin America, but requires per-community calibration."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Targets a clear pain point with a simple, accessible solution."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Starting with pilot, not perfecting idea in abstract."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Single-minded focus on this idea assumed."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 9,
+        "note": "Deeply integrated into fishermen's morning decision process via WhatsApp."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 8,
+        "note": "Predictive model improves over time with user data; leverages AI."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 9,
+        "note": "Value proposition is fuel savings and higher catch rates."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Starting with 50 vessels but aims to transform fishing practices regionally."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 8,
+        "note": "Pilot is designed to provide data for iteration."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 9,
+        "note": "Fishermen are skeptical; domain expertise required to build trust."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 8,
+        "note": "Daily map becomes habit-forming and essential."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 9,
+        "note": "Testing with cooperatives ensures real demand before scaling."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Likely per-vessel annual subscription; outcome-based pricing possible."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "Using free satellite data; computational costs assumed low."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 8,
+        "note": "AI is core from the start, not an add-on."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Requires deep domain knowledge; assumed from problem selection."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 6,
+        "weighted": 1.5,
+        "rationale": "No founder background provided; domain expertise assumed but unproven."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "Global artisanal fishing market is large; Peruvian segment worth tens of millions; timing good due to fuel cost pressure."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 8,
+        "weighted": 1.2,
+        "rationale": "Moat from data network effects; prediction accuracy improves with usage; high switching costs once trust is built."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 4,
+        "weighted": 0.6,
+        "rationale": "No traction yet; pilot is planned but not executed."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "Potential for high margins and good unit economics, but unproven; pricing model not specified."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 8,
+        "weighted": 0.64,
+        "rationale": "No direct competitors; existing alternatives are inferior or expensive."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No financial data provided; assume lean operations but need to validate."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 7,
+        "weighted": 0.14,
+        "rationale": "Technical risk moderate; trust and adoption risk high but mitigable with pilot."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 6.33,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Successfully complete pilot with 50 vessels from 3 cooperatives, demonstrate fuel reduction of at least 15% and positive catch rate change, and obtain verbal or written commitment to pay at least $X per vessel per year from cooperative managers."
+    },
+    "go_no_go": "Go (conditional on pilot success)",
+    "decision": "Proceed with pilot immediately. Set clear milestones and kill criteria based on early results.",
+    "next_experiments": [
+      "Launch 1-month pilot with 5 fishermen from one cooperative to test map accuracy and delivery.",
+      "Iterate on prediction model based on feedback.",
+      "Expand to 50 vessels across 3 cooperatives for 3-month pilot with control group.",
+      "Measure fuel consumption via logs, catch rates, and interview willingness to pay."
+    ],
+    "kill_criteria": [
+      "If after 1 month of pilot, fuel reduction < 10% compared to control.",
+      "If fishermen report maps are not useful or too inaccurate in more than 30% of days.",
+      "If no cooperative manager expresses willingness to pay at least $50/vessel/year.",
+      "If government announces competing free service during pilot."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "We deliver daily personalized fishing hotspot maps via WhatsApp to artisanal fishermen, using satellite data and their own catch logs to eliminate fuel waste from blind searching."
+  },
+  {
+    "idea": "PescaIA pivots to serve seafood export companies in Peru who are dependent on artisanal fishermen for their supply. These companies bear the hidden cost of supply unpredictability caused by fishermen wasting 40-60% of their fuel searching blindly for fish. PescaIA sells a predictive intelligence platform directly to the exporter, who then provides the daily WhatsApp catch maps to their network of fishermen for free. This creates a sticky supply chain: fishermen get better catches and lower fuel costs, while the exporter gains real-time visibility into expected landings, reduces procurement risk, and secures higher compliance with international contracts. Revenue comes from annual enterprise licenses based on the number of vessels served, with premium features like supply forecasting dashboards for the buyer.",
+    "selected_gap": {
+      "id": "GAP-1",
+      "title": "Daily hyperlocal predictive fishing maps via accessible channel",
+      "pain": "Artisanal fishermen waste 40–60% of fuel costs searching for fish, relying on traditional methods, generic quarterly bulletins, or expensive reactive hardware. No existing solution delivers daily, species‑specific predictions tailored to their exact fishing zones through a low‑barrier channel like WhatsApp.",
+      "why_now": "Free satellite data (NASA, Copernicus) + cheap cloud computing enable scalable processing. WhatsApp penetration is high among fishing communities, and cooperatives seek fuel savings amid rising prices. Competitors are either industrial‑focused or lack predictive features.",
+      "evidence_needed": "Pilot with 50 vessels from 3 cooperatives: measure fuel consumption reduction and catch rate change vs control group; interview cooperative managers on willingness to pay per vessel per year.",
+      "priority": "high",
+      "risk": "Initial prediction inaccuracy could damage trust; government might eventually offer a free alternative; regulatory closures may limit actual fishing zones."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "No specific founder background given, but idea shows deep understanding of fishing supply chain pain points."
+      },
+      {
+        "criterion": "Market size",
+        "score": 7,
+        "note": "Peru's seafood export market is significant (e.g., $2B+ annually), but artisanal segment is a subset; still large enough."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 9,
+        "note": "40-60% fuel waste is a massive, quantifiable pain that directly impacts profitability."
+      },
+      {
+        "criterion": "Competition",
+        "score": 7,
+        "note": "Industrial fishing has solutions, but artisanal segment is underserved; low direct competition."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 6,
+        "note": "Assumed passion from pivot, but no evidence of founder's personal connection to fishing."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 8,
+        "note": "Free satellite data + cheap compute + WhatsApp ubiquity make this newly feasible and urgent due to fuel prices."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Similar prediction platforms exist in agriculture; some fishing tech startups but not exactly this model."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "Not stated; assume typical startup commitment, but no signal of specific long-term dedication."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 7,
+        "note": "Software can scale to multiple exporters and regions, but requires localized models."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 8,
+        "note": "Vertical AI for an underserved, high-pain market with clear path to value."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Pivot from previous idea shows willingness to iterate and adapt based on market feedback."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focus on one clear pivot; no evidence of side projects."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Understanding of both exporter pain (supply unpredictability) and fisherman pain (fuel waste) indicates deep workflow knowledge."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 7,
+        "note": "Predictive modeling using satellite data and cloud compute is AI-driven, but not at the absolute frontier."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 8,
+        "note": "Selling supply predictability and reduced fuel costs, not a generic software tool."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Aiming to transform the seafood supply chain, not just a feature."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 6,
+        "note": "Pivot suggests learning from prior idea, but no explicit mention of structured analysis."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 6,
+        "note": "Fishing industry may have trust issues, but expertise is high; balance is reasonable."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 7,
+        "note": "Daily WhatsApp maps become a habitual process for fishermen, creating stickiness."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Selling to exporters who then distribute to fishermen could mask true end-user demand; need to ensure pull."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 7,
+        "note": "Annual license per vessel ties pricing to usage and outcome."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "Software has low marginal cost, but satellite data and model training have variable costs; need to monitor."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 7,
+        "note": "The solution changes the workflow fundamentally, not just adding AI to existing processes."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 7,
+        "note": "Combines fishing domain knowledge, predictive models, and WhatsApp operations."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 6,
+        "weighted": 1.5,
+        "rationale": "No specific founder background provided, but pivot shows adaptability and domain insight; not yet proven."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 7,
+        "weighted": 1.4,
+        "rationale": "Peru seafood export market is large (e.g., $2B+), and artisanal supply chain is a significant portion; TAM likely >$1B when considering other South American countries."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 7,
+        "weighted": 1.05,
+        "rationale": "Moat from network effects (exporters lock in fishermen, data from usage improves predictions) and domain expertise; defensible if data accumulates."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 3,
+        "weighted": 0.45,
+        "rationale": "No evidence of pilots, revenue, or users; purely concept stage with identified evidence needed."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "Annual license per vessel is recurring with high margins, but LTV:CAC still unknown; needs validation."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 7,
+        "weighted": 0.56,
+        "rationale": "Low direct competition in artisanal segment; industrial solutions are expensive and not tailored; manual alternatives are inefficient."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No financial data given; assumed reasonable burn for a startup but need more details (e.g., runway not specified)."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 5,
+        "weighted": 0.1,
+        "rationale": "Key risks: prediction accuracy, trust, and potential government-provided alternative; moderate risk."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 5.91,
+      "verdict": "CONDITIONAL_PASS",
+      "conditions_if_conditional": "Achieve pilot with 50 vessels from 3 cooperatives within 6 months, demonstrating fuel reduction >=20% and improved catch rates. Secure at least 2 LOIs from exporters."
+    },
+    "go_no_go": "CONDITIONAL_GO",
+    "decision": "Proceed with validation, but require clear milestones before scaling.",
+    "next_experiments": [
+      "Run pilot with 50 vessels from 3 cooperatives, measuring fuel consumption and catch rates.",
+      "Interview export company procurement managers to gauge willingness to pay $X per vessel per year.",
+      "Develop MVP WhatsApp bot delivering daily maps and measure engagement and feedback."
+    ],
+    "kill_criteria": [
+      "If pilot shows <10% fuel reduction or no improvement in catch rates.",
+      "If fewer than 2 exporters commit to paid pilots within 6 months.",
+      "If prediction accuracy is consistently below 60% for catch location."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We help seafood exporters secure reliable supply by giving their artisanal fishing fleets daily predictive catch maps via WhatsApp."
+  },
+  {
+    "idea": "Focus exclusively on predicting daily aggregation zones for jumbo flying squid (pota) for a single artisanal fishing cooperative in Paita, Peru. Using free NASA satellite data (SST, chlorophyll) and simple behavioral rules for pota, we manually generate a heatmap image each morning and send it via WhatsApp to the cooperative’s 10–15 boat captains. The wedge is hyper-local, single-species, single-cooperative, delivered through the channel they already use, with the sole goal of demonstrating immediate fuel savings and securing a paid pilot within 30 days.",
+    "selected_gap": {
+      "id": "GAP-1",
+      "title": "Daily hyperlocal predictive fishing maps via accessible channel",
+      "pain": "Artisanal fishermen waste 40–60% of fuel costs searching for fish, relying on traditional methods, generic quarterly bulletins, or expensive reactive hardware. No existing solution delivers daily, species‑specific predictions tailored to their exact fishing zones through a low‑barrier channel like WhatsApp.",
+      "why_now": "Free satellite data (NASA, Copernicus) + cheap cloud computing enable scalable processing. WhatsApp penetration is high among fishing communities, and cooperatives seek fuel savings amid rising prices. Competitors are either industrial‑focused or lack predictive features.",
+      "evidence_needed": "Pilot with 50 vessels from 3 cooperatives: measure fuel consumption reduction and catch rate change vs control group; interview cooperative managers on willingness to pay per vessel per year.",
+      "priority": "high",
+      "risk": "Initial prediction inaccuracy could damage trust; government might eventually offer a free alternative; regulatory closures may limit actual fishing zones."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 3,
+        "note": "No evidence of founder expertise in fishing, marine biology, or working with Peruvian artisanal cooperatives."
+      },
+      {
+        "criterion": "Market size",
+        "score": 4,
+        "note": "Initially tiny (one cooperative, 10-15 boats); even expanded, artisanal pota fishing is a niche market."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 5,
+        "note": "Fuel waste is painful but limited to a single species and cooperative; urgency is moderate."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "No known direct daily prediction for pota via WhatsApp; but alternatives like traditional knowledge and generic bulletins exist."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 3,
+        "note": "No personal connection or passion demonstrated by the founder for this specific problem."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 7,
+        "note": "Free satellite data is now available, and WhatsApp is ubiquitous; the combination is timely."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 4,
+        "note": "Similar predictive services exist in other regions (e.g., FishSmart) but not exactly this model; weak evidence of success."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 4,
+        "note": "The idea is narrow and may not sustain long-term commitment; risk of boredom or pivot."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 3,
+        "note": "Manual generation per cooperative does not scale; even automated, each region/species requires separate rules."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 5,
+        "note": "Interesting but not a breakout idea; problem is real but solution is narrow and low-tech."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "Starting with a minimal viable product (manual heatmap) and immediate pilot is a good approach."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focusing solely on this single cooperative/species shows commitment to one idea."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 8,
+        "note": "Understanding that WhatsApp is the daily channel and integrating into their morning routine is deep."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 4,
+        "note": "Simple behavioral rules and manual generation do not leverage AI; not at the edge."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 7,
+        "note": "Focusing on fuel savings outcome rather than selling a software tool is good."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 3,
+        "note": "Single cooperative, single species is not ambitious; scope is deliberately tiny."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 4,
+        "note": "No explicit plan to learn from failures; could improve."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Artisanal fishing is a high-expertise market where trust is earned through proven results."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 3,
+        "note": "Manual generation is not a scalable process; the product is the output, not the process."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Demonstrating fuel savings before asking for payment helps validate demand without false positives."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 5,
+        "note": "Not explicitly defined; suggested per-vessel annual fee, but unclear."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 6,
+        "note": "Using free data and manual labor keeps COGS low, but manual labor is not scalable."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 5,
+        "note": "Not applicable; no legacy system."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 4,
+        "note": "Domain knowledge in pota behavior and fishing operations is required but not shown."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 3,
+        "weighted": 0.75,
+        "rationale": "No information about founder expertise in fishing, AI, or local market; weak fit."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 2,
+        "weighted": 0.4,
+        "rationale": "TAM is tiny (single cooperative, 10-15 boats); even if expanded to all Peruvian pota cooperatives, likely <$10M."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 4,
+        "weighted": 0.6,
+        "rationale": "Low defensibility; manual process and simple rules can be copied; no proprietary data or technology."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No traction yet; no evidence of interest or pilot results."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 3,
+        "weighted": 0.3,
+        "rationale": "Unclear pricing; LTV:CAC unknown; likely low margins due to manual work."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 4,
+        "weighted": 0.32,
+        "rationale": "Weak moat against free government bulletins or copycats; existing competitors like Global Fishing Watch lack daily prediction."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "Low burn rate (free data, manual labor), but no revenue; runway sufficient for pilot only."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "High risk of inaccurate predictions damaging trust; regulatory closures could limit fishing entirely."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 3.0,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Do not proceed with current scope. The idea is too narrow and lacks scalability, defensibility, and founder-market fit. Consider pivoting to a broader platform for multiple cooperatives/species with automated predictions, or accumulate domain expertise before re-engaging.",
+    "next_experiments": [
+      "Interview 10 artisanal fishing cooperatives in Peru to validate if daily predictions are worth paying for.",
+      "Build a prototype with automated data fetching and rule-based heatmaps to test scalability.",
+      "Run a controlled pilot with 2-3 boats measuring fuel savings vs traditional methods."
+    ],
+    "kill_criteria": [
+      "After pilot, if fuel savings < 20% for at least half the trips.",
+      "If cooperatives are unwilling to pay even a small fee ($100/boat/year) after seeing results.",
+      "If government announces a free similar service within 6 months."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "We send daily pota fishing hot zones via WhatsApp to one cooperative in Paita using satellite sea temperature and chlorophyll data."
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "research_source": "llm",
+  "gaps": [
+    {
+      "id": "gap_emotional_gamification",
+      "title": "Lack of Emotional Engagement in Study Apps",
+      "pain": "Students find existing study tools boring and impersonal, leading to low daily usage and habit drop-off. They crave a fun, caring relationship with their study aid to sustain motivation over a semester.",
+      "why_now": "Smartphone natives expect app experiences to be delightful and gamified. The success of virtual pets (e.g., Tamagotchi) and habit games (Habitica) shows demand for emotional bonding, but no major study tool has integrated a nurturing pet/garden metaphor tied to real academic tasks.",
+      "evidence_needed": "A/B test comparing a basic flashcard app with a pet/garden version; measure daily active usage, session length, and user surveys on emotional connection.",
+      "priority": 1,
+      "risk": "Gamification could be perceived as childish by some students; requires ongoing content updates to keep the pet/garden engaging."
+    },
+    {
+      "id": "gap_auto_syllabus_parsing",
+      "title": "Manual Study Planning from Syllabi Remains a Painful Chore",
+      "pain": "Students waste hours at the start of each term manually entering assignment deadlines and readings from syllabi into calendars or to-do lists. This tedious process often leads to mistakes and overlooked tasks, increasing stress and deadline scrambles.",
+      "why_now": "AI document parsing and NLP have advanced enough to reliably extract structured data from PDFs; the shift to digital syllabi post-COVID makes this gap more acute.",
+      "evidence_needed": "Concierge test: manually convert 50 syllabi for users and measure time saved, task completion rates, and NPS versus manual entry. Technical feasibility: accuracy of parsing across universities.",
+      "priority": 2,
+      "risk": "High error rates with varied syllabus formats could undermine trust; privacy concerns with uploaded personal documents."
+    },
+    {
+      "id": "gap_fragmentation",
+      "title": "Fragmented Study Tool Ecosystem Causing Cognitive Overload",
+      "pain": "The average student uses 3-5 separate apps for flashcards, calendar, focus timer, notes, and group chat. Juggling these leads to context switching, lost momentum, and an incoherent view of their overall study progress.",
+      "why_now": "The super-app trend (e.g., WeChat) shows users prefer integrated experiences; bundling can create stickiness and defensive moats.",
+      "evidence_needed": "Survey on app switching frequency and frustration; prototype a unified dashboard and measure conversion rate from fragmented users.",
+      "priority": 3,
+      "risk": "Integrating many features risks mediocre execution on all fronts; may lose to best-in-class point solutions."
+    },
+    {
+      "id": "gap_adaptive_procrastination",
+      "title": "Study Planners Ignore Real-World Procrastination Patterns",
+      "pain": "Existing study planners assume rigid adherence to schedules; they fail to adapt when students inevitably procrastinate, leading to 'all-or-nothing' cramming and poor retention.",
+      "why_now": "Advances in behavioral analytics and machine learning make personalized, adaptive scheduling possible; growing research on effective nudging for procrastinators.",
+      "evidence_needed": "Cohort analysis comparing static vs. adaptive schedules using historical usage data; A/B test nudge effectiveness on task resumption rates.",
+      "priority": 4,
+      "risk": "Requires significant user data and sophisticated AI; may feel intrusive if nudges are too aggressive."
+    },
+    {
+      "id": "gap_social_accountability",
+      "title": "Lack of Social Accountability in Digital Study Aids",
+      "pain": "Studying alone is isolating; most digital tools lack mechanisms for peer accountability or friendly competition, forcing students to rely on informal methods like Discord study groups that don't integrate with their progress tracking.",
+      "why_now": "Social features have become table stakes in fitness (Strava) and language learning (Duolingo); the pandemic normalized remote study, increasing demand for virtual social study experiences.",
+      "evidence_needed": "Prototype a pet-garden sharing feature and measure referral rates, group challenge participation, and retention vs. solo users.",
+      "priority": 5,
+      "risk": "Requires critical mass to be effective; privacy concerns around sharing study data; competitiveness could demotivate struggling students."
+    },
+    {
+      "id": "gap_wellbeing_integration",
+      "title": "Student Well-being and Break Management Overlooked",
+      "pain": "Prolonged study without breaks, mindfulness, or physical activity leads to burnout, reduced productivity, and mental health issues—yet no major study tool explicitly integrates wellness features.",
+      "why_now": "Gen Z is increasingly vocal about mental health; universities are investing in well-being initiatives; a holistic tool could differentiate and improve long-term learning outcomes.",
+      "evidence_needed": "Add a 'pet wellness check' feature that nudges breaks; measure session length, self-reported fatigue, and overall satisfaction versus standard tool.",
+      "priority": 6,
+      "risk": "May distract from core learning value; wellness features require expertise to avoid trivializing mental health."
+    }
+  ],
+  "recommended_gap_id": "gap_emotional_gamification",
+  "checkpoint_instruction": "Validate demand for emotional engagement by building a concierge MVP: manually parse 20 syllabi into study plans, create a basic virtual pet that grows when tasks are completed, and offer to 30 students over 2 weeks. Measure daily active usage, self-reported motivation increases, and willingness to pay. If >40% report the pet made studying more enjoyable and they'd continue using it, proceed to build an automated prototype with AI parsing.",
+  "source": "llm"
+}

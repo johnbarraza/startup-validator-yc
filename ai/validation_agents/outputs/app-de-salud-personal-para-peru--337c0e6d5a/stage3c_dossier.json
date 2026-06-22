@@ -1,0 +1,312 @@
+{
+  "source": "deterministic_fallback",
+  "one_liner": "We help a specific customer segment solve 'Narrow painful workflow' through a focused software/AI workflow.",
+  "problem": {
+    "who_suffers": "Define one specific user and one economic buyer. Avoid broad labels like 'everyone' or 'companies'.",
+    "pain_level": "Quantify hours lost, money lost, risk, errors, or missed revenue per month.",
+    "current_workaround": "Identify the real competitor: spreadsheet, WhatsApp, email, manual labor, incumbent, or doing nothing.",
+    "evidence_needed": "At least 5 interviews, screenshots, public data, or workflow artifacts."
+  },
+  "solution_insight": {
+    "solution": "A narrow workflow that produces an outcome the buyer already values.",
+    "insight": "The likely insight is not 'AI can do it'; it is that a repeated expert workflow can be compressed and standardized.",
+    "non_stack_note": "This dossier intentionally avoids frontend/backend stack because the correct stack changes by idea."
+  },
+  "why_now": [
+    "LLMs and agents can now execute and explain multi-step workflows cheaply.",
+    "Distribution through communities, outbound, and self-serve demos is faster for solo founders.",
+    "Users are more willing to try AI-native tools when the workflow is narrow and auditable."
+  ],
+  "market": {
+    "recommended_focus": "Start where the founder has fastest access to users and evidence; compare Peru, LATAM, and USA before committing.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Potentially strong for problems with local regulation, Spanish workflows, public data, or underserved SMEs.",
+        "tam": "Estimate from national population, firms, households, sector output, or public expenditure.",
+        "sam": "Start with reachable cities, industries, institutions, or customer segments where the founder can sell.",
+        "som_12_months": "Use a bottom-up estimate: reachable leads x conversion rate x annual contract value.",
+        "recommended_sources": [
+          "INEI microdata and surveys",
+          "MEF budget data",
+          "BCRP statistics",
+          "sector associations",
+          "local interviews"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "venture_threshold": "BELOW_$500M",
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "Attractive if the problem repeats across Spanish-speaking markets and does not require heavy country-by-country integration.",
+        "tam": "Estimate from regional sector size, number of firms, workers, students, patients, transactions, or institutions.",
+        "sam": "Prioritize countries with similar language, regulation, distribution, and payment behavior.",
+        "som_12_months": "Estimate expansion only after proving one repeatable channel in the first country.",
+        "recommended_sources": [
+          "World Bank",
+          "IDB",
+          "ECLAC/CEPAL",
+          "national statistics offices",
+          "industry reports"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "venture_threshold": "BELOW_$500M",
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "Useful benchmark for market size and competitor density; attractive if willingness to pay is higher and distribution is reachable.",
+        "tam": "Estimate from US sector spend, number of businesses, paid seats, transactions, or workflow volume.",
+        "sam": "Narrow to a buyer segment the founder can actually reach through outbound, communities, or integrations.",
+        "som_12_months": "Use a conservative founder-led sales or self-serve acquisition model.",
+        "recommended_sources": [
+          "US Census",
+          "BLS",
+          "World Bank",
+          "Statista or industry reports",
+          "academic papers"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "venture_threshold": "BELOW_$500M",
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "Use INEI microdata for Peru when the market depends on households, employment, education, health, agriculture, firms, or municipalities.",
+      "Use MEF/BCRP for public budgets, macro indicators, credit, sector output, and Peru-specific economic framing.",
+      "Use World Bank/CEPAL/IDB for LATAM comparables.",
+      "Use papers and industry reports when the market is technical, clinical, educational, or scientific.",
+      "Use bottom-up SOM for the first 12 months; do not rely only on top-down TAM."
+    ]
+  },
+  "competition_moat": {
+    "alternatives_to_compare": [
+      "doing nothing",
+      "spreadsheet/manual workflow",
+      "horizontal SaaS",
+      "incumbent platform",
+      "AI assistant"
+    ],
+    "moat_candidates": [
+      "proprietary workflow data",
+      "distribution/community",
+      "integrations",
+      "trust/brand",
+      "regulatory or local-domain expertise"
+    ],
+    "weak_moat_warning": "If Claude/OpenAI can solve the job with a prompt, the startup needs a workflow, data, distribution, or compliance layer."
+  },
+  "business_model_pricing": {
+    "model_options": [
+      "monthly SaaS",
+      "usage-based",
+      "transaction fee",
+      "marketplace take rate",
+      "paid pilot",
+      "enterprise license"
+    ],
+    "pricing_rule": "Use no more than 3 plans and tie price to a buyer-visible outcome.",
+    "contribution_margin": "Estimate tokens/API calls, storage, human review, support, and acquisition cost per customer."
+  },
+  "go_to_market": {
+    "first_10": "Founder-led outreach to people with the exact painful workflow.",
+    "first_100": "Repeat the channel that produced the first paid or high-intent users.",
+    "first_1000": "Add scalable distribution: partnerships, integrations, content, community, marketplace, or PLG."
+  },
+  "traction_signals": [
+    "5+ interviews with recent pain stories",
+    "waitlist with qualified users",
+    "letters of intent or paid pilots",
+    "prototype usage by real users",
+    "before/after workflow evidence"
+  ],
+  "roadmap": {
+    "3_months": "Validate the wedge, ship concierge/prototype workflow, close first paying or high-intent users.",
+    "6_months": "Productize repeated steps, measure retention, build first repeatable acquisition channel.",
+    "12_months": "Expand to adjacent workflow or geography after proving retention and willingness to pay."
+  },
+  "risks_mitigations": [
+    {
+      "risk": "Market risk: users like the idea but do not have urgent pain.",
+      "mitigation": "Interview around recent behavior and require evidence of money/time/risk."
+    },
+    {
+      "risk": "AI substitution risk: Claude, OpenAI, or another foundation-model tool absorbs the feature.",
+      "mitigation": "Own workflow data, distribution, integrations, evaluation harnesses, and domain trust beyond the prompt."
+    },
+    {
+      "risk": "Execution risk: solo founder overbuilds before validation.",
+      "mitigation": "Run concierge tests and kill criteria before building broad product surface area."
+    }
+  ],
+  "the_ask": {
+    "amount": "Define a specific amount or resource ask only after the first validation sprint.",
+    "use_of_funds": [
+      "customer discovery",
+      "prototype",
+      "data acquisition",
+      "distribution experiments"
+    ],
+    "milestone": "Unlock proof that one segment has repeated pain and will pay for the outcome."
+  },
+  "product_demo_architecture": {
+    "demo_url": "TODO: deploy a public demo (Streamlit, Vercel, Railway, or Hugging Face Spaces)",
+    "demo_credentials": "TODO: add test user credentials once demo is live",
+    "main_flow_screenshots": [
+      "1. Landing / onboarding screen",
+      "2. Core input form or conversation entry",
+      "3. AI processing / loading state",
+      "4. Result / output screen",
+      "5. Export or share action",
+      "6. Settings or profile (optional)"
+    ],
+    "architecture_diagram": "Frontend (web/mobile) → API layer (FastAPI / Flask) → Orchestration (agent loop) → LLM API + domain data sources → Database (Postgres / SQLite) → Output / report",
+    "repo_structure": [
+      "frontend/  — UI (React / Streamlit / Vue)",
+      "backend/   — API + agent logic",
+      "ai/        — prompts, agents, pipelines",
+      "data/      — seed data, validation sets",
+      "notebooks/ — exploration and analysis",
+      "docs/      — architecture diagram, pitch assets"
+    ],
+    "ai_models_used": [
+      "deepseek-chat — fast, cheap inference for classification and structured extraction",
+      "deepseek-reasoner — multi-step reasoning for validation and scoring"
+    ]
+  },
+  "scorecard": [
+    {
+      "dimension": "problem_validation",
+      "points": 8,
+      "max_points": 15,
+      "note": "Promising only after 5 concrete user interviews prove recent painful behavior."
+    },
+    {
+      "dimension": "solution_insight",
+      "points": 6,
+      "max_points": 10,
+      "note": "Insight needs sharper wording around what existing alternatives miss."
+    },
+    {
+      "dimension": "market_quality",
+      "points": 7,
+      "max_points": 15,
+      "note": "Market sizing is not yet evidenced; compare Peru, LATAM, and USA before choosing focus."
+    },
+    {
+      "dimension": "competition_moat",
+      "points": 5,
+      "max_points": 10,
+      "note": "Moat is weak until workflow data, distribution, or community compounds."
+    },
+    {
+      "dimension": "business_model_pricing",
+      "points": 6,
+      "max_points": 10,
+      "note": "Pricing needs a concrete buyer metric and contribution margin assumptions."
+    },
+    {
+      "dimension": "go_to_market",
+      "points": 6,
+      "max_points": 10,
+      "note": "First 10 users can be founder-led; first 100 and 1,000 need a repeatable channel."
+    },
+    {
+      "dimension": "traction_or_evidence",
+      "points": 3,
+      "max_points": 10,
+      "note": "No traction provided in the input; require interviews, waitlist, pilots, or usage."
+    },
+    {
+      "dimension": "execution_roadmap",
+      "points": 7,
+      "max_points": 10,
+      "note": "A 3/6/12 month roadmap is feasible if the first wedge is narrow."
+    },
+    {
+      "dimension": "risk_control",
+      "points": 6,
+      "max_points": 10,
+      "note": "AI-platform substitution and weak demand are the main risks to control."
+    }
+  ],
+  "total_score": 54,
+  "max_score": 100,
+  "rating": "Needs sharper validation",
+  "external_research_hooks": {
+    "inei_microdatos": "Useful for Peru-specific TAM/SAM evidence from INEI surveys and variable search.",
+    "paperdl": "Useful for finding academic papers when the idea needs scientific, health, education, or technical evidence."
+  },
+  "pressure_test_scorecard": {
+    "pain_intensity": 3,
+    "buyer_clarity": 2,
+    "urgency": 3,
+    "differentiation": 2,
+    "speed_to_validate": 4,
+    "founder_advantage": 2,
+    "total": 16
+  },
+  "fatal_flaws": [
+    {
+      "risk": "Market risk: users like the idea but don't have urgent pain.",
+      "severity": "HIGH",
+      "why_it_matters": "No urgency = no switching from free alternatives.",
+      "fast_test": "5 interviews asking about last time this pain cost them time or money."
+    },
+    {
+      "risk": "Payment blocker: buyer can't pay via SaaS subscription given Peru's informal economy.",
+      "severity": "HIGH",
+      "why_it_matters": "No recurring billing = no SaaS business model.",
+      "fast_test": "Ask 3 target buyers if they have a credit card or Yape for business payments."
+    },
+    {
+      "risk": "Free substitute absorbs 80% of use case before product ships.",
+      "severity": "MEDIUM",
+      "why_it_matters": "WhatsApp + Excel + Google Forms are entrenched and free.",
+      "fast_test": "Map every step of the workflow to existing free tools; identify the gap."
+    }
+  ],
+  "first_10_customers": [
+    {
+      "action": "Send 20 WhatsApp voice messages to target buyers with a 2-sentence problem statement.",
+      "channel": "WhatsApp",
+      "target_persona": "Decision-maker in the target segment",
+      "how_to_reach": "Use LinkedIn to find names, then WhatsApp via shared group or mutual contact."
+    },
+    {
+      "action": "Run a 30-min Zoom demo for 5 warm contacts who already have this pain.",
+      "channel": "LinkedIn",
+      "target_persona": "Operators who currently use the manual workaround",
+      "how_to_reach": "Search LinkedIn for job title + pain keyword, send a connection note referencing the exact problem."
+    },
+    {
+      "action": "Attend one industry event or WhatsApp group where target buyers gather.",
+      "channel": "community",
+      "target_persona": "Any buyer who attends sector events or online communities",
+      "how_to_reach": "Join the WhatsApp group, post a pain-question (not a pitch), DM respondents."
+    }
+  ],
+  "mvp_2_week_test": {
+    "build": "A single-workflow prototype: one input, one output — no dashboard, no settings.",
+    "cut": "Authentication, billing, multi-user, reporting, and any feature beyond the core workflow.",
+    "test_hypothesis": "If 3 of 5 demo users complete the workflow without help and ask 'when can I use this?', demand is real.",
+    "success_signal": "At least 1 user offers to pay or signs a letter of intent within 2 weeks."
+  },
+  "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+}

@@ -1,0 +1,33 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "Other",
+  "customer_type": "B2B",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "Mining maintenance teams are notoriously resistant to changing their workflows; convincing them to trust AI recommendations over expert intuition requires massive behavior change and proof that 'explicable' actually reduces friction.",
+    "Data acquisition from legacy mining equipment (vibration sensors, SCADA) is expensive, non-standard, and often blocked by security concerns. Without high-quality labeled failure data, the platform's AI will underperform, leading to false positives/negatives that erode trust.",
+    "Sales cycles in Peruvian mining are 6-18 months involving procurement departments (SAE) and C-level buy-in; many mining companies have long-term contracts with global OEMs (Caterpillar, Komatsu) that already provide basic diagnostics, creating a sticky incumbent.",
+    "Peru's mining sector is concentrated in a few large companies (Antamina, Yanacocha, etc.) with in-house engineering teams that may build similar tools internally, especially if open-source libraries like TensorFlow make it easy to prototype."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual inspections, spreadsheets)",
+    "Spending already happens on imperfect solutions (maintenance costs, downtime penalties)",
+    "Recurring pain: vibration faults detected weekly or more often",
+    "Measurable cost: lost hours, revenue from unplanned downtime",
+    "B2B: mining companies have maintenance budgets and are willing to invest in downtime reduction",
+    "Users search actively for solutions (maintenance engineers seek better predictive tools)"
+  ],
+  "classification_rationale": "MineAssist-PdM addresses the critical mining pain of unplanned downtime from vibration faults, which causes multi-million dollar losses. Mining companies in Peru already spend heavily on maintenance and actively seek reliable predictive solutions. The platform's explainable AI and natural language recommendations directly replace manual analysis and spreadsheets. Given the structural severity and existing budget, this is a clear painkiller.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "NO",
+  "freemium_rationale": "Mining companies have high willingness to pay for downtime reduction and require customized integration. A free tier would not capture the complex value delivery and could commoditize the product. Instead, pilot projects with clear ROI metrics are more effective in this enterprise B2B context.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "B2B payment in Peru is via CCI bank transfers with 30-60 day invoice cycles; no Stripe-like instant billing. Mining companies require PO numbers and procurement approval, and budgets are annual — a sale made in Q4 may not see cash until next year, creating cash flow risk.",
+  "free_substitute_risk": "Existing vibration analysis software (e.g., from SKF, Bently Nevada) already provides fault detection; many mines rely on Excel-based spreadsheets plus WhatsApp groups to log issues and plan maintenance — this low-tech workflow is 'good enough' and costs nothing extra.",
+  "market_size_reality_check": "Realistic SOM for first 12 months: ~$200K ARR, targeting 5 mid-tier mines at $3-5K/month each. The total addressable market of mines with >$5M maintenance budget is <100 in Peru; informal economy not relevant here, but competition from global vendors limits share.",
+  "hardest_assumption": "That mining companies will pay a premium for 'explicable' AI recommendations over traditional condition monitoring services, and that they have the internal digital maturity to integrate the platform with their existing CMMS (Computerized Maintenance Management Systems).",
+  "devil_rationale": "The idea has merit but faces multiple structural barriers: long sales cycles, data quality dependency, and incumbent resistance. Without a strong industry insider as co-founder and at least 3 paid pilots before raising a seed round, the risk of failure is high. The poor payment infrastructure and free substitutes further weaken the proposition.",
+  "source": "dual_agent_classification"
+}

@@ -1,0 +1,217 @@
+{
+  "inspiration": "MiroFish-style parallel simulation: 10 independent persona agents scored in parallel, aggregate gate=0.6.",
+  "idea": "SaludApp Empresas: A white-label mobile and WhatsApp-based medication management platform for Peruvian employers. Employees use the app to scan pharmacy receipts using OCR to auto-log medications, receive personalized WhatsApp reminders to take pills, view a map of nearby pharmacies with real-time prices (crowdsourced), and get a chronic disease risk score based on validated tools like FINDRISC. Employers access a real-time dashboard showing population-level adherence rates, high-risk employees, and cost-saving projections, enabling HR to launch targeted wellness campaigns and negotiate better pharmacy benefits. The platform is integrated with Peru’s pharmacy and insurance ecosystem, creating a data moat that no standalone wellness app can replicate.",
+  "selected_gap": {
+    "id": "gap_1",
+    "title": "Integrated medication management system tailored to Peru",
+    "pain": "Patients with chronic conditions must juggle multiple disconnected tools (paper notes, WhatsApp groups, pharmacy apps) to manage medications, never getting a unified view of adherence, local pricing, and health risk.",
+    "why_now": "Smartphone penetration in Peru is high, WhatsApp is ubiquitous, and no existing solution combines OCR of local receipts, automated reminders, price transparency, and validated risk scoring.",
+    "evidence_needed": "Customer discovery with 20–30 chronic patients to confirm prescription complexity and willingness to adopt a single app; technical feasibility test for OCR on diverse Peruvian pharmacy receipt formats.",
+    "priority": "high",
+    "risk": "Execution risk: integrating multiple novel components (OCR, crowdsourcing, risk score) while ensuring simplicity. Competition from well-funded global apps or local insurers could emerge if they localize."
+  },
+  "personas": [
+    {
+      "id": "P1",
+      "role": "End user (target customer)",
+      "lens": "Daily workflow pain, speed, usability, trust. Would I use this weekly?",
+      "success_metric": "The product saves meaningful time or reduces a real stress in a repeated task.",
+      "default_objection": "This sounds useful, but I already have a workaround that's good enough."
+    },
+    {
+      "id": "P2",
+      "role": "Economic buyer with budget",
+      "lens": "Budget ownership, ROI timeline, procurement friction, urgency, approval chain.",
+      "success_metric": "The product clearly pays for itself this quarter or protects a critical metric I own.",
+      "default_objection": "Who approves this purchase and why would they prioritize it over other line items?"
+    },
+    {
+      "id": "P3",
+      "role": "Operations / implementation owner",
+      "lens": "Integration complexity, change management, support load, reliability, rollout risk.",
+      "success_metric": "The workflow fits existing operations without creating extra coordination cost.",
+      "default_objection": "This adds another tool my team has to learn, maintain, and debug."
+    },
+    {
+      "id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "lens": "How does the status quo, a free tool, or a large vendor defend the account?",
+      "success_metric": "The startup has a wedge incumbents cannot or choose not to copy quickly.",
+      "default_objection": "We can add this feature in one sprint, or bundle it with our existing platform."
+    },
+    {
+      "id": "P5",
+      "role": "YC / LATAM VC partner",
+      "lens": "Market size (must be >$50M SAM in 5 years), founder insight, venture scale path.",
+      "success_metric": "The idea has a sharp initial wedge and a defensible path to $10M ARR.",
+      "default_objection": "This is a feature, not a company. Or the market is too small for VC returns."
+    },
+    {
+      "id": "P6",
+      "role": "Technical builder / CTO",
+      "lens": "Data access, model quality, COGS, failure modes, defensibility, learning loop.",
+      "success_metric": "The system can be built cheaply, reliably, and improves with usage data.",
+      "default_objection": "The demo works, but production edge cases and data access will break it."
+    },
+    {
+      "id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "lens": "Cash flow, distrust of digital tools, WhatsApp-first workflow, no credit card. Peru 70% informal — will they pay via Yape/Plin? Will they trust a bot?",
+      "success_metric": "The product solves a real cost or risk I cannot solve with WhatsApp + Excel today.",
+      "default_objection": "¿Por qué voy a pagar por esto si ya lo hago en WhatsApp o en papel?"
+    },
+    {
+      "id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "lens": "UGEL/OSCE procurement cycles (6-18 months), zero discretionary budget, MINEDU/PRODUCE approval required. Public institutions in Peru cannot swipe a card.",
+      "success_metric": "The product fits within an existing budget code and avoids a new procurement process.",
+      "default_objection": "El presupuesto está comprometido. Necesita aprobación de la UGEL / PRODUCE / Rectorado."
+    },
+    {
+      "id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "lens": "Peru VC is thin (<3% of LATAM). Checks max $300K locally. Must see path to international co-investor for Series A ($500K+). Prefers ideas with LATAM expansion built into the model from day 1.",
+      "success_metric": "The idea can reach $1M ARR in Peru and attract a Magma/Wayra/international co-investor.",
+      "default_objection": "El mercado peruano solo no alcanza. ¿Cómo escala a Colombia o México en 18 meses?"
+    },
+    {
+      "id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "lens": "Low AI adoption in Peru (5-15%). Most professionals still on Excel/Word. Distrust of AI outputs for high-stakes decisions (legal, medical, financial).",
+      "success_metric": "The AI outputs are accurate, explainable, and I can verify them before acting.",
+      "default_objection": "No voy a confiar en una IA para algo tan importante. ¿Quién responde si se equivoca?"
+    }
+  ],
+  "persona_results": [
+    {
+      "persona_id": "P1",
+      "role": "End user (target customer)",
+      "reaction": "As a Peruvian employee with a chronic condition, I like the idea of WhatsApp reminders and finding nearby pharmacy prices, but I'm uneasy about my employer seeing my medication adherence data. Scanning receipts every time I pick up a prescription feels like added friction, not a time saver.",
+      "concern": "Privacy: I don't trust that my employer won't misuse my adherence data, even if anonymized, and this could affect my job or insurance.",
+      "evidence_request": "Show me a clear, granular opt-in mechanism where I control exactly what data is shared with my employer, plus a demo of scanning a receipt in under 10 seconds with minimal errors.",
+      "score": 0.3,
+      "score_rationale": "The privacy concern is a deal-breaker for weekly use, and the OCR step adds hassle rather than saving time.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P10",
+      "role": "AI adoption skeptic (conservative professional in Peru)",
+      "reaction": "OCR on Peruvian pharmacy receipts? Those are often blurry, handwritten, or have inconsistent formats. And a risk score derived from an AI model? I'd never trust it for a chronic condition without a doctor's sign-off. This feels like over-engineering a problem that WhatsApp groups already solve.",
+      "concern": "The accuracy of OCR and risk scoring under real-world conditions is unproven; a single misread medication or false risk alert could lead to serious health or legal consequences.",
+      "evidence_request": "Show me a pilot with at least 100 real receipts from 20 different pharmacy chains in Peru, achieving >95% OCR accuracy without manual correction, and a third-party audit of the risk score against actual clinical outcomes.",
+      "score": 0.15,
+      "score_rationale": "Given Peru's low AI adoption and high stakes of medication management, the risks of inaccurate outputs far outweigh the convenience benefits for most employers.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P2",
+      "role": "Economic buyer with budget",
+      "reaction": "The idea addresses a real pain point for employers managing chronic disease costs, but I need to see a clear, near-term ROI. The platform's value depends on employee adoption and integration with existing pharmacy networks, which could delay payback.",
+      "concern": "Immediate ROI is unclear; cost savings from improved adherence may take months to materialize, and procurement friction with insurance and pharmacy partnerships could delay deployment.",
+      "evidence_request": "A pilot with 2-3 employers showing measurable reduction in pharmacy spend or absenteeism within 90 days.",
+      "score": 0.4,
+      "score_rationale": "The product has potential but does not convincingly demonstrate it can pay for itself within one quarter, given adoption and integration risks.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P3",
+      "role": "Operations / implementation owner",
+      "reaction": "The idea bundles multiple high-touch features (OCR, crowdsourcing, risk scoring) that each introduce significant support and reliability risks. Integrating with Peru's diverse pharmacy ecosystem and maintaining accurate real-time pricing will likely require constant manual oversight, raising operational complexity and cost.",
+      "concern": "OCR accuracy on diverse Peruvian pharmacy receipts is unproven and could result in high error rates, leading to frequent user complaints and support tickets that overwhelm a lean operations team.",
+      "evidence_request": "A pilot with at least two employers showing OCR accuracy >90% on a sample of >500 receipts, and a support ticket rate below 5% of active users per month.",
+      "score": 0.3,
+      "score_rationale": "The operational risks around OCR reliability and ecosystem integration are high, and without strong evidence of low failure rates, the rollout would likely create unsustainable support costs.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P4",
+      "role": "Incumbent competitor or free substitute",
+      "reaction": "As an incumbent pharmacy chain or health insurer in Peru, I view this as a direct threat to my current employer benefit programs and pharmacy relationships. However, I have the advantage of existing contracts, pharmacy reimbursement data, and employer trust that this startup lacks. If they prove traction, I can quickly add OCR-based adherence tracking and map features to my existing app, leveraging my proprietary sales data to undercut their crowdsourced pricing.",
+      "concern": "The data moat is not defensible: incumbents already possess real-time pharmacy transaction data (prices, adherence patterns) and can replicate the core features (OCR, reminders, risk scores) faster than the startup can build them, especially since we already own the employer relationships and can bundle this as a free add-on to existing insurance plans.",
+      "evidence_request": "Show me that at least 3 large employers (500+ employees) have signed pilot contracts and are willing to pay per employee per month, proving that the value proposition is strong enough to overcome switching costs from existing free tools (e.g., WhatsApp groups, paper notes) and incumbents' inertia.",
+      "score": 0.3,
+      "score_rationale": "The startup faces a high risk of being copied or blocked by incumbents who control the data and employer relationships, so I'm skeptical until they demonstrate locked-in employer contracts and unique OCR reliability.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P5",
+      "role": "YC / LATAM VC partner",
+      "reaction": "The idea addresses a genuine pain point for chronic disease management in Peru, leveraging ubiquitous WhatsApp and OCR. However, the employer-led model faces long sales cycles and heavy integration requirements that may hamper growth.",
+      "concern": "The total addressable market in Peru may be too small for venture-scale returns; the employer segment's willingness to pay and the time to acquire large contracts could limit SAM to under $50M in 5 years.",
+      "evidence_request": "Provide a bottom-up SAM calculation: number of Peruvian employers with >500 employees, average monthly fee per employee, realistic adoption rate, and how this reaches >$50M by year 5.",
+      "score": 0.3,
+      "score_rationale": "The concept shows founder insight but the narrow market and integration complexity make it unlikely to reach $10M+ ARR at venture scale.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P6",
+      "role": "Technical builder / CTO",
+      "reaction": "A cleverly integrated solution for a real pain point, but the technical complexity of OCR on diverse Peruvian receipts is a massive unknown that could break the core loop. The data moat is promising if pharmacy partnerships are secured, but that's a heavy lift.",
+      "concern": "OCR accuracy on the chaotic variety of Peruvian pharmacy receipts is the single biggest technical risk—if it fails, the entire adherence tracking and price comparison features collapse.",
+      "evidence_request": "A live demo of OCR processing at least 100 randomly collected receipts from different Peruvian pharmacy chains, achieving >90% field-level accuracy (medication name, dose, price, date).",
+      "score": 0.3,
+      "score_rationale": "High execution risk and unclear OCR feasibility outweigh the strong concept and potential data moat, given the early stage.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P7",
+      "role": "Peruvian SME buyer (informal sector)",
+      "reaction": "Sounds like a fancy tool, but my workers barely use apps beyond WhatsApp and Yape. They won't scan receipts or track meds—they'll ignore it. I need something that cuts my costs or risk, not adds complexity.",
+      "concern": "My informal workers don't trust apps with their health data, and I can't force adoption—they'll just quit. Without buy-in, the dashboard is useless and I'm paying for nothing.",
+      "evidence_request": "Run a 1-month pilot with 20 of my workers using only WhatsApp (no app install) and Yape/Plin to confirm med intake, and prove it reduces my absenteeism costs by at least 10%.",
+      "score": 0.2,
+      "score_rationale": "The idea doesn't address my reality: no credit cards, distrust of digital tools, and workers' resistance to a separate app makes adoption highly unlikely to deliver measurable ROI.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P8",
+      "role": "Peru institutional / public buyer (government or university)",
+      "reaction": "This platform appears designed for private sector employers, not public institutions like ours. Our procurement cycles are rigid (6-18 months) and budget codes are predefined for education or health programs, not employee wellness subscriptions. Without a clear fit into existing budget lines (e.g., 'preventive health campaigns') and MINEDU approval, adoption is unlikely.",
+      "concern": "The white-label model likely requires a recurring subscription from a discretionary budget we don't have, and integrating with pharmacy/insurance systems might violate public procurement rules on vendor lock-in.",
+      "evidence_request": "Demonstrate that this can be classified under an existing MINEDU budget code for occupational health or wellness programs, with a procurement pathway via a direct award exception (e.g., 'servicio personal') that bypasses OSCE bidding.",
+      "score": 0.2,
+      "score_rationale": "The product's target employer is private, not public, and the procurement barriers (budget codes, lengthy cycles, approval) are too high given zero discretionary funds.",
+      "source": "llm"
+    },
+    {
+      "persona_id": "P9",
+      "role": "Peruvian Series A investor (local VC or family office)",
+      "reaction": "Interesting B2B approach targeting a real pain point in medication management, but I'm worried about the long sales cycles with Peruvian employers and whether we can reach $1M ARR before needing a larger round. The data moat is compelling, but I need proof that employers will pay for this rather than just offer a free app.",
+      "concern": "Employer willingness to pay is unproven; pilot results may take 6-12 months, consuming our limited capital without clear revenue traction.",
+      "evidence_request": "Signed letters of intent or paid pilot contracts from at least 5 mid-sized Peruvian employers covering 500+ employees total.",
+      "score": 0.55,
+      "score_rationale": "Strong data and local integration but high execution risk in B2B sales; moderate conviction given need for international co-investor and $1M ARR target.",
+      "source": "llm"
+    }
+  ],
+  "aggregate_score": 0.3,
+  "gate_passed": false,
+  "gate_threshold": 0.6,
+  "consensus": {
+    "aggregate_score": 0.3,
+    "gate_passed": false,
+    "gate_threshold": 0.6,
+    "top_concerns": [
+      "Privacy: I don't trust that my employer won't misuse my adherence data, even if anonymized, and this could affect my job or insurance.",
+      "The accuracy of OCR and risk scoring under real-world conditions is unproven; a single misread medication or false risk alert could lead to serious health or legal consequences.",
+      "Immediate ROI is unclear; cost savings from improved adherence may take months to materialize, and procurement friction with insurance and pharmacy partnerships could delay deployment."
+    ],
+    "top_evidence_requests": [
+      "Show me a clear, granular opt-in mechanism where I control exactly what data is shared with my employer, plus a demo of scanning a receipt in under 10 seconds with minimal errors.",
+      "Show me a pilot with at least 100 real receipts from 20 different pharmacy chains in Peru, achieving >95% OCR accuracy without manual correction, and a third-party audit of the risk score against actual clinical outcomes.",
+      "A pilot with 2-3 employers showing measurable reduction in pharmacy spend or absenteeism within 90 days."
+    ],
+    "strongest_signal": "Proceed only if target users describe a recent, repeated, expensive problem in their own words.",
+    "weakest_assumption": "Simulation scores are LLM estimates; live interviews must confirm.",
+    "adoption_path": "Start with a narrow concierge workflow, then productize the repeated steps.",
+    "pricing_test": "Ask for a small paid pilot tied to the buyer's success metric.",
+    "decision_pressure": "CONDITIONAL_GO"
+  },
+  "recommended_interventions": [
+    "Narrow the customer segment until the end user and buyer are obvious.",
+    "Run interviews around recent behavior, not opinions about the idea.",
+    "Prototype the outcome manually before building a scalable product.",
+    "Track what data or workflow insight compounds with each use."
+  ],
+  "source": "parallel_simulation"
+}

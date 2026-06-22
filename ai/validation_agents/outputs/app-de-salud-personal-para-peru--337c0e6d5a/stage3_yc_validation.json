@@ -1,0 +1,225 @@
+{
+  "idea": "[ORIGINAL] App de salud personal para Peru donde el usuario es dueno de su propia data de salud. Funciones: (1) registro de dieta y recetas de comida, (2) agenda de citas medicas, (3) deteccion temprana de riesgo de enfermedades cronicas (diabetes T2, hipertension, anemia) usando modelos de ML sobre datos de dieta + sintomas + historial de citas, (4) comparador de precios de medicamentos por ubicacion geografica, (5) el usuario sube su receta medica y su boleta de compra de farmacia, el sistema extrae medicamento, precio y ubicacion para construir una base de datos crowdsourced de precios de pastillas en Peru. Monetizacion B2B: farmacias, clinicas privadas, EPS, o gobierno SIS compran insights agregados. El usuario accede gratis.",
+  "selected_gap": {
+    "id": "G1",
+    "title": "Narrow painful workflow",
+    "pain": "The idea needs one urgent job-to-be-done, not a broad feature set.",
+    "why_now": "AI and modern software can compress expert work, but only if the workflow is specific.",
+    "evidence_needed": "Interview 5 target users and capture the exact task they already spend time or money on.",
+    "priority": 1,
+    "risk": "If the workflow is vague, the product becomes a solution looking for a problem."
+  },
+  "friedman_scores": [
+    {
+      "criterion": "Founder-market fit",
+      "score": 5,
+      "note": "Unknown until founder proves access or insight."
+    },
+    {
+      "criterion": "Market size",
+      "score": 5,
+      "note": "Estimate TAM/SAM/SOM with external evidence."
+    },
+    {
+      "criterion": "Problem acuity",
+      "score": 6,
+      "note": "Strong if gap maps to urgent time, money, or risk."
+    },
+    {
+      "criterion": "Competition",
+      "score": 6,
+      "note": "Alternatives exist; wedge must be sharper."
+    },
+    {
+      "criterion": "Personal pull",
+      "score": 5,
+      "note": "Unknown until founder states years-long commitment."
+    },
+    {
+      "criterion": "Recently possible or necessary",
+      "score": 6,
+      "note": "AI/regulation/cost shifts may enable now."
+    },
+    {
+      "criterion": "Successful proxies",
+      "score": 5,
+      "note": "Find adjacent companies proving willingness to pay."
+    },
+    {
+      "criterion": "Years-long commitment",
+      "score": 5,
+      "note": "Validate domain depth for compounding insight."
+    },
+    {
+      "criterion": "Scalability",
+      "score": 6,
+      "note": "Software scales; sales/data access may constrain."
+    },
+    {
+      "criterion": "Good idea space",
+      "score": 6,
+      "note": "Promising if segment has repeated painful workflows."
+    }
+  ],
+  "yc_rule_scores": [
+    {
+      "criterion": "Do not wait for the perfect idea",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Burn the boats",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Go deep into customer workflow",
+      "score": 7,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Build at the edge of AI",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Sell outcomes, not tools",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Choose ambitious scope",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Treat failure as structured data",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Pick low-trust, high-expertise markets",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "The process is the product",
+      "score": 7,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Avoid early-demand trap",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Price per unit or result",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Obsess over COGS",
+      "score": 7,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Do not bolt AI onto legacy",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    },
+    {
+      "criterion": "Cover domain, model, and operations fluency",
+      "score": 6,
+      "note": "Provisional; replace with customer evidence."
+    }
+  ],
+  "vc_rubric_scores": [
+    {
+      "dimension": "Team",
+      "weight": 0.25,
+      "score": 5,
+      "weighted": 1.25,
+      "rationale": "Fallback — requires LLM for real assessment."
+    },
+    {
+      "dimension": "Market",
+      "weight": 0.2,
+      "score": 5,
+      "weighted": 1.0,
+      "rationale": "Fallback — requires LLM for real assessment."
+    },
+    {
+      "dimension": "Product",
+      "weight": 0.15,
+      "score": 5,
+      "weighted": 0.75,
+      "rationale": "Fallback — requires LLM for real assessment."
+    },
+    {
+      "dimension": "Traction",
+      "weight": 0.15,
+      "score": 5,
+      "weighted": 0.75,
+      "rationale": "Fallback — requires LLM for real assessment."
+    },
+    {
+      "dimension": "Business Model",
+      "weight": 0.1,
+      "score": 5,
+      "weighted": 0.5,
+      "rationale": "Fallback — requires LLM for real assessment."
+    },
+    {
+      "dimension": "Competition",
+      "weight": 0.08,
+      "score": 5,
+      "weighted": 0.4,
+      "rationale": "Fallback — requires LLM for real assessment."
+    },
+    {
+      "dimension": "Financials",
+      "weight": 0.05,
+      "score": 5,
+      "weighted": 0.25,
+      "rationale": "Fallback — requires LLM for real assessment."
+    },
+    {
+      "dimension": "Risk Profile",
+      "weight": 0.02,
+      "score": 5,
+      "weighted": 0.1,
+      "rationale": "Fallback — requires LLM for real assessment."
+    }
+  ],
+  "vc_verdict": {
+    "composite_score": 5.0,
+    "verdict": "DECLINE",
+    "reason": "Weighted score 5.0 below threshold; weak: ",
+    "weak_dims": [],
+    "disqualifying_dims": [],
+    "investor_lenses": {
+      "sequoia": "WATCH",
+      "yc": "WATCH",
+      "tiger_global": "WATCH",
+      "risk_mgmt": "ELEVATED"
+    },
+    "source": "deterministic_vc_calcs"
+  },
+  "go_no_go": "GO_WITH_CONSTRAINTS",
+  "decision": "Proceed as validation sprint only. Do not build until 5 target users confirm the gap is painful, frequent, and tied to a budget or urgent workflow.",
+  "next_experiments": [
+    "Interview 5 target users about the last time they experienced this problem.",
+    "Ask what they use today, cost, and what happens if they do nothing.",
+    "Run a concierge test for the smallest paid outcome."
+  ],
+  "kill_criteria": [
+    "Users cannot recall a recent painful instance.",
+    "No budget owner or urgent operational metric identified.",
+    "Workflow only mildly better than current workaround."
+  ],
+  "source": "deterministic_fallback",
+  "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}",
+  "_iteration_id": "I1",
+  "_iteration_angle": "ORIGINAL",
+  "_iteration_one_liner": ""
+}

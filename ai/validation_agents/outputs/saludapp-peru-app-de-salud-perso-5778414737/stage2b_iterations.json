@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "SaludApp Peru es una plataforma de gestión de medicación que convierte una boleta de farmacia en un plan digital de adherencia. El paciente peruano con enfermedades crónicas simplemente toma una foto de su recibo; la app extrae medicamentos y dosis con OCR (PaddleOCR + Claude Vision) y automáticamente configura recordatorios personalizados por WhatsApp. Las EPS como Rimac y Pacífico acceden a un dashboard que muestra en tiempo real la adherencia de sus afiliados, reduciendo costos por complicaciones. La solución se afianza como el primer repositorio de datos longitudinales de consumo de medicamentos en Perú.",
+      "one_liner": "Transformamos boletas de farmacia en adherencia médica para pacientes crónicos peruanos, usando WhatsApp como recordatorio y datos para que las EPS reduzcan costos.",
+      "target_customer": "Un paciente limeño de 55 años con diabetes tipo 2 que toma tres medicamentos diarios y suele olvidar dosis porque perdió la receta o no anotó el horario.",
+      "core_problem": "Los pacientes crónicos en Perú dependen de anotaciones en papel o de su memoria para seguir tratamientos complejos; extravían boletas, confunden dosis y olvidan tomas, lo que deriva en crisis de salud cada 2-3 meses que generan gastos de emergencia de S/500-S/2000 y pérdida de productividad.",
+      "solution_hook": "El OCR de boletas de farmacia peruanas entiende formatos locales (nombres comerciales, dosis fraccionadas) y dispara recordatorios por WhatsApp sin instalar otra app, creando un perfil de adherencia único por paciente que ningún actor local posee.",
+      "why_this_angle": "Enfocar la gestión de medicación reduce el alcance a un dolor diario y medible (olvido de pastillas) que las EPS peruanas ya reconocen como costo evitable, mientras que el canal WhatsApp elimina la fricción de adopción en un mercado donde el 90% de los usuarios de smartphones lo usan a diario. Esto permite validar en semanas con pacientes reales y una sola EPS.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 8,
+        "founder_feasibility": 9,
+        "total": 26
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "SaludApp Empresas: A white-label mobile and WhatsApp-based medication management platform for Peruvian employers. Employees use the app to scan pharmacy receipts using OCR to auto-log medications, receive personalized WhatsApp reminders to take pills, view a map of nearby pharmacies with real-time prices (crowdsourced), and get a chronic disease risk score based on validated tools like FINDRISC. Employers access a real-time dashboard showing population-level adherence rates, high-risk employees, and cost-saving projections, enabling HR to launch targeted wellness campaigns and negotiate better pharmacy benefits. The platform is integrated with Peru’s pharmacy and insurance ecosystem, creating a data moat that no standalone wellness app can replicate.",
+      "one_liner": "We help Peruvian employers reduce healthcare costs by boosting employee medication adherence through a localized app with OCR, WhatsApp nudges, and crowdsourced pharmacy pricing, all in one platform.",
+      "target_customer": "HR Director at a large Peruvian company (e.g., a mining corporation or bank) who manages health benefits for 500+ employees and is under pressure to contain escalating medical claims.",
+      "core_problem": "Employees with chronic conditions forget to take medications, skip refills due to high prices or lack of visibility near affordable pharmacies, and miss early warning signs of diabetes or hypertension. This leads to preventable hospitalizations, absenteeism, and 20-30% higher healthcare spending for the employer, who currently has zero visibility into real-world medication adherence and no cost-effective tool to intervene.",
+      "solution_hook": "Unlike generic wellness apps or pharmacy loyalty programs, SaludApp Empresas closes the loop: it’s purpose-built for Peru’s healthcare context, using OCR on local pharmacy receipts to automatically track adherence, crowdsourcing real-time drug prices from competing pharmacies (including bodegas and chains), and delivering reminders via WhatsApp—the messaging platform used by 95% of Peruvians—resulting in a >3x adherence improvement over standalone reminder apps.",
+      "why_this_angle": "Pivoting to employers taps into a clear budget line (employee wellness/cost containment) with high urgency due to rising chronic disease costs in Peru’s private sector. Employers can realize immediate ROI from even a small adherence increase, making the sale faster than convincing individual users to adopt for free. Moreover, the data generated across multiple employer cohorts becomes a defensible asset for population health insights, eventually enabling AI-driven risk prediction that no single EPS possesses.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 8,
+        "founder_feasibility": 9,
+        "total": 26
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "We will pilot a manual medication adherence service for a Peruvian insurer (EPS) targeting their 10 highest-cost diabetic patients. Using WhatsApp, we will send daily personalized reminders, confirm pill intake, and provide the insurer a simple dashboard of adherence rates. This low-tech wedge aims to prove that improved adherence reduces hospitalizations and costs within 30 days, securing a first paying customer before building any automated app or OCR.",
+      "one_liner": "We reduce hospital costs for Peruvian insurers by ensuring diabetic patients take their meds through personalized WhatsApp reminders.",
+      "target_customer": "Claims manager at Rimac Seguros responsible for diabetes-related hospitalization costs",
+      "core_problem": "Diabetic patients in Peru frequently miss medications, leading to costly, preventable hospitalizations. Insurers currently have no proactive, data-driven way to ensure adherence, relying on reactive care that costs them thousands of soles per patient annually.",
+      "solution_hook": "Unlike generic medication apps, this service is integrated with insurer data to identify the highest-risk non-adherent patients and uses manual, empathetic WhatsApp check-ins that feel personal, backed by a simple adherence dashboard for the insurer.",
+      "why_this_angle": "By hyper-focusing on the narrowest, most painful slice—insurers' costs from diabetic non-adherence—and using a zero-tech concierge model, we can demonstrate immediate value and secure a paying customer in 30 days, de-risking the broader platform build.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 4,
+        "founder_feasibility": 9,
+        "total": 22
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "Transformamos boletas de farmacia en adherencia médica para pacientes crónicos peruanos, usando WhatsApp como recordatorio y datos para que las EPS reduzcan costos.",
+  "source": "parallel_iteration"
+}

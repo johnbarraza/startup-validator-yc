@@ -1,0 +1,34 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "Other",
+  "customer_type": "B2B",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "Sales cycle to mining companies (especially large ones like Antamina, Yanacocha) is 6-18 months, requiring regulatory or board-level buy-in; founder likely underestimates this.",
+    "Contractors (70% of workforce) often operate informally, lack digital literacy, and have no budget for software—the real paying market is only the 30% formal direct employees of large mines.",
+    "OSINERGMIN enforcement lag (6-18 months) means companies can ignore digital safety tools; paper checklists and WhatsApp photos remain 'good enough' for compliance.",
+    "Existing global safety software (Intelex, Cority) and local ERP modules (SAP) already cover checklist digitization; niche AI transcription is too narrow to unseat incumbents.",
+    "Mining companies may refuse to store safety data on a startup's cloud due to liability and uptime concerns—preferring on-premise solutions the founder cannot afford to deploy."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (paper, Excel, WhatsApp)",
+    "Regulatory/compliance forcing function (OSINERGMIN audits)",
+    "Recurring pain (daily checklists)",
+    "Measurable cost (accident costs, fines)",
+    "Spending already occurs on safety software/consultants",
+    "Buyer has budget line for safety"
+  ],
+  "classification_rationale": "Mining safety in Peru faces strict regulations and high accident costs. Current manual processes are inefficient, and mining companies already allocate budgets for safety compliance. This solution directly addresses a structural, recurring need with clear ROI.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "MAYBE",
+  "freemium_rationale": "A free tier for micro-contractors could drive adoption in a low-digitalization market, but the primary buyer (medium/large mining companies) has budget to pay. Balancing free usage with premium features for compliance depth and analytics is key.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "B2B procurement in mining involves quarterly budgeting cycles, purchase orders, and 60-90 day payment terms; contractor safety budgets are often minimal (S/500-2K/month) and frozen during commodity price downturns.",
+  "free_substitute_risk": "Paper checklists + WhatsApp voice notes + a shared Excel spreadsheet already cover 80% of the workflow—no cost, no training, no security concerns.",
+  "market_size_reality_check": "Realistic paying market is ~100 large mines in Peru, each with 10-50 HSE staff, at S/1,000-3,000/month per site => SAM ~$1-3M/year—too small for VC-backable startup without regional expansion into Chile or Mexico (which requires separate compliance and sales).",
+  "hardest_assumption": "That mining companies will pay for AI-based risk prioritization before an incident occurs, when they historically rely on reactive audits and insurance claims.",
+  "devil_rationale": "The idea is plausible but faces long sales cycles, budget constraints in the informal contractor segment, and strong 'do-nothing' alternatives. Without pre-existing mining industry connections and a pilot with a major operator (e.g., Buenaventura), the startup burns cash on sales with low conversion. Venture scale requires going multi-country immediately, which multiplies complexity.",
+  "source": "dual_agent_classification"
+}

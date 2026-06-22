@@ -1,0 +1,165 @@
+{
+  "idea": "SeguridadMesh: sistema de analitica de video con IA para camaras de serenazgo municipal peruano que detecta incidentes en tiempo real y alerta operadores, vendido como licencia B2G anual pagada con presupuesto PIM de seguridad ciudadana.",
+  "market": "Municipal governments in Peru with citizen security budgets (PIM).",
+  "solutions": [
+    {
+      "id": "S1",
+      "name": "Manual monitoring by serenazgo operators (no AI)",
+      "category": "Do-nothing/Manual Workaround",
+      "observed_positioning": "Status quo; human operators watch live feeds from traditional CCTV, no automated alerts, high fatigue and error rate."
+    },
+    {
+      "id": "S2",
+      "name": "Hikvision DeepinView Cameras with built-in analytics",
+      "category": "Camera Manufacturer with Edge Analytics",
+      "observed_positioning": "Low-cost AI cameras with perimeter intrusion, line crossing, and face detection; widely deployed in Latin America due to aggressive pricing and government contracts."
+    },
+    {
+      "id": "S3",
+      "name": "Dahua WizSense AI Cameras",
+      "category": "Camera Manufacturer with Edge Analytics",
+      "observed_positioning": "Competitor to Hikvision with similar edge analytics, targeting price-sensitive municipal projects; strong distribution in Peru."
+    },
+    {
+      "id": "S4",
+      "name": "Avigilon (Motorola Solutions) video analytics",
+      "category": "AI Analytics Software + Hardware",
+      "observed_positioning": "Premium self-learning video analytics with appearance search; used by law enforcement and municipalities in North America and expanding in Latin America."
+    },
+    {
+      "id": "S5",
+      "name": "Genetec Security Center with analytics",
+      "category": "Video Management Software (VMS) with Analytics",
+      "observed_positioning": "Open-architecture VMS platform allowing integration of third-party analytics; strong in city-wide surveillance projects, trusted by government agencies."
+    },
+    {
+      "id": "S6",
+      "name": "Milestone XProtect with third-party analytics plugins",
+      "category": "VMS Platform",
+      "observed_positioning": "Flexible VMS commonly paired with analytics from partners like BriefCam or Agent Vi; avoids vendor lock-in."
+    },
+    {
+      "id": "S7",
+      "name": "Bosch Intelligent Video Analytics (IVA)",
+      "category": "Camera Manufacturer with Edge/Server Analytics",
+      "observed_positioning": "Built-in AI on selected Bosch cameras; trusted for critical infrastructure but expensive for broad municipal deployment."
+    },
+    {
+      "id": "S8",
+      "name": "Axis Communications AXIS Guard Suite",
+      "category": "Camera Manufacturer with Edge Analytics",
+      "observed_positioning": "Privacy-compliant analytics (motion, tampering, audio) on Axis cameras; premium brand with strong partner network."
+    },
+    {
+      "id": "S9",
+      "name": "BriefCam video analytics",
+      "category": "AI Analytics Software (post-event + real-time)",
+      "observed_positioning": "Video synopsis and search for rapid investigation; widely adopted by police departments; recently adding real-time alerting."
+    },
+    {
+      "id": "S10",
+      "name": "Viisights (formerly Agent Vi) behavioral analytics",
+      "category": "AI Analytics Software",
+      "observed_positioning": "Real-time detection of complex behaviors (fighting, loitering) without face recognition; used in smart cities."
+    },
+    {
+      "id": "S11",
+      "name": "IntelliVision smart city analytics",
+      "category": "AI Analytics Software",
+      "observed_positioning": "Edge and server-based analytics for object classification, intrusion, and traffic; OEM partnerships with camera vendors."
+    },
+    {
+      "id": "S12",
+      "name": "NtechLab face recognition and analytics",
+      "category": "AI Analytics Specialist (face recognition)",
+      "observed_positioning": "Focus on face recognition for public safety; used in Moscow and other large city projects; heavy on biometrics, lighter on general incident detection."
+    },
+    {
+      "id": "S13",
+      "name": "Qognify public safety solutions",
+      "category": "VMS + Analytics Suite",
+      "observed_positioning": "End-to-end solution for control rooms, including video analytics, situational awareness, and case management; targets mid-to-large cities."
+    },
+    {
+      "id": "S14",
+      "name": "Verint Systems security intelligence",
+      "category": "VMS + Analytics Suite",
+      "observed_positioning": "Enterprise-grade video analytics and investigation tools; historically strong in banking and government."
+    },
+    {
+      "id": "S15",
+      "name": "Local system integrator (e.g., IntegraTech Peru)",
+      "category": "Custom Integration & Services",
+      "observed_positioning": "Peruvian companies that resell Hikvision/Dahua hardware and provide basic installation and monitoring setup; leverage government relationships but lack proprietary AI."
+    }
+  ],
+  "research_summary": "The market for AI video analytics in Peruvian municipal security presents a bifurcated landscape: low-cost Chinese camera manufacturers (Hikvision, Dahua) dominate through aggressive pricing and built-in edge analytics, while premium platforms (Avigilon, Genetec) offer advanced but expensive solutions. Local integrators provide tailored services but rely on commoditized hardware. The primary alternative remains manual monitoring. SeguridadMesh’s B2G annual license aligns with PIM budgets, but must compete against entrenched hardware vendors, strong global VMS platforms, and relationship-based local players. Differentiation through serenazgo-specific workflows and price competitiveness will be critical.",
+  "competitor_signals": [
+    {
+      "competitor": "Hikvision DeepinView Cameras",
+      "hiring_score": 6,
+      "funding_score": 5,
+      "product_score": 8,
+      "team_score": 6,
+      "market_score": 7,
+      "tech_score": 8,
+      "overall_score": 63.5,
+      "classification": "ENGAGE",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Hikvision maintains a strong distribution network in Peru with dedicated public-sector sales teams. Its edge AI is mature, and government contracts are secured via aggressive pricing. However, reliance on hardware sales and lack of tailored service for serenazgo workflows present openings for a software-first competitor. Overall, a formidable but not insurmountable threat."
+    },
+    {
+      "competitor": "Avigilon (Motorola Solutions)",
+      "hiring_score": 7,
+      "funding_score": 9,
+      "product_score": 9,
+      "team_score": 8,
+      "market_score": 8,
+      "tech_score": 9,
+      "overall_score": 82.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Backed by Motorola Solutions, Avigilon leverages deep B2G experience, self-learning analytics, and strong brand trust. Its products are priced at a premium but deliver proven outcomes. As Motorola expands in Latin America, Avigilon becomes a direct threat for larger municipalities with higher budgets. SeguridadMesh must lock in small-to-mid municipalities quickly."
+    },
+    {
+      "competitor": "Genetec Security Center",
+      "hiring_score": 7,
+      "funding_score": 6,
+      "product_score": 8,
+      "team_score": 8,
+      "market_score": 8,
+      "tech_score": 8,
+      "overall_score": 72.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Genetec’s open VMS platform allows municipalities to mix and match analytics, creating vendor lock-in through customization. Its strong partner network and proven deployments in city-wide surveillance make it a top contender. Although not aggressive in Peru yet, its global momentum suggests future entry. Time window exists to establish local references."
+    },
+    {
+      "competitor": "Dahua WizSense AI Cameras",
+      "hiring_score": 5,
+      "funding_score": 5,
+      "product_score": 7,
+      "team_score": 5,
+      "market_score": 6,
+      "tech_score": 7,
+      "overall_score": 56.0,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Dahua mirrors Hikvision’s low-cost edge analytics strategy with a significant installed base in Peru. However, its local support and software ecosystem are weaker, often relying on integrators. The threat is tangible in price-sensitive bids where basic analytics suffice, but gaps in service and incident-specific detection can be exploited."
+    },
+    {
+      "competitor": "Local integrator (e.g., IntegraTech Peru)",
+      "hiring_score": 3,
+      "funding_score": 2,
+      "product_score": 4,
+      "team_score": 4,
+      "market_score": 5,
+      "tech_score": 3,
+      "overall_score": 33.0,
+      "classification": "MONITOR",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "These companies win on personal relationships and low overhead, not technology depth. They resell cameras and offer basic configuration but lack scalable AI development. While they can capture small towns, they cannot deliver the real-time, AI-driven incident detection that SeguridadMesh promises, making them a minor threat unless bundled with international analytics."
+    }
+  ],
+  "source": "llm"
+}

@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "MineSafety AI is a mobile-first voice transcription tool for mining field reports. It converts spoken observations into structured text, classifying severity and prioritizing risks automatically. Designed for offline use in remote sites, it replaces error-prone manual typing and paper checklists, ensuring critical safety data is captured instantly and accurately at the point of work.",
+      "one_liner": "We transcribe and classify field safety reports for mining contractors using voice AI that works offline.",
+      "target_customer": "Mining site HSE supervisors and contractor safety managers who spend hours manually typing handwritten field notes after shifts.",
+      "core_problem": "After a 12-hour shift, safety supervisors must type up illegible handwritten notes into desktop systems, often delaying reports by hours and losing critical hazard details. This leads to unseen risk accumulation and potential compliance gaps, with an estimated 15% of incidents having missing or late field data.",
+      "solution_hook": "Offline-first voice transcription tailored for mining jargon, instantly converting spoken reports into structured, severity-classified data without any manual typing.",
+      "why_this_angle": "Focusing narrowly on voice-to-text for field reports addresses the most acute daily pain point—manual data entry—and is a lightweight wedge that can be validated quickly with simple prototypes, avoiding feature overload while still delivering immediate value.",
+      "quick_score": {
+        "problem_acuity": 8,
+        "market_size": 6,
+        "founder_feasibility": 8,
+        "total": 22
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "MineSafety AI transforms how institutional mining safety buyers manage field data by converting spoken inspection notes into structured, severity-classified reports in real time. Designed for enterprise deployment across multiple sites and contractor networks, the platform works offline in remote areas and syncs when connected, ensuring no critical observation is lost. Dashboards highlight trending risks before incidents occur, helping safety directors demonstrate compliance, reduce reportable events, and lower insurance and regulatory costs.",
+      "one_liner": "We help mining safety regulators and corporate HSE teams automatically transcribe field inspection conversations into risk-prioritized incident reports using offline-first AI — enabling proactive, industry-wide safety oversight.",
+      "target_customer": "Chief Safety Officer at a top-10 global mining conglomerate, or the Assistant Secretary for Mine Safety and Health at a national regulatory agency.",
+      "core_problem": "Field safety observations are captured via handwritten notes or voice memos, then manually transcribed days later, often missing details and delaying risk mitigation. This leads to underreporting of hazards, inconsistent severity assessment, and blind spots in enterprise risk management that result in preventable injuries and regulatory fines.",
+      "solution_hook": "Unlike generic EHS platforms that require manual data entry, our AI is purpose-built for mining field conditions: it understands jargon, works offline, and automatically classifies risk severity from voice, eliminating transcription delays and subjective grading.",
+      "why_this_angle": "Reframing for institutional buyers taps into larger, multi-year budgets and a pressing need for standardized, auditable safety data across an entire operation or jurisdiction, rather than point solutions for individual contractors. This creates stickiness and regulatory tailwinds.",
+      "quick_score": {
+        "problem_acuity": 10,
+        "market_size": 7,
+        "founder_feasibility": 7,
+        "total": 24
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "MineSafety AI narrows specifically to voice-to-text transcription for mining field safety reports. It instantly converts spoken observations from supervisors and contractors into structured, severity-classified risks with prioritized actions, even in remote offline environments. This eliminates manual report writing, reduces transcription errors, and ensures critical hazards are identified and addressed within the same shift, preventing incidents before they occur.",
+      "one_liner": "We transcribe mining field reports by voice and prioritize risks instantly, so safety supervisors can act before the shift ends.",
+      "target_customer": "Shift Safety Supervisor at a mid-sized underground copper mine in Chile, responsible for daily contractor inspections and real-time risk mitigation.",
+      "core_problem": "After each inspection round, safety supervisors spend 45–60 minutes manually typing fragmented voice notes and paper checklists into incident reports, often after shifts or during commutes. Delays and errors in transcription lead to missed severity cues, causing critical risks to go unaddressed for up to 24 hours, increasing the chance of recordable incidents.",
+      "solution_hook": "An offline-first mobile app that uses a small, specialized speech recognition model trained on mining jargon and safety terminology to transcribe field reports in real time, then applies a lightweight AI severity classifier to immediately surface high-priority risks with recommended actions.",
+      "why_this_angle": "By isolating the single most frequent, high-friction task—field report transcription—this wedge allows immediate validation with 10 supervisors in 30 days. It avoids the complexity of full checklist digitalization or predictive analytics, delivering a concrete, 10x faster solution to a daily pain point where willingness to pay is provable through time savings alone.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 3,
+        "founder_feasibility": 9,
+        "total": 21
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I2",
+  "recommended_one_liner": "We help mining safety regulators and corporate HSE teams automatically transcribe field inspection conversations into risk-prioritized incident reports using offline-first AI — enabling proactive, industry-wide safety oversight.",
+  "source": "parallel_iteration"
+}

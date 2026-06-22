@@ -1,0 +1,228 @@
+{
+  "idea": "CoffeeGuard is a voice-first reporting and triage system for coffee cooperatives battling coffee rust, where farmers call a local number and describe symptoms, and the system classifies, geotags, and alerts technicians with a severity score.",
+  "selected_gap": {
+    "id": 1,
+    "title": "Structured Voice-Based Reporting and Classification",
+    "pain": "Smallholder farmers lack a systematic way to report field problems. They rely on chaotic WhatsApp groups or manual notebooks, leading to lost reports, no classification, and delayed response.",
+    "why_now": "Advances in speech-to-text and NLP for low-resource languages, combined with widespread use of basic phones with voice messaging, make it feasible to build a voice-first interface.",
+    "evidence_needed": "Interview 20 farmers to quantify time spent in current methods, error rates, and willingness to use voice. Assess accuracy of transcription in target languages.",
+    "priority": "high",
+    "risk": "User adoption of voice interface, accuracy in noisy farm environments, and convincing farmers to switch from familiar WhatsApp."
+  },
+  "friedman_scores": [
+    {
+      "criterion": "Founder-market fit",
+      "score": 4,
+      "note": "No information about founder background; typical team lacks domain expertise in coffee agriculture."
+    },
+    {
+      "criterion": "Market size",
+      "score": 6,
+      "note": "Coffee cooperative market is large globally, but segment is fragmented and smallholder-focused; TAM likely in hundreds of millions."
+    },
+    {
+      "criterion": "Problem acuity",
+      "score": 8,
+      "note": "Coffee rust is devastating; current manual reporting leads to significant yield losses; urgency is high."
+    },
+    {
+      "criterion": "Competition",
+      "score": 6,
+      "note": "WhatsApp and some agri apps exist, but no dominant voice-based solution for cooperatives; moderate competition."
+    },
+    {
+      "criterion": "Personal pull",
+      "score": 4,
+      "note": "No indication of founder's personal connection to coffee farmers or rust problem."
+    },
+    {
+      "criterion": "Recently possible",
+      "score": 8,
+      "note": "Advances in low-resource language speech-to-text and NLP make voice-based classification feasible for smallholder contexts."
+    },
+    {
+      "criterion": "Successful proxies",
+      "score": 5,
+      "note": "Few successful voice-first agri-tech startups; Plantix (image-based) is a partial proxy but not voice."
+    },
+    {
+      "criterion": "Years-long commitment",
+      "score": 7,
+      "note": "Requires long-term partnership with cooperatives and trust-building; founder must be committed for years."
+    },
+    {
+      "criterion": "Scalability",
+      "score": 6,
+      "note": "Voice interface can scale across languages, but requires localization and handling of noisy environments; moderate scalability."
+    },
+    {
+      "criterion": "Good idea space",
+      "score": 7,
+      "note": "Agri-tech for climate-resilient crops is a promising space, especially with AI for low-resource settings."
+    }
+  ],
+  "yc_rule_scores": [
+    {
+      "criterion": "Do not wait for the perfect idea",
+      "score": 8,
+      "note": "The idea addresses a clear pain point; it's good enough to start validating quickly."
+    },
+    {
+      "criterion": "Burn the boats",
+      "score": 7,
+      "note": "Focused on one idea; no distraction from other concepts."
+    },
+    {
+      "criterion": "Go deep into customer workflow",
+      "score": 9,
+      "note": "Replaces chaotic WhatsApp notes with structured voice reporting; deeply integrated into farmer/technician workflow."
+    },
+    {
+      "criterion": "Build at the edge of AI",
+      "score": 8,
+      "note": "Uses NLP for low-resource languages; model improvements will directly enhance classification."
+    },
+    {
+      "criterion": "Sell outcomes, not tools",
+      "score": 7,
+      "note": "Value proposition is reduced yield loss and faster response, not just a reporting tool."
+    },
+    {
+      "criterion": "Choose ambitious scope",
+      "score": 7,
+      "note": "Ambitious to cover all coffee cooperatives; but scope is manageable initially."
+    },
+    {
+      "criterion": "Treat failure as structured data",
+      "score": 6,
+      "note": "Misclassifications can provide data to improve taxonomy; but not explicitly designed for that."
+    },
+    {
+      "criterion": "Pick low-trust, high-expertise markets",
+      "score": 8,
+      "note": "Coffee rust expertise is specialized; cooperatives are low-trust but high need; voice system can build trust."
+    },
+    {
+      "criterion": "The process is the product",
+      "score": 7,
+      "note": "The structured reporting process itself becomes the product; farmers adopt it as standard practice."
+    },
+    {
+      "criterion": "Avoid early-demand trap",
+      "score": 6,
+      "note": "Risk of false positive interest from cooperatives; need to verify willingness to pay."
+    },
+    {
+      "criterion": "Price per unit or result",
+      "score": 8,
+      "note": "Can price per report or per cooperative subscription; aligns with outcome-based pricing."
+    },
+    {
+      "criterion": "Obsess over COGS",
+      "score": 7,
+      "note": "Costs include phone calls, transcription, and SMS; need to keep low especially in low-margin agriculture."
+    },
+    {
+      "criterion": "Do not bolt AI onto legacy",
+      "score": 9,
+      "note": "Replaces manual WhatsApp notes with AI-native voice system; not bolting onto legacy."
+    },
+    {
+      "criterion": "Cover domain, model, and operations fluency",
+      "score": 8,
+      "note": "Requires coffee disease domain expertise, NLP model fluency, and field operations understanding."
+    }
+  ],
+  "vc_rubric_scores": [
+    {
+      "dimension": "Team",
+      "weight": 0.25,
+      "score": 4,
+      "weighted": 1.0,
+      "rationale": "No evidence of founder background in agriculture or NLP; typical team lacks unique advantage."
+    },
+    {
+      "dimension": "Market",
+      "weight": 0.2,
+      "score": 6,
+      "weighted": 1.2,
+      "rationale": "TAM for coffee cooperatives is large but fragmented; growth tied to climate pressures; timing is right."
+    },
+    {
+      "dimension": "Product",
+      "weight": 0.15,
+      "score": 5,
+      "weighted": 0.75,
+      "rationale": "Defensible moat is limited; voice data and taxonomy can be replicated; network effects weak."
+    },
+    {
+      "dimension": "Traction",
+      "weight": 0.15,
+      "score": 2,
+      "weighted": 0.3,
+      "rationale": "No evidence of user interviews, pilots, or letters of intent; pure concept stage."
+    },
+    {
+      "dimension": "Business Model",
+      "weight": 0.1,
+      "score": 5,
+      "weighted": 0.5,
+      "rationale": "LTV:CAC unknown; subscription per cooperative likely low margins; no pricing validated."
+    },
+    {
+      "dimension": "Competition",
+      "weight": 0.08,
+      "score": 6,
+      "weighted": 0.48,
+      "rationale": "Main competitor is manual WhatsApp; some agri-tech apps but none focused on voice; moderate threat from incumbents."
+    },
+    {
+      "dimension": "Financials",
+      "weight": 0.05,
+      "score": 5,
+      "weighted": 0.25,
+      "rationale": "No financial data; assumed lean but burn rate not justified; runway unknown."
+    },
+    {
+      "dimension": "Risk Profile",
+      "weight": 0.02,
+      "score": 5,
+      "weighted": 0.1,
+      "rationale": "Key risks: farmer adoption, transcription accuracy in noisy fields, and reliance on phone networks; manageable but significant."
+    }
+  ],
+  "vc_verdict": {
+    "composite_score": 4.58,
+    "verdict": "DECLINE",
+    "reason": "Disqualifying score on: traction",
+    "weak_dims": [
+      "traction"
+    ],
+    "disqualifying_dims": [
+      "traction"
+    ],
+    "investor_lenses": {
+      "sequoia": "WATCH",
+      "yc": "FAIL",
+      "tiger_global": "FAIL",
+      "risk_mgmt": "ELEVATED"
+    },
+    "source": "deterministic_vc_calcs"
+  },
+  "go_no_go": "no",
+  "decision": "Do not pursue at this stage; requires stronger founder-market fit and initial traction evidence.",
+  "next_experiments": [
+    "Conduct 20 farmer interviews to quantify pain and willingness to use voice-based reporting.",
+    "Run a pilot with one cooperative to test transcription accuracy and classification in local languages.",
+    "Build a simple MVP using Twilio voice and a basic NLP model to validate workflow feasibility."
+  ],
+  "kill_criteria": [
+    "Fewer than 50% of farmers express interest in switching from WhatsApp to voice system.",
+    "Transcription accuracy falls below 70% for key disease terms in target languages.",
+    "Cooperatives unwilling to pay even a nominal fee for the service."
+  ],
+  "source": "llm",
+  "_iteration_id": "I3",
+  "_iteration_angle": "PIVOT_WEDGE",
+  "_iteration_one_liner": "We turn chaotic farmer voice notes into structured, triaged disease alerts for coffee cooperative technicians using a simple phone call."
+}

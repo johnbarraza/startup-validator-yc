@@ -1,0 +1,227 @@
+{
+  "idea": "SeguridadMesh is an AI video analytics overlay for municipal serenazgo camera networks in Peru that detects street-level incidents—such as assaults, thefts, and traffic accidents—in real time and instantly alerts operators with minimal distraction.",
+  "selected_gap": {
+    "id": "G1",
+    "title": "Incident detection tailored to Peruvian serenazgo contexts",
+    "pain": "High",
+    "why_now": "Municipalities increase security budgets but generic analytics miss local crime patterns, causing operator fatigue and slow response.",
+    "evidence_needed": "Interview serenazgo operators at 3 municipalities to catalog undetected incident types; prototype a detection model on sample footage and compare to manual monitoring.",
+    "priority": "High",
+    "risk": "Competitors may adapt with localized models; requires continuous data collection."
+  },
+  "friedman_scores": [
+    {
+      "criterion": "Founder-market fit",
+      "score": 5,
+      "note": "Founder background unknown; no clear domain expertise in Peruvian public safety."
+    },
+    {
+      "criterion": "Market size",
+      "score": 4,
+      "note": "TAM is small: municipal security budgets in Peru are limited, likely < $200M."
+    },
+    {
+      "criterion": "Problem acuity",
+      "score": 7,
+      "note": "High pain from crime and slow response, but municipal budgets are constrained."
+    },
+    {
+      "criterion": "Competition",
+      "score": 6,
+      "note": "Generic video analytics exist but few tailored to Peru; local adaptation is an advantage."
+    },
+    {
+      "criterion": "Personal pull",
+      "score": 5,
+      "note": "Founder's personal motivation not disclosed; assume moderate."
+    },
+    {
+      "criterion": "Recently possible or necessary",
+      "score": 7,
+      "note": "AI advances and increasing security budgets make it timely."
+    },
+    {
+      "criterion": "Successful proxies",
+      "score": 6,
+      "note": "Verkada and others show success in similar spaces, but B2G in Peru is distinct."
+    },
+    {
+      "criterion": "Years-long commitment",
+      "score": 7,
+      "note": "Navigating B2G sales cycles requires long-term commitment."
+    },
+    {
+      "criterion": "Scalability",
+      "score": 5,
+      "note": "Software scales, but each municipality requires customization and trust-building."
+    },
+    {
+      "criterion": "Good idea space",
+      "score": 7,
+      "note": "Vertical AI for public safety is a promising and underserved niche."
+    }
+  ],
+  "yc_rule_scores": [
+    {
+      "criterion": "Do not wait for the perfect idea",
+      "score": 7,
+      "note": "Specific idea with concrete target; good to start."
+    },
+    {
+      "criterion": "Burn the boats",
+      "score": 7,
+      "note": "Assumes single focus; acceptable."
+    },
+    {
+      "criterion": "Go deep into customer workflow",
+      "score": 5,
+      "note": "Claims to understand serenazgo workflow but no evidence yet."
+    },
+    {
+      "criterion": "Build at the edge of AI",
+      "score": 5,
+      "note": "Uses AI but not cutting-edge research; edge is domain adaptation."
+    },
+    {
+      "criterion": "Sell outcomes, not tools",
+      "score": 6,
+      "note": "Sells 'proactive response' but pricing is license-based, not outcome-based."
+    },
+    {
+      "criterion": "Choose ambitious scope",
+      "score": 7,
+      "note": "Aiming for entire Peru serenazgo system is ambitious."
+    },
+    {
+      "criterion": "Treat failure as structured data",
+      "score": 5,
+      "note": "No structured approach to failure outlined."
+    },
+    {
+      "criterion": "Pick low-trust, high-expertise markets",
+      "score": 8,
+      "note": "Public sector fits perfectly: low trust, high need for expertise."
+    },
+    {
+      "criterion": "The process is the product",
+      "score": 5,
+      "note": "Focus is on software product, not process."
+    },
+    {
+      "criterion": "Avoid early-demand trap",
+      "score": 6,
+      "note": "Must validate with real municipalities before scaling."
+    },
+    {
+      "criterion": "Price per unit or result",
+      "score": 4,
+      "note": "Annual license per camera is per unit, but not per result."
+    },
+    {
+      "criterion": "Obsess over COGS",
+      "score": 7,
+      "note": "Software only, low marginal cost."
+    },
+    {
+      "criterion": "Do not bolt AI onto legacy",
+      "score": 6,
+      "note": "Overlay on existing cameras is acceptable; not legacy reengineering."
+    },
+    {
+      "criterion": "Cover domain, model, and operations fluency",
+      "score": 5,
+      "note": "Domain fluency lacking until customer interviews done."
+    }
+  ],
+  "vc_rubric_scores": [
+    {
+      "dimension": "Team",
+      "weight": 0.25,
+      "score": 5,
+      "weighted": 1.25,
+      "rationale": "Founder not described; likely lacks deep domain expertise in Peruvian public safety or serenazgo operations."
+    },
+    {
+      "dimension": "Market",
+      "weight": 0.2,
+      "score": 4,
+      "weighted": 0.8,
+      "rationale": "Total addressable market is small: Peru's 1800+ municipalities have limited security budgets, unlikely to exceed $200M."
+    },
+    {
+      "dimension": "Product",
+      "weight": 0.15,
+      "score": 6,
+      "weighted": 0.9,
+      "rationale": "Moated by localized data and workflow integration, but initial prototype not demonstrated; competitors could replicate."
+    },
+    {
+      "dimension": "Traction",
+      "weight": 0.15,
+      "score": 2,
+      "weighted": 0.3,
+      "rationale": "No evidence of customer interviews, pilots, or letters of intent; pure idea stage."
+    },
+    {
+      "dimension": "Business Model",
+      "weight": 0.1,
+      "score": 6,
+      "weighted": 0.6,
+      "rationale": "Annual B2G license with high margins, but LTV:CAC unknown and long sales cycles may erode economics."
+    },
+    {
+      "dimension": "Competition",
+      "weight": 0.08,
+      "score": 5,
+      "weighted": 0.4,
+      "rationale": "Faces large incumbents (Honeywell, Bosch) and startups; local adaptation is weak moat if they decide to enter."
+    },
+    {
+      "dimension": "Financials",
+      "weight": 0.05,
+      "score": 5,
+      "weighted": 0.25,
+      "rationale": "No financial data; assuming reasonable burn but slow revenue ramp typical for B2G."
+    },
+    {
+      "dimension": "Risk Profile",
+      "weight": 0.02,
+      "score": 4,
+      "weighted": 0.08,
+      "rationale": "High risk from corruption, regulatory hurdles, and long procurement cycles; many failure points."
+    }
+  ],
+  "vc_verdict": {
+    "composite_score": 4.58,
+    "verdict": "DECLINE",
+    "reason": "Disqualifying score on: traction",
+    "weak_dims": [
+      "traction"
+    ],
+    "disqualifying_dims": [
+      "traction"
+    ],
+    "investor_lenses": {
+      "sequoia": "WATCH",
+      "yc": "FAIL",
+      "tiger_global": "FAIL",
+      "risk_mgmt": "CRITICAL"
+    },
+    "source": "deterministic_vc_calcs"
+  },
+  "go_no_go": "NO_GO",
+  "decision": "Do not pursue this idea as a primary venture due to weak market size, no traction, and high B2G risk. Consider it only as a side project if founder has direct insider access.",
+  "next_experiments": [
+    "Interview serenazgo operators at 3 municipalities to catalog undetected incident types and validate pain.",
+    "Prototype a detection model on sample footage (e.g., YouTube videos of Peruvian streets) and compare accuracy to manual monitoring."
+  ],
+  "kill_criteria": [
+    "No interest or willingness to pilot from first 3 municipalities after interviews.",
+    "Prototype accuracy below 70% for key incident types.",
+    "Evidence that existing solutions (e.g., generic analytics) satisfy operators."
+  ],
+  "source": "llm",
+  "_iteration_id": "I1",
+  "_iteration_angle": "ORIGINAL",
+  "_iteration_one_liner": "We give serenazgo operators an AI copilot that detects street crimes in real-time on their existing cameras, so they can dispatch officers faster instead of waiting for phone calls."
+}

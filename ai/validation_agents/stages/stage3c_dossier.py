@@ -225,6 +225,65 @@ def _fallback_dossier(
             "inei_microdatos": "Useful for Peru-specific TAM/SAM evidence from INEI surveys and variable search.",
             "paperdl": "Useful for finding academic papers when the idea needs scientific, health, education, or technical evidence.",
         },
+        # Pressure-test scorecard (startup-pressure-test framework)
+        "pressure_test_scorecard": {
+            "pain_intensity": 3,
+            "buyer_clarity": 2,
+            "urgency": 3,
+            "differentiation": 2,
+            "speed_to_validate": 4,
+            "founder_advantage": 2,
+            "total": 16,
+        },
+        # Fatal flaws (pressure-test framework)
+        "fatal_flaws": [
+            {
+                "risk": "Market risk: users like the idea but don't have urgent pain.",
+                "severity": "HIGH",
+                "why_it_matters": "No urgency = no switching from free alternatives.",
+                "fast_test": "5 interviews asking about last time this pain cost them time or money.",
+            },
+            {
+                "risk": "Payment blocker: buyer can't pay via SaaS subscription given Peru's informal economy.",
+                "severity": "HIGH",
+                "why_it_matters": "No recurring billing = no SaaS business model.",
+                "fast_test": "Ask 3 target buyers if they have a credit card or Yape for business payments.",
+            },
+            {
+                "risk": "Free substitute absorbs 80% of use case before product ships.",
+                "severity": "MEDIUM",
+                "why_it_matters": "WhatsApp + Excel + Google Forms are entrenched and free.",
+                "fast_test": "Map every step of the workflow to existing free tools; identify the gap.",
+            },
+        ],
+        # First 10 customers (pressure-test framework — manual, founder-led)
+        "first_10_customers": [
+            {
+                "action": "Send 20 WhatsApp voice messages to target buyers with a 2-sentence problem statement.",
+                "channel": "WhatsApp",
+                "target_persona": "Decision-maker in the target segment",
+                "how_to_reach": "Use LinkedIn to find names, then WhatsApp via shared group or mutual contact.",
+            },
+            {
+                "action": "Run a 30-min Zoom demo for 5 warm contacts who already have this pain.",
+                "channel": "LinkedIn",
+                "target_persona": "Operators who currently use the manual workaround",
+                "how_to_reach": "Search LinkedIn for job title + pain keyword, send a connection note referencing the exact problem.",
+            },
+            {
+                "action": "Attend one industry event or WhatsApp group where target buyers gather.",
+                "channel": "community",
+                "target_persona": "Any buyer who attends sector events or online communities",
+                "how_to_reach": "Join the WhatsApp group, post a pain-question (not a pitch), DM respondents.",
+            },
+        ],
+        # MVP 2-week test (pressure-test framework)
+        "mvp_2_week_test": {
+            "build": "A single-workflow prototype: one input, one output — no dashboard, no settings.",
+            "cut": "Authentication, billing, multi-user, reporting, and any feature beyond the core workflow.",
+            "test_hypothesis": "If 3 of 5 demo users complete the workflow without help and ask 'when can I use this?', demand is real.",
+            "success_signal": "At least 1 user offers to pay or signs a letter of intent within 2 weeks.",
+        },
     }
 
 
@@ -329,11 +388,53 @@ the_ask MUST justify every dollar with critical reasoning:
 scorecard: dict of {{dimension: score}} where all scores sum to total_score.
 total_score and max_score MUST appear as separate integer fields at root level.
 
+pressure_test_scorecard: score each dimension 1-5 (from startup-pressure-test framework):
+{{
+  "pain_intensity": <1-5>,
+  "buyer_clarity": <1-5>,
+  "urgency": <1-5>,
+  "differentiation": <1-5>,
+  "speed_to_validate": <1-5>,
+  "founder_advantage": <1-5>,
+  "total": <sum, max 30>
+}}
+
+fatal_flaws: the 3 most dangerous risks (from pressure-test framework):
+[
+  {{
+    "risk": "<specific failure mode>",
+    "severity": "HIGH|MEDIUM|LOW",
+    "why_it_matters": "<one sentence>",
+    "fast_test": "<cheapest way to prove or kill this risk in <2 weeks>"
+  }},
+  ...max 3...
+]
+
+first_10_customers: 3 most actionable manual traction moves (founder-led, no ads):
+[
+  {{
+    "action": "<specific outreach or demo action>",
+    "channel": "WhatsApp|LinkedIn|cold-call|event|referral|community|other",
+    "target_persona": "<exact role and company type>",
+    "how_to_reach": "<specific script or approach>"
+  }},
+  ...3 items...
+]
+
+mvp_2_week_test: smallest test that proves or kills the riskiest assumption:
+{{
+  "build": "<what to build in 2 weeks — one workflow, one output>",
+  "cut": "<what NOT to build — features that don't test the core assumption>",
+  "test_hypothesis": "<if X users do Y within 2 weeks, the assumption is validated>",
+  "success_signal": "<the single metric that confirms demand>"
+}}
+
 Return JSON with exactly these root keys:
 source, one_liner, problem, solution_insight, why_now, market, competition_moat,
 business_model_pricing, go_to_market, traction_signals, roadmap, risks_mitigations,
 the_ask, product_demo_architecture, scorecard, total_score, max_score, rating,
-external_research_hooks.
+external_research_hooks, pressure_test_scorecard, fatal_flaws, first_10_customers,
+mvp_2_week_test.
 
 product_demo_architecture: concrete for this specific idea (no generic placeholders).
 external_research_hooks: list of strings citing specific Peru data sources.

@@ -1,0 +1,165 @@
+{
+  "idea": "PlagaNet: mobile app for Peruvian farmers detecting pests in potato and corn via computer vision, freemium for farmers + B2G to Agrorural and Midagri for national surveillance.",
+  "market": "Peruvian smallholder agriculture, focused on potato and corn crops, with a dual GTM targeting individual farmers and government phytosanitary agencies.",
+  "solutions": [
+    {
+      "id": "sol-01",
+      "name": "Plantix",
+      "category": "Mobile AI App",
+      "observed_positioning": "Global leader, free, multilingual, covers many crops, strong community."
+    },
+    {
+      "id": "sol-02",
+      "name": "Agrio",
+      "category": "Mobile AI App",
+      "observed_positioning": "AI plant diagnosis, freemium, less traction in Latin America."
+    },
+    {
+      "id": "sol-03",
+      "name": "PlantVillage Nuru",
+      "category": "Non-profit AI App",
+      "observed_positioning": "Open-source, offline, backed by Penn State/FAO, used in Africa."
+    },
+    {
+      "id": "sol-04",
+      "name": "SENASA phytosanitary surveillance",
+      "category": "Government Service",
+      "observed_positioning": "National inspection network, manual, paper-based, slow."
+    },
+    {
+      "id": "sol-05",
+      "name": "Agrorural internal programs",
+      "category": "Government Service",
+      "observed_positioning": "Rural development agency, provides extension services, limited digital."
+    },
+    {
+      "id": "sol-06",
+      "name": "INIA extension services",
+      "category": "Government Research",
+      "observed_positioning": "Agricultural research institute, offers pest identification and training."
+    },
+    {
+      "id": "sol-07",
+      "name": "Traditional manual scouting",
+      "category": "Manual Method",
+      "observed_positioning": "Farmers visually inspect crops, no technology, low accuracy."
+    },
+    {
+      "id": "sol-08",
+      "name": "WhatsApp farmer groups",
+      "category": "Social Media",
+      "observed_positioning": "Peer-to-peer advice via photo sharing, highly adopted, no expert validation."
+    },
+    {
+      "id": "sol-09",
+      "name": "Drone service providers (e.g., AgroDrone Peru)",
+      "category": "Drone Monitoring",
+      "observed_positioning": "Aerial imaging for large farms, expensive, not for smallholders."
+    },
+    {
+      "id": "sol-10",
+      "name": "Satellite monitoring platforms (e.g., EOSDA)",
+      "category": "Satellite Analytics",
+      "observed_positioning": "Large-scale crop monitoring, pest stress detection, not real-time pest ID."
+    },
+    {
+      "id": "sol-11",
+      "name": "Weather-based pest alerts (AgroNet, Agromensajes)",
+      "category": "Predictive Advisory",
+      "observed_positioning": "SMS-based alerts using weather models, no on-ground validation."
+    },
+    {
+      "id": "sol-12",
+      "name": "Bayer Digital Farming (FieldView)",
+      "category": "Multinational Digital Tool",
+      "observed_positioning": "For large commercial farms, not designed for Peruvian smallholders."
+    },
+    {
+      "id": "sol-13",
+      "name": "FAO Fall Armyworm App",
+      "category": "International Program",
+      "observed_positioning": "Specific for fall armyworm in corn, used in Latin America, backed by FAO."
+    },
+    {
+      "id": "sol-14",
+      "name": "Agronomist consultants",
+      "category": "Expert Service",
+      "observed_positioning": "Paid professional advice, not scalable, limited availability."
+    },
+    {
+      "id": "sol-15",
+      "name": "Do-nothing (accept losses)",
+      "category": "No Action",
+      "observed_positioning": "Farmers do not take any action, accept yield loss."
+    }
+  ],
+  "research_summary": "PlagaNet's competitive landscape in Peru includes well-funded global apps like Plantix, FAO-backed offline tools like Nuru, entrenched government agencies with manual processes, and deeply adopted informal methods via WhatsApp. The strongest direct competitors for farmer adoption are Plantix and Agrio, while B2G competition comes from incumbent agencies like SENASA. Behavioral inertia from free, low-tech alternatives is a key barrier.",
+  "competitor_signals": [
+    {
+      "competitor": "Plantix",
+      "hiring_score": 8,
+      "funding_score": 9,
+      "product_score": 8,
+      "team_score": 8,
+      "market_score": 8,
+      "tech_score": 9,
+      "overall_score": 83.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Plantix (PEAT GmbH) is the leading global mobile app for plant health. With over 30M downloads and active in 100+ countries, it offers free AI diagnosis. Strong funding and team make it a formidable competitor for farmer-facing adoption."
+    },
+    {
+      "competitor": "Agrio",
+      "hiring_score": 4,
+      "funding_score": 4,
+      "product_score": 5,
+      "team_score": 5,
+      "market_score": 6,
+      "tech_score": 5,
+      "overall_score": 46.0,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Agrio (Saillog) provides AI plant diagnosis with a freemium model. It has less traction in Latin America and lacks strong funding, posing a lower immediate threat."
+    },
+    {
+      "competitor": "PlantVillage Nuru",
+      "hiring_score": 3,
+      "funding_score": 6,
+      "product_score": 6,
+      "team_score": 7,
+      "market_score": 5,
+      "tech_score": 6,
+      "overall_score": 53.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "PlantVillage Nuru is an FAO-backed app targeting pests in Africa. Its offline capability and government ties could compete with PlagaNet for B2G contracts in Peru."
+    },
+    {
+      "competitor": "SENASA phytosanitary surveillance",
+      "hiring_score": 3,
+      "funding_score": 5,
+      "product_score": 2,
+      "team_score": 4,
+      "market_score": 7,
+      "tech_score": 2,
+      "overall_score": 38.0,
+      "classification": "MONITOR",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "SENASA manually conducts phytosanitary surveillance with limited technology. While they have the mandate, their low-tech approach makes them a target for disruption through B2G sales."
+    },
+    {
+      "competitor": "Traditional Methods & WhatsApp Networks",
+      "hiring_score": 1,
+      "funding_score": 1,
+      "product_score": 2,
+      "team_score": 1,
+      "market_score": 9,
+      "tech_score": 1,
+      "overall_score": 20.0,
+      "classification": "MONITOR",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Smallholder farmers rely heavily on manual scouting and WhatsApp groups for pest advice. This behavior is a major adoption barrier for any tech solution, despite its low accuracy."
+    }
+  ],
+  "source": "llm"
+}

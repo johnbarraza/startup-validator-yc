@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "OCR-Receta Peru pivots from a general prescription-to-savings app into a real-time generic price and availability aggregator focused on independent pharmacies. When a patient uploads a prescription, the OCR instantly identifies the active ingredients, then the platform queries inventory and pricing from a network of independent pharmacies within a 5-km radius. Results rank the cheapest generic alternatives that are currently in stock, and the patient can reserve for pickup or get directions. Independent pharmacies gain a digital customer acquisition channel they lack against big chains, paying a small commission per successful referral. The wedge is narrow: we solve the aggregation and trust gap by validating real-time stock and guaranteeing the price at pickup, eliminating the need for patients to call multiple stores.",
+      "one_liner": "We aggregate real-time generic drug prices and stock across independent pharmacies in Peru, letting patients scan a prescription and lock in the cheapest nearby pickup in 60 seconds.",
+      "target_customer": "A 45-year-old diabetic in Lima who spends S/ 200 monthly on metformin and enalapril, and currently visits two or three pharmacies on foot every refill to save S/ 30–50.",
+      "core_problem": "Chronic patients in Peru overpay by 40–80% for branded medications because they have no way to compare real-time generic prices and availability without physically visiting multiple pharmacies—a 1–2 hour task they repeat every month, costing time, transport, and mental stress.",
+      "solution_hook": "Unlike generic price-comparison websites that list outdated reference prices with no stock data, we show live inventory from independent pharmacies and let patients reserve the exact product at the displayed price for guaranteed pickup.",
+      "why_this_angle": "Focusing on real-time aggregation for independent pharmacies creates a defensible supply-side network effect and addresses the highest-urgency gap in the market, turning a fragmented pain into a sticky daily habit for patients and a must-have customer acquisition channel for small pharmacies.",
+      "quick_score": {
+        "problem_acuity": 8,
+        "market_size": 7,
+        "founder_feasibility": 7,
+        "total": 22
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "A B2B platform for Peruvian health insurers, self-insured employers, and government health programs that aggregates real-time generic drug prices and availability across all pharmacy types. When an insured member or employee scans a prescription via OCR, the system instantly identifies the cheapest generic equivalent at a nearby pharmacy, steering the patient there for pickup. The institution pays a per-covered-life or per-transaction fee, cutting prescription benefit costs by up to 40% through redirected adherence, while the end user enjoys lower prices without sacrificing convenience.",
+      "one_liner": "We help Peruvian health insurers and self-insured employers slash prescription spending by up to 40% by instantly converting patient prescriptions into the cheapest available generic equivalent at a nearby pharmacy, via OCR and real-time price aggregation.",
+      "target_customer": "Pharmacy Benefits Manager at a Peruvian health insurance company (e.g., Pacífico, Rímac) or HR Director of a large employer with self-funded health benefits, tasked with controlling escalating drug costs but lacking real-time steering tools.",
+      "core_problem": "These institutions lose millions annually because patients fill branded prescriptions or don't know where generics are cheaper. Without dynamic, point-of-care guidance, 30–50% of drug claim costs are avoidable overspend—a daily structural drain that forces higher premiums and erodes trust.",
+      "solution_hook": "The only platform merging real-time, cross-pharmacy generic price aggregation (including independent pharmacies) with instant OCR prescription reading, enabling institutions to automatically steer patients to the lowest-cost option at the moment of need.",
+      "why_this_angle": "Selling to institutional payers with budget and urgent cost pressure aligns incentives: they save money, patients save money, and adoption is faster than a commission-based B2B2C model. The recurring SaaS model scales with covered lives, directly tackling a top-priority pain point.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 8,
+        "founder_feasibility": 7,
+        "total": 24
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "A hyper-local WhatsApp chatbot for diabetic patients in Lima's Comas district who need monthly refills of metformin and insulin. Users photograph their prescription and send it via WhatsApp; OCR extracts the drugs and queries real-time price and stock data from a handpicked network of 10 independent pharmacies that update daily via a simple form. The bot instantly returns the cheapest generic option nearby. Patients pay S/2 per search via Yape, validating direct willingness to pay. The wedge deliberately narrows scope to one disease, one area, and one drug category to prove demand in 30 days.",
+      "one_liner": "We help diabetic patients in Comas find the cheapest monthly diabetes medication using a WhatsApp OCR chatbot, charging per search.",
+      "target_customer": "A 55-year-old diabetic patient in Comas spending S/150 monthly on metformin and insulin, who currently calls or visits 3–4 pharmacies each month to compare prices, losing time and overpaying.",
+      "core_problem": "Monthly medication shopping consumes 2–3 hours and S/10–15 in transport, with patients often overpaying by S/30–50 because real-time generic prices are opaque across pharmacies. The annual cost of this friction exceeds S/500, and skipped doses due to high prices pose health risks.",
+      "solution_hook": "Real-time price and stock aggregation from a curated pharmacy network, delivered via a WhatsApp bot with OCR and integrated payment, reducing a 2-hour chore to a 30-second, money-saving action.",
+      "why_this_angle": "By tackling one segment with high-frequency, predictable need and manually onboarding a handful of pharmacies and patients, we can test direct payment willingness and gather undeniable evidence of demand in 30 days, before building scalable infrastructure.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 2,
+        "founder_feasibility": 9,
+        "total": 20
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I2",
+  "recommended_one_liner": "We help Peruvian health insurers and self-insured employers slash prescription spending by up to 40% by instantly converting patient prescriptions into the cheapest available generic equivalent at a nearby pharmacy, via OCR and real-time price aggregation.",
+  "source": "parallel_iteration"
+}

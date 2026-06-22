@@ -1,0 +1,165 @@
+{
+  "idea": "EPS Admin AI: AI that automates medical prior authorization for Peruvian health insurers, replacing manual review with instant AI recommendations and justifications, charging per authorization.",
+  "market": "Peruvian health insurance authorization processing market, potentially expanding to Colombia, Chile, Mexico.",
+  "solutions": [
+    {
+      "id": "alt1",
+      "name": "EPS manual medical audit teams",
+      "category": "Incumbent manual process",
+      "observed_positioning": "The current standard: teams of medical auditors manually review each authorization request, taking 30-120 min, with no automation beyond basic claim systems."
+    },
+    {
+      "id": "alt2",
+      "name": "AuthFast",
+      "category": "Direct AI competitor (early-stage)",
+      "observed_positioning": "A Chilean startup offering AI-driven prior authorization for LatAm insurers, focusing on speed and guideline adherence."
+    },
+    {
+      "id": "alt3",
+      "name": "Cohere Health",
+      "category": "Global AI entrant",
+      "observed_positioning": "US-based leader in prior authorization AI, recently announced pilot with a Mexican insurer, potential expansion to Andean region."
+    },
+    {
+      "id": "alt4",
+      "name": "Olive AI",
+      "category": "Global AI entrant",
+      "observed_positioning": "Formerly focused on RPA, now pivoting to prior auth automation; exploring international markets after US adoption."
+    },
+    {
+      "id": "alt5",
+      "name": "Sutherland Global Services",
+      "category": "BPO with AI augmentation",
+      "observed_positioning": "Large BPO offering claims processing services to payors, incorporating AI to reduce manual effort; existing contracts with LatAm insurers."
+    },
+    {
+      "id": "alt6",
+      "name": "Cognizant Health",
+      "category": "BPO/Consulting",
+      "observed_positioning": "Provides end-to-end healthcare administration outsourcing, including prior auth, using a mix of onshore and offshore teams plus light automation."
+    },
+    {
+      "id": "alt7",
+      "name": "EPS internal RPA initiatives",
+      "category": "Internal workaround",
+      "observed_positioning": "Some EPS (e.g., Rimac) are experimenting with robotic process automation to pre-fill fields and apply simple rules, reducing review time marginally."
+    },
+    {
+      "id": "alt8",
+      "name": "Google Document AI / Rossum",
+      "category": "Generic AI adaptation",
+      "observed_positioning": "General-purpose document understanding tools that could be configured for prior auth, but require significant medical domain customization."
+    },
+    {
+      "id": "alt9",
+      "name": "Doctoralia / Mediktor",
+      "category": "Adjacent healthtech",
+      "observed_positioning": "Telehealth and symptom checkers that could integrate insurance auth workflows, but not core focus."
+    },
+    {
+      "id": "alt10",
+      "name": "Accenture Health Consulting",
+      "category": "Consulting-led automation",
+      "observed_positioning": "Custom builds AI solutions for payors globally, including prior auth, but at high cost and long implementation."
+    },
+    {
+      "id": "alt11",
+      "name": "Open-source LLM-based internal tool",
+      "category": "In-house AI adoption",
+      "observed_positioning": "Some insurers are exploring using GPT-4 or similar LLMs to build internal approval recommendation engines with prompt engineering."
+    },
+    {
+      "id": "alt12",
+      "name": "Regulatory simplification",
+      "category": "Market shift",
+      "observed_positioning": "If MINSA (Peru) or other regulators mandate standardized clinical guidelines and electronic prior auth with approved algorithms, reducing the need for custom AI."
+    },
+    {
+      "id": "alt13",
+      "name": "Peer-to-peer physician review networks",
+      "category": "Alternative model",
+      "observed_positioning": "Platforms where treating physicians get quick peer reviews from specialists within the insurer's network, bypassing traditional audit teams."
+    },
+    {
+      "id": "alt14",
+      "name": "Teleperformance Health",
+      "category": "BPO alternative",
+      "observed_positioning": "Another large BPO with a healthcare division that can handle manual prior auth with some digital tools, competing on labor cost."
+    },
+    {
+      "id": "alt15",
+      "name": "Do-nothing (tolerate status quo)",
+      "category": "Inaction",
+      "observed_positioning": "EPS leadership decides not to invest in automation, accepting the current slow turnaround times and high operational costs."
+    }
+  ],
+  "research_summary": "The prior authorization automation market in Latin America is in its infancy, with no clear leader. The primary alternative remains manual review, which is slow and costly. Global AI players like Cohere Health and Olive show interest in the region, while BPOs like Sutherland leverage existing relationships. Internal EPS initiatives pose a threat if they succeed. The startup's main advantage is its outcome-based pricing and local focus, but speed to market is critical as competitors loom.",
+  "competitor_signals": [
+    {
+      "competitor": "Cohere Health",
+      "hiring_score": 8,
+      "funding_score": 9,
+      "product_score": 8,
+      "team_score": 9,
+      "market_score": 7,
+      "tech_score": 8,
+      "overall_score": 83.0,
+      "classification": "MOVE_FAST",
+      "sentiment": "POSITIVE",
+      "sourcing_brief": "Cohere Health has strong momentum in the US prior auth space with significant funding and marquee clients. Their announced LatAm pilot signals imminent expansion, making them the most dangerous potential entrant."
+    },
+    {
+      "competitor": "Sutherland Global Services",
+      "hiring_score": 7,
+      "funding_score": 6,
+      "product_score": 5,
+      "team_score": 6,
+      "market_score": 8,
+      "tech_score": 4,
+      "overall_score": 61.5,
+      "classification": "MOVE_FAST",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "Sutherland's deep penetration in LatAm health payer operations gives them a distribution advantage, but their AI capabilities are not leading-edge, relying on partnerships."
+    },
+    {
+      "competitor": "EPS internal RPA initiatives",
+      "hiring_score": 4,
+      "funding_score": 3,
+      "product_score": 3,
+      "team_score": 4,
+      "market_score": 5,
+      "tech_score": 2,
+      "overall_score": 35.5,
+      "classification": "MONITOR",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Incumbent EPS IT teams are exploring RPA for prior auth, but lack AI expertise and face internal resistance. Their solutions are unlikely to match dedicated AI, but could delay adoption of external tools."
+    },
+    {
+      "competitor": "AuthFast",
+      "hiring_score": 6,
+      "funding_score": 5,
+      "product_score": 6,
+      "team_score": 7,
+      "market_score": 6,
+      "tech_score": 6,
+      "overall_score": 59.0,
+      "classification": "ENGAGE",
+      "sentiment": "NEUTRAL",
+      "sourcing_brief": "AuthFast is the only known direct AI competitor in the region, with a small but growing presence. Their local focus gives them cultural and regulatory advantages, but their scale and funding are limited."
+    },
+    {
+      "competitor": "Manual audit teams (status quo)",
+      "hiring_score": 3,
+      "funding_score": 1,
+      "product_score": 1,
+      "team_score": 5,
+      "market_score": 10,
+      "tech_score": 1,
+      "overall_score": 30.0,
+      "classification": "MONITOR",
+      "sentiment": "NEGATIVE",
+      "sourcing_brief": "Manual audit teams are the entrenched incumbent, with high switching costs for EPS but extreme inefficiency. They lack innovation capacity but benefit from organizational inertia."
+    }
+  ],
+  "source": "llm"
+}

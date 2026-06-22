@@ -1,0 +1,58 @@
+{
+  "iterations": [
+    {
+      "id": "I1",
+      "angle": "ORIGINAL",
+      "idea_refined": "PlagaNet is a mobile app that gives Peruvian potato and corn farmers instant, offline pest diagnosis from a photo, using computer vision trained on local data. It addresses the costly habit of guesswork or delayed expert visits by providing actionable recommendations in seconds, even without connectivity. The freemium model offers free basic diagnosis, with premium features for monitoring and advice, while a B2G module enables Agrorural to track pest outbreaks across regions by aggregating anonymized farmer data.",
+      "one_liner": "We help Peruvian potato and corn farmers prevent crop loss by providing instant, offline AI pest diagnosis from a photo, using computer vision tailored to local pests.",
+      "target_customer": "Smallholder potato farmer in the Andean highlands of Peru, farming less than 5 hectares, who currently relies on guesswork or infrequent visits from extension agents to identify pests.",
+      "core_problem": "Every week during the growing season, a farmer spots discolored leaves or spots, guesses what pest it is based on neighbor stories, and sprays the wrong pesticide—or does nothing. This causes repeated losses of up to 40% of their harvest, risking their family's yearly income.",
+      "solution_hook": "Unlike generic plant apps, PlagaNet works entirely offline and is trained exclusively on the 20+ most damaging potato and corn pests in Peru, giving a reliable diagnosis and local treatment guide in under 10 seconds, without needing internet or an expert.",
+      "why_this_angle": "By narrowing to the offline-first, localized diagnosis wedge, we remove the connectivity barrier and directly replace the perilous guesswork that causes daily economic damage. This makes the value immediate and undeniable, driving farmer adoption and creating a rich data backbone for national surveillance.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 7,
+        "founder_feasibility": 8,
+        "total": 24
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I2",
+      "angle": "PIVOT_B2B",
+      "idea_refined": "PlagaNet for B2B is an offline-first pest diagnosis and monitoring platform that agricultural cooperatives and input distributors purchase to empower their member farmers with instant AI-powered identification of potato and corn pests using smartphone photos. The platform integrates a centralized dashboard that aggregates real-time pest outbreak data from all member fields, enabling the buyer to provide proactive, localized support, optimize input distribution, and reduce crop loss across their network. The buyer pays a per-member or per-hectare subscription fee, turning the service into a value-add that strengthens loyalty and improves supply chain quality.",
+      "one_liner": "We give agricultural cooperatives in Peru an offline AI pest diagnosis tool for their farmers, paired with a dashboard that tracks outbreaks in real time.",
+      "target_customer": "General Manager of a mid-size potato and corn growers’ cooperative in the Peruvian highlands, responsible for member productivity, input procurement, and contract fulfillment with buyers like Frito-Lay.",
+      "core_problem": "Today, when a farmer spots suspicious leaf damage, they snap a photo and send it via WhatsApp to the cooperative’s lone extension agent, who tries to diagnose it from a small screen, often hours later or the next day. Delays of even 24 hours can allow a late blight outbreak to spread, destroying up to 40% of a smallholder’s yield. The cooperative absorbs these losses through reduced volume, quality penalties, and emergency input spending, costing thousands of dollars per outbreak across their member base.",
+      "solution_hook": "Unlike generic plant diagnosis apps that require constant internet and lack Peruvian pest data, PlagaNet’s AI model runs entirely offline on low-end phones, is fine-tuned on annotated photos of Andes-specific potato and corn pests, and feeds alerts into a cooperative-wide map so managers can allocate extension visits and inputs where needed most.",
+      "why_this_angle": "Selling to cooperatives aligns payment with value: the buyer has a direct financial stake in farmer success and can justify a recurring per-farmer fee through reduced crop losses and improved negotiation power with processors. This B2B model reduces churn compared to freemium farmer apps and avoids the long sales cycles of government procurement. Early adopter cooperatives are well-networked, making referrals easier.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 6,
+        "founder_feasibility": 8,
+        "total": 23
+      },
+      "source": "llm"
+    },
+    {
+      "id": "I3",
+      "angle": "PIVOT_WEDGE",
+      "idea_refined": "PlagaNet narrows to a razor-sharp wedge: an offline-first AI potato pest diagnosis tool targeting smallholder potato farmers in the Mantaro Valley, Peru, who face acute late blight outbreaks during the rainy season. These farmers currently lose 20-50% of their crop due to misdiagnosis and delayed treatments, as they rely on visual guesses or intermittent agronomist visits, with internet connectivity often failing when they need it most. Our solution puts a compressed computer vision model directly onto their existing Android phones, allowing instant, offline identification of late blight and other common pests with confidence scores and locally relevant treatment recommendations. This hyper-local focus lets us validate willingness to pay by delivering immediate value during the current blight season, directly to farmers who are desperate for a reliable, always-available diagnostic tool.",
+      "one_liner": "We give potato farmers in the Peruvian highlands an offline AI tool to diagnose late blight instantly on their phones, preventing crop losses.",
+      "target_customer": "A smallholder potato farmer in the Mantaro Valley, Junín, Peru, with 2 hectares of land, currently struggling with a late blight outbreak and no reliable diagnostic help.",
+      "core_problem": "Every day during the rainy season, they inspect their fields, see leaf spots, and must decide whether to spray fungicides. They often guess wrong, wasting money on ineffective chemicals while the blight spreads, costing them up to half their harvest. They try to send photos via WhatsApp to agronomists, but with no internet, the advice comes too late.",
+      "solution_hook": "Unlike Plantix or Agrio, our app works entirely offline—no data connection needed after a one-time download—and is tuned specifically for the pest species and potato varieties found in the Mantaro Valley.",
+      "why_this_angle": "This wedge turns a broad agtech platform into a life-saving tool for a specific, desperate customer segment at their moment of peak pain. It will prove willingness to pay faster because farmers are already spending money on fungicides and would gladly pay for a tool that ensures they buy and spray the right one.",
+      "quick_score": {
+        "problem_acuity": 9,
+        "market_size": 4,
+        "founder_feasibility": 9,
+        "total": 22
+      },
+      "source": "llm"
+    }
+  ],
+  "recommended_iteration_id": "I1",
+  "recommended_one_liner": "We help Peruvian potato and corn farmers prevent crop loss by providing instant, offline AI pest diagnosis from a photo, using computer vision tailored to local pests.",
+  "source": "parallel_iteration"
+}

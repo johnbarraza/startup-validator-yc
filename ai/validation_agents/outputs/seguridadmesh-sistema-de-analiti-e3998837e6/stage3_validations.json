@@ -1,0 +1,640 @@
+[
+  {
+    "idea": "SeguridadMesh is an AI video analytics overlay for municipal serenazgo camera networks in Peru that detects street-level incidents—such as assaults, thefts, and traffic accidents—in real time and instantly alerts operators with minimal distraction.",
+    "selected_gap": {
+      "id": "G1",
+      "title": "Incident detection tailored to Peruvian serenazgo contexts",
+      "pain": "High",
+      "why_now": "Municipalities increase security budgets but generic analytics miss local crime patterns, causing operator fatigue and slow response.",
+      "evidence_needed": "Interview serenazgo operators at 3 municipalities to catalog undetected incident types; prototype a detection model on sample footage and compare to manual monitoring.",
+      "priority": "High",
+      "risk": "Competitors may adapt with localized models; requires continuous data collection."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 5,
+        "note": "Founder background unknown; no clear domain expertise in Peruvian public safety."
+      },
+      {
+        "criterion": "Market size",
+        "score": 4,
+        "note": "TAM is small: municipal security budgets in Peru are limited, likely < $200M."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 7,
+        "note": "High pain from crime and slow response, but municipal budgets are constrained."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Generic video analytics exist but few tailored to Peru; local adaptation is an advantage."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Founder's personal motivation not disclosed; assume moderate."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 7,
+        "note": "AI advances and increasing security budgets make it timely."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Verkada and others show success in similar spaces, but B2G in Peru is distinct."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 7,
+        "note": "Navigating B2G sales cycles requires long-term commitment."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 5,
+        "note": "Software scales, but each municipality requires customization and trust-building."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 7,
+        "note": "Vertical AI for public safety is a promising and underserved niche."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 7,
+        "note": "Specific idea with concrete target; good to start."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Assumes single focus; acceptable."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 5,
+        "note": "Claims to understand serenazgo workflow but no evidence yet."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 5,
+        "note": "Uses AI but not cutting-edge research; edge is domain adaptation."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 6,
+        "note": "Sells 'proactive response' but pricing is license-based, not outcome-based."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 7,
+        "note": "Aiming for entire Peru serenazgo system is ambitious."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No structured approach to failure outlined."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 8,
+        "note": "Public sector fits perfectly: low trust, high need for expertise."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 5,
+        "note": "Focus is on software product, not process."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Must validate with real municipalities before scaling."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 4,
+        "note": "Annual license per camera is per unit, but not per result."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "Software only, low marginal cost."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 6,
+        "note": "Overlay on existing cameras is acceptable; not legacy reengineering."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 5,
+        "note": "Domain fluency lacking until customer interviews done."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "Founder not described; likely lacks deep domain expertise in Peruvian public safety or serenazgo operations."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "Total addressable market is small: Peru's 1800+ municipalities have limited security budgets, unlikely to exceed $200M."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 6,
+        "weighted": 0.9,
+        "rationale": "Moated by localized data and workflow integration, but initial prototype not demonstrated; competitors could replicate."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No evidence of customer interviews, pilots, or letters of intent; pure idea stage."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 6,
+        "weighted": 0.6,
+        "rationale": "Annual B2G license with high margins, but LTV:CAC unknown and long sales cycles may erode economics."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "Faces large incumbents (Honeywell, Bosch) and startups; local adaptation is weak moat if they decide to enter."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "No financial data; assuming reasonable burn but slow revenue ramp typical for B2G."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "High risk from corruption, regulatory hurdles, and long procurement cycles; many failure points."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.58,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": ""
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Do not pursue this idea as a primary venture due to weak market size, no traction, and high B2G risk. Consider it only as a side project if founder has direct insider access.",
+    "next_experiments": [
+      "Interview serenazgo operators at 3 municipalities to catalog undetected incident types and validate pain.",
+      "Prototype a detection model on sample footage (e.g., YouTube videos of Peruvian streets) and compare accuracy to manual monitoring."
+    ],
+    "kill_criteria": [
+      "No interest or willingness to pilot from first 3 municipalities after interviews.",
+      "Prototype accuracy below 70% for key incident types.",
+      "Evidence that existing solutions (e.g., generic analytics) satisfy operators."
+    ],
+    "source": "llm",
+    "_iteration_id": "I1",
+    "_iteration_angle": "ORIGINAL",
+    "_iteration_one_liner": "We give serenazgo operators an AI copilot that detects street crimes in real-time on their existing cameras, so they can dispatch officers faster instead of waiting for phone calls."
+  },
+  {
+    "idea": "A software-only AI overlay for existing campus surveillance cameras that detects security incidents (theft, vandalism, trespassing, fights) in real-time and alerts security personnel, sold to university security directors as an annual license, aligning with their operational budgets and avoiding hardware lock-in.",
+    "selected_gap": {
+      "id": "G1",
+      "title": "Incident detection tailored to Peruvian serenazgo contexts",
+      "pain": "High",
+      "why_now": "Municipalities increase security budgets but generic analytics miss local crime patterns, causing operator fatigue and slow response.",
+      "evidence_needed": "Interview serenazgo operators at 3 municipalities to catalog undetected incident types; prototype a detection model on sample footage and compare to manual monitoring.",
+      "priority": "High",
+      "risk": "Competitors may adapt with localized models; requires continuous data collection."
+    },
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 3,
+        "note": "No specific founder expertise or background in campus security or AI surveillance mentioned."
+      },
+      {
+        "criterion": "Market size",
+        "score": 5,
+        "note": "Universities in US ~4000, potential SAM ~$40M/yr, but may be small relative to VC expectations."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 7,
+        "note": "Campus security incidents are real pain points with clear consequences (liability, safety)."
+      },
+      {
+        "criterion": "Competition",
+        "score": 4,
+        "note": "Incumbents like Verkada, Eagle Eye, and AI video analytics startups already address this."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "No personal connection or story provided, neutral on founder passion."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 7,
+        "note": "Advances in computer vision and edge AI make this more feasible now."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 6,
+        "note": "Verkada and others have shown traction in similar security SaaS models."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "Unknown commitment level from founder; typical startup requires 10-year commitment."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "Software-only with high margins, but enterprise sales cycles may limit speed."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Security is a persistent need, but the space is crowded and differentiated by domain."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 6,
+        "note": "Idea is reasonable but lacks validation; founder may iterate."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 5,
+        "note": "No indication of singular focus; neutral."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 4,
+        "note": "Gap suggests need for deep workflow understanding, but not yet done."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 5,
+        "note": "AI overlay is not cutting-edge; generic CV rather than frontier models."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 4,
+        "note": "Annual license is tool-selling, not outcome-based (e.g., $ per incident avoided)."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 5,
+        "note": "Campus security is moderately ambitious; not disrupting a massive market."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 3,
+        "note": "No evidence of learning from failures or structured experimentation."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 3,
+        "note": "University security is high-trust (sales to directors); low-trust markets like small biz might be better."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 4,
+        "note": "No insight on internal processes or proprietary workflow."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Could have demand but risk of fake 'nice-to-have' interest."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 5,
+        "note": "Annual license per campus is unit-based; could be per camera or per detection."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 8,
+        "note": "Software-only, cloud costs manageable; low variable costs."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 4,
+        "note": "Overlaying on existing cameras is effectively bolting onto legacy hardware."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 4,
+        "note": "Requires domain knowledge of campus security operations and local crime patterns."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 0.25,
+        "score": 3,
+        "weighted": 0.75,
+        "rationale": "No team background provided; lacks credibility to win in security market."
+      },
+      {
+        "dimension": "Market",
+        "weight": 0.2,
+        "score": 5,
+        "weighted": 1.0,
+        "rationale": "TAM for US universities ~$400M, growing but not huge; timing reasonable."
+      },
+      {
+        "dimension": "Product",
+        "weight": 0.15,
+        "score": 4,
+        "weighted": 0.6,
+        "rationale": "Defensible moat is weak; many competitors with similar AI video analytics."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 0.15,
+        "score": 1,
+        "weighted": 0.15,
+        "rationale": "No evidence of customer interest, pilots, or revenue."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 0.1,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "SaaS with high margins possible, but LTV:CAC unknown; low initial revenue."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 0.08,
+        "score": 3,
+        "weighted": 0.24,
+        "rationale": "Funded incumbents (Verkada, Eagle Eye) dominate; differentiation unclear."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 0.05,
+        "score": 3,
+        "weighted": 0.15,
+        "rationale": "No financial projections or burn rate info; risk of insufficient runway."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 0.02,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "Failure mode: unable to displace existing vendors or achieve sales velocity."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 3.47,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": ""
+    },
+    "go_no_go": "no_go",
+    "decision": "DECLINE",
+    "next_experiments": [
+      "Conduct 10+ interviews with university security directors to validate pain and willingness to pay.",
+      "Build a low-fidelity prototype using public surveillance footage to test detection accuracy.",
+      "Assess competitor offerings and identify specific gaps in existing solutions."
+    ],
+    "kill_criteria": [
+      "No commitment for a paid pilot from at least 2 universities within 3 months.",
+      "Detection accuracy below 80% on realistic test data.",
+      "Cannot identify a unique moat (e.g., data network effect, domain model)."
+    ],
+    "source": "llm",
+    "_iteration_id": "I2",
+    "_iteration_angle": "PIVOT_B2B",
+    "_iteration_one_liner": "We provide real-time AI incident detection for university security cameras, reducing response times and losses, using existing infrastructure."
+  },
+  {
+    "idea": "SeguridadMesh se enfoca exclusivamente en la detección en tiempo real de motos lineales con dos ocupantes sin casco, un patrón delictivo común en robos al paso y arrebatos en distritos peruanos. El sistema se superpone a las cámaras de serenazgo existentes y envía alertas inmediatas a los operadores cuando se identifica esta combinación específica, permitiendo una respuesta rápida. Se vende como una licencia anual B2G utilizando el presupuesto PIM de seguridad ciudadana, comenzando con un piloto de alto impacto en 10 municipalidades con alta incidencia de este delito para demostrar valor en 30 días.",
+    "selected_gap": "G1: Incident detection tailored to Peruvian serenazgo contexts",
+    "friedman_scores": [
+      {
+        "criterion": "Founder-market fit",
+        "score": 6,
+        "note": "Requires deep local knowledge of Peruvian security operations; founder background not provided."
+      },
+      {
+        "criterion": "Market size",
+        "score": 4,
+        "note": "TAM limited to Peruvian municipalities with serenazgo cameras; probably <$50M."
+      },
+      {
+        "criterion": "Problem acuity",
+        "score": 8,
+        "note": "Crime is a high-pain problem and current solutions miss this specific pattern."
+      },
+      {
+        "criterion": "Competition",
+        "score": 6,
+        "note": "Few competitors focused on this narrow vertical, but generic vendors can adapt."
+      },
+      {
+        "criterion": "Personal pull",
+        "score": 5,
+        "note": "Founder motivation unknown; likely strong if they identified the pattern."
+      },
+      {
+        "criterion": "Recently possible or necessary",
+        "score": 6,
+        "note": "AI detection is possible but not new; rising crime may create urgency."
+      },
+      {
+        "criterion": "Successful proxies",
+        "score": 4,
+        "note": "Few successful startups in B2G safety analytics in LATAM."
+      },
+      {
+        "criterion": "Years-long commitment",
+        "score": 5,
+        "note": "B2G requires long sales cycles; commitment unclear without founder info."
+      },
+      {
+        "criterion": "Scalability",
+        "score": 6,
+        "note": "Can scale to many municipalities but each deal is custom and slow."
+      },
+      {
+        "criterion": "Good idea space",
+        "score": 6,
+        "note": "Crime prevention is important, but narrow focus may limit upside."
+      }
+    ],
+    "yc_rule_scores": [
+      {
+        "criterion": "Do not wait for the perfect idea",
+        "score": 8,
+        "note": "They have a specific idea and plan to test it quickly."
+      },
+      {
+        "criterion": "Burn the boats",
+        "score": 7,
+        "note": "Focused on one idea, though not at the expense of other opportunities."
+      },
+      {
+        "criterion": "Go deep into customer workflow",
+        "score": 6,
+        "note": "Understanding operator workflow is critical; need evidence of deep immersion."
+      },
+      {
+        "criterion": "Build at the edge of AI",
+        "score": 5,
+        "note": "Uses standard computer vision; not cutting-edge AI."
+      },
+      {
+        "criterion": "Sell outcomes, not tools",
+        "score": 6,
+        "note": "Alerts aim to reduce crime response time, but still a tool sale."
+      },
+      {
+        "criterion": "Choose ambitious scope",
+        "score": 5,
+        "note": "Narrow vertical; ambition limited to one crime pattern."
+      },
+      {
+        "criterion": "Treat failure as structured data",
+        "score": 5,
+        "note": "No evidence of learning from failures."
+      },
+      {
+        "criterion": "Pick low-trust, high-expertise markets",
+        "score": 7,
+        "note": "Government is low-trust; domain expertise in crime patterns is key."
+      },
+      {
+        "criterion": "The process is the product",
+        "score": 5,
+        "note": "Not a strong fit for this criterion."
+      },
+      {
+        "criterion": "Avoid early-demand trap",
+        "score": 6,
+        "note": "Pilot with 10 municipalities may validate demand before scaling."
+      },
+      {
+        "criterion": "Price per unit or result",
+        "score": 6,
+        "note": "Annual license per camera; could shift to outcome-based pricing."
+      },
+      {
+        "criterion": "Obsess over COGS",
+        "score": 7,
+        "note": "Low marginal cost; overlay software on existing cameras."
+      },
+      {
+        "criterion": "Do not bolt AI onto legacy",
+        "score": 6,
+        "note": "Integrates with legacy cameras, but adds new detection layer."
+      },
+      {
+        "criterion": "Cover domain, model, and operations fluency",
+        "score": 6,
+        "note": "Requires deep understanding of crime patterns and operations."
+      }
+    ],
+    "vc_rubric_scores": [
+      {
+        "dimension": "Team",
+        "weight": 25,
+        "score": 5,
+        "weighted": 1.25,
+        "rationale": "No specific founder background provided; assume moderate fit."
+      },
+      {
+        "dimension": "Market",
+        "weight": 20,
+        "score": 4,
+        "weighted": 0.8,
+        "rationale": "TAM likely under $1B; Peruvian municipal security budgets are limited."
+      },
+      {
+        "dimension": "Product",
+        "weight": 15,
+        "score": 5,
+        "weighted": 0.75,
+        "rationale": "Technical moat is thin; defensibility relies on data and relationships."
+      },
+      {
+        "dimension": "Traction",
+        "weight": 15,
+        "score": 2,
+        "weighted": 0.3,
+        "rationale": "No pilots or customers yet; only plan for 10 municipalities."
+      },
+      {
+        "dimension": "Business Model",
+        "weight": 10,
+        "score": 5,
+        "weighted": 0.5,
+        "rationale": "SaaS margins high but LTV:CAC unknown; government sales cycles are long."
+      },
+      {
+        "dimension": "Competition",
+        "weight": 8,
+        "score": 5,
+        "weighted": 0.4,
+        "rationale": "Niche but incumbents like Bosch or Hikvision could easily add this feature."
+      },
+      {
+        "dimension": "Financials",
+        "weight": 5,
+        "score": 5,
+        "weighted": 0.25,
+        "rationale": "Burn rate likely low for a pilot; no financial details available."
+      },
+      {
+        "dimension": "Risk Profile",
+        "weight": 2,
+        "score": 4,
+        "weighted": 0.08,
+        "rationale": "High risk from government procurement delays and technical false positives."
+      }
+    ],
+    "vc_verdict": {
+      "composite_score": 4.33,
+      "verdict": "DECLINE",
+      "conditions_if_conditional": null
+    },
+    "go_no_go": "NO_GO",
+    "decision": "Decline. Composite score below 5.0. The idea is too narrow, market too small, and lacks evidence of traction or team strength.",
+    "next_experiments": [
+      "Conduct interviews with 3 serenazgo operators to validate pain and workflow.",
+      "Build a prototype using public footage and test detection accuracy.",
+      "Explore adjacent crime patterns to expand TAM.",
+      "Seek LOIs from 2 municipalities before investing further."
+    ],
+    "kill_criteria": [
+      "If detection accuracy is below 90% in pilot tests.",
+      "If no municipality signs a paid pilot within 3 months.",
+      "If competitive analysis shows a well-funded incumbent has a similar product.",
+      "If customer interviews reveal the problem is not urgent enough to pay."
+    ],
+    "source": "llm",
+    "_iteration_id": "I3",
+    "_iteration_angle": "PIVOT_WEDGE",
+    "_iteration_one_liner": "Detectamos motos con dos ocupantes sin casco desde cámaras municipales para alertar al serenazgo y prevenir robos."
+  }
+]

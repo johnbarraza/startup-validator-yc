@@ -1,0 +1,235 @@
+{
+  "source": "YC 2025 dossier for CoffeeGuard in Peru",
+  "one_liner": "CoffeeGuard helps coffee cooperatives in Peru triage coffee rust outbreaks faster by turning farmers' voice reports into prioritized technician alerts.",
+  "problem": "Smallholder coffee farmers in Peru report crop diseases via chaotic WhatsApp voice notes, leading to lost and unclassified reports, and delayed response. Coffee rust (roya) causes 30–50% yield losses if untreated, and cooperative technicians spend hours sifting through dozens of unstructured audio messages, missing critical early warnings. Interviews with 20 farmers would quantify time spent (estimated 15–30 min/report) and error rate (estimated >30% misrouted or ignored).",
+  "solution_insight": "A voice-first triage system: farmers call a local number and describe symptoms in their own words. Structured IVR prompts capture leaf appearance, spread pattern, and location. The system transcribes (using fine-tuned ASR for local Spanish/Quechua), classifies the report with a coffee‑disease taxonomy (coffee rust, leaf spot, borer beetle, etc.), geotags it, assigns a severity score, and alerts the cooperative technician with a prioritized list. Insight: Structured voice streamlines the chaotic WhatsApp workflow, reducing response time from days to hours and improving data quality for outbreak tracking.",
+  "why_now": "Advances in low‑resource language ASR (e.g., Whisper fine‑tuned for Quechua/Spanish), widespread basic phones with voice, expanded rural 4G coverage in Peru (21,500+ mobile towers in 2023, MTC), and increasing coffee rust severity due to climate change make a voice‑first solution both technically feasible and urgently needed.",
+  "market": {
+    "recommended_focus": "Peru – high coffee rust pressure, strong cooperative structure, early piloting in Junín or Cajamarca reduces risk, and proximity to Latin American expansion.",
+    "regions": [
+      {
+        "region": "Peru",
+        "validity": "Peru is the right starting market because coffee rust is endemic, cooperatives (∼200, JNC) aggregate thousands of smallholders, and regulatory pressure for traceability is growing. Low-tech voice interfaces match farmer adoption patterns.",
+        "tam_topdown": "Based on PROMPERÚ’s 2023 coffee sector report, Peru has 425,000 ha under coffee, involving ∼223,000 producers (INEI CENAGRO). Assuming a disease‑management software spend of $2/farmer/month, TAM ≈ 223k × $24/yr = $5.35M/yr.",
+        "tam_bottomup": "200 cooperatives × 800 average members = 160,000 producer members × $2/mo × 12 = $3.84M/yr. Validated against top‑down, convergence ≈ $4–5M/yr.",
+        "tam_consensus": "$4–5M/yr – sub-venture-scale for Peru alone.",
+        "sam": "TAM × 20% (cooperatives with >500 members, located in rust‑prone areas) ≈ $0.8–1.0M/yr.",
+        "som_12_months": "SAM × 2% (first 12 months focus on 2 pilot cooperatives, 50 farmers each, ARPU $24) = $2,400/yr, plus one extension to 5 cooperatives yields $12,000.",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "INEI – CENAGRO 2012 coffee producer count",
+          "MINAGRI – strategic coffee plan",
+          "PROMPERÚ – coffee exports 2023",
+          "JNC – cooperative directory",
+          "MTC – mobile coverage map"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "LATAM",
+        "validity": "Covers major coffee producers (Colombia, Brazil, Honduras, Mexico) with similar rust challenges and mobile penetration. Scaling requires language adaptation (Portuguese) and local partnerships.",
+        "tam_topdown": "International Coffee Organization (ICO) estimates 1.5M coffee farmers in LatAm. Using $20 ARPU (weighted avg.), TAM ≈ 1.5M × $20 = $30M/yr.",
+        "tam_bottomup": "5,000 cooperatives × 300 members avg = 1.5M members × $2/mo × 12 = $36M/yr. Consistent with top‑down.",
+        "tam_consensus": "$30–36M/yr – borderline venture scale if penetration reaches 3–5%.",
+        "sam": "TAM × 15% (countries with active rust management programs: Peru, Colombia, Honduras) = $4.5–5.4M/yr.",
+        "som_12_months": "Not applicable in first year (focus Peru).",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "ICO – World Coffee Statistics",
+          "FAO – coffee area in LatAm",
+          "FNC (Colombia) – farmer registry"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      },
+      {
+        "region": "USA",
+        "validity": "USA is not a coffee‑growing region; however, US‑based coffee importers demand high‑quality, disease‑free beans. Indirect market via traceability premiums, but TAM not applicable for voice‑based field services.",
+        "tam_topdown": "N/A – not a production market.",
+        "tam_bottomup": "N/A",
+        "tam_consensus": "N/A",
+        "sam": "N/A",
+        "som_12_months": "N/A",
+        "venture_threshold": "BELOW_$500M",
+        "recommended_sources": [
+          "SCA – specialty coffee consumption",
+          "USDA – coffee imports"
+        ],
+        "tam_topdown_usd": 0.0,
+        "tam_bottomup_usd": 0.0,
+        "tam_consensus_low": 0.0,
+        "tam_consensus_high": 0.0,
+        "sam_usd": 0.0,
+        "som_usd": 0.0,
+        "source": "deterministic_tam_calc"
+      }
+    ],
+    "source_strategy": [
+      "TAM Peru: INEI CENAGRO for farmer count, MINAGRI for cooperative list, ARPU benchmarked against existing extension apps in agriculture.",
+      "TAM LATAM: ICO database for country‑level farmer populations, adjusted by mobile‑network penetration.",
+      "SAM/SOM: field interviews with 2 cooperatives to confirm willingness‑to‑pay and conversion rates."
+    ]
+  },
+  "competition_moat": {
+    "do_nothing_alternative": "Farmers use WhatsApp voice notes; technicians manually listen, often missing messages. This is the main competitor – high switching costs due to habit, but it is chaotic and non‑scalable.",
+    "direct_competitors": "Plantix (image‑based, not voice, limited offline use), generic farm‑management apps (e.g., CropTracker, FarmLogs) that are text‑heavy and require smartphone literacy.",
+    "incumbent_threat": "Large cooperative platforms (e.g., Fairtrade’s Atlas) could add voice modules, leveraging existing farmer networks. However, they lack deep Peruvian coffee‑disease taxonomy and live voice‑interaction data.",
+    "moat": "1) Voice data corpus in Quechua/Spanish with coffee‑disease annotations – a data moat that improves ASR and classification over time. 2) Tight integration with cooperative technician workflows and alerting protocols. 3) First‑mover trust relationships in Peruvian coffee regions. 4) Structured prompts improve data quality vs. unstructured WhatsApp, delivering higher technician productivity."
+  },
+  "business_model_pricing": {
+    "model": "B2B2C subscription: cooperatives pay per enrolled farmer per month.",
+    "plans": [
+      {
+        "name": "Basic",
+        "price_usd_per_farmer_per_month": 1,
+        "features": "Voice reporting, automated triage, bilingual prompts (Spanish/Quechua), geotagging, SMS alerts to 2 technicians."
+      },
+      {
+        "name": "Pro",
+        "price_usd_per_farmer_per_month": 2,
+        "features": "All Basic, plus dashboard with outbreak maps, severity trends, and integration with cooperative management system (ERP)."
+      }
+    ],
+    "variable_costs_per_report": "$0.03 for transcription API (100 cents/min @ 3 min/call), $0.01 for LLM classification, $0.02 for Twilio voice & SMS => total $0.06/report. At 5 reports/farmer/month, variable cost = $0.30/farmer/month.",
+    "contribution_margin": "At $1 ARPU, margin ≈ 70%; at $2 ≈ 85%."
+  },
+  "go_to_market": {
+    "first_10_users": "Target 2–3 cooperatives in Junín (e.g., Cooperativa Agraria Cafetalera Pangoa) and Cajamarca. Direct outreach via field visits, leveraging existing relationships with cooperative leaders. Offer 3‑month free pilot with dedicated training.",
+    "next_100": "Partner with Junta Nacional del Café (JNC) to access 50+ cooperatives. Present at industry events (Expocafé) and secure letters of intent. Convert pilots to paid contracts with bulk discount for multi‑year commitments.",
+    "next_1_000": "Expand to Colombia and Honduras by replicating the model through national coffee federations (FNC in Colombia, IHCAFE in Honduras). Hire local implementation teams and adapt to local dialects. Target 100 cooperatives with 1,000+ farmers each."
+  },
+  "traction_signals": {
+    "current_status": "Pre‑prototype. YC validation result: no – requires stronger founder‑market fit and initial traction.",
+    "evidence": "No users, revenue, or pilot commitments. Concept tested only with 5 informal farmer interviews (not the suggested 20). Need to quantify pain: time spent on WhatsApp reporting, technician backlog, and yield loss avoidance.",
+    "next_actions": "Conduct 20 structured farmer interviews in coffee region; build a non‑functional voice demo to measure comprehension and willingness to adopt; secure a letter of intent from one cooperative for a paid pilot."
+  },
+  "roadmap": {
+    "month_1": "Complete 20 farmer interviews, finalize disease taxonomy with agronomists, set up IVR prototype on Twilio.",
+    "month_2": "Fine‑tune Whisper model with 50 hours of voice data (coffee‑disease phrases in Spanish and Quechua); build MVP classifier.",
+    "month_3": "Internal demo of end‑to‑end flow; onboard first cooperative as design partner; start collecting unscripted voice samples.",
+    "month_6": "Pilot with 1 cooperative, 50 active farmers; >80% transcription accuracy; average triage time <2 hours per report.",
+    "month_9": "Expand to 3 cooperatives (150 farmers); launch Pro plan for dashboard; track at least 500 reports per month.",
+    "month_12": "5 paying cooperatives, 250 farmers; ARR $6,000; proof of yield loss reduction (case study); prepare for seed round.",
+    "key_metrics_at_12m": {
+      "mrr_usd": 500,
+      "paying_customers": 5,
+      "churn_target": "5% monthly",
+      "cac_target_usd": 200
+    }
+  },
+  "risks_mitigations": [
+    {
+      "risk": "Adoption: farmers reluctant to switch from WhatsApp to a new voice number, especially with structured prompts that feel unnatural.",
+      "severity": "High",
+      "mitigation": "Use a local number, allow free‑form speech after a simple greeting, gradually introduce prompts. Include social proof (cooperative endorsement), offer a small incentive (mobile top‑up) for first reports."
+    },
+    {
+      "risk": "Transcription accuracy in noisy field environments with Quechua/Spanish code‑switching.",
+      "severity": "Critical",
+      "mitigation": "Fine‑tune on field‑collected speech data, incorporate noise augmentation, allow technicians to correct transcriptions (feedback loop), and keep prompts very short to limit error propagation."
+    },
+    {
+      "risk": "Misclassification of diseases, leading to technician distrust and extra work.",
+      "severity": "High",
+      "mitigation": "Build a confidence‑score threshold below which reports are flagged for manual review; continuously retrain classifier with technician‑validated labels."
+    },
+    {
+      "risk": "TAM in Peru is sub‑$5M, making it a thin market for venture scale. Expansion to LATAM is required but adds complexity (language, legal).",
+      "severity": "Medium",
+      "mitigation": "Model first years as a lifestyle business in Peru, then use data and cooperatives network to expand; consider cross‑selling additional agronomy services (fertilization alerts, fair‑trade compliance)."
+    },
+    {
+      "risk": "Incumbents (e.g., Farmer Connect, TraceX) could add voice modules and leverage existing farmer‑cooperative integrations.",
+      "severity": "Medium",
+      "mitigation": "Focus on the deepest coffee‑disease voice dataset, which becomes a defensible asset; maintain exclusive partnerships with large Peruvian cooperatives."
+    },
+    {
+      "risk": "AI substitution risk: generic voice assistants (Google, WhatsApp bots) could eventually handle triage, but lack domain‑specific prompts and severity scoring.",
+      "severity": "Low",
+      "mitigation": "Invest in coffee‑specific NLP and integration with cooperative workflows that generic tools cannot easily replicate."
+    }
+  ],
+  "the_ask": {
+    "amount_usd": 150000,
+    "type": "pre-seed grant / angel",
+    "runway_months": 12,
+    "budget_breakdown": [
+      {
+        "line": "ASR & NLU development (fine‑tuning, data collection, model hosting)",
+        "amount_usd": 50000,
+        "rationale": "Covers 3 months of speech‑data collection (50h Quechua/Spanish), GPU compute for fine‑tuning, and $500/month cloud inference for pilot. Not less: model quality is make‑or‑break. Not more: enough for MVP; advanced dialects can wait."
+      },
+      {
+        "line": "Twilio IVR & backend infrastructure",
+        "amount_usd": 25000,
+        "rationale": "Build and maintain voice flow, database, SMS alerts, and technician dashboard for 12 months. Twilio costs scale with usage; $25K covers serverless hosting and 10,000 test calls."
+      },
+      {
+        "line": "Field operations & cooperative pilot",
+        "amount_usd": 40000,
+        "rationale": "Travel to coffee regions, farmer training sessions, incentives (mobile top‑ups), and a part‑time field officer. Not less: adoption requires on‑the‑ground presence. Not more: only one region needed for proof of concept."
+      },
+      {
+        "line": "Agronomy expertise (consultant for taxonomy & validation)",
+        "amount_usd": 15000,
+        "rationale": "Hire a coffee pathologist to finalize disease taxonomy and validate classifier outputs part‑time."
+      },
+      {
+        "line": "Misc (legal, incorporation, marketing collateral)",
+        "amount_usd": 20000,
+        "rationale": "Includes Peru company setup, IP protection, and basic website/flyers for farmers."
+      }
+    ],
+    "milestone_unlocked": "Pilot with 1 cooperative, 50 active farmers, transcription accuracy >80%, and a case study showing reduced technician triage time by 50%.",
+    "critical_assumption_being_tested": "Farmers will regularly use a dedicated voice line with prompts, and speech‑to‑text can achieve >80% accuracy in field conditions.",
+    "why_not_less": "Bootstrapping would require a no‑code voice service, generic ASR (too inaccurate for Quechua), and no field staff, leading to a failed pilot that doesn't prove anything.",
+    "why_not_more": "Raising $500K now would be premature because there is zero evidence that the core adoption and accuracy risks can be mitigated. A lean pilot must de‑risk the single biggest unknown first."
+  },
+  "product_demo_architecture": {
+    "components": [
+      "Voice gateway: Twilio Programmable Voice with local DID number in Huancayo (+51 64). Answers calls from any basic phone, plays bilingual greeting.",
+      "IVR flow: Node.js server on AWS Lambda handles a finite‑state machine. Prompts: 'Describe las hojas' / 'Imaki hina yanun?'. Speech captured as MP3, streamed to ASR.",
+      "ASR module: Fine‑tuned Whisper‑small model on Spanish‑Quechua coffee phrases, hosted on a GPU‑accelerated endpoint (e.g., Replicate or dedicated GPU instance). Returns transcript with confidence score.",
+      "NLP classifier: A BERT‑based model fine‑tuned on a curated taxonomy of coffee diseases and physiological disorders. Extracts entities (symptom, color, spread), matches against rules, outputs disease ID and severity (low/medium/high).",
+      "Geotagging: Uses caller’s registered farm location (or asks for plot ID) to map GPS coordinates, overlay on cooperative GIS.",
+      "Alert engine: If severity is high or confidence low, trigger SMS via Twilio to the cooperative technician with a concise message: 'Alerta Roya – Severidad Alta – Agricultor 123 – Parcela 4B – Llamar de vuelta al 987654321'.",
+      "Technician dashboard: Simple web app (React) showing open alerts, map view, and report history. Built with Firebase, shared via rural‑friendly WhatsApp for quick triage."
+    ]
+  },
+  "scorecard": {
+    "problem": 15,
+    "solution": 12,
+    "market": 6,
+    "team": 3,
+    "traction": 0,
+    "competition": 5,
+    "business_model": 4,
+    "go_to_market": 5,
+    "roadmap": 3,
+    "risks": 2,
+    "ask": 2
+  },
+  "total_score": 57,
+  "max_score": 100,
+  "rating": "YC no – requires stronger founder‑market fit and initial traction evidence.",
+  "external_research_hooks": [
+    "INEI – IV Censo Nacional Agropecuario 2012: 223,000 coffee producers in Peru.",
+    "MINAGRI – Plan Estratégico de la Cadena de Café 2021–2030 – coffee rust damage estimates.",
+    "JNC (Junta Nacional del Café) – directory of 200+ coffee cooperatives.",
+    "PROMPERÚ – 2023 Coffee Export Report – export reliance, price premiums for specialty.",
+    "MTC – Statistics of Mobile Coverage 2023 – rural 4G/3G coverage",
+    "ICO – World Coffee Statistics – rust incidence by country, LatAm farmer count.",
+    "FAO – Coffee Rust Monitoring Guidelines – severity scoring used for classification."
+  ]
+}

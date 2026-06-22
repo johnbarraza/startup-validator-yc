@@ -1,0 +1,34 @@
+{
+  "problem_type": "PAINKILLER",
+  "vertical": "GovTech",
+  "customer_type": "B2B",
+  "problem_severity": "STRUCTURAL",
+  "pain_evidence": "present",
+  "pit_signals_detected": [
+    "Target users (journalists, NGOs) have low willingness to pay; monetization likely requires grants or government contracts with long sales cycles.",
+    "Small addressable market: Peru has <1000 investigative journalists and a handful of transparency NGOs; venture-scale ARR unrealistic.",
+    "Free substitute risk: OSCE already publishes raw data; many journalists use manual Excel or free tools like Proyecto Vigilante, reducing switching incentive.",
+    "Technical complexity: scraping Peruvian gov't sites (frequent changes, inconsistent formats) and OCR of low-quality PDFs is brittle; errors erode user trust.",
+    "Peru's 70% informal economy means limited professional users; the formal procurement watchdog market is tiny."
+  ],
+  "painkiller_signals_detected": [
+    "Active workarounds exist (manual data collection, spreadsheets, text-based analysis)",
+    "Spending already happens on imperfect solutions (hiring analysts, using generic tools)",
+    "Recurring pain (weekly or monthly procurement cycles require ongoing monitoring)",
+    "Measurable cost: lost hours, missed corruption stories, reputation risk",
+    "Buyer has budget line (media/NGOs allocate funds for investigative tools, often grant-supported)",
+    "Users search actively for solutions (e.g., Ojo Público, Convoca seek automation tools)"
+  ],
+  "classification_rationale": "Public procurement corruption in Peru is a structural, high-pain problem for journalists and watchdogs. They currently rely on manual scraping and analysis, which is time-consuming and error-prone. The tool directly addresses this with AI-powered detection, and buyers have existing budgets or grant funding for such tools, making it a true painkiller.",
+  "proceed_recommendation": "WARN",
+  "suggested_pivot": "",
+  "freemium_recommendation": "YES",
+  "freemium_rationale": "Given low willingness to pay among media/NGOs in Peru, a free tier (e.g., limited searches or reports) builds trust and showcases value. Premium subscriptions for advanced features (full datasets, export, alerts) can then convert power users, especially if grant funding covers subscriptions.",
+  "devil_verdict": "WEAK",
+  "payment_blocker": "Journalists and NGOs expect free tools for public oversight; government auditors have no dedicated budget for external software and face 6-18 month procurement cycles.",
+  "free_substitute_risk": "Manual analysis of OSCE's free public portal combined with Excel or Google Sheets covers 80% of pattern-detection needs for most users.",
+  "market_size_reality_check": "Realistic paying users: ~100-200 journalists/NGOs at $50-100/month maximum => $60K-240K ARR; government sales add risk but potential $50K/year contracts for 10 entities => <$1M ARR total.",
+  "hardest_assumption": "That journalists and watchdogs will pay for a tool they currently do without, and that the Peruvian government won't release a free equivalent before scale.",
+  "devil_rationale": "While the problem is real (corruption in procurement), the monetization path is fatally narrow in Peru. Users expect free tools, budgets are absent, and the TAM cannot support VC returns without regional expansion, which adds massive localization cost. The idea is a strong civic project but a weak startup.",
+  "source": "dual_agent_classification"
+}
