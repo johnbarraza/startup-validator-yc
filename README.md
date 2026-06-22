@@ -113,7 +113,7 @@ ai/validation_agents/outputs/<idea-key>/
 
 **[github.com/JohnxBar/saludapp-peru](https://github.com/JohnxBar/saludapp-peru)**
 
-La idea ganadora del torneo fue desarrollada como producto real en `E:\github\saludapp-peru`. Stack:
+La idea ganadora del torneo fue desarrollada como producto real. Stack:
 - Bot WhatsApp con Baileys (Node.js) — whitelist, freemium, onboarding
 - OCR recetas médicas con Gemini Vision
 - Clasificador híbrido determinista + DeepSeek para intents
